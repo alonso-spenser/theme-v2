@@ -1,0 +1,138 @@
+.n7MjYz-pie {
+	position: relative;
+	width: 49%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.n7MjYz-pie .text-heading {
+	position: absolute;
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+	left: 5px;
+	top: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.n7MjYz-pie:before {
+	content: '';
+	display: block;
+	padding-top: 100%;
+}
+
+.n7MjYz-pie.per-10 .right:before {
+	transform: rotate(-9deg);
+}
+
+.n7MjYz-pie.per-20 .right:before {
+	transform: rotate(27deg);
+}
+
+.n7MjYz-pie.per-30 .right:before {
+	transform: rotate(63deg);
+}
+
+.n7MjYz-pie.per-40 .right:before {
+	transform: rotate(99deg);
+}
+
+.n7MjYz-pie.per-50 .right:before {
+	transform: rotate(135deg);
+}
+
+.n7MjYz-pie.per-50 .left:before {
+	transform: rotate(-45deg);
+}
+
+.n7MjYz-pie.per-60 .right:before {
+	transform: rotate(135deg);
+}
+
+.n7MjYz-pie.per-60 .left:before {
+	transform: rotate(-9deg);
+}
+
+.n7MjYz-pie.per-70 .right:before {
+	transform: rotate(135deg);
+}
+
+.n7MjYz-pie.per-70 .left:before {
+	transform: rotate(27deg);
+}
+
+.n7MjYz-pie.per-80 .right:before {
+	transform: rotate(135deg);
+}
+
+.n7MjYz-pie.per-80 .left:before {
+	transform: rotate(63deg);
+}
+
+.n7MjYz-pie.per-90 .right:before {
+	transform: rotate(135deg);
+}
+
+.n7MjYz-pie.per-90 .left:before {
+	transform: rotate(99deg);
+}
+
+.n7MjYz-pie.per-100 .right:before {
+	transform: rotate(135deg);
+}
+
+.n7MjYz-pie.per-100 .left:before {
+	transform: rotate(135deg);
+}
+
+.n7MjYz-pie + .text-body {
+	margin-top: 0.75rem;
+}
+
+.n7MjYz-pie-half {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.n7MjYz-pie-half:before {
+	content: '';
+	width: 200%;
+	height: 100%;
+	border: 2px solid transparent;
+	border-radius: 50%;
+	position: absolute;
+	box-sizing: border-box;
+	top: 0;
+	transform: rotate(-45deg);
+}
+
+.n7MjYz-pie-half.right {
+	top: 0;
+	transform: rotate(180deg);
+	right: 0;
+}
+
+.n7MjYz-pie-half.right:before {
+	border-top: 2px solid #dddddd;
+	border-left: 2px solid #dddddd;
+	border-bottom: 2px solid #4e83ef;
+	border-right: 2px solid #4e83ef;
+	transform: rotate(-45deg);
+}
+
+.n7MjYz-pie-half.left {
+	top: 0;
+	left: 0;
+}
+
+.n7MjYz-pie-half.left:before {
+	border-top: 2px solid #dddddd;
+	border-left: 2px solid #dddddd;
+	border-bottom: 2px solid #4e83ef;
+	border-right: 2px solid #4e83ef;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

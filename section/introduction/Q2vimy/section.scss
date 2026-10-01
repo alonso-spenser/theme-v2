@@ -1,0 +1,25 @@
+.Q2vimy img {
+	max-width: 100%;
+}
+
+.Q2vimy svg {
+	height: 3rem;
+	width: 100%;
+}
+
+.Q2vimy [class*=col-] {
+	display: flex;
+	align-items: center;
+}
+
+.Q2vimy [class*=text-] + [class*=text-] {
+	margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+	.Q2vimy [class*=text-] + [class*=text-] {
+		margin-top: 1rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

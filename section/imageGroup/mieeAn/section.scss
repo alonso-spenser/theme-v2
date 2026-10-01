@@ -1,0 +1,72 @@
+.mieeAn .col-12:hover .embed-responsive-item {
+	transform: scale(1.1);
+}
+
+.mieeAn .col-12:hover .mieeAn-overlay:before,
+.mieeAn .col-12:hover .mieeAn-overlay-content {
+	opacity: 1;
+}
+
+.mieeAn .text-poster {
+	text-align: right;
+	font-size: 5rem;
+	line-height: 1;
+	font-family: var(--typeHeading);
+	color: var(--colorHeading);
+}
+
+@media (max-width: 768px) {
+	.mieeAn .text-poster {
+		font-size: 3.5rem;
+	}
+}
+
+.mieeAn .text-poster + .text-poster {
+	margin-top: 0;
+}
+
+.mieeAn-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+}
+
+.mieeAn-overlay-content {
+	padding-left: 15%;
+	padding-right: 15%;
+	text-align: center;
+	position: relative;
+	z-index: 5;
+	opacity: 0;
+	transition: all 0.25s;
+}
+
+.mieeAn-overlay:before {
+	transition: all 0.25s;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+	.mieeAn .embed-responsive-normal {
+		height: auto;
+		position: relative;
+	}
+
+	.mieeAn .embed-responsive-normal .aMjeEn-content {
+		position: relative;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>V2 · Bootstrap 5 精简基础</title>
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./page/base.css">
+  <style>
+    body{background:#f6f8fb}.demo-header{padding:32px 0}.demo-panel{padding:24px;margin-bottom:24px;background:white;border:1px solid var(--colorBorder);border-radius:8px}.demo-cell{padding:20px;background:#e7f2fb;border:1px solid #c2ddef;text-align:center}.demo-full{padding-block:16px;background:#e7f2fb;margin-bottom:24px}.demo-form{margin-top:24px}.demo-actions{margin-top:20px}.demo-note{margin-top:16px}
+  </style>
+</head>
+<body>
+  <header class="container demo-header"><h1>V2 / Bootstrap 5 精简基础</h1><p>容器、响应式栅格、表单、按钮、标题和基础布局辅助类。</p></header>
+  <div class="container-full demo-full">container-full · 全宽容器，保留左右栅格边距</div>
+  <main class="container">
+    <section class="demo-panel"><h2>标题与按钮</h2>
+      <h1>H1 标题</h1><h2>H2 标题</h2><h3>H3 标题</h3><h4>H4 标题</h4><h5>H5 标题</h5><h6>H6 标题</h6>
+      <div class="d-flex flex-wrap gap-2"><button type="button" class="btn btn-primary">主要按钮</button><button type="button" class="btn btn-outline-primary">描边按钮</button><button type="button" class="btn btn-secondary btn-sm">小按钮</button><button type="button" class="btn btn-primary btn-lg">大按钮</button><button type="button" class="btn btn-primary" disabled>禁用按钮</button></div>
+    </section>
+    <section class="demo-panel"><h2>响应式 12 列栅格</h2><p>手机一列，md 两列，lg 三列。</p>
+      <div class="row g-3"><div class="col-12 col-md-6 col-lg-4"><div class="demo-cell">01 / col-lg-4</div></div><div class="col-12 col-md-6 col-lg-4"><div class="demo-cell">02 / col-lg-4</div></div><div class="col-12 col-md-6 col-lg-4"><div class="demo-cell">03 / col-lg-4</div></div></div>
+    </section>
+    <section class="demo-panel"><h2>表单</h2>
+      <form class="demo-form" novalidate>
+        <div class="row g-3">
+          <div class="col-12 col-md-6"><label class="form-label" for="demo-name">姓名 *</label><input class="form-control" id="demo-name" required autocomplete="off"><div class="invalid-feedback">请填写姓名。</div></div>
+          <div class="col-12 col-md-6"><label class="form-label" for="demo-email">邮箱 *</label><input class="form-control" id="demo-email" type="email" required autocomplete="off"><div class="invalid-feedback">请填写有效邮箱。</div></div>
+          <div class="col-12 col-md-6"><label class="form-label" for="demo-select">需求类型</label><select class="form-select" id="demo-select"><option>产品咨询</option><option>商务合作</option></select></div>
+          <div class="col-12 col-md-6"><label class="form-label" for="demo-domain">输入框组</label><div class="input-group"><span class="input-group-text">https://</span><input class="form-control" id="demo-domain" placeholder="example.com"></div></div>
+          <div class="col-12"><div class="form-floating"><textarea class="form-control" placeholder="留言" id="demo-message" style="height:110px"></textarea><label for="demo-message">留言</label></div></div>
+          <div class="col-12 col-md-6"><label class="form-label" for="demo-file">文件</label><input class="form-control" id="demo-file" type="file"></div>
+          <div class="col-12 col-md-6"><label class="form-label" for="demo-disabled">禁用态</label><input class="form-control" id="demo-disabled" value="不可编辑" disabled></div>
+          <div class="col-12 col-md-6"><label class="form-label" for="demo-range">范围</label><input class="form-range" id="demo-range" type="range"></div>
+          <div class="col-12 col-md-6"><div class="form-check form-switch"><input class="form-check-input" id="demo-switch" type="checkbox" role="switch" checked><label class="form-check-label" for="demo-switch">开启通知</label></div><div class="form-check"><input class="form-check-input" id="demo-check" type="checkbox"><label class="form-check-label" for="demo-check">订阅更新</label></div><div class="form-check"><input class="form-check-input" id="demo-radio" type="radio" name="contact" checked><label class="form-check-label" for="demo-radio">邮件联系</label></div></div>
+        </div>
+        <div class="demo-actions"><button class="btn btn-primary" type="submit">测试校验（不提交数据）</button></div><p class="demo-note" role="status" id="demo-status"></p>
+      </form>
+    </section>
+  </main>
+  <script>
+    document.querySelector('form').addEventListener('submit', event => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      form.classList.add('was-validated');
+      document.querySelector('#demo-status').textContent = form.checkValidity() ? '校验通过，仅本地演示，未发送任何数据。' : '请检查必填字段。';
+    });
+  </script>
+</body>
+</html>

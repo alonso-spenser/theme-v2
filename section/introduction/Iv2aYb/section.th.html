@@ -1,0 +1,42 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div class="section-title text-center section-neighbor" th:if="${not #strings.isEmpty(section.settings.heading)
+            || not #strings.isEmpty(section.settings.content)
+            }"
+           >
+            <h3 th:class="|text-heading text-${section.settings.textAlign}|" th:if="${ not #strings.isEmpty(section.settings.heading) }">
+                [[${ section.settings.heading }]]
+            </h3>
+
+            <th:block th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                <th:block th:each="textLine,saltLine:${textLines}">
+                    <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                </th:block>
+            </th:block>
+        </div>
+        <div class="row row-gutter section-neighbor">
+	        <div th:class="|col-md-${section.settings.column} col-${section.settings.mobColumn}|" th:each="o, stat:${section.settings.itemList}">
+		        <div class="card">
+			        <div th:class="|card-header${o.active ? ' active' : ''}|">
+				        <span class="price" th:if="${not #strings.isEmpty(o.currency) || not #strings.isEmpty(o.price)}">[[${o.currency}]][[${o.price}]]</span>
+				        <span class="unit" th:if="${not #strings.isEmpty(o.unit)}">/ [[${o.unit}]]</span>
+				        <span class="number-order" th:if="${not #strings.isEmpty(o.subHeading)}">[[${o.subHeading}]]</span>
+			        </div>
+			        <div class="card-body">
+                        <ul th:class="|text-list ${ section.settings.symbol }|" th:if="${not #strings.isEmpty(o.subContent)}" th:with="textLines = ${#strings.listSplit(o.subContent,'\n')}">
+                            <th:block th:each="textLine,saltLine:${textLines}">
+                                <li th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                            </th:block>
+                        </ul>
+				        <p class="text-neighbor text-center" th:if="${not #strings.isEmpty(o.buttonLabel) || not #strings.isEmpty(o.buttonLink)}">
+					        <a th:href="${o.buttonLink}" th:class="|btn btn-lg ${o.buttonStyle}">[[${o.buttonLabel}]]</a>
+				        </p>
+			        </div>
+		        </div>
+	        </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

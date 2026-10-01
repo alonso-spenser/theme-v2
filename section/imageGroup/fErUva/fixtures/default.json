@@ -1,0 +1,77 @@
+{
+  "section": {
+    "id": "1441648089248714753",
+    "componentKind": "section",
+    "type": "imageGroup",
+    "templateId": "fErUva",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "4",
+      "gutter": true,
+      "layout": "tile",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Title with button",
+      "marginTop": false,
+      "mobColumn": "6",
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "buttonLink": "",
+      "imageScale": "1by1",
+      "paddingTop": true,
+      "subheading": "this is a new beginning",
+      "wideScreen": false,
+      "buttonLabel": "Button",
+      "buttonStyle": "invisible",
+      "contentAlign": "text-center",
+      "contentColor": "",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "marginBottom": false,
+      "overlayColor": "#000000",
+      "overlayStyle": "normal",
+      "sectionAlias": "图片墙",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "secondButtonLink": "",
+      "secondButtonLabel": "Button",
+      "secondButtonStyle": "invisible",
+      "backgroundPosition": "",
+      "imageList": [],
+      "symbol": "",
+      "carouselArrowStyle": "",
+      "carouselNavStyle": "",
+      "carouselAutoPlay": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

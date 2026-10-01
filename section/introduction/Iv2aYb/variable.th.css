@@ -1,0 +1,60 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .section-title .text-heading {
+    color:[[${section.settings.textColor}]]
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.bodyColor)}"]
+.section-[[${ section.id }]] .section-title .text-body {
+    color:[[${section.settings.bodyColor}]]
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.priceColor)}"]
+.section-[[${ section.id }]] .card-header .price {
+    color:[[${section.settings.priceColor}]]
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.priceActiveColor)}"]
+.section-[[${ section.id }]] .card-header.active .price {
+    color:[[${section.settings.priceActiveColor}]]
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.unitColor)}"]
+.section-[[${ section.id }]] .card-header .unit {
+    color:[[${section.settings.unitColor}]]
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.unitActiveColor)}"]
+.section-[[${ section.id }]] .card-header.active .unit {
+    color:[[${section.settings.unitActiveColor}]]
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.headingColor)}"]
+.section-[[${ section.id }]] .card-header  {
+    background-color:[[${section.settings.headingColor}]]
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.headingActiveColor)}"]
+.section-[[${ section.id }]] .card-header.active  {
+    background-color:[[${section.settings.headingActiveColor}]]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.cardBackground)}"]
+.section-[[${ section.id }]] .card-body  {
+    background-color:[[${section.settings.cardBackground}]]
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.cardColor)}"]
+.section-[[${ section.id }]] .card-body li  {
+    color:[[${section.settings.cardColor}]]
+}
+[/]

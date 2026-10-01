@@ -1,0 +1,44 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundImage) || not #strings.isEmpty(section.settings.backgroundColor)}"]
+.section-[[${ section.id }]] .bread-crumb {
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) && not #strings.isEmpty(section.settings.backgroundTo)}"]
+.section-[[${ section.id }]] .bread-crumb {
+    background: linear-gradient(318.8deg, [[${section.settings.backgroundColor}]] -11.42%, [[${section.settings.backgroundTo}]] 58.01%);
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .breadcrumb-item a, .section-[[${ section.id }]] .breadcrumb-item:before {
+    color: [[${section.settings.textColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.backgroundMask)}"]
+.section-[[${ section.id }]] .bread-crumb:after {
+      background-image: url("data:image/svg+xml,%3Csvg%20width%3d%271440%27%20class%3d%27arc%27%20height%3d%2772%27%20viewBox%3d%270%200%201440%2072%27%20fill%3d%27none%27%20xmlns%3d%27http%3a%2f%2fwww.w3.org%2f2000%2fsvg%27%3E%3Cpath%20d%3d%27M-400%20176C139.222%20-24.794%201028.42%20-10.941%201440%2013.8751V176L-400%20176Z%27%20fill%3d%27[[${#strings.replace(section.settings.backgroundMask,'#','%23')}]]%27%3E%3C%2fpath%3E%3C%2fsvg%3E");
+}
+[/]
+
+[# th:if="${section.settings.h1Padding != null && section.settings.h1Padding > 0}"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]] .text-heading {
+        padding-top: [[${ section.settings.h1Padding }]]px;
+        padding-bottom: [[${ section.settings.h1Padding }]]px;
+    }
+}
+[/]
+
+[# th:if="${section.settings.negativeMargin != null && section.settings.negativeMargin > 0}"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]] + .section {
+        position: relative;
+        margin-top: -[[${ section.settings.negativeMargin }]]px;
+    }
+}
+[/]

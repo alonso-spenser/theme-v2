@@ -1,0 +1,17 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-MJnMrq [class*="col-"]:nth-child(2)  {
+            padding-top: 30px;
+        }
+    
+    
+        .section-demo-MJnMrq [class*="col-"]:nth-child(3)  {
+            padding-top: 20px;
+        }
+    
+
+
+@media (min-width: 768px) {
+    .section-demo-MJnMrq img{
+        border-radius:20px;
+    }
+}

@@ -1,0 +1,163 @@
+.B3A36j-row {
+	min-height: 400px;
+	position: relative;
+}
+
+@media (min-width: 768px) {
+	.B3A36j-row:before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: -100%;
+	}
+
+	.B3A36j-row:after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 50%;
+		top: 0;
+		right: -100%;
+	}
+}
+
+.B3A36j-row .left {
+	display: flex;
+	align-items: center;
+}
+
+@media (max-width: 768px) {
+	.B3A36j-row .left {
+		display: block;
+		padding: 0.75rem 1rem;
+	}
+}
+
+.B3A36j-row .right {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+@media (max-width: 768px) {
+	.B3A36j-row .right {
+		display: block;
+		padding: 0.75rem 1rem;
+	}
+}
+
+.B3A36j-row .right:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	top: 0;
+	left: 0;
+}
+
+.B3A36j-row .right:after {
+	content: "";
+	position: absolute;
+	width: 200%;
+	height: 50%;
+	bottom: 0;
+	left: 0;
+}
+
+@media (max-width: 768px) {
+	.B3A36j-row .right:after {
+		width: 100%;
+	}
+}
+
+.B3A36j .embed-responsive {
+	margin-bottom: 0.75rem;
+}
+
+.B3A36j .w-100 {
+	width: 100%;
+	z-index: 2;
+}
+
+.B3A36j .text-label {
+	color: #a1a3a8;
+	font-size: 14px;
+	font-weight: normal;
+	background-color: rgba(255, 255, 255, 0.5);
+	position: absolute;
+	top: 0;
+}
+
+@media (min-width: 768px) {
+	.B3A36j .text-label {
+		writing-mode: vertical-rl;
+		padding: 1rem;
+		left: 0.75rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.B3A36j .text-label {
+		position: relative;
+		padding: 0.75rem 1rem;
+		left: 0;
+	}
+}
+
+.B3A36j .section-slide-round {
+	position: relative;
+	width: calc(100% - 2rem);
+	padding: 2rem 0 2rem 1rem;
+	z-index: 2;
+	min-height: 200px;
+}
+
+@media (max-width: 768px) {
+	.B3A36j .section-slide-round {
+		width: 100%;
+		padding: 0;
+	}
+}
+
+.B3A36j .btn-link {
+	color: var(--colorBody);
+}
+
+.B3A36j .slick-slide {
+	transition: all 0.25s;
+	padding-top: 0.75rem;
+}
+
+.B3A36j .slick-slide:hover {
+	transform: translateY(-0.75rem);
+}
+
+.B3A36j .slide-page {
+	position: relative;
+}
+
+@media (max-width: 768px) {
+	.B3A36j .slide-page {
+		display: none !important;
+	}
+}
+
+.B3A36j .slide-page .slick-arrow {
+	position: relative;
+	width: 3rem !important;
+	height: 3rem !important;
+	opacity: 1 !important;
+	padding: 0 !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+	background: none !important;
+	color: #999;
+}
+
+.B3A36j .slide-page .slick-arrow i:after {
+	display: none;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

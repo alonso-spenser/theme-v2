@@ -1,0 +1,31 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .section-title [class^=text-] {
+    color:[[${section.settings.textColor}]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.linkBackground)}"]
+.section-[[${ section.id }]] .a2uYja-content:after{
+background-color: [[${section.settings.linkBackground }]];
+    color: [[${section.settings.linkColor }]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.cardBackground)}"]
+.section-[[${ section.id }]] .a2uYja-content{
+  background-color: [[${section.settings.cardBackground }]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.cardColor)}"]
+.section-[[${ section.id }]] [class*="text-"]{
+    color: [[${section.settings.cardColor }]];
+}
+[/]

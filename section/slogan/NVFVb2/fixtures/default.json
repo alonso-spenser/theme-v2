@@ -1,0 +1,51 @@
+{
+  "section": {
+    "id": "1554747139215626242",
+    "componentKind": "section",
+    "type": "slogan",
+    "templateId": "NVFVb2",
+    "runtimeVersion": 2,
+    "settings": {
+      "content": "Our vision is to power a new world — a call to the future, an aspirational, technology-driven, eco-friendly future that every individual can own.",
+      "textSize": 80,
+      "marginTop": false,
+      "textColor": "",
+      "paddingTop": true,
+      "wideScreen": false,
+      "marginBottom": false,
+      "sectionAlias": "Slogan",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

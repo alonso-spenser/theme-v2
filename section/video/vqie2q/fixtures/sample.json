@@ -1,0 +1,74 @@
+{
+  "section": {
+    "id": "1442532170446639105",
+    "componentKind": "section",
+    "type": "video",
+    "templateId": "vqie2q",
+    "runtimeVersion": 2,
+    "settings": {
+      "loop": false,
+      "muted": false,
+      "video": "https://cdn.shopify.com/s/files/1/0591/1170/2726/files/Video19MB.mp4?v=1632383048",
+      "layout": "left",
+      "poster": "https://theme.fomille.site/img/video.png",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "control": false,
+      "heading": "Video with text",
+      "preload": "auto",
+      "autoPlay": "manual",
+      "marginTop": false,
+      "maskColor": "",
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "buttonLink": "",
+      "guidGutter": false,
+      "paddingTop": false,
+      "percentage": "6",
+      "subheading": "this is a new beginning",
+      "videoWidth": 1280,
+      "wideScreen": true,
+      "buttonLabel": "Button label",
+      "buttonStyle": "invisible",
+      "videoHeight": 720,
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "marginBottom": false,
+      "sectionAlias": "视频 & 文本",
+      "paddingBottom": false,
+      "backgroundSize": "",
+      "backgroundColor": "#f2f2f2",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "symbol": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

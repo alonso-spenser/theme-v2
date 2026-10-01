@@ -1,0 +1,50 @@
+.ieuuQz .section-title {
+	background-color: var(--colorTheme);
+}
+
+@media (min-width: 768px) {
+	.ieuuQz-content {
+		position: relative;
+		margin-bottom: 2rem;
+	}
+
+	.ieuuQz .section-title {
+		position: absolute;
+		padding: 3rem;
+		bottom: -2rem;
+		width: 50%;
+	}
+
+	.ieuuQz .section-title.left {
+		left: 0.75rem;
+	}
+
+	.ieuuQz .section-title.right {
+		right: .75rem;
+	}
+
+	.ieuuQz .section-title.center {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.ieuuQz .container-fluid .section-title.left {
+		left: 0;
+	}
+
+	.ieuuQz .container-fluid .section-title.right {
+		right: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.ieuuQz .section-title {
+		padding: 1.5rem;
+	}
+
+	.ieuuQz .embed-responsive + .section-title {
+		margin-top: 1rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

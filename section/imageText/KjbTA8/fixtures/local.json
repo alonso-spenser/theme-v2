@@ -1,0 +1,30 @@
+{
+  "section": {
+    "id": "slb-alumni-demo",
+    "type": "imageText",
+    "templateId": "KjbTA8",
+    "runtimeVersion": 2,
+    "settings": {
+      "image": "/preview-assets/images/slb-alumni-campus.jpg",
+      "imageAlt": "Norway SLB location",
+      "heading": "SLB employees, current and past, made us who we are today.",
+      "paragraphOne": "They are an inextricable part of our history and culture of innovation. Since 1926, our employees have invented, designed, engineered, applied, and maintained technologies that help the world meet evolving energy challenges.",
+      "paragraphTwo": "That is why our dedication and gratitude to you, our alumni, never ends. Here you can stay connected to what’s new at SLB, renew relationships with friends and colleagues, and explore career and networking opportunities.",
+      "buttonLabel": "Explore the Alumni Service Center",
+      "buttonUrl": "https://alumni.slb.com",
+      "newWindow": true,
+      "backgroundColor": "#f2f2f2",
+      "textColor": "#ff0000",
+      "bodyColor": "#ff00ff",
+      "accentColor": ""
+    },
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/"
+  },
+  "params": {
+    "designMode": true
+  },
+  "lang": {}
+}

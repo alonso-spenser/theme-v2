@@ -1,0 +1,28 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] [class*="text-"],.section-[[${ section.id }]] .text-ul li a,.section-[[${ section.id }]] .text-ul li {
+    color: [[${section.settings.textColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.maskColor)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-content {
+    background-color: [[${section.settings.maskColor}]];
+}
+[/]
+[# th:if="${section.settings.padding > 0}"]
+    @media (min-width: 768px) {
+        .section-[[${ section.id }]] .[[${ section.templateId }]]-content {
+            margin-top: [[${section.settings.padding * 2}]]px;
+            margin-bottom: [[${section.settings.padding * 2}]]px;
+        }
+    }
+[/]

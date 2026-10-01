@@ -1,0 +1,100 @@
+{
+  "section": {
+    "id": "1505870918654730241",
+    "componentKind": "section",
+    "type": "featuredArticleCollection",
+    "templateId": "BVjIvy",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "3",
+      "symbol": "normal",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Featured Article Collection",
+      "cardColor": "",
+      "marginTop": false,
+      "mobColumn": "6",
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "buttonLink": "",
+      "imageScale": "1by1",
+      "paddingTop": true,
+      "subheading": "this is a new beginning",
+      "wideScreen": false,
+      "buttonLabel": "Button label",
+      "buttonStyle": "invisible",
+      "centerAlign": "text-center",
+      "contentAlign": "text-center",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "marginBottom": false,
+      "sectionAlias": "文章集合",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "cardBackground": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": ""
+    },
+    "bindings": {
+      "collectionList": {
+        "sourceType": "articleCollection",
+        "ids": []
+      }
+    },
+    "data": {
+      "collectionList": [
+        {
+          "title": "1 Example Collection Title",
+          "seoUrl": "",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review.",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+        },
+        {
+          "title": "2 Example Collection Title",
+          "seoUrl": "",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review.",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+        },
+        {
+          "title": "3 Example Collection Title",
+          "seoUrl": "",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review.",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+        },
+        {
+          "title": "4 Example Collection Title",
+          "seoUrl": "",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review.",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+        }
+      ]
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

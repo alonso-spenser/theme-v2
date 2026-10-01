@@ -1,0 +1,107 @@
+{
+  "section": {
+    "id": "1442387277267046402",
+    "componentKind": "section",
+    "type": "buttonList",
+    "templateId": "b2YR7v",
+    "runtimeVersion": 2,
+    "settings": {
+      "layout": "justify-content-start",
+      "lineColor": "#0000ff",
+      "marginTop": false,
+      "textColor": "#ff0000",
+      "paddingTop": true,
+      "wideScreen": false,
+      "marginBottom": false,
+      "sectionAlias": "标签导航组",
+      "paddingBottom": false,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "itemList": [
+        {
+          "active": false,
+          "label": "Link name",
+          "link": "",
+          "target": "_self"
+        },
+        {
+          "active": false,
+          "label": "Link name",
+          "link": "",
+          "target": "_self"
+        },
+        {
+          "active": true,
+          "label": "Link name",
+          "link": "",
+          "target": "_self"
+        },
+        {
+          "active": false,
+          "label": "Link name",
+          "link": "",
+          "target": "_self"
+        },
+        {
+          "active": false,
+          "label": "Link name",
+          "link": "",
+          "target": "_self"
+        },
+        {
+          "active": false,
+          "label": "Link name",
+          "link": "",
+          "target": "_self"
+        },
+        {
+          "active": false,
+          "label": "Link name",
+          "link": "",
+          "target": "_self"
+        },
+        {
+          "active": false,
+          "label": "Link name",
+          "link": "",
+          "target": "_self"
+        },
+        {
+          "active": false,
+          "label": "Link name",
+          "link": "",
+          "target": "_self"
+        }
+      ]
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

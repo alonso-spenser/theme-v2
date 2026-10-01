@@ -1,0 +1,18 @@
+[# th:each="o,stat: ${section.settings.logoList}"]
+    [# th:if="${not #strings.isEmpty(o.cardBackground) || not #strings.isEmpty(o.cardColor)}"]
+        .section-[[${ section.id }]] .[[${section.templateId}]]-[[${stat.index}]]  {
+            [# th:if="${not #strings.isEmpty(o.cardBackground)}"]
+                background-color: [[${ o.cardBackground }]];
+            [/]
+            [# th:if="${not #strings.isEmpty(o.cardColor)}"]
+                color: [[${ o.cardColor }]];
+            [/]
+        }
+    [/]
+[/]
+
+[# th:if="${section.settings.logoSize != null && section.settings.logoSize > 0}"]
+.section-[[${ section.id }]]  img {
+    width: [[${section.settings.logoSize}]]px;
+}
+[/]

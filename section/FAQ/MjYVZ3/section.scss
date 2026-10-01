@@ -1,0 +1,63 @@
+.MjYVZ3-item:not(:last-child) {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.MjYVZ3-item .text-content-heading {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	position: relative;
+	padding-left: 1.5rem;
+	cursor: pointer;
+}
+
+.MjYVZ3-item .text-content-heading:before {
+	left: 0;
+	top: calc(50% - 8px);
+	position: absolute;
+	content: '+';
+	height: 1rem;
+	width: 1rem;
+	line-height: 1rem;
+	font-size: 0.75rem;
+	text-align: center;
+	background-color: #000;
+	color: #fff;
+}
+
+.MjYVZ3-item .text-body {
+	display: none;
+	margin: 0;
+	padding-left: 1.5rem;
+	padding-bottom: 0.5rem;
+	transition: all 0.25s;
+}
+
+.MjYVZ3-item.active .text-content-heading {
+	color: var(--colorSecondary);
+}
+
+.MjYVZ3-item.active .text-content-heading:before {
+	content: '-';
+}
+
+.MjYVZ3-item.active .text-body {
+	display: block;
+}
+
+.MjYVZ3-item.active .text-body p {
+	color: var(--colorSecondary);
+}
+
+@media (max-width: 768px) {
+	.MjYVZ3 .breadcrumb {
+		flex-wrap: nowrap;
+		overflow-x: auto;
+	}
+
+	.MjYVZ3 .breadcrumb-item {
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

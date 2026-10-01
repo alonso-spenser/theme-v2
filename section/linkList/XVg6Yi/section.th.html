@@ -1,0 +1,11 @@
+<section th:class="|XVg6Yi section-${section.id}|" th:data-section="${section.templateId}">
+  <div class="container XVg6Yi-layout">
+    <h2 class="text-headline" th:text="${section.settings.heading}"></h2>
+    <article class="XVg6Yi-item" th:each="link : ${section.settings.links}">
+      <h3 class="text-content-heading" th:text="${link.title}"></h3>
+      <p class="text-body" th:if="${not #strings.isEmpty(link.description)}" th:text="${link.description}"></p>
+      <a class="btn btn-link XVg6Yi-link" th:if="${not #strings.isEmpty(link.url) and not #strings.isEmpty(link.label)}"
+         th:href="${link.url}" th:target="${section.settings.newWindow == true ? '_blank' : '_self'}" rel="noopener noreferrer"><span th:text="${link.label}"></span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12h15M12 5l7 7-7 7"/></svg></a>
+    </article>
+  </div>
+</section>

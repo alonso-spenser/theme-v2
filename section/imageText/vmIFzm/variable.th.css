@@ -1,0 +1,39 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.cardBackground)}"]
+.section-[[${ section.id }]] .embed-responsive .card  {
+    background-color:[[${section.settings.cardBackground}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.cardColor)}"]
+    .section-[[${ section.id }]] [class*=text-]   {
+        color:[[${section.settings.cardColor}]];
+    }
+    .section-[[${ section.id }]] .text-small:before  {
+        background-color: [[${section.settings.cardColor}]];
+    }
+[/]
+
+[# th:if="${section.settings.padding != null && section.settings.padding > 0}"]
+    @media (min-width: 768px) {
+        .section-[[${ section.id }]] .card-body {
+            padding: [[${section.settings.padding}]]px;
+        }
+    }
+[/]
+
+[# th:if="${section.settings.negativeMargin != null && section.settings.negativeMargin > 0}"]
+    @media (min-width: 768px) {
+        .section-[[${ section.id }]] .embed-responsive {
+            margin-top:  -[[${section.settings.negativeMargin}]]px;
+        }
+    }
+[/]

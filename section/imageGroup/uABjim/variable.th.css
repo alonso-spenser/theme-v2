@@ -1,0 +1,32 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:each="o,stat: ${section.settings.imageList}"]
+    [# th:if="${not #strings.isEmpty(o.textColor)}"]
+        .section-[[${ section.id }]] .[[${section.templateId}]]-[[${stat.index}]] [class^=text-] {
+            color: [[${ o.textColor }]];
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(o.linkColor)}"]
+        .section-[[${ section.id }]] .[[${section.templateId}]]-[[${stat.index}]] [class^=text-] a {
+            color: [[${ o.linkColor }]];
+        }
+    [/]
+[/]
+
+[# th:if="${(section.settings.borderRadius != null && section.settings.borderRadius > 0) || not #strings.isEmpty(section.settings.borderColor) }"]
+    .section-[[${ section.id }]] .embed-responsive-item {
+        [# th:if="${section.settings.borderRadius != null && section.settings.borderRadius > 0}"]
+            border-radius: [[${section.settings.borderRadius}]]px;
+        [/]
+        [# th:if="${not #strings.isEmpty(section.settings.borderColor)}"]
+            border:1px solid [[${section.settings.borderColor}]];
+        [/]
+     }
+[/]

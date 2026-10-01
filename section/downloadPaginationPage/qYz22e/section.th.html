@@ -1,0 +1,81 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''} ${ section.templateId } section-${ section.id } |" th:data-section="${section.templateId}">
+    <div th:class="|bread-crumb ${section.settings.h1Layout}|" th:if="${section.settings.h1Layout != 'invisible' || section.settings.enableCrumb}">
+        <div th:class="|container${section.settings.h1Wide ? '-fluid' : ''}${section.settings.enableCrumb ? '' : ' solo'}|">
+            <h1 class="text-heading" th:if="${section.settings.h1Layout != 'invisible' && section.settings.h1Layout != 'bottom'}">
+                [[${ page.seoH1 }]]
+            </h1>
+            <ol class="breadcrumb" th:if="${section.settings.enableCrumb}">
+                <li class="breadcrumb-item">
+                    <a th:href="${ site.urlPrefix }">
+                    [[${ lang.global.home }]]
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    [[${ page.seoH1 }]]
+                </li>
+            </ol>
+            <h1 class="text-heading" th:if="${section.settings.h1Layout != 'invisible' && section.settings.h1Layout == 'bottom'}">
+                [[${ page.seoH1 }]]
+            </h1>
+        </div>
+    </div>
+    <div th:class="|section-container${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''}|">
+        <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|" th:data-down-collection="${section.data.collection.id}"  th:data-down-auth="${not #strings.isEmpty(section.data.collection.accessPassword) ? 1 : 0}">
+            <div th:class="|row ${ section.templateId }-item|" th:each="o,stat:${section.data.page.records}">
+                <div class="col-md-3" th:if="${ section.settings.imageVisible }">
+                    <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${ not #strings.isEmpty(o.coverImage) }">
+                        <img class="embed-responsive-item lazy" th:src="|${o.coverImage}!1|" th:data-original="|${o.coverImage}!3|" th:alt="${o.title}">
+                    </div>
+                </div>
+                <div th:class="|col-md-${section.settings.imageVisible ? 9 : 12}|">
+                    <h3 class="text-content-heading" th:data-down-name="${o.id}">
+                        [[${o.title}]]
+                    </h3>
+                    <p class="text-body break-word">
+                        [[${o.description}]]
+                    </p>
+
+                    <div th:class="|${ section.templateId }-down text-down|">
+                        <div th:data-resource-id="${o.id}" th:data-collection-id="${section.data.collection.id}" th:data-down-file="${not #strings.isEmpty(section.data.collection.accessPassword) ? ' ' : o.url}">
+                            <th:block th:if="${ not #strings.isEmpty(section.data.collection.accessPassword) }">
+                                <i class="ic-lock"></i>
+                                <label th:data-down-name="${o.id}">
+                                    [[${lang.download}]]
+                                </label>
+                            </th:block>
+                            <button class="btn btn-primary" th:if="${ #strings.isEmpty(section.data.collection.accessPassword) }">
+                                [[${lang.download}]]
+                            </button>
+                        </div>
+                        <div class="input-group" th:data-down-group="${o.id}" th:if="${ not #strings.isEmpty(section.data.collection.accessPassword) }">
+                            <input type="text" class="form-control" maxlength="10" th:data-down-pass="${o.id}" placeholder="Password">
+                            <div class="d-flex">
+                                <button class="btn btn-primary" th:data-down-get="${o.id}">
+                                    [[${lang.download}]]
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-neighbor" th:if="${section.data.collection != null && not #strings.isEmpty(section.data.collection.description) && section.data.page.current == 1}">
+                <div class="section-margin-top section-collection-describe" th:with="textLines = ${#strings.listSplit(section.data.collection.description,'\n')}">
+                    <h3 class="text-content-heading">[[${ section.data.collection.title }]]</h3>
+                    <th:block th:each="textLine,saltLine:${textLines}">
+                        <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                    </th:block>
+                </div>
+                <div class="section-collection-more">
+                    <label th:text="${#strings.isEmpty(section.settings.summaryShow) ? 'Show More' : section.settings.summaryShow}"></label>
+                    <label th:text="${#strings.isEmpty(section.settings.summaryClose) ? 'Hide' : section.settings.summaryClose}"></label>
+                </div>
+            </div>
+            <div class="section-neighbor d-flex justify-content-center" th:if="${section.data.page.total > section.data.page.size}">
+                [(${ section.settings.pagination })]
+            </div>
+        </div>
+    </div>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

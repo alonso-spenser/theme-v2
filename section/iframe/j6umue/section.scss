@@ -1,0 +1,10 @@
+.j6umue .container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.j6umue .embed-responsive:before {
+	padding-top: 40%;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

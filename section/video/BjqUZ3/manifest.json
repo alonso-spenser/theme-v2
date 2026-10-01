@@ -1,0 +1,328 @@
+{
+  "protocolVersion": 2,
+  "componentKind": "section",
+  "type": "video",
+  "templateId": "BjqUZ3",
+  "runtimeVersion": 2,
+  "definitionVersion": 1,
+  "schemaVersion": 1,
+  "name": {
+    "en": "Video",
+    "zh-CN": "视频"
+  },
+  "policy": {
+    "removable": true,
+    "duplicable": true,
+    "maxInstances": 0
+  },
+  "placement": {
+    "fixed": false,
+    "pages": []
+  },
+  "render": {
+    "template": "section.th.html",
+    "style": "section.scss",
+    "variableStyle": "variable.th.css",
+    "script": "section.js"
+  },
+  "editor": {
+    "groups": [
+      {
+        "id": "group1",
+        "name": {
+          "en": "Video",
+          "zh-CN": "视频"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "Video files from third-party platforms (excluding platform types like YouTube)",
+              "zh-CN": "视频地址（不含类似 youtube、youku等平台类型）的视频文件"
+            },
+            "name": {
+              "en": "Video",
+              "zh-CN": "视频地址"
+            },
+            "type": "textarea",
+            "field": "video",
+            "default": "",
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Placeholder",
+              "zh-CN": "占位图"
+            },
+            "type": "imagePicker",
+            "field": "poster",
+            "default": "",
+            "options": [],
+            "altFiled": "alt"
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "group2",
+        "name": {
+          "en": "Settings",
+          "zh-CN": "设置"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Full screen",
+              "zh-CN": "全屏"
+            },
+            "type": "switch",
+            "field": "wideScreen",
+            "default": false,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Auto play",
+              "zh-CN": "播放方式"
+            },
+            "type": "select",
+            "field": "autoPlay",
+            "default": "manual",
+            "options": [
+              {
+                "value": "auto",
+                "name": {
+                  "en": "Auto",
+                  "zh-CN": "自动"
+                }
+              },
+              {
+                "value": "manual",
+                "name": {
+                  "en": "Manual",
+                  "zh-CN": "手动"
+                }
+              }
+            ]
+          },
+          {
+            "info": {
+              "en": "When the playback mode is \"manual\"",
+              "zh-CN": "播放方式为“手动”时"
+            },
+            "name": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "type": "divider",
+            "default": "",
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Mask color",
+              "zh-CN": "蒙板颜色"
+            },
+            "type": "colorPicker",
+            "field": "maskColor",
+            "default": "",
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Loop",
+              "zh-CN": "循环播放"
+            },
+            "type": "switch",
+            "field": "loop",
+            "default": false,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Controls",
+              "zh-CN": "控制按钮"
+            },
+            "type": "switch",
+            "field": "control",
+            "default": false,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "muted",
+              "zh-CN": "静音"
+            },
+            "type": "switch",
+            "field": "muted",
+            "default": false,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "This parameter is invalid during automatic playback",
+              "zh-CN": "自动播放时此参数失效"
+            },
+            "name": {
+              "en": "Preload",
+              "zh-CN": "加载方式"
+            },
+            "type": "select",
+            "field": "preload",
+            "default": "auto",
+            "options": [
+              {
+                "value": "auto",
+                "name": {
+                  "en": "auto",
+                  "zh-CN": "页面加载后载入整个视频"
+                }
+              },
+              {
+                "value": "meta",
+                "name": {
+                  "en": "meta",
+                  "zh-CN": "页面加载后只载入元数据"
+                }
+              },
+              {
+                "value": "none",
+                "name": {
+                  "en": "none",
+                  "zh-CN": "页面加载后不载入视频"
+                }
+              }
+            ]
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Width",
+              "zh-CN": "宽"
+            },
+            "type": "slider",
+            "field": "videoWidth",
+            "default": 1280,
+            "options": [],
+            "min": 1,
+            "step": 1
+          },
+          {
+            "info": {
+              "en": "Video scale is: height / width * 100",
+              "zh-CN": "视频最终比例为：高 / 宽 * 100"
+            },
+            "name": {
+              "en": "Height",
+              "zh-CN": "高"
+            },
+            "type": "slider",
+            "field": "videoHeight",
+            "default": 720,
+            "options": [],
+            "min": 1,
+            "step": 1
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "additionalSettings",
+        "name": {
+          "en": "Additional settings",
+          "zh-CN": "补充设置"
+        },
+        "elements": [
+          {
+            "field": "sectionAlias",
+            "name": {
+              "en": "sectionAlias"
+            },
+            "type": "hidden",
+            "default": "第三方视频"
+          },
+          {
+            "field": "alt",
+            "name": {
+              "en": "alt"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "marginTop",
+            "name": {
+              "en": "marginTop"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "marginBottom",
+            "name": {
+              "en": "marginBottom"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "paddingTop",
+            "name": {
+              "en": "paddingTop"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "paddingBottom",
+            "name": {
+              "en": "paddingBottom"
+            },
+            "type": "hidden",
+            "default": ""
+          }
+        ]
+      }
+    ]
+  },
+  "data": {
+    "source": "none",
+    "contract": "theme.video.v2"
+  }
+}

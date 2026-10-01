@@ -1,0 +1,41 @@
+.qmee6n-tile .card-body {
+	border-bottom-left-radius: calc(var(--cardBorderRadius) * 1px);
+	border-bottom-right-radius: calc(var(--cardBorderRadius) * 1px);
+}
+
+.qmee6n .card .text-content-heading {
+	text-overflow: ellipsis;
+	line-clamp: 2;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+}
+
+@media (min-width: 768px) {
+	.qmee6n .sidebar-right > .col-md-9 {
+		padding-right: 3rem;
+	}
+
+	.qmee6n .sidebar-left > .col-md-9 {
+		padding-left: 3rem;
+	}
+}
+
+.qmee6n-list {
+	margin-bottom: 1.25rem;
+	padding-bottom: 1.25rem;
+	border-bottom: 1px var(--borderStyle) var(--colorBorder);
+}
+
+@media (max-width: 768px) {
+	.qmee6n-list .row .col-md-3 {
+		margin-bottom: 0.75rem;
+	}
+}
+
+.qmee6n-list:hover [class*="text-"] {
+	color: var(--colorTheme);
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

@@ -1,0 +1,408 @@
+{
+  "protocolVersion": 2,
+  "componentKind": "section",
+  "type": "floatMenu",
+  "templateId": "Ur6Jvm",
+  "runtimeVersion": 2,
+  "definitionVersion": 1,
+  "schemaVersion": 1,
+  "name": {
+    "en": "Float menu",
+    "zh-CN": "悬浮菜单"
+  },
+  "policy": {
+    "removable": false,
+    "duplicable": false,
+    "maxInstances": 0
+  },
+  "placement": {
+    "fixed": false,
+    "pages": []
+  },
+  "render": {
+    "template": "section.th.html",
+    "style": "section.scss",
+    "variableStyle": "variable.th.css",
+    "script": "section.js"
+  },
+  "editor": {
+    "groups": [
+      {
+        "id": "group1",
+        "name": {
+          "en": "Settings",
+          "zh-CN": "设置"
+        },
+        "elements": [
+          {
+            "type": "repeater",
+            "field": "whatsapp",
+            "name": {
+              "en": "Settings",
+              "zh-CN": "设置"
+            },
+            "maxItems": 0,
+            "elements": [
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "ICON Size",
+                  "zh-CN": "图标尺寸"
+                },
+                "type": "select",
+                "field": "iconSize",
+                "default": "medium",
+                "options": [
+                  {
+                    "value": "small",
+                    "name": {
+                      "en": "Small",
+                      "zh-CN": "小"
+                    }
+                  },
+                  {
+                    "value": "medium",
+                    "name": {
+                      "en": "Medium",
+                      "zh-CN": "中"
+                    }
+                  },
+                  {
+                    "value": "large",
+                    "name": {
+                      "en": "Large",
+                      "zh-CN": "大"
+                    }
+                  }
+                ]
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Skype visible",
+                  "zh-CN": "显示Skype"
+                },
+                "type": "switch",
+                "field": "skypeVisible",
+                "default": true,
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Whatsapp visible",
+                  "zh-CN": "显示Whatsapp"
+                },
+                "type": "switch",
+                "field": "whatsappVisible",
+                "default": true,
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Skype background",
+                  "zh-CN": "Skype背景色"
+                },
+                "type": "colorPicker",
+                "field": "skypeButton",
+                "default": null,
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Skype text color",
+                  "zh-CN": "Skype文字色"
+                },
+                "type": "colorPicker",
+                "field": "skypeButtonLabel",
+                "default": null,
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Whatsapp background",
+                  "zh-CN": "Whatsapp背景色"
+                },
+                "type": "colorPicker",
+                "field": "whatsappButton",
+                "default": null,
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Whatsapp text color",
+                  "zh-CN": "Whatsapp文字色"
+                },
+                "type": "colorPicker",
+                "field": "whatsappButtonLabel",
+                "default": null,
+                "options": []
+              }
+            ],
+            "default": []
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "group2",
+        "name": {
+          "en": "Skype",
+          "zh-CN": "Skype"
+        },
+        "elements": [
+          {
+            "type": "repeater",
+            "field": "skype",
+            "name": {
+              "en": "Skype",
+              "zh-CN": "Skype"
+            },
+            "maxItems": 5,
+            "elements": [
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Name",
+                  "zh-CN": "联系人"
+                },
+                "type": "text",
+                "field": "skypeName",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Skype ID",
+                  "zh-CN": "Skype ID"
+                },
+                "type": "text",
+                "field": "skypeID",
+                "default": "",
+                "options": []
+              }
+            ],
+            "default": []
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "group3",
+        "name": {
+          "en": "Whatsapp",
+          "zh-CN": "Whatsapp"
+        },
+        "elements": [],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "group4",
+        "name": {
+          "en": "Custom ICON",
+          "zh-CN": "自定义图标"
+        },
+        "elements": [
+          {
+            "type": "repeater",
+            "field": "custom",
+            "name": {
+              "en": "Custom ICON",
+              "zh-CN": "自定义图标"
+            },
+            "maxItems": 4,
+            "elements": [
+              {
+                "info": {
+                  "en": "ICON Frist",
+                  "zh-CN": "图标优先"
+                },
+                "name": {
+                  "en": "ICON",
+                  "zh-CN": "图标"
+                },
+                "type": "text",
+                "field": "iconDefault",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Image",
+                  "zh-CN": "图片"
+                },
+                "type": "imagePicker",
+                "field": "icon",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Link",
+                  "zh-CN": "链接"
+                },
+                "type": "linkPicker",
+                "field": "link",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Background",
+                  "zh-CN": "背景色"
+                },
+                "type": "colorPicker",
+                "field": "background",
+                "default": null,
+                "options": []
+              }
+            ],
+            "default": []
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "additionalSettings",
+        "name": {
+          "en": "Additional settings",
+          "zh-CN": "补充设置"
+        },
+        "elements": [
+          {
+            "field": "iconSize",
+            "name": {
+              "en": "iconSize"
+            },
+            "type": "hidden",
+            "default": "medium"
+          },
+          {
+            "field": "skypeButton",
+            "name": {
+              "en": "skypeButton"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "sectionAlias",
+            "name": {
+              "en": "sectionAlias"
+            },
+            "type": "hidden",
+            "default": "悬浮菜单"
+          },
+          {
+            "field": "skypeVisible",
+            "name": {
+              "en": "skypeVisible"
+            },
+            "type": "switch",
+            "default": true
+          },
+          {
+            "field": "whatsappButton",
+            "name": {
+              "en": "whatsappButton"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "whatsappVisible",
+            "name": {
+              "en": "whatsappVisible"
+            },
+            "type": "switch",
+            "default": true
+          },
+          {
+            "field": "skypeButtonLabel",
+            "name": {
+              "en": "skypeButtonLabel"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "whatsappButtonLabel",
+            "name": {
+              "en": "whatsappButtonLabel"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "isGlobalSection",
+            "name": {
+              "en": "isGlobalSection"
+            },
+            "type": "hidden",
+            "default": ""
+          }
+        ]
+      }
+    ]
+  },
+  "data": {
+    "source": "none",
+    "contract": "theme.floatMenu.v2"
+  }
+}

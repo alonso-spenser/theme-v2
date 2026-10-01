@@ -1,0 +1,41 @@
+.Ijaqeu-item {
+	border-radius: 10px;
+	width: 100%;
+}
+
+.Ijaqeu-item + .Ijaqeu-item {
+	margin-top: 1.5rem;
+}
+
+.Ijaqeu .row.row-small-gutter img + img {
+	margin-top: 0.75rem;
+}
+
+.Ijaqeu .card {
+	border-radius: 10px;
+	z-index: 1;
+	width: 100%;
+	margin-left: 5rem;
+}
+
+.Ijaqeu .card-body {
+	padding: 4rem;
+}
+
+@media (max-width: 768px) {
+	.Ijaqeu .card-body {
+		padding: 1.5rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.Ijaqeu .card {
+		margin-left: 0;
+	}
+
+	.Ijaqeu [class*=col-]:nth-child(2) {
+		padding-top: 1.5rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

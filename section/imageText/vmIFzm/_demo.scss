@@ -1,0 +1,36 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-vmIFzm{
+    background: #F2F2F2   ;
+    
+}
+
+
+
+.section-demo-vmIFzm .embed-responsive .card  {
+    background-color:#ff0000;
+}
+
+
+
+    .section-demo-vmIFzm [class*=text-]   {
+        color:#ffff00;
+    }
+    .section-demo-vmIFzm .text-small:before  {
+        background-color: #ffff00;
+    }
+
+
+
+    @media (min-width: 768px) {
+        .section-demo-vmIFzm .card-body {
+            padding: 100px;
+        }
+    }
+
+
+
+    @media (min-width: 768px) {
+        .section-demo-vmIFzm .embed-responsive {
+            margin-top:  -150px;
+        }
+    }

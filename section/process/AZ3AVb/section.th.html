@@ -1,0 +1,20 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div class="row row-gutter" th:if="${#lists.size(section.settings.graphList) > 0}">
+            <div th:class="|col-md-${section.settings.column} AZ3AVb-item|" th:each="o,salt:${section.settings.graphList}">
+                <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${not #strings.isEmpty(o.mainGraph)}">
+                    <img class="embed-responsive-item lazy" th:src="|${ o.mainGraph }!1|" th:data-original="|${o.mainGraph}!${ section.settings.column }|" th:alt="${ o.mainHeading }">
+                    <div class="AZ3AVb-tran">
+                    <th:block th:if="${not #strings.isEmpty(o.tranGraph)}">
+                      <img class="lazy" th:src="|${ o.tranGraph }!1|" th:data-original="|${o.tranGraph}!2|" th:alt="${ o.mainHeading }">
+                    </th:block>
+                    </div>
+                </div>
+                <p class="AZ3AVb-text" th:if="${not #strings.isEmpty(o.mainHeading)}">[[${o.mainHeading}]]</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

@@ -1,0 +1,20 @@
+.u2iIV3 .u2iIV3-banner { position: relative; min-height: 18rem; }
+.u2iIV3 picture, .u2iIV3 picture img { display: block; width: 100%; }
+.u2iIV3 picture img { min-height: 18rem; object-fit: cover; }
+.u2iIV3-content { position: absolute; inset: 0; display: flex; align-items: center; padding: 2rem; }
+.u2iIV3-content::before { content: ''; position: absolute; inset: 0; background: var(--banner-overlay, #000); opacity: var(--banner-opacity, .5); }
+.u2iIV3-area { position: relative; width: var(--banner-width, 60%); margin-left: var(--banner-offset, 0%); }
+.u2iIV3-area [class*='text-'] { color: var(--banner-text, #fff); }
+.u2iIV3-area p { white-space: pre-line; }
+.u2iIV3-content[class*='right'] { justify-content: flex-end; text-align: right; }
+.u2iIV3-content.center { justify-content: center; text-align: center; }
+.u2iIV3-content[class*='top'] { align-items: flex-start; }
+.u2iIV3-content[class*='bottom'] { align-items: flex-end; }
+@media (max-width: 767px) {
+    .u2iIV3-content { padding: 1rem; }
+    .u2iIV3-area { width: 100%; margin-left: 0; }
+    .u2iIV3-area [class*='text-'] { color: var(--banner-mobile-text, var(--banner-text, #fff)); }
+}
+
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

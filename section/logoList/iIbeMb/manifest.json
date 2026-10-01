@@ -1,0 +1,374 @@
+{
+  "protocolVersion": 2,
+  "componentKind": "section",
+  "type": "logoList",
+  "templateId": "iIbeMb",
+  "runtimeVersion": 2,
+  "definitionVersion": 1,
+  "schemaVersion": 1,
+  "name": {
+    "en": "Logo墙",
+    "zh-CN": "Logo墙"
+  },
+  "policy": {
+    "removable": true,
+    "duplicable": true,
+    "maxInstances": 0
+  },
+  "placement": {
+    "fixed": false,
+    "pages": []
+  },
+  "render": {
+    "template": "section.th.html",
+    "style": "section.scss",
+    "variableStyle": "variable.th.css",
+    "script": "section.js"
+  },
+  "editor": {
+    "groups": [
+      {
+        "id": "group1",
+        "name": {
+          "en": "Logo",
+          "zh-CN": "Logo"
+        },
+        "elements": [
+          {
+            "type": "repeater",
+            "field": "logoList",
+            "name": {
+              "en": "Logo",
+              "zh-CN": "Logo"
+            },
+            "maxItems": 99,
+            "elements": [
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Heading",
+                  "zh-CN": "标题"
+                },
+                "type": "text",
+                "field": "heading",
+                "default": "This is a heading",
+                "options": [],
+                "translate": 0
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Image",
+                  "zh-CN": "图片"
+                },
+                "type": "imagePicker",
+                "field": "image",
+                "default": "https://theme.fomille.site/img/logo.png",
+                "options": [],
+                "altFiled": "alt"
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "ALT",
+                  "zh-CN": "ALT"
+                },
+                "type": "hidden",
+                "field": "alt",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "type": "divider",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Text",
+                  "zh-CN": "文本"
+                },
+                "type": "colorPicker",
+                "field": "cardColor",
+                "default": "",
+                "options": [],
+                "translate": 1
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Background",
+                  "zh-CN": "背景"
+                },
+                "type": "colorPicker",
+                "field": "cardBackground",
+                "default": "",
+                "options": [],
+                "translate": 1
+              }
+            ],
+            "default": [
+              {
+                "image": "/preview-assets/images/logo.png",
+                "alt": "",
+                "heading": "This is a heading",
+                "cardColor": "#ffff00",
+                "cardBackground": "#ff0000"
+              },
+              {
+                "image": "/preview-assets/images/logo.png",
+                "alt": "",
+                "heading": "This is a heading",
+                "cardColor": "#00ff00",
+                "cardBackground": "#046e15"
+              },
+              {
+                "image": "/preview-assets/images/logo.png",
+                "alt": "",
+                "heading": "This is a heading",
+                "cardColor": "#ffff00",
+                "cardBackground": "#ff0000"
+              },
+              {
+                "image": "/preview-assets/images/logo.png",
+                "alt": "",
+                "heading": "This is a headingThis is a headingThis is a headingThis is a headingThis is a headingThis is a headingThis is a headingThis is a headingThis is a heading",
+                "cardColor": "#00ff00",
+                "cardBackground": "#046e15"
+              }
+            ]
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "group2",
+        "name": {
+          "en": "Settings",
+          "zh-CN": "设置"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Wide screen",
+              "zh-CN": "宽屏模式"
+            },
+            "type": "switch",
+            "field": "wideScreen",
+            "default": false,
+            "options": [],
+            "translate": 1
+          },
+          {
+            "max": 200,
+            "min": 0,
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Image Size",
+              "zh-CN": "图片尺寸"
+            },
+            "step": 5,
+            "type": "slider",
+            "field": "logoSize",
+            "default": 50,
+            "options": [],
+            "translate": 1
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Columns",
+              "zh-CN": "列数"
+            },
+            "type": "select",
+            "field": "column",
+            "default": "3",
+            "options": [
+              {
+                "value": "2",
+                "name": {
+                  "en": "6 Columns",
+                  "zh-CN": "6 列"
+                }
+              },
+              {
+                "value": "3",
+                "name": {
+                  "en": "4 Columns",
+                  "zh-CN": "4 列"
+                }
+              },
+              {
+                "value": "4",
+                "name": {
+                  "en": "3 Columns",
+                  "zh-CN": "3 列"
+                }
+              },
+              {
+                "value": "6",
+                "name": {
+                  "en": "2 Columns",
+                  "zh-CN": "2 列"
+                }
+              },
+              {
+                "value": "12",
+                "name": {
+                  "en": "1 Column",
+                  "zh-CN": "1 列"
+                }
+              }
+            ],
+            "translate": 1
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Mobile columns",
+              "zh-CN": "移动端列数"
+            },
+            "type": "select",
+            "field": "mobColumn",
+            "default": "6",
+            "options": [
+              {
+                "value": "2",
+                "name": {
+                  "en": "6 Columns",
+                  "zh-CN": "6 列"
+                }
+              },
+              {
+                "value": "3",
+                "name": {
+                  "en": "4 Columns",
+                  "zh-CN": "4 列"
+                }
+              },
+              {
+                "value": "4",
+                "name": {
+                  "en": "3 Columns",
+                  "zh-CN": "3 列"
+                }
+              },
+              {
+                "value": "6",
+                "name": {
+                  "en": "2 Columns",
+                  "zh-CN": "2 列"
+                }
+              },
+              {
+                "value": "12",
+                "name": {
+                  "en": "1 Column",
+                  "zh-CN": "1 列"
+                }
+              }
+            ],
+            "translate": 1
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "additionalSettings",
+        "name": {
+          "en": "Additional settings",
+          "zh-CN": "补充设置"
+        },
+        "elements": [
+          {
+            "field": "sectionAlias",
+            "name": {
+              "en": "sectionAlias"
+            },
+            "type": "hidden",
+            "default": "Logo墙"
+          },
+          {
+            "field": "marginTop",
+            "name": {
+              "en": "marginTop"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "marginBottom",
+            "name": {
+              "en": "marginBottom"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "paddingTop",
+            "name": {
+              "en": "paddingTop"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "paddingBottom",
+            "name": {
+              "en": "paddingBottom"
+            },
+            "type": "hidden",
+            "default": ""
+          }
+        ]
+      }
+    ]
+  },
+  "data": {
+    "source": "none",
+    "contract": "theme.logoList.v2"
+  }
+}

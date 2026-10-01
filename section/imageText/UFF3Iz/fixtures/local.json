@@ -1,0 +1,99 @@
+{
+  "section": {
+    "id": "1442658584185499650",
+    "componentKind": "section",
+    "type": "imageText",
+    "templateId": "UFF3Iz",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "4",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Title with button",
+      "marginTop": false,
+      "mobColumn": "6",
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "imageScale": "normal",
+      "imageWidth": 80,
+      "paddingTop": true,
+      "subheading": "this is a new beginning",
+      "wideScreen": false,
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "marginBottom": false,
+      "sectionAlias": "图文信息组",
+      "cardTextColor": "#ff0000",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "cardBackground": "",
+      "backgroundColor": "#f2f2f2",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "infoList": [
+        {
+          "image": "/preview-assets/images/image-with-text.jpg",
+          "title": "This is a title",
+          "describe": "This is content",
+          "buttonLabel": "Button",
+          "buttonLink": "",
+          "buttonStyle": "btn-outline-danger",
+          "secondButtonLabel": "Button",
+          "secondButtonLink": "",
+          "secondButtonStyle": "btn-outline-primary"
+        },
+        {
+          "image": "/preview-assets/images/image-with-text.jpg",
+          "title": "This is a title",
+          "describe": "This is content",
+          "buttonLabel": "Button",
+          "buttonLink": "",
+          "buttonStyle": "btn-outline-danger",
+          "secondButtonLabel": "Button",
+          "secondButtonLink": "",
+          "secondButtonStyle": "btn-outline-primary"
+        },
+        {
+          "image": "/preview-assets/images/image-with-text.jpg",
+          "title": "This is a title",
+          "describe": "This is content",
+          "buttonLabel": "Button",
+          "buttonLink": "",
+          "buttonStyle": "btn-outline-danger",
+          "secondButtonLabel": "Button",
+          "secondButtonLink": "",
+          "secondButtonStyle": "btn-outline-primary"
+        }
+      ],
+      "symbol": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

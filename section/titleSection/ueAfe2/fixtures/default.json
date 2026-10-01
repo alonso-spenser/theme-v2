@@ -1,0 +1,57 @@
+{
+  "section": {
+    "id": "1643105031715254273",
+    "componentKind": "section",
+    "type": "titleSection",
+    "templateId": "ueAfe2",
+    "runtimeVersion": 2,
+    "settings": {
+      "heading": "Meet Our <b>Amazing Team</b>",
+      "lineText": "Team",
+      "subColor": "",
+      "lineColor": "",
+      "marginTop": false,
+      "signImage": "",
+      "textAlign": "text-left",
+      "paddingTop": true,
+      "subheading": "Our Team",
+      "wideScreen": false,
+      "headingColor": "",
+      "marginBottom": false,
+      "sectionAlias": "标题",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "headingLabelColor": "",
+      "backgroundPosition": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

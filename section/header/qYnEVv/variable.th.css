@@ -1,0 +1,117 @@
+[# th:if="${not #strings.isEmpty(section.settings.auxiliaryBackground)}"]
+.section-[[${ section.id }]] .[[${section.templateId }]]-bar {
+  background-color: [[${section.settings.auxiliaryBackground}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.auxiliaryColor)}"]
+.section-[[${ section.id }]] .[[${section.templateId }]]-bar .region-icon,
+.section-[[${ section.id }]] .[[${section.templateId }]]-bar .dropdown-toggle,
+.section-[[${ section.id }]] .[[${section.templateId }]]-bar .section-drop:before,
+.section-[[${ section.id }]] .[[${section.templateId }]]-bar .[[${section.templateId }]]-icon:before,
+.section-[[${ section.id }]] .[[${section.templateId }]]-bar a:not(.dropdown-item) {
+  color: [[${section.settings.auxiliaryColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.barBackground)}"]
+.section-[[${ section.id }]] .[[${section.templateId }]]-notice {
+  background-color: [[${section.settings.barBackground}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.barTextColor)}"]
+.section-[[${ section.id }]] .[[${section.templateId }]]-notice .[[${section.templateId }]]-notice-close,
+.section-[[${ section.id }]] .[[${section.templateId }]]-notice [class*="text-"] {
+  color: [[${section.settings.barTextColor}]];
+}
+[/]
+
+
+[# th:if="${not #strings.isEmpty(section.settings.submenuBackground) ||
+    not #strings.isEmpty(section.settings.maskColor) ||
+    not #strings.isEmpty(section.settings.verticalContentBackground) ||
+    not #strings.isEmpty(section.settings.verticalContentTextColor) ||
+    not #strings.isEmpty(section.settings.verticalSidebarBackground) ||
+    not #strings.isEmpty(section.settings.verticalSidebarTextColor) ||
+    not #strings.isEmpty(section.settings.textHoverColor) ||
+    not #strings.isEmpty(section.settings.fullTextColor)
+}"]
+@media (min-width: 768px) {
+    [# th:if="${not #strings.isEmpty(section.settings.submenuBackground)}"]
+        .section-[[${ section.id }]] .navbar .navbar-nav .navbar-vertical {
+            background-color: [[${section.settings.submenuBackground}]];
+        }
+        .section-[[${ section.id }]] .navbar .navbar-nav li.nav-item.has-sub .nav-link.default:before {
+            border-bottom-color: [[${section.settings.submenuBackground}]];
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.submenuTextColor)}"]
+        .section-[[${ section.id }]] .navbar .navbar-nav .navbar-vertical .dropdown-item {
+            color: [[${section.settings.submenuTextColor}]];
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.maskColor)}"]
+        .section-[[${ section.id }]] .navbar .navbar-nav li.nav-item.has-sub .nav-link.fluid:before {
+            border-bottom-color: [[${section.settings.maskColor}]];
+        }
+		.section-[[${ section.id }]] .navbar .navbar-nav .navbar-fluid {
+			background-color: [[${section.settings.maskColor}]];
+		}
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.fullTextColor)}"]
+        .section-[[${ section.id }]] .navbar .navbar-nav .navbar-fluid .dropdown-item {
+            color: [[${section.settings.fullTextColor}]];
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.verticalContentBackground)}"]
+        .section-[[${ section.id }]] .navbar .navbar-nav li.nav-item.has-sub .nav-link.vertical:before {
+            border-bottom-color: [[${section.settings.verticalContentBackground}]];
+        }
+		.section-[[${ section.id }]] .navbar-fluid-vertical-content {
+			background-color: [[${section.settings.verticalContentBackground}]];
+		}
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.verticalContentTextColor)}"]
+        .section-[[${ section.id }]] .navbar-fluid-vertical-content .dropdown-item {
+            color: [[${section.settings.verticalContentTextColor}]];
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.verticalSidebarTextColor)}"]
+        .section-[[${ section.id }]] .navbar-fluid-vertical-sub .vertical-link {
+            color: [[${section.settings.verticalSidebarTextColor}]];
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.verticalSidebarBackground)}"]
+        .section-[[${ section.id }]] .navbar-fluid-vertical-sub {
+            background-color: [[${section.settings.verticalSidebarBackground}]];
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.textHoverColor)}"]
+        .section-[[${ section.id }]] .dropdown-item.active, .qYnEVv .dropdown-item:hover {
+            color: [[${section.settings.textHoverColor}]]!important;
+        }
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.menuBackground)}"]
+    .section-[[${ section.id }]]  .navbar {
+      background-color: [[${section.settings.menuBackground}]];
+    }
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.menuColor) || not #strings.isEmpty(section.settings.menuActiveColor)}"]
+@media (min-width: 768px) {
+    [# th:if="${not #strings.isEmpty(section.settings.menuColor)}"]
+        .section-[[${ section.id }]] .navbar .navbar-nav li > .nav-link:not(.active) {
+            color: [[${section.settings.menuColor}]];
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.menuActiveColor)}"]
+        .section-[[${ section.id }]] .navbar .navbar-nav li > .nav-link.active {
+            color: [[${section.settings.menuActiveColor}]];
+        }
+    [/]
+}
+[/]

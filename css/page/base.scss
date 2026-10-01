@@ -1,0 +1,31 @@
+// Page-level design layer: Bootstrap -> page/base.css -> component CSS.
+// No runtime CSS @import: Sass merges all definitions at build time.
+@import "global-variables";
+@import "bootstrap-theme";
+@import "typography";
+@import "common";
+@import "title";
+
+// Extra page tokens have fallbacks; database defaults remain the source of truth.
+:root { --page-gutter: 1.5rem; --page-breadcrumb-background: #f8f8f8; }
+body { font-family: var(--typeBody); font-size: calc(var(--fontSizeBody) * 1px); color: var(--colorBody); }
+p { line-height: 1.5; }
+@media (max-width: 767.98px) { body { font-size: calc(var(--fontSizeBodyMob) * 1px); } }
+.btn-price {
+  --bs-btn-bg: var(--colorPrice); --bs-btn-border-color: var(--colorPrice);
+  --bs-btn-color: var(--colorButtonLabel);
+  --bs-btn-hover-bg: var(--colorButtonHover); --bs-btn-hover-border-color: var(--colorButtonHover);
+  --bs-btn-hover-color: var(--colorButtonHoverLabel);
+}
+.btn-enquiry-dialog-button {
+  width: 100%;
+  --bs-btn-bg: var(--colorEnquiryButton); --bs-btn-border-color: var(--colorEnquiryButton);
+  --bs-btn-color: var(--colorEnquiryButtonLabel);
+  --bs-btn-hover-bg: var(--colorButtonHover); --bs-btn-hover-border-color: var(--colorButtonHover);
+  --bs-btn-hover-color: var(--colorButtonHoverLabel);
+}
+@media (prefers-reduced-motion: reduce) {
+  .card, .card-mask {
+    transition: none;
+  }
+}

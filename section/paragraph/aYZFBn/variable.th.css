@@ -1,0 +1,38 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:each="o,stat: ${section.settings.blockList}"]
+    [# th:if="${not #strings.isEmpty(o.contentColor)}"]
+    .section-[[${ section.id }]] .[[${section.templateId}]]-item.item-[[${stat.index}]] {
+        background-color: [[${o.contentColor}]];
+    }
+    [/]
+    [# th:if="${not #strings.isEmpty(o.textColor)}"]
+    .section-[[${ section.id }]] .[[${section.templateId}]]-item.item-[[${stat.index}]] [class^=text-]{
+        color: [[${o.textColor}]];
+    }
+    [/]
+[/]
+
+[# th:if="${section.settings.contentPadding != null && section.settings.contentPadding > 0}"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]] .[[${section.templateId}]]-item.active {
+        padding: [[${ section.settings.contentPadding }]]px;
+    }
+    .section-[[${ section.id }]] .[[${section.templateId}]]-item:not(.active) {
+        padding: 0 [[${ section.settings.contentPadding }]]px;
+    }
+}
+[/]
+
+[# th:if="${section.settings.borderRadius != null && section.settings.borderRadius > 0}"]
+    .section-[[${ section.id }]] .[[${section.templateId}]]-item {
+        border-radius: [[${ section.settings.borderRadius }]]px;
+    }
+[/]

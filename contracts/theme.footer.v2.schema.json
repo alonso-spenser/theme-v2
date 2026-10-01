@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "theme.footer.v2",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "consultForm": {
+      "type": [
+        "object"
+      ]
+    },
+    "footMenu": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "link",
+          "target"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          },
+          "target": {
+            "enum": [
+              "_self",
+              "_blank"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "footMenu2": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "link",
+          "target"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          },
+          "target": {
+            "enum": [
+              "_self",
+              "_blank"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "footMenu3": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "link",
+          "target"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          },
+          "target": {
+            "enum": [
+              "_self",
+              "_blank"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  }
+}

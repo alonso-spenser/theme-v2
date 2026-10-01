@@ -1,0 +1,27 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+	    <div th:class="|${ section.templateId }-card border-radius|">
+		    <div th:class="|embed-responsive border-radius embed-responsive-${section.settings.imageScale}|">
+                <img class="embed-responsive-item lazy" th:src="|${ section.settings.image}!1|" th:data-original="${section.settings.image}" th:alt="${ not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading}" th:if="${not #strings.isEmpty(section.settings.image)}">
+		    </div>
+		    <div class="section-title" th:if="${not #strings.isEmpty(section.settings.heading) || not #strings.isEmpty(section.settings.icon) || not #strings.isEmpty(section.settings.content)}">
+			    <img th:class="|${ section.templateId }-icon lazy|" th:src="|${section.settings.icon}!1|" th:data-original="${section.settings.icon}" th:if="${not #strings.isEmpty(section.settings.icon)}">
+                <h3 class="text-heading" th:if="${ not #strings.isEmpty(section.settings.heading) }">[[ ${ section.settings.heading } ]]</h3>
+                <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">[[ ${ section.settings.subheading } ]]</h5>
+                <th:block th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                    <th:block th:each="textLine,saltLine:${textLines}">
+                        <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                    </th:block>
+                </th:block>
+			    <p class="text-link" th:if="#{not #strings.isEmpty(section.settings.buttonLink) && not #strings.isEmpty(section.settings.buttonLabel)}">
+				    <a th:class="|btn ${section.settings.buttonStyle}|" th:href="${section.settings.buttonLink}">
+					    [[${section.settings.buttonLabel}]]
+				    </a>
+			    </p>
+		    </div>
+	    </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

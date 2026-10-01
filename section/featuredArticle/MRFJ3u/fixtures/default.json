@@ -1,0 +1,113 @@
+{
+  "section": {
+    "id": "1414750904032194561",
+    "componentKind": "section",
+    "type": "featuredArticle",
+    "templateId": "MRFJ3u",
+    "runtimeVersion": 2,
+    "settings": {
+      "layout": "tile",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Featured article",
+      "cardColor": "",
+      "marginTop": false,
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "background": "",
+      "buttonLink": "",
+      "imageScale": "5by4",
+      "paddingTop": true,
+      "subheading": "",
+      "wideScreen": false,
+      "buttonLabel": "Button label",
+      "buttonStyle": "invisible",
+      "timeVisible": false,
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "imageVisible": true,
+      "marginBottom": false,
+      "sectionAlias": "推荐文章",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "mobileQuantity": "6",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "desktopQuantity": "3",
+      "subtitleVisible": true,
+      "backgroundRepeat": "",
+      "carouselAutoPlay": "5000",
+      "carouselNavStyle": "dark",
+      "contentTextAlign": "text-center",
+      "backgroundPosition": "",
+      "carouselArrowStyle": "dark"
+    },
+    "bindings": {
+      "collectionList": {
+        "sourceType": "articleCollection",
+        "ids": []
+      }
+    },
+    "data": {
+      "collectionList": [
+        {
+          "title": "1 Tesla is now the most valuable US automaker ever",
+          "seoUrl": "",
+          "summary": "The budget is the most basic thing in financial planning. It is therefore especially important to be careful when compiling the budget. To start you have to draw up your own budget for the next month and only after it you may make a yearly budget",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg",
+          "createTime": 1562222541298,
+          "articleList": []
+        },
+        {
+          "title": "2 Tesla is now the most valuable US automaker ever",
+          "seoUrl": "",
+          "summary": "The budget is the most basic thing in financial planning. It is therefore especially important to be careful when compiling the budget. To start you have to draw up your own budget for the next month and only after it you may make a yearly budget",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg",
+          "createTime": 1562222541298,
+          "articleList": []
+        },
+        {
+          "title": "3 Tesla is now the most valuable US automaker ever",
+          "seoUrl": "",
+          "summary": "The budget is the most basic thing in financial planning. It is therefore especially important to be careful when compiling the budget. To start you have to draw up your own budget for the next month and only after it you may make a yearly budget",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg",
+          "createTime": 1562222541298,
+          "articleList": []
+        },
+        {
+          "title": "4 Tesla is now the most valuable US automaker ever",
+          "seoUrl": "",
+          "summary": "The budget is the most basic thing in financial planning. It is therefore especially important to be careful when compiling the budget. To start you have to draw up your own budget for the next month and only after it you may make a yearly budget",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg",
+          "createTime": 1562222541298,
+          "articleList": []
+        }
+      ]
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.aquq6z {
+	position: relative;
+}
+
+.aquq6z img {
+	width: 100%;
+}
+
+.aquq6z [class*="text-"] + .text-link {
+	margin-top: 1rem;
+}
+
+.aquq6z .text-link a:not(.btn) {
+	color: var(--colorLink);
+}
+
+.aquq6z .text-link a:not(.btn):hover {
+	color: var(--colorLinkHover);
+}
+
+.aquq6z-content {
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	position: absolute;
+	height: 100%;
+}
+
+.aquq6z-content.left {
+	display: flex;
+	align-items: center;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

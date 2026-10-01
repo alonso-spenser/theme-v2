@@ -1,0 +1,58 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div th:class="|${ section.templateId }-content|">
+            <div class="row">
+                <div th:class="|col-md-6${ section.settings.imageLayout == 'left'? ' order-md-2' : ''}|">
+                    <div class="section-title section-neighbor">
+                        <h3 class="text-heading" th:if="${ not #strings.isEmpty(section.settings.heading) }">
+                            [[${ section.settings.heading }]]
+                        </h3>
+
+                        <h5 th:class="|text-subheading text-${section.settings.textAlign}|" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
+                            [[${ section.settings.subheading }]]
+                        </h5>
+
+                        <th:block th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                            <th:block th:each="textLine,saltLine:${textLines}">
+                                <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                            </th:block>
+                        </th:block>
+                        <p class="text-btn" th:if="${ section.settings.buttonStyle != 'invisible' && not #strings.isEmpty(section.settings.buttonLink) && not #strings.isEmpty(section.settings.buttonLabel) }">
+                            <a th:class="|btn ${ section.settings.buttonStyle }|" th:href="${ section.settings.buttonLink }">
+                                [[${ section.settings.buttonLabel }]]
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div th:class="|slick${ section.templateId }-container|" th:if="${#lists.size(section.settings.imageList) > 0}">
+                        <div class="slick-slider slick-slider-transect slick-dotted"
+                             th:data-carousel="${ section.id }"
+                             data-effect="slide"
+                             th:data-dots="${#lists.size(section.settings.imageList) > 0 ? 1 : 0}"
+                             data-arrow="1"
+                             data-column="1"
+                             data-mobile-column="1"
+                             data-delay="0"
+                        >
+                            <div class="slick-slide" th:each="o,salt:${section.settings.imageList}">
+                                <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
+                                    <img class="embed-responsive-item" th:src="|${ o.image}!1|" th:data-lazy="|${ o.image }!6|" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.itemTitle}">
+                                </div>
+                                <h3 class="text-subheading text-center" th:if="${ not #strings.isEmpty(o.itemTitle) }">[[${ o.itemTitle }]]</h3>
+                                <th:block th:if="${not #strings.isEmpty(o.itemContent)}" th:with="textLines = ${#strings.listSplit(o.itemContent,'\n')}">
+                                    <th:block th:each="textLine,saltLine:${textLines}">
+                                        <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                                    </th:block>
+                                </th:block>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

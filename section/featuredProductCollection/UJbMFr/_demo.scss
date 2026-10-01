@@ -1,0 +1,30 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-UJbMFr .section-title-divider {
+        width: 100%;
+    }
+    
+    
+
+
+@media (min-width: 768px) {
+    .section-demo-UJbMFr .section-title [class^=text-] {
+        width: 100%;
+    }
+}
+
+
+
+.section-demo-UJbMFr .section-title .has-line:after, .section-demo-UJbMFr .section-title img {
+    width: 5%;
+}
+
+
+
+.section-demo-UJbMFr .card-body [class^=text-] {
+    color: #ffff00;
+}
+
+
+.section-demo-UJbMFr .section-card {
+    background-color: #ff0000;
+}

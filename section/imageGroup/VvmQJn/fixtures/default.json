@@ -1,0 +1,56 @@
+{
+  "section": {
+    "id": "1688455571101696001",
+    "componentKind": "section",
+    "type": "imageGroup",
+    "templateId": "VvmQJn",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "3",
+      "dgBack": "",
+      "dgColor": "",
+      "padding": 0,
+      "marginTop": false,
+      "mobColumn": "6",
+      "closeStyle": "dark",
+      "imageScale": "1by1",
+      "paddingTop": true,
+      "wideScreen": false,
+      "marginBottom": false,
+      "sectionAlias": "案例介绍",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "itemList": []
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

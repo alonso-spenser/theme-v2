@@ -1,0 +1,35 @@
+.uMRnmy-tile .card-body {
+	border-bottom-left-radius: calc(var(--cardBorderRadius) * 1px);
+	border-bottom-right-radius: calc(var(--cardBorderRadius) * 1px);
+}
+
+.uMRnmy-list {
+	background-color: #000;
+}
+
+.uMRnmy-list .embed-responsive-item {
+	opacity: .6;
+	transition: all 0.25s;
+}
+
+.uMRnmy-list-content {
+	bottom: 1.25rem;
+	position: absolute;
+	left: 1rem;
+	right: 1rem;
+}
+
+.uMRnmy-list-content .text-content-heading {
+	color: #fff;
+}
+
+.uMRnmy-list-content h3 + .btn {
+	margin-top: 0.5rem;
+}
+
+.uMRnmy-list:hover .embed-responsive-item {
+	opacity: .8;
+	transform: scale(1.05);
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

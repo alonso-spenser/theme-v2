@@ -1,0 +1,28 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.cardBackground)}"]
+.section-[[${ section.id }]] .card{background:[[${ section.settings.cardBackground }]]}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.cardLineColor)}"]
+.section-[[${ section.id }]] .card {border:1px solid [[${ section.settings.cardLineColor }]]}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.cardColor)}"]
+.section-[[${ section.id }]] .text-small:before {
+  background-color: [[${ section.settings.cardColor }]];
+}
+.section-[[${ section.id }]] .card [class*=text-]{color:[[${ section.settings.cardColor }]]}
+[/]
+[# th:if="${section.settings.cardPadding != null && section.settings.cardPadding > 0 && section.settings.cardPadding != 30}"]
+.section-[[${ section.id }]] .card-body {
+    padding: [[${ section.settings.cardPadding }]]px;
+}
+[/]

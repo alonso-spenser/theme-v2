@@ -1,0 +1,138 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} ${#strings.isEmpty(section.settings.lineText) ? '' : ' has-line section-padding-top'} section-neighbor|">
+        <div th:class="|section-title ${section.settings.textAlign}|">
+            <h3 th:class="|${section.templateId}-line-text|" th:if="${not #strings.isEmpty(section.settings.lineText)}">
+                [[${section.settings.lineText}]]
+            </h3>
+            <p th:class="|${section.templateId}-since|" th:if="${not #strings.isEmpty(section.settings.subheading)}">
+                [[${section.settings.subheading}]]
+            </p>
+            <h3 class="text-heading" th:if="${not #strings.isEmpty(section.settings.heading)}" th:utext="${section.settings.heading}"></h3>
+            <div class="text-body" th:if="${not #strings.isEmpty(section.settings.content)}" th:utext="${#strings.replace(section.settings.content,'\n','<br>')}"></div>
+        </div>
+    </div>
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} section-neighbor|" th:if="${section.settings.layout == 'list'}">
+        <div class="row row-gutter">
+            <div th:class="|col-md-${section.settings.column} col-${section.settings.mobColumn}|" th:each="o, salt:${ section.settings.collectionList }">
+                <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
+                    <img class="embed-responsive-item lazy" th:src="|${o.itemImage}!1|" th:data-original="|${o.itemImage}|" th:alt="${not #strings.isEmpty(o.itemAlt) ? o.itemAlt : o.itemHeading}" th:if="${not #strings.isEmpty(o.itemImage)}">
+                    <div class="embed-responsive-card"
+                        th:if="${not #strings.isEmpty(o.facebookLink) ||
+                            not #strings.isEmpty(o.itemSubheading) ||
+                            not #strings.isEmpty(o.itemHeading) ||
+                            not #strings.isEmpty(o.twitterLink) ||
+                            not #strings.isEmpty(o.instagramLink) ||
+                            not #strings.isEmpty(o.skypeLink) ||
+                            not #strings.isEmpty(o.linkedinLink) ||
+                            not #strings.isEmpty(o.youtubeLink) ||
+                            not #strings.isEmpty(o.tiktokLink)}">
+                        <small th:if="${not #strings.isEmpty(o.itemSubheading)}">[[${o.itemSubheading}]]</small>
+                        <h3 th:if="${not #strings.isEmpty(o.itemHeading)}" class="text-content-heading" th:text="${o.itemHeading}"></h3>
+                        <p th:if="${not #strings.isEmpty(o.facebookLink) ||
+                            not #strings.isEmpty(o.twitterLink) ||
+                            not #strings.isEmpty(o.instagramLink) ||
+                            not #strings.isEmpty(o.skypeLink) ||
+                            not #strings.isEmpty(o.linkedinLink) ||
+                            not #strings.isEmpty(o.youtubeLink) ||
+                            not #strings.isEmpty(o.tiktokLink)}">
+                            <a th:href="${o.facebookLink}" target="_blank" th:if="${not #strings.isEmpty(o.facebookLink)}">
+                                <i class="ic-facebook"></i>
+                            </a>
+                            <a th:href="${o.twitterLink}" target="_blank" th:if="${not #strings.isEmpty(o.twitterLink)}">
+                                <i class="ic-twitter"></i>
+                            </a>
+                            <a th:href="${o.instagramLink}" target="_blank" th:if="${not #strings.isEmpty(o.instagramLink)}">
+                                <i class="ic-instagram"></i>
+                            </a>
+                            <a th:href="${o.skypeLink}" target="_blank" th:if="${not #strings.isEmpty(o.skypeLink)}">
+                                <i class="ic-skype"></i>
+                            </a>
+                            <a th:href="${o.linkedinLink}" target="_blank" th:if="${not #strings.isEmpty(o.linkedinLink)}">
+                                <i class="ic-linkedin"></i>
+                            </a>
+                            <a th:href="${o.youtubeLink}" target="_blank" th:if="${not #strings.isEmpty(o.youtubeLink)}">
+                                <i class="ic-youtube"></i>
+                            </a>
+                            <a th:href="${o.tiktokLink}" target="_blank" th:if="${not #strings.isEmpty(o.tiktokLink)}">
+                                <i class="ic-tiktok"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slick section-neighbor" th:if="${section.settings.layout == 'slide'}">
+        <div
+            class="slick-arrow slick-next dots"
+            th:data-carousel-next="${ section.id }"></div>
+        <div
+            class="slick-arrow slick-prev dots"
+            th:data-carousel-prev="${ section.id }"></div>
+        <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+            <div class="slick-slider slick-slider-transect has-gutter"
+                 th:data-carousel="${ section.id }"
+                 data-delay="10000"
+                 data-effect="slide"
+                 th:data-dots="${#lists.size(section.settings.collectionList) > section.settings.column ? 1 : 0}"
+                 th:data-column="${ #numbers.formatInteger(12 / section.settings.column, 1,'POINT') }"
+                 th:data-mobile-column="${ #numbers.formatInteger(12 / section.settings.mobColumn, 1,'POINT') }"
+            >
+                <div class="slick-slide" th:each="o, salt:${ section.settings.collectionList }">
+                    <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
+                        <img class="embed-responsive-item" th:src="|${o.itemImage}!1|" th:data-lazy="|${o.itemImage}|" th:alt="${not #strings.isEmpty(o.itemAlt) ? o.itemAlt : o.itemHeading}" th:if="${not #strings.isEmpty(o.itemImage)}">
+                        <div class="embed-responsive-card"
+                            th:if="${not #strings.isEmpty(o.facebookLink) ||
+                                not #strings.isEmpty(o.itemSubheading) ||
+                                not #strings.isEmpty(o.itemHeading) ||
+                                not #strings.isEmpty(o.twitterLink) ||
+                                not #strings.isEmpty(o.instagramLink) ||
+                                not #strings.isEmpty(o.skypeLink) ||
+                                not #strings.isEmpty(o.linkedinLink) ||
+                                not #strings.isEmpty(o.youtubeLink) ||
+                                not #strings.isEmpty(o.tiktokLink)}">
+                            <small th:if="${not #strings.isEmpty(o.itemSubheading)}">[[${o.itemSubheading}]]</small>
+                            <h3 th:if="${not #strings.isEmpty(o.itemHeading)}" class="text-content-heading" th:text="${o.itemHeading}"></h3>
+                            <p th:if="${not #strings.isEmpty(o.facebookLink) ||
+                                not #strings.isEmpty(o.twitterLink) ||
+                                not #strings.isEmpty(o.instagramLink) ||
+                                not #strings.isEmpty(o.skypeLink) ||
+                                not #strings.isEmpty(o.linkedinLink) ||
+                                not #strings.isEmpty(o.youtubeLink) ||
+                                not #strings.isEmpty(o.tiktokLink)}">
+                                <a th:href="${o.facebookLink}" target="_blank" th:if="${not #strings.isEmpty(o.facebookLink)}">
+                                    <i class="ic-facebook"></i>
+                                </a>
+                                <a th:href="${o.twitterLink}" target="_blank" th:if="${not #strings.isEmpty(o.twitterLink)}">
+                                    <i class="ic-twitter"></i>
+                                </a>
+                                <a th:href="${o.instagramLink}" target="_blank" th:if="${not #strings.isEmpty(o.instagramLink)}">
+                                    <i class="ic-instagram"></i>
+                                </a>
+                                <a th:href="${o.skypeLink}" target="_blank" th:if="${not #strings.isEmpty(o.skypeLink)}">
+                                    <i class="ic-skype"></i>
+                                </a>
+                                <a th:href="${o.linkedinLink}" target="_blank" th:if="${not #strings.isEmpty(o.linkedinLink)}">
+                                    <i class="ic-linkedin"></i>
+                                </a>
+                                <a th:href="${o.youtubeLink}" target="_blank" th:if="${not #strings.isEmpty(o.youtubeLink)}">
+                                    <i class="ic-youtube"></i>
+                                </a>
+                                <a th:href="${o.tiktokLink}" target="_blank" th:if="${not #strings.isEmpty(o.tiktokLink)}">
+                                    <i class="ic-tiktok"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p th:class="|container${section.settings.wideScreen ? '-fluid' : ''} section-neighbor text-button ${section.settings.linkAlign}|" th:if="${section.settings.buttonStyle != 'invisible' && not #strings.isEmpty(section.settings.buttonLabel) && not #strings.isEmpty(section.settings.buttonLink)}">
+        <a th:href="${ section.settings.buttonLink }" th:class="|btn ${ section.settings.buttonStyle }|">
+            [[${ section.settings.buttonLabel }]] <i class="ic-right"></i>
+        </a>
+    </p>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

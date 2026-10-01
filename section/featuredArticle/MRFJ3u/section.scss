@@ -1,0 +1,93 @@
+.MRFJ3u p {
+	color: var(--colorSecondary);
+	font-size: calc(var(--fontSizeBody) * 1px);
+}
+
+.MRFJ3u p + p {
+	margin-top: 0.3125rem;
+}
+
+.MRFJ3u .slick-track {
+	align-items: stretch;
+	display: flex;
+}
+
+.MRFJ3u .slick-track .slick-slide {
+	padding-top: calc(var(--cardBoxShadow) * 1px);
+	padding-bottom: calc(var(--cardBoxShadow) * 1px);
+}
+
+.MRFJ3u-list .embed-responsive {
+	width: 9.375rem;
+	margin-right: 0.9375rem;
+}
+
+.MRFJ3u-cover .media {
+	padding-bottom: 1.375rem;
+	border-bottom: calc(var(--borderWidth) * 1px) var(--borderStyle) var(--colorBorder);
+}
+
+.MRFJ3u-cover .media .media-time {
+	width: 6.25rem;
+	height: 6.25rem;
+	background-color: var(--colorTheme);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 0.9375rem;
+}
+
+.MRFJ3u-cover .media .media-time h5 {
+	font-size: 2.25rem;
+	line-height: 2.25rem;
+	padding-bottom: 0.375rem;
+	border-bottom: calc(var(--borderWidth) * 1px) var(--borderStyle) var(--colorBorder);
+}
+
+.MRFJ3u-cover .media .media-time p, .MRFJ3u-cover .media .media-time h5 {
+	color: #fff;
+	text-align: center;
+}
+
+.MRFJ3u-cover .col-md-5 {
+	padding-right: 1.875rem;
+}
+
+.MRFJ3u-cover li a {
+	line-height: 2.25rem;
+	color: var(--colorBody);
+	font-size: calc(var(--fontSizeContentHeading) * 1px);
+	font-family: var(--typeContentHeading);
+	display: block;
+	position: relative;
+	padding-top: 0.625rem;
+}
+
+.MRFJ3u-cover li a h3 {
+	padding-right: 1.875rem;
+	margin-bottom: 0;
+}
+
+.MRFJ3u-cover li a:hover {
+	color: var(--colorTheme);
+}
+
+.MRFJ3u-cover li:not(:last-child) {
+	border-bottom: calc(var(--borderWidth) * 1px) var(--borderStyle) var(--colorBorder);
+}
+
+.MRFJ3u-cover li:not(:last-child) a {
+	padding-bottom: 1.25rem;
+}
+
+.MRFJ3u-cover [data-article-cover]:not(:first-child) {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.MRFJ3u-cover .col-md-5 {
+		padding-right: 0.46875rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

@@ -1,0 +1,76 @@
+<section th:class="|section ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <th:block th:if="${ #lists.size(section.settings.imageList) > 0 && section.settings.imagePercentage == 12 }">
+        <th:block th:each="o, salt:${ section.settings.imageList }">
+            <div th:class="|${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''} ${ section.templateId } ${ section.templateId }-${ salt.index }|">
+                <div th:class="|container${section.settings.wideScreen ? '-fluid no-gutters' : ''}|">
+                    <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale} ${o.paddingTop ? ' section-padding-top': ''}${o.paddingBottom ? ' section-padding-bottom': ''}|">
+                        <img class="embed-responsive-item lazy" th:src="|${ o.url }!1|" th:data-original="${ o.url }" th:alt="${ o.alt }" th:if="${ not #strings.isEmpty(o.url) }">
+                        <div th:class="|${ section.templateId }-content ${ o.contentPosition }|">
+                            <div class="container">
+                                <div th:class="|${ section.templateId }-area  ${ o.textAlign }|">
+                                    <label th:class="|${ section.templateId }-sn|" th:if="${section.settings.serialNumber}">[[${#numbers.formatInteger(salt.index + 1, 1,'POINT')}]]</label>
+                                    <img th:src="${o.icon}" th:alt="${o.heading}" th:class="|${ section.templateId }-icon|" th:if="${ not #strings.isEmpty(o.icon) }">
+                                    <h3 class="text-heading" th:if="${ not #strings.isEmpty(o.heading) }">[[${ o.heading }]]</h3>
+                                    <h5 class="text-subheading" th:if="${ not #strings.isEmpty(o.subheading) }">[[${ o.subheading }]]</h5>
+                                    <ul th:class="|text-list ${o.contentAlign == 'text-left' ? (not #strings.isEmpty(o.symbol) ? o.symbol : '') : ''} ${not #strings.isEmpty(o.contentAlign) ? o.contentAlign : ''}|" th:if="${not #strings.isEmpty(o.description)}" th:with="textLines = ${#strings.listSplit(o.description,'\n')}">
+                                        <th:block th:each="textLine,saltLine:${textLines}">
+                                            <li class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                                        </th:block>
+                                    </ul>
+                                    <p class="text-button d-md-block d-none" th:if="${ (o.buttonStyle != 'invisible' && not #strings.isEmpty(o.buttonLabel)) || (o.secondButtonStyle != 'invisible' && not #strings.isEmpty(o.secondButtonLabel)) }">
+                                        <button th:class="|btn ${ o.buttonStyle }|" th:if="${ #strings.isEmpty(o.buttonLink) && o.buttonStyle != 'invisible' && not #strings.isEmpty(o.buttonLabel) }">
+                                            [[${ o.buttonLabel }]]
+                                        </button>
+                                        <a th:href="${ o.buttonLink }" th:class="|btn ${ o.buttonStyle }|" th:if="${ not #strings.isEmpty(o.buttonLink) && o.buttonStyle != 'invisible' && not #strings.isEmpty(o.buttonLabel) }">
+                                            [[${ o.buttonLabel }]]  <i class="ic-right text-primary"></i>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </th:block>
+    </th:block>
+
+    <th:block th:if="${ #lists.size(section.settings.imageList) > 0 && section.settings.imagePercentage < 12 }">
+        <th:block th:each="o, salt:${ section.settings.imageList }">
+            <div th:class="|${o.marginTop ? ' section-margin-top': ''}${o.marginBottom ? ' section-margin-bottom': ''} ${ section.templateId } ${ section.templateId }-${ salt.index }|">
+                <div th:class="|container${section.settings.wideScreen ? '-fluid no-gutters' : ''}|">
+                    <div th:class="|row g-0 ${ section.templateId }-row ${o.paddingTop ? ' section-padding-top': ''}${o.paddingBottom ? ' section-padding-bottom': ''}|">
+                        <div th:class="|col-md-${ section.settings.imagePercentage } ${ section.settings.firstLayout == 'right' ? (salt.index % 2 == 0 ? 'order-2' : '') : (salt.index % 2 == 0 ? '' : 'order-2')}|">
+                            <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
+                                <img class="embed-responsive-item lazy" th:src="|${ o.url }!1|" th:data-original="${ o.url }" th:alt="${ o.alt }" th:if="${ not #strings.isEmpty(o.url) }">
+                            </div>
+                        </div>
+                        <div th:class="|col-md-${ #numbers.formatInteger(12 - section.settings.imagePercentage, 1,'POINT') } ${ section.templateId }-area|">
+                            <div th:class="|section-padding-all ${ o.textAlign }|">
+                                <label th:class="|${ section.templateId }-sn|" th:if="${section.settings.serialNumber}">[[${#numbers.formatInteger(salt.index + 1, 1,'POINT')}]]</label>
+                                <img th:src="${o.icon}" th:alt="${o.heading}" th:class="|${ section.templateId }-icon|" th:if="${ not #strings.isEmpty(o.icon) }">
+                                <h3 class="text-heading" th:if="${ not #strings.isEmpty(o.heading) }" th:utext="${o.heading}"></h3>
+                                <h5 class="text-subheading" th:if="${ not #strings.isEmpty(o.subheading) }">[[${ o.subheading }]]</h5>
+                                <ul th:class="|text-list ${o.contentAlign == 'text-left' ? (not #strings.isEmpty(o.symbol) ? o.symbol : '') : ''} ${not #strings.isEmpty(o.contentAlign) ? o.contentAlign : ''}|" th:if="${not #strings.isEmpty(o.description)}" th:with="textLines = ${#strings.listSplit(o.description,'\n')}">
+                                    <th:block th:each="textLine,saltLine:${textLines}">
+                                        <li class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                                    </th:block>
+                                </ul>
+                                <p class="text-button d-md-block d-none" th:if="${ (o.buttonStyle != 'invisible' && not #strings.isEmpty(o.buttonLabel)) || (o.secondButtonStyle != 'invisible' && not #strings.isEmpty(o.secondButtonLabel)) }">
+                                    <button th:class="|btn ${ o.buttonStyle }|" th:if="${ #strings.isEmpty(o.buttonLink) && o.buttonStyle != 'invisible' && not #strings.isEmpty(o.buttonLabel) }">
+                                        [[${ o.buttonLabel }]]
+                                    </button>
+                                    <a th:href="${ o.buttonLink }" th:class="|btn ${ o.buttonStyle }|" th:if="${ not #strings.isEmpty(o.buttonLink) && o.buttonStyle != 'invisible' && not #strings.isEmpty(o.buttonLabel) }">
+                                        [[${ o.buttonLabel }]]  <i class="ic-right text-primary"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </th:block>
+    </th:block>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

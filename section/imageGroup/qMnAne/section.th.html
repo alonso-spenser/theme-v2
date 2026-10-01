@@ -1,0 +1,34 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div th:class="|${ section.templateId }-grid|">
+           <th:block th:each="o,salt:${ section.settings.imageList }">
+               <div th:class="|${ section.templateId }-grid-item ${ section.templateId }-grid-${salt.index + 1} ${o.contentAlign}|">
+                    <th:block th:if="${not #strings.isEmpty(o.link)}">
+                        <a th:href="${o.link}">
+                            <img th:src="|${ o.image}!1|" th:data-original="${o.image}" class="lazy" th:if="${not #strings.isEmpty(o.image)}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.heading }">
+                        </a>
+                        <a th:href="${o.link}">
+                            <div th:class="|${ section.templateId }-grid-content|">
+                                <div th:class="|${ section.templateId }-grid-text|">
+                                    <h3 class="text-heading" th:if="${not #strings.isEmpty(o.heading)}">[[${ o.heading }]]</h3>
+                                    <p class="text-body" th:if="${not #strings.isEmpty(o.content)}" th:utext="${ o.content }"></p>
+                                </div>
+                            </div>
+                        </a>
+                    </th:block>
+                    <th:block th:if="${#strings.isEmpty(o.link)}">
+                        <img th:src="|${ o.image}!1|" th:data-original="${o.image}" class="lazy" th:if="${not #strings.isEmpty(o.image)}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.heading }">
+                        <div th:class="|${ section.templateId }-grid-content|">
+                            <div th:class="|${ section.templateId }-grid-text|">
+                                <h3 class="text-heading" th:if="${not #strings.isEmpty(o.heading)}">[[${ o.heading }]]</h3>
+                                <p class="text-body" th:if="${not #strings.isEmpty(o.content)}" th:utext="${ o.content }"></p>
+                            </div>
+                        </div>
+                    </th:block>
+               </div>
+           </th:block>
+        </div>
+    </div>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

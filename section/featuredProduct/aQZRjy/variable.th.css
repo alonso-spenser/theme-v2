@@ -1,0 +1,54 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .section-title [class^=text-] {
+    color:[[${section.settings.textColor}]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.textColor) || section.settings.textWidth > 0}"]
+    .section-[[${ section.id }]] .section-title-divider {
+        [# th:if="${ section.settings.textWidth > 0 }"]
+            width: [[${section.settings.textWidth}]]%;
+        [/]
+    }
+    [# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+        .section-[[${ section.id }]] .section-title-divider:after {
+            border-color: [[${section.settings.textColor}]];
+        }
+    [/]
+[/]
+[# th:if="${section.settings.textWidth != null && section.settings.textWidth > 0}"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]] .section-title [class^=text-] {
+        width: [[${section.settings.textWidth}]]%;
+    }
+}
+[/]
+
+[# th:if="${section.settings.dividerWidth != null && section.settings.dividerWidth > 0}"]
+.section-[[${ section.id }]] .section-title .has-line:after, .section-[[${ section.id }]] .section-title img {
+    width: [[${section.settings.dividerWidth}]]%;
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.cardColor)}"]
+.section-[[${ section.id }]] .section-card [class^=text-],.section-[[${ section.id }]] .media-body [class^=text-],.section-[[${ section.id }]] .MRFJ3u-cover [class^=text-]{
+    color: [[${section.settings.cardColor}]];
+}
+.section-[[${ section.id }]] .featured-article-cover .media,.section-[[${ section.id }]] .featured-article-cover li:not(:last-child) {
+    border-bottom: 1px solid [[${section.settings.cardColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.background)}"]
+.section-[[${ section.id }]] .section-card {
+    background-color:[[${section.settings.background}]];
+}
+[/]

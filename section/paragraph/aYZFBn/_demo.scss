@@ -1,0 +1,37 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-aYZFBn{
+    background: #f2f2f2   ;
+    
+}
+
+
+
+    
+    .section-demo-aYZFBn .aYZFBn-item.item-0 {
+        background-color: #17c40b;
+    }
+    
+    
+    .section-demo-aYZFBn .aYZFBn-item.item-0 [class^=text-]{
+        color: #fff;
+    }
+    
+    
+    
+
+
+
+@media (min-width: 768px) {
+    .section-demo-aYZFBn .aYZFBn-item.active {
+        padding: 50px;
+    }
+    .section-demo-aYZFBn .aYZFBn-item:not(.active) {
+        padding: 0 50px;
+    }
+}
+
+
+
+    .section-demo-aYZFBn .aYZFBn-item {
+        border-radius: 20px;
+    }

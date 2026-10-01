@@ -1,0 +1,27 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+  .section-[[${ section.id }]] .text-heading,.section-[[${ section.id }]] .text-body {
+      color: [[${section.settings.textColor}]];
+  }
+[/]
+[# th:if="${section.settings.borderRadius > 0}"]
+.section-[[${ section.id }]] .embed-responsive{
+  border-radius: [[${section.settings.borderRadius}]]px;
+}
+.section-[[${ section.id }]] .col-12 .embed-responsive{
+    border-radius: [[${section.settings.borderRadius / 1.5}]]px;
+}
+[/]
+[# th:if="${section.settings.boxShadow > 0}"]
+.section-[[${ section.id }]] .embed-responsive{
+    box-shadow: 0 1px [[${section.settings.boxShadow}]]px 0 rgba(0, 0, 0, 0.3);;
+}
+[/]

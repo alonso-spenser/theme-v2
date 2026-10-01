@@ -1,0 +1,61 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div th:class="|text-${section.settings.textAlign} section-title section-neighbor|" th:if="${not #strings.isEmpty(section.settings.heading)
+            || not #strings.isEmpty(section.settings.subheading)
+            || not #strings.isEmpty(section.settings.content)
+            || section.settings.dividerWidth > 0
+            }"
+           >
+            <h3 th:class="|text-heading text-${section.settings.textAlign}|" th:if="${ not #strings.isEmpty(section.settings.heading) }">
+                [[${ section.settings.heading }]]
+            </h3>
+
+            <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
+                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+            </div>
+
+            <h5 th:class="|text-subheading text-${section.settings.textAlign}|" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
+                [[${ section.settings.subheading }]]
+            </h5>
+
+            <ul th:class="|text-list ${#strings.isEmpty(section.settings.contentAlign) ? 'text-' + section.settings.textAlign : section.settings.contentAlign} ${ section.settings.contentAlign == 'text-left' && not #strings.isEmpty(section.settings.symbol) ? section.settings.symbol : ''}|" th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                <th:block th:each="textLine,saltLine:${textLines}">
+                    <li th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                </th:block>
+            </ul>
+        </div>
+        <ul th:class="|${ section.templateId }-nav d-flex section-neighbor|" th:if="${ section.settings.tabPlace == 'top' }">
+            <th:block th:each="o,salt:${section.settings.imageList}">
+                <li th:class="|nav-item ${ salt.index == 0 ? 'active' : ''}|" th:data-linkage-navigation="${ section.id }">
+                    <img class="lazy" th:src="|${o.tabIcon}!1|" th:data-original="${o.tabIcon}" th:alt="${ #strings.isEmpty(o.tabAlt) ? o.tabITitle : o.tabAlt}" th:if="${not #strings.isEmpty(o.tabIcon)}">
+                    <img class="lazy" th:src="|${#strings.isEmpty(o.tabIconHover) ? o.tabIcon : o.tabIconHover}!1|" th:data-original="${#strings.isEmpty(o.tabIconHover) ? o.tabIcon : o.tabIconHover}" th:alt="${ #strings.isEmpty(o.tabAlt) ? o.tabITitle : o.tabAlt}" th:if="${not #strings.isEmpty(o.tabIcon)}">
+                    <h3>[[${o.tabITitle}]]</h3>
+                </li>
+            </th:block>
+        </ul>
+        <th:block th:each="o,salt:${section.settings.imageList}">
+            <div th:class="|${ #strings.isEmpty(section.settings.tabPlace) || section.settings.tabPlace == 'bottom' ? 'section-neighbor' : ''} embed-responsive embed-responsive-${section.settings.imageScale} collapse${ salt.index == 0 ? ' show' : ''}|" th:data-linkage-content="${ section.id }" th:if="${#strings.isEmpty(o.tabLink)}">
+                <img class="embed-responsive-item" th:src="${o.tabImage}" th:alt="${ #strings.isEmpty(o.tabAlt) ? o.tabITitle : o.tabAlt}"  th:if="${not #strings.isEmpty(o.tabImage)}">
+            </div>
+            <div th:if="${not #strings.isEmpty(o.tabLink)}" th:class="|section-neighbor${ #strings.isEmpty(section.settings.tabPlace) || section.settings.tabPlace == 'bottom' ? ' section-neighbor' : ''} collapse${ salt.index == 0 ? ' show' : ''}|" th:data-linkage-content="${ section.id }" >
+                 <a th:href="${o.tabLink}">
+                    <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
+                        <img class="embed-responsive-item" th:src="${o.tabImage}" th:alt="${ #strings.isEmpty(o.tabAlt) ? o.tabITitle : o.tabAlt}"  th:if="${not #strings.isEmpty(o.tabImage)}">
+                    </div>
+                 </a>
+            </div>
+        </th:block>
+        <ul th:class="|${ section.templateId }-nav d-flex|" th:if="${ #strings.isEmpty(section.settings.tabPlace) || section.settings.tabPlace == 'bottom' }">
+            <th:block th:each="o,salt:${section.settings.imageList}">
+                <li th:class="|nav-item ${ salt.index == 0 ? 'active' : ''}|" th:data-linkage-navigation="${ section.id }">
+                    <img class="lazy" th:src="|${o.tabIcon}!1|" th:data-original="${o.tabIcon}" th:alt="${ #strings.isEmpty(o.tabAlt) ? o.tabITitle : o.tabAlt}" th:if="${not #strings.isEmpty(o.tabIcon)}">
+                    <img class="lazy" th:src="|${#strings.isEmpty(o.tabIconHover) ? o.tabIcon : o.tabIconHover}!1|" th:data-original="${#strings.isEmpty(o.tabIconHover) ? o.tabIcon : o.tabIconHover}" th:alt="${ #strings.isEmpty(o.tabAlt) ? o.tabITitle : o.tabAlt}" th:if="${not #strings.isEmpty(o.tabIcon)}">
+                    <h3>[[${o.tabITitle}]]</h3>
+                </li>
+            </th:block>
+        </ul>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

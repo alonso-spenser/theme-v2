@@ -1,0 +1,23 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${section.settings.borderRadius != null && section.settings.borderRadius > 0 || section.settings.borderRadius != 10}"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]] img, .section-[[${ section.id }]] .card{
+        border-radius:[[${section.settings.borderRadius}]]px;
+    }
+}
+[/]
+[# th:if="${section.settings.topDistance != null && section.settings.topDistance > 0 || section.settings.topDistance != 80}"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]] .col-md-6:last-child{
+        padding-top:[[${section.settings.topDistance}]]px;
+    }
+}
+[/]

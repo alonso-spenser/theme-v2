@@ -1,0 +1,219 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://oga.example/schema/theme/component-definition.v2.json",
+  "title": "OGA Theme Component Definition v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocolVersion",
+    "componentKind",
+    "type",
+    "templateId",
+    "runtimeVersion",
+    "definitionVersion",
+    "schemaVersion",
+    "name",
+    "policy",
+    "editor",
+    "render"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "protocolVersion": { "const": 2 },
+    "componentKind": {
+      "enum": ["global-setting", "layout", "page-section", "section"]
+    },
+    "type": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9]*$"
+    },
+    "templateId": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+    },
+    "runtimeVersion": { "type": "integer", "minimum": 1 },
+    "definitionVersion": { "type": "integer", "minimum": 1 },
+    "schemaVersion": { "type": "integer", "minimum": 1 },
+    "name": { "$ref": "#/$defs/localizedText" },
+    "description": { "$ref": "#/$defs/localizedText" },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["removable", "duplicable", "maxInstances"],
+      "properties": {
+        "removable": { "type": "boolean" },
+        "duplicable": { "type": "boolean" },
+        "maxInstances": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "placement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pages": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        },
+        "fixed": { "type": "boolean" },
+        "slots": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        }
+      }
+    },
+    "data": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "contract"],
+      "properties": {
+        "source": { "enum": ["none", "binding", "pageContext"] },
+        "contract": { "type": "string" }
+      }
+    },
+    "editor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["groups"],
+      "properties": {
+        "groups": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              { "$ref": "#/$defs/group" },
+              { "$ref": "#/$defs/groupInclude" }
+            ]
+          }
+        }
+      }
+    },
+    "i18n": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "rootFields": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        }
+      }
+    },
+    "render": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["template", "style", "script"],
+      "properties": {
+        "template": { "type": "string" },
+        "style": { "type": "string" },
+        "script": { "type": "string" },
+        "variableStyle": { "type": "string" }
+      }
+    }
+  },
+  "$defs": {
+    "localizedText": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "string" }
+    },
+    "groupInclude": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["$include"],
+      "properties": {
+        "$include": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        }
+      }
+    },
+    "group": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "elements"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][A-Za-z0-9]*$"
+        },
+        "name": { "$ref": "#/$defs/localizedText" },
+        "info": { "$ref": "#/$defs/localizedText" },
+        "elements": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/element" }
+        },
+        "binding": { "$ref": "#/$defs/binding" }
+      }
+    },
+    "binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["target", "sourceType", "mode", "maxItems"],
+      "properties": {
+        "target": { "type": "string" },
+        "sourceType": { "type": "string" },
+        "mode": { "enum": ["self", "children"] },
+        "maxItems": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "element": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "enum": [
+            "text",
+            "textarea",
+            "richText",
+            "switch",
+            "select",
+            "radio",
+            "slider",
+            "colorPicker",
+            "imagePicker",
+            "linkPicker",
+            "hidden",
+            "resourcePicker",
+            "repeater",
+            "divider"
+          ]
+        },
+        "field": {
+          "type": "string",
+          "pattern": "^[a-z][A-Za-z0-9]*$"
+        },
+        "default": true,
+        "name": { "$ref": "#/$defs/localizedText" },
+        "info": { "$ref": "#/$defs/localizedText" },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["value", "name"],
+            "properties": {
+              "value": true,
+              "name": { "$ref": "#/$defs/localizedText" }
+            }
+          }
+        },
+        "min": { "type": "number" },
+        "max": { "type": "number" },
+        "step": { "type": "number", "exclusiveMinimum": 0 },
+        "translatable": { "type": "boolean" },
+        "cssVariable": {
+          "type": "string",
+          "pattern": "^--[a-z][a-z0-9-]*$"
+        },
+        "visibleWhen": { "type": "object" },
+        "sourceType": { "type": "string" },
+        "maxItems": { "type": "integer", "minimum": 0 },
+        "elements": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/element" }
+        }
+      }
+    }
+  }
+}

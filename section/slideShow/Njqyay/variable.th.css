@@ -1,0 +1,11 @@
+[# th:if="${not #strings.isEmpty(section.settings.maskColor)}"]
+.section-[[${ section.id }]] .embed-responsive:after{
+    background-color: [[${section.settings.maskColor}]] 
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .[class^=text-] {
+    color:[[${section.settings.textColor}]];
+}
+[/]

@@ -1,0 +1,49 @@
+{
+  "section": {
+    "id": "1442047211164372993",
+    "componentKind": "section",
+    "type": "richText",
+    "templateId": "RrIn2q",
+    "runtimeVersion": 2,
+    "settings": {
+      "content": "Use HTML to format your text so it can be easily read.",
+      "marginTop": false,
+      "paddingTop": true,
+      "wideScreen": false,
+      "marginBottom": false,
+      "sectionAlias": "富文本",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

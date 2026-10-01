@@ -1,0 +1,17 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-qUbmMn .slick-slide-0 [class*="text-"], .section-demo-qUbmMn .slick-slide-0 [class*="text-"] a:not(.btn)  {
+            color: #fff;
+        }
+    
+    
+        .section-demo-qUbmMn .slick-slide-1 [class*="text-"], .section-demo-qUbmMn .slick-slide-1 [class*="text-"] a:not(.btn)  {
+            color: #ffff00;
+        }
+    
+
+
+@media (min-width: 768px) {
+    .section-demo-qUbmMn, .section-demo-qUbmMn  .qUbmMn-c {
+        height: calc(100vh - 100px);
+    }
+}

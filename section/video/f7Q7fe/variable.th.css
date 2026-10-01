@@ -1,0 +1,28 @@
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-play, .section-[[${ section.id }]] h3 {
+    color:[[${ section.settings.textColor }]]
+    border-color:[[${ section.settings.textColor }]]
+}
+.section-[[${ section.id }]] .[[${ section.templateId }]]-play:after {
+    border-color: transparent transparent transparent [[${ section.settings.textColor }]];
+}
+.section-[[${ section.id }]] .section-title .[[${ section.templateId }]]-divider{
+    border-color: [[${ section.settings.textColor }]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.backColor) || (section.settings.marginTop != null && section.settings.marginTop > 0)}"]
+.section-[[${ section.id }]] {
+    [# th:if="${ not #strings.isEmpty(section.settings.backColor) }"]
+        background-color: [[${ section.settings.backColor }]];
+    [/]
+    [# th:if="${ section.settings.marginTop != null && section.settings.marginTop > 0 }"]
+    height: calc(100vh - [[${ section.settings.marginTop }]]px);
+    [/]
+}
+[/]
+
+[# th:if="${ section.settings.opacity != null && section.settings.opacity > 0 }"]
+.section-[[${ section.id }]] video{
+    opacity: [[${ section.settings.opacity * 1.0 / 100.0 }]]
+}
+[/]

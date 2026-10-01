@@ -1,0 +1,133 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div class="row row-gutter">
+            <div th:class="|col-md-${#numbers.formatInteger(12 - section.settings.formWidth - section.settings.offsetLeft, 1,'POINT')}${ section.settings.layout == 'left' ? ' order-md-2' : ''}|" th:if="${
+            #lists.size(section.settings.countdownList) > 0
+            || not #strings.isEmpty(section.settings.heading)
+            || not #strings.isEmpty(section.settings.subheading)
+            || not #strings.isEmpty(section.settings.content)
+            || (section.settings.buttonStyle != 'invisible' && not #strings.isEmpty(section.settings.buttonLabel))
+            || (section.settings.secondButtonStyle != 'invisible' && not #strings.isEmpty(section.settings.secondButtonLabel))
+            }"
+            >
+                <div th:class="|text-${section.settings.textAlign} section-title section-neighbor|" th:if="${not #strings.isEmpty(section.settings.heading)
+                        || not #strings.isEmpty(section.settings.subheading)
+                        || not #strings.isEmpty(section.settings.content)
+                        || section.settings.dividerWidth > 0
+                    }">
+                    <h3 class="text-heading" th:if="${ not #strings.isEmpty(section.settings.heading) }">
+                        [[${ section.settings.heading }]]
+                    </h3>
+
+                    <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
+                        <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                    </div>
+
+                    <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
+                        [[${ section.settings.subheading }]]
+                    </h5>
+
+                    <th:block th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                        <th:block th:each="textLine,saltLine:${textLines}">
+                            <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                        </th:block>
+                    </th:block>
+                </div>
+
+                <div class="row beIJNz-counter" th:if="${#lists.size(section.settings.countdownList) > 0}">
+                    <div class="col-12 col-md" th:each="o,stat:${section.settings.countdownList}">
+                        <label class="beIJNz-counter-digit" th:data-count-digit="${o.digit}">
+                            [[${o.digit}]]
+                        </label>
+                        <sup class="beIJNz-counter-unit" th:if="${not #strings.isEmpty(o.unit)}">
+                            [[${o.unit}]]
+                        </sup>
+                        <p class="beIJNz-counter-unit break-word" th:if="${not #strings.isEmpty(o.describe)}">
+                            [[${o.describe}]]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div th:class="|col-md-${section.settings.formWidth} offset-md-${section.settings.offsetLeft}|" th:if="${section.data.formData != null}">
+                <form th:class="|section-card  card ${section.settings.formStyle}" th:data-inquiry-form="${section.data.formData.id}" novalidate="">
+                    <div class="card-body">
+                        <h5 class="text-heading" th:if="${section.settings.formTitleVisible == null || section.settings.formTitleVisible}">
+                            [[${section.data.formData.title}]]
+                        </h5>
+                        <p class="text-body" th:text="${section.data.formData.remark}" th:if="${not #strings.isEmpty(section.data.formData.remark) && (section.settings.formDescribeVisible == null || section.settings.formDescribeVisible)}"></p>
+                        <div class="beIJNz-fields text-form">
+                            <div th:each="o,saltField:${section.data.formData.fieldList}" class="form-group" th:with="holderLabel=${not #strings.isEmpty(o.placeholder) ? o.placeholder: o.fieldLabel}">
+                                <p class="form-label mb-1" th:if="${section.settings.enableTitle && !(o.fieldType == 'checkbox' || o.fieldType == 'radio')}">
+                                [[${o.fieldLabel}]]
+                                </p>
+                                <th:block th:if="${o.fieldType == 'textarea'}">
+                                    <textarea rows="4" class="form-control" th:placeholder="${holderLabel}" type="text"
+                                    th:name="${o.fieldLabel}"
+                                    th:data-field="${o.fieldName}"
+                                    th:required="${o.required == 0 ? 'required' : 'false'}"></textarea>
+                                </th:block>
+
+
+                                <th:block th:if="${o.fieldType == 'file'}">
+                                    <div class="file-upload">
+                                        <div class="file-upload-placeholder">
+                                            <th:block th:text="${holderLabel}"></th:block>
+                                            <input type="file" class="form-control" accept=".zip,.rar,.7z">
+                                        </div>
+
+                                        <div class="file-upload-selected">
+                                            <label class="close"></label>
+                                            <p></p>
+                                        </div>
+                                        <small>
+                                            zip  / rar / 7z
+                                        </small>
+                                    </div>
+                                </th:block>
+
+                                <th:block th:if="${o.fieldType == 'select'}">
+                                    <select th:name="${o.fieldLabel}" th:data-field="${o.fieldName}" th:type="${o.fieldType}" class="form-control">
+                                      <th:block th:each="option,salt:${o.optionList}">
+                                        <option th:selected="${option.checked ? 'selected' : 'false'}">[[${option.value}]]</option>
+                                      </th:block>
+                                    </select>
+                                </th:block>
+
+                                <th:block th:if="${o.fieldType == 'radio' || o.fieldType == 'checkbox'}">
+                                    <div class="beIJNz-form-group">
+                                        <p class="form-label mb-1">[[${o.fieldLabel}]]</p>
+                                        <th:block th:each="option,salt:${o.optionList}">
+                                        <div class="form-check form-check-inline">
+                                                <label class="form-check-label">
+                                                <input class="form-check-input" th:checked="${option.checked ? 'checked' : 'false'}" th:type="${o.fieldType}"
+                                                       th:name="|form-check-${saltField.index}|" th:value="${option.value}">
+                                                [[${option.value}]]
+                                                </label>
+                                        </div>
+                                        </th:block>
+                                    </div>
+                                </th:block>
+
+                                <th:block th:if="${o.fieldType != 'file' && o.fieldType != 'textarea' && o.fieldType != 'select' && o.fieldType != 'radio' && o.fieldType != 'checkbox'}">
+                                    <input th:placeholder="${#strings.isEmpty(o.placeholder)? o.fieldLabel : o.placeholder}"
+                                           th:name="${o.fieldLabel}"
+                                           th:data-field="${o.fieldName}"
+                                           th:type="${o.fieldType}"
+                                           th:required="${o.required == 0 ? 'required' : 'false'}" class="form-control">
+                                </th:block>
+                            </div>
+                        </div>
+                        <p class="text-button">
+                            <button type="submit" th:class="|btn ${section.settings.submitButtonStyle}|">
+                                [[${section.data.formData.buttonLabel}]]
+                            </button>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

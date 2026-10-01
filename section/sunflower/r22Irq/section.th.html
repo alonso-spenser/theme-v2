@@ -1,0 +1,134 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|"
+         th:if="${not #strings.isEmpty(section.settings.heading)
+                    || not #strings.isEmpty(section.settings.subheading)
+                    || not #strings.isEmpty(section.settings.content)
+                    || section.settings.dividerWidth > 0
+                    }">
+        <div th:class="|text-${section.settings.textAlign} section-title|">
+            <h3 th:class="|text-heading text-${section.settings.textAlign}|" th:if="${ not #strings.isEmpty(section.settings.heading) }">
+                [[${ section.settings.heading }]]
+            </h3>
+
+            <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
+                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+            </div>
+
+            <h5 th:class="|text-subheading text-${section.settings.textAlign}|" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
+                [[${ section.settings.subheading }]]
+            </h5>
+
+            <ul th:class="|text-list ${#strings.isEmpty(section.settings.contentAlign) ? 'text-' + section.settings.textAlign : section.settings.contentAlign} ${ section.settings.contentAlign == 'text-left' && not #strings.isEmpty(section.settings.symbol) ? section.settings.symbol : ''}|" th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                <th:block th:each="textLine,saltLine:${textLines}">
+                    <li th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                </th:block>
+            </ul>
+        </div>
+    </div>
+    <div th:class="|r22Irq-container section-neighbor container${section.settings.wideScreen ? '-fluid' : ''}|" th:if="${not #lists.isEmpty(section.settings.itemList)}">
+        <div class="r22Irq-panel">
+            <div class="r22Irq-hexagon active" th:if="${#lists.size(section.settings.itemList) > 0}">
+                <div class="r22Irq-hexagon-rectangle">
+                    <div class="r22Irq-hexagon-border active">
+                    </div>
+                </div>
+                <div class="r22Irq-hexagon-rectangle">
+                    <div class="r22Irq-hexagon-border">
+                    </div>
+                </div>
+                <div class="r22Irq-content">
+                    <p class="r22Irq-heading" th:utext="${section.settings.itemList[0].itemHeading}"></p>
+                    <p class="text-body" th:utext="${section.settings.itemList[0].itemContent}" th:if="${not #strings.isEmpty(section.settings.itemList[0].itemContent)}"></p>
+                </div>
+            </div>
+            <div class="r22Irq-hexagon active" th:if="${#lists.size(section.settings.itemList) > 1}">
+                <div class="r22Irq-hexagon-rectangle">
+                    <div class="r22Irq-hexagon-border active">
+                    </div>
+                </div>
+                <div class="r22Irq-hexagon-rectangle">
+                    <div class="r22Irq-hexagon-border">
+                    </div>
+                </div>
+                <div class="r22Irq-content">
+                    <p class="r22Irq-heading" th:utext="${section.settings.itemList[1].itemHeading}"></p>
+                    <p class="text-body" th:utext="${section.settings.itemList[1].itemContent}" th:if="${not #strings.isEmpty(section.settings.itemList[1].itemContent)}"></p>
+                </div>
+            </div>
+        </div>
+        <div class="r22Irq-panel">
+            <div class="r22Irq-hexagon active" th:if="${#lists.size(section.settings.itemList) > 2}">
+                <div class="r22Irq-hexagon-rectangle">
+                    <div class="r22Irq-hexagon-border active">
+                    </div>
+                </div>
+                <div class="r22Irq-hexagon-rectangle">
+                    <div class="r22Irq-hexagon-border">
+                    </div>
+                </div>
+                <div class="r22Irq-content">
+                    <p class="r22Irq-heading" th:utext="${section.settings.itemList[2].itemHeading}"></p>
+                    <p class="text-body" th:utext="${section.settings.itemList[2].itemContent}" th:if="${not #strings.isEmpty(section.settings.itemList[2].itemContent)}"></p>
+                </div>
+            </div>
+            <div class="r22Irq-hexagon">
+                <div class="r22Irq-hexagon-rectangle">
+                    <div class="r22Irq-hexagon-border">
+                    </div>
+                </div>
+                <div class="r22Irq-content r22Irq-invisible">
+                    <p class="r22Irq-heading">
+                        [[${section.settings.centerText}]]
+                    </p>
+                    <p class="text-body"></p>
+                </div>
+            </div>
+            <div class="r22Irq-hexagon active" th:if="${#lists.size(section.settings.itemList) > 3}">
+                <div class="r22Irq-hexagon-rectangle">
+                    <div class="r22Irq-hexagon-border active">
+                    </div>
+                </div>
+                <div class="r22Irq-hexagon-rectangle">
+                    <div class="r22Irq-hexagon-border">
+                    </div>
+                </div>
+                <div class="r22Irq-content">
+                    <p class="r22Irq-heading" th:utext="${section.settings.itemList[3].itemHeading}"></p>
+                    <p class="text-body" th:utext="${section.settings.itemList[3].itemContent}" th:if="${not #strings.isEmpty(section.settings.itemList[3].itemContent)}"></p>
+                </div>
+            </div>
+        </div>
+        <div class="r22Irq-panel">
+            <div class="r22Irq-hexagon active" th:if="${#lists.size(section.settings.itemList) > 4}">
+                <div class="r22Irq-hexagon-rectangle">
+                    <div class="r22Irq-hexagon-border active">
+                    </div>
+                </div>
+                <div class="r22Irq-hexagon-rectangle">
+                    <div class="r22Irq-hexagon-border">
+                    </div>
+                </div>
+                <div class="r22Irq-content">
+                    <p class="r22Irq-heading" th:utext="${section.settings.itemList[4].itemHeading}"></p>
+                    <p class="text-body" th:utext="${section.settings.itemList[4].itemContent}" th:if="${not #strings.isEmpty(section.settings.itemList[4].itemContent)}"></p>
+                </div>
+            </div>
+            <div class="r22Irq-hexagon active" th:if="${#lists.size(section.settings.itemList) > 5}">
+                <div class="r22Irq-hexagon-rectangle">
+                    <div class="r22Irq-hexagon-border active">
+                    </div>
+                </div>
+                <div class="r22Irq-hexagon-rectangle">
+                    <div class="r22Irq-hexagon-border">
+                    </div>
+                </div>
+                <div class="r22Irq-content">
+                    <p class="r22Irq-heading" th:utext="${section.settings.itemList[5].itemHeading}"></p>
+                    <p class="text-body" th:utext="${section.settings.itemList[5].itemContent}" th:if="${not #strings.isEmpty(section.settings.itemList[5].itemContent)}"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

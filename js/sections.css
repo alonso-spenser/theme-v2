@@ -1,0 +1,9 @@
+/* Native section primitives. Layout typography remains in the theme stylesheet. */
+[data-carousel] { position: relative; }
+[data-carousel] > .slick-slide { display: block; height: auto; }
+.fo-carousel-dots { display: flex; gap: .5rem; justify-content: center; margin: 1rem 0; }
+.fo-carousel-dots button { border: 0; border-radius: 50%; width: 1.5rem; height: 1.5rem; cursor: pointer; }
+.fo-carousel-dots button[aria-current="true"] { background: var(--colorTheme, #245cb5); color: white; }
+.fo-product-card img { width: 100%; aspect-ratio: 1; object-fit: contain; }
+[data-filter-params].active { display: block !important; }
+[hidden] { display: none !important; }

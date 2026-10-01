@@ -1,0 +1,103 @@
+<section th:class="|section ${section.settings.fullView ? ' full-view' : ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|${ section.templateId }-bar|" th:if="${ not #strings.isEmpty(section.settings.barTitle) || not #strings.isEmpty(section.settings.barContent) }">
+        <div class="container">
+            <h3 class="text-content-heading">
+                [[${ section.settings.barTitle }]]
+            </h3>
+            <p class="text-body" th:utext="${section.settings.barContent}"></p>
+            <label th:class="|${ section.templateId }-bar-close text-close|"></label>
+        </div>
+    </div>
+    <div th:class="|secondary-bar d-md-block ${not #lists.isEmpty(section.settings.langList) ? 'd-block' : 'd-none'}|" th:if="${ section.settings.secondaryVisible ||
+            (section.settings.phoneVisible && not #strings.isEmpty(site.phone)) ||
+            (section.settings.emailVisible && not #strings.isEmpty(site.email)) ||
+            not #lists.isEmpty(section.settings.auxiliaryList) ||
+            (section.settings.secondaryButtonStyle != 'invisible' && not #strings.isEmpty(section.settings.secondaryButtonLabel) && not #strings.isEmpty(section.settings.secondaryButtonLink)) ||
+            section.settings.secondaryButtonStyle != 'invisible' && not #strings.isEmpty(section.settings.secondaryButtonLabel) && not #strings.isEmpty(section.settings.secondaryButtonLink) ||
+            not #lists.isEmpty(section.settings.langList)
+        }">
+        <div class="container">
+            <div class="secondary-bar-contact d-none d-md-inline">
+                <a th:href="|tel:${site.phone}|" th:if="${ section.settings.phoneVisible && not #strings.isEmpty(site.phone) }">
+                    <i class="ic-phone"></i>
+                    [[${site.phone}]]
+                </a>
+                <a th:href="|mailto:${site.email}|" th:if="${ section.settings.emailVisible && not #strings.isEmpty(site.email) }">
+                    <i class="ic-email"></i>
+                    [[${site.email}]]
+                </a>
+                <th:block th:if="${not #lists.isEmpty(section.settings.auxiliaryList)}">
+                    <th:block th:each="o,stat:${ section.settings.auxiliaryList }">
+                        <a th:href="${#strings.isEmpty(o.linkURL) ? 'javascript:void(0)' : o.linkURL}">
+                            <img th:src="${o.icon}" th:if="${not #strings.isEmpty(o.icon)}" th:alt="${o.label}">
+                            <i th:class="${o.linkIcon}" th:if="${not #strings.isEmpty(o.linkIcon)}"></i>
+                            [[${o.label}]]
+                        </a>
+                    </th:block>
+                </th:block>
+            </div>
+            <div class="secondary-bar-right">
+                <a th:class="|btn btn-sm ${section.settings.mainButtonStyle} ml-3 d-none d-md-inline|"
+                    th:href="${section.settings.mainButtonLink}"
+                    th:if="${section.settings.mainButtonStyle != 'invisible' &&
+                        not #strings.isEmpty(section.settings.mainButtonLabel) &&
+                        not #strings.isEmpty(section.settings.mainButtonLink)
+                    }"
+                    >
+                    [[${section.settings.mainButtonLabel}]]
+                </a>
+                <a th:class="|btn btn-sm ${section.settings.secondaryButtonStyle} ml-3 d-none d-md-inline|"
+                    th:href="${section.settings.secondaryButtonLink}"
+                    th:if="${section.settings.secondaryButtonStyle != 'invisible' &&
+                        not #strings.isEmpty(section.settings.secondaryButtonLabel) &&
+                        not #strings.isEmpty(section.settings.secondaryButtonLink)
+                    }"
+                    >
+                    [[${section.settings.secondaryButtonLabel}]]
+                </a>
+                <div class="section-drop dropdown" th:if="${not #lists.isEmpty(section.settings.langList)}">
+                    <label class="dropdown-toggle">
+                        [[ ${ site.langName } ]]
+                    </label>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" th:href="${o.url}" th:each="o,stat:${ section.settings.langList }">
+                          [[${ o.language }]]
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav th:if="${section.settings.menuVisible}" th:class="|navbar navbar-expand-md${section.settings.bigLogo ? ' big-logo' : ''}${section.settings.menuLayout == 'logoCenter' && section.settings.logoType != 'invisible' ? ' logo-center' : ''}|">
+        <div class="container">
+            <a class="navbar-brand" th:href="${section.settings.logoLink}" th:if="${section.settings.logoType != 'invisible'}">
+                <img th:src="${section.settings.logo}"
+                    th:if="${(section.settings.logoType == 'logo' || section.settings.logoType == 'both') && not #strings.isEmpty(section.settings.logo)}"
+                    th:alt="${not #strings.isEmpty(section.settings.logoAlt) ? section.settings.logoAlt : site.siteName}"
+                    >
+                <img class="navbar-brand-fullView"
+                    th:src="${not #strings.isEmpty(section.settings.fullViewLogo) ? section.settings.fullViewLogo : section.settings.logo}"
+                    th:if="${(section.settings.logoType == 'logo' || section.settings.logoType == 'both') && section.settings.fullView && page.pageType == 'homePage' && (not #strings.isEmpty(section.settings.fullViewLogo) || not #strings.isEmpty(section.settings.logo))}"
+                    th:alt="${not #strings.isEmpty(section.settings.logoAlt) ? section.settings.logoAlt : site.siteName}"
+                    >
+                <label class="d-md-inline d-none" th:if="${(section.settings.logoType == 'both' || section.settings.logoType == 'name') && section.settings.menuLayout != 'logoCenter'}">
+                    [[${site.siteName}]]
+                </label>
+            </a>
+            <div class="navbar-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </div>
+            <div th:class="|collapse navbar-collapse justify-content-${section.settings.menuLayout == 'logoCenter' ? 'end' : section.settings.menuLayout}|">
+                <ul class="navbar-nav">
+                    <li class="nav-item" th:each="o,stat:${ section.settings.menuList }">
+                        <a class="nav-link" th:href="|#${ o.id }|">
+                            [[${ o.title }]]
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

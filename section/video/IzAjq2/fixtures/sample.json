@@ -1,0 +1,96 @@
+{
+  "section": {
+    "id": "1442507871094542338",
+    "componentKind": "section",
+    "type": "video",
+    "templateId": "IzAjq2",
+    "runtimeVersion": 2,
+    "settings": {
+      "loop": false,
+      "muted": false,
+      "column": "4",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "control": false,
+      "heading": "Title with button",
+      "preload": "auto",
+      "cardAlign": "text-center",
+      "cardColor": "",
+      "marginTop": false,
+      "maskColor": "",
+      "mobColumn": "12",
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "buttonLink": "",
+      "paddingTop": true,
+      "subheading": "this is a new beginning",
+      "videoWidth": 1280,
+      "wideScreen": false,
+      "buttonLabel": "Button label",
+      "buttonStyle": "btn-outline-danger",
+      "videoHeight": 720,
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "marginBottom": false,
+      "sectionAlias": "视频组",
+      "paddingBottom": true,
+      "sectionMargin": false,
+      "backgroundSize": "",
+      "cardBackground": "",
+      "backgroundColor": "#f2f2f2",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "autoPlay": "auto",
+      "videoList": [
+        {
+          "video": "https://cdn.shopify.com/s/files/1/0591/1170/2726/files/Video19MB.mp4?v=1632383048",
+          "poster": "https://theme.fomille.site/img/s1.jpg",
+          "videoTitle": "Video title",
+          "videoDescribe": "Video describe"
+        },
+        {
+          "video": "https://cdn.shopify.com/s/files/1/0591/1170/2726/files/Video19MB.mp4?v=1632383048",
+          "poster": "https://theme.fomille.site/img/s2.jpg",
+          "videoTitle": "Video title",
+          "videoDescribe": "Video describe"
+        },
+        {
+          "video": "https://cdn.shopify.com/s/files/1/0591/1170/2726/files/Video19MB.mp4?v=1632383048",
+          "poster": "https://theme.fomille.site/img/s3.jpg",
+          "videoTitle": "Video title",
+          "videoDescribe": "Video describe"
+        }
+      ],
+      "symbol": "",
+      "poster": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

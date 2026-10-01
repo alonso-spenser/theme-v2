@@ -1,0 +1,45 @@
+.BVZVFf .BVZVFf-block.quotation {
+	background: url("https://theme.fomille.site/img/blockquote.png") no-repeat 0.125rem top;
+	background-size: 1.125rem 0.875rem;
+	padding-left: 2rem;
+}
+
+.BVZVFf .BVZVFf-block .text-body li:not(:first-child) {
+	margin-top: 0.55rem;
+}
+
+.BVZVFf .BVZVFf-block .BVZVFf-button {
+	margin-top: 0.5rem;
+}
+
+.BVZVFf .BVZVFf-block .BVZVFf-button:not(.normal) {
+	padding-left: 1rem;
+}
+
+.BVZVFf .title-neighbor .btn:not(:last-child) {
+	margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+	.BVZVFf .title-button {
+		margin-top: 0.75rem;
+	}
+
+	.BVZVFf .title-button .btn {
+		width: 100%;
+	}
+
+	.BVZVFf .title-button .btn:not(:last-child) {
+		margin: 0 0 .75rem 0;
+	}
+
+	.BVZVFf .BVZVFf-button .btn {
+		width: 100%;
+	}
+
+	.BVZVFf + .title-neighbor {
+		margin-top: 1rem !important;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

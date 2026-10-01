@@ -1,0 +1,58 @@
+.FbmIzu .embed-responsive:hover .embed-responsive-item {
+	transform: scale(1.05);
+}
+
+.FbmIzu .embed-responsive:hover .FbmIzu-top {
+	background-color: var(--colorTheme);
+}
+
+.FbmIzu .embed-responsive:hover .FbmIzu-top [class*="text-"] {
+	color: #fff;
+}
+
+.FbmIzu .embed-responsive:hover .FbmIzu-top .FbmIzu-top-block {
+	display: block;
+}
+
+.FbmIzu .embed-responsive:hover .FbmIzu-top .media-icon img:first-child {
+	display: none;
+}
+
+.FbmIzu .embed-responsive:hover .FbmIzu-top .media-icon img:last-child {
+	display: block;
+}
+
+.FbmIzu-top {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 20%;
+	padding: 1rem 1.5rem;
+	background-color: #fff;
+	transition: all 0.25s;
+}
+
+.FbmIzu-top-block {
+	display: none;
+}
+
+.FbmIzu-top .text-content-heading {
+	font-weight: bold;
+	line-height: 2.5rem;
+}
+
+.FbmIzu-top .text-body + .text-link {
+	display: block;
+	margin-top: 0.75rem;
+}
+
+.FbmIzu-top .media-icon img {
+	width: 2.5rem;
+	margin-right: 0.75rem;
+}
+
+.FbmIzu-top .media-icon img:last-child {
+	display: none;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

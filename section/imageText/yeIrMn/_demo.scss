@@ -1,0 +1,41 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-yeIrMn{
+    background: #ffff00   ;
+    
+}
+
+
+
+.section-demo-yeIrMn .section-title [class^=text-] ,.section-demo-yeIrMn .section-title li{
+    color:#ff00ff;
+}
+
+
+    
+        .section-demo-yeIrMn .section-title-divider {
+            width: 60%;
+        }
+    
+    
+        .section-demo-yeIrMn .section-title-divider:after {
+            border-color: #ff00ff;
+        }
+    
+
+
+@media (min-width: 768px) {
+    .section-demo-yeIrMn .section-title [class^=text-] {
+        width: 60%;
+    }
+}
+
+
+
+.section-demo-yeIrMn .section-title .has-line:after, .section-demo-yeIrMn .section-title img {
+    width: 20%;
+}
+
+
+.section-demo-yeIrMn .yeIrMn-content {
+    background-color:#abe05d;
+}

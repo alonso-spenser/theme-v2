@@ -1,0 +1,437 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-qMnAne{
+    background: #818181   ;
+    
+}
+
+
+
+    .section-demo-qMnAne .qMnAne-grid-item {
+        border-radius: 15px;
+     }
+
+
+
+    .section-demo-qMnAne .qMnAne-grid {
+        
+            grid-column-gap: 10px;
+        
+        
+            grid-row-gap: 10px;
+        
+
+        
+            @media (min-width: 768px) {
+                
+                    grid-template-rows: 150px 250px 350px ;
+                
+                
+                    grid-template-columns: auto 15% 15% 15% 15% ;
+                
+            }
+        
+        
+            @media (max-width: 768px) {
+                
+                    grid-template-rows: px px px ;
+                
+                
+                    grid-template-columns: 50% 50% ;
+                
+            }
+        
+    }
+
+
+
+    
+        .section-demo-qMnAne .qMnAne-grid-1 {
+            
+            
+                @media (min-width: 768px) {
+                    
+                        grid-row-start: 1;
+                    
+                    
+                        grid-row-end: 3;
+                    
+                    
+                    
+                    
+                        
+                        
+                        
+                        
+                            padding-top: 30px;
+                        
+                        
+                        
+                        
+                        
+                    
+                }
+            
+        }
+    
+    
+    .section-demo-qMnAne .qMnAne-grid-1 .text-heading {
+        
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            background-image: linear-gradient(20deg, #ff0000, #ffff00);
+        
+        
+        
+            font-size: 25px;
+            @media (max-width: 768px) {
+                font-size: 18px;
+            }
+        
+    }
+    
+    
+        .section-demo-qMnAne .qMnAne-grid-1 .text-body {
+            
+                font-size: 8px;
+                 @media (max-width: 768px) {
+                     font-size: 7px;
+                 }
+            
+            
+                color: #ff0000;
+            
+        }
+    
+    
+        .section-demo-qMnAne .qMnAne-grid-2 {
+            
+                background-color: #fff000;
+            
+            
+                @media (min-width: 768px) {
+                    
+                    
+                    
+                        grid-column-start: 2;
+                    
+                    
+                        grid-column-end: 4;
+                    
+                    
+                        
+                            padding-left: 8px;
+                            padding-top: 8px;
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    
+                }
+            
+        }
+    
+    
+    .section-demo-qMnAne .qMnAne-grid-2 .text-heading {
+        
+        
+        
+            font-size: 25px;
+            @media (max-width: 768px) {
+                font-size: 18px;
+            }
+        
+    }
+    
+    
+        .section-demo-qMnAne .qMnAne-grid-2 .text-body {
+            
+                font-size: 9px;
+                 @media (max-width: 768px) {
+                     font-size: 8px;
+                 }
+            
+            
+                color: #fa6203;
+            
+        }
+    
+    
+        .section-demo-qMnAne .qMnAne-grid-3 {
+            
+                background-color: #0ff000;
+            
+            
+                @media (min-width: 768px) {
+                    
+                    
+                    
+                        grid-column-start: 4;
+                    
+                    
+                        grid-column-end: 6;
+                    
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                            padding-top: 5px;
+                            padding-right: 5px;
+                        
+                        
+                        
+                    
+                }
+            
+        }
+    
+    
+    .section-demo-qMnAne .qMnAne-grid-3 .text-heading {
+        
+        
+        
+            font-size: 25px;
+            @media (max-width: 768px) {
+                font-size: 18px;
+            }
+        
+    }
+    
+    
+        .section-demo-qMnAne .qMnAne-grid-3 .text-body {
+            
+                font-size: 10px;
+                 @media (max-width: 768px) {
+                     font-size: 9px;
+                 }
+            
+            
+                color: #fad903;
+            
+        }
+    
+    
+        .section-demo-qMnAne .qMnAne-grid-4 {
+            
+                background-color: #0000ff;
+            
+            
+                @media (min-width: 768px) {
+                    
+                    
+                    
+                    
+                    
+                        
+                        
+                            padding-left: 15px;
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    
+                }
+            
+        }
+    
+    
+    .section-demo-qMnAne .qMnAne-grid-4 .text-heading {
+        
+        
+            color: #00ff00;
+        
+        
+            font-size: 18px;
+            @media (max-width: 768px) {
+                font-size: 13px;
+            }
+        
+    }
+    
+    
+        .section-demo-qMnAne .qMnAne-grid-4 .text-body {
+            
+                font-size: 11px;
+                 @media (max-width: 768px) {
+                     font-size: 10px;
+                 }
+            
+            
+                color: #9ffa03;
+            
+        }
+    
+    
+        .section-demo-qMnAne .qMnAne-grid-5 {
+            
+                background-color: #ff00ff;
+            
+            
+                @media (min-width: 768px) {
+                    
+                    
+                    
+                    
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    
+                }
+            
+        }
+    
+    
+    .section-demo-qMnAne .qMnAne-grid-5 .text-heading {
+        
+        
+            color: #fff;
+        
+        
+            font-size: 25px;
+            @media (max-width: 768px) {
+                font-size: 18px;
+            }
+        
+    }
+    
+    
+        .section-demo-qMnAne .qMnAne-grid-5 .text-body {
+            
+                font-size: 12px;
+                 @media (max-width: 768px) {
+                     font-size: 11px;
+                 }
+            
+            
+                color: #fff;
+            
+        }
+    
+    
+        .section-demo-qMnAne .qMnAne-grid-6 {
+            
+                background-color: #00ffff;
+            
+            
+                @media (min-width: 768px) {
+                    
+                    
+                    
+                        grid-column-start: 4;
+                    
+                    
+                        grid-column-end: 6;
+                    
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            padding-bottom: 15px;
+                            padding-right: 15px;
+                        
+                    
+                }
+            
+        }
+    
+    
+    .section-demo-qMnAne .qMnAne-grid-6 .text-heading {
+        
+        
+        
+            font-size: 25px;
+            @media (max-width: 768px) {
+                font-size: 18px;
+            }
+        
+    }
+    
+    
+        .section-demo-qMnAne .qMnAne-grid-6 .text-body {
+            
+                font-size: 13px;
+                 @media (max-width: 768px) {
+                     font-size: 12px;
+                 }
+            
+            
+                color: #c206bf;
+            
+        }
+    
+    
+        .section-demo-qMnAne .qMnAne-grid-7 {
+            
+                background-color: #00ffff;
+            
+            
+                @media (min-width: 768px) {
+                    
+                    
+                    
+                        grid-column-start: 1;
+                    
+                    
+                        grid-column-end: 5;
+                    
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            padding-bottom: 15px;
+                            padding-right: 15px;
+                        
+                    
+                }
+            
+        }
+    
+    
+    .section-demo-qMnAne .qMnAne-grid-7 .text-heading {
+        
+        
+        
+            font-size: 25px;
+            @media (max-width: 768px) {
+                font-size: 18px;
+            }
+        
+    }
+    
+    
+        .section-demo-qMnAne .qMnAne-grid-7 .text-body {
+            
+                font-size: 13px;
+                 @media (max-width: 768px) {
+                     font-size: 12px;
+                 }
+            
+            
+                color: #c206bf;
+            
+        }

@@ -1,0 +1,63 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} ${section.settings.guidGutter ? '' : section.templateId + '-fit'}|">
+        <div th:class="|row align-items-stretch ${section.settings.guidGutter ? '' : ' no-gutters'}|">
+            <div th:class="|col-md-${ section.settings.percentage }${section.settings.layout == 'right' ? ' order-2' : ''}">
+                <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}" th:if="${ #lists.size(section.settings.imageList) == 1 }">
+                    <img class="embed-responsive-item lazy" th:src="|${ section.settings.imageList[0].image }!1|" th:data-original="|${section.settings.imageList[0].image}!${section.settings.wideScreen ? 'f' : ''}${section.settings.percentage}|" th:alt="${ section.settings.imageList[0].alt }">
+                </div>
+                <div class="slick" th:with="hasDot = ${ #lists.size(section.settings.imageList) > 1 }" th:if="${ #lists.size(section.settings.imageList) > 1 }">
+                    <div th:class="|slick-arrow slick-next ${section.settings.carouselArrowStyle} ${hasDot  ? 'dots' : ''}|" th:data-carousel-next="${ section.id }" th:if="${ section.settings.carouselArrowStyle != 'invisible' && hasDot}"></div>
+                    <div th:class="|slick-arrow slick-prev ${section.settings.carouselArrowStyle} ${hasDot  ? 'dots' : ''}|" th:data-carousel-prev="${ section.id }" th:if="${ section.settings.carouselArrowStyle != 'invisible' && hasDot}"></div>
+                    <div th:class="|slick-slider dots-${section.settings.carouselNavStyle} arrow-${section.settings.carouselArrowStyle}|"
+                         th:data-carousel="${ section.id }"
+                         th:data-effect="${ #strings.isEmpty(section.settings.carouselEffect) ? 'fade' : section.settings.carouselEffect }"
+                         th:data-dots="${hasDot  ? 1 : 0}"
+                         th:data-arrow="${hasDot  ? 1 : 0}"
+                         th:data-column="1"
+                         th:data-mobile-column="1"
+                         th:data-delay="${ #strings.isEmpty(section.settings.autoPlay) ? 6000 : section.settings.autoPlay }"
+                        >
+                        <div th:class="|slick-slide slick-slide-${salt.index}|" th:each="o, salt:${ section.settings.imageList }">
+                            <div th:class="|embed-responsive embed-responsive-${ section.settings.imageScale == 'normal' ? '1by1' : section.settings.imageScale }|">
+                                <img class="embed-responsive-item lazy" th:src="|${ o.image }!1|" th:data-lazy="|${ o.image }|" th:alt="${ o.alt }">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div th:class="|col-md-${#numbers.formatInteger(12 - section.settings.percentage, 1,'POINT')} ${ section.templateId }-content|">
+                <div th:class="|text-${section.settings.textAlign} section-title|" th:if="${not #strings.isEmpty(section.settings.heading)
+                || not #strings.isEmpty(section.settings.subheading)
+                || not #strings.isEmpty(section.settings.content)
+                || section.settings.dividerWidth > 0
+                }">
+                    <h3 class="text-heading" th:if="${ not #strings.isEmpty(section.settings.heading) }">
+                        [[${ section.settings.heading }]]
+                    </h3>
+
+                    <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
+                        <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                    </div>
+
+                    <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
+                        [[${ section.settings.subheading }]]
+                    </h5>
+                    <ul th:class="|text-body break-word ${section.settings.symbol}|" th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                        <th:block th:each="textLine,saltLine:${textLines}">
+                            <li th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                        </th:block>
+                    </ul>
+                    <p class="text-link" th:if="${(section.settings.buttonStyle != 'invisible' && not #strings.isEmpty(section.settings.buttonLabel)) || (section.settings.secondButtonStyle != 'invisible' && not #strings.isEmpty(section.settings.secondButtonLabel))}">
+                        <button th:class="|btn ${ section.settings.buttonStyle }|" th:if="${#strings.isEmpty(section.settings.buttonLink) && section.settings.buttonStyle != 'invisible' && not #strings.isEmpty(section.settings.buttonLabel)}">[[${section.settings.buttonLabel}]]</button>
+                        <a th:href="${section.settings.buttonLink}" th:class="|btn ${section.settings.buttonStyle}|" th:if="${not #strings.isEmpty(section.settings.buttonLink) && section.settings.buttonStyle != 'invisible' && not #strings.isEmpty(section.settings.buttonLabel)}">[[${section.settings.buttonLabel}]]</a>
+                        <button th:class="|btn ${ section.settings.secondButtonStyle }|" th:if="${#strings.isEmpty(section.settings.secondButtonLink) && section.settings.secondButtonStyle != 'invisible' && not #strings.isEmpty(section.settings.secondButtonLabel)}">[[${section.settings.secondButtonLabel}]]</button>
+                        <a th:href="${section.settings.secondButtonLink}" th:class="|btn ${section.settings.secondButtonStyle}|" th:if="${not #strings.isEmpty(section.settings.secondButtonLink) && section.settings.secondButtonStyle != 'invisible' && not #strings.isEmpty(section.settings.secondButtonLabel)}">[[${section.settings.secondButtonLabel}]]</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

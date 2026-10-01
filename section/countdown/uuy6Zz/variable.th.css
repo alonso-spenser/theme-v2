@@ -1,0 +1,28 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+
+
+[# th:if="${not #strings.isEmpty(section.settings.digitColor)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-digit{
+    color: [[${section.settings.digitColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.descColor)}"]
+.section-[[${ section.id }]] .text-body{
+    color: [[${section.settings.descColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.lineColor)}"]
+.section-[[${ section.id }]] .media-item:not(:last-child){
+    border-color: [[${section.settings.lineColor}]];
+}
+[/]

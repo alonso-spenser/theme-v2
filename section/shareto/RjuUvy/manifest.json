@@ -1,0 +1,108 @@
+{
+  "protocolVersion": 2,
+  "componentKind": "section",
+  "type": "shareto",
+  "templateId": "RjuUvy",
+  "runtimeVersion": 2,
+  "definitionVersion": 1,
+  "schemaVersion": 1,
+  "name": {
+    "en": "Share to",
+    "zh-CN": "分享"
+  },
+  "policy": {
+    "removable": true,
+    "duplicable": true,
+    "maxInstances": 0
+  },
+  "placement": {
+    "fixed": false,
+    "pages": []
+  },
+  "render": {
+    "template": "section.th.html",
+    "style": "section.scss",
+    "variableStyle": "variable.th.css",
+    "script": "section.js"
+  },
+  "editor": {
+    "groups": [
+      {
+        "id": "group1",
+        "name": {
+          "en": "Content",
+          "zh-CN": "内容"
+        },
+        "elements": [
+          {
+            "max": 50,
+            "min": 0,
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Padding top",
+              "zh-CN": "上边距"
+            },
+            "step": 5,
+            "type": "slider",
+            "field": "paddingTop",
+            "default": 12,
+            "options": []
+          },
+          {
+            "max": 50,
+            "min": 0,
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Padding bottom",
+              "zh-CN": "下边距"
+            },
+            "step": 5,
+            "type": "slider",
+            "field": "paddingBottom",
+            "default": 12,
+            "options": []
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "additionalSettings",
+        "name": {
+          "en": "Additional settings",
+          "zh-CN": "补充设置"
+        },
+        "elements": [
+          {
+            "field": "sectionAlias",
+            "name": {
+              "en": "sectionAlias"
+            },
+            "type": "hidden",
+            "default": "分享"
+          },
+          {
+            "field": "wideScreen",
+            "name": {
+              "en": "wideScreen"
+            },
+            "type": "hidden",
+            "default": ""
+          }
+        ]
+      }
+    ]
+  },
+  "data": {
+    "source": "none",
+    "contract": "theme.shareto.v2"
+  }
+}

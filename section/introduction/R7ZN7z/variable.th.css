@@ -1,0 +1,50 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${section.settings.secondSize > 0}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-second img {
+    height: [[${section.settings.secondSize}]]px;
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.contentBackground)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-mission{
+  background-color: [[${section.settings.contentBackground}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.secondHeadingColor)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-second .text-content-heading{
+    color: [[${section.settings.secondHeadingColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.secondBodyColor)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-second .text-body{
+    color: [[${section.settings.secondBodyColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.secondLineColor)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-second-card, .section-[[${ section.id }]] .[[${ section.templateId }]]-second:not(:last-child) .[[${ section.templateId }]]-second-card {
+    border-color: [[${section.settings.secondLineColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.headingColor)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-mission .text-heading, .section-[[${ section.id }]] .[[${ section.templateId }]]-mission .text-content-heading{
+color: [[${section.settings.headingColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.bodyColor)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-mission .text-body{
+    color: [[${section.settings.bodyColor}]];
+}
+[/]

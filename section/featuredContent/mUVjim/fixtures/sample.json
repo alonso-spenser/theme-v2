@@ -1,0 +1,105 @@
+{
+  "section": {
+    "id": "1480460497438019585",
+    "componentKind": "section",
+    "type": "featuredContent",
+    "templateId": "mUVjim",
+    "runtimeVersion": 2,
+    "settings": {
+      "style": "card",
+      "column": "4",
+      "layout": "slide",
+      "symbol": "list-demical",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Featured Content",
+      "marginTop": false,
+      "mobColumn": "12",
+      "textAlign": "center",
+      "textColor": "#ff0000",
+      "textWidth": 100,
+      "buttonLink": "",
+      "imageScale": "16by9",
+      "paddingTop": true,
+      "subheading": "this is a new beginning",
+      "titleAlign": "text-center",
+      "wideScreen": false,
+      "buttonLabel": "Button label",
+      "buttonStyle": "invisible",
+      "contentAlign": "text-left",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "marginBottom": false,
+      "sectionAlias": "推荐内容",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "cardBackground": "",
+      "backgroundColor": "#fcfcfc",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "carouselAutoPlay": "5000",
+      "carouselNavStyle": "dark",
+      "colorContentText": "",
+      "backgroundPosition": "",
+      "carouselArrowStyle": "dark",
+      "colorContentHeading": "",
+      "popupColor": "",
+      "contentList": [
+        {
+          "link": "https://www.163.com",
+          "image": "https://css.11af.com/img/image-with-text.jpg",
+          "alt": "",
+          "title": "Heading 11",
+          "description": "We provide all your needed for starting your own online business, and even easier. \nEstablish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services."
+        },
+        {
+          "link": "https://www.263.com",
+          "image": "https://css.11af.com/img/image-with-text.jpg",
+          "alt": "",
+          "title": "Heading 22",
+          "description": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services."
+        },
+        {
+          "link": "https://www.163.com",
+          "image": "https://css.11af.com/img/image-with-text.jpg",
+          "alt": "",
+          "title": "Heading 33",
+          "description": "We provide all your needed for starting your own online business, and even easier. \nEstablish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services."
+        },
+        {
+          "link": "https://www.263.com",
+          "image": "https://css.11af.com/img/image-with-text.jpg",
+          "alt": "",
+          "title": "Heading 44",
+          "description": "We provide all your needed for starting your own online business, and even easier. \nEstablish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services."
+        }
+      ]
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

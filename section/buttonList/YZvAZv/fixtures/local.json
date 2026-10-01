@@ -1,0 +1,94 @@
+{
+  "section": {
+    "id": "1441291825683599361",
+    "componentKind": "section",
+    "type": "buttonList",
+    "templateId": "YZvAZv",
+    "runtimeVersion": 2,
+    "settings": {
+      "marginTop": false,
+      "paddingTop": true,
+      "wideScreen": false,
+      "buttonAlign": "text-center",
+      "marginBottom": false,
+      "sectionAlias": "按钮组",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "#f2f2f2",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "activeButtonStyle": "btn-danger",
+      "backgroundPosition": "",
+      "rounded": true,
+      "buttonList": [
+        {
+          "buttonLabel": "Button",
+          "buttonLink": "",
+          "buttonStyle": "btn-outline-primary"
+        },
+        {
+          "buttonLabel": "Button",
+          "buttonLink": "",
+          "buttonStyle": "btn-dark"
+        },
+        {
+          "buttonLabel": "Button",
+          "buttonLink": "",
+          "buttonStyle": "btn-primary"
+        },
+        {
+          "buttonLabel": "Button",
+          "buttonLink": "",
+          "buttonStyle": "btn-danger",
+          "checked": true
+        },
+        {
+          "buttonLabel": "Button",
+          "buttonLink": "",
+          "buttonStyle": "btn-outline-warning"
+        },
+        {
+          "buttonLabel": "Button",
+          "buttonLink": "",
+          "buttonStyle": "btn-outline-primary"
+        },
+        {
+          "buttonLabel": "Button",
+          "buttonLink": "",
+          "buttonStyle": "btn-dark"
+        },
+        {
+          "buttonLabel": "Button",
+          "buttonLink": "",
+          "buttonStyle": "btn-primary"
+        }
+      ]
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

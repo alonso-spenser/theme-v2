@@ -1,0 +1,80 @@
+.umiyqu img {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.umiyqu img + .card {
+	margin-top: 2rem;
+}
+
+.umiyqu .text-heading {
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid #ccc;
+}
+
+.umiyqu .card {
+	border-radius: 10px;
+	width: 90%;
+	z-index: 1;
+	margin: 0 0 0 calc(10% + 5rem);
+}
+
+.umiyqu .text-body {
+	font-size: calc(var(--fontSizeBody) * 1px);
+}
+
+.umiyqu .card-body {
+	padding: 4rem;
+}
+
+.umiyqu .text-neighbor a {
+	color: var(--colorLink);
+}
+
+.umiyqu .col-md-6:last-child {
+	padding-top: 5rem;
+}
+
+.umiyqu .col-md-6.order-2 .card {
+	margin-right: 0;
+	margin-left: -5rem;
+}
+
+@media (max-width: 768px) {
+	.umiyqu img + .card {
+		margin-top: 1rem;
+	}
+
+	.umiyqu .text-body {
+		font-size: calc(var(--fontSizeBodyMob) * 1px);
+	}
+
+	.umiyqu .card {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.umiyqu .card-body {
+		padding: 2rem;
+	}
+
+	.umiyqu .col-md-6:last-child {
+		padding-top: 0;
+	}
+
+	.umiyqu .col-md-6.order-2 {
+		order: 0;
+	}
+
+	.umiyqu .col-md-6.order-2 .card {
+		margin-left: 0;
+	}
+
+	.umiyqu .col-md-6 + .col-md-6 {
+		margin-top: 1rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

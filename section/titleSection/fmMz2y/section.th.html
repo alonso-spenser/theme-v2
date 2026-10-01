@@ -1,0 +1,18 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} text-${section.settings.textAlign}|">
+        <h5 class="text-small" th:if="${not #strings.isEmpty(section.settings.subheading)}">[[${ section.settings.subheading }]]</h5>
+        <h3 class="text-heading" th:if="${not #strings.isEmpty(section.settings.heading)}">[[${ section.settings.heading }]]</h3>
+        <div class="text-neighbor" th:if="${not #strings.isEmpty(section.settings.content) || (section.settings.buttonStyle != 'invisible' && not #strings.isEmpty(section.settings.buttonLabel))}">
+            <div class="text-body" th:if="${not #strings.isEmpty(section.settings.content)}" th:utext="${#strings.replace(section.settings.content,'\n','<br>')}"></div>
+            <p class="text-neighbor">
+                <button th:class="|btn ${ section.settings.buttonStyle }|" th:if="${#strings.isEmpty(section.settings.buttonLink) && section.settings.buttonStyle != 'invisible'}">[[${ section.settings.buttonLabel }]]</button>
+                <a th:href="${ section.settings.buttonLink }" th:class="|btn ${ section.settings.buttonStyle }|"  th:if="${not #strings.isEmpty(section.settings.buttonLink) && section.settings.buttonStyle != 'invisible'}">
+                    [[${ section.settings.buttonLabel }]] <i class="ic-right"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

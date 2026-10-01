@@ -1,0 +1,17 @@
+[# th:if="${not #strings.isEmpty(section.settings.bgColor) || section.settings.elementHeight > 0}"]
+.section-[[${ section.id }]] svg {
+    [# th:if="${not #strings.isEmpty(section.settings.bgColor)}"]
+        fill:[[${section.settings.bgColor}]];
+    [/]
+    [# th:if="${section.settings.elementHeight > 0}"]
+        height:[[${section.settings.elementHeight}]]px;
+    [/]
+}
+[/]
+[# th:if="${section.settings.mobiHeight > 0}"]
+    @media (max-width: 768px) {
+        .section-[[${ section.id }]] svg {
+            height:[[${section.settings.mobiHeight}]]px;
+        }
+    }
+[/]

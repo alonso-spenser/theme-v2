@@ -1,0 +1,26 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-ieuuQz{
+    background: #000   ;
+    
+}
+
+
+
+.section-demo-ieuuQz .section-title [class^=text-] {
+    color:#ffff00;
+}
+
+
+
+.section-demo-ieuuQz .section-title {
+    background-color:#ff0000;
+}
+
+
+
+
+@media (min-width: 768px) {
+    .section-demo-ieuuQz .section-title {
+        width: 70%;
+    }
+}

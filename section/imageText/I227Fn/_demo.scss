@@ -1,0 +1,39 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-I227Fn{
+    background: #ffff00  url("/preview-assets/images/banner.jpg") no-repeat top center;
+    
+    background-size: auto;
+    
+}
+
+
+
+
+
+    @media (max-width: 768px) {
+        .section-demo-I227Fn  {
+            background: url("/preview-assets/images/image-with-text.jpg");
+            background-size: 100% auto;
+        }
+    }
+
+
+
+    @media (min-width: 768px) {
+        .section-demo-I227Fn .I227Fn-container {
+            padding-top: 260px;
+        }
+    }
+    @media (max-width: 768px) {
+        .section-demo-I227Fn .I227Fn-container {
+            padding-top: 208px;
+        }
+    }
+
+
+
+    @media (min-width: 768px) {
+        .section-demo-I227Fn .I227Fn-content {
+            width: 50%;
+        }
+    }

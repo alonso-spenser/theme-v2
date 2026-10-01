@@ -1,0 +1,44 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .[class^=text-] {
+    color:[[${section.settings.textColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.mobileImage)}"]
+    @media (max-width: 768px) {
+        .section-[[${ section.id }]]  {
+            background: url("[[${ section.settings.mobileImage }]]");
+            background-size: 100% auto;
+        }
+    }
+[/]
+
+[# th:if="${section.settings.layoutTop != null && section.settings.layoutTop > 0}"]
+    @media (min-width: 768px) {
+        .section-[[${ section.id }]] .[[${ section.templateId }]]-container {
+            padding-top: [[${section.settings.layoutTop * 10}]]px;
+        }
+    }
+    @media (max-width: 768px) {
+        .section-[[${ section.id }]] .[[${ section.templateId }]]-container {
+            padding-top: [[${section.settings.layoutTop * 8}]]px;
+        }
+    }
+[/]
+
+[# th:if="${section.settings.layoutWidth != null && section.settings.layoutWidth > 0}"]
+    @media (min-width: 768px) {
+        .section-[[${ section.id }]] .[[${ section.templateId }]]-content {
+            width: [[${section.settings.layoutWidth}]]%;
+        }
+    }
+[/]

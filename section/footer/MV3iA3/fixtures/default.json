@@ -1,0 +1,169 @@
+{
+  "section": {
+    "id": "1412680456486260738",
+    "componentKind": "section",
+    "type": "footer",
+    "templateId": "MV3iA3",
+    "runtimeVersion": 2,
+    "settings": {
+      "logo": "",
+      "slogan": "",
+      "address": false,
+      "content": "Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your site.",
+      "divider": false,
+      "copyright": "Copyright &copy; 2021",
+      "marginTop": false,
+      "textColor": "",
+      "bottomMenu": "invisible",
+      "paddingTop": true,
+      "subheading": "Talk about your company",
+      "tabarColor": "",
+      "wideScreen": false,
+      "homeVisible": "visible",
+      "sloganColor": "",
+      "socialMedia": "area4",
+      "copyrightURL": "http://beian.miit.gov.cn/",
+      "emailVisible": false,
+      "headingColor": "",
+      "marginBottom": false,
+      "officeColumn": "12",
+      "pagesVisible": "visible",
+      "phoneVisible": false,
+      "sectionAlias": "网站页脚",
+      "sloganBorder": "",
+      "mobileVisible": false,
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "companyVisible": false,
+      "copyrightAlign": "center",
+      "copyrightColor": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "consultFormArea": "area4",
+      "copyrightBorder": "",
+      "formButtonStyle": "invisible",
+      "tabarBackground": "",
+      "backgroundRepeat": "",
+      "consultFormStyle": "normal",
+      "copyrightLicence": "粤ICP备",
+      "freePhoneVisible": false,
+      "sloganBackground": "",
+      "backgroundPosition": "",
+      "copyrightBackground": "",
+      "column": [],
+      "tabBar": [],
+      "offices": [],
+      "copyLinkList": [],
+      "isGlobalSection": "",
+      "placeholder": "",
+      "enableTitle": "",
+      "consultFormHeadingAlign": "",
+      "alt": ""
+    },
+    "bindings": {
+      "consultForm": {
+        "sourceType": "inquiryForm",
+        "ids": []
+      },
+      "footMenu": {
+        "sourceType": "shopNavigation",
+        "menuKey": "footMenu",
+        "ids": []
+      },
+      "footMenu2": {
+        "sourceType": "shopNavigation",
+        "menuKey": "footMenu2",
+        "ids": []
+      },
+      "footMenu3": {
+        "sourceType": "shopNavigation",
+        "menuKey": "footMenu3",
+        "ids": []
+      }
+    },
+    "data": {
+      "consultForm": {
+        "title": "Contact us",
+        "remark": "This is the describe for inquiry form",
+        "fieldList": [
+          {
+            "sort": "1",
+            "required": false,
+            "fieldName": "lastName",
+            "fieldType": "text",
+            "fieldLabel": "Last name",
+            "placeholder": "Please enter last name",
+            "defaultValue": ""
+          },
+          {
+            "sort": "2",
+            "required": false,
+            "fieldName": "firstName",
+            "fieldType": "text",
+            "fieldLabel": "First name",
+            "placeholder": "Please enter first name",
+            "defaultValue": ""
+          },
+          {
+            "id": "1158289022079750146",
+            "sort": "3",
+            "required": true,
+            "fieldName": "email",
+            "fieldType": "email",
+            "fieldLabel": "Email",
+            "placeholder": "Please enter email",
+            "defaultValue": ""
+          },
+          {
+            "sort": "4",
+            "formId": "1157492648300646402",
+            "required": true,
+            "fieldName": "phone",
+            "fieldType": "tel",
+            "fieldLabel": "Phone",
+            "placeholder": "Please enter phone number",
+            "defaultValue": ""
+          },
+          {
+            "sort": "5",
+            "formId": "1157492648300646402",
+            "required": true,
+            "fieldName": "message",
+            "fieldType": "textarea",
+            "fieldLabel": "Message",
+            "placeholder": "Please tell us the message",
+            "defaultValue": ""
+          }
+        ],
+        "buttonLabel": "Submit"
+      },
+      "footMenu": [],
+      "footMenu2": [],
+      "footMenu3": []
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

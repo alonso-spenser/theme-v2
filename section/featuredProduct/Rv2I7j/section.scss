@@ -1,0 +1,41 @@
+.Rv2I7j p + p {
+	margin-top: 0.3125rem;
+}
+
+.Rv2I7j-list .embed-responsive {
+	width: 9.375rem;
+	margin-right: 0.9375rem;
+}
+
+.Rv2I7j .nav-pills .nav-link {
+	transition: all 0.25s;
+}
+
+.Rv2I7j .nav-pills .nav-link:hover {
+	background-color: var(--colorButtonHover);
+	color: var(--colorButtonHoverLabel);
+}
+
+.Rv2I7j-group {
+	position: relative;
+}
+
+.Rv2I7j-group-item {
+	position: relative;
+	width: 100%;
+	left: 0;
+	top: 0;
+	opacity: 1;
+}
+
+.Rv2I7j-group-item:not(.active) {
+	position: absolute;
+	opacity: 0;
+	z-index: 0;
+}
+
+.Rv2I7j-group-item.active {
+	z-index: 1;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

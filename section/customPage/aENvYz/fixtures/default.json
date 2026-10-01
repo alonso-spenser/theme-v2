@@ -1,0 +1,43 @@
+{
+  "section": {
+    "id": "1410131327550377986",
+    "componentKind": "page-section",
+    "type": "customPage",
+    "templateId": "aENvYz",
+    "runtimeVersion": 2,
+    "settings": {
+      "h1Wide": false,
+      "h1Color": "",
+      "h1Layout": "left",
+      "enableCrumb": true,
+      "h1Background": "",
+      "sectionAlias": "自定义页"
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

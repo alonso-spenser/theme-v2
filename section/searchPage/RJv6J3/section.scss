@@ -1,0 +1,30 @@
+.RJv6J3-title {
+	font-family: var(--typeContentHeading);
+	font-size: var(--fontSizeContentHeading);
+	color: var(--colorSubheading);
+	margin-bottom: 20px;
+}
+
+.RJv6J3-nothing h5 {
+	font-family: var(--typeContentHeading);
+	font-size: var(--fontSizeContentHeading);
+	color: var(--colorSecondary);
+}
+
+.RJv6J3-nothing p {
+	color: var(--colorSecondary);
+}
+
+.RJv6J3-nothing:not(.active) {
+	display: none;
+}
+
+.RJv6J3-container {
+	min-height: 150px;
+}
+
+.RJv6J3-block {
+	margin-top: 40px;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

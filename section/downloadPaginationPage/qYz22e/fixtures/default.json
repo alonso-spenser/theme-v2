@@ -1,0 +1,191 @@
+{
+  "section": {
+    "id": "1410131326237560833",
+    "componentKind": "page-section",
+    "type": "downloadPaginationPage",
+    "templateId": "qYz22e",
+    "runtimeVersion": 2,
+    "settings": {
+      "h1Wide": false,
+      "h1Color": "",
+      "h1Layout": "left",
+      "marginTop": false,
+      "imageScale": "1by1",
+      "paddingTop": true,
+      "wideScreen": false,
+      "buttonStyle": "btn-primary",
+      "enableCrumb": true,
+      "timeVisible": true,
+      "h1Background": "",
+      "imageVisible": true,
+      "marginBottom": false,
+      "sectionAlias": "下载页",
+      "bannerVisible": false,
+      "paddingBottom": true,
+      "sectionMargin": false,
+      "backgroundSize": "",
+      "contentVisible": true,
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "summaryShow": "",
+      "summaryClose": "",
+      "pagination": ""
+    },
+    "bindings": {},
+    "data": {
+      "page": {
+        "current": 1,
+        "orders": [],
+        "pages": 1,
+        "records": [
+          {
+            "coverImage": "/preview-assets/images/s1.jpg",
+            "description": "The host welcomed back a full house to the Ed Sullivan Theater, home of CBS' \"The Late Show,\" on Monday. It was the first time in 15 months that Colbert presented the show in front of a live audience.\nCNN Business was granted access to the taping of Colbert's return to the big stage, which took place in front of a fully vaccinated crowd.\nI've covered many \"The Late Show\" tapings since Colbert took over for David Letterman in 2015. I've seen Colbert interview Donald Trump, go late into the night ",
+            "fileType": 9,
+            "id": "1300740729752891394",
+            "needPass": 0,
+            "refType": 9,
+            "suffix": "",
+            "title": "TB1dmMBwRmWBuNkSndVXXcsApXa_!!0-item_pic.jpg",
+            "url": "/preview-assets/images/s1.jpg",
+            "subtitle": ""
+          },
+          {
+            "coverImage": "/preview-assets/images/s1.jpg",
+            "description": "33",
+            "fileType": 9,
+            "id": "1300740729757085698",
+            "needPass": 0,
+            "refType": 9,
+            "suffix": "",
+            "title": "O1CN0135TJMV1kelbyGq35x_!!924534709.jpg",
+            "url": "/preview-assets/images/8.jpg",
+            "subtitle": ""
+          },
+          {
+            "coverImage": "/preview-assets/images/s1.jpg",
+            "description": "3",
+            "fileType": 9,
+            "id": "1300740729761280002",
+            "needPass": 0,
+            "refType": 9,
+            "suffix": "",
+            "title": "O1CN01vlw2x91kelbxu0VtB_!!924534709.jpg",
+            "url": "/preview-assets/images/8.jpg",
+            "subtitle": ""
+          },
+          {
+            "coverImage": "/preview-assets/images/s1.jpg",
+            "description": "",
+            "fileType": 9,
+            "id": "1300740729765474305",
+            "needPass": 0,
+            "refType": 9,
+            "suffix": "",
+            "title": "O1CN0135xsJ41kelbqkQtO6_!!924534709.jpg",
+            "url": "/preview-assets/images/8.jpg",
+            "subtitle": ""
+          },
+          {
+            "coverImage": "/preview-assets/images/s1.jpg",
+            "description": "考虑到疫情，美国许多地方都以线上授课开始了新学年。不少教育工作者担心，电脑不足将扩大学生间的不平等，这也是让学生、家长和教师都头疼的问题。\n\n",
+            "fileType": 9,
+            "id": "1297747082978930690",
+            "needPass": 0,
+            "refType": 9,
+            "suffix": "",
+            "title": "新外贸网站更改事项和内容确定(1)",
+            "url": "https://css.11af.com/img/1297746736651808769.docx",
+            "subtitle": ""
+          },
+          {
+            "coverImage": "/preview-assets/images/s1.jpg",
+            "description": "8月23日，美联社发布独家报道指出，在采访了美国20多所学校、15个州的学区、供应商、电脑公司和行业分析师后，美媒得知，全球最大的三家电脑公司——联想（Lenovo）、惠普（HP）和戴尔（Dell）已经通知学区，他们还缺近500万台笔记本电脑。\n\n",
+            "fileType": 9,
+            "id": "1297747082970542081",
+            "needPass": 0,
+            "refType": 9,
+            "suffix": "",
+            "title": "yulangtek.cn.xlsx",
+            "url": "https://css.11af.com/img/1297746736328847362.xlsx",
+            "subtitle": ""
+          },
+          {
+            "coverImage": "/preview-assets/images/s1.jpg",
+            "description": "美媒联想到了几个月前的卫生纸抢购，并指出，在某些情况下，特朗普政府对中国供应商的制裁加剧了现在电脑的短缺。\n\n",
+            "fileType": 9,
+            "id": "1297747082974736385",
+            "needPass": 0,
+            "refType": 9,
+            "suffix": "",
+            "title": "这个是产品名",
+            "url": "/preview-assets/images/8.jpg",
+            "subtitle": ""
+          },
+          {
+            "coverImage": "/preview-assets/images/s1.jpg",
+            "description": "美联社调查发现，美国各地学校在筹备笔记本电脑和其他网络学习设备时，面临着长达数月的短缺和延误。而这些正是今年开学最重要的用品。\n\n",
+            "fileType": 9,
+            "id": "1297747082974736386",
+            "needPass": 0,
+            "refType": 9,
+            "suffix": "",
+            "title": "VMware Fusion Keygen",
+            "url": "https://css.11af.com/img/1297746736458870787.zip",
+            "subtitle": ""
+          }
+        ],
+        "searchCount": true,
+        "size": 12,
+        "total": 8
+      },
+      "collection": {
+        "accessPassword": "1234",
+        "banner": "",
+        "coverImage": "/preview-assets/images/s1.jpg",
+        "coverVideo": "",
+        "createTime": 1604025163343,
+        "description": "一、5G时代基础教育迎来的机遇\n当前正处在基础教育领域持续变革的关键时期。《中国教育现代化2035》强调要“加快信息化时代教育变革、提升教育质量及促进教育公平”。\n\n5G技术将促进技术深度融入基础教育各个领域，推动教育资源、教学环境、教学空间、教学平台及办学模式等教育核心要素的持续变革与创新，为基础教育改革带来诸多机遇。\n\n（一）高速无损耗传输，有力促进教育资源共建共享\n\n受制于传统通信技术传播带宽小、网络不稳定等因素，以往极高清、VR、云3D、虚拟仿真等资源难以在教育网络流通，或出现资源传播耗时长、资源品质变差等现象。",
+        "id": "1322003469142192130",
+        "infoType": 3,
+        "refCount": 8,
+        "seoDescription": "",
+        "seoH1": "Support",
+        "seoKeywords": "",
+        "seoTitle": "Support",
+        "seoUrl": "support",
+        "title": "Support"
+      }
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "lang": "英语",
+    "download": "Download",
+    "summaryShow": "Show more",
+    "summaryClose": "Hide",
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

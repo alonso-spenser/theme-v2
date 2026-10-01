@@ -1,0 +1,123 @@
+{
+  "section": {
+    "id": "1455825695653228546",
+    "componentKind": "section",
+    "type": "designSection",
+    "templateId": "FvyQV3",
+    "runtimeVersion": 2,
+    "settings": {
+      "imageScale": "21by9",
+      "wideGutter": "no-gutters",
+      "wideScreen": false,
+      "firstLayout": "left",
+      "sectionAlias": "设计详情",
+      "imagePercentage": "6",
+      "articleId": "1455804059533172738",
+      "imageList": [
+        {
+          "url": "https://css.11af.com/img/s1.jpg",
+          "alt": "",
+          "imageLayout": "left",
+          "heading": "1111",
+          "subheading": "This is a subheading",
+          "description": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "buttonLabel": "Button",
+          "buttonLink": "",
+          "buttonStyle": "btn-outline-danger",
+          "contentPosition": "left-center",
+          "textColor": "#e010ef",
+          "maskColor": "rgba(161,8,8,0.8)",
+          "textAlign": "text-center",
+          "marginTop": false,
+          "marginBottom": false,
+          "paddingTop": true,
+          "paddingBottom": true,
+          "backgroundColor": "#ffff00",
+          "backgroundImage": "https://css.11af.com/img/image-with-text.jpg",
+          "backgroundPosition": "center center",
+          "backgroundRepeat": "",
+          "backgroundSize": "cover",
+          "": ""
+        },
+        {
+          "url": "https://css.11af.com/img/s2.jpg",
+          "alt": "",
+          "imageLayout": "left",
+          "heading": "22222",
+          "subheading": "This is a subheading",
+          "description": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "buttonLabel": "Button",
+          "buttonLink": "",
+          "buttonStyle": "invisible",
+          "contentPosition": "right-bottom",
+          "textColor": "#1035ef",
+          "maskColor": "rgba(18,137,148,0.8)",
+          "textAlign": "text-center",
+          "marginTop": false,
+          "marginBottom": false,
+          "paddingTop": false,
+          "paddingBottom": false,
+          "backgroundColor": "orange",
+          "backgroundImage": "",
+          "backgroundPosition": "",
+          "backgroundRepeat": "",
+          "backgroundSize": "",
+          "": ""
+        },
+        {
+          "url": "https://css.11af.com/img/s3.jpg",
+          "alt": "",
+          "imageLayout": "left",
+          "heading": "33333",
+          "subheading": "This is a subheading",
+          "description": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "buttonLabel": "Button",
+          "buttonLink": "",
+          "buttonStyle": "invisible",
+          "contentPosition": "left-center",
+          "textColor": "#10efbb",
+          "maskColor": "rgba(62,94,8,0.8)",
+          "textAlign": "text-center",
+          "marginTop": false,
+          "marginBottom": false,
+          "paddingTop": false,
+          "paddingBottom": false,
+          "backgroundColor": "yellow",
+          "backgroundImage": "",
+          "backgroundPosition": "",
+          "backgroundRepeat": "",
+          "backgroundSize": "",
+          "": ""
+        }
+      ],
+      "marginTop": "",
+      "marginBottom": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

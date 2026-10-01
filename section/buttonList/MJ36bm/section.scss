@@ -1,0 +1,77 @@
+.MJ36bm-links {
+	flex-grow: 1;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.MJ36bm-links a {
+	color: var(--colorBody);
+	line-height: 240%;
+	padding-left: 1rem;
+	padding-right: 1.25rem;
+	transition: all 0.25s;
+	font-size: var(--fontSizeMenu);
+	position: relative;
+	white-space: nowrap;
+}
+
+.MJ36bm-links a:hover {
+	color: var(--colorLinkHover);
+}
+
+.MJ36bm-links a.active {
+	color: var(--colorTheme);
+	font-weight: bold;
+}
+
+.MJ36bm-links.has-separator a:not(:last-child):after {
+	color: var(--colorBody);
+	position: absolute;
+	right: 0;
+	opacity: .6;
+	transition: all 0.25s;
+	content: '|';
+}
+
+@media (min-width: 768px) {
+	.MJ36bm .text-heading {
+		white-space: nowrap;
+	}
+
+	.MJ36bm .text-heading + .MJ36bm-links {
+		margin-left: 1.5rem;
+	}
+
+	.MJ36bm-links.equal-width a {
+		flex-grow: 1;
+		text-align: center;
+	}
+}
+
+@media (max-width: 768px) {
+	.MJ36bm:not(.section-padding-top) {
+		padding-top: 1rem;
+	}
+
+	.MJ36bm:not(.section-padding-bottom) {
+		padding-bottom: 0.75rem;
+	}
+
+	.MJ36bm .text-heading + .MJ36bm-links {
+		margin-bottom: 0.75rem;
+	}
+
+	.MJ36bm-links {
+		margin-left: -0.75rem;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+	}
+
+	.MJ36bm-links a {
+		line-height: 200%;
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

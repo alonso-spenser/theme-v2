@@ -1,0 +1,240 @@
+{
+  "section": {
+    "id": "1419929454993551362",
+    "componentKind": "section",
+    "type": "inquiryForm",
+    "templateId": "eUvUZ3",
+    "runtimeVersion": 2,
+    "settings": {
+      "alt": "",
+      "image": "/preview-assets/images/inquiry.png",
+      "layout": "contactLeft",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Title with button",
+      "formStyle": "light",
+      "formWidth": "8",
+      "marginTop": false,
+      "textAlign": "center",
+      "textColor": "rgba(210, 69, 69, 1)",
+      "textWidth": 100,
+      "formOffset": "2",
+      "paddingTop": true,
+      "subheading": "this is a new beginning",
+      "wideScreen": false,
+      "buttonStyle": "btn-outline-primary",
+      "buttonWidth": "normal",
+      "enableTitle": true,
+      "placeholder": false,
+      "typesetting": "auto",
+      "contactColor": "#ffff00",
+      "dividerImage": "/preview-assets/images/8.jpg",
+      "dividerStyle": "line",
+      "dividerWidth": 35,
+      "headingColor": "",
+      "marginBottom": false,
+      "sectionAlias": "询盘表单（基础版）",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "rgba(193, 13, 13, 1)",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "verticalAlignment": "align-items-center",
+      "backgroundPosition": "",
+      "officeList": [
+        {
+          "address": "",
+          "corp": "公司名称\n",
+          "phone": "",
+          "contact": "联系人\n",
+          "mobile": "",
+          "fax": "",
+          "email": ""
+        }
+      ],
+      "formHeadingAlign": "text-left",
+      "isGlobalSection": false,
+      "sectionCSS": "",
+      "symbol": ""
+    },
+    "bindings": {
+      "consultForm": {
+        "sourceType": "inquiryForm",
+        "ids": [
+          "1448260401103507458"
+        ]
+      }
+    },
+    "data": {
+      "consultForm": {
+        "buttonLabel": "Contact US",
+        "fieldList": [
+          {
+            "defaultValue": "",
+            "displayLabel": "姓",
+            "fieldLabel": "Last name",
+            "fieldName": "lastName",
+            "fieldType": "text",
+            "id": "1448260401216753665",
+            "optionList": [],
+            "options": "[]",
+            "placeholder": "Please enter last name",
+            "required": 1
+          },
+          {
+            "defaultValue": "",
+            "displayLabel": "名字",
+            "fieldLabel": "First name",
+            "fieldName": "firstName",
+            "fieldType": "text",
+            "id": "1448260401225142273",
+            "optionList": [],
+            "options": "[]",
+            "placeholder": "Please enter first name",
+            "required": 1
+          },
+          {
+            "defaultValue": "",
+            "displayLabel": "邮箱",
+            "fieldLabel": "Email",
+            "fieldName": "email",
+            "fieldType": "email",
+            "id": "1448260401246113793",
+            "optionList": [],
+            "options": "[]",
+            "placeholder": "Please enter email",
+            "required": 0
+          },
+          {
+            "defaultValue": "",
+            "displayLabel": "消息内容",
+            "fieldLabel": "Message",
+            "fieldName": "message",
+            "fieldType": "textarea",
+            "id": "1448260401262891010",
+            "optionList": [],
+            "options": "[]",
+            "placeholder": "Please tell us the message",
+            "required": 0
+          }
+        ],
+        "id": "1448260401103507458",
+        "remark": "",
+        "title": "Contact US"
+      }
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "$",
+    "phone": "+86-755-88888888",
+    "email": "nocile@fomille.com",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "first.site.com",
+    "siteName": "first",
+    "address": "",
+    "areaCode": "",
+    "articleQuantity": 0,
+    "cityName": "深圳",
+    "company": "Nocile inc",
+    "contact": "妮 可",
+    "countryName": "中国",
+    "createTime": 1634127158962,
+    "currencyCode": "USD",
+    "currencyName": "美元",
+    "defaultRegion": 0,
+    "downPass": "",
+    "expiryTime": 1635941558962,
+    "facebookPixel": "",
+    "favicon": "",
+    "formQuantity": 0,
+    "freePhone": "",
+    "goodsQuantity": 0,
+    "honestScore": 0,
+    "keepLang": 1,
+    "latitude": 22.5245061,
+    "lengthUnit": "mm",
+    "logisticsScore": 0,
+    "logo": "",
+    "longitude": 113.93831239999997,
+    "maxLang": 1,
+    "mobile": "",
+    "praiseRate": 0,
+    "provinceName": "广东",
+    "region": "en",
+    "rootLink": "https://first.site.com/",
+    "scriptBottom": "",
+    "scriptHead": "",
+    "scriptService": "",
+    "serviceScore": 0,
+    "siteId": "1448260389799866370",
+    "siteType": 3,
+    "state": 0,
+    "synopsis": "",
+    "systemDomain": "first.site.com",
+    "timeZone": "Asia/Shanghai",
+    "unitSystem": "metric",
+    "videoLimit": 0,
+    "weightUnit": "g",
+    "social": {
+      "socialPinterest": "",
+      "socialGooglePlus": "",
+      "socialFancy": "",
+      "socialVimeo": "",
+      "socialYoutube": "",
+      "sectionAlias": "社交媒体",
+      "socialFacebook": "",
+      "socialWeibo": "",
+      "socialShareImage": "",
+      "socialTumblr": "",
+      "socialInstagram": "",
+      "socialTwitter": "",
+      "socialSnapchat": "",
+      "socialLinkedin": "",
+      "socialImage": [
+        {
+          "socialQRCode": "",
+          "socialQRCodeAlt": "",
+          "socialQRCodeLink": ""
+        }
+      ]
+    }
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": "首页",
+    "seoDescription": "首页",
+    "id": "1448260391125266434",
+    "title": "首页",
+    "seoTitle": "首页",
+    "seoKeywords": "首页"
+  },
+  "params": {
+    "originalURL": "/",
+    "cache": {},
+    "canonical": "https://nullnull",
+    "collectionId": "",
+    "defaultRegion": 0,
+    "id": "",
+    "ids": [],
+    "itemLink": "/",
+    "pageIndex": 1,
+    "pageSize": 12,
+    "pageType": "homePage",
+    "params": {},
+    "region": "en",
+    "siteId": "1448260389799866370",
+    "sortBy": "",
+    "url": "",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "KEYWORDS",
+      "product": "PRODUCTS",
+      "lang": "英语",
+      "article": "NEWS",
+      "home": "HOME"
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "protocolVersion": 2,
+  "componentKind": "section",
+  "type": "svg",
+  "templateId": "JjQr2a",
+  "runtimeVersion": 2,
+  "definitionVersion": 1,
+  "schemaVersion": 1,
+  "name": {
+    "en": "SVG placeholder",
+    "zh-CN": "SVG placeholder"
+  },
+  "policy": {
+    "removable": true,
+    "duplicable": true,
+    "maxInstances": 0
+  },
+  "placement": {
+    "fixed": false,
+    "pages": []
+  },
+  "render": {
+    "template": "section.th.html",
+    "style": "section.scss",
+    "variableStyle": "variable.th.css",
+    "script": "section.js"
+  },
+  "editor": {
+    "groups": [
+      {
+        "id": "group1",
+        "name": {
+          "en": "Content",
+          "zh-CN": "内容"
+        },
+        "elements": [
+          {
+            "max": 200,
+            "min": 0,
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Height",
+              "zh-CN": "高度"
+            },
+            "step": 5,
+            "type": "slider",
+            "field": "elementHeight",
+            "default": 50,
+            "options": [],
+            "translate": 1
+          },
+          {
+            "max": 200,
+            "min": 0,
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Mobile Height",
+              "zh-CN": "移动端高度"
+            },
+            "step": 5,
+            "type": "slider",
+            "field": "mobiHeight",
+            "default": 40,
+            "options": [],
+            "translate": 1
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Color",
+              "zh-CN": "颜色"
+            },
+            "type": "colorPicker",
+            "field": "bgColor",
+            "default": "rgba(245, 245, 245, 1)",
+            "options": [],
+            "translate": 1
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Style",
+              "zh-CN": "样式"
+            },
+            "type": "select",
+            "field": "style",
+            "default": "style1",
+            "options": [
+              {
+                "value": "style1",
+                "name": {
+                  "en": "Style 1",
+                  "zh-CN": "样式1"
+                }
+              },
+              {
+                "value": "style2",
+                "name": {
+                  "en": "Style 2",
+                  "zh-CN": "样式1"
+                }
+              }
+            ],
+            "translate": 1
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "group2",
+        "name": {
+          "en": "Setting",
+          "zh-CN": "设置"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Margin top",
+              "zh-CN": "外边距（上）"
+            },
+            "type": "switch",
+            "field": "marginTop",
+            "default": false,
+            "options": [],
+            "translate": 1
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Margin bottom",
+              "zh-CN": "外边距（下）"
+            },
+            "type": "switch",
+            "field": "marginBottom",
+            "default": false,
+            "options": [],
+            "translate": 1
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "additionalSettings",
+        "name": {
+          "en": "Additional settings",
+          "zh-CN": "补充设置"
+        },
+        "elements": [
+          {
+            "field": "sectionAlias",
+            "name": {
+              "en": "sectionAlias"
+            },
+            "type": "hidden",
+            "default": "SVG placeholder"
+          },
+          {
+            "field": "paddingTop",
+            "name": {
+              "en": "paddingTop"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "paddingBottom",
+            "name": {
+              "en": "paddingBottom"
+            },
+            "type": "hidden",
+            "default": ""
+          }
+        ]
+      }
+    ]
+  },
+  "data": {
+    "source": "none",
+    "contract": "theme.svg.v2"
+  }
+}

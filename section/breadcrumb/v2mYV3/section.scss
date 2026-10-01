@@ -1,0 +1,22 @@
+.v2mYV3-item {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+	.v2mYV3 .breadcrumb {
+		flex-wrap: nowrap;
+		overflow-x: auto;
+	}
+
+	.v2mYV3 .breadcrumb-item {
+		flex-shrink: 0;
+	}
+
+	.v2mYV3 .breadcrumb-item a {
+		line-height: 200%;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

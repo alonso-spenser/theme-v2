@@ -1,0 +1,37 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <h3 class="text-heading" th:if="${not #strings.isEmpty(section.settings.heading)}">[[${ section.settings.heading }]]</h3>
+	    <div th:class="|${ section.templateId }-container|">
+		    <div class="slick" th:with="hasDot = ${ #lists.size(section.settings.itemList) > 1 }">
+			    <div class="slick-slider arrow-invisible slick-slider-transect has-gutter"
+                    th:data-carousel="${ section.id }"
+                    data-effect="slide"
+                    th:data-dots="${hasDot  ? 1 : 0}"
+                    data-arrow="0"
+                    data-column="1"
+                    data-mobile-column="1"
+                    data-delay="10000"
+			    >
+				    <div th:class="|slick-slide slick-slide-${salt.index}|" th:each="o, salt:${ section.settings.itemList }">
+					    <div th:class="|${ section.templateId }-card|" th:with="alt = ${ not #strings.isEmpty(o.alt) ? o.alt : o.name }">
+						    <div class="media" th:if="${not #strings.isEmpty(section.settings.name) || not #strings.isEmpty(section.settings.position)}">
+							    <div class="embed-responsive embed-responsive-1by1" th:if="${not #strings.isEmpty(o.image)}">
+								    <img class="embed-responsive-item lazy" th:src="|${ o.image }!1|" th:data-lazy="${ o.image }" th:alt="${alt}">
+							    </div>
+							    <div class="media-body">
+								    <h5 class="text-subheading" th:if="${not #strings.isEmpty(o.name)}">[[${ o.name }]]</h5>
+								    <p class="text-body" th:if="${not #strings.isEmpty(o.position)}">[[${ o.position }]]</p>
+							    </div>
+						    </div>
+						    <p class="text-body text-content" th:utext="${o.content}" th:if="${not #strings.isEmpty(o.content)}"></p>
+						    <img th:class="|${ section.templateId }-mark|" src="https://theme.fomille.site/21/svg/quotation.svg">
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+	    </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

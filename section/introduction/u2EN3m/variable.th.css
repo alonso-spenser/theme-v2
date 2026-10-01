@@ -1,0 +1,40 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-card{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.headingColor)}"]
+.section-[[${ section.id }]] .section-title .text-heading{
+    color: [[${section.settings.headingColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.bodyColor)}"]
+.section-[[${ section.id }]] .section-title .text-t-body{
+    color: [[${section.settings.bodyColor}]];
+}
+[/]
+
+
+[# th:if="${not #strings.isEmpty(section.settings.subHeadingColor)}"]
+.section-[[${ section.id }]] .media .text-content-heading{
+    color: [[${section.settings.subHeadingColor}]];
+}
+[/]
+
+
+[# th:if="${not #strings.isEmpty(section.settings.subBodyColor)}"]
+.section-[[${ section.id }]] .media .text-body{
+    color: [[${section.settings.subBodyColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.subBorderColor)}"]
+.section-[[${ section.id }]] .media{
+    border-color: [[${section.settings.subBorderColor}]];
+}
+[/]

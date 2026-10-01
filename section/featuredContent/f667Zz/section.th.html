@@ -1,0 +1,140 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} section-neighbor|">
+        <div th:class="|text-${section.settings.textAlign} section-title section-neighbor|" th:if="${not #strings.isEmpty(section.settings.heading)
+                || not #strings.isEmpty(section.settings.subheading)
+                || not #strings.isEmpty(section.settings.content)
+                || section.settings.dividerWidth > 0
+            }">
+            <h3 class="text-heading" th:if="${ not #strings.isEmpty(section.settings.heading) }">
+                [[${ section.settings.heading }]]
+            </h3>
+
+            <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
+                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+            </div>
+
+            <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
+                [[${ section.settings.subheading }]]
+            </h5>
+
+            <th:block th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                <th:block th:each="textLine,saltLine:${textLines}">
+                    <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                </th:block>
+            </th:block>
+        </div>
+        <div class="row row-gutter section-neighbor" th:if="${ #lists.size(section.settings.contentList) > 0 && section.settings.layout != 'slide'}">
+            <div th:class="|col-md-${section.settings.column} col-${section.settings.mobColumn}|" th:each="o,salt:${section.settings.contentList}">
+                <div class="card section-card hide">
+                    <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${ not #strings.isEmpty(o.image) }">
+                        <img class="embed-responsive-item lazy card-img-top" th:src="|${o.image}!1|" th:data-original="|${o.image}!${section.settings.column}|" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.title}">
+                        <div class="card-mask" th:if="${ section.settings.style == 'popup' }">
+                            <div class="card-mask-content" th:if="${#strings.isEmpty(o.link)}">
+                                <h3 class="text-content-heading text-center" th:if="${not #strings.isEmpty(o.title)}">[[${o.title}]]</h3>
+                                <ul th:class="|text-list text-body ${section.settings.symbol}|" th:if="${not #strings.isEmpty(o.description)}" th:with="textLines = ${#strings.listSplit(o.description,'\n')}">
+                                    <th:block th:each="textLine,saltLine:${textLines}">
+                                        <li th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                                    </th:block>
+                                </ul>
+                            </div>
+                            <a th:href="${ o.link }" th:if="${not #strings.isEmpty(o.link)}">
+                                <div class="card-mask-content">
+                                    <h3 class="text-content-heading text-center" th:if="${not #strings.isEmpty(o.title)}">[[${o.title}]]</h3>
+                                    <ul th:class="|text-list text-body ${section.settings.symbol}|" th:if="${not #strings.isEmpty(o.description)}" th:with="textLines = ${#strings.listSplit(o.description,'\n')}">
+                                        <th:block th:each="textLine,saltLine:${textLines}">
+                                            <li th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                                        </th:block>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div th:class="|card-body ${ not #strings.isEmpty(o.linkLabel) && section.settings.style != 'popup' ? 'has-button' : ''}${ not #strings.isEmpty(o.icon) ? ' has-icon' : '' }|">
+                        <div class="f667Zz-icon embed-responsive embed-responsive-1by1" th:if="${not #strings.isEmpty(o.icon)}">
+                            <img class="embed-responsive-item lazy card-img-top" th:src="|${o.icon}!1|" th:data-original="|${o.icon}!${section.settings.column}|" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.title}">
+                        </div>
+                        <h3 class="text-content-heading text-center" th:if="${not #strings.isEmpty(o.title)}">[[${o.title}]]</h3>
+                        <th:block th:if="${ section.settings.style != 'popup' }">
+                            <ul th:class="|text-list text-body ${section.settings.symbol}|" th:if="${not #strings.isEmpty(o.description)}" th:with="textLines = ${#strings.listSplit(o.description,'\n')}">
+                                <th:block th:each="textLine,saltLine:${textLines}">
+                                    <li th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                                </th:block>
+                            </ul>
+                            <div class="f667Zz-button" th:if="${not #strings.isEmpty(o.linkLabel)}">
+                                <a th:href="${o.link}" th:class="|btn ${section.settings.linkStyle}|">[[${o.linkLabel}]]</a>
+                            </div>
+                        </th:block>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slick section-neighbor"
+        th:if="${section.settings.layout == 'slide' && #lists.size(section.settings.contentList) > 0}"
+        th:with="desktopQuantity = ${ #numbers.formatInteger(12 / section.settings.column, 1,'POINT') }, hasDots = ${#lists.size(section.settings.contentList) > desktopQuantity}"
+        >
+        <th:block th:if="${ hasDots }">
+            <div th:class="|slick-next ${#strings.isEmpty(section.settings.carouselArrowStyle) ? '' : section.settings.carouselArrowStyle}${hasDots ? ' dots' : ''}|" th:data-carousel-next="${ section.id }"></div>
+            <div th:class="|slick-prev ${#strings.isEmpty(section.settings.carouselArrowStyle) ? '' : section.settings.carouselArrowStyle}${hasDots ? ' dots' : ''}|" th:data-carousel-prev="${ section.id }"></div>
+        </th:block>
+        <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+            <div th:class="|slick-slider slick-slider-transect has-gutter dots-${section.settings.carouselNavStyle}|"
+                 th:data-carousel="${ section.id }"
+                 data-effect="slide"
+                 th:data-dots="${hasDots ? 1 : 0}"
+                 th:data-arrow="${hasDots ? 1 : 0}"
+                 th:data-column="${desktopQuantity}"
+                 th:data-mobile-column="${ #numbers.formatInteger(12 / section.settings.mobColumn, 1,'POINT') }"
+                 th:data-delay="${#strings.isEmpty(section.settings.carouselAutoPlay) ? 0 : section.settings.carouselAutoPlay}"
+            >
+                <div class="slick-slide" th:each="o, salt:${ section.settings.contentList }">
+                    <div class="card section-card hide">
+                        <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${ not #strings.isEmpty(o.image) }">
+                            <img class="embed-responsive-item lazy card-img-top" th:src="|${o.image}!1|" th:data-original="|${o.image}!${section.settings.column}|" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.title}">
+                            <div class="card-mask" th:if="${ section.settings.style == 'popup' }">
+                                <div class="card-mask-content" th:if="${#strings.isEmpty(o.link)}">
+                                    <h3 class="text-content-heading text-center" th:if="${not #strings.isEmpty(o.title)}">[[${o.title}]]</h3>
+                                    <ul th:class="|text-list text-body ${section.settings.symbol}|" th:if="${not #strings.isEmpty(o.description)}" th:with="textLines = ${#strings.listSplit(o.description,'\n')}">
+                                        <th:block th:each="textLine,saltLine:${textLines}">
+                                            <li th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                                        </th:block>
+                                    </ul>
+                                </div>
+                                <a th:href="${ o.link }" th:if="${not #strings.isEmpty(o.link)}">
+                                    <div class="card-mask-content">
+                                        <h3 class="text-content-heading text-center" th:if="${not #strings.isEmpty(o.title)}">[[${o.title}]]</h3>
+                                        <ul th:class="|text-list text-body ${section.settings.symbol}|" th:if="${not #strings.isEmpty(o.description)}" th:with="textLines = ${#strings.listSplit(o.description,'\n')}">
+                                            <th:block th:each="textLine,saltLine:${textLines}">
+                                                <li th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                                            </th:block>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div th:class="|card-body ${ not #strings.isEmpty(o.linkLabel) && section.settings.style != 'popup' ? 'has-button' : ''}${ not #strings.isEmpty(o.icon) ? ' has-icon' : '' }|">
+                            <div class="f667Zz-icon embed-responsive embed-responsive-1by1" th:if="${not #strings.isEmpty(o.icon)}">
+                                <img class="embed-responsive-item lazy card-img-top" th:src="|${o.icon}!1|" th:data-original="|${o.icon}!${section.settings.column}|" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.title}">
+                            </div>
+                            <h3 class="text-content-heading text-center" th:if="${not #strings.isEmpty(o.title)}">[[${o.title}]]</h3>
+                            <th:block th:if="${ section.settings.style != 'popup' }">
+                                <ul th:class="|text-list text-body ${section.settings.symbol}|" th:if="${not #strings.isEmpty(o.description)}" th:with="textLines = ${#strings.listSplit(o.description,'\n')}">
+                                    <th:block th:each="textLine,saltLine:${textLines}">
+                                        <li th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                                    </th:block>
+                                </ul>
+                                <div class="f667Zz-button" th:if="${not #strings.isEmpty(o.linkLabel)}">
+                                    <a th:href="${o.link}" th:class="|btn ${section.settings.linkStyle}|">[[${o.linkLabel}]]</a>
+                                </div>
+                            </th:block>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

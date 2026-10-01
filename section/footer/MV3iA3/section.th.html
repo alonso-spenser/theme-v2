@@ -1,0 +1,530 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''} MV3iA3 section-${section.id}${params.designMode && section.settings.isGlobalSection ? ' is-global-section' : ''}|" th:data-section="${section.templateId}"
+    th:if="${(page.pageType == 'homePage' && section.settings.homeVisible == 'visible') || (page.pageType != 'homePage' && section.settings.pagesVisible == 'visible') || section.settings.homeVisible == null || section.settings.pagesVisible == null}">
+    <div class="MV3iA3-slogan section-neighbor" th:if="${section.settings.consultFormArea == 'slogan' || not #strings.isEmpty(section.settings.slogan)}">
+        <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+            <h3 th:if="${not #strings.isEmpty(section.settings.slogan)}">[[${section.settings.slogan}]]</h3>
+            <th:block th:if="${
+                section.data.consultForm != null
+                && not #strings.isEmpty(section.data.consultForm.id)
+                && not #lists.isEmpty(section.data.consultForm.fieldList)
+                && section.settings.consultFormArea == 'slogan'
+            }">
+            <form th:class="|enquiry-form ${#strings.isEmpty(section.settings.consultFormStyle) ? 'normal' : section.settings.consultFormStyle}|" th:data-inquiry-form="${section.data.consultForm.id}" novalidate="">
+                <th:block th:if="${#lists.size(section.data.consultForm.fieldList) == 1}" th:with="inquiryField = ${section.data.consultForm.fieldList[0]}">
+                  <th:block th:if="${inquiryField.fieldType != 'file' && inquiryField.fieldType != 'textarea' && inquiryField.fieldType != 'select' && inquiryField.fieldType != 'radio' && inquiryField.fieldType != 'checkbox' && inquiryField.fieldType != 'heading' && inquiryField.fieldType != 'countryRegion'}">
+                    <div class="input-group">
+                     <input th:placeholder="${#strings.isEmpty(inquiryField.placeholder) ? inquiryField.fieldLabel : inquiryField.placeholder}"
+                         th:name="${inquiryField.fieldLabel}"
+                         th:data-field="${inquiryField.fieldName}"
+                         th:type="${inquiryField.fieldType}"
+                         th:required="${inquiryField.required == 0 ? 'required' : 'false'}" class="form-control"
+                      >
+                      <div class="d-flex">
+                        <button type="submit" th:class="|btn ${#strings.isEmpty(section.settings.formButtonStyle) ? 'btn-light' : section.settings.formButtonStyle}|" th:text="${section.data.consultForm.buttonLabel}"></button>
+                      </div>
+                    </div>
+                  </th:block>
+                </th:block>
+                <th:block th:if="${#lists.size(section.data.consultForm.fieldList) > 1}">
+                  <div th:each="inquiryField,saltField:${section.data.consultForm.fieldList}" class="MV3iA3-form-group" th:with="holderLabel=${ not #strings.isEmpty(inquiryField.placeholder) ? inquiryField.placeholder: inquiryField.fieldLabel},placeholder=${section.settings.placeholder == false ? '' : #strings.isEmpty(inquiryField.placeholder)? inquiryField.fieldLabel : inquiryField.placeholder}">
+                      <p class="form-label mb-1" th:if="${section.settings.enableTitle && !(inquiryField.fieldType == 'checkbox' || inquiryField.fieldType == 'radio' || inquiryField.fieldType == 'heading')}">
+                          [[${inquiryField.fieldLabel}]]
+                      </p>
+                      <h3 th:class="|text-content-heading ${#strings.isEmpty(section.settings.consultFormHeadingAlign) ? 'text-left' : section.settings.consultFormHeadingAlign}|" th:if="${inquiryField.fieldType == 'heading'}">
+                          [[${inquiryField.fieldLabel}]]
+                      </h3>
+                      <th:block th:if="${inquiryField.fieldType == 'textarea'}">
+                          <textarea rows="4" class="form-control" th:placeholder="${placeholder}" type="text"
+                          th:name="${inquiryField.fieldLabel}"
+                          th:data-field="${inquiryField.fieldName}"
+                          th:required="${inquiryField.required == 0?'required':'false'}"></textarea>
+                      </th:block>
+
+
+                      <th:block th:if="${inquiryField.fieldType == 'file'}">
+                          <div class="file-upload">
+                              <div class="file-upload-placeholder">
+                                  <th:block th:text="${holderLabel}"></th:block>
+                                  <input type="file" class="form-control" accept=".zip,.rar,.7z">
+                              </div>
+
+                              <div class="file-upload-selected">
+                                  <label class="close"></label>
+                                  <p></p>
+                              </div>
+                              <small>
+                                  zip  / rar / 7z
+                              </small>
+                          </div>
+                      </th:block>
+
+                      <th:block th:if="${inquiryField.fieldType == 'select'}">
+                          <select th:name="${inquiryField.fieldLabel}" th:data-field="${inquiryField.fieldName}" th:type="${inquiryField.fieldType}" class="form-control">
+                            <th:block th:each="option,salt:${inquiryField.optionList}">
+                              <option th:selected="${option.checked ? 'selected' : 'false'}">[[${option.value}]]</option>
+                            </th:block>
+                          </select>
+                      </th:block>
+                      <th:block th:if="${inquiryField.fieldType == 'countryRegion'}">
+                          <select th:name="${inquiryField.fieldLabel}" th:data-field="${inquiryField.fieldName}" th:type="${inquiryField.fieldType}" class="form-control">
+                              <option>[[${inquiryField.placeholder}]]</option>
+                          </select>
+                      </th:block>
+                      <th:block th:if="${inquiryField.fieldType == 'radio' || inquiryField.fieldType == 'checkbox'}">
+                          <div class="inquiry-form-group">
+                              <p class="form-label mb-1">[[${inquiryField.fieldLabel}]]</p>
+                              <th:block th:each="option,salt:${inquiryField.optionList}">
+                              <div class="form-check form-check-inline">
+                                      <label class="form-check-label">
+                                      <input class="form-check-input" th:checked="${option.checked ? 'checked' : 'false'}" th:type="${inquiryField.fieldType}"
+                                             th:name="|form-check-${saltField.index}|" th:value="${option.value}">
+                                      [[${option.value}]]
+                                      </label>
+                              </div>
+                              </th:block>
+                          </div>
+                      </th:block>
+
+                      <th:block th:if="${inquiryField.fieldType != 'file' && inquiryField.fieldType != 'textarea' && inquiryField.fieldType != 'select' && inquiryField.fieldType != 'radio' && inquiryField.fieldType != 'checkbox' && inquiryField.fieldType != 'heading' && inquiryField.fieldType != 'countryRegion'}">
+                          <input th:placeholder="${placeholder}"
+                                 th:name="${inquiryField.fieldLabel}"
+                                 th:data-field="${inquiryField.fieldName}"
+                                 th:type="${inquiryField.fieldType}"
+                                 th:required="${inquiryField.required == 0?'required':'false'}" class="form-control">
+                      </th:block>
+                  </div>
+                  <div class="MV3iA3-form-group">
+                      <button type="submit" th:class="|btn ${#strings.isEmpty(section.settings.formButtonStyle) ? 'btn-primary' : section.settings.formButtonStyle}|" th:text="${section.data.consultForm.buttonLabel}"></button>
+                  </div>
+                </th:block>
+            </form>
+            </th:block>
+        </div>
+    </div>
+    <div th:class="|MV3iA3-container section-neighbor ${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''}|" th:if="${section.settings.column != null && not #lists.isEmpty(section.settings.column)}">
+        <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}${section.settings.divider != null && section.settings.divider ? ' has-divider' : ''}|">
+            <div class="row MV3iA3-column" th:if="${section.settings.column != null && not #lists.isEmpty(section.settings.column)}">
+              <div th:each="o,salt:${section.settings.column}" th:class="|col-md-${o.areaRatio} col-12|">
+                <th:block th:if="${not #strings.isEmpty(o.areaHeading)}">
+                    <h3 class="text-subheading">
+                      [[${o.areaHeading}]]
+                    </h3>
+                </th:block>
+
+                <th:block th:if="${o.areaContent == 'logo' && not #strings.isEmpty(section.settings.logo)}">
+                    <img class="MV3iA3-logo" th:src="|${section.settings.logo}${#strings.endsWith(section.settings.logo, '.svg') ? '' : '!2'}|" th:alt="${section.settings.alt}">
+                </th:block>
+
+                <th:block th:if="${o.areaContent == 'info'}">
+                    <h5 class="text-content-heading" th:if="${not #strings.isEmpty(section.settings.subheading)}">
+                        [[${section.settings.subheading}]]
+                    </h5>
+                    <th:block th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                        <th:block th:each="textLine,saltLine:${textLines}">
+                            <p class="text-body break-word" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                        </th:block>
+                    </th:block>
+                </th:block>
+
+                  <th:block th:if="${o.areaContent == 'footMenu'}">
+                      <ul class="text-list">
+                          <li th:each="sub,salt:${section.data.footMenu}">
+                              <a th:href="|${sub.link}|" th:text="${sub.title}" th:target="${sub.target}" rel="noopener noreferrer"></a>
+                          </li>
+                      </ul>
+                  </th:block>
+
+                  <th:block th:if="${o.areaContent == 'footMenu2'}">
+                      <ul class="text-list">
+                          <li th:each="sub,salt:${section.data.footMenu2}">
+                              <a th:href="|${sub.link}|" th:text="${sub.title}" th:target="${sub.target}" rel="noopener noreferrer"></a>
+                          </li>
+                      </ul>
+                  </th:block>
+
+                  <th:block th:if="${o.areaContent == 'footMenu3'}">
+                      <ul class="text-list">
+                          <li th:each="sub,salt:${section.data.footMenu3}">
+                              <a th:href="|${sub.link}|" th:text="${sub.title}" th:target="${sub.target}" rel="noopener noreferrer"></a>
+                          </li>
+                      </ul>
+                  </th:block>
+
+                <th:block th:if="${o.areaContent == 'contact'}" th:with="officeColumn = ${#strings.isEmpty(section.settings.officeColumn) ? '12' : section.settings.officeColumn}">
+                    <div class="MV3iA3-office text">
+                        <h3 class="text-content-heading" th:if="${section.settings.companyVisible != null && section.settings.companyVisible}">
+                            [[${site.company}]]
+                        </h3>
+                        <div class="row" th:if="${(not #strings.isEmpty(site.freePhone) && section.settings.freePhoneVisible) ||
+                        (not #strings.isEmpty(site.phone) && section.settings.phoneVisible) ||
+                        (not #strings.isEmpty(site.mobile) && section.settings.mobileVisible) ||
+                        (not #strings.isEmpty(site.email) && section.settings.emailVisible) ||
+                        not #strings.isEmpty(section.settings.address)
+                        }">
+                            <div th:class="|col-md-${officeColumn}|" th:if="${not #strings.isEmpty(site.freePhone) && section.settings.freePhoneVisible}">
+                                <i class="ic-message-headset"></i>
+                                [[${site.freePhone}]]
+                            </div>
+                            <div th:class="|col-md-${officeColumn}|" th:if="${not #strings.isEmpty(site.phone) && section.settings.phoneVisible}">
+                                <i class="ic-phone"></i>
+                                [[${site.phone}]]
+                            </div>
+                            <div th:class="|col-md-${officeColumn}|" th:if="${not #strings.isEmpty(site.mobile) && section.settings.mobileVisible}">
+                                <i class="ic-mobile"></i>
+                                [[${site.mobile}]]
+                            </div>
+                            <div th:class="|col-md-${officeColumn}|" th:if="${not #strings.isEmpty(site.email) && section.settings.emailVisible}">
+                                <a th:href="|mailto:${site.email}|">
+                                    <i class="ic-email"></i>
+                                    [[${site.email}]]
+                                </a>
+                            </div>
+                            <div th:class="|col-md-${officeColumn}|" th:if="${not #strings.isEmpty(site.address)}">
+                                <i class="ic-location"></i>
+                                [[${site.address}]]
+                            </div>
+                        </div>
+                    </div>
+                    <th:block th:if="${section.settings.offices != null && not #lists.isEmpty(section.settings.offices)}">
+                        <div class="MV3iA3-office" th:each="o,officesSalt:${section.settings.offices}">
+                            <h3 class="text-content-heading" th:if="${not #strings.isEmpty(o.companyName)}" th:text="${o.companyName}"></h3>
+                            <div class="row">
+                                <div th:class="|col-md-${officeColumn}|" th:if="${not #strings.isEmpty(o.companyContact)}">
+                                    <i class="ic-mine"></i>
+                                    <th:block th:text="${o.companyContact}"></th:block>
+                                </div>
+                                <div th:class="|col-md-${officeColumn}|" th:if="${not #strings.isEmpty(o.companyMobile)}">
+                                    <i class="ic-mobile"></i>
+                                    <th:block th:text="${o.companyMobile}"></th:block>
+                                </div>
+                                <div th:class="|col-md-${officeColumn}|" th:if="${not #strings.isEmpty(o.companyPhone)}">
+                                    <i class="ic-phone"></i>
+                                    <th:block th:text="${o.companyPhone}"></th:block>
+                                </div>
+                                <div th:class="|col-md-${officeColumn}|" th:if="${not #strings.isEmpty(o.companyFax)}">
+                                    <i class="ic-fax"></i>
+                                    <th:block th:text="${o.companyFax}"></th:block>
+                                </div>
+                                <div th:class="|col-md-${officeColumn}|" th:if="${not #strings.isEmpty(o.companyEmail)}">
+                                  <a th:href="|mailto:${o.companyEmail}|">
+                                    <i class="ic-email"></i>
+                                    <th:block th:text="${o.companyEmail}"></th:block>
+                                  </a>
+                                </div>
+                                <div th:class="|col-md-${officeColumn}|" th:if="${not #strings.isEmpty(o.companyAddress)}">
+                                    <i class="ic-location"></i>
+                                    [[${o.companyAddress}]]
+                                </div>
+                            </div>
+                        </div>
+                    </th:block>
+                </th:block>
+
+                <th:block th:if="${
+                    section.data.consultForm != null
+                    && not #strings.isEmpty(section.data.consultForm.id)
+                    && not #lists.isEmpty(section.data.consultForm.fieldList)
+                    && section.settings.consultFormArea == 'area' + (salt.index + 1).toString()
+                }">
+                <form th:class="|enquiry-form text-form ${#strings.isEmpty(section.settings.consultFormStyle) ? 'normal' : section.settings.consultFormStyle}|" th:data-inquiry-form="${section.data.consultForm.id}" novalidate="">
+                    <th:block th:if="${#lists.size(section.data.consultForm.fieldList) == 1}" th:with="inquiryField = ${section.data.consultForm.fieldList[0]}">
+                      <th:block th:if="${inquiryField.fieldType != 'file' && inquiryField.fieldType != 'textarea' && inquiryField.fieldType != 'select' && inquiryField.fieldType != 'radio' && inquiryField.fieldType != 'checkbox' && inquiryField.fieldType != 'heading' && inquiryField.fieldType != 'countryRegion'}">
+                        <div class="input-group">
+                         <input th:placeholder="${#strings.isEmpty(inquiryField.placeholder) ? inquiryField.fieldLabel : inquiryField.placeholder}"
+                             th:name="${inquiryField.fieldLabel}"
+                             th:data-field="${inquiryField.fieldName}"
+                             th:type="${inquiryField.fieldType}"
+                             th:required="${inquiryField.required == 0 ? 'required' : 'false'}" class="form-control"
+                          >
+                          <div class="d-flex">
+                            <button type="submit" th:class="|btn ${#strings.isEmpty(section.settings.formButtonStyle) ? 'btn-light' : section.settings.formButtonStyle}|" th:text="${section.data.consultForm.buttonLabel}"></button>
+                          </div>
+                        </div>
+                      </th:block>
+                    </th:block>
+                    <th:block th:if="${#lists.size(section.data.consultForm.fieldList) > 1}">
+                      <div th:each="inquiryField,saltField:${section.data.consultForm.fieldList}" class="MV3iA3-form-group" th:with="holderLabel=${ not #strings.isEmpty(inquiryField.placeholder) ? inquiryField.placeholder: inquiryField.fieldLabel},placeholder=${section.settings.placeholder == false ? '' : #strings.isEmpty(inquiryField.placeholder)? inquiryField.fieldLabel : inquiryField.placeholder}">
+                          <p class="form-label mb-1" th:if="${section.settings.enableTitle && !(inquiryField.fieldType == 'checkbox' || inquiryField.fieldType == 'radio' || inquiryField.fieldType == 'heading')}">
+                              [[${inquiryField.fieldLabel}]]
+                          </p>
+                          <h3 th:class="|text-content-heading ${#strings.isEmpty(section.settings.consultFormHeadingAlign) ? 'text-left' : section.settings.consultFormHeadingAlign}|" th:if="${inquiryField.fieldType == 'heading'}">
+                              [[${inquiryField.fieldLabel}]]
+                          </h3>
+                          <th:block th:if="${inquiryField.fieldType == 'textarea'}">
+                              <textarea rows="4" class="form-control" th:placeholder="${placeholder}" type="text"
+                              th:name="${inquiryField.fieldLabel}"
+                              th:data-field="${inquiryField.fieldName}"
+                              th:required="${inquiryField.required == 0?'required':'false'}"></textarea>
+                          </th:block>
+
+
+                          <th:block th:if="${inquiryField.fieldType == 'file'}">
+                              <div class="file-upload">
+                                  <div class="file-upload-placeholder">
+                                      <th:block th:text="${holderLabel}"></th:block>
+                                      <input type="file" class="form-control" accept=".zip,.rar,.7z">
+                                  </div>
+
+                                  <div class="file-upload-selected">
+                                      <label class="close"></label>
+                                      <p></p>
+                                  </div>
+                                  <small>
+                                      zip  / rar / 7z
+                                  </small>
+                              </div>
+                          </th:block>
+
+                          <th:block th:if="${inquiryField.fieldType == 'select'}">
+                              <select th:name="${inquiryField.fieldLabel}" th:data-field="${inquiryField.fieldName}" th:type="${inquiryField.fieldType}" class="form-control">
+                                <th:block th:each="option,salt:${inquiryField.optionList}">
+                                  <option th:selected="${option.checked ? 'selected' : 'false'}">[[${option.value}]]</option>
+                                </th:block>
+                              </select>
+                          </th:block>
+                          <th:block th:if="${inquiryField.fieldType == 'countryRegion'}">
+                              <select th:name="${inquiryField.fieldLabel}" th:data-field="${inquiryField.fieldName}" th:type="${inquiryField.fieldType}" class="form-control">
+                                  <option>[[${inquiryField.placeholder}]]</option>
+                              </select>
+                          </th:block>
+                          <th:block th:if="${inquiryField.fieldType == 'radio' || inquiryField.fieldType == 'checkbox'}">
+                              <div class="inquiry-form-group">
+                                  <p class="form-label mb-1">[[${inquiryField.fieldLabel}]]</p>
+                                  <th:block th:each="option,salt:${inquiryField.optionList}">
+                                  <div class="form-check form-check-inline">
+                                          <label class="form-check-label">
+                                          <input class="form-check-input" th:checked="${option.checked ? 'checked' : 'false'}" th:type="${inquiryField.fieldType}"
+                                                 th:name="|form-check-${saltField.index}|" th:value="${option.value}">
+                                          [[${option.value}]]
+                                          </label>
+                                  </div>
+                                  </th:block>
+                              </div>
+                          </th:block>
+
+                          <th:block th:if="${inquiryField.fieldType != 'file' && inquiryField.fieldType != 'textarea' && inquiryField.fieldType != 'select' && inquiryField.fieldType != 'radio' && inquiryField.fieldType != 'checkbox' && inquiryField.fieldType != 'heading' && inquiryField.fieldType != 'countryRegion'}">
+                              <input th:placeholder="${placeholder}"
+                                     th:name="${inquiryField.fieldLabel}"
+                                     th:data-field="${inquiryField.fieldName}"
+                                     th:type="${inquiryField.fieldType}"
+                                     th:required="${inquiryField.required == 0?'required':'false'}" class="form-control">
+                          </th:block>
+                      </div>
+                      <div class="MV3iA3-form-group">
+                          <button type="submit" th:class="|btn ${#strings.isEmpty(section.settings.formButtonStyle) ? 'btn-primary' : section.settings.formButtonStyle}|" th:text="${section.data.consultForm.buttonLabel}"></button>
+                      </div>
+                    </th:block>
+                </form>
+                </th:block>
+
+                <th:block th:if="${not #strings.isEmpty(section.settings.socialMedia) && section.settings.socialMedia == 'area' + (salt.index + 1).toString()}">
+                    <div class="MV3iA3-social text-list" data-social="links" th:if="${
+                            not #strings.isEmpty(site.social.socialFacebook) ||
+                            not #strings.isEmpty(site.social.socialTiktok) ||
+                            not #strings.isEmpty(site.social.socialTwitter) ||
+                            not #strings.isEmpty(site.social.socialPinterest) ||
+                            not #strings.isEmpty(site.social.socialInstagram) ||
+                            not #strings.isEmpty(site.social.socialSnapchat) ||
+                            not #strings.isEmpty(site.social.socialGooglePlus) ||
+                            not #strings.isEmpty(site.social.socialTumblr) ||
+                            not #strings.isEmpty(site.social.socialYoutube) ||
+                            not #strings.isEmpty(site.social.socialVimeo) ||
+                            not #strings.isEmpty(site.social.socialFancy) ||
+                            not #strings.isEmpty(site.social.socialWeibo) ||
+                            not #strings.isEmpty(site.social.socialLinkedin)
+                        }">
+                        <a th:if="${not #strings.isEmpty(site.social.socialFacebook)}" target="_blank" th:href="${site.social.socialFacebook}">
+                          <img src="/css/social/facebook.svg" alt="facebook">
+                        </a>
+                        <a th:if="${not #strings.isEmpty(site.social.socialTiktok)}" target="_blank" th:href="${site.social.socialTiktok}">
+                          <img src="/css/social/tiktok.svg" alt="tiktok">
+                        </a>
+                        <a th:if="${not #strings.isEmpty(site.social.socialTwitter)}" target="_blank" th:href="${site.social.socialTwitter}">
+                          <img src="/css/social/twitter.svg" alt="twitter">
+                        </a>
+                        <a th:if="${not #strings.isEmpty(site.social.socialPinterest)}" target="_blank" th:href="${site.social.socialPinterest}">
+                           <img src="/css/social/pinterest.svg" alt="pinterest">
+                        </a>
+                        <a th:if="${not #strings.isEmpty(site.social.socialInstagram)}" target="_blank" th:href="${site.social.socialInstagram}">
+                           <img src="/css/social/instagram.svg" alt="instagram">
+                        </a>
+                        <a th:if="${not #strings.isEmpty(site.social.socialSnapchat)}" target="_blank" th:href="${site.social.socialSnapchat}">
+                           <img src="/css/social/snapchat.svg" alt="snapchat">
+                        </a>
+                        <a th:if="${not #strings.isEmpty(site.social.socialGooglePlus)}" target="_blank" th:href="${site.social.socialGooglePlus}">
+                           <img src="/css/social/google-plus.svg" alt="google plus">
+                        </a>
+                        <a th:if="${not #strings.isEmpty(site.social.socialTumblr)}" target="_blank" th:href="${site.social.socialTumblr}">
+                           <img src="/css/social/tumblr.svg" alt="tumblr">
+                        </a>
+                        <a th:if="${not #strings.isEmpty(site.social.socialYoutube)}" target="_blank" th:href="${site.social.socialYoutube}">
+                           <img src="/css/social/youtube.svg" alt="youtube">
+                        </a>
+                        <a th:if="${not #strings.isEmpty(site.social.socialVimeo)}" target="_blank" th:href="${site.social.socialVimeo}">
+                           <img src="/css/social/vimeo.svg" alt="vimeo">
+                        </a>
+                        <a th:if="${not #strings.isEmpty(site.social.socialFancy)}" target="_blank" th:href="${site.social.socialFancy}">
+                           <img src="/css/social/fancy.svg" alt="fancy">
+                        </a>
+                        <a th:if="${not #strings.isEmpty(site.social.socialWeibo)}" target="_blank" th:href="${site.social.socialWeibo}">
+                           <img src="/css/social/weibo.svg" alt="weibo">
+                        </a>
+                        <a th:if="${not #strings.isEmpty(site.social.socialLinkedin)}" target="_blank" th:href="${site.social.socialLinkedin}">
+                           <img src="/css/social/linkedin.svg" alt="linkedin">
+                        </a>
+                    </div>
+                    <div class="MV3iA3-code text-list" data-social="code" th:if="${site.social.socialImage != null && not #lists.isEmpty(site.social.socialImage)}">
+                        <th:block th:each="o,salt:${site.social.socialImage}">
+                            <img class="social-it" th:src="${o.socialQRCode}" th:alt="${o.socialQRCodeAlt}" th:if="${#strings.isEmpty(o.socialQRCodeLink) && not #strings.isEmpty(o.socialQRCode)}">
+                            <a class="social-it" th:href="${o.socialQRCodeLink}" target="_blank" th:if="${not #strings.isEmpty(o.socialQRCodeLink) && not #strings.isEmpty(o.socialQRCode)}">
+                                <img th:src="${o.socialQRCode}" th:alt="${o.socialQRCodeAlt}" >
+                            </a>
+                        </th:block>
+                    </div>
+                </th:block>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div th:class="|MV3iA3-copyright section-neighbor text-${section.settings.copyrightAlign}|" th:with="hasSocial = ${
+            not #strings.isEmpty(site.social.socialFacebook) ||
+            not #strings.isEmpty(site.social.socialTiktok) ||
+            not #strings.isEmpty(site.social.socialTwitter) ||
+            not #strings.isEmpty(site.social.socialPinterest) ||
+            not #strings.isEmpty(site.social.socialInstagram) ||
+            not #strings.isEmpty(site.social.socialSnapchat) ||
+            not #strings.isEmpty(site.social.socialGooglePlus) ||
+            not #strings.isEmpty(site.social.socialTumblr) ||
+            not #strings.isEmpty(site.social.socialYoutube) ||
+            not #strings.isEmpty(site.social.socialVimeo) ||
+            not #strings.isEmpty(site.social.socialFancy) ||
+            not #strings.isEmpty(site.social.socialWeibo) ||
+            not #strings.isEmpty(site.social.socialLinkedin) }"
+            th:if="${
+                (section.settings.socialMedia == 'bottom' && hasSocial) ||
+                (section.settings.socialMedia == 'bottom' && site.social.socialImage != null && not #lists.isEmpty(site.social.socialImage)) ||
+                (section.settings.bottomMenu == 'footMenu' && not #lists.isEmpty(section.data.footMenu)) ||
+                (section.settings.bottomMenu == 'footMenu2' && not #lists.isEmpty(section.data.footMenu2)) ||
+                (section.settings.bottomMenu == 'footMenu3' && not #lists.isEmpty(section.data.footMenu3)) ||
+                (not #strings.isEmpty(section.settings.copyrightLicence) || not #strings.isEmpty(section.settings.copyright))
+                }"
+            >
+        <ul th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+            <li class="MV3iA3-social" data-social="links" th:if="${section.settings.socialMedia == 'bottom' && hasSocial}">
+                <a th:if="${not #strings.isEmpty(site.social.socialFacebook)}" target="_blank" th:href="${site.social.socialFacebook}">
+                  <img src="/css/social/facebook.svg" alt="facebook">
+                </a>
+                <a th:if="${not #strings.isEmpty(site.social.socialTiktok)}" target="_blank" th:href="${site.social.socialTiktok}">
+                  <img src="/css/social/tiktok.svg" alt="tiktok">
+                </a>
+                <a th:if="${not #strings.isEmpty(site.social.socialTwitter)}" target="_blank" th:href="${site.social.socialTwitter}">
+                  <img src="/css/social/twitter.svg" alt="twitter">
+                </a>
+                <a th:if="${not #strings.isEmpty(site.social.socialPinterest)}" target="_blank" th:href="${site.social.socialPinterest}">
+                   <img src="/css/social/pinterest.svg" alt="pinterest">
+                </a>
+                <a th:if="${not #strings.isEmpty(site.social.socialInstagram)}" target="_blank" th:href="${site.social.socialInstagram}">
+                   <img src="/css/social/instagram.svg" alt="instagram">
+                </a>
+                <a th:if="${not #strings.isEmpty(site.social.socialSnapchat)}" target="_blank" th:href="${site.social.socialSnapchat}">
+                   <img src="/css/social/snapchat.svg" alt="snapchat">
+                </a>
+                <a th:if="${not #strings.isEmpty(site.social.socialGooglePlus)}" target="_blank" th:href="${site.social.socialGooglePlus}">
+                   <img src="/css/social/google-plus.svg" alt="google plus">
+                </a>
+                <a th:if="${not #strings.isEmpty(site.social.socialTumblr)}" target="_blank" th:href="${site.social.socialTumblr}">
+                   <img src="/css/social/tumblr.svg" alt="tumblr">
+                </a>
+                <a th:if="${not #strings.isEmpty(site.social.socialYoutube)}" target="_blank" th:href="${site.social.socialYoutube}">
+                   <img src="/css/social/youtube.svg" alt="youtube">
+                </a>
+                <a th:if="${not #strings.isEmpty(site.social.socialVimeo)}" target="_blank" th:href="${site.social.socialVimeo}">
+                   <img src="/css/social/vimeo.svg" alt="vimeo">
+                </a>
+                <a th:if="${not #strings.isEmpty(site.social.socialFancy)}" target="_blank" th:href="${site.social.socialFancy}">
+                   <img src="/css/social/fancy.svg" alt="fancy">
+                </a>
+                <a th:if="${not #strings.isEmpty(site.social.socialWeibo)}" target="_blank" th:href="${site.social.socialWeibo}">
+                   <img src="/css/social/weibo.svg" alt="weibo">
+                </a>
+                <a th:if="${not #strings.isEmpty(site.social.socialLinkedin)}" target="_blank" th:href="${site.social.socialLinkedin}">
+                   <img src="/css/social/linkedin.svg" alt="linkedin">
+                </a>
+            </li>
+            <li class="MV3iA3-code" data-social="code" th:if="${section.settings.socialMedia == 'bottom' && site.social.socialImage != null && not #lists.isEmpty(site.social.socialImage)}">
+                <th:block th:each="o,salt:${site.social.socialImage}">
+                    <img class="social-it" th:src="${o.socialQRCode}" th:alt="${o.socialQRCodeAlt}" th:if="${#strings.isEmpty(o.socialQRCodeLink) && not #strings.isEmpty(o.socialQRCode)}">
+                    <a class="social-it" th:href="${o.socialQRCodeLink}" target="_blank" th:if="${not #strings.isEmpty(o.socialQRCodeLink) && not #strings.isEmpty(o.socialQRCode)}">
+                        <img th:src="${o.socialQRCode}" th:alt="${o.socialQRCodeAlt}" >
+                    </a>
+                </th:block>
+            </li>
+            <li th:if="${section.settings.bottomMenu == 'footMenu'}">
+              <th:block th:each="sub,salt:${section.data.footMenu}">
+                  <a th:href="|${sub.link}|" th:text="${sub.title}" th:target="${sub.target}" rel="noopener noreferrer"></a>
+              </th:block>
+            </li>
+            <li th:if="${section.settings.bottomMenu == 'footMenu2'}">
+              <th:block th:each="sub,salt:${section.data.footMenu2}">
+                  <a th:href="|${sub.link}|" th:text="${sub.title}" th:target="${sub.target}" rel="noopener noreferrer"></a>
+              </th:block>
+            </li>
+            <li th:if="${section.settings.bottomMenu == 'footMenu3'}">
+              <th:block th:each="sub,salt:${section.data.footMenu3}">
+                  <a th:href="|${sub.link}|" th:text="${sub.title}" th:target="${sub.target}" rel="noopener noreferrer"></a>
+              </th:block>
+            </li>
+            <li class="copyright" th:if="${not #strings.isEmpty(section.settings.copyrightLicence) || not #strings.isEmpty(section.settings.copyright)}">
+                <th:block th:utext="${section.settings.copyright}"></th:block>
+                <th:block th:if="${not #strings.isEmpty(section.settings.copyrightLicence)}">
+                    <a th:href="${#strings.isEmpty(section.settings.copyrightURL) ? 'https://beian.miit.gov.cn/' : section.settings.copyrightURL}" target="_blank">[[${section.settings.copyrightLicence}]]</a>
+                </th:block>
+                <th:block th:if="${section.settings.copyLinkList != null && not #lists.isEmpty(section.settings.copyLinkList)}">
+                  <th:block th:each="sub,salt:${section.settings.copyLinkList}">
+                      <a th:href="${sub.copyLink}" th:text="${sub.copyLabel}" th:if="${not #strings.isEmpty(sub.copyLabel)}"></a>
+                  </th:block>
+                </th:block>
+            </li>
+        </ul>
+    </div>
+    <div class="MV3iA3-tabBar" th:if="${section.settings.tabBar != null && not #lists.isEmpty(section.settings.tabBar)}">
+        <th:block th:each="o,salt:${section.settings.tabBar}">
+            <a th:href="|tel:${o.tabBarContent}|" th:if="${o.tabBarType == 'phone' && not #strings.isEmpty(o.tabBarContent)}">
+                <div>
+                    <i th:class="${o.tabBarIcon}" th:if="${not #strings.isEmpty(o.tabBarIcon)}"></i>
+                    <img th:src="${o.tabBarImage}" th:if="${not #strings.isEmpty(o.tabBarImage) && #strings.isEmpty(o.tabBarIcon)}" th:alt="${o.tabBarLabel}">
+                    [[${o.tabBarLabel}]]
+                </div>
+            </a>
+            <a th:href="|mailto:${o.tabBarContent}|" th:if="${o.tabBarType == 'email' && not #strings.isEmpty(o.tabBarContent)}">
+                <div>
+                    <i th:class="${o.tabBarIcon}" th:if="${not #strings.isEmpty(o.tabBarIcon)}"></i>
+                    <img th:src="${o.tabBarImage}" th:if="${not #strings.isEmpty(o.tabBarImage) && #strings.isEmpty(o.tabBarIcon)}" th:alt="${o.tabBarLabel}">
+                    [[${o.tabBarLabel}]]
+                </div>
+            </a>
+            <a th:href="|skype:${o.tabBarContent}?chat|" th:if="${o.tabBarType == 'skype' && not #strings.isEmpty(o.tabBarContent)}">
+                <div>
+                    <i th:class="${o.tabBarIcon}" th:if="${not #strings.isEmpty(o.tabBarIcon)}"></i>
+                    <img th:src="${o.tabBarImage}" th:if="${not #strings.isEmpty(o.tabBarImage) && #strings.isEmpty(o.tabBarIcon)}" th:alt="${o.tabBarLabel}">
+                    [[${o.tabBarLabel}]]
+                </div>
+            </a>
+            <a th:href="|https://api.whatsapp.com/send?phone=${o.tabBarContent}|" th:if="${o.tabBarType == 'whatapp' && not #strings.isEmpty(o.tabBarContent)}">
+                <div>
+                    <i th:class="${o.tabBarIcon}" th:if="${not #strings.isEmpty(o.tabBarIcon)}"></i>
+                    <img th:src="${o.tabBarImage}" th:if="${not #strings.isEmpty(o.tabBarImage) && #strings.isEmpty(o.tabBarIcon)}" th:alt="${o.tabBarLabel}">
+                    [[${o.tabBarLabel}]]
+                </div>
+            </a>
+            <a th:href="${o.tabBarLink}" th:if="${o.tabBarType == 'normal' && not #strings.isEmpty(o.tabBarLink)}">
+                <div>
+                    <i th:class="${o.tabBarIcon}" th:if="${not #strings.isEmpty(o.tabBarIcon)}"></i>
+                    <img th:src="${o.tabBarImage}" th:if="${not #strings.isEmpty(o.tabBarImage) && #strings.isEmpty(o.tabBarIcon)}" th:alt="${o.tabBarLabel}">
+                    [[${o.tabBarLabel}]]
+                </div>
+            </a>
+        </th:block>
+    </div>
+    
+</section>

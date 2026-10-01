@@ -1,0 +1,171 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|${ section.templateId }-contact ${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''}|">
+        <div class="container section-padding-top section-padding-bottom">
+            <div class="row row-gutter">
+                <div class="col-md-4">
+                    <div class="media" th:if="${not #strings.isEmpty(section.settings.addressContent)}">
+                        <div class="media-icon" th:if="${not #strings.isEmpty(section.settings.addressIcon) || not #strings.isEmpty(section.settings.image)}">
+                            <img th:src="${ section.settings.image}" th:alt="${ lang.address}" th:if="${not #strings.isEmpty(section.settings.image)}">
+                            <i th:class="${ section.settings.addressIcon}" th:if="${not #strings.isEmpty(section.settings.addressIcon) && #strings.isEmpty(section.settings.image)}"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3>[[${ lang.address}]]</h3>
+                            <p th:if="${not #strings.isEmpty(section.settings.addressContent)}">[[${ section.settings.addressContent}]]</p>
+                        </div>
+                    </div>
+                    <div class="media" th:if="${not #strings.isEmpty(section.settings.phone) || not #strings.isEmpty(section.settings.whatsapp) || not #strings.isEmpty(section.settings.fax)}">
+                        <div class="media-icon" th:if="${not #strings.isEmpty(section.settings.phoneIcon) || not #strings.isEmpty(section.settings.phoneImage)}">
+                            <img th:src="${ section.settings.phoneImage}" th:alt="${ lang.address}" th:if="${not #strings.isEmpty(section.settings.phoneImage)}">
+                            <i th:class="${ section.settings.phoneIcon}" th:if="${not #strings.isEmpty(section.settings.phoneIcon) && #strings.isEmpty(section.settings.phoneImage)}"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3>[[${ lang.phone}]]</h3>
+                            <p th:if="${not #strings.isEmpty(section.settings.phone)}">
+                                <label th:if="${section.settings.phoneLabel != false}"> [[${ lang.phone}]]: </label>
+                                <a th:href="|tel:${section.settings.phone}|" class="text-body" target="_blank">
+                                    [[${ section.settings.phone}]]
+                                </a>
+                            </p>
+                            <p th:if="${not #strings.isEmpty(section.settings.whatsapp)}">
+                                <label th:if="${section.settings.whatsappLabel != false}"> [[${ lang.whatsapp}]]: </label>
+                                <a th:href="|https://api.whatsapp.com/send?phone=${section.settings.whatsapp}|" class="text-body" target="_blank">
+                                    [[${ section.settings.whatsapp}]]
+                                </a>
+                            </p>
+                            <p th:if="${not #strings.isEmpty(section.settings.fax)}">
+                                <label th:if="${section.settings.faxLabel != false}"> [[${ lang.fax}]]: </label>
+                                [[${ section.settings.fax}]]
+                            </p>
+                        </div>
+                    </div>
+                    <div class="media" th:if="${not #strings.isEmpty(section.settings.email) || not #strings.isEmpty(section.settings.skype)}">
+                        <div class="media-icon" th:if="${not #strings.isEmpty(section.settings.emailIcon) || not #strings.isEmpty(section.settings.emailImage)}">
+                            <img th:src="${ section.settings.emailImage}" th:alt="${ lang.address}" th:if="${not #strings.isEmpty(section.settings.emailImage)}">
+                            <i th:class="${ section.settings.emailIcon}" th:if="${not #strings.isEmpty(section.settings.emailIcon) && #strings.isEmpty(section.settings.emailImage)}"></i>
+                        </div>
+                        <div class="media-body">
+                            <h3>[[${ lang.email}]]</h3>
+                            <p th:if="${not #strings.isEmpty(section.settings.email)}">
+                                <label th:if="${section.settings.emailLabel != false}"> [[${ lang.email}]]: </label>
+                                <a class="text-body" th:href="|mailto:${ section.settings.email }|">[[${ section.settings.email }]]</a>
+                            </p>
+                            <p th:if="${not #strings.isEmpty(section.settings.skype)}">
+                                <label th:if="${section.settings.skypeLabel != false}"> [[${ lang.skype}]]: </label>
+                                <a th:href="|skype:${section.settings.skype}?chat|" class="text-body" target="_blank">
+                                    [[${ section.settings.skype}]]
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 offset-md-2">
+                    <div th:class="|${ section.templateId }-form|">
+                        <h3 class="text-content-heading" th:if="${section.data.formData != null && not #strings.isEmpty(section.data.formData.id)}">[[${ section.data.formData.title}]]</h3>
+                        <div style="padding: 4rem 2rem; background-color: #ff0000; color: #fff; height: 100%" th:if="${ params.designMode && (section.data.formData != null && #strings.isEmpty(section.data.formData.id)) }">
+                            <h3>请选择询盘表单</h3>
+                            <h3>Please select a inquiry form</h3>
+                        </div>
+                        <form th:class="|enquiry-form ${section.settings.formStyle}|" th:data-inquiry-form="${section.data.formData.id}" novalidate="" th:if="${section.data.formData != null && not #strings.isEmpty(section.data.formData.id)}">
+                            <div class="row text-from">
+                                <div
+                                th:each="o,saltField:${section.data.formData.fieldList}"
+                                th:class="|${o.fieldType == 'heading' ? 'inquiry-form-heading' : 'form-group'} ${o.fieldType == 'file' || o.fieldType == 'textarea' || o.fieldType == 'heading' ? 'col-md-12' : section.settings.typesetting == 'auto' ? 'col' : 'col-md-' + (#strings.isEmpty(section.settings.typesetting) ? '6' : section.settings.typesetting)}|"
+                                th:with="holderLabel=${ not #strings.isEmpty(o.placeholder) ? o.placeholder: o.fieldLabel},placeholder=${section.settings.placeholder == false ? '' : #strings.isEmpty(o.placeholder)? o.fieldLabel : o.placeholder}"
+                                >
+                                    <p class="form-label mb-1" th:if="${section.settings.enableTitle && !(o.fieldType == 'checkbox' || o.fieldType == 'radio' || o.fieldType == 'heading')}">
+                                        [[${o.fieldLabel}]]
+                                    </p>
+                                    <h3 th:class="|text-content-heading ${#strings.isEmpty(section.settings.formHeadingAlign) ? 'text-left' : section.settings.formHeadingAlign}|" th:if="${o.fieldType == 'heading'}">
+                                        [[${o.fieldLabel}]]
+                                    </h3>
+                                    <th:block th:if="${o.fieldType == 'textarea'}">
+                                        <textarea rows="5" class="form-control" th:placeholder="${placeholder}" type="text"
+                                        th:name="${o.fieldLabel}"
+                                        th:data-field="${o.fieldName}"
+                                        th:required="${o.required == 0?'required':'false'}"></textarea>
+                                    </th:block>
+
+
+                                    <th:block th:if="${o.fieldType == 'file'}">
+                                        <div class="file-upload">
+                                            <div class="file-upload-placeholder">
+                                                <th:block th:text="${holderLabel}"></th:block>
+                                                <input type="file" class="form-control" accept=".zip,.rar,.7z">
+                                            </div>
+
+                                            <div class="file-upload-selected">
+                                                <label class="close"></label>
+                                                <p></p>
+                                            </div>
+                                            <small>
+                                                zip  / rar / 7z
+                                            </small>
+                                        </div>
+                                    </th:block>
+
+                                    <th:block th:if="${o.fieldType == 'select'}">
+                                        <select th:name="${o.fieldLabel}" th:data-field="${o.fieldName}" th:type="${o.fieldType}" class="form-control">
+                                          <th:block th:each="option,salt:${o.optionList}">
+                                            <option th:selected="${option.checked ? 'selected' : 'false'}">[[${option.value}]]</option>
+                                          </th:block>
+                                        </select>
+                                    </th:block>
+                                    <th:block th:if="${o.fieldType == 'countryRegion'}">
+                                        <select th:name="${o.fieldLabel}" th:data-field="${o.fieldName}" th:type="${o.fieldType}" class="form-control">
+                                            <option>[[${o.placeholder}]]</option>
+                                        </select>
+                                    </th:block>
+                                    <th:block th:if="${o.fieldType == 'radio' || o.fieldType == 'checkbox'}">
+                                        <div class="inquiry-form-group">
+                                            <p class="form-label mb-1">[[${o.fieldLabel}]]</p>
+                                            <th:block th:each="option,salt:${o.optionList}">
+                                            <div class="form-check form-check-inline">
+                                                    <label class="form-check-label">
+                                                    <input class="form-check-input" th:checked="${option.checked ? 'checked' : 'false'}" th:type="${o.fieldType}"
+                                                           th:name="|form-check-${saltField.index}|" th:value="${option.value}">
+                                                    [[${option.value}]]
+                                                    </label>
+                                            </div>
+                                            </th:block>
+                                        </div>
+                                    </th:block>
+
+                                    <th:block th:if="${o.fieldType != 'file' &&
+                                      o.fieldType != 'textarea' &&
+                                      o.fieldType != 'select' &&
+                                      o.fieldType != 'radio' &&
+                                      o.fieldType != 'checkbox' &&
+                                      o.fieldType != 'heading' &&
+                                      o.fieldType != 'countryRegion'
+                                    }">
+                                        <input th:placeholder="${placeholder}"
+                                               th:name="${o.fieldLabel}"
+                                               th:data-field="${o.fieldName}"
+                                               th:type="${o.fieldType}"
+                                               th:required="${o.required == 0?'required':'false'}" class="form-control">
+                                    </th:block>
+                                </div>
+                                <div th:if="${section.settings.typesetting == 'auto'}" class="form-group col">
+                                    <button type="submit" th:class="|btn ${not #strings.isEmpty(section.settings.buttonStyle) ? section.settings.buttonStyle : (section.settings.formStyle == 'dark' ? 'btn-white' : '')}|" th:text="${section.data.formData.buttonLabel}"></button>
+                                </div>
+                            </div>
+
+                            <th:block th:if="${section.settings.typesetting != 'auto'}">
+                                <button type="submit" th:class="|btn ${not #strings.isEmpty(section.settings.buttonStyle) ? section.settings.buttonStyle : (section.settings.formStyle == 'dark' ? 'btn-white' : '')}|" th:text="${section.data.formData.buttonLabel}"></button>
+                            </th:block>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="embed-responsive embed-responsive-normal" th:if="${ not #strings.isEmpty(section.settings.imageMap) }">
+        <img class="lazy embed-responsive-item" th:src="|${section.settings.imageMap}!1|" th:data-original="${section.settings.imageMap}" alt="">
+    </div>
+    <div class="section-loading-light" th:if="${ not #strings.isEmpty(section.settings.google) }">
+        <iframe th:class="|${ section.templateId }-map|" th:data-src="${section.settings.google}" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

@@ -1,0 +1,74 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div class="row sidebar-left">
+            <div class="col-md-3 sidebar">
+                <h3 class="text-content-heading" th:text="${section.settings.contactHeading}" th:if="${not #strings.isEmpty(section.settings.contactHeading) && not #lists.isEmpty(section.data.menuType)}"></h3>
+                <ul class="sidebar-catalog text-list" th:if="${not #lists.isEmpty(section.data.menuType) || (section.settings.linkList != null && section.settings.linkList != null)}">
+                     <li th:each="o,salt:${section.data.menuType}" th:class="${not #lists.isEmpty(o.subList) ? 'has-child' : ''}">
+                        <a th:class="|${not #lists.isEmpty(o.subList) ? 'has-child-link' : ''}${o.current ? ' active' : ''}|" th:href="${o.link}">[[${o.title}]]</a>
+                        <div class="open-placeholder" th:if="${not #lists.isEmpty(o.subList)}"></div>
+                        <ul th:if="${not #lists.isEmpty(o.subList)}" th:class="${o.active ? 'show' : ''}">
+                             <li th:each="second,secondSalt:${o.subList}" th:class="${not #lists.isEmpty(second.subList) ? 'has-child' : ''}">
+                                <a th:class="|${not #lists.isEmpty(second.subList) ? 'has-child-link' : ''}${second.current ? ' active' : ''}|" th:href="${second.link}">[[${second.title}]]</a>
+                                <div class="open-placeholder" th:if="${not #lists.isEmpty(second.subList)}"></div>
+                                <ul th:if="${not #lists.isEmpty(second.subList)}" th:class="${second.active ? 'show' : ''}">
+                                     <li th:each="third,thirdSalt:${second.subList}" th:class="${not #lists.isEmpty(third.subList) ? 'has-child' : ''}">
+                                        <a th:class="|${not #lists.isEmpty(third.subList) ? 'has-child-link' : ''}${third.current ? ' active' : ''}|" th:href="${third.link}">[[${third.title}]]</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <th:block th:if="${section.settings.linkList != null && section.settings.linkList != null}">
+                        <li th:each="o,salt:${section.settings.linkList}" th:if="${not #strings.isEmpty(o.link) && not #strings.isEmpty(o.label)}">
+                            <a th:href="${o.link}" th:class="${o.active == 'active' ? 'active' : ''}">
+                                [[${o.label}]]
+                            </a>
+                        </li>
+                    </th:block>
+                </ul>
+                <th:block th:with="hasContact = ${(not #strings.isEmpty(site.freePhone) && section.settings.freePhoneVisible) ||
+                                                                        (not #strings.isEmpty(site.phone) && section.settings.phoneVisible) ||
+                                                                        (not #strings.isEmpty(site.mobile) && section.settings.mobileVisible) ||
+                                                                        (not #strings.isEmpty(site.email) && section.settings.emailVisible) ||
+                                                                        (not #strings.isEmpty(site.address) && section.settings.address)}">
+
+                    <h3 class="text-content-heading text-neighbor" th:if="${not #strings.isEmpty(section.settings.contactHeading) && hasContact}">
+                        [[${section.settings.contactHeading}]]
+                    </h3>
+                    <p class="text-body" th:if="${not #strings.isEmpty(site.company) && section.settings.companyVisible && hasContact}">
+                        [[${site.company}]]
+                    </p>
+                    <ul class="text-list" th:if="${hasContact}">
+                        <li th:if="${not #strings.isEmpty(site.freePhone) && section.settings.freePhoneVisible}">
+                            <i class="ic-message-headset"></i>
+                            [[${site.freePhone}]]
+                        </li>
+                        <li th:if="${not #strings.isEmpty(site.phone) && section.settings.phoneVisible}">
+                            <i class="ic-phone"></i>
+                            [[${site.phone}]]
+                        </li>
+                        <li th:if="${not #strings.isEmpty(site.mobile) && section.settings.mobileVisible}">
+                            <i class="ic-mobile"></i>
+                            [[${site.mobile}]]
+                        </li>
+                        <li th:if="${not #strings.isEmpty(site.email) && section.settings.emailVisible}">
+                            <i class="ic-email"></i>
+                            [[${site.email}]]
+                        </li>
+                        <li th:if="${not #strings.isEmpty(site.address) && section.settings.address}">
+                            <i class="ic-location"></i>
+                            [[${site.address}]]
+                        </li>
+                    </ul>
+                </th:block>
+            </div>
+            <div class="col-md-9">
+                <div class="section-rich-text" th:utext="${section.settings.content}" th:if="${not #strings.isEmpty(section.settings.content)}"></div>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

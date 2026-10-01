@@ -1,0 +1,68 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-miyUFr{
+    background: #650202   ;
+    
+}
+
+
+
+.section-demo-miyUFr .section-title [class^=text-] {
+    color:#ff00ff;
+}
+
+
+    
+        .section-demo-miyUFr .section-title-divider {
+            width: 100%;
+        }
+    
+    
+        .section-demo-miyUFr .section-title-divider:after {
+            border-color: #ff00ff;
+        }
+    
+
+
+@media (min-width: 768px) {
+    .section-demo-miyUFr .section-title [class^=text-] {
+        width: 100%;
+    }
+}
+
+
+
+.section-demo-miyUFr .section-title .has-line:after, .section-demo-miyUFr .section-title img {
+    width: 5%;
+}
+
+
+
+@media (min-width: 768px) {
+    .section-demo-miyUFr .carousel-multiple .carousel-slide-item {
+        width: calc(16.666666666666664% - 24px);
+    }
+}
+@media (max-width: 768px) {
+    .section-demo-miyUFr .carousel-multiple .carousel-slide-item {
+        width: calc(33.33333333333333% - 12px);
+    }
+}
+
+
+.section-demo-miyUFr .embed-responsive{
+    width: 100%;
+}
+
+
+
+@media (min-width: 768px) {
+    .section-demo-miyUFr .miyUFr-describe {
+        width: 70%;
+    }
+}
+
+
+
+.section-demo-miyUFr .miyUFr-describe * {
+    color: #ffff00;
+}

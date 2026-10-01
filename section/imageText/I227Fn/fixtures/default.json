@@ -1,0 +1,59 @@
+{
+  "section": {
+    "id": "1693490149794729986",
+    "componentKind": "section",
+    "type": "imageText",
+    "templateId": "I227Fn",
+    "runtimeVersion": 2,
+    "settings": {
+      "label": "Support",
+      "layout": "right",
+      "content": "",
+      "heading": "ADVANTAGES OF SOLAR ENERGY",
+      "layoutTop": 50,
+      "marginTop": false,
+      "textColor": "",
+      "buttonLink": "",
+      "paddingTop": true,
+      "wideScreen": true,
+      "buttonLabel": "LEARN MORE",
+      "buttonStyle": "btn-primary",
+      "layoutWidth": 35,
+      "mobileImage": "",
+      "marginBottom": false,
+      "sectionAlias": "图文",
+      "paddingBottom": true,
+      "backgroundSize": "100% auto",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "no-repeat",
+      "backgroundPosition": "top center"
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

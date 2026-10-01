@@ -1,0 +1,408 @@
+{
+  "protocolVersion": 2,
+  "componentKind": "section",
+  "type": "progress",
+  "templateId": "n7MjYz",
+  "runtimeVersion": 2,
+  "definitionVersion": 1,
+  "schemaVersion": 1,
+  "name": {
+    "en": "环状派",
+    "zh-CN": "环状派"
+  },
+  "policy": {
+    "removable": true,
+    "duplicable": true,
+    "maxInstances": 0
+  },
+  "placement": {
+    "fixed": false,
+    "pages": []
+  },
+  "render": {
+    "template": "section.th.html",
+    "style": "section.scss",
+    "variableStyle": "variable.th.css",
+    "script": "section.js"
+  },
+  "editor": {
+    "groups": [
+      {
+        "id": "group1",
+        "name": {
+          "en": "Content",
+          "zh-CN": "内容"
+        },
+        "elements": [
+          {
+            "type": "repeater",
+            "field": "pieList",
+            "name": {
+              "en": "Content",
+              "zh-CN": "内容"
+            },
+            "maxItems": 30,
+            "elements": [
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Serial Number",
+                  "zh-CN": "序号"
+                },
+                "type": "text",
+                "field": "serialNumber",
+                "default": "01",
+                "options": []
+              },
+              {
+                "max": 100,
+                "min": 0,
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Percentage",
+                  "zh-CN": "百分比"
+                },
+                "step": 10,
+                "type": "slider",
+                "field": "percentage",
+                "default": 0,
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Text",
+                  "zh-CN": "说明"
+                },
+                "type": "textarea",
+                "field": "describe",
+                "default": "",
+                "options": []
+              }
+            ],
+            "default": [
+              {
+                "serialNumber": "01",
+                "percentage": 0,
+                "describe": "Molds"
+              },
+              {
+                "serialNumber": "02",
+                "percentage": 10,
+                "describe": "Molds"
+              },
+              {
+                "serialNumber": "03",
+                "percentage": 20,
+                "describe": "Molds"
+              },
+              {
+                "serialNumber": "04",
+                "percentage": 30,
+                "describe": "Molds"
+              },
+              {
+                "serialNumber": "04",
+                "percentage": 40,
+                "describe": "Molds"
+              },
+              {
+                "serialNumber": "04",
+                "percentage": 50,
+                "describe": "Molds"
+              },
+              {
+                "serialNumber": "04",
+                "percentage": 60,
+                "describe": "Molds"
+              },
+              {
+                "serialNumber": "04",
+                "percentage": 70,
+                "describe": "Molds"
+              },
+              {
+                "serialNumber": "04",
+                "percentage": 80,
+                "describe": "Molds"
+              },
+              {
+                "serialNumber": "04",
+                "percentage": 90,
+                "describe": "Molds"
+              },
+              {
+                "serialNumber": "04",
+                "percentage": 100,
+                "describe": "Molds"
+              }
+            ]
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "group2",
+        "name": {
+          "en": "Settings",
+          "zh-CN": "设置"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Loop background",
+              "zh-CN": "圆环背景色"
+            },
+            "type": "colorPicker",
+            "field": "background",
+            "default": "",
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Loop active color",
+              "zh-CN": "圆环高亮色"
+            },
+            "type": "colorPicker",
+            "field": "activeColor",
+            "default": "",
+            "options": []
+          },
+          {
+            "max": 100,
+            "min": 10,
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Loop Size (%)",
+              "zh-CN": "圆环尺寸 (%)"
+            },
+            "step": 1,
+            "type": "slider",
+            "field": "loopSize",
+            "default": 49,
+            "options": []
+          },
+          {
+            "max": 100,
+            "min": 0,
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Line Width",
+              "zh-CN": "线宽"
+            },
+            "step": 1,
+            "type": "slider",
+            "field": "borderWidth",
+            "default": 0,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Columns",
+              "zh-CN": "列数"
+            },
+            "type": "select",
+            "field": "column",
+            "default": "3",
+            "options": [
+              {
+                "value": "2",
+                "name": {
+                  "en": "6 Columns",
+                  "zh-CN": "6 列"
+                }
+              },
+              {
+                "value": "3",
+                "name": {
+                  "en": "4 Columns",
+                  "zh-CN": "4 列"
+                }
+              },
+              {
+                "value": "4",
+                "name": {
+                  "en": "3 Columns",
+                  "zh-CN": "3 列"
+                }
+              },
+              {
+                "value": "6",
+                "name": {
+                  "en": "2 Columns",
+                  "zh-CN": "2 列"
+                }
+              },
+              {
+                "value": "12",
+                "name": {
+                  "en": "1 Column",
+                  "zh-CN": "1 列"
+                }
+              },
+              {
+                "value": "nowrap",
+                "name": {
+                  "en": "Nowrap",
+                  "zh-CN": "不换行"
+                }
+              }
+            ]
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "group3",
+        "name": {
+          "en": "Border & Background",
+          "zh-CN": "边框 & 背景"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Wide screen",
+              "zh-CN": "宽屏模式"
+            },
+            "type": "switch",
+            "field": "wideScreen",
+            "default": false,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Margin top",
+              "zh-CN": "外边距（上）"
+            },
+            "type": "switch",
+            "field": "marginTop",
+            "default": false,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Margin bottom",
+              "zh-CN": "外边距（下）"
+            },
+            "type": "switch",
+            "field": "marginBottom",
+            "default": false,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Padding top",
+              "zh-CN": "内边距（上）"
+            },
+            "type": "switch",
+            "field": "paddingTop",
+            "default": true,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Padding bottom",
+              "zh-CN": "内边距（下）"
+            },
+            "type": "switch",
+            "field": "paddingBottom",
+            "default": true,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Background color",
+              "zh-CN": "背景色"
+            },
+            "type": "colorPicker",
+            "field": "backgroundColor",
+            "default": "",
+            "options": []
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "additionalSettings",
+        "name": {
+          "en": "Additional settings",
+          "zh-CN": "补充设置"
+        },
+        "elements": [
+          {
+            "field": "sectionAlias",
+            "name": {
+              "en": "sectionAlias"
+            },
+            "type": "hidden",
+            "default": "环状派"
+          }
+        ]
+      }
+    ]
+  },
+  "data": {
+    "source": "none",
+    "contract": "theme.progress.v2"
+  }
+}

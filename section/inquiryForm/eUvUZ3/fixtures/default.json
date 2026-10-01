@@ -1,0 +1,135 @@
+{
+  "section": {
+    "id": "1419929454993551362",
+    "componentKind": "section",
+    "type": "inquiryForm",
+    "templateId": "eUvUZ3",
+    "runtimeVersion": 2,
+    "settings": {
+      "alt": "",
+      "image": "/theme/webp/inquiry.webp",
+      "layout": "left",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Contact US",
+      "formStyle": "normal",
+      "formWidth": "8",
+      "marginTop": false,
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "formOffset": "2",
+      "paddingTop": true,
+      "subheading": "",
+      "wideScreen": false,
+      "buttonStyle": "btn-outline-primary",
+      "buttonWidth": "normal",
+      "enableTitle": false,
+      "placeholder": true,
+      "typesetting": "12",
+      "contactColor": "",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "headingColor": "",
+      "marginBottom": false,
+      "sectionAlias": "询盘表单（基础版）",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "verticalAlignment": "align-items-center",
+      "backgroundPosition": "",
+      "officeList": [],
+      "symbol": "",
+      "formHeadingAlign": "text-left"
+    },
+    "bindings": {
+      "consultForm": {
+        "sourceType": "inquiryForm",
+        "ids": []
+      }
+    },
+    "data": {
+      "consultForm": {
+        "title": "Contact us",
+        "remark": "This is the describe for inquiry form",
+        "fieldList": [
+          {
+            "sort": "1",
+            "required": false,
+            "fieldName": "lastName",
+            "fieldType": "text",
+            "fieldLabel": "Last name",
+            "placeholder": "Please enter last name",
+            "defaultValue": ""
+          },
+          {
+            "sort": "2",
+            "required": false,
+            "fieldName": "firstName",
+            "fieldType": "text",
+            "fieldLabel": "First name",
+            "placeholder": "Please enter first name",
+            "defaultValue": ""
+          },
+          {
+            "id": "1158289022079750146",
+            "sort": "3",
+            "required": true,
+            "fieldName": "email",
+            "fieldType": "email",
+            "fieldLabel": "Email",
+            "placeholder": "Please enter email",
+            "defaultValue": ""
+          },
+          {
+            "sort": "4",
+            "formId": "1157492648300646402",
+            "required": true,
+            "fieldName": "phone",
+            "fieldType": "tel",
+            "fieldLabel": "Phone",
+            "placeholder": "Please enter phone number",
+            "defaultValue": ""
+          },
+          {
+            "sort": "5",
+            "formId": "1157492648300646402",
+            "required": true,
+            "fieldName": "message",
+            "fieldType": "textarea",
+            "fieldLabel": "Message",
+            "placeholder": "Please tell us the message",
+            "defaultValue": ""
+          }
+        ],
+        "buttonLabel": "Submit"
+      }
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

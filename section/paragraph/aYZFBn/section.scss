@@ -1,0 +1,21 @@
+.aYZFBn-item.active {
+	padding: 1.5rem;
+}
+
+.aYZFBn-item:not(.active) {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+@media (max-width: 768px) {
+	.aYZFBn-item.active {
+		padding: 0.75rem;
+	}
+
+	.aYZFBn-item:not(.active) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

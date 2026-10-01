@@ -1,0 +1,10 @@
+.yeueiy img {
+	max-width: 100%;
+}
+
+.yeueiy [class*=col-] {
+	display: flex;
+	align-items: center;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

@@ -1,0 +1,13 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} text-${section.settings.textAlign}|" th:if="${not #strings.isEmpty(section.settings.label) || not #strings.isEmpty(section.settings.heading)}">
+        <label class="text-price" th:if="${not #strings.isEmpty(section.settings.label)}">[[${ section.settings.label }]]</label>
+        <h3 class="text-heading" th:if="${not #strings.isEmpty(section.settings.heading)}" th:with="textLines = ${#strings.listSplit(section.settings.heading,'\n')}">
+            <th:block th:each="textLine,saltLine:${textLines}">
+                <th:block th:if="${not #strings.isEmpty(textLine)}" th:utext="|${textLine}|"></th:block>
+            </th:block>
+        </h3>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

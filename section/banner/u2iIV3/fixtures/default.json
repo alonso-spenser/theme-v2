@@ -1,0 +1,71 @@
+{
+  "section": {
+    "id": "1734961913041903618",
+    "componentKind": "section",
+    "type": "banner",
+    "templateId": "u2iIV3",
+    "runtimeVersion": 2,
+    "settings": {
+      "alt": "",
+      "image": "",
+      "effect": "slide",
+      "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+      "heading": "This is a heading",
+      "autoPlay": "5000",
+      "mobImage": "",
+      "mobScale": "1by1",
+      "navStyle": "dark",
+      "imageSize": "13by5",
+      "marginTop": false,
+      "slideLink": "",
+      "textColor": "",
+      "arrowStyle": "dark",
+      "mobContent": "desktop",
+      "subheading": "This is a subheading",
+      "wideScreen": true,
+      "buttonLabel": "Button",
+      "buttonStyle": "invisible",
+      "contentAlign": "left-center",
+      "contentWidth": 60,
+      "marginBottom": false,
+      "overlayColor": "",
+      "sectionAlias": "Banner",
+      "contentOffset": 0,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "paddingTop": "",
+      "paddingBottom": "",
+      "mobColor": "#9209c0",
+      "imageList": []
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+[# th:if="${not #strings.isEmpty(section.settings.barBackground)}"]
+.section-[[${ section.id }]] .[[${section.templateId}]]-bar{
+    background-color: [[${ section.settings.barBackground }]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.barTextColor)}"]
+.section-[[${ section.id }]] .[[${section.templateId}]]-bar [class*="text-"]{
+    color: [[${ section.settings.barTextColor }]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.secondaryBackground)}"]
+.section-[[${ section.id }]] .secondary-bar{
+    background-color: [[${ section.settings.secondaryBackground }]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.secondaryTextColor)}"]
+.section-[[${ section.id }]] .secondary-bar .region-icon,
+.section-[[${ section.id }]] .secondary-bar .container .section-drop .dropdown-toggle,
+.section-[[${ section.id }]] .secondary-bar .container .secondary-bar-contact a:not(.btn),
+.section-[[${ section.id }]] .secondary-bar .container .nav-link {
+    color: [[${ section.settings.secondaryTextColor }]];
+}
+[/]
+
+
+[# th:if="${not #strings.isEmpty(section.settings.navBackground) || not #strings.isEmpty(section.settings.navTextColor) || not #strings.isEmpty(section.settings.menuActiveColor)}"]
+    [# th:if="${not #strings.isEmpty(section.settings.navBackground)}"]
+        .section-[[${ section.id }]].full-view.fixed-top nav,
+        .section-[[${ section.id }]] nav.navbar{
+            background-color: [[${ section.settings.navBackground }]];
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.navTextColor) || not #strings.isEmpty(section.settings.menuActiveColor)}"]
+        @media (min-width: 768px) {
+            [# th:if="${not #strings.isEmpty(section.settings.menuActiveColor)}"]
+                .section-[[${ section.id }]]:not(.full-view:not(.fixed-top)) nav .navbar-nav li > .nav-link.active {
+                    color: [[${section.settings.menuActiveColor}]];
+                }
+            [/]
+            [# th:if="${not #strings.isEmpty(section.settings.navTextColor)}"]
+                .section-[[${ section.id }]] .navbar .nav-link,
+                .section-[[${ section.id }]] .navbar .dropdown-item
+                .section-[[${ section.id }]] .navbar .navbar-brand{
+                    color: [[${ section.settings.navTextColor }]];
+                }
+            [/]
+        }
+    [/]
+[/]
+
+[# th:if="${section.settings.fullView && not #strings.isEmpty(section.settings.fullViewColor)}"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]].full-view:not(.fixed-top) .navbar .nav-link,
+    .section-[[${ section.id }]].full-view:not(.fixed-top) .navbar .navbar-brand{
+        color: [[${ section.settings.fullViewColor }]];
+    }
+    .section-[[${ section.id }]].full-view:not(.fixed-top) .secondary-bar .container .section-drop .dropdown-toggle,
+    .section-[[${ section.id }]].full-view:not(.fixed-top) .secondary-bar .region-icon,
+    .section-[[${ section.id }]].full-view:not(.fixed-top) .secondary-bar .container .secondary-bar-contact a,
+    .section-[[${ section.id }]].full-view:not(.fixed-top) .secondary-bar .container .nav-link {
+        color: [[${ section.settings.fullViewColor }]];
+    }
+}
+[/]

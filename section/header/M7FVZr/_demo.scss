@@ -1,0 +1,65 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-M7FVZr .M7FVZr-bar{
+    background-color: #f1d1d1;
+}
+
+
+.section-demo-M7FVZr .M7FVZr-bar [class*="text-"]{
+    color: #f700ff;
+}
+
+
+
+.section-demo-M7FVZr .secondary-bar{
+    background-color: #f6f69c;
+}
+
+
+
+.section-demo-M7FVZr .secondary-bar .region-icon,
+.section-demo-M7FVZr .secondary-bar .container .section-drop .dropdown-toggle,
+.section-demo-M7FVZr .secondary-bar .container .secondary-bar-contact a:not(.btn),
+.section-demo-M7FVZr .secondary-bar .container .nav-link {
+    color: #0690da;
+}
+
+
+
+
+    
+        .section-demo-M7FVZr.full-view.fixed-top nav,
+        .section-demo-M7FVZr nav.navbar{
+            background-color: #e7b5b5;
+        }
+    
+    
+        @media (min-width: 768px) {
+            
+                .section-demo-M7FVZr:not(.full-view:not(.fixed-top)) nav .navbar-nav li > .nav-link.active {
+                    color: #084633;
+                }
+            
+            
+                .section-demo-M7FVZr .navbar .nav-link,
+                .section-demo-M7FVZr .navbar .dropdown-item
+                .section-demo-M7FVZr .navbar .navbar-brand{
+                    color: #ff0000;
+                }
+            
+        }
+    
+
+
+
+@media (min-width: 768px) {
+    .section-demo-M7FVZr.full-view:not(.fixed-top) .navbar .nav-link,
+    .section-demo-M7FVZr.full-view:not(.fixed-top) .navbar .navbar-brand{
+        color: #00f127;
+    }
+    .section-demo-M7FVZr.full-view:not(.fixed-top) .secondary-bar .container .section-drop .dropdown-toggle,
+    .section-demo-M7FVZr.full-view:not(.fixed-top) .secondary-bar .region-icon,
+    .section-demo-M7FVZr.full-view:not(.fixed-top) .secondary-bar .container .secondary-bar-contact a,
+    .section-demo-M7FVZr.full-view:not(.fixed-top) .secondary-bar .container .nav-link {
+        color: #00f127;
+    }
+}

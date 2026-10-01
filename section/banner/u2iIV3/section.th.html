@@ -1,0 +1,21 @@
+<section th:class="|section u2iIV3 section-${section.id}${section.settings.marginTop ? ' section-margin-top' : ''}${section.settings.marginBottom ? ' section-margin-bottom' : ''}|"
+         th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div class="u2iIV3-banner">
+            <picture th:if="${not #strings.isEmpty(section.settings.image)}">
+                <source media="(max-width: 767px)" th:srcset="${section.settings.mobImage}" th:if="${not #strings.isEmpty(section.settings.mobImage)}">
+                <img th:src="${section.settings.image}" th:alt="${section.settings.alt}" decoding="async">
+            </picture>
+            <div th:class="|u2iIV3-content ${section.settings.contentAlign}|">
+                <div class="u2iIV3-area">
+                    <h2 class="text-heading" th:if="${not #strings.isEmpty(section.settings.heading)}" th:text="${section.settings.heading}"></h2>
+                    <h3 class="text-subheading" th:if="${not #strings.isEmpty(section.settings.subheading)}" th:text="${section.settings.subheading}"></h3>
+                    <p class="text-body" th:if="${not #strings.isEmpty(section.settings.content)}" th:text="${section.settings.content}"></p>
+                    <a th:class="|btn ${section.settings.buttonStyle}|" th:href="${section.settings.slideLink}"
+                       th:if="${section.settings.buttonStyle != 'invisible' && not #strings.isEmpty(section.settings.buttonLabel)}" th:text="${section.settings.buttonLabel}"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:utext="${variableCSS}"></style>
+</section>

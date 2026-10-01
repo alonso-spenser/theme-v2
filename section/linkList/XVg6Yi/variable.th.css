@@ -1,0 +1,5 @@
+.section-[[${section.id}]] {
+  [# th:if="${not #strings.isEmpty(section.settings.backgroundColor)}"]
+  --XVg6Yi-background: [[${section.settings.backgroundColor}]];
+  [/]
+}

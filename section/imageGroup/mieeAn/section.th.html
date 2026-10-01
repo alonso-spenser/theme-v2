@@ -1,0 +1,49 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+	    <div class="row row-gutter">
+		    <div th:class="|col-md-${ o.contentWidth } col-12 ${ section.templateId }-${salt.index}|" th:each="o,salt:${section.settings.imageList}">
+			    <th:block th:if="${#strings.isEmpty(o.buttonLink)}">
+                    <th:block th:with="textLines = ${#strings.listSplit(o.heading,'\n')}" th:if="${o.posterSize > 0 && not #strings.isEmpty(o.heading)}">
+                        <th:block th:each="textLine,saltLine:${textLines}">
+                            <h3 th:class="|text-heading ${o.textAlign}|" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></h3>
+                        </th:block>
+                    </th:block>
+                    <h3 th:class="|text-heading ${o.textAlign}|" th:if="${o.layout == 'normal' && o.posterSize == 0 && not #strings.isEmpty(o.heading)}">[[${o.heading}]]</h3>
+                    <div th:class="|embed-responsive text-img embed-responsive-${o.imageScale}|" th:if="${o.posterSize == 0}">
+                        <img class="embed-responsive-item lazy" th:src="|${ o.image}!1|" th:data-original="${ o.image }" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading }" th:if="${not #strings.isEmpty(o.image)}">
+
+                        <div th:class="|${ section.templateId }-overlay|" th:if="${o.layout == 'overlay'}">
+                            <div th:class="|${ section.templateId }-overlay-content|" th:if="${not #strings.isEmpty(o.heading) || not #strings.isEmpty(o.content)}">
+                                <h3 th:class="|text-heading ${o.textAlign}|" th:if="${not #strings.isEmpty(o.heading)}">[[${o.heading}]]</h3>
+                                <p class="text-body" th:if="${not #strings.isEmpty(o.content)}"><i class="ic-share"></i> [[${o.content}]]</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-body" th:if="${o.layout == 'normal' && not #strings.isEmpty(o.content) && o.posterSize == 0}"><i class="ic-share"></i> [[${o.content}]]</p>
+			    </th:block>
+			    <a th:href="${o.buttonLink}" th:if="${not #strings.isEmpty(o.buttonLink)}">
+                    <th:block th:with="textLines = ${#strings.listSplit(o.heading,'\n')}" th:if="${o.posterSize > 0 && not #strings.isEmpty(o.heading)}">
+                        <th:block th:each="textLine,saltLine:${textLines}">
+                            <h3 th:class="|text-heading ${o.textAlign}|" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></h3>
+                        </th:block>
+                    </th:block>
+                    <h3 th:class="|text-heading ${o.textAlign}|" th:if="${o.layout == 'normal' && o.posterSize == 0 && not #strings.isEmpty(o.heading)}">[[${o.heading}]]</h3>
+                    <div th:class="|embed-responsive text-img embed-responsive-${o.imageScale}|" th:if="${o.posterSize == 0}">
+                        <img class="embed-responsive-item lazy" th:src="|${ o.image}!1|" th:data-original="${ o.image }" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading }" th:if="${not #strings.isEmpty(o.image)}">
+
+                        <div th:class="|${ section.templateId }-overlay|" th:if="${o.layout == 'overlay'}">
+                            <div th:class="|${ section.templateId }-overlay-content|" th:if="${not #strings.isEmpty(o.heading) || not #strings.isEmpty(o.content)}">
+                                <h3 th:class="|text-heading ${o.textAlign}|" th:if="${not #strings.isEmpty(o.heading)}">[[${o.heading}]]</h3>
+                                <p class="text-body" th:if="${not #strings.isEmpty(o.content)}"><i class="ic-share"></i> [[${o.content}]]</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-body" th:if="${o.layout == 'normal' && not #strings.isEmpty(o.content) && o.posterSize == 0}"><i class="ic-share"></i> [[${o.content}]]</p>
+			    </a>
+		    </div>
+	    </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

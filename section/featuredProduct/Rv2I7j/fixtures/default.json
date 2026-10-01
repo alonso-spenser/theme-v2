@@ -1,0 +1,192 @@
+{
+  "section": {
+    "id": "1450785801847418881",
+    "componentKind": "section",
+    "type": "featuredProduct",
+    "templateId": "Rv2I7j",
+    "runtimeVersion": 2,
+    "settings": {
+      "layout": "tile",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Featured product group",
+      "cardColor": "",
+      "marginTop": false,
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "background": "",
+      "imageScale": "5by4",
+      "paddingTop": true,
+      "subheading": "this is a new beginning",
+      "wideScreen": false,
+      "buttonLabel": "Button label",
+      "buttonStyle": "invisible",
+      "timeVisible": false,
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "imageVisible": true,
+      "marginBottom": false,
+      "priceVisible": false,
+      "sectionAlias": "推荐产品组",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "mobileQuantity": "6",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "desktopQuantity": "3",
+      "subtitleVisible": true,
+      "backgroundRepeat": "",
+      "carouselAutoPlay": "5000",
+      "carouselNavStyle": "dark",
+      "contentTextAlign": "text-center",
+      "backgroundPosition": "",
+      "carouselArrowStyle": "dark"
+    },
+    "bindings": {
+      "collectionList": {
+        "sourceType": "productCollection",
+        "ids": []
+      }
+    },
+    "data": {
+      "collectionList": [
+        {
+          "items": [
+            {
+              "name": "Apple iPhone XS Max (A2104) 256GB",
+              "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+              "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+              "minPrice": 199,
+              "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+            },
+            {
+              "name": "Apple iPhone XS Max (A2104) 256GB",
+              "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+              "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+              "minPrice": 199,
+              "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+            },
+            {
+              "name": "Apple iPhone XS Max (A2104) 256GB",
+              "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+              "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+              "minPrice": 199,
+              "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+            },
+            {
+              "name": "Apple iPhone XS Max (A2104) 256GB",
+              "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+              "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+              "minPrice": 199,
+              "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+            }
+          ],
+          "title": "1 Example Collection Title",
+          "seoUrl": "",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review.",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg",
+          "goodsList": []
+        },
+        {
+          "items": [
+            {
+              "name": "Apple iPhone XS Max (A2104) 256GB",
+              "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+              "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+              "minPrice": 199,
+              "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+            },
+            {
+              "name": "Apple iPhone XS Max (A2104) 256GB",
+              "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+              "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+              "minPrice": 199,
+              "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+            },
+            {
+              "name": "Apple iPhone XS Max (A2104) 256GB",
+              "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+              "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+              "minPrice": 199,
+              "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+            },
+            {
+              "name": "Apple iPhone XS Max (A2104) 256GB",
+              "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+              "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+              "minPrice": 199,
+              "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+            }
+          ],
+          "title": "3 Example Collection Title",
+          "seoUrl": "",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review.",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg",
+          "goodsList": []
+        },
+        {
+          "items": [
+            {
+              "name": "Apple iPhone XS Max (A2104) 256GB",
+              "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+              "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+              "minPrice": 199,
+              "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+            },
+            {
+              "name": "Apple iPhone XS Max (A2104) 256GB",
+              "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+              "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+              "minPrice": 199,
+              "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+            },
+            {
+              "name": "Apple iPhone XS Max (A2104) 256GB",
+              "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+              "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+              "minPrice": 199,
+              "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+            },
+            {
+              "name": "Apple iPhone XS Max (A2104) 256GB",
+              "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+              "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+              "minPrice": 199,
+              "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+            }
+          ],
+          "title": "3 Example Collection Title",
+          "seoUrl": "",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review.",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg",
+          "goodsList": []
+        }
+      ]
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

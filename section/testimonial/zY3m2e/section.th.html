@@ -1,0 +1,156 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div th:class="|text-${section.settings.textAlign} section-title section-neighbor|" th:if="${not #strings.isEmpty(section.settings.heading)
+            || not #strings.isEmpty(section.settings.subheading)
+            || not #strings.isEmpty(section.settings.content)
+            || section.settings.dividerWidth > 0
+            }"
+           >
+            <h3 class="text-heading" th:if="${ not #strings.isEmpty(section.settings.heading) }">
+                [[${ section.settings.heading }]]
+            </h3>
+
+            <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
+                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+            </div>
+
+            <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
+                [[${ section.settings.subheading }]]
+            </h5>
+            <th:block th:class="${section.settings.symbol}" th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                <th:block th:each="textLine,saltLine:${textLines}">
+                    <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                </th:block>
+            </th:block>
+        </div>
+
+        <div th:class="|row row-gutter section-neighbor ${ section.templateId }-${section.settings.style}|" th:if="${#lists.size(section.settings.itemList) > 0}">
+            <div th:class="|col-md-${section.settings.column} col-${section.settings.mobColumn} ${ section.templateId }-${section.settings.style}-item|" th:each="o,stat:${section.settings.itemList}" th:with="textLines = ${#strings.listSplit(o.describe,'\n')}">
+                <th:block th:if="${section.settings.style == 'left'}">
+                    <div class="card section-card" th:if="${not #strings.isEmpty(o.link)}">
+                        <a th:href="${o.link}">
+                            <div class="media">
+                                <img th:src="|${o.image}!1|" class="lazy" th:data-original="|${o.image}|" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.image)}">
+                                <div class="media-body">
+                                    <h3 class="text-content-heading" th:if="${not #strings.isEmpty(o.title)}">
+                                        [[${o.title}]]
+                                    </h3>
+                                    <p class="text-body" th:if="${not #strings.isEmpty(o.subtitle)}">
+                                        [[${o.subtitle}]]
+                                    </p>
+                                    <th:block th:each="textLine,saltLine:${textLines}">
+                                         <p class="text-body text-secondary" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                                     </th:block>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card section-card" th:if="${#strings.isEmpty(o.link)}">
+                        <div class="media">
+                            <img th:src="|${o.image}!1|" class="lazy" th:data-original="|${o.image}|" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.image)}">
+                            <div class="media-body">
+                                <h3 class="text-content-heading" th:if="${not #strings.isEmpty(o.title)}">
+                                    [[${o.title}]]
+                                </h3>
+                                <p class="text-body" th:if="${not #strings.isEmpty(o.subtitle)}">
+                                    [[${o.subtitle}]]
+                                </p>
+                                <th:block th:each="textLine,saltLine:${textLines}">
+                                     <p class="text-secondary" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                                 </th:block>
+                            </div>
+                        </div>
+                    </div>
+                </th:block>
+                <th:block th:if="${section.settings.style == 'top'}">
+                    <div class="card section-card" th:if="${not #strings.isEmpty(o.link)}">
+                        <a th:href="${o.link}">
+                            <img th:src="|${o.image}!1|" class="lazy" th:data-original="|${o.image}|" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.image)}">
+                            <div class="card-body">
+                                <h3 class="text-content-heading" th:if="${not #strings.isEmpty(o.title)}">
+                                    [[${o.title}]]
+                                </h3>
+                                <p class="text-body" th:if="${not #strings.isEmpty(o.subtitle)}">
+                                    [[${o.subtitle}]]
+                                </p>
+                                 <th:block th:each="textLine,saltLine:${textLines}">
+                                     <p class="text-secondary" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                                 </th:block>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card section-card" th:if="${#strings.isEmpty(o.link)}">
+                        <img th:src="|${o.image}!1|" class="lazy" th:data-original="|${o.image}|" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.image)}">
+                        <div class="card-body">
+                            <h3 class="text-content-heading" th:if="${not #strings.isEmpty(o.title)}">
+                                [[${o.title}]]
+                            </h3>
+                            <p class="text-body" th:if="${not #strings.isEmpty(o.subtitle)}">
+                                [[${o.subtitle}]]
+                            </p>
+                             <th:block th:each="textLine,saltLine:${textLines}">
+                                 <p class="text-secondary" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                             </th:block>
+                        </div>
+                    </div>
+                </th:block>
+                <th:block th:if="${section.settings.style == 'card'}">
+                    <div class="card section-card" th:if="${not #strings.isEmpty(o.link)}">
+                        <div class="row g-0">
+                            <div class="col-5">
+                                <a th:href="${o.link}">
+                                    <img th:src="|${o.image}!1|" class="lazy" th:data-original="|${o.image}|" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.image)}">
+                                </a>
+                            </div>
+                            <div class="col-7">
+                                <a th:href="${o.link}">
+                                    <div class="card-body">
+                                        <h3 class="text-content-heading" th:if="${not #strings.isEmpty(o.title)}">
+                                            [[${o.title}]]
+                                        </h3>
+                                        <p class="text-body" th:if="${not #strings.isEmpty(o.subtitle)}">
+                                            [[${o.subtitle}]]
+                                        </p>
+                                         <th:block th:each="textLine,saltLine:${textLines}">
+                                             <p class="text-secondary" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                                         </th:block>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card section-card" th:if="${#strings.isEmpty(o.link)}">
+                        <div class="row g-0">
+                            <div class="col-5">
+                                <img th:src="|${o.image}!1|" class="lazy" th:data-original="|${o.image}|" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.image)}">
+                            </div>
+                            <div class="col-7">
+                                <div class="card-body">
+                                    <h3 class="text-content-heading" th:if="${not #strings.isEmpty(o.title)}">
+                                        [[${o.title}]]
+                                    </h3>
+                                    <p class="text-body" th:if="${not #strings.isEmpty(o.subtitle)}">
+                                        [[${o.subtitle}]]
+                                    </p>
+                                     <th:block th:each="textLine,saltLine:${textLines}">
+                                         <p class="text-secondary" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                                     </th:block>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </th:block>
+            </div>
+        </div>
+
+        <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} section-neighbor|" th:if="${section.settings.buttonStyle != 'invisible' && not #strings.isEmpty(section.settings.buttonLabel)}">
+            <div th:class="|text-${section.settings.textAlign}|">
+                <button th:class="|btn ${ section.settings.buttonStyle }|" th:if="${#strings.isEmpty(section.settings.buttonLink) && section.settings.buttonStyle != 'invisible' && not #strings.isEmpty(section.settings.buttonLabel)}">[[${section.settings.buttonLabel}]]</button>
+                <a th:href="${section.settings.buttonLink}" th:class="|btn ${section.settings.buttonStyle}|" th:if="${not #strings.isEmpty(section.settings.buttonLink) && section.settings.buttonStyle != 'invisible' && not #strings.isEmpty(section.settings.buttonLabel)}">[[${section.settings.buttonLabel}]]</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

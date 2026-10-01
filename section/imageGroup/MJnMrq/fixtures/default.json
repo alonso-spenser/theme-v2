@@ -1,0 +1,52 @@
+{
+  "section": {
+    "id": "1554791837972074497",
+    "componentKind": "section",
+    "type": "imageGroup",
+    "templateId": "MJnMrq",
+    "runtimeVersion": 2,
+    "settings": {
+      "marginTop": false,
+      "paddingTop": true,
+      "wideScreen": false,
+      "gutterStyle": "small",
+      "borderRadius": 10,
+      "marginBottom": false,
+      "sectionAlias": "瀑布流",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "imageList": [],
+      "columnList": []
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

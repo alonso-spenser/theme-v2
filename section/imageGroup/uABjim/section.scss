@@ -1,0 +1,28 @@
+.uABjim-item-content {
+	z-index: 3;
+	width: 100%;
+	top: 1rem;
+	left: 0;
+	position: absolute;
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	.uABjim-item-content {
+		padding: calc(var(--paddingHeight) * 1px);
+	}
+}
+
+.uABjim [class*=text-] + .text-link {
+	margin-top: 1rem;
+}
+
+.uABjim .text-link a {
+	color: var(--colorLink);
+}
+
+.uABjim .text-link a:hover {
+	color: var(--colorLinkHover);
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

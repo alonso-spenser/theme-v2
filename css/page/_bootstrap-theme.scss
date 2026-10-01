@@ -1,0 +1,55 @@
+// Bridge CSS custom properties to the extracted global theme settings.
+// Global values are compiled into page/base.css before these rules.
+:root {
+  --bs-body-font-family: var(--typeBody, Arial, sans-serif);
+  --bs-body-font-size: calc(var(--fontSizeBody, 16) * 1px);
+  --bs-body-color: var(--colorBody, #606266);
+  --bs-border-color: var(--colorBorder, #dee2e6);
+  --bs-border-width: calc(var(--borderWidth, 1) * 1px);
+  --bs-border-radius: var(--borderRadius, .375rem);
+  --bs-link-color: var(--colorLink, #0d6efd);
+  --bs-link-hover-color: var(--colorLinkHover, #0a58ca);
+}
+// Bootstrap's Reboot uses rgb variables for links; use the complete theme colors.
+a { color: var(--colorLink, #0d6efd); }
+a:hover { color: var(--colorLinkHover, #0a58ca); }
+.form-check-input:checked { background-color: var(--colorTheme, #0d6efd); border-color: var(--colorTheme, #0d6efd); }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--typeHeading, inherit);
+  font-weight: var(--weightHeading, 500);
+  color: var(--colorHeading, inherit);
+}
+.btn {
+  --bs-btn-border-radius: var(--borderRadius, .375rem);
+  --bs-btn-padding-x: calc(var(--buttonPadding, 12) * 1px);
+}
+.btn-primary {
+  --bs-btn-bg: var(--colorButton, #0d6efd);
+  --bs-btn-border-color: var(--colorButton, #0d6efd);
+  --bs-btn-color: var(--colorButtonLabel, #fff);
+  --bs-btn-hover-bg: var(--colorButtonHover, #0b5ed7);
+  --bs-btn-hover-border-color: var(--colorButtonHover, #0b5ed7);
+  --bs-btn-hover-color: var(--colorButtonHoverLabel, #fff);
+  --bs-btn-active-bg: var(--colorButtonHover, #0b5ed7);
+  --bs-btn-active-border-color: var(--colorButtonHover, #0b5ed7);
+  --bs-btn-active-color: var(--colorButtonHoverLabel, #fff);
+  --bs-btn-disabled-bg: var(--colorButton, #0d6efd);
+  --bs-btn-disabled-border-color: var(--colorButton, #0d6efd);
+  --bs-btn-disabled-color: var(--colorButtonLabel, #fff);
+}
+.btn-outline-primary {
+  --bs-btn-color: var(--colorButton, #0d6efd);
+  --bs-btn-border-color: var(--colorButton, #0d6efd);
+  --bs-btn-hover-bg: var(--colorButton, #0d6efd);
+  --bs-btn-hover-border-color: var(--colorButton, #0d6efd);
+  --bs-btn-hover-color: var(--colorButtonLabel, #fff);
+  --bs-btn-active-bg: var(--colorButton, #0d6efd);
+  --bs-btn-active-border-color: var(--colorButton, #0d6efd);
+  --bs-btn-active-color: var(--colorButtonLabel, #fff);
+  --bs-btn-disabled-color: var(--colorButton, #0d6efd);
+  --bs-btn-disabled-border-color: var(--colorButton, #0d6efd);
+}
+a.btn:hover { color: var(--bs-btn-hover-color); }
+@media (max-width: 767.98px) {
+  :root { --bs-body-font-size: calc(var(--fontSizeBodyMob, 14) * 1px); }
+}

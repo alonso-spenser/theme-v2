@@ -1,0 +1,139 @@
+.IN3ymu-item {
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	user-select: none;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	background-color: #d3d3d3;
+	color: #666;
+	cursor: pointer;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.IN3ymu-item:hover, .IN3ymu-item.active {
+	background-color: var(--colorButtonHover);
+	color: var(--colorButtonHoverLabel);
+}
+
+.IN3ymu .table a {
+	color: var(--colorBody);
+}
+
+.IN3ymu .table a:hover {
+	color: var(--colorTheme);
+}
+
+.IN3ymu .table .thead-dark th {
+	color: #fff;
+	background-color: #3A7BF2;
+	border-color: #fff;
+}
+
+.IN3ymu-filter {
+	display: none;
+}
+
+@media (max-width: 786px) {
+	.IN3ymu-filter {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.IN3ymu-filter.active {
+		display: block;
+	}
+}
+
+.IN3ymu-params-content:not(:last-child) {
+	border-bottom: 1px solid #dcdfe6;
+	padding-bottom: 10px;
+	margin-bottom: 16px;
+}
+
+.IN3ymu-params-item {
+	display: inline-block;
+	text-align: center;
+	padding: 5px 15px;
+	line-height: 1.5;
+	color: #666;
+	cursor: pointer;
+	margin: 0 6px 6px 0;
+	border: 1px solid #dcdfe6;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.IN3ymu-params-item:hover {
+	background-color: var(--colorButtonHover);
+	color: var(--colorButtonHoverLabel);
+}
+
+.IN3ymu-params-item.active {
+	color: #409eff;
+	background: #ecf5ff;
+	border-color: #b3d8ff;
+}
+
+.IN3ymu-params-item.primary {
+	color: #409eff;
+	background-color: #ecf5ff;
+	font-weight: bold;
+	border-color: #b3d8ff;
+}
+
+.IN3ymu-slide {
+	margin-bottom: 1px;
+}
+
+.IN3ymu-slide h3 {
+	color: #fff;
+	background-color: #409eff;
+	border-color: #409eff;
+	padding: 0.375rem 0.75rem;
+	overflow: hidden;
+	margin: 0;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.IN3ymu-slide h3:before {
+	float: right;
+}
+
+.IN3ymu-slide th {
+	width: 110px;
+}
+
+.IN3ymu-slide-content {
+	padding: 0.5rem 0.75rem;
+	background-color: #ecf5ff;
+	border: 1px solid #409eff;
+	display: none;
+}
+
+.IN3ymu-slide-content img {
+	width: 100%;
+}
+
+.IN3ymu-slide:first-child .filter-slide-content {
+	display: block;
+}
+
+.IN3ymu-none {
+	color: #909399;
+	background: #f4f4f5;
+	border: 1px solid #d3d4d6;
+	line-height: 100px;
+	text-align: center;
+}
+
+.IN3ymu-goods {
+	min-height: 5rem;
+}
+
+.IN3ymu-goods .embed-responsive {
+	width: 150px;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

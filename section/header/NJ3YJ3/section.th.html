@@ -1,0 +1,47 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }${section.settings.transparent == 'enable' && page.pageType == 'homePage' ? ' transparent' : ''}|" th:data-section="${section.templateId}">
+    <nav class="navbar">
+        <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} navbar-menu|">
+            <a class="navbar-brand" href="/">
+                <img
+                    th:src="${not #strings.isEmpty(section.settings.logo) ? section.settings.logo : section.settings.tranLogo}"
+                    th:if="${not #strings.isEmpty(section.settings.logo) || not #strings.isEmpty(section.settings.tranLogo)}"
+                    th:alt="${not #strings.isEmpty(section.settings.alt) ? section.settings.alt : site.siteName}"
+                >
+                <img
+                    th:src="${not #strings.isEmpty(section.settings.tranLogo) ? section.settings.tranLogo : section.settings.logo}"
+                    th:if="${section.settings.transparent == 'enable' && (not #strings.isEmpty(section.settings.logo) || not #strings.isEmpty(section.settings.tranLogo))}"
+                    th:alt="${not #strings.isEmpty(section.settings.tanAlt) ? section.settings.tanAlt : site.siteName}"
+                >
+            </a>
+            <div class="navbar-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </div>
+        </div>
+    </nav>
+    <div class="NJ3YJ3-menu">
+        <div class="NJ3YJ3-menu-close"></div>
+        <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} navbar-vertical|">
+            <ul>
+                <th:block th:each="o,stat:${section.data.page}">
+                <li th:class="${stat.index == 0 ? 'active' : ''}" >
+                    <a th:class="|vertical-link ${ not #lists.isEmpty(o.subList) ? ' dropdown-toggle' : '' }|" th:href="${ o.link }" th:data-ref="${ o.id }">
+                        [[${ o.title }]]
+                    </a>
+                    <div class="navbar-vertical-content expand-collection" th:if="${ not #lists.isEmpty(o.subList) }">
+                        <div class="row">
+                            <div class="col-md-12" th:each="second:${o.subList}">
+                                <a class="dropdown-item" th:href="${ second.link }">
+                                    [[${ second.title }]]
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                </th:block>
+            </ul>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

@@ -1,0 +1,10 @@
+[# th:if="${not #strings.isEmpty(section.settings.h1Background)}"]
+    .section-[[${section.id}]] .bread-crumb {
+        background-color: [[${section.settings.h1Background}]];
+    }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.h1Color)}"]
+    .section-[[${section.id}]] .bread-crumb * {
+        color: [[${section.settings.h1Color}]];
+    }
+[/]

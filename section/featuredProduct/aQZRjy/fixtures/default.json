@@ -1,0 +1,116 @@
+{
+  "section": {
+    "id": "1439100606236827650",
+    "componentKind": "section",
+    "type": "featuredProduct",
+    "templateId": "aQZRjy",
+    "runtimeVersion": 2,
+    "settings": {
+      "rows": "1",
+      "layout": "tile",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Featured product",
+      "cardColor": "",
+      "marginTop": false,
+      "mobColumn": "6",
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "background": "",
+      "buttonLink": "",
+      "imageScale": "5by4",
+      "paddingTop": true,
+      "subheading": "this is a new beginning",
+      "wideScreen": false,
+      "buttonLabel": "Button label",
+      "buttonStyle": "invisible",
+      "timeVisible": false,
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "imageVisible": true,
+      "marginBottom": false,
+      "priceVisible": false,
+      "sectionAlias": "推荐产品",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "mobileQuantity": "6",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "desktopQuantity": "3",
+      "subtitleVisible": true,
+      "backgroundRepeat": "",
+      "carouselAutoPlay": "5000",
+      "carouselNavStyle": "dark",
+      "contentTextAlign": "text-center",
+      "backgroundPosition": "",
+      "carouselArrowStyle": "dark"
+    },
+    "bindings": {
+      "collectionList": {
+        "sourceType": "productCollection",
+        "ids": []
+      }
+    },
+    "data": {
+      "collectionList": [
+        {
+          "name": "Apple iPhone XS Max (A2104) 256GB",
+          "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+          "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+          "minPrice": 199,
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg",
+          "goodsList": []
+        },
+        {
+          "name": "Apple iPhone XS Max (A2104) 256GB",
+          "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+          "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+          "minPrice": 199,
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg",
+          "goodsList": []
+        },
+        {
+          "name": "Apple iPhone XS Max (A2104) 256GB",
+          "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+          "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+          "minPrice": 199,
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg",
+          "goodsList": []
+        },
+        {
+          "name": "Apple iPhone XS Max (A2104) 256GB",
+          "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+          "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+          "minPrice": 199,
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg",
+          "goodsList": []
+        }
+      ]
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

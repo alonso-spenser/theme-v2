@@ -1,0 +1,56 @@
+[# th:each="o, salt:${ section.settings.imageList }"]
+    [# th:if="${not #strings.isEmpty(o.backgroundColor) || not #strings.isEmpty(o.backgroundImage)}"]
+    .section-[[${ section.id }]] .[[${ section.templateId }]]-[[${ salt.index }]] .[[${ section.templateId }]]-row{
+        background: [[${o.backgroundColor}]] [# th:if="${not #strings.isEmpty(o.backgroundImage)}"] url("[[${o.backgroundImage}]]")[/] [[${o.backgroundRepeat}]] [[${o.backgroundPosition}]];
+        [# th:if="${not #strings.isEmpty(o.backgroundSize)}"]
+        background-size: [[${o.backgroundSize}]];
+        [/]
+    }
+    [/]
+
+    [# th:if="${not #strings.isEmpty(o.headingColor)}"]
+        .section-[[${ section.id }]] .[[${ section.templateId }]]-[[${ salt.index }]] .text-heading {
+            color: [[${o.headingColor}]];
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(o.subheadingColor)}"]
+        .section-[[${ section.id }]] .[[${ section.templateId }]]-[[${ salt.index }]] .text-subheading {
+            color: [[${o.subheadingColor}]];
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(o.contentColor)}"]
+        .section-[[${ section.id }]] .[[${ section.templateId }]]-[[${ salt.index }]] .text-body,
+        .section-[[${ section.id }]] .[[${ section.templateId }]]-[[${ salt.index }]] li {
+            color: [[${o.contentColor}]];
+        }
+    [/]
+
+    [# th:if="${not #strings.isEmpty(o.lineColor)}"]
+        .section-[[${ section.id }]] .[[${ section.templateId }]]-[[${ salt.index }]] .section-title-divider.has-line:after {
+            border-top-color: [[${o.lineColor}]];
+        }
+    [/]
+
+    [# th:if="${section.settings.imagePercentage < 12 && not #strings.isEmpty(o.maskColor)}"]
+        .section-[[${ section.id }]] .[[${ section.templateId }]]-[[${ salt.index }]] .[[${ section.templateId }]]-area {
+            background-color: [[${o.maskColor}]];
+        }
+    [/]
+
+    [# th:if="${o.dividerWidth != null && o.dividerWidth > 0}"]
+        .section-[[${ section.id }]] .section-title .has-line:after, .section-[[${ section.id }]] .section-title img {
+            width: [[${o.dividerWidth}]]%;
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.contentBackground)}"]
+        .section-[[${ section.id }]] .[[${ section.templateId }]]-content {
+            background-color:[[${section.settings.contentBackground}]];
+        }
+    [/]
+
+    [# th:if="${section.settings.imagePercentage == 12 && not #strings.isEmpty(o.maskColor)}"]
+        .section-[[${ section.id }]] .[[${ section.templateId }]]-[[${ salt.index }]] .[[${ section.templateId }]]-content:before {
+            background-color: [[${ o.maskColor }]];
+        }
+    [/]
+[/]

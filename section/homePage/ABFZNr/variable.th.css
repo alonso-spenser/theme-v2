@@ -1,0 +1,40 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor)}"]
+.section-[[${ section.id }]].section-dialog:before{
+    background-color: [[${section.settings.backgroundColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.headingColor)}"]
+.section-[[${ section.id }]] .text-heading {
+    color:[[${section.settings.headingColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.contentColor)}"]
+.section-[[${ section.id }]] .text-list li {
+    color:[[${section.settings.contentColor}]];
+}
+[/]
+
+[# th:if="${section.settings.textWidth != null && section.settings.textWidth > 0}"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]] .section-title [class^=text-] {
+        width: [[${section.settings.textWidth}]]%;
+    }
+}
+[/]
+
+[# th:if="${section.settings.dividerWidth != null && section.settings.dividerWidth > 0}"]
+.section-[[${ section.id }]] .section-title .has-line:after, .section-[[${ section.id }]] .section-title img {
+    width: [[${section.settings.dividerWidth}]]%;
+}
+[/]
+
+
+[# th:if="${section.settings.popupWidth != null && section.settings.popupWidth > 0}"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]] .section-dialog-container {
+        width: [[${section.settings.popupWidth}]]%;
+    }
+}
+[/]

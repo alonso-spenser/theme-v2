@@ -1,0 +1,11 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-content{
+    background-color: [[${section.settings.backgroundColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .slick-slide [class^=text-] {
+    color:[[${section.settings.textColor}]];
+}
+[/]

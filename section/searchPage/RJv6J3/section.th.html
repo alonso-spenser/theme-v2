@@ -1,0 +1,38 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|bread-crumb ${section.settings.h1Layout}|" th:if="${section.settings.h1Layout != 'invisible' || section.settings.enableCrumb}">
+        <div th:class="|container${section.settings.h1Wide ? '-fluid' : ''}${section.settings.enableCrumb ? '' : ' solo'}|">
+            <h1 class="text-heading" th:if="${section.settings.h1Layout != 'invisible' && section.settings.h1Layout != 'bottom'}" th:data-tips="${lang.result}" th:data-title="${ page.seoH1 }">
+                [[${ page.seoH1 }]]
+            </h1>
+            <ol class="breadcrumb" th:if="${section.settings.enableCrumb}">
+                <li class="breadcrumb-item">
+                    <a th:href="${ site.urlPrefix }">
+                    [[${ lang.global.home }]]
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    [[${ page.seoH1 }]]
+                </li>
+            </ol>
+            <h1 class="text-heading" th:if="${section.settings.h1Layout != 'invisible' && section.settings.h1Layout == 'bottom'}" th:data-tips="${lang.result}" th:data-title="${ page.seoH1 }">
+                [[${ page.seoH1 }]]
+            </h1>
+        </div>
+    </div>
+    <div th:class="|section-container${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''}|">
+        <div th:class="|${ section.templateId }-container container${section.settings.wideScreen ? '-fluid' : ''}|"
+             th:data-product-scale="${section.settings.productScale}"
+             th:data-article-scale="${section.settings.productScale}"
+             th:data-column="${section.settings.column}"
+             th:data-mob-column="${section.settings.mobColumn}"
+             th:data-product-visible="${section.settings.productVisible}"
+             th:data-article-visible="${section.settings.articleVisible}"
+            >
+        </div>
+    </div>
+
+    
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

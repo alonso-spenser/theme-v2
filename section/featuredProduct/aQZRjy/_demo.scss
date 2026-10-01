@@ -1,0 +1,28 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-aQZRjy{
+    background: rgba(247, 248, 240, 1)   ;
+    
+}
+
+
+
+
+    .section-demo-aQZRjy .section-title-divider {
+        
+            width: 100%;
+        
+    }
+    
+
+
+@media (min-width: 768px) {
+    .section-demo-aQZRjy .section-title [class^=text-] {
+        width: 100%;
+    }
+}
+
+
+
+.section-demo-aQZRjy .section-title .has-line:after, .section-demo-aQZRjy .section-title img {
+    width: 5%;
+}

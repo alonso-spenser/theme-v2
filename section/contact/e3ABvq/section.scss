@@ -1,0 +1,17 @@
+.e3ABvq .text-content-heading {
+	font-weight: bold;
+}
+
+.e3ABvq img {
+	width: 3rem;
+}
+
+.e3ABvq .media-icon i {
+	font-size: 3rem;
+}
+
+.e3ABvq .media-icon + .media-body {
+	margin-left: 1.5rem;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

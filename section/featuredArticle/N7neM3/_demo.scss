@@ -1,0 +1,20 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-N7neM3 .section-title-divider {
+        
+            width: 100%;
+        
+    }
+    
+
+
+@media (min-width: 768px) {
+    .section-demo-N7neM3 .section-title [class^=text-] {
+        width: 100%;
+    }
+}
+
+
+
+.section-demo-N7neM3 .section-title .has-line:after, .section-demo-N7neM3 .section-title img {
+    width: 5%;
+}

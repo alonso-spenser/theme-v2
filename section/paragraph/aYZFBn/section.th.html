@@ -1,0 +1,20 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div class="row row-gutter">
+            <div th:class="|col-${ section.settings.mobColumn } col-md-${ section.settings.column }|" th:each="o,stat:${section.settings.blockList}">
+                <div th:class="|${ section.templateId }-item item-${ stat.index } ${ not #strings.isEmpty(o.contentColor) ? 'active' : '' }|">
+                    <h3 class="text-heading" th:if="${not #strings.isEmpty(o.heading)}">[[${ o.heading }]]</h3>
+                    <h5 class="text-subheading" th:if="${not #strings.isEmpty(o.subheading)}">[[${ o.subheading }]]</h5>
+                    <ul th:class="|text-list ${o.symbol}|" th:if="${not #strings.isEmpty(o.content)}" th:with="textLines = ${#strings.listSplit(o.content,'\n')}">
+                        <th:block th:each="textLine,saltLine:${textLines}">
+                            <li class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                        </th:block>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

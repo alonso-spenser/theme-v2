@@ -1,0 +1,166 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${section.id}|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div th:class="|text-${section.settings.textAlign} section-title section-neighbor|" th:if="${not #strings.isEmpty(section.settings.heading)
+            || not #strings.isEmpty(section.settings.subheading)
+            || not #strings.isEmpty(section.settings.content)
+            || section.settings.dividerWidth > 0
+            }"
+           >
+            <h3 class="text-heading" th:if="${ not #strings.isEmpty(section.settings.heading) }">
+                [[${ section.settings.heading }]]
+            </h3>
+
+            <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
+                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+            </div>
+
+            <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
+                [[${ section.settings.subheading }]]
+            </h5>
+            <ul th:class="${section.settings.symbol}" th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                <th:block th:each="textLine,saltLine:${textLines}">
+                    <li class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                </th:block>
+            </ul>
+        </div>
+
+        <div th:class="|row row-gutter section-neighbor ${section.settings.layout == 'mapLeft' || section.settings.layout == 'mapRight' ? '' : section.settings.verticalAlignment}|">
+            <div th:class="|col-md-6${ section.settings.layout == 'right' ? ' order-md-2' : ''}|" th:if="${(section.settings.layout == 'left' || section.settings.layout == 'right')}" th:with="imageURL=${#strings.isEmpty(section.settings.image) ? 'https://theme.fomillesite.com/img/placeholder.jpg' : section.settings.image}">
+                <img th:if="${section.settings.verticalAlignment != 'align-items-stretch'}" th:src="|${imageURL}!1|" th:data-original="|${imageURL}!${section.settings.wideScreen ? 'f' : ''}6|" class="embed-responsive lazy" th:alt="${section.settings.alt}">
+                <div th:if="${section.settings.verticalAlignment == 'align-items-stretch'}" class="embed-responsive">
+                    <img th:src="|${imageURL}!1|" th:data-original="|${imageURL}!${section.settings.wideScreen ? 'f' : ''}6|" class="embed-responsive lazy" th:alt="${section.settings.alt}">
+                </div>
+            </div>
+
+            <div th:class="|col-md-6${ section.settings.layout == 'contactRight' ? ' order-md-2' : ''}|" th:if="${section.settings.layout == 'contactLeft' || section.settings.layout == 'contactRight'}">
+                <div th:class="|inquiry-form-office${ section.settings.layout == 'contactRight' ? ' right' : ' left'}|">
+                    <dl th:class="${section.settings.formStyle}" th:each="o,salt:${section.settings.officeList}">
+                        <dt th:if="${not #strings.isEmpty(o.corp)}" th:text="${o.corp}"></dt>
+                        <dd th:if="${not #strings.isEmpty(o.contact)}">
+                            <i class="ic-mine"></i>
+                            <th:block th:text="${o.contact}"></th:block>
+                        </dd>
+                        <dd th:if="${not #strings.isEmpty(o.mobile)}">
+                            <i class="ic-mobile"></i>
+                            <th:block th:text="${o.mobile}"></th:block>
+                        </dd>
+                        <dd th:if="${not #strings.isEmpty(o.phone)}">
+                            <i class="ic-phone"></i>
+                            <th:block th:text="${o.phone}"></th:block>
+                        </dd>
+                        <dd th:if="${not #strings.isEmpty(o.email)}">
+                            <i class="ic-email"></i>
+                            <th:block th:text="${o.email}"></th:block>
+                        </dd>
+                        <dd th:if="${not #strings.isEmpty(o.fax)}">
+                            <i class="ic-fax"></i>
+                            <th:block th:text="${o.fax}"></th:block>
+                        </dd>
+                        <dd th:if="${not #strings.isEmpty(o.address)}">
+                            <i class="ic-location"></i>
+                            <th:block th:utext="${#strings.replace(o.address,'\n','<br>')}"></th:block>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div th:class="|col-md-${section.settings.layout == 'formOnly' ? (#strings.isEmpty(section.settings.formWidth) ? '6' : section.settings.formWidth) : '6'}${section.settings.layout == 'formOnly' ? (' offset-md-' + (#strings.isEmpty(section.settings.formOffset) ? '3' : section.settings.formOffset)) : ''}|">
+                <div style="padding: 4rem 2rem; background-color: #ff0000; color: #fff; height: 100%" th:if="${ params.designMode && (section.data.consultForm != null && #strings.isEmpty(section.data.consultForm.id)) }">
+                    <h3>请选择询盘表单</h3>
+                    <h3>Please select a inquiry form</h3>
+                </div>
+                <form th:class="|enquiry-form ${section.settings.formStyle}|" th:data-inquiry-form="${section.data.consultForm.id}" novalidate="" th:if="${section.data.consultForm != null && not #strings.isEmpty(section.data.consultForm.id)}">
+                    <div class="row">
+                        <div
+                        th:each="o,saltField:${section.data.consultForm.fieldList}"
+                        th:class="|${o.fieldType == 'heading' ? 'inquiry-form-heading' : 'form-group'} ${o.fieldType == 'file' || o.fieldType == 'textarea' || o.fieldType == 'heading' ? 'col-md-12' : section.settings.typesetting == 'auto' ? 'col' : 'col-md-' + (#strings.isEmpty(section.settings.typesetting) ? '6' : section.settings.typesetting)}|"
+                        th:with="holderLabel=${ not #strings.isEmpty(o.placeholder) ? o.placeholder: o.fieldLabel},placeholder=${section.settings.placeholder == false ? '' : #strings.isEmpty(o.placeholder)? o.fieldLabel : o.placeholder}"
+                        >
+                            <p class="form-label mb-1" th:if="${section.settings.enableTitle && !(o.fieldType == 'checkbox' || o.fieldType == 'radio' || o.fieldType == 'heading')}">
+                                [[${o.fieldLabel}]]
+                            </p>
+                            <h3 th:class="|text-content-heading ${#strings.isEmpty(section.settings.formHeadingAlign) ? 'text-left' : section.settings.formHeadingAlign}|" th:if="${o.fieldType == 'heading'}">
+                                [[${o.fieldLabel}]]
+                            </h3>
+                            <th:block th:if="${o.fieldType == 'textarea'}">
+                                <textarea rows="4" class="form-control" th:placeholder="${placeholder}" type="text"
+                                th:name="${o.fieldLabel}"
+                                th:data-field="${o.fieldName}"
+                                th:required="${o.required == 0 ? 'required' : 'false'}"></textarea>
+                            </th:block>
+
+
+                            <th:block th:if="${o.fieldType == 'file'}">
+                                <div class="file-upload">
+                                    <div class="file-upload-placeholder">
+                                        <th:block th:text="${holderLabel}"></th:block>
+                                        <input type="file" class="form-control" accept=".zip,.rar,.7z">
+                                    </div>
+
+                                    <div class="file-upload-selected">
+                                        <label class="close"></label>
+                                        <p></p>
+                                    </div>
+                                    <small>
+                                        zip  / rar / 7z
+                                    </small>
+                                </div>
+                            </th:block>
+
+                            <th:block th:if="${o.fieldType == 'select'}">
+                                <select th:name="${o.fieldLabel}" th:data-field="${o.fieldName}" th:type="${o.fieldType}" class="form-control">
+                                  <th:block th:each="option,salt:${o.optionList}">
+                                    <option th:selected="${option.checked ? 'selected' : 'false'}">[[${option.value}]]</option>
+                                  </th:block>
+                                </select>
+                            </th:block>
+                            <th:block th:if="${o.fieldType == 'countryRegion'}">
+                                <select th:name="${o.fieldLabel}" th:data-field="${o.fieldName}" th:type="${o.fieldType}" class="form-control">
+                                    <option>[[${o.placeholder}]]</option>
+                                </select>
+                            </th:block>
+                            <th:block th:if="${o.fieldType == 'radio' || o.fieldType == 'checkbox'}">
+                                <div class="inquiry-form-group">
+                                    <p class="form-label mb-1">[[${o.fieldLabel}]]</p>
+                                    <th:block th:each="option,salt:${o.optionList}">
+                                    <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                            <input class="form-check-input" th:checked="${option.checked ? 'checked' : 'false'}" th:type="${o.fieldType}"
+                                                   th:name="|form-check-${saltField.index}|" th:value="${option.value}">
+                                            [[${option.value}]]
+                                            </label>
+                                    </div>
+                                    </th:block>
+                                </div>
+                            </th:block>
+
+                            <th:block th:if="${o.fieldType != 'file' &&
+                              o.fieldType != 'textarea' &&
+                              o.fieldType != 'select' &&
+                              o.fieldType != 'radio' &&
+                              o.fieldType != 'checkbox' &&
+                              o.fieldType != 'heading' &&
+                              o.fieldType != 'countryRegion'
+                            }">
+                                <input th:placeholder="${placeholder}"
+                                       th:name="${o.fieldLabel}"
+                                       th:data-field="${o.fieldName}"
+                                       th:type="${o.fieldType}"
+                                       th:required="${o.required == 0 ? 'required' : 'false'}" class="form-control">
+                            </th:block>
+                        </div>
+                        <div th:if="${section.settings.typesetting == 'auto'}" class="form-group col">
+                            <button type="submit" th:class="|btn ${section.settings.buttonWidth == 'btn-block' ? 'btn-block ' : ''}${not #strings.isEmpty(section.settings.buttonStyle) ? section.settings.buttonStyle : (section.settings.formStyle == 'dark' ? 'btn-white' : '')}|" th:text="${section.data.consultForm.buttonLabel}"></button>
+                        </div>
+                    </div>
+
+                    <div th:if="${section.settings.typesetting != 'auto'}" class="enquiry-dialog-footer text-center">
+                        <button type="submit" th:class="|btn ${section.settings.buttonWidth == 'btn-block' ? 'btn-block ' : ''}${not #strings.isEmpty(section.settings.buttonStyle) ? section.settings.buttonStyle : (section.settings.formStyle == 'dark' ? 'btn-white' : '')}|" th:text="${section.data.consultForm.buttonLabel}"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

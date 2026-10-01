@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FO Runtime v2 Example</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="/css/base.css">
+</head>
+<body>
+    <main class="container py-5" data-section="Example">
+        <h1>FO Runtime v2</h1>
+        <button class="btn btn-primary" type="button" data-testid="open-dialog">打开弹窗</button>
+        <p class="mt-3" data-testid="dialog-result">ready</p>
+        <button class="btn btn-primary" type="button" data-title="联系我们" data-popup-enquiry="1412691912455892993">弹窗表单</button>
+    </main>
+
+    <script src="./base.js"></script>
+    <script>
+        class Example {
+            constructor(element) {
+                this.result = element.querySelector('[data-testid="dialog-result"]');
+                this.button = element.querySelector('[data-testid="open-dialog"]');
+                this.handleClick = () => fo.dialog.open({
+                    title: '测试弹窗',
+                    content: `
+                        <p>这是由 FO Runtime v2 创建的弹窗。</p>
+                        <label>
+                            <input type="checkbox" data-testid="allow-confirm">
+                            验证通过并允许关闭
+                        </label>
+                    `,
+                    confirmText: '确定',
+                    cancelText: '取消',
+                    width: '480px',
+                    onConfirm: (dialog) => {
+                        const valid = dialog.element
+                            .querySelector('[data-testid="allow-confirm"]')
+                            .checked;
+                        this.result.textContent = valid ? 'confirmed' : 'validation-blocked';
+                        return valid;
+                    },
+                    onCancel: () => {
+                        this.result.textContent = 'cancelled';
+                    }
+                });
+                this.button.addEventListener('click', this.handleClick);
+            }
+
+            destroy() {
+                this.button.removeEventListener('click', this.handleClick);
+            }
+        }
+
+        fo.register('Example', Example);
+
+        fo.init({siteId: 'example', lang: 'en', prefix: '/'});
+    </script>
+</body>
+</html>

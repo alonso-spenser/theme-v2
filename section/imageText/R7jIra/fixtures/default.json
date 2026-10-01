@@ -1,0 +1,46 @@
+{
+  "section": {
+    "id": "1484713746248044545",
+    "componentKind": "section",
+    "type": "imageText",
+    "templateId": "R7jIra",
+    "runtimeVersion": 2,
+    "settings": {
+      "background": "",
+      "wideScreen": false,
+      "firstLayout": "left",
+      "sectionAlias": "图文设计组",
+      "imageList": [],
+      "marginTop": "",
+      "marginBottom": "",
+      "imagePercentage": "6",
+      "contentBackground": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

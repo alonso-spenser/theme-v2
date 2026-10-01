@@ -1,0 +1,42 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-eUvUZ3{
+    background: rgba(193, 13, 13, 1)   ;
+    
+}
+
+
+.section-demo-eUvUZ3 .inquiry-form-office * {
+    color:#ffff00;
+}
+
+
+
+.section-demo-eUvUZ3 .section-title .text-subheading ,
+.section-demo-eUvUZ3 .section-title .text-body {
+    color:rgba(210, 69, 69, 1);
+}
+
+
+    
+        .section-demo-eUvUZ3 .section-title-divider {
+            width: 100%;
+        }
+    
+    
+        .section-demo-eUvUZ3 .section-title-divider:after {
+            border-color: rgba(210, 69, 69, 1);
+        }
+    
+
+
+@media (min-width: 768px) {
+    .section-demo-eUvUZ3 .section-title [class^=text-] {
+        width: 100%;
+    }
+}
+
+
+
+.section-demo-eUvUZ3 .section-title .has-line:after, .section-demo-eUvUZ3 .section-title img {
+    width: 35%;
+}

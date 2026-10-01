@@ -1,0 +1,24 @@
+.miyUFr .center .miyUFr-describe {
+	text-align: center;
+}
+
+.miyUFr .center .miyUFr-describe,
+.miyUFr .center .embed-responsive {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.miyUFr .right .miyUFr-describe {
+	text-align: right;
+}
+
+.miyUFr .right .miyUFr-describe,
+.miyUFr .right .embed-responsive {
+	margin-left: auto;
+}
+
+.miyUFr .embed-responsive + .miyUFr-describe {
+	margin-top: 0.75rem;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

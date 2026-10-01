@@ -1,0 +1,12 @@
+.JjQr2a svg {
+	width: 100%;
+	height: 50px;
+}
+
+@media (max-width: 768px) {
+	.JjQr2a svg {
+		height: 40px;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

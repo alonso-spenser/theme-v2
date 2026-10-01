@@ -1,0 +1,29 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor)}"]
+.section-[[${ section.id }]]{
+    background-color: [[${section.settings.backgroundColor}]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.background)}"]
+    .section-[[${ section.id }]] .[[${ section.templateId }]]-pie-half.left:before,
+    .section-[[${ section.id }]] .[[${ section.templateId }]]-pie-half.right:before {
+        border-top-color: [[${section.settings.background}]];
+        border-left-color: [[${section.settings.background}]];
+    }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.activeColor)}"]
+    .section-[[${ section.id }]] .[[${ section.templateId }]]-pie-half.left:before,
+    .section-[[${ section.id }]] .[[${ section.templateId }]]-pie-half.right:before {
+        border-bottom-color: [[${section.settings.activeColor}]];
+        border-right-color: [[${section.settings.activeColor}]];
+    }
+[/]
+[# th:if="${section.settings.loopSize > 0}"]
+    .section-[[${ section.id }]] .[[${ section.templateId }]]-pie {
+        width: [[${section.settings.loopSize}]]%;
+    }
+[/]
+[# th:if="${section.settings.borderWidth > 0}"]
+    .section-[[${ section.id }]] .[[${ section.templateId }]]-pie-half.right:before,.section-[[${ section.id }]] .[[${ section.templateId }]]-pie-half.left:before {
+        border-width: [[${section.settings.borderWidth}]]px;
+    }
+[/]

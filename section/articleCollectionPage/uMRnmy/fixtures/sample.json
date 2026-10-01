@@ -1,0 +1,239 @@
+{
+  "section": {
+    "id": "1410131322559156226",
+    "componentKind": "page-section",
+    "type": "articleCollectionPage",
+    "templateId": "uMRnmy",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "4",
+      "h1Wide": false,
+      "layout": "list",
+      "h1Color": "#ff0000",
+      "h1Layout": "left",
+      "marginTop": false,
+      "mobColumn": "6",
+      "textAlign": "text-center",
+      "textColor": "#ff00ff",
+      "imageScale": "5by4",
+      "paddingTop": true,
+      "wideScreen": false,
+      "enableCrumb": true,
+      "h1Background": "#fff000",
+      "marginBottom": false,
+      "sectionAlias": "文章集合页 ",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "cardBackground": "#0000ff",
+      "backgroundColor": "#ffff00",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "summaryVisible": true
+    },
+    "bindings": {
+      "collectionList": {
+        "sourceType": "articleCollection",
+        "ids": []
+      }
+    },
+    "data": {
+      "collectionList": [
+        {
+          "coverImage": "https://css.11af.com/img/s6.jpg",
+          "coverVideo": "",
+          "createTime": 1629532596090,
+          "id": "1428989396367671297",
+          "refCount": 4,
+          "seoUrl": "kylie-jenner",
+          "title": "Kylie jenner"
+        },
+        {
+          "coverImage": "https://css.11af.com/img/s6.jpg",
+          "coverVideo": "",
+          "createTime": 1629717705251,
+          "id": "1429765800457895937",
+          "refCount": 3,
+          "seoUrl": "page-can-generate",
+          "title": "Page can generate"
+        },
+        {
+          "coverImage": "https://css.11af.com/img/s6.jpg",
+          "coverVideo": "",
+          "createTime": 1629532596090,
+          "id": "1428989396367671297",
+          "refCount": 4,
+          "seoUrl": "kylie-jenner",
+          "title": "Kylie jenner"
+        },
+        {
+          "coverImage": "https://css.11af.com/img/s6.jpg",
+          "coverVideo": "",
+          "createTime": 1629717705251,
+          "id": "1429765800457895937",
+          "refCount": 3,
+          "seoUrl": "page-can-generate",
+          "title": "Page can generate"
+        },
+        {
+          "coverImage": "https://css.11af.com/img/s6.jpg",
+          "coverVideo": "",
+          "createTime": 1629532596090,
+          "id": "1428989396367671297",
+          "refCount": 4,
+          "seoUrl": "kylie-jenner",
+          "title": "Kylie jenner"
+        },
+        {
+          "coverImage": "https://css.11af.com/img/s6.jpg",
+          "coverVideo": "",
+          "createTime": 1629717705251,
+          "id": "1429765800457895937",
+          "refCount": 3,
+          "seoUrl": "page-can-generate",
+          "title": "Page can generate"
+        },
+        {
+          "coverImage": "https://css.11af.com/img/s6.jpg",
+          "coverVideo": "",
+          "createTime": 1629532596090,
+          "id": "1428989396367671297",
+          "refCount": 4,
+          "seoUrl": "kylie-jenner",
+          "title": "Kylie jenner"
+        },
+        {
+          "coverImage": "https://css.11af.com/img/s6.jpg",
+          "coverVideo": "",
+          "createTime": 1629717705251,
+          "id": "1429765800457895937",
+          "refCount": 3,
+          "seoUrl": "page-can-generate",
+          "title": "Page can generate"
+        }
+      ]
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "$",
+    "phone": "11",
+    "email": "devin@fomille.com",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "first.site.com",
+    "siteName": "first",
+    "address": "",
+    "areaCode": "",
+    "articleQuantity": 0,
+    "cityName": "深圳",
+    "company": "11",
+    "contact": "绍 柴",
+    "countryName": "中国",
+    "createTime": 1629532329995,
+    "currencyCode": "USD",
+    "currencyName": "美元",
+    "defaultRegion": 0,
+    "downPass": "",
+    "expiryTime": 1631346729995,
+    "facebookPixel": "",
+    "favicon": "",
+    "formQuantity": 0,
+    "freePhone": "",
+    "goodsQuantity": 0,
+    "honestScore": 0,
+    "keepLang": 1,
+    "latitude": 22.5245061,
+    "lengthUnit": "mm",
+    "logisticsScore": 0,
+    "logo": "api://site-file.fomillesite.com/1428988280280154113/1428989928016658434.webp",
+    "longitude": 113.93831239999997,
+    "maxLang": 1,
+    "mobile": "",
+    "praiseRate": 0,
+    "provinceName": "广东",
+    "region": "en",
+    "rootLink": "https://first.site.com/",
+    "scriptBottom": "",
+    "scriptHead": "",
+    "scriptService": "",
+    "serviceScore": 0,
+    "siteId": "1428988280280154113",
+    "siteType": 3,
+    "state": 0,
+    "synopsis": "",
+    "systemDomain": "first.site.com",
+    "timeZone": "Asia/Shanghai",
+    "unitSystem": "metric",
+    "videoLimit": 0,
+    "weightUnit": "g",
+    "social": {
+      "socialPinterest": "https://www.pinterest.com/fomille\n\n",
+      "socialGooglePlus": "",
+      "socialFancy": "",
+      "socialVimeo": "",
+      "socialYoutube": "",
+      "sectionAlias": "社交媒体",
+      "socialFacebook": "https://www.facebook.com/fomille\n\n",
+      "socialWeibo": "",
+      "socialShareImage": "",
+      "socialTumblr": "",
+      "socialInstagram": "https://www.pinterest.com/fomille\n\n",
+      "socialTwitter": "https://twitter.com/fomille\n\n",
+      "socialSnapchat": "",
+      "socialLinkedin": "",
+      "socialImage": [
+        {
+          "socialQRCode": "api://site-file.fomillesite.com/1428988280280154113/1429801691230396418.webp",
+          "socialQRCodeAlt": "",
+          "socialQRCodeLink": "api://www.163.com"
+        },
+        {
+          "socialQRCode": "api://site-file.fomillesite.com/1428988280280154113/1429801670590226433.webp",
+          "socialQRCodeAlt": "",
+          "socialQRCodeLink": "api://www.163.com"
+        },
+        {
+          "socialQRCode": "api://site-file.fomillesite.com/1428988280280154113/1429801393678082051.webp",
+          "socialQRCodeAlt": "",
+          "socialQRCodeLink": "api://www.163.com"
+        }
+      ]
+    }
+  },
+  "page": {
+    "pageType": "articleCollectionPage",
+    "seoH1": "文章集合页",
+    "seoUrl": "/articles/collection",
+    "seoDescription": "文章集合页",
+    "id": "1428988282108870657",
+    "title": "文章集合页",
+    "seoTitle": "文章集合页",
+    "seoKeywords": "文章集合页"
+  },
+  "params": {
+    "originalURL": "/articles/collection",
+    "cache": {},
+    "cannoical": "https://first.site.com/articles/collection",
+    "collectionId": "",
+    "defaultRegion": 0,
+    "domain": "first.site.com",
+    "ids": [],
+    "pageIndex": 1,
+    "pageSize": 4,
+    "pageTye": "articleCollectionPage",
+    "params": {},
+    "region": "en",
+    "siteId": "1428988280280154113",
+    "sortBy": "",
+    "url": "",
+    "designMode": true
+  },
+  "lang": {
+    "lang": "英语",
+    "heading": "NEWS",
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

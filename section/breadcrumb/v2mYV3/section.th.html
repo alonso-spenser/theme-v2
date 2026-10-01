@@ -1,0 +1,24 @@
+<section th:class="|section ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|bread-crumb ${section.settings.h1Layout}|" th:if="${section.settings.h1Layout != 'invisible' || section.settings.enableCrumb}">
+        <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}${not #lists.isEmpty(section.settings.linkList) ? '' : ' solo'}|">
+            <h1 class="text-heading" th:if="${section.settings.h1Layout != 'invisible' && section.settings.h1Layout != 'bottom'}">
+                [[${ page.seoH1 }]]
+            </h1>
+            <ol class="breadcrumb" th:if="${not #lists.isEmpty(section.settings.linkList)}">
+                <li class="breadcrumb-item" th:each="o,salt:${section.settings.linkList}">
+                    <a th:href="${o.url}" th:if="${not #strings.isEmpty(o.url)}">
+                        [[${o.label}]]
+                    </a>
+                   <th:block th:if="${#strings.isEmpty(o.url)}">
+                        [[${o.label}]]
+                    </th:block>
+                </li>
+            </ol>
+            <h1 class="text-heading" th:if="${section.settings.h1Layout != 'invisible' && section.settings.h1Layout == 'bottom'}">
+                [[${ page.seoH1 }]]
+            </h1>
+        </div>
+    </div>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

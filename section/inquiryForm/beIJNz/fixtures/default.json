@@ -1,0 +1,135 @@
+{
+  "section": {
+    "id": "1462615850166652930",
+    "componentKind": "section",
+    "type": "inquiryForm",
+    "templateId": "beIJNz",
+    "runtimeVersion": 2,
+    "settings": {
+      "layout": "right",
+      "content": "If you have any needs, please contact us immediately, we will provide you with the best quality service.",
+      "heading": "GET A FREE QUOTE",
+      "formColor": "",
+      "formStyle": "normal",
+      "formWidth": "4",
+      "marginTop": false,
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "buttonLink": "",
+      "offsetLeft": "0",
+      "paddingTop": true,
+      "subheading": "",
+      "wideScreen": false,
+      "buttonLabel": "Button",
+      "buttonStyle": "invisible",
+      "enableTitle": false,
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "marginBottom": false,
+      "sectionAlias": "询盘表单",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "formBackground": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "formTitleVisible": true,
+      "secondButtonLink": "",
+      "secondButtonLabel": "Button",
+      "secondButtonStyle": "invisible",
+      "submitButtonStyle": "invisible",
+      "backgroundPosition": "",
+      "formDescribeVisible": true,
+      "countdownList": []
+    },
+    "bindings": {
+      "formData": {
+        "sourceType": "inquiryForm",
+        "ids": []
+      }
+    },
+    "data": {
+      "formData": {
+        "title": "Contact us",
+        "remark": "This is the describe for inquiry form",
+        "fieldList": [
+          {
+            "sort": "1",
+            "required": false,
+            "fieldName": "lastName",
+            "fieldType": "text",
+            "fieldLabel": "Last name",
+            "placeholder": "Please enter last name",
+            "defaultValue": ""
+          },
+          {
+            "sort": "2",
+            "required": false,
+            "fieldName": "firstName",
+            "fieldType": "text",
+            "fieldLabel": "First name",
+            "placeholder": "Please enter first name",
+            "defaultValue": ""
+          },
+          {
+            "id": "1158289022079750146",
+            "sort": "3",
+            "required": true,
+            "fieldName": "email",
+            "fieldType": "email",
+            "fieldLabel": "Email",
+            "placeholder": "Please enter email",
+            "defaultValue": ""
+          },
+          {
+            "sort": "4",
+            "formId": "1157492648300646402",
+            "required": true,
+            "fieldName": "phone",
+            "fieldType": "tel",
+            "fieldLabel": "Phone",
+            "placeholder": "Please enter phone number",
+            "defaultValue": ""
+          },
+          {
+            "sort": "5",
+            "formId": "1157492648300646402",
+            "required": true,
+            "fieldName": "message",
+            "fieldType": "textarea",
+            "fieldLabel": "Message",
+            "placeholder": "Please tell us the message",
+            "defaultValue": ""
+          }
+        ],
+        "buttonLabel": "Submit"
+      }
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

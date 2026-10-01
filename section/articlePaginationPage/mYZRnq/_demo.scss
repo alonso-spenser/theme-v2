@@ -1,0 +1,29 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-mYZRnq .section-container {
+    background: #ffd6e9   ;
+    
+  }
+
+
+    .section-demo-mYZRnq .section-collection-describe.close:before {
+        background: linear-gradient(180deg,rgba(252,251,252,0),#ffd6e9);
+    }
+
+
+    .section-demo-mYZRnq .card {
+        background-color: rgba(8,115,115,0.3);
+    }
+
+
+
+    .section-demo-mYZRnq .card-body [class*="text-"] {
+        color: #1900ff!important;
+    }
+
+
+    .section-demo-mYZRnq .sidebar h3,
+    .section-demo-mYZRnq .sidebar-catalog li a,
+    .section-demo-mYZRnq .mYZRnq-list,
+    .section-demo-mYZRnq .sidebar-catalog li .open-placeholder:after {
+        border-color: rgba(255,255,255,0.3);
+    }

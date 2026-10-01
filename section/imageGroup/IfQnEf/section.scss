@@ -1,0 +1,132 @@
+.IfQnEf-line-text {
+	font-size: 9.375rem;
+	line-height: 1;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #fff;
+	-webkit-text-fill-color: transparent;
+	opacity: 0.1;
+	margin-bottom: 0;
+	position: absolute;
+	left: 0;
+	top: calc(var(--marginHeight) * -2px);
+	font-weight: 700;
+	text-transform: capitalize;
+	z-index: 0;
+	letter-spacing: -4px;
+	font-family: var(--typeHeading);
+}
+
+@media (max-width: 768px) {
+	.IfQnEf-line-text {
+		font-size: 6rem;
+		top: -3rem;
+	}
+}
+
+.IfQnEf .text-center .IfQnEf-line-text {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.IfQnEf .text-right .IfQnEf-line-text {
+	left: auto;
+	right: 0;
+}
+
+.IfQnEf .section-title {
+	position: relative;
+}
+
+.IfQnEf .section-title .text-heading {
+	font-size: 3.75rem;
+	line-height: 1.3;
+	text-transform: capitalize;
+	position: relative;
+	z-index: 3;
+}
+
+.IfQnEf .section-title .text-heading b {
+	font-weight: normal;
+	color: var(--colorTheme);
+}
+
+.IfQnEf .section-title .text-heading + .text-body {
+	margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+	.IfQnEf .section-title .text-heading {
+		font-size: 2rem;
+	}
+
+	.IfQnEf .section-title .text-heading + .text-body {
+		margin-top: 1.5rem;
+	}
+}
+
+.IfQnEf .slick-track {
+	align-items: stretch;
+	display: flex;
+}
+
+.IfQnEf .slick-track .slick-slide {
+	padding-top: calc(var(--cardBoxShadow) * 1px);
+	padding-bottom: calc(var(--cardBoxShadow) * 1px);
+}
+
+.IfQnEf .card {
+	background: transparent;
+	box-shadow: none;
+}
+
+.IfQnEf .card .embed-responsive {
+	background-color: #fff;
+}
+
+.IfQnEf .card:hover {
+	box-shadow: none;
+}
+
+.IfQnEf .card .card-body {
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-top: 0;
+	border-bottom-left-radius: calc(var(--cardBorderRadius) * 1px);
+	border-bottom-right-radius: calc(var(--cardBorderRadius) * 1px);
+}
+
+.IfQnEf .card [class*=text-] {
+	color: #fff;
+}
+
+.IfQnEf .card:hover [class*=text-] {
+	color: var(--colorLinkHover);
+}
+
+.IfQnEf-since {
+	position: relative;
+	text-indent: 4.375rem;
+	display: inline-block;
+	color: var(--colorTheme);
+}
+
+.IfQnEf-since:before {
+	position: absolute;
+	content: "";
+	display: inline;
+	border-top: 1px solid var(--colorTheme);
+	width: 3.75rem;
+	left: 0;
+	top: 50%;
+}
+
+@media (max-width: 768px) {
+	.IfQnEf-since {
+		text-indent: 2.625rem;
+	}
+
+	.IfQnEf-since:before {
+		width: 2.25rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

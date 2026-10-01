@@ -1,0 +1,106 @@
+{
+  "section": {
+    "id": "1442344160530763777",
+    "componentKind": "section",
+    "type": "buttonList",
+    "templateId": "MJ36bm",
+    "runtimeVersion": 2,
+    "settings": {
+      "heading": "Link bar",
+      "nofollow": "normal",
+      "marginTop": true,
+      "separator": true,
+      "textColor": "",
+      "equalWidth": false,
+      "paddingTop": true,
+      "wideScreen": false,
+      "marginBottom": true,
+      "sectionAlias": "链接导航组",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "#f2f2f2",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "itemList": [
+        {
+          "label": "Link label",
+          "link": "javascript:void(0)",
+          "target": "_blank"
+        },
+        {
+          "label": "Link label",
+          "link": "javascript:void(0)",
+          "target": "_blank"
+        },
+        {
+          "active": true,
+          "label": "Link label",
+          "link": "javascript:void(0)",
+          "target": "_blank"
+        },
+        {
+          "label": "Find agents in Wellington",
+          "link": "javascript:void(0)",
+          "target": "_blank"
+        },
+        {
+          "label": "Link label",
+          "link": "javascript:void(0)",
+          "target": "_blank"
+        },
+        {
+          "label": "Link label",
+          "link": "javascript:void(0)",
+          "target": "_blank"
+        },
+        {
+          "label": "Link label",
+          "link": "javascript:void(0)",
+          "target": "_blank"
+        },
+        {
+          "label": "Link label",
+          "link": "javascript:void(0)",
+          "target": "_blank"
+        },
+        {
+          "label": "Link label",
+          "link": "javascript:void(0)",
+          "target": "_blank"
+        },
+        {
+          "label": "Link label",
+          "link": "javascript:void(0)",
+          "target": "_blank"
+        }
+      ]
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

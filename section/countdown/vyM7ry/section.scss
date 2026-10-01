@@ -1,0 +1,39 @@
+.vyM7ry-digit {
+	font-weight: 900;
+	font-size: 2.75rem;
+	color: var(--colorTheme);
+}
+
+.vyM7ry img {
+	width: 3.75rem;
+	height: 3.75rem;
+}
+
+.vyM7ry img + p {
+	margin-top: 0.625rem;
+}
+
+.vyM7ry .text-body {
+	font-size: 1.125rem;
+}
+
+.vyM7ry-item {
+	text-align: center;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.vyM7ry-item:not(:last-child) {
+	border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+	.vyM7ry-item:not(:last-child) {
+		margin-bottom: 2rem;
+		border-right: 0;
+		padding-bottom: 2rem;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

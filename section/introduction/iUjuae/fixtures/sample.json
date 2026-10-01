@@ -1,0 +1,296 @@
+{
+  "section": {
+    "id": "1732815612799004673",
+    "componentKind": "section",
+    "type": "introduction",
+    "templateId": "iUjuae",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "3",
+      "address": true,
+      "content": "<div class=\"newslist\" id=\"feiyong\"><table width=\"569\" border=\"1\"><tbody><tr style=\";height:45px\" class=\"firstRow\"><td style=\"padding: 0px;\" align=\"center\" valign=\"middle\"><p style=\"text-align: left;\"><span style=\"font-size: 16px;\">争议金额（人民币）</span></p></td><td style=\"padding: 0px;\" align=\"center\" valign=\"middle\"><p style=\"text-align: left;\"><span style=\"font-size: 16px;\">仲裁费用（人民币）</span></p></td></tr><tr style=\";height:45px\"><td style=\"padding: 0px;\" align=\"center\" valign=\"middle\"><p style=\"text-align: left;\"><span style=\"font-size: 16px;\">1,000,000元以下&nbsp;（含1,000,000元）</span></p></td><td style=\"padding: 0px;\" align=\"center\" valign=\"middle\"><p style=\"text-align: left;\"><span style=\"font-size: 16px;\">争议金额的3.5%,最低不少于10,000元</span></p></td></tr><tr style=\";height:88px\"><td style=\"padding: 0px;\" align=\"center\" valign=\"middle\"><p style=\"text-align: left;\"><span style=\"font-size: 16px;\">1,000,001元至5,000,000元&nbsp;（含5,000,000元）</span></p></td><td style=\"padding: 0px;\" align=\"center\" valign=\"middle\"><p style=\"text-align: left;\"><span style=\"font-size: 16px;\">35,000元＋争议金额1,000,000元以上部分的2.5%</span></p></td></tr><tr style=\";height:88px\"><td style=\"padding: 0px;\" align=\"center\" valign=\"middle\"><p style=\"text-align: left;\"><span style=\"font-size: 16px;\">5,000,001元至10,000,000元&nbsp;（含10,000,000元）</span></p></td><td style=\"padding: 0px;\" align=\"center\" valign=\"middle\"><p style=\"text-align: left;\"><span style=\"font-size: 16px;\">135,000元＋争议金额5,000,000元以上部分的1.5%</span></p></td></tr><tr style=\";height:45px\"><td style=\"padding: 0px;\" align=\"center\" valign=\"middle\"><p style=\"text-align: left;\"><span style=\"font-size: 16px;\">10,000,001元至50,000,000元（含50,000,000元）</span></p></td><td style=\"padding: 0px;\" align=\"center\" valign=\"middle\"><p style=\"text-align: left;\"><span style=\"font-size: 16px;\">210,000元＋争议金额10,000,000元以上部分的1%</span></p></td></tr><tr style=\";height:89px\"><td style=\"padding: 0px;\" align=\"center\" valign=\"middle\"><p style=\"text-align: left;\"><span style=\"font-size: 16px;\">50,000,000元以上</span></p></td><td style=\"padding: 0px;\" align=\"center\" valign=\"middle\"><p style=\"text-align: left;\"><span style=\"font-size: 16px;\">610,000元＋争议金额50,000,000元以上部分的0.65%</span></p></td></tr></tbody></table><p style=\"text-align: left; line-height: 3em;\"><span style=\"font-size: 16px;\">1.《仲裁费用表一》适用于本仲裁规则第二条第（一）款第1项和第2项规定的国际、涉外及涉港澳台仲裁案件。</span></p><p style=\"text-align: left; line-height: 3em;\"><span style=\"font-size: 16px;\">2.申请仲裁时，当事人应向仲裁院缴付立案费人民币10,000元，用于仲裁申请的审查、立案、输入、归档和通讯等。立案费不予退还</span></p><p style=\"text-align: left; line-height: 3em;\"><span style=\"font-size: 16px;\">3.当事人提出仲裁请求或反请求，应以《仲裁费用表一》列明的标准向仲裁院预缴仲裁费用。《仲裁费用表一》中的争议金额，以当事人请求的数额为准。没有争议金额或者争议金额不明确的，由仲裁院根据争议所涉及权益的具体情况确定预先收取的仲裁费用数额。</span></p><p style=\"text-align: left; line-height: 3em;\"><span style=\"font-size: 16px;\">4.当事人预缴的仲裁费用为外币时，按《仲裁费用表一》列明的标准计算与人民币等值的外币。</span></p><p style=\"text-align: left; line-height: 3em;\"><span style=\"font-size: 16px;\">5.仲裁院可以按照本仲裁规则的有关规定收取其他合理的实际开支费用。</span></p><p style=\"text-align: left; line-height: 3em;\"><span style=\"font-size: 16px;\">6.除本仲裁规则另有规定外，仲裁员报酬由仲裁院确定，从仲裁院按照《仲裁费用表一》收取的仲裁费用中支付。仲裁院在确定仲裁员报酬数额时，综合考虑仲裁员办理案件所花费时间、案件的争议金额、案件的复杂程度、仲裁员的勤勉程度和效率高低等因素。</span></p>            </div>",
+      "marginTop": false,
+      "paddingTop": true,
+      "wideScreen": false,
+      "emailVisible": true,
+      "marginBottom": false,
+      "phoneVisible": true,
+      "sectionAlias": "介绍",
+      "mobileVisible": true,
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "companyVisible": true,
+      "contactHeading": "Contact Us",
+      "backgroundColor": "#f2f2f2",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "freePhoneVisible": false,
+      "backgroundPosition": "",
+      "sectionCSS": ".MV3iA3 {\n\toverflow: hidden;\n\tbackground-color: #2b2f36;\n}\n\n.MV3iA3-slogan {\n\tborder-bottom: 1px solid rgba(255, 255, 255, 0.2);\n\tpadding-top: 20px;\n\tpadding-bottom: 20px;\n}\n\n.MV3iA3-slogan .container {\n\tdisplay: flex;\n\tjustify-content: space-between;\n\talign-items: center;\n}\n\n.MV3iA3-slogan .container h3 {\n\tmargin: 0 10px 0 0;\n\tcolor: #d7d6d6;\n\tfont-size: [[${globalDesignMode ? 'calc(var(--fontSizeHeading) * 1px)' : fontSizeHeading + 'px'}]];\n}\n\n.MV3iA3-slogan .container h3 + form {\n\tmargin-left: 1rem;\n}\n\n.MV3iA3-slogan .container form {\n\tmax-width: 40%;\n\tflex: 1;\n}\n\n.MV3iA3 .text-subheading {\n\tmargin-bottom: 1rem;\n}\n\n.MV3iA3-container .has-divider .text-subheading {\n\tposition: relative;\n\tpadding-bottom: 0.625rem;\n\tborder-bottom: 1px solid rgba(255, 255, 255, 0.2);\n\tmargin-bottom: 1.25rem;\n}\n\n.MV3iA3-container .has-divider .text-subheading:after {\n\tposition: absolute;\n\twidth: 0.625rem;\n\theight: 0.625rem;\n\tborder: 1px solid rgba(255, 255, 255, 0.2);\n\tcontent: \"\";\n\tborder-radius: 0.3125rem;\n\tleft: 0;\n\tbottom: -0.3125rem;\n\tbackground-color: #2b2f36;\n}\n\n.MV3iA3-container [class*=text-],\n.MV3iA3-container [class*=ic-],\n.MV3iA3-container a {\n\tcolor: [[${globalDesignMode ? 'var(--colorBody)' : colorBody}]];\n}\n\n.MV3iA3-container .enquiry-form {\n\tmargin-top: 0.5rem;\n}\n\n.MV3iA3-copyright {\n\tpadding-top: 20px;\n\tpadding-bottom: 20px;\n\tborder-top: 1px solid rgba(255, 255, 255, 0.2);\n}\n\n.MV3iA3-copyright li:not(:last-child) {\n\tmargin-bottom: 1rem;\n}\n\n.MV3iA3-copyright .copyright a {\n\tdisplay: inline-block;\n\tmargin-left: 0.625rem;\n}\n\n.MV3iA3-copyright .copyright a:before {\n\tmargin-right: 0.625rem;\n\tcontent: \"|\";\n}\n\n.MV3iA3-copyright * {\n\tcolor: #A0A0A0;\n}\n\n.MV3iA3 .MV3iA3-social a {\n\tmargin: 0 5px 5px 0;\n}\n\n.MV3iA3 .MV3iA3-social i {\n\tfont-size: 1.875rem;\n}\n\n.MV3iA3 .MV3iA3-social img {\n\twidth: 1.875rem;\n}\n\n.MV3iA3 .MV3iA3-code img {\n\twidth: 6.25rem;\n}\n\n.MV3iA3 .MV3iA3-code .social-it:not(:last-child) {\n\tmargin-right: 5px;\n}\n\n.MV3iA3 .MV3iA3-logo {\n\tmax-width: 60%;\n}\n\n.MV3iA3 .MV3iA3-office h3 {\n\tfont-weight: bold;\n}\n\n.MV3iA3 .MV3iA3-office:not(:last-child) {\n\tmargin-bottom: 1rem;\n}\n\n.MV3iA3 .MV3iA3-office [class*=col-] {\n\tword-wrap: break-word;\n\tword-break: break-word;\n}\n\n.MV3iA3 .MV3iA3-office [class*=col-]:not(:last-child) {\n\tpadding-bottom: 5px;\n}\n\n.MV3iA3 a:hover i, .MV3iA3 a:hover {\n\tcolor: [[${globalDesignMode ? 'var(--colorButtonHover)' : colorButtonHover}]];\n\ttext-decoration: none;\n}\n\n@media (max-width: 768px) {\n\t.MV3iA3-slogan .container {\n\t\tdisplay: block;\n\t}\n\n\t.MV3iA3-slogan .container h3 + form {\n\t\tmargin-top: 1rem;\n\t}\n\n\t.MV3iA3-slogan .container form {\n\t\tmax-width: 100%;\n\t}\n\n\t.MV3iA3 .MV3iA3-office:not(:last-child) {\n\t\tborder-bottom: 1px solid rgba(255, 255, 255, 0.3);\n\t\tpadding-bottom: 1rem;\n\t}\n\n\t.MV3iA3 .container:not(.has-divider) .MV3iA3-column .col-12:not(:last-child) {\n\t\tmargin-bottom: 1rem;\n\t\tpadding-bottom: 1rem;\n\t\tborder-bottom: 1px solid rgba(255, 255, 255, 0.3);\n\t}\n\n\t.MV3iA3 .MV3iA3-social a {\n\t\tmargin: 0 5px 5px 0;\n\t}\n\n\t.MV3iA3 .MV3iA3-social a i {\n\t\tfont-size: 1.625rem;\n\t}\n\n\t.MV3iA3 .MV3iA3-code img {\n\t\tmargin: 0 5px 0 0;\n\t}\n\n\t.MV3iA3 .MV3iA3-logo {\n\t\tmax-height: 2.5rem;\n\t\tmax-width: 6.25rem;\n\t}\n}\n\n.MV3iA3-tabBar {\n\tposition: fixed;\n\tz-index: 100;\n\twidth: 100%;\n\theight: 3.5rem;\n\tbackground-color: [[${globalDesignMode ? 'var(--colorTheme)' : colorTheme}]];\n\tleft: 0;\n\tborder: 0;\n\tbottom: 0;\n\tdisplay: flex;\n\tborder-top: 1px solid rgba(255, 255, 255, 0.6);\n}\n\n.MV3iA3-tabBar a {\n\theight: 100%;\n\tflex: 1 1 auto;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n.MV3iA3-tabBar a div {\n\tcolor: #fff;\n}\n\n.MV3iA3-tabBar a img {\n\twidth: 1rem;\n\theight: 1rem;\n\tdisplay: inline-block;\n\tvertical-align: center;\n}\n\n.MV3iA3-tabBar a:not(:last-child) {\n\tborder-right: 1px solid rgba(255, 255, 255, 0.6);\n}\n\n@media (min-width: 768px) {\n\t.MV3iA3-tabBar {\n\t\tdisplay: none;\n\t}\n}",
+      "isGlobalSection": false,
+      "linkList": [
+        {
+          "link": "https://www.163.com",
+          "label": "163",
+          "active": "none"
+        },
+        {
+          "link": "https://www.263.com",
+          "label": "263",
+          "active": "active"
+        },
+        {
+          "link": "https://www.363.com",
+          "label": "363",
+          "active": "none"
+        }
+      ]
+    },
+    "bindings": {
+      "menuType": {
+        "sourceType": "menu",
+        "ids": [
+          1
+        ]
+      }
+    },
+    "data": {
+      "menuType": [
+        {
+          "active": false,
+          "avatar": "",
+          "cleanLink": "/products",
+          "current": false,
+          "id": "1654395404160729090",
+          "level": 1,
+          "link": "/products#全部商品",
+          "navType": 1,
+          "parentId": "0",
+          "siteId": "1648638610780069889",
+          "subList": [
+            {
+              "active": false,
+              "avatar": "",
+              "cleanLink": "/collection/power-station",
+              "current": false,
+              "id": "1733150578856448002",
+              "level": 2,
+              "link": "/collection/power-station#Power Station",
+              "navType": 1,
+              "parentId": "1654395404160729090",
+              "siteId": "1648638610780069889",
+              "subList": [],
+              "target": "",
+              "templateId": "",
+              "title": "Power Station"
+            },
+            {
+              "active": false,
+              "avatar": "",
+              "cleanLink": "/products/collection",
+              "current": false,
+              "id": "1733150735232684033",
+              "level": 2,
+              "link": "/products/collection#全部商品集合",
+              "navType": 1,
+              "parentId": "1654395404160729090",
+              "siteId": "1648638610780069889",
+              "subList": [],
+              "target": "",
+              "templateId": "",
+              "title": "All ME"
+            }
+          ],
+          "target": "",
+          "templateId": "",
+          "title": "Products"
+        },
+        {
+          "active": false,
+          "avatar": "",
+          "cleanLink": "/page/about",
+          "current": false,
+          "id": "1721546784272035841",
+          "level": 1,
+          "link": "/page/about#About",
+          "navType": 1,
+          "parentId": "0",
+          "siteId": "1648638610780069889",
+          "subList": [],
+          "target": "",
+          "templateId": "",
+          "title": "About"
+        }
+      ],
+      "formData": {
+        "title": "Contact us",
+        "remark": "This is the describe for inquiry form",
+        "fieldList": [
+          {
+            "sort": "1",
+            "required": false,
+            "fieldName": "lastName",
+            "fieldType": "text",
+            "fieldLabel": "Last name",
+            "placeholder": "Please enter last name",
+            "defaultValue": ""
+          },
+          {
+            "sort": "2",
+            "required": false,
+            "fieldName": "firstName",
+            "fieldType": "text",
+            "fieldLabel": "First name",
+            "placeholder": "Please enter first name",
+            "defaultValue": ""
+          },
+          {
+            "id": "1158289022079750146",
+            "sort": "3",
+            "required": true,
+            "fieldName": "email",
+            "fieldType": "email",
+            "fieldLabel": "Email",
+            "placeholder": "Please enter email",
+            "defaultValue": ""
+          },
+          {
+            "sort": "4",
+            "formId": "1157492648300646402",
+            "required": true,
+            "fieldName": "phone",
+            "fieldType": "tel",
+            "fieldLabel": "Phone",
+            "placeholder": "Please enter phone number",
+            "defaultValue": ""
+          },
+          {
+            "sort": "5",
+            "formId": "1157492648300646402",
+            "required": true,
+            "fieldName": "message",
+            "fieldType": "textarea",
+            "fieldLabel": "Message",
+            "placeholder": "Please tell us the message",
+            "defaultValue": ""
+          }
+        ],
+        "buttonLabel": "Submit"
+      }
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "$",
+    "phone": "0755-88888888",
+    "email": "devin@fomille.com",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "five.123.com",
+    "siteName": "B2B开发测试（勿删）",
+    "addOnHeader": "-附加标题",
+    "address": "Baidu Campus, No. 10 Shangdi 10th Street, Haidian District, Beijing, China1",
+    "areaCode": "",
+    "articleQuantity": 0,
+    "cityName": "崇文区",
+    "company": "弗米乐（深圳）科技有限公司",
+    "contact": "devin shieh",
+    "countryName": "中国",
+    "createTime": 1577264254667,
+    "currencyCode": "$",
+    "currencyName": "美元",
+    "defaultRegion": 0,
+    "downPass": "1235",
+    "expiryTime": 1700064000000,
+    "facebookPixel": "",
+    "favicon": "",
+    "formQuantity": 0,
+    "freePhone": "+86-4008000000",
+    "goodsQuantity": 0,
+    "honestScore": 0,
+    "keepLang": 1,
+    "latitude": 39.911019,
+    "lengthUnit": "mm",
+    "logisticsScore": 0,
+    "logo": "",
+    "longitude": 116.396315,
+    "maxLang": 1,
+    "mobile": "13800138000",
+    "praiseRate": 0,
+    "provinceName": "北京",
+    "region": "en",
+    "rootLink": "https://five.123.com/",
+    "scriptBottom": "",
+    "scriptHead": "",
+    "scriptService": "",
+    "serviceScore": 0,
+    "siteId": "1209760082859032577",
+    "siteType": 3,
+    "state": 0,
+    "synopsis": "",
+    "systemDomain": "five.123.com",
+    "timeZone": "Asia/Rangoon",
+    "unitSystem": "metric",
+    "videoLimit": 0,
+    "weightUnit": "g",
+    "social": {
+      "socialPinterest": "",
+      "socialGooglePlus": "",
+      "socialFancy": "",
+      "socialVimeo": "",
+      "socialYoutube": "",
+      "sectionAlias": "社交媒体",
+      "socialFacebook": "",
+      "socialWeibo": "",
+      "socialTiktok": "",
+      "socialShareImage": "",
+      "socialTumblr": "",
+      "socialInstagram": "",
+      "socialTwitter": "",
+      "socialSnapchat": "",
+      "socialLinkedin": "",
+      "socialImage": []
+    }
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": "Home",
+    "seoDescription": "Home",
+    "id": "1648638611904143361",
+    "avatar": "",
+    "title": "Home",
+    "seoTitle": "Home",
+    "seoKeywords": "Home"
+  },
+  "params": {
+    "originalURL": "/",
+    "cache": {},
+    "canonical": "https://five.fox.comnull",
+    "defaultRegion": 0,
+    "id": "",
+    "ids": [],
+    "itemLink": "//",
+    "mainDomain": "five.fox.com",
+    "pageIndex": 1,
+    "pageNotFund": "/404",
+    "pageSize": 12,
+    "pageType": "homePage",
+    "params": {},
+    "prefix": "",
+    "region": "en",
+    "siteId": "1648638610780069889",
+    "sortBy": "",
+    "url": "",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Keywords",
+      "product": "Products",
+      "region": "Region/Language",
+      "lang": "英语",
+      "article": "Article",
+      "home": "Home"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}${section.settings.layout == 'slide' ? ' section-neighbor' : ''}|">
+        <div th:class="|text-${section.settings.textAlign} section-title section-neighbor|" th:if="${not #strings.isEmpty(section.settings.heading)
+            || not #strings.isEmpty(section.settings.subheading)
+            || not #strings.isEmpty(section.settings.content)
+            || section.settings.dividerWidth > 0
+            }"
+           >
+            <h3 class="text-heading" th:if="${ not #strings.isEmpty(section.settings.heading) }">
+                [[${ section.settings.heading }]]
+            </h3>
+
+            <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
+                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+            </div>
+
+            <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
+                [[${ section.settings.subheading }]]
+            </h5>
+            <ul th:class="|text-body break-word ${not #strings.isEmpty(section.settings.symbol) ? section.settings.symbol : ''}|" th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                <th:block th:each="textLine,saltLine:${textLines}">
+                    <li th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                </th:block>
+            </ul>
+        </div>
+        <div class="row row-gutter section-neighbor" th:if="${not #lists.isEmpty(section.data.collectionList) && section.settings.layout != 'slide'}">
+            <div th:each="o,salt:${section.data.collectionList}" th:class="|col-md-${section.settings.column} col-${section.settings.mobColumn}|">
+                <a th:href="|${site.urlPrefix}collection/${o.seoUrl}|">
+                    <div class="card section-card">
+                        <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
+                            <img class="embed-responsive-item card-img-top lazy" th:src="|${o.coverImage}!1|" th:data-original="|${o.coverImage}!${section.settings.wideScreen ? 'f' : ''}${section.settings.column}|" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.coverImage)}">
+                        </div>
+                        <div th:class="|card-body ${section.settings.contentAlign}|">
+                            <h3 class="text-content-heading" th:text="${o.title}"></h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="slick slick-card section-neighbor"
+        th:if="${section.settings.layout == 'slide' && #lists.size(section.data.collectionList) > 0}"
+        th:with="desktopQuantity = ${ #numbers.formatInteger(12 / section.settings.column, 1,'POINT') }, hasDots = ${#lists.size(section.data.collectionList) > desktopQuantity}"
+        >
+        <th:block th:if="${ hasDots }">
+            <div th:class="|slick-next ${#strings.isEmpty(section.settings.carouselArrowStyle) ? '' : section.settings.carouselArrowStyle}${hasDots ? ' dots' : ''}|" th:data-carousel-next="${ section.id }"></div>
+            <div th:class="|slick-prev ${#strings.isEmpty(section.settings.carouselArrowStyle) ? '' : section.settings.carouselArrowStyle}${hasDots ? ' dots' : ''}|" th:data-carousel-prev="${ section.id }"></div>
+        </th:block>
+        <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+            <div th:class="|slick-slider slick-slider-transect has-gutter dots-${section.settings.carouselNavStyle}|"
+                 th:data-carousel="${ section.id }"
+                 data-effect="slide"
+                 th:data-dots="${hasDots ? 1 : 0}"
+                 th:data-arrow="${hasDots ? 1 : 0}"
+                 th:data-column="${desktopQuantity}"
+                 th:data-mobile-column="${ #numbers.formatInteger(12 / section.settings.mobColumn, 1,'POINT') }"
+                 th:data-delay="${#strings.isEmpty(section.settings.carouselAutoPlay) ? 0 : section.settings.carouselAutoPlay}"
+            >
+                <div class="slick-slide" th:each="o, salt:${ section.data.collectionList }">
+                    <a th:href="|${site.urlPrefix}collection/${o.seoUrl}|">
+                        <div class="card section-card">
+                            <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
+                                <img class="embed-responsive-item card-img-top lazy" th:src="|${o.coverImage}!1|" th:data-original="|${o.coverImage}!${section.settings.wideScreen ? 'f' : ''}${section.settings.column}|" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.coverImage)}">
+                            </div>
+                            <div th:class="|card-body ${section.settings.contentAlign}|">
+                                <h3 class="text-content-heading" th:text="${o.title}"></h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} section-neighbor text-${section.settings.textAlign}|" th:if="${section.settings.buttonStyle != 'invisible' && section.settings.layout != 'firstCover' && not #strings.isEmpty(section.settings.buttonLabel)}">
+        <button th:class="|btn ${ section.settings.buttonStyle }|" th:if="${#strings.isEmpty(section.settings.buttonLink) && section.settings.buttonStyle != 'invisible' && not #strings.isEmpty(section.settings.buttonLabel)}">[[${section.settings.buttonLabel}]]</button>
+        <a th:href="${section.settings.buttonLink}" th:class="|btn ${section.settings.buttonStyle}|" th:if="${not #strings.isEmpty(section.settings.buttonLink) && section.settings.buttonStyle != 'invisible' && not #strings.isEmpty(section.settings.buttonLabel)}">[[${section.settings.buttonLabel}]]</a>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

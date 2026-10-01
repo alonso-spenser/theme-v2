@@ -1,0 +1,40 @@
+.rQFBbe-tile .card-body {
+	border-bottom-left-radius: calc(var(--cardBorderRadius) * 1px);
+	border-bottom-right-radius: calc(var(--cardBorderRadius) * 1px);
+}
+
+.rQFBbe-container.no-gutters {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.rQFBbe-list {
+	background-color: #000;
+}
+
+.rQFBbe-list .embed-responsive-item {
+	opacity: .6;
+	transition: all 0.25s;
+}
+
+.rQFBbe-list-content {
+	bottom: 1.25rem;
+	position: absolute;
+	left: 1rem;
+	right: 1rem;
+}
+
+.rQFBbe-list-content .text-content-heading {
+	color: #fff;
+}
+
+.rQFBbe-list-content h3 + .btn {
+	margin-top: 0.5rem;
+}
+
+.rQFBbe-list:hover .embed-responsive-item {
+	opacity: .8;
+	transform: scale(1.05);
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

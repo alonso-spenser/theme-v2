@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://oga.example/schema/theme/component-publish-package.v1.json",
+  "title": "OGA Theme Component Publish Package v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "packageVersion",
+    "identity",
+    "checksum",
+    "definition",
+    "defaults",
+    "assets"
+  ],
+  "properties": {
+    "packageVersion": { "const": 1 },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "protocolVersion",
+        "componentKind",
+        "type",
+        "templateId",
+        "runtimeVersion",
+        "definitionVersion",
+        "schemaVersion"
+      ],
+      "properties": {
+        "protocolVersion": { "type": "integer", "minimum": 1 },
+        "componentKind": {
+          "enum": ["global-setting", "layout", "page-section", "section"]
+        },
+        "type": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9]*$"
+        },
+        "templateId": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+        },
+        "runtimeVersion": { "type": "integer", "minimum": 1 },
+        "definitionVersion": { "type": "integer", "minimum": 1 },
+        "schemaVersion": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "checksum": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "definition": { "type": "object" },
+    "defaults": { "type": "object" },
+    "assets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "thymeleafTemplate",
+        "baseCss",
+        "variableCss",
+        "script"
+      ],
+      "properties": {
+        "thymeleafTemplate": { "type": "string", "minLength": 1 },
+        "baseCss": { "type": "string" },
+        "variableCss": { "type": "string" },
+        "script": { "type": "string" }
+      }
+    }
+  }
+}

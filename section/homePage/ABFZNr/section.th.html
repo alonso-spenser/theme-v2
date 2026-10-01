@@ -1,0 +1,57 @@
+<section th:class="|section section-dialog middle ${ section.settings.popup == 'invisible' ? 'collapse' : ''} ${ section.templateId } section-${ section.id }|"
+    th:data-section="${section.templateId}"
+    th:if="${ not #strings.isEmpty(section.settings.popup) && section.settings.popup != 'invisible'}"
+    >
+    <div th:class="|section-dialog-container ${ section.settings.style }|">
+        <div th:class="|${ section.settings.style == 'transparent' ? '' : 'section-padding-all ' }section-title section-dialog-content|" th:if="${not #strings.isEmpty(section.settings.heading)
+        || not #strings.isEmpty(section.settings.subheading)
+        || not #strings.isEmpty(section.settings.content)
+        || section.settings.dividerWidth > 0
+        }">
+            <h3 class="text-heading text-center" th:if="${ not #strings.isEmpty(section.settings.heading) && section.settings.titleStyle == 'top' }">
+                [[${ section.settings.heading }]]
+            </h3>
+
+            <div th:class="|section-title-divider center${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
+                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+            </div>
+
+            <h3 class="text-heading text-center" th:if="${ not #strings.isEmpty(section.settings.heading) && section.settings.titleStyle == 'center' }">
+                [[${ section.settings.heading }]]
+            </h3>
+
+            <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
+                [[${ section.settings.subheading }]]
+            </h5>
+
+            <ul th:class="|text-list ${section.settings.symbol} ${section.settings.textAlign}|" th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                <th:block th:each="textLine,saltLine:${textLines}">
+                    <li th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                </th:block>
+            </ul>
+            <div th:class="|text-button ${ section.settings.buttonStyle }|" th:if="${ (not #strings.isEmpty(section.settings.cancelOption) || not #strings.isEmpty(section.settings.confirmOption)) && section.settings.buttonStyle == 'horizontal' }">
+                <button th:class="|btn ${section.settings.cancelButtonStyle}|" data-action="cancel" th:if="${ not #strings.isEmpty(section.settings.cancelOption) }">
+                    [[${section.settings.cancelOption}]]
+                </button>
+                <button th:class="|btn ${section.settings.confirmButtonStyle}|" data-action="confirm" th:data-close="${ section.settings.closeType }" th:if="${ not #strings.isEmpty(section.settings.confirmOption) }">
+                    [[${section.settings.confirmOption}]]
+                </button>
+            </div>
+            <div th:class="|text-button ${ section.settings.buttonStyle }|" th:if="${ (not #strings.isEmpty(section.settings.cancelOption) || not #strings.isEmpty(section.settings.confirmOption)) && section.settings.buttonStyle == 'vertical' }">
+                <p>
+                    <button th:class="|btn ${section.settings.cancelButtonStyle}|" data-action="cancel" th:if="${ not #strings.isEmpty(section.settings.cancelOption) }">
+                        [[${section.settings.cancelOption}]]
+                    </button>
+                </p>
+                <p>
+                    <button th:class="|btn ${section.settings.confirmButtonStyle}|" data-action="confirm" th:data-close="${ section.settings.closeType }" th:if="${ not #strings.isEmpty(section.settings.confirmOption) }">
+                        [[${section.settings.confirmOption}]]
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

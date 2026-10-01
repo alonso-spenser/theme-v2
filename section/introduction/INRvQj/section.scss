@@ -1,0 +1,17 @@
+.INRvQj .text-content-heading {
+	font-weight: bold;
+}
+
+.INRvQj img {
+	width: 3rem;
+}
+
+.INRvQj .media-icon i {
+	font-size: 3rem;
+}
+
+.INRvQj .media-icon + .media-body {
+	margin-left: 1.5rem;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

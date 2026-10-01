@@ -1,0 +1,75 @@
+{
+  "section": {
+    "id": "1473980945064947714",
+    "componentKind": "section",
+    "type": "featuredContent",
+    "templateId": "f667Zz",
+    "runtimeVersion": 2,
+    "settings": {
+      "style": "card",
+      "column": "4",
+      "layout": "tile",
+      "symbol": "list-demical",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Featured Content",
+      "linkStyle": "btn-primary",
+      "marginTop": false,
+      "mobColumn": "12",
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "buttonLink": "",
+      "imageScale": "16by9",
+      "paddingTop": true,
+      "popupColor": "",
+      "subheading": "this is a new beginning",
+      "wideScreen": false,
+      "buttonLabel": "Button label",
+      "buttonStyle": "invisible",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "marginBottom": false,
+      "sectionAlias": "推荐内容",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "cardBackground": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "carouselAutoPlay": "5000",
+      "carouselNavStyle": "dark",
+      "colorContentText": "",
+      "backgroundPosition": "",
+      "carouselArrowStyle": "dark",
+      "colorContentHeading": "",
+      "contentList": []
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

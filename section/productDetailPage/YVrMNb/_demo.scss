@@ -1,0 +1,58 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-YVrMNb .section-title-divider {
+        
+            width: 20%;
+        
+    }
+    
+
+
+@media (min-width: 768px) {
+    .section-demo-YVrMNb .section-title [class^=text-] {
+        width: 20%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section-demo-YVrMNb .section-rich-text, .section-demo-YVrMNb .section-rich-text * {
+   line-height: 33px;
+}
+
+
+
+
+
+
+
+
+
+
+.section-demo-YVrMNb .tips {
+    font-size: 20px;
+}
+
+
+
+.section-demo-YVrMNb .YVrMNb-section:not(:last-child) {
+    border-bottom: none;
+}
+
+
+
+.section-demo-YVrMNb .YVrMNb-prompt {
+    color: #ff0000;
+}

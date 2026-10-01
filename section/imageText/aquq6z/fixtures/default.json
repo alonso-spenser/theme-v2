@@ -1,0 +1,58 @@
+{
+  "section": {
+    "id": "1555043250908905473",
+    "componentKind": "section",
+    "type": "imageText",
+    "templateId": "aquq6z",
+    "runtimeVersion": 2,
+    "settings": {
+      "alt": "",
+      "image": "",
+      "layout": "center",
+      "content": "Expert Product Support",
+      "heading": "Support",
+      "marginTop": false,
+      "textColor": "",
+      "buttonLink": "",
+      "buttonColor": "",
+      "buttonLabel": "LEARN MORE > ",
+      "buttonStyle": "btn-text",
+      "marginBottom": false,
+      "sectionAlias": "图文",
+      "paddingTop": "",
+      "paddingBottom": "",
+      "wideScreen": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "backgroundSize": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

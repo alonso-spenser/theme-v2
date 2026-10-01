@@ -1,0 +1,48 @@
+.aQZRjy p + p {
+	margin-top: 0.3125rem;
+}
+
+.aQZRjy-list .embed-responsive {
+	width: 9.375rem;
+	margin-right: 0.9375rem;
+}
+
+.aQZRjy-normal .embed-responsive + [class*=text-] {
+	margin-top: 1rem;
+}
+
+.aQZRjy .aQZRjy-slick {
+	position: relative;
+}
+
+.aQZRjy .multi-row {
+	box-shadow: none !important;
+	border: 1px solid #f2f2f2;
+}
+
+.aQZRjy .multi-row .text-content-heading {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+
+.aQZRjy .slick-slide div:not(:last-of-type) .slick-slide {
+	margin-bottom: 0.9375rem;
+}
+
+.aQZRjy .slick-slide.slick-active:last-child .slick-slide .multi-row {
+	margin-right: 2px;
+}
+
+.aQZRjy .nav-pills .nav-link {
+	transition: all 0.25s;
+}
+
+.aQZRjy .nav-pills .nav-link:hover:hover {
+	background-color: var(--colorButtonHover);
+	color: var(--colorButtonHoverLabel);
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

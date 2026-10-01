@@ -1,0 +1,63 @@
+{
+  "section": {
+    "id": "1442686606993223681",
+    "componentKind": "section",
+    "type": "imageText",
+    "templateId": "e6zuQr",
+    "runtimeVersion": 2,
+    "settings": {
+      "layout": "left",
+      "content": " Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review. ",
+      "heading": "This a heading",
+      "padding": 0,
+      "marginTop": false,
+      "maskColor": "",
+      "textColor": "",
+      "buttonLink": "",
+      "linkSymbol": "list-demical",
+      "paddingTop": true,
+      "subheading": "This a subheading",
+      "wideScreen": false,
+      "buttonLabel": "Button",
+      "buttonStyle": "invisible",
+      "marginBottom": false,
+      "sectionAlias": "图文链接组",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "#F2F2F2",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "secondButtonLink": "",
+      "secondButtonLabel": "Button",
+      "secondButtonStyle": "invisible",
+      "backgroundPosition": "",
+      "linkList": []
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

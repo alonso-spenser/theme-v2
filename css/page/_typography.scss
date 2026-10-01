@@ -1,0 +1,137 @@
+/**
+ * ----------------------------------------------------------------------------
+ * 大标题、标题、副标题、正文、菜单、内容标题
+ * ----------------------------------------------------------------------------
+ */
+.text {
+  &-price {
+    color: var(--colorPrice);
+  }
+
+  &-secondary {
+    color: var(--colorSecondary) !important;
+  }
+
+  &-primary {
+    color: var(--colorTheme) !important;
+  }
+
+  &-headline {
+    font-family: var(--typeHeadline);
+    font-size: calc(var(--fontSizeHeadline) * 1px);
+  }
+
+  &-heading {
+    font-family: var(--typeHeading);
+    font-size: calc(var(--fontSizeHeading) * 1px);
+    color: var(--colorHeading);
+
+    label {
+      color: var(--colorTheme) !important;
+    }
+  }
+
+  &-subheading {
+    font-family: var(--typeSubheading);
+    font-size: calc(var(--fontSizeSubheading) * 1px);
+    color: var(--colorSubheading);
+  }
+
+  &-content-heading {
+    font-family: var(--typeContentHeading);
+    font-size: calc(var(--fontSizeContentHeading) * 1px);
+  }
+
+  &-menu {
+    font-size: calc(var(--fontSizeMenu) * 1px);
+    font-family: var(--typeMenu);
+  }
+
+  &-body {
+    font-family: var(--typeBody);
+    font-size: calc(var(--fontSizeBody) * 1px);
+    color: var(--colorBody);
+    word-wrap: break-word;
+    word-break: break-word;
+
+    li,
+    p {
+      color: var(--colorBody);
+      word-wrap: break-word;
+      word-break: break-word;
+
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    & + & {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+[class*="text-"] {
+  & + & {
+    margin-top: 0.5rem;
+  }
+
+  & + .text-neighbor {
+    margin-top: calc(var(--marginHeight) * 1px);
+  }
+
+  @media (max-width: 767.98px) {
+    & + .text-neighbor {
+      margin-top: 0.75rem;
+    }
+  }
+}
+
+h1 {
+  font-family: var(--typeHeading);
+  font-size: calc(var(--fontSizeHeading) * 1px);
+  color: var(--colorHeading);
+}
+
+.section-paragraph-heading {
+  font-family: var(--typeBody);
+  font-size: calc(var(--fontSizeBody) * 1px);
+  color: var(--colorBody);
+}
+
+// 移动端
+@media (max-width: 767.98px) {
+  h1 {
+    font-size: calc(var(--fontSizeHeadingMob) * 1px);
+  }
+
+  .text {
+
+    &-headline {
+      font-size: calc(var(--fontSizeHeadlineMob) * 1px);
+    }
+
+    &-heading {
+      font-size: calc(var(--fontSizeHeadingMob) * 1px);
+    }
+
+    &-subheading {
+      font-size: calc(var(--fontSizeSubheadingMob) * 1px);
+    }
+
+    &-content-heading {
+      font-size: calc(var(--fontSizeContentHeadingMob) * 1px);
+    }
+
+    &-menu {
+      font-size: calc(var(--fontSizeMenuMob) * 1px);
+    }
+
+    &-body {
+      font-size: calc(var(--fontSizeBodyMob) * 1px);
+    }
+  }
+}
+
+.text-heading, .text-subheading, .text-content-heading { font-weight: var(--weightHeading, normal); }
+@media (max-width: 767.98px) { .section-paragraph-heading { font-size: calc(var(--fontSizeBodyMob) * 1px); } }

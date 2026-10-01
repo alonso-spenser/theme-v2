@@ -1,0 +1,52 @@
+
+/**
+ * ----------------------------------------------------------------------------
+ * title & button
+ * ----------------------------------------------------------------------------
+ */
+.section-title {
+
+  &-divider {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      max-width: 100%;
+    }
+
+    &.has-line {
+      &:after {
+        content: "";
+        display: inline-block;
+        border-top: calc(var(--borderWidth) * 1px) var(--borderStyle) var(--colorBorder);
+        width: 2.5rem;
+      }
+    }
+
+    &.right {
+      justify-content: flex-end;
+    }
+
+    &.center {
+      justify-content: center;
+    }
+  }
+
+  [class^=text-] {
+    margin-left: auto;
+    margin-right: auto;
+
+    & + .section-title-divider {
+      margin-top: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    & + .text-list {
+      margin-top: 1.25rem;
+    }
+  }
+
+  .text-button {
+    margin-top: 1rem;
+  }
+}

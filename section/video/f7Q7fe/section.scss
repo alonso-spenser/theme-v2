@@ -1,0 +1,131 @@
+.f7Q7fe {
+	width: 100%;
+	height: 100vh;
+}
+
+.f7Q7fe .embed-responsive {
+	width: 100%;
+	height: 100%;
+}
+
+.f7Q7fe .embed-responsive-item {
+	z-index: 2;
+	justify-content: center;
+	align-items: center;
+}
+
+.f7Q7fe-content img {
+	max-height: 2.5rem;
+}
+
+.f7Q7fe-content img + h3 {
+	margin-top: 1rem;
+}
+
+.f7Q7fe-content h3 {
+	color: rgb(255, 255, 255);
+	font-weight: 600;
+	font-size: calc(var(--fontSizeHeadline) * 1px);
+	font-family: var(--typeHeadline);
+}
+
+.f7Q7fe-content h3 + .f7Q7fe-play {
+	margin-top: 1.5rem;
+}
+
+.f7Q7fe-play {
+	display: inline-block;
+	border: 1px solid rgba(255, 255, 255, 0.7);
+	border-radius: 24.5px;
+	padding: 0.5625rem 1rem;
+	cursor: pointer;
+	color: #fff;
+	line-height: 28px;
+	font-size: 20px;
+}
+
+.f7Q7fe-play:after {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 0.255em;
+	vertical-align: center;
+	content: "";
+	border-width: 0.375rem;
+	border-color: transparent transparent transparent #fff;
+	border-style: dotted dotted dotted solid;
+}
+
+@media (max-width: 768px) {
+	.f7Q7fe {
+		margin-top: 0;
+		height: auto;
+	}
+
+	.f7Q7fe .embed-responsive:before {
+		padding-top: 56.25%;
+	}
+
+	.f7Q7fe-play {
+		border-radius: 24.5px;
+		cursor: pointer;
+		line-height: normal;
+		font-size: 1rem;
+	}
+
+	.f7Q7fe-content img {
+		max-height: 1.875rem;
+	}
+
+	.f7Q7fe-content img + h3 {
+		margin-top: 1rem;
+	}
+
+	.f7Q7fe-content h3 {
+		line-height: normal;
+		font-size: 1rem;
+	}
+
+	.f7Q7fe-content h3 + .f7Q7fe-play {
+		margin-top: 1rem;
+	}
+}
+
+.section-dialog-video {
+	position: relative;
+	z-index: 4001;
+	background-color: #000;
+	text-align: left;
+	display: inline-block;
+	vertical-align: middle;
+	backface-visibility: hidden;
+	width: 70%;
+	max-height: calc(100% - 7.5rem);
+}
+
+@media (max-width: 768px) {
+	.section-dialog-video {
+		width: 90%;
+	}
+}
+
+.section-dialog-video .section-dialog-video-close {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	right: 0;
+	z-index: 4002;
+	top: -60px;
+	cursor: pointer;
+	line-height: 60px;
+	font-size: 30px;
+	text-align: center;
+	color: #fff;
+}
+
+.section-dialog-video .section-dialog-video-close:before {
+	font-family: "iconfont" !important;
+	content: "\e60a";
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

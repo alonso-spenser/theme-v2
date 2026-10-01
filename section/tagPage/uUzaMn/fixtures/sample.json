@@ -1,0 +1,192 @@
+{
+  "section": {
+    "id": "1423160074516021250",
+    "componentKind": "page-section",
+    "type": "tagPage",
+    "templateId": "uUzaMn",
+    "runtimeVersion": 2,
+    "settings": {
+      "h1Wide": false,
+      "h1Color": "",
+      "h1Layout": "left",
+      "marginTop": false,
+      "paddingTop": true,
+      "wideScreen": false,
+      "enableCrumb": true,
+      "h1Background": "",
+      "marginBottom": false,
+      "sectionAlias": "TAG页",
+      "paddingBottom": true,
+      "sectionMargin": false,
+      "backgroundSize": "",
+      "backgroundColor": "rgba(233, 244, 231, 1)",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "sectionCSS": "",
+      "tagList": [
+        {
+          "textSize": 14,
+          "textColor": "rgba(196, 78, 78, 1)"
+        },
+        {
+          "textSize": 21,
+          "textColor": "rgba(78, 196, 96, 1)"
+        },
+        {
+          "textSize": 19,
+          "textColor": "rgba(8, 19, 224, 1)"
+        }
+      ]
+    },
+    "bindings": {},
+    "data": {
+      "page": [
+        {
+          "id": "1428989902641135618",
+          "tagName": "Meg Cunningham",
+          "tagUrl": "meg-cunningham"
+        },
+        {
+          "id": "1428997274305855490",
+          "tagName": "nnnn",
+          "tagUrl": "nnnn"
+        },
+        {
+          "id": "1428997309860970498",
+          "tagName": "xxxx",
+          "tagUrl": "xxxx"
+        },
+        {
+          "id": "1429700071095566338",
+          "tagName": "john test",
+          "tagUrl": "john-test"
+        }
+      ]
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "$",
+    "phone": "11",
+    "email": "devin@fomille.com",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "first.site.com",
+    "siteName": "first",
+    "address": "",
+    "areaCode": "",
+    "articleQuantity": 0,
+    "cityName": "深圳",
+    "company": "11",
+    "contact": "绍 柴",
+    "countryName": "中国",
+    "createTime": 1629532329995,
+    "currencyCode": "USD",
+    "currencyName": "美元",
+    "defaultRegion": 0,
+    "downPass": "",
+    "expiryTime": 1631346729995,
+    "facebookPixel": "",
+    "favicon": "",
+    "formQuantity": 0,
+    "freePhone": "",
+    "goodsQuantity": 0,
+    "honestScore": 0,
+    "keepLang": 1,
+    "latitude": 22.5245061,
+    "lengthUnit": "mm",
+    "logisticsScore": 0,
+    "logo": "https://css.11af.com/img/placeholder.jpg",
+    "longitude": 113.93831239999997,
+    "maxLang": 1,
+    "mobile": "",
+    "praiseRate": 0,
+    "provinceName": "广东",
+    "region": "en",
+    "rootLink": "https://first.site.com/",
+    "scriptBottom": "",
+    "scriptHead": "",
+    "scriptService": "",
+    "serviceScore": 0,
+    "siteId": "1428988280280154113",
+    "siteType": 3,
+    "state": 0,
+    "synopsis": "",
+    "systemDomain": "first.site.com",
+    "timeZone": "Asia/Shanghai",
+    "unitSystem": "metric",
+    "videoLimit": 0,
+    "weightUnit": "g",
+    "social": {
+      "socialPinterest": "https://www.pinterest.com/fomille\n\n",
+      "socialGooglePlus": "",
+      "socialFancy": "",
+      "socialVimeo": "",
+      "socialYoutube": "",
+      "sectionAlias": "社交媒体",
+      "socialFacebook": "https://www.facebook.com/fomille\n\n",
+      "socialWeibo": "",
+      "socialShareImage": "",
+      "socialTumblr": "",
+      "socialInstagram": "https://www.pinterest.com/fomille\n\n",
+      "socialTwitter": "https://twitter.com/fomille\n\n",
+      "socialSnapchat": "",
+      "socialLinkedin": "",
+      "socialImage": [
+        {
+          "socialQRCode": "/cdn/1428988280280154113/1429801691230396418.webp",
+          "socialQRCodeAlt": "",
+          "socialQRCodeLink": "api://www.163.com"
+        },
+        {
+          "socialQRCode": "/cdn/1428988280280154113/1429801670590226433.webp",
+          "socialQRCodeAlt": "",
+          "socialQRCodeLink": "api://www.163.com"
+        },
+        {
+          "socialQRCode": "/cdn/1428988280280154113/1429801393678082051.webp",
+          "socialQRCodeAlt": "",
+          "socialQRCodeLink": "api://www.163.com"
+        }
+      ]
+    }
+  },
+  "page": {
+    "pageType": "tagPage",
+    "seoH1": "ALL TAGS",
+    "seoUrl": "/tag",
+    "seoDescription": "TAG页",
+    "id": "1428988285325901826",
+    "title": "TAG页",
+    "seoTitle": "TAG页",
+    "seoKeywords": "TAG页"
+  },
+  "params": {
+    "originalURL": "/tag",
+    "cache": {},
+    "canonical": "https://first.site.com/tag",
+    "collectionId": "",
+    "defaultRegion": 0,
+    "domain": "first.site.com",
+    "ids": [],
+    "itemLink": "/tag",
+    "mainDomain": "first.site.com",
+    "pageIndex": 1,
+    "pageSize": 12,
+    "pageType": "tagPage",
+    "params": {},
+    "region": "en",
+    "siteId": "1428988280280154113",
+    "sortBy": "",
+    "url": "",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "KEYWORDS",
+      "lang": "英语",
+      "home": "HOME"
+    }
+  }
+}

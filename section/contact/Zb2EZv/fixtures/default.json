@@ -1,0 +1,148 @@
+{
+  "section": {
+    "id": "1506541604129861634",
+    "componentKind": "section",
+    "type": "contact",
+    "templateId": "Zb2EZv",
+    "runtimeVersion": 2,
+    "settings": {
+      "fax": "+86755666666",
+      "email": "",
+      "image": "",
+      "phone": "+8675588888888",
+      "skype": "",
+      "google": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7368.642776297653!2d113.94863!3d22.56708!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x99864cd8e1b2feb7!2z5LiA5pys55S15a2Q5ZWG5Yqh5Lqn5Lia5Zut!5e0!3m2!1szh-CN!2sus!4v1648029534702!5m2!1szh-CN!2sus",
+      "faxLabel": true,
+      "imageMap": "",
+      "whatsapp": "+8613800138000",
+      "emailIcon": "ic-email",
+      "formStyle": "dark",
+      "iconColor": "",
+      "mapHeight": 0,
+      "marginTop": false,
+      "phoneIcon": "ic-phone",
+      "textColor": "",
+      "emailImage": "",
+      "emailLabel": true,
+      "fieldColor": "",
+      "labelColor": "",
+      "paddingTop": true,
+      "phoneImage": "",
+      "phoneLabel": true,
+      "skypeLabel": true,
+      "titleColor": "",
+      "addressIcon": "ic-location",
+      "buttonStyle": "btn-outline-primary",
+      "enableTitle": false,
+      "placeholder": true,
+      "typesetting": "6",
+      "marginBottom": false,
+      "sectionAlias": "联系我们",
+      "paddingBottom": true,
+      "whatsappLabel": true,
+      "addressContent": "Please enter address detail",
+      "backgroundSize": "cover",
+      "cardBackground": "",
+      "backgroundColor": "",
+      "backgroundImage": "/theme/img/map-bg.png",
+      "backgroundRepeat": "no-repeat",
+      "secondButtonStyle": "invisible",
+      "backgroundPosition": "center right",
+      "formHeadingAlign": ""
+    },
+    "bindings": {
+      "formData": {
+        "sourceType": "inquiryForm",
+        "ids": []
+      }
+    },
+    "data": {
+      "formData": {
+        "title": "Contact us",
+        "remark": "This is the describe for inquiry form",
+        "fieldList": [
+          {
+            "sort": "1",
+            "required": false,
+            "fieldName": "lastName",
+            "fieldType": "text",
+            "fieldLabel": "Last name",
+            "placeholder": "Please enter last name",
+            "defaultValue": ""
+          },
+          {
+            "sort": "2",
+            "required": false,
+            "fieldName": "firstName",
+            "fieldType": "text",
+            "fieldLabel": "First name",
+            "placeholder": "Please enter first name",
+            "defaultValue": ""
+          },
+          {
+            "id": "1158289022079750146",
+            "sort": "3",
+            "required": true,
+            "fieldName": "email",
+            "fieldType": "email",
+            "fieldLabel": "Email",
+            "placeholder": "Please enter email",
+            "defaultValue": ""
+          },
+          {
+            "sort": "4",
+            "formId": "1157492648300646402",
+            "required": true,
+            "fieldName": "phone",
+            "fieldType": "tel",
+            "fieldLabel": "Phone",
+            "placeholder": "Please enter phone number",
+            "defaultValue": ""
+          },
+          {
+            "sort": "5",
+            "formId": "1157492648300646402",
+            "required": true,
+            "fieldName": "message",
+            "fieldType": "textarea",
+            "fieldLabel": "Message",
+            "placeholder": "Please tell us the message",
+            "defaultValue": ""
+          }
+        ],
+        "buttonLabel": "Submit"
+      }
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "fax": "Fax",
+    "lang": "英语",
+    "email": "Email",
+    "phone": "Phone",
+    "skype": "Skype",
+    "address": "Address",
+    "whatsapp": "Whatsapp",
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

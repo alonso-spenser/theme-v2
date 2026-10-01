@@ -1,0 +1,111 @@
+.niArqy .embed-responsive {
+	width: 5rem;
+	border-radius: 50%;
+	margin-right: 1rem;
+}
+
+.niArqy .text-heading {
+	position: relative;
+	display: inline-block;
+}
+
+.niArqy .text-heading + div {
+	margin-top: 4rem;
+}
+
+.niArqy .text-heading:before {
+	content: '';
+	width: 40%;
+	height: 4px;
+	position: absolute;
+	bottom: -1rem;
+	left: 0;
+	border-radius: 5px;
+	background-color: var(--colorHeading);
+}
+
+.niArqy .text-heading:after {
+	content: '';
+	width: 10px;
+	height: 4px;
+	position: absolute;
+	bottom: -1rem;
+	left: 45%;
+	border-radius: 5px;
+	background-color: var(--colorHeading);
+}
+
+.niArqy .media + .text-body {
+	margin-top: 1rem;
+}
+
+.niArqy-container {
+	width: 28.125rem;
+	min-width: 28.125rem;
+}
+
+.niArqy-card {
+	padding: 2.8125rem 3.125rem;
+	border: 1px solid #eaeaea;
+	background-color: #fff;
+	border-radius: 17px;
+	position: relative;
+}
+
+.niArqy-card:before, .niArqy-card:after {
+	content: "";
+	position: absolute;
+	background-color: var(--colorSubheading);
+	width: 5rem;
+	height: 1.5625rem;
+	border-radius: 1.0625rem 0 1.0625rem;
+}
+
+.niArqy-card:before {
+	top: -1px;
+	left: -1px;
+}
+
+.niArqy-card:after {
+	bottom: -1px;
+	right: -1px;
+}
+
+.niArqy-mark {
+	position: absolute;
+	width: 4rem !important;
+	right: 0.5rem;
+	bottom: 2rem;
+	transform: rotate(-30deg);
+}
+
+@media (max-width: 768px) {
+	.niArqy-container {
+		width: 100%;
+		min-width: 100%;
+	}
+
+	.niArqy-card {
+		padding: 1.875rem 2.1875rem;
+	}
+
+	.niArqy-card:before, .niArqy-card:after {
+		width: 4rem;
+		height: 1.25rem;
+		border-radius: 0.85rem 0 0.85rem;
+	}
+
+	.niArqy .text-heading + div {
+		margin-top: 2.5rem;
+	}
+
+	.niArqy .text-heading:before {
+		bottom: -1rem;
+	}
+
+	.niArqy .text-heading:after {
+		bottom: -1rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

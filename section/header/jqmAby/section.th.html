@@ -1,0 +1,215 @@
+<section th:class="|jqmAby section-${ section.id }${params.designMode && section.settings.isGlobalSection ? ' is-global-section' : ''}|" th:data-section="${section.templateId}"
+    th:with="linkListCount = ${section.settings.regionList != null && section.settings.regionList != null && not #lists.isEmpty(section.settings.regionList) ? #lists.size(section.settings.regionList) : 0},
+        regionCount = ${not #lists.isEmpty(site.langList) ? #lists.size(site.langList) : 0}"
+        >
+    <div th:class="|jqmAby-notice ${ section.settings.barLayout == 'bottom' ? 'fixed-bottom' : ''}|"
+        th:if="${section.settings.barLayout != 'invisible'
+              && (not #strings.isEmpty(section.settings.barHeading) || not #strings.isEmpty(section.settings.barContent))
+              && ((not #strings.isEmpty(section.settings.barDisplay) && section.settings.barDisplay == 'all') || page.pageType == 'homePage')
+          }">
+        <label class="jqmAby-notice-close"></label>
+        <div class="container d-md-flex">
+            <div class="jqmAby-notice-content" th:if="${not #strings.isEmpty(section.settings.barHeading) || not #strings.isEmpty(section.settings.barContent)}">
+                <h3 class="text-heading" th:text="${section.settings.barHeading}" th:if="${not #strings.isEmpty(section.settings.barHeading)}"></h3>
+                <th:block th:if="${not #strings.isEmpty(section.settings.barContent)}" th:with="textLines = ${#strings.listSplit(section.settings.barContent,'\n')}">
+                    <th:block th:each="textLine,saltLine:${textLines}">
+                        <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                    </th:block>
+                </th:block>
+            </div>
+            <p th:if="${section.settings.barStyle != 'invisible' && not #strings.isEmpty(section.settings.barLabel)}">
+                <button th:class="|btn ${ section.settings.barStyle }|" th:if="${#strings.isEmpty(section.settings.barLink) && section.settings.barStyle != 'invisible' && not #strings.isEmpty(section.settings.barLabel)}">[[${section.settings.barLabel}]]</button>
+                <a th:href="${section.settings.barLink}" th:class="|btn ${section.settings.barStyle}|" th:if="${not #strings.isEmpty(section.settings.barLink) && section.settings.barStyle != 'invisible' && not #strings.isEmpty(section.settings.barLabel)}">[[${section.settings.barLabel}]]</a>
+            </p>
+        </div>
+    </div>
+    <div class="jqmAby-bar" th:if="${ section.settings.auxiliaryVisible &&
+            (
+                not #lists.isEmpty(section.settings.auxiliaryList) ||
+                not #strings.isEmpty(site.phone) ||
+                not #strings.isEmpty(site.email) ||
+                linkListCount > 0 ||
+                regionCount > 0
+            )
+        }">
+        <div class="container d-flex">
+          <div class="jqmAby-icon" th:if="${ not #strings.isEmpty(site.phone) || not #strings.isEmpty(site.email) }">
+            <a th:href="|tel:${ site.phone }|" th:if="${ section.settings.phoneVisible }">
+              <i class="ic-phone"></i>
+              [[${ site.phone }]]
+            </a>
+            <a th:href="|mailto:${ site.email }|" th:if="${ section.settings.emailVisible }">
+              <i class="ic-email"></i>
+              [[${ site.email }]]
+            </a>
+          </div>
+          <div class="jqmAby-bar-right" th:if="${ not #lists.isEmpty(section.settings.auxiliaryList) || not #lists.isEmpty(site.langList) }">
+            <div class="jqmAby-icon" th:if="${ not #lists.isEmpty(section.settings.auxiliaryList) }">
+              <th:block th:each="o,stat:${ section.settings.auxiliaryList }">
+                  <a th:href="${ #strings.isEmpty(o.url2) ? 'javascript:void(0)' : o.url2 }" th:target="${ o.target2 }">
+                    <i th:class="${ o.ic2 }" th:if="${ not #strings.isEmpty(o.ic2) }"></i>
+                    <img th:src="${ o.icon2 }" th:if="${ not #strings.isEmpty(o.icon2) }">
+                    [[${ o.label2 }]]
+                  </a>
+              <th:block>
+            </div>
+
+             <div class="section-drop dropdown" th:if="${ (regionCount + linkListCount) < 11 && (regionCount + linkListCount) > 1 }">
+               <label class="dropdown-toggle">
+                 <i class="ic-region"></i> [[ ${ site.langName } ]]
+               </label>
+               <div class="dropdown-menu">
+                    <th:block th:if="${ linkListCount > 0 }">
+                        <th:block th:each="o,stat:${ section.settings.regionList }">
+                            <a class="dropdown-item" follow th:href="${ o.linkUrl }" th:if="${not #strings.isEmpty(o.linkLabel)}">
+                                [[${ o.linkLabel }]]
+                            </a>
+                        </th:block>
+                    </th:block>
+                    <a class="dropdown-item" follow th:href="|https://${site.mainDomain}/${ o.isDefault == 0 ? '' : o.code }|" th:each="o,stat:${ site.langList }" th:if="${!params.designMode}">
+                        [[${ o.nativeName }]]
+                    </a>
+                    <a class="dropdown-item" href="javascript:void(0)" th:each="o,stat:${ site.langList }" th:if="${params.designMode}">
+                        [[${ o.nativeName }]]
+                    </a>
+               </div>
+             </div>
+             <div class="region-icon" th:if="${ (regionCount + linkListCount) >= 11 }">
+               <i class="ic-region"></i> [[ ${ site.langName } ]]
+             </div>
+          </div>
+        </div>
+    </div>
+
+    <nav th:class="|navbar navbar-expand-md ${section.settings.logoSize}">
+        <div class="container navbar-menu">
+            <a class="navbar-brand" th:href="|${#strings.isEmpty(section.settings.logoUrl) ? '/' : section.settings.logoUrl}|">
+              <img th:src="${section.settings.logo}|" th:alt="${ #strings.isEmpty(section.settings.alt) ? site.siteName : section.settings.alt}">
+              <img th:src="${section.settings.slogan}|" th:if="${not #strings.isEmpty(section.settings.slogan)}" th:alt="${ #strings.isEmpty(section.settings.sloganAlt) ? site.siteName : section.settings.sloganAlt}">
+            </a>
+            <div class="navbar-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </div>
+            <div th:class="|collapse navbar-collapse navbar-menu-collapse justify-content-${ #strings.isEmpty(section.settings.menuAlign) || section.settings.menuAlign == 'left' ? 'start' : section.settings.menuAlign }|"
+                th:if="${ (not #lists.isEmpty(section.data.page) && section.settings.menuLayout == 'appose') || (not #lists.isEmpty(section.settings.linkList) && section.settings.linkLayout == 'appose') }">
+                <ul class="navbar-nav" th:if="${ not #lists.isEmpty(section.data.page) && section.settings.menuLayout == 'appose' }">
+                    <li class="region-icon nav-item">
+                        <a class="nav-link" href="javascript:void(0)">
+                          <i class="ic-region"></i> [[ ${ site.langName } ]]
+                        </a>
+                    </li>
+                    <li th:each="o,stat:${section.data.page}" th:class="|nav-item ${not #lists.isEmpty(o.subList) ? 'dropdown' : '' }|">
+                        <a th:text="${o.title}" th:class="|nav-link ${not #lists.isEmpty(o.subList) ? 'dropdown-toggle' : '' } ${params.originalURL == o.cleanLink ? 'active' : ''}|" th:href="|${o.link}|" th:target="${o.target}"></a>
+                        <ul th:if="${not #lists.isEmpty(o.subList)}" class="dropdown-menu">
+                            <li th:each="second:${o.subList}" th:class="${not #lists.isEmpty(second.subList) ? 'dropdown' : '' }">
+                                <a th:class="|dropdown-item ${not #lists.isEmpty(second.subList) ? 'dropdown-toggle' : '' }|" th:href="|${second.link}|" th:text="${second.title}" th:target="${second.target}"></a>
+                                <ul th:if="${not #lists.isEmpty(second.subList)}" class="dropdown-menu">
+                                    <li th:each="third:${second.subList}" th:class="${not #lists.isEmpty(third.subList) ? ' dropdown' : '' }">
+                                        <a class="dropdown-item" th:href="|${ third.link }|" th:text="${ third.title }" th:target="${third.target}"></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+	                <li class="nav-item nav-item-btn" th:if="${section.settings.specialStyle != 'invisible' && not #strings.isEmpty(section.settings.specialLabel)}">
+		                <a th:class="|btn ${section.settings.specialStyle}|" th:href="${section.settings.specialLink}">
+			                [[${section.settings.specialLabel}]]
+		                </a>
+	                </li>
+                </ul>
+
+                <ul th:class="|navbar-nav${ section.settings.linkLayout == 'alone' ? ' d-md-none d-flex' : '' }|" th:if="${ not #lists.isEmpty(section.settings.linkList) }">
+                    <li class="nav-item" th:each="o,stat:${ section.settings.linkList }">
+                      <a class="nav-link" th:href="${ #strings.isEmpty(o.url) ? 'javascript:void(0)' : o.url }" th:target="${ o.target }">
+                        <i th:class="${ o.linkIcon }" th:if="${ not #strings.isEmpty(o.linkIcon) }"></i>
+                        <img th:src="${ o.icon }" th:if="${ not #strings.isEmpty(o.icon) }">
+                        [[${ o.label }]]
+                      </a>
+                    <li>
+                </ul>
+                <label class="nav-link cursor-pointer" data-search="open" th:if="${section.settings.searchButton != 'invisible' && (section.settings.linkLayout == 'appose' || section.settings.menuLayout == 'appose')}">
+                  <i class="ic-search"></i>
+                </label>
+            </div>
+        </div>
+        <div th:class="|navbar-second-menu ${ not #lists.isEmpty(section.data.page) && section.settings.menuLayout == 'appose' ? 'd-md-flex d-none' : '' }|" th:if="${ (not #lists.isEmpty(section.data.page) && section.settings.menuLayout == 'alone') || (not #lists.isEmpty(section.settings.linkList) && section.settings.linkLayout == 'alone') }">
+            <div th:class="|container navbar-second-menu-collapse ${ not #lists.isEmpty(section.data.page) && section.settings.menuLayout == 'alone' ? 'navbar-collapse collapse' : '' } justify-content-${ #strings.isEmpty(section.settings.secondAlign) ? 'start' : section.settings.secondAlign } ${ not #lists.isEmpty(section.settings.linkList) ? '' : 'has-search'}|">
+                <ul class="navbar-nav" th:if="${ not #lists.isEmpty(section.data.page) && section.settings.menuLayout == 'alone' }">
+                    <li class="region-icon nav-item">
+                        <a class="nav-link" href="javascript:void(0)">
+                          <i class="ic-region"></i> [[ ${ site.langName } ]]
+                        </a>
+                    </li>
+                    <li th:each="o,stat:${section.data.page}" th:class="|nav-item ${not #lists.isEmpty(o.subList) ? 'dropdown' : '' }|">
+                        <a th:text="${o.title}" th:class="|nav-link ${not #lists.isEmpty(o.subList) ? 'dropdown-toggle' : '' }|" th:href="|${o.link}|" th:target="${o.target}"></a>
+                        <ul th:if="${not #lists.isEmpty(o.subList)}" class="dropdown-menu">
+                            <li th:each="second:${o.subList}" th:class="${not #lists.isEmpty(second.subList) ? 'dropdown' : '' }">
+                                <a th:class="|dropdown-item ${not #lists.isEmpty(second.subList) ? 'dropdown-toggle' : '' }|" th:href="|${second.link}|" th:text="${second.title}" th:target="${second.target}"></a>
+                                <ul th:if="${not #lists.isEmpty(second.subList)}" class="dropdown-menu">
+                                    <li th:each="third:${second.subList}" th:class="${not #lists.isEmpty(third.subList) ? ' dropdown' : '' }">
+                                        <a class="dropdown-item" th:href="|${ third.link }|" th:text="${ third.title }" th:target="${third.target}"></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+	                <li class="nav-item nav-item-btn" th:if="${section.settings.specialStyle != 'invisible' && not #strings.isEmpty(section.settings.specialLabel)}">
+		                <a th:class="|btn ${section.settings.specialStyle}|" th:href="${section.settings.specialLink}">
+			                [[${section.settings.specialLabel}]]
+		                </a>
+	                </li>
+                </ul>
+                <ul class="navbar-nav" th:if="${ not #lists.isEmpty(section.settings.linkList) && section.settings.linkLayout == 'alone' }">
+                    <li class="nav-item" th:each="o,stat:${ section.settings.linkList }">
+                      <a class="nav-link" th:href="${ #strings.isEmpty(o.url) ? 'javascript:void(0)' : o.url }" th:target="${ o.target }">
+                        <i th:class="${ o.linkIcon }" th:if="${ not #strings.isEmpty(o.linkIcon) }"></i>
+                        <img th:src="${ o.icon }" th:if="${ not #strings.isEmpty(o.icon) }">
+                        [[${ o.label }]]
+                      </a>
+                    <li>
+                </ul>
+                <label class="nav-link cursor-pointer" data-search="open" th:if="${section.settings.searchButton != 'invisible' && section.settings.linkLayout == 'alone' && section.settings.menuLayout == 'alone'}">
+                  <i class="ic-search"></i>
+                </label>
+            </div>
+        </div>
+        <div class="jqmAby-search" th:if="${ section.settings.searchButton != 'invisible' }">
+            <div class="container">
+                <div class="input-group">
+                    <input type="text" class="form-control" th:placeholder="${lang.global.keywords}" data-search="keyword">
+                    <div class="d-flex">
+                      <button class="btn d-md-block d-none" type="button" data-search="close">
+                        <i class="ic-close"></i>
+                      </button>
+                      <button class="btn" type="button" data-search="button">
+                        <i class="ic-search"></i>
+                      </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="jqmAby-region" th:if="${!params.designMode && (regionCount > 0 || linkListCount > 0)}">
+        <label class="ic-close"></label>
+        <div class="container">
+          <h3 class="text-content-heading">Select a Country or Region</h3>
+              <div class="row text-list">
+                <th:block th:if="${ linkListCount > 0 }">
+                    <div class="col-md-3 col-6" th:each="o,stat:${ section.settings.regionList }">
+                        <a class="dropdown-item" follow th:href="|${ o.linkUrl }|" th:if="${not #strings.isEmpty(o.linkLabel)}">
+                            [[${ o.linkLabel }]]
+                        </a>
+                    </div>
+                </th:block>
+                <div class="col-md-3 col-6" th:each="o,stat:${ site.langList }">
+                    <a class="dropdown-item" follow th:href="|https://${site.mainDomain}/${ o.isDefault == 0 ? '' : o.code }|">
+                        [[${ o.nativeName }]]
+                    </a>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

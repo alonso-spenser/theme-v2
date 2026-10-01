@@ -1,0 +1,73 @@
+.yEzyqa-label {
+	width: 100%;
+	position: absolute;
+	padding: 25px 0;
+}
+
+.yEzyqa-label [class*="container"] {
+	text-align: center;
+}
+
+.yEzyqa-label a {
+	position: relative;
+	color: #888;
+	display: inline-block;
+	margin: 3px;
+	padding: 5px 13px;
+	font-size: 15px;
+	transition: all 0.25s;
+}
+
+.yEzyqa-label a:not(:first-child):before {
+	pointer-events: none;
+	content: "";
+	position: absolute;
+	top: calc(50% - 8px);
+	left: -4px;
+	width: 1px;
+	height: 16px;
+	background-color: #ddd;
+}
+
+.yEzyqa-label a.active, .yEzyqa-label a:hover {
+	background-color: var(--colorButtonHover);
+	color: var(--colorButtonHoverLabel);
+}
+
+.yEzyqa-label.fixed-top {
+	background-color: #fff;
+	z-index: 1031;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+	margin: 0 !important;
+}
+
+.yEzyqa-panel {
+	padding-top: 88px;
+}
+
+.yEzyqa-panel .yEzyqa-item:not(:first-child) {
+	margin-bottom: 1rem;
+}
+
+.yEzyqa-fixed .table-striped th {
+	width: 13rem;
+}
+
+@media (max-width: 768px) {
+	.yEzyqa-label {
+		padding: 15px 0;
+	}
+
+	.yEzyqa-label [class*="container"] {
+		overflow-y: hidden;
+		overflow-x: auto;
+		display: flex;
+		justify-content: start;
+	}
+
+	.yEzyqa-panel {
+		padding-top: 60px;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

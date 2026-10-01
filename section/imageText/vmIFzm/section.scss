@@ -1,0 +1,73 @@
+.vmIFzm .embed-responsive .card {
+	background: #fff;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 40%;
+	left: 5.625rem;
+	border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+	.vmIFzm .embed-responsive .card {
+		width: calc(100% - 4rem);
+		top: auto;
+		transform: translateX(0) translateY(0) !important;
+		left: 2rem !important;
+		bottom: 1.5rem;
+	}
+}
+
+.vmIFzm .embed-responsive.center .card {
+	transform: translateY(-50%) translateX(-50%);
+	left: 50%;
+}
+
+.vmIFzm .embed-responsive.right .card {
+	transform: translateY(-50%) translateX(0);
+	left: auto;
+	right: 5.625rem;
+}
+
+.vmIFzm .card-body {
+	padding: 3rem;
+}
+
+@media (max-width: 768px) {
+	.vmIFzm .card-body {
+		padding: 2rem;
+	}
+}
+
+.vmIFzm img {
+	width: 100%;
+	border-radius: 0.5rem;
+}
+
+.vmIFzm .text-small {
+	font-size: 0.625rem;
+	letter-spacing: 1.6px;
+	text-transform: uppercase;
+	color: var(--colorSecondary);
+	position: relative;
+	padding-left: 2.5rem;
+}
+
+.vmIFzm .text-small:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	width: 2rem;
+	height: 3px;
+	border-radius: 5px;
+	display: block;
+	background-color: var(--colorTheme);
+}
+
+.vmIFzm [class*=text-] + .text-button {
+	margin-top: 1.5rem !important;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

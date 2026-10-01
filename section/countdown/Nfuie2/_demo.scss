@@ -1,0 +1,29 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-Nfuie2{
+    background: #f2f2f2   ;
+    
+}
+
+
+
+.section-demo-Nfuie2 [class^=text-] {
+    color:#ff0000;
+}
+
+
+.section-demo-Nfuie2 .Nfuie2-unit,
+.section-demo-Nfuie2 .Nfuie2-digit{
+    color:#0000ff;
+}
+
+
+
+.section-demo-Nfuie2 .position-relative {
+    background-color:#ffff00;
+}
+
+
+
+.section-demo-Nfuie2 li:not(:last-child) {
+    border-color:#00ffff;
+}

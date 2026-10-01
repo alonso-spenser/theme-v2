@@ -1,0 +1,47 @@
+// Bootstrap 5.3.8, CSS only. Keep imports explicit: never import bootstrap.scss.
+@import "vendor/bootstrap/scss/functions";
+$enable-dark-mode: false;
+$enable-smooth-scroll: false;
+$link-decoration: none;
+$link-hover-decoration: none;
+@import "vendor/bootstrap/scss/variables";
+@import "vendor/bootstrap/scss/variables-dark";
+@import "vendor/bootstrap/scss/maps";
+@import "vendor/bootstrap/scss/mixins";
+@import "vendor/bootstrap/scss/utilities";
+$bootstrap-utilities: $utilities;
+
+// Select layout helpers; text utilities are added separately below.
+$layout-utilities: ();
+@each $key in ("display", "flex", "flex-direction", "flex-grow", "flex-shrink", "flex-wrap", "justify-content", "align-items", "align-content", "align-self", "order", "gap", "row-gap", "column-gap") {
+  $layout-utilities: map-merge($layout-utilities, ($key: map-get($utilities, $key)));
+}
+$utilities: $layout-utilities;
+
+@import "vendor/bootstrap/scss/root";
+@import "vendor/bootstrap/scss/reboot";
+@import "vendor/bootstrap/scss/type";
+@import "vendor/bootstrap/scss/containers";
+@import "vendor/bootstrap/scss/grid";
+@import "vendor/bootstrap/scss/forms";
+@import "vendor/bootstrap/scss/buttons";
+@import "vendor/bootstrap/scss/utilities/api";
+@import "vendor/bootstrap/scss/text";
+
+// Native component runtime layout (no third-party carousel JavaScript).
+@import "../js/sections";
+@import "./page/base";
+
+// Project-specific full-width container; grid gutters are retained by default.
+.container-full {
+  @include make-container();
+  max-width: none;
+}
+.container-full.g-0 { --bs-gutter-x: 0; }
+
+li { list-style: none; }
+
+dl, ol, ol ol, ol ul, ul, ul ol, ul ul {
+  margin-bottom: 0;
+  padding-left: 0;
+}

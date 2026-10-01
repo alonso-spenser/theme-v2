@@ -1,0 +1,38 @@
+.I227Fn-content {
+	background-color: #ffffff;
+	padding: 3.75rem;
+	width: 40%;
+}
+
+@media (max-width: 768px) {
+	.I227Fn-content {
+		padding: 2rem;
+		width: 100%;
+	}
+}
+
+.I227Fn .text-gutter:not(:last-child) {
+	margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+	.I227Fn .text-gutter:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.I227Fn-container {
+		display: flex;
+	}
+
+	.I227Fn-container.center {
+		justify-content: center;
+	}
+
+	.I227Fn-container.right {
+		justify-content: flex-end;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

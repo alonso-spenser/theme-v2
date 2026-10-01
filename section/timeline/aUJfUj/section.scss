@@ -1,0 +1,122 @@
+.aUJfUj-content {
+	position: relative;
+}
+
+.aUJfUj-content img {
+	width: 100%;
+}
+
+.aUJfUj-content .card {
+	border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.aUJfUj-content .card:after {
+	display: inline-block;
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid rgba(0, 0, 0, 0.1);
+	position: absolute;
+	right: -0.625rem;
+	top: 1.5625rem;
+}
+
+.aUJfUj-content .card .aUJfUj-clock {
+	font-size: 0.625rem;
+	position: absolute;
+	top: 10px;
+	overflow: hidden;
+	padding: 3px;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	right: -5.25rem;
+}
+
+.aUJfUj-content .card:not(:last-child) {
+	margin-bottom: 1.875rem;
+}
+
+.aUJfUj-content .card:hover {
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.aUJfUj-content img + .text-content-heading,
+  .aUJfUj-content img + .text-body {
+	margin-top: 1rem;
+}
+
+.aUJfUj-content:before {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	display: block;
+	margin-left: -1px;
+	width: 1px;
+	height: 100%;
+	border-radius: 0.125rem;
+	background-color: rgba(0, 0, 0, 0.1);
+	content: "";
+}
+
+.aUJfUj-content .col-md-6 {
+	padding-right: 3.75rem;
+}
+
+.aUJfUj-content .col-md-6:last-child {
+	padding-left: 3.75rem;
+}
+
+.aUJfUj-content .col-md-6:last-child .card .aUJfUj-clock {
+	right: auto;
+	left: -5.3125rem;
+}
+
+.aUJfUj-content .col-md-6:last-child .card:after {
+	border-left: 0;
+	border-right: 10px solid rgba(0, 0, 0, 0.1);
+	left: -0.625rem;
+}
+
+@media (min-width: 768px) {
+	.aUJfUj .row .col-md-6:last-child {
+		padding-top: 6.25rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.aUJfUj-clock {
+		right: -4.375rem !important;
+	}
+
+	.aUJfUj-content:before {
+		right: 35px;
+		width: 1px;
+		left: auto;
+		height: 100%;
+	}
+
+	.aUJfUj-content .col-md-6 {
+		padding-right: 80px;
+		padding-left: 10px;
+	}
+
+	.aUJfUj-content .col-md-6 .card:not(:last-child) {
+		margin-bottom: 0.9375rem;
+	}
+
+	.aUJfUj-content .col-md-6:last-child {
+		padding-right: 5rem;
+		padding-left: 0.625rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

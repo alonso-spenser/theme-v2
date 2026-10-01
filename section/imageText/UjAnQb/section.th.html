@@ -1,0 +1,48 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div class="row">
+            <div th:class="|col-md-${ section.settings.contentWidth }${ section.settings.contentAlign == 'right' ? ' order-2' : ''}|">
+                <h3 class="text-heading" th:if="${ not #strings.isEmpty(section.settings.heading) }">
+                    [[${ section.settings.heading }]]
+                </h3>
+                <div class="text-list" th:if="${not #strings.isEmpty(section.settings.subheading)}" th:with="textLines = ${#strings.listSplit(section.settings.subheading,'\n')}">
+                    <th:block th:each="textLine,saltLine:${textLines}">
+                        <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                    </th:block>
+                </div>
+                <div class="collapse text-list" th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                    <th:block th:each="textLine,saltLine:${textLines}">
+                        <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                    </th:block>
+                </div>
+                <div class="UjAnQb-more show text-more">
+                    <label class="text-label">
+                        [[${lang.more}]]
+                    </label>
+                    <label class="text-label">
+                        [[${lang.hide}]]
+                    </label>
+                </div>
+            </div>
+            <div th:class="|col-md-${ #numbers.formatInteger(12 - section.settings.contentWidth, 1,'POINT') }|">
+                <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${ not #strings.isEmpty(section.settings.image) && #strings.isEmpty(section.settings.videoURL) }">
+                    <img class="embed-responsive-item lazy" th:src="|${ section.settings.image}!1|" th:data-original="${ section.settings.image}" th:alt="${ not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading }">
+                </div>
+                <div class="embed-responsive embed-responsive-video card-img-top" th:if="${ not #strings.isEmpty(section.settings.videoURL) }">
+                    <iframe class="embed-responsive-item" th:data-video="|${section.settings.videoURL}?autoplay=1&loop=1|" allowfullscreen></iframe>
+                    <div th:class="|embed-responsive-item ${ section.templateId }-mask|" th:data-play="${ section.id }">
+                        <img class="embed-responsive-item lazy" th:src="|${ section.settings.image}!1|" th:data-original="${ section.settings.image}" th:if="${ not #strings.isEmpty(section.settings.image) }"  th:alt="${ not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading }">
+                        <div class="play-button small">
+                            <span class="filled-circle"></span>
+                            <span class="stroke-circle"></span>
+                            <span class="triangle custom-icon-triangle"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

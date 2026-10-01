@@ -1,0 +1,78 @@
+{
+  "section": {
+    "id": "1442079997908717570",
+    "componentKind": "section",
+    "type": "logoList",
+    "templateId": "miyUFr",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "2",
+      "layout": "slide",
+      "symbol": "list-demical",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Title with button",
+      "logoColor": "",
+      "marginTop": false,
+      "mobColumn": "6",
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "buttonLink": "",
+      "imageScale": "1by1",
+      "paddingTop": true,
+      "subheading": "this is a new beginning",
+      "wideScreen": false,
+      "buttonLabel": "Button label",
+      "buttonStyle": "invisible",
+      "borderRadius": 0,
+      "contentAlign": "text-center",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "logoImgWidth": 50,
+      "marginBottom": false,
+      "sectionAlias": "Logo墙",
+      "logoTextAlign": "center",
+      "logoTextWidth": 70,
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "carouselAutoPlay": "0",
+      "carouselNavStyle": "dark",
+      "backgroundPosition": "",
+      "carouselArrowStyle": "dark",
+      "logoList": [],
+      "secondButtonStyle": "",
+      "secondButtonLabel": "",
+      "secondButtonLink": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-ZVNrIj .section-title .has-line:after, .section-demo-ZVNrIj .section-title img {
+    width: 20%;
+}
+
+
+
+    .section-demo-ZVNrIj .media img {
+        width: 80px;
+    }
+
+
+
+    @media (min-width: 768px) {
+        .section-demo-ZVNrIj .ZVNrIj-content:not(.order-2) {
+            padding-right: 50px;
+        }
+        .section-demo-ZVNrIj .ZVNrIj-content.order-2 {
+            padding-left: 50px;
+        }
+    }
+
+
+
+    .section-demo-ZVNrIj .media h3{
+        color: #ffff00;
+    }
+
+
+
+    .section-demo-ZVNrIj .media p{
+        color: #5e0967;
+    }

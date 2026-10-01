@@ -1,0 +1,60 @@
+{
+  "section": {
+    "id": "1410131320705273857",
+    "componentKind": "page-section",
+    "type": "homePage",
+    "templateId": "ABFZNr",
+    "runtimeVersion": 2,
+    "settings": {
+      "popup": "invisible",
+      "style": "normal",
+      "symbol": "normal",
+      "content": "To use the Vaporesso website you must be aged 21 years orover. Please verify your age before entering the site.We use cookies to improve our website and your experience browsing it. By continuing to browse our website you accept our Cookie Policy.",
+      "heading": "AGE VERIFICATION",
+      "closeType": "forever",
+      "textAlign": "text-center",
+      "popupWidth": 30,
+      "titleStyle": "top",
+      "buttonStyle": "horizontal",
+      "cancelOption": "Cancel",
+      "contentColor": "",
+      "dividerImage": "",
+      "dividerStyle": "image",
+      "dividerWidth": 20,
+      "headingColor": "",
+      "sectionAlias": "首页",
+      "confirmOption": "Confirm",
+      "backgroundColor": "",
+      "cancelButtonStyle": "btn-primary",
+      "confirmButtonStyle": "btn-success",
+      "subheading": "",
+      "textWidth": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

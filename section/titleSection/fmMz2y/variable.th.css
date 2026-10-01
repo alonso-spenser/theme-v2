@@ -1,0 +1,36 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .text-body {
+    color: [[${section.settings.textColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.headingColor)}"]
+.section-[[${ section.id }]] .text-heading {
+    color: [[${section.settings.headingColor}]];
+}
+.section-[[${ section.id }]] .text-heading:before  {
+    background-color: [[${section.settings.headingColor}]];
+}
+[/]
+
+
+[# th:if="${not #strings.isEmpty(section.settings.lineColor)}"]
+.section-[[${ section.id }]] .text-left .text-small:before  {
+    background-color: [[${section.settings.lineColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.subheadingColor)}"]
+.section-[[${ section.id }]] .text-small  {
+    color: [[${section.settings.subheadingColor}]];
+}
+[/]

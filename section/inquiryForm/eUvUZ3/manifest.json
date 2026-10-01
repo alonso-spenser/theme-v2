@@ -1,0 +1,1406 @@
+{
+  "protocolVersion": 2,
+  "componentKind": "section",
+  "type": "inquiryForm",
+  "templateId": "eUvUZ3",
+  "runtimeVersion": 2,
+  "definitionVersion": 1,
+  "schemaVersion": 1,
+  "name": {
+    "en": "Inquiry form (basic)",
+    "zh-CN": "询盘表单（基础版）"
+  },
+  "policy": {
+    "removable": true,
+    "duplicable": true,
+    "maxInstances": 0
+  },
+  "placement": {
+    "fixed": false,
+    "pages": []
+  },
+  "render": {
+    "template": "section.th.html",
+    "style": "section.scss",
+    "variableStyle": "variable.th.css",
+    "script": "section.js"
+  },
+  "editor": {
+    "groups": [
+      {
+        "id": "group1",
+        "name": {
+          "en": "Form",
+          "zh-CN": "表单"
+        },
+        "elements": [],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        },
+        "binding": {
+          "target": "consultForm",
+          "sourceType": "inquiryForm",
+          "mode": "children",
+          "maxItems": 1
+        }
+      },
+      {
+        "id": "group2",
+        "name": {
+          "en": "Settings",
+          "zh-CN": "设置"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Field title",
+              "zh-CN": "字段标题"
+            },
+            "type": "switch",
+            "field": "enableTitle",
+            "default": false,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Placeholder",
+              "zh-CN": "占位符"
+            },
+            "type": "switch",
+            "field": "placeholder",
+            "default": true,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Typesetting",
+              "zh-CN": "表单排版"
+            },
+            "type": "select",
+            "field": "typesetting",
+            "default": "12",
+            "options": [
+              {
+                "value": "12",
+                "name": {
+                  "en": "1 column",
+                  "zh-CN": "1 列"
+                }
+              },
+              {
+                "value": "6",
+                "name": {
+                  "en": "2 columns",
+                  "zh-CN": "2 列"
+                }
+              },
+              {
+                "value": "4",
+                "name": {
+                  "en": "3 columns",
+                  "zh-CN": "3 列"
+                }
+              },
+              {
+                "value": "3",
+                "name": {
+                  "en": "4 columns",
+                  "zh-CN": "4 列"
+                }
+              },
+              {
+                "value": "auto",
+                "name": {
+                  "en": "Horizontally",
+                  "zh-CN": "水平平铺"
+                }
+              }
+            ]
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Layout",
+              "zh-CN": "布局"
+            },
+            "type": "select",
+            "field": "layout",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "name": {
+                  "en": "Picture left",
+                  "zh-CN": "图片居左"
+                }
+              },
+              {
+                "value": "right",
+                "name": {
+                  "en": "Picture right",
+                  "zh-CN": "图片居右"
+                }
+              },
+              {
+                "value": "contactLeft",
+                "name": {
+                  "en": "Contact left",
+                  "zh-CN": "联系方式居左"
+                }
+              },
+              {
+                "value": "contactRight",
+                "name": {
+                  "en": "Contact right",
+                  "zh-CN": "联系方式居右"
+                }
+              },
+              {
+                "value": "formOnly",
+                "name": {
+                  "en": "Form only",
+                  "zh-CN": "仅表单"
+                }
+              }
+            ]
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "type": "divider",
+            "default": "",
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Contact",
+              "zh-CN": "联系方式"
+            },
+            "type": "colorPicker",
+            "field": "contactColor",
+            "default": "",
+            "options": [],
+            "translate": 1
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Form style",
+              "zh-CN": "表单风格"
+            },
+            "type": "select",
+            "field": "formStyle",
+            "default": "normal",
+            "options": [
+              {
+                "value": "normal",
+                "name": {
+                  "en": "Normal",
+                  "zh-CN": "默认"
+                }
+              },
+              {
+                "value": "light",
+                "name": {
+                  "en": "Transparent",
+                  "zh-CN": "透明"
+                }
+              }
+            ]
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Vertical alignment",
+              "zh-CN": "垂直对齐"
+            },
+            "type": "select",
+            "field": "verticalAlignment",
+            "default": "align-items-center",
+            "options": [
+              {
+                "value": "align-items-start",
+                "name": {
+                  "en": "Top",
+                  "zh-CN": "上"
+                }
+              },
+              {
+                "value": "align-items-center",
+                "name": {
+                  "en": "Middle",
+                  "zh-CN": "中"
+                }
+              },
+              {
+                "value": "align-items-end",
+                "name": {
+                  "en": "Bottom",
+                  "zh-CN": "下"
+                }
+              },
+              {
+                "value": "align-items-stretch",
+                "name": {
+                  "en": "Equal height",
+                  "zh-CN": "等高"
+                }
+              }
+            ]
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "button style",
+              "zh-CN": "按钮样式"
+            },
+            "type": "select",
+            "field": "buttonStyle",
+            "default": "btn-outline-primary",
+            "options": [
+              {
+                "value": "btn-primary",
+                "name": {
+                  "en": "Primary",
+                  "zh-CN": "主按钮填充"
+                }
+              },
+              {
+                "value": "btn-outline-primary",
+                "name": {
+                  "en": "Outline Primary",
+                  "zh-CN": "主按钮描边"
+                }
+              },
+              {
+                "value": "btn-dark",
+                "name": {
+                  "en": "Dark",
+                  "zh-CN": "深色填充"
+                }
+              },
+              {
+                "value": "btn-outline-dark",
+                "name": {
+                  "en": "Outline Dark",
+                  "zh-CN": "深色描边"
+                }
+              },
+              {
+                "value": "btn-light",
+                "name": {
+                  "en": "Light",
+                  "zh-CN": "浅色填充"
+                }
+              },
+              {
+                "value": "btn-outline-light",
+                "name": {
+                  "en": "Outline Light",
+                  "zh-CN": "浅色描边"
+                }
+              },
+              {
+                "value": "btn-secondary",
+                "name": {
+                  "en": "Secondary",
+                  "zh-CN": "灰色填充"
+                }
+              },
+              {
+                "value": "btn-outline-secondary",
+                "name": {
+                  "en": "Outline Secondary",
+                  "zh-CN": "灰色描边"
+                }
+              },
+              {
+                "value": "btn-success",
+                "name": {
+                  "en": "Success",
+                  "zh-CN": "绿色填充"
+                }
+              },
+              {
+                "value": "btn-outline-success",
+                "name": {
+                  "en": "Outline Success",
+                  "zh-CN": "绿色描边"
+                }
+              },
+              {
+                "value": "btn-danger",
+                "name": {
+                  "en": "Danger",
+                  "zh-CN": "红色填充"
+                }
+              },
+              {
+                "value": "btn-outline-danger",
+                "name": {
+                  "en": "Outline Danger",
+                  "zh-CN": "红色描边"
+                }
+              },
+              {
+                "value": "btn-warning",
+                "name": {
+                  "en": "Warning",
+                  "zh-CN": "警告色填充"
+                }
+              },
+              {
+                "value": "btn-outline-warning",
+                "name": {
+                  "en": "Outline Warning",
+                  "zh-CN": "警告色描边"
+                }
+              },
+              {
+                "value": "btn-info",
+                "name": {
+                  "en": "Warning",
+                  "zh-CN": "青色填充"
+                }
+              },
+              {
+                "value": "btn-outline-info",
+                "name": {
+                  "en": "Outline Warning",
+                  "zh-CN": "青色描边"
+                }
+              }
+            ],
+            "translate": 1
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "button width",
+              "zh-CN": "按钮宽度"
+            },
+            "type": "select",
+            "field": "buttonWidth",
+            "default": "normal",
+            "options": [
+              {
+                "value": "normal",
+                "name": {
+                  "en": "Normal",
+                  "zh-CN": "默认"
+                }
+              },
+              {
+                "value": "btn-block",
+                "name": {
+                  "en": "100%",
+                  "zh-CN": "100%"
+                }
+              }
+            ],
+            "translate": 1
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "group3",
+        "name": {
+          "en": "Title",
+          "zh-CN": "标题"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Heading",
+              "zh-CN": "标题"
+            },
+            "type": "text",
+            "field": "heading",
+            "default": "Contact US",
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Color",
+              "zh-CN": "颜色"
+            },
+            "type": "colorPicker",
+            "field": "headingColor",
+            "default": "",
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Subheading",
+              "zh-CN": "副标题"
+            },
+            "type": "text",
+            "field": "subheading",
+            "default": "",
+            "options": []
+          },
+          {
+            "info": {
+              "en": "Use enter to wrap",
+              "zh-CN": "回车键换行"
+            },
+            "name": {
+              "en": "Content",
+              "zh-CN": "内容"
+            },
+            "type": "textarea",
+            "field": "content",
+            "default": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Align",
+              "zh-CN": "内容对齐"
+            },
+            "type": "select",
+            "field": "textAlign",
+            "default": "center",
+            "options": [
+              {
+                "value": "left",
+                "name": {
+                  "en": "Left",
+                  "zh-CN": "左"
+                }
+              },
+              {
+                "value": "center",
+                "name": {
+                  "en": "Center",
+                  "zh-CN": "中"
+                }
+              },
+              {
+                "value": "right",
+                "name": {
+                  "en": "Right",
+                  "zh-CN": "右"
+                }
+              }
+            ]
+          },
+          {
+            "max": 100,
+            "min": 20,
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Width of content container",
+              "zh-CN": "内容宽度"
+            },
+            "step": 10,
+            "type": "slider",
+            "field": "textWidth",
+            "default": 100,
+            "options": [
+              {
+                "value": "25",
+                "name": {
+                  "en": "25%",
+                  "zh-CN": "25%"
+                }
+              },
+              {
+                "value": "50",
+                "name": {
+                  "en": "50%",
+                  "zh-CN": "50%"
+                }
+              },
+              {
+                "value": "75",
+                "name": {
+                  "en": "75%",
+                  "zh-CN": "75%"
+                }
+              },
+              {
+                "value": "100",
+                "name": {
+                  "en": "100%",
+                  "zh-CN": "100%"
+                }
+              }
+            ]
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Text Color",
+              "zh-CN": "文本颜色"
+            },
+            "type": "colorPicker",
+            "field": "textColor",
+            "default": "",
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "type": "divider",
+            "default": "",
+            "options": []
+          },
+          {
+            "max": 100,
+            "min": 0,
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Width",
+              "zh-CN": "宽度"
+            },
+            "step": 5,
+            "type": "slider",
+            "field": "dividerWidth",
+            "default": 5,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Style",
+              "zh-CN": "样式"
+            },
+            "type": "select",
+            "field": "dividerStyle",
+            "default": "line",
+            "options": [
+              {
+                "value": "line",
+                "name": {
+                  "en": "Line",
+                  "zh-CN": "线条"
+                }
+              },
+              {
+                "value": "image",
+                "name": {
+                  "en": "Image",
+                  "zh-CN": "图片"
+                }
+              }
+            ]
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Picture",
+              "zh-CN": "图片"
+            },
+            "type": "imagePicker",
+            "field": "dividerImage",
+            "default": "",
+            "options": [],
+            "altFiled": ""
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "group4",
+        "name": {
+          "en": "Form only",
+          "zh-CN": "仅表单"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "Effective when layout is form only",
+              "zh-CN": "布局为“仅表单”的时候生效"
+            },
+            "name": {
+              "en": "Form Width",
+              "zh-CN": "内容宽度"
+            },
+            "type": "select",
+            "field": "formWidth",
+            "default": "8",
+            "options": [
+              {
+                "value": "1",
+                "name": {
+                  "en": "8%",
+                  "zh-CN": "8%"
+                }
+              },
+              {
+                "value": "2",
+                "name": {
+                  "en": "16%",
+                  "zh-CN": "16%"
+                }
+              },
+              {
+                "value": "3",
+                "name": {
+                  "en": "25%",
+                  "zh-CN": "25%"
+                }
+              },
+              {
+                "value": "4",
+                "name": {
+                  "en": "33%",
+                  "zh-CN": "33%"
+                }
+              },
+              {
+                "value": "5",
+                "name": {
+                  "en": "41%",
+                  "zh-CN": "41%"
+                }
+              },
+              {
+                "value": "6",
+                "name": {
+                  "en": "50%",
+                  "zh-CN": "50%"
+                }
+              },
+              {
+                "value": "7",
+                "name": {
+                  "en": "58%",
+                  "zh-CN": "58%"
+                }
+              },
+              {
+                "value": "8",
+                "name": {
+                  "en": "66%",
+                  "zh-CN": "66%"
+                }
+              },
+              {
+                "value": "9",
+                "name": {
+                  "en": "75%",
+                  "zh-CN": "75%"
+                }
+              },
+              {
+                "value": "10",
+                "name": {
+                  "en": "83%",
+                  "zh-CN": "83%"
+                }
+              },
+              {
+                "value": "11",
+                "name": {
+                  "en": "91%",
+                  "zh-CN": "91%"
+                }
+              },
+              {
+                "value": "12",
+                "name": {
+                  "en": "100%",
+                  "zh-CN": "100%"
+                }
+              }
+            ]
+          },
+          {
+            "info": {
+              "en": "Effective when layout is form only",
+              "zh-CN": "布局为“仅表单”的时候生效"
+            },
+            "name": {
+              "en": "Form offset left",
+              "zh-CN": "左边距"
+            },
+            "type": "select",
+            "field": "formOffset",
+            "default": "2",
+            "options": [
+              {
+                "value": "0",
+                "name": {
+                  "en": "0",
+                  "zh-CN": "0"
+                }
+              },
+              {
+                "value": "1",
+                "name": {
+                  "en": "8%",
+                  "zh-CN": "8%"
+                }
+              },
+              {
+                "value": "2",
+                "name": {
+                  "en": "16%",
+                  "zh-CN": "16%"
+                }
+              },
+              {
+                "value": "3",
+                "name": {
+                  "en": "25%",
+                  "zh-CN": "25%"
+                }
+              },
+              {
+                "value": "4",
+                "name": {
+                  "en": "33%",
+                  "zh-CN": "33%"
+                }
+              },
+              {
+                "value": "5",
+                "name": {
+                  "en": "41%",
+                  "zh-CN": "41%"
+                }
+              },
+              {
+                "value": "6",
+                "name": {
+                  "en": "50%",
+                  "zh-CN": "50%"
+                }
+              },
+              {
+                "value": "7",
+                "name": {
+                  "en": "58%",
+                  "zh-CN": "58%"
+                }
+              },
+              {
+                "value": "8",
+                "name": {
+                  "en": "66%",
+                  "zh-CN": "66%"
+                }
+              },
+              {
+                "value": "9",
+                "name": {
+                  "en": "75%",
+                  "zh-CN": "75%"
+                }
+              },
+              {
+                "value": "10",
+                "name": {
+                  "en": "83%",
+                  "zh-CN": "83%"
+                }
+              }
+            ]
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "group5",
+        "name": {
+          "en": "Picture",
+          "zh-CN": "图片"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Image",
+              "zh-CN": "图片"
+            },
+            "type": "imagePicker",
+            "field": "image",
+            "default": "/theme/webp/inquiry.webp",
+            "options": [],
+            "altFiled": "alt"
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "ALT",
+              "zh-CN": "ALT"
+            },
+            "type": "hidden",
+            "field": "alt",
+            "default": "",
+            "options": []
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "group6",
+        "name": {
+          "en": "Contact",
+          "zh-CN": "联系信息"
+        },
+        "elements": [
+          {
+            "type": "repeater",
+            "field": "officeList",
+            "name": {
+              "en": "Contact",
+              "zh-CN": "联系信息"
+            },
+            "maxItems": 99,
+            "elements": [
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Company ",
+                  "zh-CN": "公司名称"
+                },
+                "type": "textarea",
+                "field": "corp",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Contact",
+                  "zh-CN": "联系人"
+                },
+                "type": "text",
+                "field": "contact",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Mobile",
+                  "zh-CN": "手机"
+                },
+                "type": "text",
+                "field": "mobile",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Phone",
+                  "zh-CN": "电话"
+                },
+                "type": "text",
+                "field": "phone",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Email",
+                  "zh-CN": "邮件"
+                },
+                "type": "text",
+                "field": "email",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Fax",
+                  "zh-CN": "传真"
+                },
+                "type": "text",
+                "field": "fax",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "Use enter to wrap",
+                  "zh-CN": "回车键换行"
+                },
+                "name": {
+                  "en": "Address",
+                  "zh-CN": "地址"
+                },
+                "type": "textarea",
+                "field": "address",
+                "default": "",
+                "options": []
+              }
+            ],
+            "default": [
+              {
+                "address": "",
+                "corp": "公司名称\n",
+                "phone": "",
+                "contact": "联系人\n",
+                "mobile": "",
+                "fax": "",
+                "email": ""
+              }
+            ]
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "group7",
+        "name": {
+          "en": "Border & Background",
+          "zh-CN": "边框 & 背景"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Wide screen",
+              "zh-CN": "宽屏模式"
+            },
+            "type": "switch",
+            "field": "wideScreen",
+            "default": false,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Margin top",
+              "zh-CN": "外边距（上）"
+            },
+            "type": "switch",
+            "field": "marginTop",
+            "default": false,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Margin bottom",
+              "zh-CN": "外边距（下）"
+            },
+            "type": "switch",
+            "field": "marginBottom",
+            "default": false,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Padding top",
+              "zh-CN": "内边距（上）"
+            },
+            "type": "switch",
+            "field": "paddingTop",
+            "default": true,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Padding bottom",
+              "zh-CN": "内边距（下）"
+            },
+            "type": "switch",
+            "field": "paddingBottom",
+            "default": true,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Background color",
+              "zh-CN": "背景色"
+            },
+            "type": "colorPicker",
+            "field": "backgroundColor",
+            "default": "",
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Background image",
+              "zh-CN": "背景图"
+            },
+            "type": "imagePicker",
+            "field": "backgroundImage",
+            "default": "",
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Background Position",
+              "zh-CN": "背景图位置"
+            },
+            "type": "select",
+            "field": "backgroundPosition",
+            "default": "",
+            "options": [
+              {
+                "value": "top left",
+                "name": {
+                  "en": "top left",
+                  "zh-CN": "左上"
+                }
+              },
+              {
+                "value": "top center",
+                "name": {
+                  "en": "top center",
+                  "zh-CN": "中上"
+                }
+              },
+              {
+                "value": "top right",
+                "name": {
+                  "en": "top right",
+                  "zh-CN": "右上"
+                }
+              },
+              {
+                "value": "center left",
+                "name": {
+                  "en": "center left",
+                  "zh-CN": "左中"
+                }
+              },
+              {
+                "value": "center center",
+                "name": {
+                  "en": "center center",
+                  "zh-CN": "正中"
+                }
+              },
+              {
+                "value": "center right",
+                "name": {
+                  "en": "center right",
+                  "zh-CN": "右中"
+                }
+              },
+              {
+                "value": "bottom left",
+                "name": {
+                  "en": "bottom left",
+                  "zh-CN": "左下"
+                }
+              },
+              {
+                "value": "bottom center",
+                "name": {
+                  "en": "bottom center",
+                  "zh-CN": "正下"
+                }
+              },
+              {
+                "value": "bottom right",
+                "name": {
+                  "en": "bottom right",
+                  "zh-CN": "右下"
+                }
+              },
+              {
+                "value": "",
+                "name": {
+                  "en": ""
+                }
+              }
+            ]
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Background Repeat",
+              "zh-CN": "背景填充"
+            },
+            "type": "select",
+            "field": "backgroundRepeat",
+            "default": "",
+            "options": [
+              {
+                "value": "repeat",
+                "name": {
+                  "en": "Repeat",
+                  "zh-CN": "重复"
+                }
+              },
+              {
+                "value": "repeat-x",
+                "name": {
+                  "en": "Repeat X",
+                  "zh-CN": "水平填充"
+                }
+              },
+              {
+                "value": "repeat-y",
+                "name": {
+                  "en": "Repeat Y",
+                  "zh-CN": "垂直填充"
+                }
+              },
+              {
+                "value": "no-repeat",
+                "name": {
+                  "en": "No repeat",
+                  "zh-CN": "填充一次"
+                }
+              },
+              {
+                "value": "",
+                "name": {
+                  "en": ""
+                }
+              }
+            ]
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Background Size",
+              "zh-CN": "背景图大小"
+            },
+            "type": "select",
+            "field": "backgroundSize",
+            "default": "",
+            "options": [
+              {
+                "value": "cover",
+                "name": {
+                  "en": "Cover",
+                  "zh-CN": "短边填满"
+                }
+              },
+              {
+                "value": "contain",
+                "name": {
+                  "en": "Contain",
+                  "zh-CN": "长边填满"
+                }
+              },
+              {
+                "value": "auto",
+                "name": {
+                  "en": "Default",
+                  "zh-CN": "默认"
+                }
+              },
+              {
+                "value": "",
+                "name": {
+                  "en": ""
+                }
+              }
+            ]
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "additionalSettings",
+        "name": {
+          "en": "Additional settings",
+          "zh-CN": "补充设置"
+        },
+        "elements": [
+          {
+            "field": "sectionAlias",
+            "name": {
+              "en": "sectionAlias"
+            },
+            "type": "hidden",
+            "default": "询盘表单（基础版）"
+          },
+          {
+            "field": "formHeadingAlign",
+            "name": {
+              "en": "formHeadingAlign"
+            },
+            "type": "hidden",
+            "default": "text-left"
+          },
+          {
+            "field": "isGlobalSection",
+            "name": {
+              "en": "isGlobalSection"
+            },
+            "type": "switch",
+            "default": false
+          },
+          {
+            "field": "sectionCSS",
+            "name": {
+              "en": "sectionCSS"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "symbol",
+            "name": {
+              "en": "symbol"
+            },
+            "type": "hidden",
+            "default": ""
+          }
+        ]
+      }
+    ]
+  },
+  "data": {
+    "source": "binding",
+    "contract": "theme.inquiryForm.v2"
+  }
+}

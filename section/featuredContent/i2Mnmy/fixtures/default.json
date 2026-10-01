@@ -1,0 +1,69 @@
+{
+  "section": {
+    "id": "1757714500774010881",
+    "componentKind": "section",
+    "type": "featuredContent",
+    "templateId": "i2Mnmy",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "3",
+      "layout": "list",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Hot <b>Product</b>",
+      "subColor": "",
+      "itemColor": "",
+      "leftColor": "",
+      "marginTop": false,
+      "mobColumn": "6",
+      "signImage": "",
+      "buttonLink": "",
+      "imageScale": "1by1",
+      "paddingTop": true,
+      "subheading": "About Us",
+      "wideScreen": true,
+      "buttonLabel": "LEARN MORE",
+      "buttonStyle": "invisible",
+      "contentColor": "",
+      "contentWidth": 9,
+      "dividerColor": "",
+      "headingColor": "",
+      "marginBottom": false,
+      "sectionAlias": "推荐内容",
+      "paddingBottom": true,
+      "topBackground": "",
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "bottomBackground": "",
+      "backgroundPosition": "",
+      "itemList": []
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

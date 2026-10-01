@@ -1,0 +1,85 @@
+{
+  "section": {
+    "id": "1442037235188469761",
+    "componentKind": "section",
+    "type": "FAQ",
+    "templateId": "MjYVZ3",
+    "runtimeVersion": 2,
+    "settings": {
+      "alt": "",
+      "image": "https://css.11af.com/img/inquiry.png",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Title with button",
+      "marginTop": false,
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "buttonLink": "",
+      "imageScale": "normal",
+      "paddingTop": true,
+      "subheading": "this is a new beginning",
+      "wideScreen": false,
+      "buttonLabel": "Button label",
+      "buttonStyle": "invisible",
+      "contentWidth": "4",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "marginBottom": false,
+      "sectionAlias": "FAQ",
+      "paddingBottom": true,
+      "sectionMargin": false,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "faqList": [
+        {
+          "question": "Where can I buy Bananas?",
+          "answer": "Bananas are available at Walmart\n Target and online at Amazon.com. Click the links on our shopping page to find Bananas closest to you!"
+        },
+        {
+          "question": "This is a heading",
+          "answer": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review."
+        },
+        {
+          "question": "This is a heading",
+          "answer": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review."
+        },
+        {
+          "question": "This is a heading",
+          "answer": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review."
+        }
+      ],
+      "symbol": "",
+      "fluid": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

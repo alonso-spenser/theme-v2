@@ -1,0 +1,72 @@
+@media (min-width: 768px) {
+	.bMVBvq.fullscreen {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.bMVBvq-item {
+	text-align: right;
+	margin-right: -2rem;
+}
+
+.bMVBvq-item.item-2 {
+	margin-right: 0;
+}
+
+.bMVBvq-item img {
+	margin: 5px 0 0 1rem;
+	max-height: 3rem;
+	max-width: 3rem;
+}
+
+.bMVBvq-item.right {
+	text-align: left;
+	margin-left: -2rem;
+	margin-right: 0;
+}
+
+.bMVBvq-item.right.item-3 {
+	margin-left: 0;
+}
+
+.bMVBvq-item.right img {
+	margin: 5px 1rem 0 0;
+}
+
+.bMVBvq-item:not(:last-child) {
+	margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+	.bMVBvq-item {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		text-align: left;
+	}
+
+	.bMVBvq-item.right {
+		text-align: left;
+	}
+
+	.bMVBvq-item:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
+	.bMVBvq-item img {
+		order: 2;
+		margin: 5px 0 0 1rem !important;
+	}
+
+	.bMVBvq .col-md-4:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}
+
+.bMVBvq .order-md-2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

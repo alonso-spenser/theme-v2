@@ -1,0 +1,68 @@
+.Zb2EZv-map {
+	min-height: 28.125rem;
+	border: 0;
+	width: 100%;
+}
+
+.Zb2EZv-contact {
+	position: relative;
+	z-index: 1;
+}
+
+.Zb2EZv .text-content-heading + form {
+	margin-top: 1rem;
+}
+
+.Zb2EZv .media .media-icon {
+	display: flex;
+	align-items: center;
+}
+
+.Zb2EZv .media .media-icon i {
+	font-size: 2.5rem;
+	color: var(--colorTheme);
+}
+
+.Zb2EZv .media .media-icon + .media-body {
+	margin-left: 1.5rem;
+}
+
+.Zb2EZv .media .media-icon img {
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 1.25rem;
+}
+
+.Zb2EZv .media h3 {
+	font-family: var(--typeContentHeading);
+	font-size: calc(var(--fontSizeContentHeading) * 1px);
+	color: var(--colorTheme);
+	font-weight: bold;
+}
+
+.Zb2EZv .media h3 + p {
+	margin-top: 0.4rem;
+}
+
+.Zb2EZv .media label {
+	font-weight: bold;
+}
+
+.Zb2EZv .media + .media {
+	margin-top: 1.5rem;
+}
+
+.Zb2EZv-form {
+	border-radius: var(--borderRadius);
+	padding: 2.5rem;
+	background-color: var(--colorTheme);
+	margin-bottom: calc(var(--marginHeight) * -1px);
+}
+
+@media (min-width: 768px) {
+	.Zb2EZv-form {
+		margin-bottom: -13rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

@@ -1,0 +1,133 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${section.settings.borderRadius != null && section.settings.borderRadius > -1}"]
+    .section-[[${ section.id }]] .[[${ section.templateId }]]-grid-item {
+        border-radius: [[${section.settings.borderRadius}]]px;
+     }
+[/]
+
+[# th:if="${ (section.settings.columnGap != null && section.settings.columnGap > -1) || (section.settings.rowGap != null && section.settings.rowGap > -1) || not #lists.isEmpty(section.settings.rowHeightList) || not #lists.isEmpty(section.settings.columnList) || not #lists.isEmpty(section.settings.rowHeightMobList) || not #lists.isEmpty(section.settings.columnMobList) }"]
+    .section-[[${ section.id }]] .[[${ section.templateId }]]-grid {
+        [# th:if="${ section.settings.columnGap != null && section.settings.columnGap > -1 }"]
+            grid-column-gap: [[${section.settings.columnGap}]]px;
+        [/]
+        [# th:if="${ section.settings.rowGap != null && section.settings.rowGap > -1 }"]
+            grid-row-gap: [[${section.settings.rowGap}]]px;
+        [/]
+
+        [# th:if="${ not #lists.isEmpty(section.settings.rowHeightList) || not #lists.isEmpty(section.settings.columnList) }"]
+            @media (min-width: 768px) {
+                [# th:if="${ not #lists.isEmpty(section.settings.rowHeightList) }"]
+                    grid-template-rows: [# th:each="o,stat: ${section.settings.rowHeightList}"][[${o.rowHeight}]]px [/];
+                [/]
+                [# th:if="${ not #lists.isEmpty(section.settings.columnList) }"]
+                    grid-template-columns: [# th:each="o,stat: ${section.settings.columnList}"][[${ o.columnWidth == 0 ? 'auto' : o.columnWidth + '%' }]] [/];
+                [/]
+            }
+        [/]
+        [# th:if="${ not #lists.isEmpty(section.settings.rowHeightMobList) || not #lists.isEmpty(section.settings.columnMobList) }"]
+            @media (max-width: 768px) {
+                [# th:if="${ not #lists.isEmpty(section.settings.rowHeightMobList) }"]
+                    grid-template-rows: [# th:each="o,stat: ${section.settings.rowHeightMobList}"][[${o.rowMobHeight}]]px [/];
+                [/]
+                [# th:if="${ not #lists.isEmpty(section.settings.columnMobList) }"]
+                    grid-template-columns: [# th:each="o,stat: ${section.settings.columnMobList}"][[${ o.columnMobWidth == 0 ? 'auto' : o.columnMobWidth + '%' }]] [/];
+                [/]
+            }
+        [/]
+    }
+[/]
+
+[# th:each="o,stat: ${section.settings.imageList}"]
+    [# th:if="${ not #strings.isEmpty(o.cardBackground) || (o.gridRowStart != null && o.gridRowStart > 0) || (o.gridRowEnd != null && o.gridRowEnd > 0) || (o.gridColumnStart != null && o.gridColumnStart > 0) || (o.gridColumnEnd != null && o.gridColumnEnd > 0) || (o.padding != null && o.padding > -1) }"]
+        .section-[[${ section.id }]] .[[${ section.templateId }]]-grid-[[${stat.index + 1}]] {
+            [# th:if="${not #strings.isEmpty(o.cardBackground)}"]
+                background-color: [[${ o.cardBackground }]];
+            [/]
+            [# th:if="${ (o.gridRowStart != null && o.gridRowStart > 0) || (o.gridRowEnd != null && o.gridRowEnd > 0) || (o.gridColumnStart != null && o.gridColumnStart > 0) || (o.gridColumnEnd != null && o.gridColumnEnd > 0) || (o.padding != null && o.padding > -1) }"]
+                @media (min-width: 768px) {
+                    [# th:if="${ o.gridRowStart != null && o.gridRowStart > 0 }"]
+                        grid-row-start: [[${ o.gridRowStart }]];
+                    [/]
+                    [# th:if="${ o.gridRowEnd != null && o.gridRowEnd > 0 }"]
+                        grid-row-end: [[${ o.gridRowEnd }]];
+                    [/]
+                    [# th:if="${ o.gridColumnStart != null && o.gridColumnStart > 0 }"]
+                        grid-column-start: [[${ o.gridColumnStart }]];
+                    [/]
+                    [# th:if="${ o.gridColumnEnd != null && o.gridColumnEnd > 0 }"]
+                        grid-column-end: [[${ o.gridColumnEnd }]];
+                    [/]
+                    [# th:if="${ o.padding != null && o.padding > -1 && o.padding != 25}"]
+                        [# th:if="${ o.contentAlign == 'left-top' }"]
+                            padding-left: [[${ o.padding }]]px;
+                            padding-top: [[${ o.padding }]]px;
+                        [/]
+                        [# th:if="${ o.contentAlign == 'left-center' }"]
+                            padding-left: [[${ o.padding }]]px;
+                        [/]
+                        [# th:if="${ o.contentAlign == 'left-bottom' }"]
+                            padding-left: [[${ o.padding }]]px;
+                            padding-bottom: [[${ o.padding }]]px;
+                        [/]
+                        [# th:if="${ o.contentAlign == 'center-top' }"]
+                            padding-top: [[${ o.padding }]]px;
+                        [/]
+                        [# th:if="${ o.contentAlign == 'center-bottom' }"]
+                            padding-bottom: [[${ o.padding }]]px;
+                        [/]
+                        [# th:if="${ o.contentAlign == 'right-top' }"]
+                            padding-top: [[${ o.padding }]]px;
+                            padding-right: [[${ o.padding }]]px;
+                        [/]
+                        [# th:if="${ o.contentAlign == 'right-center' }"]
+                            padding-right: [[${ o.padding }]]px;
+                        [/]
+                        [# th:if="${ o.contentAlign == 'right-bottom' }"]
+                            padding-bottom: [[${ o.padding }]]px;
+                            padding-right: [[${ o.padding }]]px;
+                        [/]
+                    [/]
+                }
+            [/]
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(o.headingColor) || not #strings.isEmpty(o.headingEndColor) || (o.headingFontSize != null && o.headingFontSize > 0)}"]
+    .section-[[${ section.id }]] .[[${ section.templateId }]]-grid-[[${stat.index + 1}]] .text-heading {
+        [# th:if="${not #strings.isEmpty(o.headingColor) && not #strings.isEmpty(o.headingEndColor)}"]
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            background-image: linear-gradient([[${ o.gradientAngle }]]deg, [[${ o.headingColor }]], [[${ o.headingEndColor }]]);
+        [/]
+        [# th:if="${not #strings.isEmpty(o.headingColor) && #strings.isEmpty(o.headingEndColor)}"]
+            color: [[${ o.headingColor }]];
+        [/]
+        [# th:if="${o.headingFontSize != null && o.headingFontSize > 0}"]
+            font-size: [[${ o.headingFontSize }]]px;
+            @media (max-width: 768px) {
+                font-size: [[${ #numbers.formatInteger(o.headingFontSize * 0.7, 1,'POINT') }]]px;
+            }
+        [/]
+    }
+    [/]
+    [# th:if="${not #strings.isEmpty(o.contentColor) || (o.contentFontSize != null && o.contentFontSize > 0)}"]
+        .section-[[${ section.id }]] .[[${ section.templateId }]]-grid-[[${stat.index + 1}]] .text-body {
+            [# th:if="${o.contentFontSize != null && o.contentFontSize > 0}"]
+                font-size: [[${ o.contentFontSize }]]px;
+                 @media (max-width: 768px) {
+                     font-size: [[${ #numbers.formatInteger(o.contentFontSize * 0.9, 1,'POINT') }]]px;
+                 }
+            [/]
+            [# th:if="${not #strings.isEmpty(o.contentColor)}"]
+                color: [[${ o.contentColor }]];
+            [/]
+        }
+    [/]
+[/]

@@ -1,0 +1,41 @@
+{
+  "section": {
+    "id": "1441974135508668417",
+    "componentKind": "section",
+    "type": "shareto",
+    "templateId": "RjuUvy",
+    "runtimeVersion": 2,
+    "settings": {
+      "paddingTop": 12,
+      "sectionAlias": "分享",
+      "paddingBottom": 12,
+      "wideScreen": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-jqmAby .jqmAby-notice {
+        background-color: rgba(173, 78, 78, 1);
+    }
+
+
+
+.section-demo-jqmAby .jqmAby-bar {
+  background-color: #3c700c;
+}
+
+
+
+.section-demo-jqmAby .jqmAby-bar .dropdown-toggle,
+.section-demo-jqmAby .jqmAby-bar .section-drop:before,
+.section-demo-jqmAby .jqmAby-bar i:before,
+.section-demo-jqmAby .jqmAby-bar .jqmAby-icon:before,
+.section-demo-jqmAby .jqmAby-bar a:not(.dropdown-item) {
+  color: #a1a108;
+}
+
+
+
+.section-demo-jqmAby .jqmAby-notice {
+  background-color: rgba(173, 78, 78, 1);
+}
+
+
+
+.section-demo-jqmAby .jqmAby-notice .jqmAby-notice-close,
+.section-demo-jqmAby .jqmAby-notice [class*="text-"] {
+  color: #ffff00;
+}
+
+
+
+    .section-demo-jqmAby .navbar {
+      background-color: #3adea5;
+    }
+
+
+
+
+@media (min-width: 768px) {
+    
+        .section-demo-jqmAby .navbar .navbar-nav li > .nav-link:not(.active) {
+            color: #e1063a;
+        }
+    
+    
+}
+
+
+
+@media (min-width: 768px) {
+  .section-demo-jqmAby nav .navbar-second-menu .nav-link {
+    color: #0a8306;
+  }
+}
+
+
+
+@media (min-width: 768px) {
+  .section-demo-jqmAby nav .navbar-second-menu {
+    background-color: #54c950;
+  }
+}

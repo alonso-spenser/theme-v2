@@ -1,0 +1,41 @@
+// Bootstrap 5.3.8 text utilities plus Bootstrap 4 class-name compatibility.
+// Imported by base.scss after Bootstrap variables, mixins and layout utilities.
+$saved-utilities: $utilities;
+$utilities: ();
+@each $key in ("font-family", "font-size", "font-style", "font-weight", "line-height", "text-align", "text-decoration", "text-transform", "white-space", "word-wrap", "color", "text-opacity", "text-color") {
+  $utilities: map-merge($utilities, ($key: map-get($bootstrap-utilities, $key)));
+}
+@import "utilities/api";
+$utilities: $saved-utilities;
+
+// Keep legacy physical alignment names, including responsive variants.
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    .text#{$infix}-left { text-align: left !important; }
+    .text#{$infix}-right { text-align: right !important; }
+  }
+}
+.text-justify { text-align: justify !important; }
+.text-monospace { font-family: $font-family-monospace; }
+.text-truncate { @include text-truncate; }
+.font-weight-light { font-weight: $font-weight-light !important; }
+.font-weight-normal { font-weight: $font-weight-normal !important; }
+.font-weight-bold { font-weight: $font-weight-bold !important; }
+.font-italic { font-style: italic !important; }
+
+// Bootstrap 4 contextual text links darkened on hover and keyboard focus.
+@each $color, $value in $theme-colors {
+  a.text-#{$color}, button.text-#{$color} {
+    &:hover, &:focus { color: darken($value, 10%) !important; }
+  }
+}
+
+// Retain legacy image-replacement behavior without the removed text-hide mixin.
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}

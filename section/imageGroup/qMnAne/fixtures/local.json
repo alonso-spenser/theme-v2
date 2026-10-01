@@ -1,0 +1,368 @@
+{
+  "section": {
+    "id": "1654093203743834113",
+    "componentKind": "section",
+    "type": "imageGroup",
+    "templateId": "qMnAne",
+    "runtimeVersion": 2,
+    "settings": {
+      "rowGap": 10,
+      "columnGap": 10,
+      "marginTop": false,
+      "paddingTop": true,
+      "wideScreen": false,
+      "borderRadius": 15,
+      "marginBottom": false,
+      "sectionAlias": "图片组",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "#818181",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "columnHeight": 150,
+      "columnMobHeight": 70,
+      "rowCount": 2,
+      "rowMoCount": 3,
+      "imageList": [
+        {
+          "image": "/preview-assets/images/8.jpg",
+          "alt": "",
+          "headingFontSize": 25,
+          "heading": "1 Heading",
+          "headingColor": "#ff0000",
+          "headingEndColor": "#ffff00",
+          "gradientAngle": 20,
+          "contentFontSize": 8,
+          "content": "Pair large text with an image to give focus to your chosen product.",
+          "contentAlign": "center-top",
+          "textAlign": "text-center",
+          "padding": 30,
+          "cardBackground": "",
+          "contentColor": "#ff0000",
+          "gridRowStart": 1,
+          "gridRowEnd": 3,
+          "gridColumnStart": 0,
+          "gridColumnEnd": 0
+        },
+        {
+          "image": "",
+          "alt": "",
+          "headingFontSize": 25,
+          "heading": "2 Heading",
+          "headingColor": "",
+          "headingEndColor": "",
+          "gradientAngle": 20,
+          "contentFontSize": 9,
+          "content": "Pair large text with an image to give focus to your chosen product.",
+          "contentAlign": "left-top",
+          "textAlign": "text-center",
+          "padding": 8,
+          "cardBackground": "#fff000",
+          "contentColor": "#fa6203",
+          "gridRowStart": 0,
+          "gridRowEnd": 0,
+          "gridColumnStart": 2,
+          "gridColumnEnd": 4
+        },
+        {
+          "image": "/preview-assets/images/8.jpg",
+          "alt": "",
+          "headingFontSize": 25,
+          "heading": "3 Heading",
+          "headingColor": "",
+          "headingEndColor": "",
+          "gradientAngle": 20,
+          "contentFontSize": 10,
+          "content": "Pair large text with an image to give focus to your chosen product.",
+          "contentAlign": "right-top",
+          "textAlign": "text-center",
+          "padding": 5,
+          "cardBackground": "#0ff000",
+          "contentColor": "#fad903",
+          "gridRowStart": 0,
+          "gridRowEnd": 0,
+          "gridColumnStart": 4,
+          "gridColumnEnd": 6
+        },
+        {
+          "image": "",
+          "alt": "",
+          "headingFontSize": 18,
+          "heading": "4 Whole Home Backup Power Solution",
+          "headingColor": "#00ff00",
+          "headingEndColor": "",
+          "gradientAngle": 20,
+          "contentFontSize": 11,
+          "content": "",
+          "contentAlign": "left-center",
+          "textAlign": "text-center",
+          "padding": 15,
+          "cardBackground": "#0000ff",
+          "contentColor": "#9ffa03",
+          "gridRowStart": 0,
+          "gridRowEnd": 0,
+          "gridColumnStart": 0,
+          "gridColumnEnd": 0
+        },
+        {
+          "image": "/preview-assets/images/8.jpg",
+          "alt": "",
+          "headingFontSize": 25,
+          "heading": "5 Heading",
+          "headingColor": "#fff",
+          "headingEndColor": "",
+          "contentColor": "#fff",
+          "gradientAngle": 20,
+          "contentFontSize": 12,
+          "content": "Pair large text with an image to give focus to your chosen product.",
+          "contentAlign": "center",
+          "textAlign": "text-center",
+          "padding": 5,
+          "cardBackground": "#ff00ff",
+          "gridRowStart": 0,
+          "gridRowEnd": 0,
+          "gridColumnStart": 0,
+          "gridColumnEnd": 0
+        },
+        {
+          "image": "/preview-assets/images/8.jpg",
+          "alt": "",
+          "headingFontSize": 25,
+          "heading": "6 Heading",
+          "headingColor": "",
+          "headingEndColor": "",
+          "gradientAngle": 20,
+          "contentFontSize": 13,
+          "content": "Pair large text with an image to give focus to your chosen product.",
+          "contentAlign": "right-bottom",
+          "textAlign": "text-center",
+          "padding": 15,
+          "cardBackground": "#00ffff",
+          "contentColor": "#c206bf",
+          "gridRowStart": 0,
+          "gridRowEnd": 0,
+          "gridColumnStart": 4,
+          "gridColumnEnd": 6
+        },
+        {
+          "image": "/preview-assets/images/8.jpg",
+          "alt": "",
+          "headingFontSize": 25,
+          "heading": "6 Heading",
+          "headingColor": "",
+          "headingEndColor": "",
+          "gradientAngle": 20,
+          "contentFontSize": 13,
+          "content": "Pair large text with an image to give focus to your chosen product.",
+          "contentAlign": "right-bottom",
+          "textAlign": "text-center",
+          "padding": 15,
+          "cardBackground": "#00ffff",
+          "contentColor": "#c206bf",
+          "gridRowStart": 0,
+          "gridRowEnd": 0,
+          "gridColumnStart": 1,
+          "gridColumnEnd": 5
+        }
+      ],
+      "columnList": [
+        {
+          "columnWidth": 0
+        },
+        {
+          "columnWidth": 15
+        },
+        {
+          "columnWidth": 15
+        },
+        {
+          "columnWidth": 15
+        },
+        {
+          "columnWidth": 15
+        }
+      ],
+      "columnMobList": [
+        {
+          "columnMobWidth": 50
+        },
+        {
+          "columnMobWidth": 50
+        }
+      ],
+      "rowHeightList": [
+        {
+          "rowHeight": 150
+        },
+        {
+          "rowHeight": 250
+        },
+        {
+          "rowHeight": 350
+        }
+      ],
+      "rowHeightMobList": [
+        {
+          "rowHeight": 150
+        },
+        {
+          "rowHeight": 150
+        },
+        {
+          "rowHeight": 150
+        }
+      ]
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "$",
+    "phone": "0755-88888888",
+    "email": "devin@fomille.com",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "five.123.com",
+    "siteName": "B2B开发测试（勿删）",
+    "addOnHeader": "-附加标题",
+    "address": "Baidu Campus, No. 10 Shangdi 10th Street, Haidian District, Beijing, China1",
+    "areaCode": "",
+    "articleQuantity": 0,
+    "cityName": "崇文区",
+    "company": "fomille",
+    "contact": "devin shieh",
+    "countryName": "中国",
+    "createTime": 1577264254667,
+    "currencyCode": "$",
+    "currencyName": "美元",
+    "defaultRegion": 0,
+    "downPass": "1235",
+    "expiryTime": 1700064000000,
+    "facebookPixel": "",
+    "favicon": "",
+    "formQuantity": 0,
+    "freePhone": "+86-4008000000",
+    "goodsQuantity": 0,
+    "honestScore": 0,
+    "keepLang": 1,
+    "latitude": 39.911019,
+    "lengthUnit": "mm",
+    "logisticsScore": 0,
+    "logo": "",
+    "longitude": 116.396315,
+    "maxLang": 1,
+    "mobile": "13800138000",
+    "praiseRate": 0,
+    "provinceName": "北京",
+    "region": "en",
+    "rootLink": "https://five.123.com/",
+    "scriptBottom": "",
+    "scriptHead": "",
+    "scriptService": "",
+    "serviceScore": 0,
+    "siteId": "1209760082859032577",
+    "siteType": 3,
+    "state": 0,
+    "synopsis": "",
+    "systemDomain": "five.123.com",
+    "timeZone": "Asia/Rangoon",
+    "unitSystem": "metric",
+    "videoLimit": 0,
+    "weightUnit": "g",
+    "social": {
+      "socialPinterest": "https://www.facebook.com/fomille",
+      "socialGooglePlus": "https://www.facebook.com/fomille",
+      "socialFancy": "https://www.facebook.com/fomille",
+      "socialVimeo": "https://www.facebook.com/fomille",
+      "socialYoutube": "https://www.facebook.com/fomille",
+      "sectionAlias": "社交媒体",
+      "sloganBorder": "",
+      "socialFacebook": "https://www.facebook.com/fomille",
+      "socialWeibo": "https://www.facebook.com/fomille",
+      "socialShareImage": "",
+      "sloganBackground": "",
+      "socialTumblr": "https://www.facebook.com/fomille",
+      "socialInstagram": "https://www.facebook.com/fomille",
+      "sloganColor": "",
+      "logo": "",
+      "socialTwitter": "https://www.facebook.com/fomille",
+      "socialSnapchat": "https://www.facebook.com/fomille",
+      "slogan": "",
+      "socialLinkedin": "https://www.facebook.com/fomille",
+      "socialImage": [
+        {
+          "areaContent": "logo",
+          "socialQRCode": "/preview-assets/images/qrcode.jpg",
+          "socialQRCodeAlt": "",
+          "areaHeading": "Heading",
+          "areaRatio": "2",
+          "socialQRCodeLink": "/page/about-us-replace#About us"
+        },
+        {
+          "areaContent": "logo",
+          "socialQRCode": "/preview-assets/images/qrcode.jpg",
+          "socialQRCodeAlt": "",
+          "areaHeading": "Heading",
+          "areaRatio": "2",
+          "socialQRCodeLink": "/page/about-us-replace#About us"
+        },
+        {
+          "areaContent": "logo",
+          "socialQRCode": "/preview-assets/images/qrcode.jpg",
+          "socialQRCodeAlt": "",
+          "areaHeading": "Heading",
+          "areaRatio": "2",
+          "socialQRCodeLink": "/page/about-us-replace#About us"
+        }
+      ]
+    }
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": "Home",
+    "seoUrl": "/",
+    "seoDescription": "",
+    "id": "1463865511414325249",
+    "title": "首页",
+    "seoTitle": "(Nothingness)卫浴1",
+    "seoKeywords": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "cache": {},
+    "canonical": "https://five.123.com/",
+    "collectionId": "",
+    "defaultRegion": 0,
+    "domain": "five.123.com",
+    "ids": [],
+    "itemLink": "/",
+    "mainDomain": "five.123.com",
+    "pageIndex": 1,
+    "pageSize": 12,
+    "pageType": "homePage",
+    "params": {},
+    "region": "en",
+    "siteId": "1209760082859032577",
+    "sortBy": "",
+    "url": "",
+    "designMode": true
+  },
+  "lang": {
+    "whatsapp": "Whatsapp",
+    "skype": "Skype",
+    "address": "Address",
+    "phone": "Phone",
+    "global": {
+      "keywords": "KEYWORDS",
+      "product": "PRODUCTS",
+      "lang": "英语",
+      "article": "NEWS",
+      "home": "HOME"
+    },
+    "lang": "英语",
+    "fax": "Fax",
+    "email": "Email"
+  }
+}

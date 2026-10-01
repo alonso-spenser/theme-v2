@@ -1,0 +1,101 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''} ${section.templateId} section-${section.id} |" th:data-section="${section.templateId}">
+    <img class="lazy embed-responsive" th:if="${section.data.collection != null && section.settings.bannerVisible && not #strings.isEmpty(section.data.collection.banner)}" th:src="|${section.data.collection.banner}!1|" th:data-original="|${section.data.collection.banner}!full|" th:alt="${section.data.collection.title}">
+    <div th:class="|bread-crumb ${section.settings.h1Layout}|" th:if="${section.settings.h1Layout != 'invisible' || section.settings.enableCrumb}">
+        <div th:class="|container${section.settings.h1Wide ? '-fluid' : ''}${section.settings.enableCrumb ? '' : ' solo'}|">
+            <h1 class="text-heading" th:if="${section.settings.h1Layout != 'invisible' && section.settings.h1Layout != 'bottom'}">
+                [[${ page.seoH1 }]]
+            </h1>
+            <ol class="breadcrumb" th:if="${section.settings.enableCrumb}">
+                <li class="breadcrumb-item">
+                    <a th:href="${site.urlPrefix}">
+                    [[${ lang.global.home }]]
+                    </a>
+                </li>
+                <li class="breadcrumb-item" th:if="${ lang != null && not #strings.isEmpty(lang.heading) }">
+                    <a th:href="|${site.urlPrefix}products|">
+                        [[${ lang.heading }]]
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    [[${ page.seoH1 }]]
+                </li>
+            </ol>
+            <h1 class="text-heading" th:if="${section.settings.h1Layout != 'invisible' && section.settings.h1Layout == 'bottom'}">
+                [[${ page.seoH1 }]]
+            </h1>
+        </div>
+    </div>
+    <div th:class="|section-container${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''}|">
+        <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} section-neighbor|" th:if="${section.data.collection != null && section.settings.summaryDescription == 'top' && not #strings.isEmpty(section.data.collection.description) && section.data.page.current == 1}">
+            <div class="text-summary" th:with="textLines = ${#strings.listSplit(section.data.collection.description,'\n')}">
+                <th:block th:each="textLine,saltLine:${textLines}">
+                    <p class="break-word" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                </th:block>
+            </div>
+        </div>
+        <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} ${section.templateId}-container section-neighbor|">
+            <div th:class="|row row-gutter|">
+                <th:block th:each="o,salt:${section.data.page.records}">
+                    <div th:class="|col-md-${ section.settings.firstLine && salt.index == 0 ? 12 :section.settings.column} col-${section.settings.mobColumn}|">
+                        <a th:href="|${ site.urlPrefix }item/${o.seoUrl}|">
+                            <div th:class="|card related-card first-line ${section.settings.imageLayout}${ section.settings.cardShadow ? '' : ' no-shadow'}|" th:if="${section.settings.firstLine && salt.index == 0}">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="card-body">
+                                            <div class="card-body-content">
+                                                <h3 class="text-content-heading">
+                                                    [[${o.title}]]
+                                                </h3>
+                                                <p class="text-body" th:if="${section.settings.subtitleVisible == true}">
+                                                    [[${o.subtitle}]]
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div th:class="|embed-responsive embed-responsive-${section.settings.firstScale}|">
+                                            <img class="embed-responsive-item lazy" th:src="|${o.coverImage}!1|" th:data-original="${o.coverImage}" th:alt="${o.title}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div th:class="|card ${ section.settings.cardShadow ? '' : ' no-shadow'}|" th:if="${!(section.settings.firstLine && salt.index == 0)}">
+                                <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${section.settings.imageLayout == 'top'}">
+                                    <img class="embed-responsive-item lazy card-img-top" th:src="|${o.coverImage}!1|" th:data-original="${o.coverImage}" th:alt="${o.title}">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h3 class="text-content-heading">
+                                        [[${o.title}]]
+                                    </h3>
+                                    <p class="text-body" th:if="${section.settings.subtitleVisible == true}">
+                                        [[${o.subtitle}]]
+                                    </p>
+                                    <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${section.settings.imageLayout == 'bottom'}">
+                                        <img class="embed-responsive-item lazy" th:src="|${o.coverImage}!1|" th:data-original="${o.coverImage}" th:alt="${o.title}">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </th:block>
+            </div>
+            <div class="section-neighbor" th:if="${section.data.collection != null && section.settings.summaryDescription == 'bottom' && not #strings.isEmpty(section.data.collection.description) && section.data.page.current == 1}">
+                <div class="section-margin-top section-collection-describe" th:with="textLines = ${#strings.listSplit(section.data.collection.description,'\n')}">
+                    <h3 class="text-content-heading">[[${ section.data.collection.title }]]</h3>
+                    <th:block th:each="textLine,saltLine:${textLines}">
+                        <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                    </th:block>
+                </div>
+                <div class="section-collection-more">
+                    <label th:text="${#strings.isEmpty(section.settings.summaryShow) ? 'Show More' : section.settings.summaryShow}"></label>
+                    <label th:text="${#strings.isEmpty(section.settings.summaryClose) ? 'Hide' : section.settings.summaryClose}"></label>
+                </div>
+            </div>
+            <div class="section-neighbor d-flex justify-content-center" th:if="${section.data.page.total > section.data.page.size}">
+                [(${ section.settings.pagination })]
+            </div>
+        </div>
+    </div>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

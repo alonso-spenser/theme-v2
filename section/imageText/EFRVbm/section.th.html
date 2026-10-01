@@ -1,0 +1,43 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}${#strings.isEmpty(section.settings.lineText) ? '' : ' has-line section-padding-top section-padding-bottom'}|">
+        <div class="row">
+            <div th:class="|col-md-6 col-img${ section.settings.imageAlign == 'right' ? ' order-2' : ''}|">
+                <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${not #strings.isEmpty(section.settings.image)}">
+                    <img class="embed-responsive-item lazy" th:src="|${section.settings.image}!1|" th:data-original="${section.settings.image}" th:alt="${section.settings.alt}">
+                </div>
+            </div>
+            <div th:class="|col-md-6 ${#strings.isEmpty(section.settings.lineText) ? '' : ' position-relative'}|">
+                <h3 th:class="|${section.templateId}-line-text|" th:if="${not #strings.isEmpty(section.settings.lineText)}">
+                    [[${section.settings.lineText}]]
+                </h3>
+                <p th:class="|${section.templateId}-since|" th:if="${not #strings.isEmpty(section.settings.sinceText)}">
+                    [[${section.settings.sinceText}]]
+                </p>
+                <h3 class="text-heading" th:if="${not #strings.isEmpty(section.settings.heading)}" th:utext="${section.settings.heading}">
+                </h3>
+                <div th:class="|text-body ${section.templateId}-info|" th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                    <th:block th:each="textLine,saltLine:${textLines}">
+                        <p th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                    </th:block>
+                </div>
+                <div class="media" th:if="${not #strings.isEmpty(section.settings.avatar) || not #strings.isEmpty(section.settings.name)}">
+                    <div class="embed-responsive embed-responsive-1by1" th:if="${not #strings.isEmpty(section.settings.avatar)}">
+                        <img class="embed-responsive-item lazy" th:src="|${section.settings.avatar}!1|" th:data-original="${section.settings.avatar}">
+                    </div>
+                    <div class="media-body">
+                        <img class="media-sign lazy" th:src="|${section.settings.signImage}!1|" th:data-original="${section.settings.signImage}" th:if="${not #strings.isEmpty(section.settings.signImage)}">
+                        <h3 class="text-content-heading" th:if="${not #strings.isEmpty(section.settings.name)}">
+                            [[${section.settings.name}]]
+                        </h3>
+                        <p class="text-body" th:if="${not #strings.isEmpty(section.settings.position)}">
+                            [[${section.settings.position}]]
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

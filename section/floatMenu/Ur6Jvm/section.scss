@@ -1,0 +1,93 @@
+.Ur6Jvm {
+	position: fixed;
+	bottom: .625rem;
+	right: .625rem;
+	z-index: 300
+}
+
+.Ur6Jvm .Ur6Jvm-item {
+	margin-top: .625rem;
+	background-color: #00aff0;
+	box-shadow: 0 0 .5rem rgba(0,0,0,.25);
+	height: 3rem;
+	width: 3rem;
+	padding: .75rem;
+	text-align: center;
+	transition: all .25s
+}
+
+.Ur6Jvm .Ur6Jvm-item label {
+	display: block;
+	cursor: pointer
+}
+
+.Ur6Jvm .Ur6Jvm-item label:before {
+	font-family: iconfont!important;
+	line-height: 1.5rem;
+	font-size: 1.625rem;
+	color: #fff
+}
+
+.Ur6Jvm .Ur6Jvm-item.skype label:before {
+	color: #fff;
+	content: "\e63c"
+}
+
+.Ur6Jvm .Ur6Jvm-item.Ur6Jvm-ico {
+	background-color: #ffc74e
+}
+
+.Ur6Jvm .Ur6Jvm-item.whatsapp {
+	background-color: #27d367
+}
+
+.Ur6Jvm .Ur6Jvm-item.whatsapp label:before {
+	content: "\e645"
+}
+
+.Ur6Jvm .Ur6Jvm-item.back-to-top {
+	background-color: rgba(0,0,0,.5);
+	cursor: pointer;
+	border: 1px solid rgba(255,255,255,.5);
+	position: relative
+}
+
+.Ur6Jvm .Ur6Jvm-item.back-to-top:after {
+	content: ' ';
+	position: absolute;
+	top: calc(50% - .75rem);
+	left: calc(50% - .5rem);
+	border: .5rem solid transparent;
+	border-bottom-color: rgba(255,255,255,.5)
+}
+
+.Ur6Jvm.small .Ur6Jvm-item {
+	height: 2rem;
+	width: 2rem;
+	padding: .375rem
+}
+
+.Ur6Jvm.small .Ur6Jvm-item label:before {
+	line-height: 1.25rem;
+	font-size: 1.25rem
+}
+
+.Ur6Jvm.small .Ur6Jvm-item.back-to-top:after {
+	top: calc(50% - .625rem);
+	left: calc(50% - .375rem);
+	border: .375rem solid transparent;
+	border-bottom-color: rgba(255,255,255,.5)
+}
+
+.Ur6Jvm.large .Ur6Jvm-item {
+	height: 3.75rem;
+	width: 3.75rem;
+	padding: .75rem
+}
+
+.Ur6Jvm.large .Ur6Jvm-item label:before {
+	line-height: 2.25rem;
+	font-size: 2.25rem
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

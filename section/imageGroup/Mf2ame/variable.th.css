@@ -1,0 +1,26 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .section-title [class^=text-] {
+    color:[[${section.settings.textColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.cardBackground)}"]
+.section-[[${ section.id }]] .card.active, .section-[[${ section.id }]] .card:hover{
+background-color: [[${section.settings.cardBackground}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.cardColor)}"]
+.section-[[${ section.id }]] .card.active [class*="text-"], .section-[[${ section.id }]] .card:hover [class*="text-"]{
+  color: [[${section.settings.cardColor}]];
+}
+[/]

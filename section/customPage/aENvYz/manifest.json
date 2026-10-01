@@ -1,0 +1,187 @@
+{
+  "protocolVersion": 2,
+  "componentKind": "page-section",
+  "type": "customPage",
+  "templateId": "aENvYz",
+  "runtimeVersion": 2,
+  "definitionVersion": 1,
+  "schemaVersion": 1,
+  "name": {
+    "en": "Custom page",
+    "zh-CN": "自定义页"
+  },
+  "policy": {
+    "removable": false,
+    "duplicable": false,
+    "maxInstances": 1
+  },
+  "placement": {
+    "fixed": true,
+    "pages": [
+      "customPage"
+    ]
+  },
+  "render": {
+    "template": "section.th.html",
+    "style": "section.scss",
+    "variableStyle": "variable.th.css",
+    "script": "section.js"
+  },
+  "editor": {
+    "groups": [
+      {
+        "id": "group1",
+        "name": {
+          "en": "H1 & Bread crumbs",
+          "zh-CN": "H1 & 面包屑"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Bread crumbs",
+              "zh-CN": "面包屑"
+            },
+            "type": "switch",
+            "field": "enableCrumb",
+            "default": true,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "type": "divider",
+            "default": "",
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "H1",
+              "zh-CN": "H1"
+            },
+            "type": "select",
+            "field": "h1Layout",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "name": {
+                  "en": "Left",
+                  "zh-CN": "左"
+                }
+              },
+              {
+                "value": "center",
+                "name": {
+                  "en": "Center",
+                  "zh-CN": "中上"
+                }
+              },
+              {
+                "value": "right",
+                "name": {
+                  "en": "Right",
+                  "zh-CN": "右"
+                }
+              },
+              {
+                "value": "bottom",
+                "name": {
+                  "en": "Buttom",
+                  "zh-CN": "中下"
+                }
+              },
+              {
+                "value": "invisible",
+                "name": {
+                  "en": "Invisible",
+                  "zh-CN": "不可见"
+                }
+              }
+            ]
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Text",
+              "zh-CN": "文本"
+            },
+            "type": "colorPicker",
+            "field": "h1Color",
+            "default": "",
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Background",
+              "zh-CN": "背景色"
+            },
+            "type": "colorPicker",
+            "field": "h1Background",
+            "default": "",
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Wide",
+              "zh-CN": "宽屏"
+            },
+            "type": "switch",
+            "field": "h1Wide",
+            "default": false,
+            "options": []
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "additionalSettings",
+        "name": {
+          "en": "Additional settings",
+          "zh-CN": "补充设置"
+        },
+        "elements": [
+          {
+            "field": "sectionAlias",
+            "name": {
+              "en": "sectionAlias"
+            },
+            "type": "hidden",
+            "default": "自定义页"
+          }
+        ]
+      }
+    ]
+  },
+  "data": {
+    "source": "none",
+    "contract": "theme.customPage.v2"
+  }
+}

@@ -1,0 +1,54 @@
+[# th:if="${not #strings.isEmpty(section.settings.background) || not #strings.isEmpty(section.settings.borderColor)}"]
+.section-[[${ section.id }]]:not(.transparent) {
+    [# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+        background: [[${section.settings.background}]];
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+        border-bottom: 1px solid [[${section.settings.borderColor}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.tranBackground)}"]
+.section-[[${ section.id }]].transparent {
+    background: [[${section.settings.tranBackground}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .navbar-toggler .navbar-toggler-icon, .section-[[${ section.id }]] .navbar-toggler:after, .section-[[${ section.id }]] .navbar-toggler:before {
+    background-color: [[${section.settings.textColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.tranColor)}"]
+.section-[[${ section.id }]].transparent .navbar-toggler .navbar-toggler-icon, .section-[[${ section.id }]].transparent .navbar-toggler:after, .section-[[${ section.id }]].transparent .navbar-toggler:before {
+    background-color: [[${section.settings.tranColor}]];
+}
+[/]
+[# th:if="${section.settings.logoPadding != null && section.settings.logoPadding > 0}"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]] nav {
+      padding: [[${section.settings.logoPadding}]]px 0;
+    }
+}
+[/]
+[# th:if="${section.settings.logoMobPadding != null && section.settings.logoMobPadding > 0}"]
+@media (max-width: 768px) {
+    .section-[[${ section.id }]] nav {
+      padding: [[${section.settings.logoMobPadding}]]px 0;
+    }
+}
+[/]
+
+[# th:if="${section.settings.mainWidth != null && section.settings.mainWidth > 0}"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]] .navbar-vertical .vertical-link {
+        width: [[${section.settings.mainWidth}]]%;
+    }
+    .section-[[${ section.id }]] .navbar-vertical-content {
+        width: [[${100 - section.settings.mainWidth}]]%;
+        left: [[${section.settings.mainWidth}]]%;
+    }
+}
+[/]

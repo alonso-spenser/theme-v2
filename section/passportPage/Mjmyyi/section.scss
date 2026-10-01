@@ -1,0 +1,160 @@
+.Mjmyyi {
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+@media (min-width: 768px) {
+	.Mjmyyi-margin {
+		margin-left: 5.28rem;
+		margin-right: 5.28rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.Mjmyyi-margin {
+		margin-left: 6.82rem;
+		margin-right: 6.82rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.Mjmyyi-margin {
+		margin-left: 8.25rem;
+		margin-right: 8.25rem;
+	}
+}
+
+@media (min-width: 1600px) {
+	.Mjmyyi-margin {
+		margin-left: 11rem;
+		margin-right: 11rem;
+	}
+}
+
+.Mjmyyi-logo {
+	max-height: 3.75rem;
+}
+
+.Mjmyyi-fluid {
+	border-radius: 0.25rem;
+	position: relative;
+	box-shadow: 0 0.125rem 2.125rem rgba(0, 0, 0, 0.0784313725);
+	background-color: #fff;
+	margin-top: 8vh;
+	margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+	.Mjmyyi-fluid {
+		margin-top: 0;
+	}
+
+	.Mjmyyi-fluid {
+		box-shadow: none;
+	}
+}
+
+.Mjmyyi-fluid-content {
+	position: relative;
+	min-height: 84vh;
+}
+
+.Mjmyyi-copyright {
+	text-align: right;
+}
+
+.Mjmyyi-copyright p + p {
+	margin: 0 !important;
+}
+
+.Mjmyyi-copyright a + a {
+	margin-left: 0.75rem;
+}
+
+@media (max-width: 768px) {
+	.Mjmyyi-copyright {
+		text-align: center;
+	}
+}
+
+.Mjmyyi .slick {
+	position: absolute;
+	height: 92vh;
+	clip-path: polygon(100% 0, 91% 100%, 0 100%, 0 0);
+	top: -4vh;
+	width: 50%;
+}
+
+@media (max-width: 768px) {
+	.Mjmyyi .slick {
+		display: none !important;
+	}
+}
+
+.Mjmyyi .slick .slick-slide {
+	height: 92vh;
+}
+
+.Mjmyyi .slick img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: all 0.25s;
+}
+
+.Mjmyyi .slick .slick-dots {
+	bottom: 20px;
+	justify-content: start;
+	left: 2rem;
+}
+
+.Mjmyyi form {
+	margin-top: 1rem;
+}
+
+.Mjmyyi .login-with-google {
+	margin-left: 0.5rem;
+	cursor: pointer;
+}
+
+.Mjmyyi-panel {
+	width: 100%;
+	padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+	.Mjmyyi-panel {
+		padding: 3rem 0;
+		position: relative;
+		width: 20rem;
+		margin-left: 75%;
+		transform: translateX(-50%);
+	}
+}
+
+.Mjmyyi-panel:not(.active) {
+	display: none;
+}
+
+.Mjmyyi .btn-link {
+	color: var(--colorTheme);
+	cursor: pointer;
+}
+
+.Mjmyyi .m-t-75 {
+	margin-top: 0.75rem;
+}
+
+.Mjmyyi .text-tips {
+	margin-top: 0.75rem;
+	font-size: 0.75rem;
+	line-height: 1.125rem;
+}
+
+.Mjmyyi .form-group.form-danger * {
+	color: #dc3545 !important;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

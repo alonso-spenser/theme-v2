@@ -1,0 +1,44 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <h3 class="text-heading" th:if="${not #strings.isEmpty(section.settings.heading)}">
+            [[${ section.settings.heading }]]
+        </h3>
+        <div th:if="${ (section.data.formData == null ||
+             (section.data.formData != null && #strings.isEmpty(section.data.formData.id))) &&
+             not #strings.isEmpty(section.settings.buttonLink) &&
+             section.settings.buttonStyle != 'invisible'
+             }">
+            <a th:href="${section.settings.buttonLink}" th:if="${ not #strings.isEmpty(section.settings.buttonLink)}" th:class="|btn ${section.settings.buttonStyle}|">
+                [[${section.settings.buttonLabel}]]
+            </a>
+            <button type="button" th:if="${ #strings.isEmpty(section.settings.buttonLink)}" th:class="|btn ${section.settings.buttonStyle}|">[[${section.settings.buttonLabel}]]</button>
+         </div>
+        <th:block th:if="${ section.data.formData != null && not #strings.isEmpty(section.data.formData.id) && not #lists.isEmpty(section.data.formData.fieldList) }">
+            <form th:class="|enquiry-form ${section.settings.formStyle}|"th:data-inquiry-form="${section.data.formData.id}" novalidate="">
+                <th:block
+                    th:each="inquiryField,saltField:${section.data.formData.fieldList}"
+                    th:with="holderLabel=${ not #strings.isEmpty(inquiryField.placeholder) ? inquiryField.placeholder: inquiryField.fieldLabel},
+                        placeholder=${section.settings.placeholder == false ? '' : #strings.isEmpty(inquiryField.placeholder)? inquiryField.fieldLabel : inquiryField.placeholder}"
+                    >
+                    <div class="input-group" th:if="${ inquiryField.fieldType == 'email' }">
+                        <input th:placeholder="${placeholder}"
+                             th:name="${inquiryField.fieldLabel}"
+                             th:data-field="${inquiryField.fieldName}"
+                             th:type="${inquiryField.fieldType}"
+                             th:required="${inquiryField.required == 0 ? 'required' : 'false'}"
+                             class="form-control"
+                            >
+                        <div class="d-flex">
+                            <button th:class="|btn ${section.settings.formButtonStyle}|" type="submit">
+                                [[${section.data.formData.buttonLabel}]]
+                            </button>
+                        </div>
+                    </div>
+                </th:block>
+            </form>
+        </th:block>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

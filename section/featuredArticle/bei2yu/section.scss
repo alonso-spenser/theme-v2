@@ -1,0 +1,56 @@
+.bei2yu p {
+	color: var(--colorSecondary);
+	font-size: calc(var(--fontSizeBody) * 1px);
+}
+
+.bei2yu p + p {
+	margin-top: 0.3125rem;
+}
+
+.bei2yu-list .embed-responsive {
+	width: 9.375rem;
+	margin-right: 0.9375rem;
+}
+
+.bei2yu .slick-track {
+	align-items: stretch;
+	display: flex;
+}
+
+.bei2yu .slick-track .slick-slide {
+	padding-top: calc(var(--cardBoxShadow) * 1px);
+	padding-bottom: calc(var(--cardBoxShadow) * 1px);
+}
+
+.bei2yu .nav-pills .nav-link {
+	transition: all 0.25s;
+}
+
+.bei2yu .nav-pills .nav-link:hover {
+	background-color: var(--colorButtonHover);
+	color: var(--colorButtonHoverLabel);
+}
+
+.bei2yu-group {
+	position: relative;
+}
+
+.bei2yu-group-item {
+	position: relative;
+	width: 100%;
+	left: 0;
+	top: 0;
+	opacity: 1;
+}
+
+.bei2yu-group-item:not(.active) {
+	position: absolute;
+	opacity: 0;
+	z-index: 0;
+}
+
+.bei2yu-group-item.active {
+	z-index: 1;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

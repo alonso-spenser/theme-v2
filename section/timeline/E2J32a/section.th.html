@@ -1,0 +1,21 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div class="row">
+            <div class="col-md-6" th:each="o,stat:${section.settings.eventList}">
+                <small class="text-secondary" th:if="${not #strings.isEmpty(o.time)}">
+                    [[${o.time}]]
+                </small>
+                <h3 class="text-heading" th:if="${not #strings.isEmpty(o.heading)}" th:utext="${o.heading}"></h3>
+                <div class="text-body" th:if="${not #strings.isEmpty(o.content) || not #strings.isEmpty(o.image)}">
+                    <th:block th:utext="${o.content}"></th:block>
+                    <p th:if="${not #strings.isEmpty(o.image)}">
+                      <img class="lazy" th:src="|${o.image}!1|" th:data-original="|${o.image}!${section.settings.wideScreen ? 'f' : ''}6|" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.heading}">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

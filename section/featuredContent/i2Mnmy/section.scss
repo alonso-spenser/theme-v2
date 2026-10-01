@@ -1,0 +1,163 @@
+.i2Mnmy-row {
+	min-height: 400px;
+	position: relative;
+}
+
+@media (min-width: 768px) {
+	.i2Mnmy-row:before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: -100%;
+		background-color: #d7e4f2;
+	}
+
+	.i2Mnmy-row:after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 50%;
+		background-color: #f1f1f1;
+		top: 0;
+		right: -100%;
+	}
+}
+
+.i2Mnmy-row .left {
+	display: flex;
+	align-items: center;
+	background-color: #d7e4f2;
+}
+
+@media (max-width: 768px) {
+	.i2Mnmy-row .left {
+		display: block;
+		padding: 0.75rem 1rem;
+	}
+}
+
+.i2Mnmy-row .right {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+@media (max-width: 768px) {
+	.i2Mnmy-row .right {
+		display: block;
+		padding: 0.75rem 1rem;
+	}
+}
+
+.i2Mnmy-row .right:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	background-color: #f1f1f1;
+	top: 0;
+	left: 0;
+}
+
+.i2Mnmy-row .right:after {
+	content: "";
+	position: absolute;
+	width: 200%;
+	height: 50%;
+	background-color: white;
+	bottom: 0;
+	left: 0;
+}
+
+@media (max-width: 768px) {
+	.i2Mnmy-row .right:after {
+		width: 100%;
+	}
+}
+
+.i2Mnmy .embed-responsive {
+	margin-bottom: 0.75rem;
+}
+
+.i2Mnmy .text-label {
+	color: #a1a3a8;
+	font-size: 14px;
+	font-weight: normal;
+	background-color: rgba(255, 255, 255, 0.5);
+	position: absolute;
+	top: 0;
+}
+
+@media (min-width: 768px) {
+	.i2Mnmy .text-label {
+		writing-mode: vertical-rl;
+		padding: 1rem;
+		left: 0.75rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.i2Mnmy .text-label {
+		position: relative;
+		padding: 0.75rem 1rem;
+		left: 0;
+	}
+}
+
+.i2Mnmy .section-slide-round {
+	position: relative;
+	width: calc(100% - 2rem);
+	padding: 2rem 0 2rem 1rem;
+	z-index: 2;
+	min-height: 200px;
+}
+
+@media (max-width: 768px) {
+	.i2Mnmy .section-slide-round {
+		width: 100%;
+		padding: 0;
+	}
+}
+
+.i2Mnmy .btn-link {
+	color: var(--colorBody);
+}
+
+.i2Mnmy .slick-slide {
+	transition: all 0.25s;
+	padding-top: 0.75rem;
+}
+
+.i2Mnmy .slick-slide:hover {
+	transform: translateY(-0.75rem);
+}
+
+.i2Mnmy .slide-page {
+	position: relative;
+}
+
+@media (max-width: 768px) {
+	.i2Mnmy .slide-page {
+		display: none !important;
+	}
+}
+
+.i2Mnmy .slide-page .slick-arrow {
+	position: relative;
+	width: 3rem !important;
+	height: 3rem !important;
+	opacity: 1 !important;
+	padding: 0 !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+	background: none !important;
+	color: #999;
+}
+
+.i2Mnmy .slide-page .slick-arrow i:after {
+	display: none;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

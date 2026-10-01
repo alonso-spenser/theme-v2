@@ -1,0 +1,10 @@
+[# th:if="${ section.settings.paddingTop > 0 || section.settings.paddingBottom > 0}"]
+.section-[[${ section.id }]]{
+    [# th:if="${ section.settings.paddingTop > 0 }"]
+        padding-top: [[${section.settings.paddingTop}]]px;
+    [/]
+    [# th:if="${ section.settings.paddingBottom > 0 }"]
+        padding-bottom: [[${section.settings.paddingTop}]]px;
+    [/]
+}
+[/]

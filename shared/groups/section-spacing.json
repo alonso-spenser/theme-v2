@@ -1,0 +1,39 @@
+{
+  "id": "sectionSpacing",
+  "name": {
+    "en": "Spacing",
+    "zh-CN": "间距"
+  },
+  "elements": [
+    {
+      "type": "select",
+      "field": "spacingTop",
+      "default": "md",
+      "name": {
+        "en": "Top spacing",
+        "zh-CN": "顶部间距"
+      },
+      "options": [
+        { "value": "none", "name": { "en": "None", "zh-CN": "无" } },
+        { "value": "sm", "name": { "en": "Small", "zh-CN": "小" } },
+        { "value": "md", "name": { "en": "Medium", "zh-CN": "中" } },
+        { "value": "lg", "name": { "en": "Large", "zh-CN": "大" } }
+      ]
+    },
+    {
+      "type": "select",
+      "field": "spacingBottom",
+      "default": "md",
+      "name": {
+        "en": "Bottom spacing",
+        "zh-CN": "底部间距"
+      },
+      "options": [
+        { "value": "none", "name": { "en": "None", "zh-CN": "无" } },
+        { "value": "sm", "name": { "en": "Small", "zh-CN": "小" } },
+        { "value": "md", "name": { "en": "Medium", "zh-CN": "中" } },
+        { "value": "lg", "name": { "en": "Large", "zh-CN": "大" } }
+      ]
+    }
+  ]
+}

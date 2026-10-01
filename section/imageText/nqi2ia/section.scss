@@ -1,0 +1,74 @@
+.nqi2ia img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: all 0.25s;
+}
+
+@media (max-width: 768px) {
+	.nqi2ia img {
+		position: relative;
+	}
+}
+
+.nqi2ia .text-small {
+	font-size: 0.625rem;
+	letter-spacing: 1.6px;
+	text-transform: uppercase;
+	color: var(--colorSecondary);
+	position: relative;
+	width: 100%;
+	padding-left: 2.5rem;
+}
+
+.nqi2ia .text-small:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	width: 2rem;
+	height: 3px;
+	border-radius: 5px;
+	display: block;
+	z-index: 1;
+	background-color: var(--colorTheme);
+}
+
+@media (min-width: 768px) {
+	.nqi2ia .text-small:before {
+		width: 7.375rem;
+		left: -8rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.nqi2ia .text-small.right:before {
+		left: auto;
+		right: -7.375rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.nqi2ia .text-small {
+		padding-left: 0;
+	}
+}
+
+.nqi2ia .card-body {
+	padding: 4.5rem 4rem;
+}
+
+@media (max-width: 768px) {
+	.nqi2ia .card-body {
+		padding: 2rem;
+	}
+}
+
+.nqi2ia [class*=text-] + .text-button {
+	margin-top: 1.5rem !important;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

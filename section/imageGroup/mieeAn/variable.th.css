@@ -1,0 +1,39 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:each="o,stat: ${section.settings.imageList}"]
+    [# th:if="${not #strings.isEmpty(o.maskColor)}"]
+        .section-[[${ section.id }]] .[[${section.templateId}]]-[[${stat.index}]] .[[${section.templateId}]]-overlay:before {
+            background-color: [[${ o.maskColor }]];
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(o.headingColor)}"]
+         .section-[[${ section.id }]] .[[${section.templateId}]]-[[${stat.index}]] .text-heading {
+             color: [[${ o.headingColor }]];
+         }
+    [/]
+    [# th:if="${not #strings.isEmpty(o.headingColor)}"]
+         .section-[[${ section.id }]] .[[${section.templateId}]]-[[${stat.index}]] .text-poster {
+            color: [[${ o.headingColor }]];
+         }
+    [/]
+    [# th:if="${not #strings.isEmpty(o.textColor)}"]
+         .section-[[${ section.id }]] .[[${section.templateId}]]-[[${stat.index}]] .text-body,
+         .section-[[${ section.id }]] .[[${section.templateId}]]-[[${stat.index}]] .text-body * {
+             color: [[${ o.textColor }]];
+         }
+    [/]
+    [# th:if="${o.posterSize > 0}"]
+        @media (min-width: 768px) {
+             .section-[[${ section.id }]] .[[${section.templateId}]]-[[${stat.index}]] .text-poster {
+                font-size: [[${ o.posterSize }]]px;
+             }
+        }
+    [/]
+[/]

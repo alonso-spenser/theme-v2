@@ -1,0 +1,101 @@
+.f667Zz .card {
+	margin-left: 0.75rem;
+	margin-right: 0.75rem;
+	height: 100%;
+}
+
+.f667Zz .card-mask-content {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 3;
+}
+
+.f667Zz .card-mask-content [class*="text-"],
+    .f667Zz .card-mask-content [class*="text-"] * {
+	color: #fff;
+}
+
+.f667Zz .slick-track {
+	align-items: stretch;
+	display: flex;
+}
+
+.f667Zz .slick-track .slick-slide {
+	padding-top: calc(var(--cardBoxShadow) * 1px);
+	padding-bottom: calc(var(--cardBoxShadow) * 1px);
+}
+
+.f667Zz .row-gutter:not(:empty) > .col, .f667Zz .row-gutter:not(:empty) > [class*="col-"] {
+	margin-bottom: 2.25rem;
+}
+
+.f667Zz .card-body {
+	position: relative;
+}
+
+.f667Zz .card-body.has-icon {
+	padding-top: 3rem;
+}
+
+.f667Zz .card-body.has-button {
+	padding-bottom: 4.375rem;
+}
+
+.f667Zz-button {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.f667Zz-icon {
+	width: 4.5rem;
+	height: 4.5rem;
+	border-radius: 2.25rem;
+	background-color: #fff;
+	box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
+	position: absolute;
+	z-index: 2;
+	left: calc(50% - 2.25rem);
+	top: -2.25rem;
+}
+
+@media (max-width: 768px) {
+	.f667Zz .card {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.f667Zz-button {
+		width: 80%;
+		left: 10%;
+		padding-top: 0.625rem;
+		padding-bottom: 0.625rem;
+	}
+
+	.f667Zz .row-gutter:not(:empty) > .col, .f667Zz .row-gutter:not(:empty) > [class*="col-"] {
+		margin-bottom: 0.75rem;
+	}
+
+	.f667Zz-icon {
+		width: 3rem;
+		height: 3rem;
+		border-radius: 1.5rem;
+		left: calc(50% - 1.5rem);
+		top: -1.5rem;
+	}
+
+	.f667Zz .card-body.has-icon {
+		padding-top: 1.875rem;
+	}
+
+	.f667Zz .card-body.has-button {
+		padding-bottom: 3.75rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

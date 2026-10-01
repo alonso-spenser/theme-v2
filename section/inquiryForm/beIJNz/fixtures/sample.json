@@ -1,0 +1,142 @@
+{
+  "section": {
+    "id": "1462615850166652930",
+    "componentKind": "section",
+    "type": "inquiryForm",
+    "templateId": "beIJNz",
+    "runtimeVersion": 2,
+    "settings": {
+      "layout": "right",
+      "content": "If you have any needs, please contact us immediately, we will provide you with the best quality service.",
+      "heading": "GET A FREE QUOTE",
+      "formColor": "",
+      "formStyle": "normal",
+      "formWidth": "4",
+      "marginTop": false,
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "buttonLink": "",
+      "offsetLeft": "0",
+      "paddingTop": true,
+      "subheading": "",
+      "wideScreen": false,
+      "buttonLabel": "Button",
+      "buttonStyle": "invisible",
+      "enableTitle": false,
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "marginBottom": false,
+      "sectionAlias": "询盘表单",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "formBackground": "",
+      "backgroundColor": "#f2f2f2",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "formTitleVisible": true,
+      "secondButtonLink": "",
+      "secondButtonLabel": "Button",
+      "secondButtonStyle": "invisible",
+      "submitButtonStyle": "invisible",
+      "backgroundPosition": "",
+      "formDescribeVisible": true,
+      "countdownList": [
+        {
+          "digit": "1999",
+          "unit": "#",
+          "describe": "Founded in"
+        },
+        {
+          "digit": "1999",
+          "unit": "#",
+          "describe": "Founded in"
+        },
+        {
+          "digit": "1999",
+          "unit": "#",
+          "describe": "Founded in"
+        }
+      ]
+    },
+    "bindings": {
+      "formData": {
+        "sourceType": "inquiryForm",
+        "ids": []
+      }
+    },
+    "data": {
+      "formData": {
+        "title": "Contact us",
+        "buttonLabel": "Submit",
+        "remark": "This is the describe for inquiry form",
+        "fieldList": [
+          {
+            "fieldName": "firstName",
+            "defaultValue": "",
+            "fieldLabel": "First name",
+            "placeholder": "Please enter first name",
+            "sort": "2",
+            "fieldType": "text",
+            "required": false
+          },
+          {
+            "fieldName": "email",
+            "defaultValue": "",
+            "fieldLabel": "Email",
+            "id": "1158289022079750146",
+            "placeholder": "Please enter email",
+            "sort": "3",
+            "fieldType": "email",
+            "required": true
+          },
+          {
+            "formId": "1157492648300646402",
+            "fieldName": "phone",
+            "defaultValue": "",
+            "fieldLabel": "Phone",
+            "placeholder": "Please enter phone number",
+            "sort": "4",
+            "fieldType": "tel",
+            "required": true
+          },
+          {
+            "formId": "1157492648300646402",
+            "fieldName": "message",
+            "defaultValue": "",
+            "fieldLabel": "Message",
+            "placeholder": "Please tell us the message",
+            "sort": "5",
+            "fieldType": "textarea",
+            "required": true
+          }
+        ]
+      }
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

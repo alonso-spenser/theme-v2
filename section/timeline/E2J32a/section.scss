@@ -1,0 +1,50 @@
+.E2J32a img {
+	width: 100%;
+	margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+	.E2J32a .row {
+		position: relative;
+	}
+
+	.E2J32a .row:before {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		display: block;
+		margin-left: -2px;
+		width: 3px;
+		height: 100%;
+		border-radius: 2px;
+		background-color: #ccc;
+		content: "";
+	}
+
+	.E2J32a .row .col-md-6 {
+		padding: 1rem;
+		position: relative;
+	}
+
+	.E2J32a .row .col-md-6:nth-of-type(even) {
+		padding-left: 1.75rem;
+	}
+
+	.E2J32a .row .col-md-6:nth-of-type(odd) {
+		padding-right: 1.75rem;
+		text-align: right;
+	}
+
+	.E2J32a .row .col-md-6:nth-of-type(odd):before {
+		content: "";
+		position: absolute;
+		border: 4px solid white;
+		padding: 6px;
+		border-radius: 100%;
+		background-color: #ccc;
+		right: -10px;
+		top: 9px;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

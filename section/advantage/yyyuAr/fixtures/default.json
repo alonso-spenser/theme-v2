@@ -1,0 +1,66 @@
+{
+  "section": {
+    "id": "1507325676154286082",
+    "componentKind": "section",
+    "type": "advantage",
+    "templateId": "yyyuAr",
+    "runtimeVersion": 2,
+    "settings": {
+      "symbol": "normal",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Why Choose Us",
+      "cardBack": "",
+      "cardColor": "",
+      "marginTop": false,
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "paddingTop": true,
+      "subheading": "",
+      "wideScreen": false,
+      "buttonLabel": "LEARN MORE",
+      "buttonStyle": "btn-primary",
+      "contentAlign": "text-center",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "marginBottom": false,
+      "sectionAlias": "优势",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "cardBackActive": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "cardColorActive": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "itemList": []
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

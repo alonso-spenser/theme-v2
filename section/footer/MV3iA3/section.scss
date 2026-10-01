@@ -1,0 +1,218 @@
+.MV3iA3 {
+	overflow: hidden;
+	background-color: var(--bs-body-bg, #fff);
+}
+
+.MV3iA3-slogan {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.MV3iA3-slogan .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.MV3iA3-slogan .container h3 {
+	margin: 0 10px 0 0;
+	color: #d7d6d6;
+	font-size: calc(var(--fontSizeHeading) * 1px);
+}
+
+.MV3iA3-slogan .container h3 + form {
+	margin-left: 1rem;
+}
+
+.MV3iA3-slogan .container form {
+	max-width: 40%;
+	flex: 1;
+}
+
+.MV3iA3 .text-subheading {
+	margin-bottom: 1rem;
+}
+
+.MV3iA3-container .has-divider .text-subheading {
+	position: relative;
+	padding-bottom: 0.625rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	margin-bottom: 1.25rem;
+}
+
+.MV3iA3-container .has-divider .text-subheading:after {
+	position: absolute;
+	width: 0.625rem;
+	height: 0.625rem;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	content: "";
+	border-radius: 0.3125rem;
+	left: 0;
+	bottom: -0.3125rem;
+	background-color: #2b2f36;
+}
+
+.MV3iA3-container [class*=text-],
+.MV3iA3-container [class*=ic-],
+.MV3iA3-container a {
+	color: var(--colorBody);
+}
+
+.MV3iA3-container .enquiry-form {
+	margin-top: 0.5rem;
+}
+
+.MV3iA3-copyright {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.MV3iA3-copyright li:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+.MV3iA3-copyright .copyright a {
+	display: inline-block;
+	margin-left: 0.625rem;
+}
+
+.MV3iA3-copyright .copyright a:before {
+	margin-right: 0.625rem;
+	content: "|";
+}
+
+.MV3iA3-copyright * {
+	color: #A0A0A0;
+}
+
+.MV3iA3 .MV3iA3-social a {
+	margin: 0 5px 5px 0;
+}
+
+.MV3iA3 .MV3iA3-social i {
+	font-size: 1.875rem;
+}
+
+.MV3iA3 .MV3iA3-social img {
+	width: 1.875rem;
+}
+
+.MV3iA3 .MV3iA3-code img {
+	width: 6.25rem;
+}
+
+.MV3iA3 .MV3iA3-code .social-it:not(:last-child) {
+	margin-right: 5px;
+}
+
+.MV3iA3 .MV3iA3-logo {
+	max-width: 60%;
+}
+
+.MV3iA3 .MV3iA3-office h3 {
+	font-weight: bold;
+}
+
+.MV3iA3 .MV3iA3-office:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+.MV3iA3 .MV3iA3-office [class*=col-] {
+	word-wrap: break-word;
+	word-break: break-word;
+}
+
+.MV3iA3 .MV3iA3-office [class*=col-]:not(:last-child) {
+	padding-bottom: 5px;
+}
+
+.MV3iA3 a:hover i, .MV3iA3 a:hover {
+	color: var(--colorButtonHover);
+	text-decoration: none;
+}
+
+@media (max-width: 768px) {
+	.MV3iA3-slogan .container {
+		display: block;
+	}
+
+	.MV3iA3-slogan .container h3 + form {
+		margin-top: 1rem;
+	}
+
+	.MV3iA3-slogan .container form {
+		max-width: 100%;
+	}
+
+	.MV3iA3 .MV3iA3-office:not(:last-child) {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		padding-bottom: 1rem;
+	}
+
+	.MV3iA3 .container:not(.has-divider) .MV3iA3-column .col-12:not(:last-child) {
+		margin-bottom: 1rem;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	.MV3iA3 .MV3iA3-social a {
+		margin: 0 5px 5px 0;
+	}
+
+	.MV3iA3 .MV3iA3-social a i {
+		font-size: 1.625rem;
+	}
+
+	.MV3iA3 .MV3iA3-code img {
+		margin: 0 5px 0 0;
+	}
+
+	.MV3iA3 .MV3iA3-logo {
+		max-height: 2.5rem;
+		max-width: 6.25rem;
+	}
+}
+
+.MV3iA3-tabBar {
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	height: 3.5rem;
+	background-color: var(--colorTheme);
+	left: 0;
+	border: 0;
+	bottom: 0;
+	display: flex;
+	border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.MV3iA3-tabBar a {
+	height: 100%;
+	flex: 1 1 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.MV3iA3-tabBar a div {
+	color: #fff;
+}
+
+.MV3iA3-tabBar a img {
+	width: 1rem;
+	height: 1rem;
+	display: inline-block;
+	vertical-align: center;
+}
+
+.MV3iA3-tabBar a:not(:last-child) {
+	border-right: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+@media (min-width: 768px) {
+	.MV3iA3-tabBar {
+		display: none;
+	}
+}

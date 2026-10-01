@@ -1,0 +1,53 @@
+{
+  "section": {
+    "id": "1442406329146380289",
+    "componentKind": "section",
+    "type": "video",
+    "templateId": "BjqUZ3",
+    "runtimeVersion": 2,
+    "settings": {
+      "loop": false,
+      "muted": false,
+      "video": "",
+      "poster": "",
+      "control": false,
+      "preload": "auto",
+      "autoPlay": "manual",
+      "maskColor": "",
+      "videoWidth": 1280,
+      "wideScreen": false,
+      "videoHeight": 720,
+      "sectionAlias": "视频",
+      "marginTop": "",
+      "marginBottom": "",
+      "paddingTop": "",
+      "paddingBottom": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

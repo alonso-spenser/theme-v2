@@ -1,0 +1,52 @@
+{
+  "section": {
+    "id": "1530147967749611522",
+    "componentKind": "section",
+    "type": "process",
+    "templateId": "AZ3AVb",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "3",
+      "marginTop": false,
+      "textColor": "",
+      "imageScale": "1by1",
+      "paddingTop": true,
+      "wideScreen": false,
+      "marginBottom": false,
+      "sectionAlias": "流程",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "graphList": []
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

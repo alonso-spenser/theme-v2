@@ -1,0 +1,49 @@
+{
+  "section": {
+    "id": "1412681057643270145",
+    "componentKind": "section",
+    "type": "floatMenu",
+    "templateId": "Ur6Jvm",
+    "runtimeVersion": 2,
+    "settings": {
+      "iconSize": "medium",
+      "skypeButton": "",
+      "sectionAlias": "悬浮菜单",
+      "skypeVisible": true,
+      "whatsappButton": "",
+      "whatsappVisible": true,
+      "skypeButtonLabel": "",
+      "whatsappButtonLabel": "",
+      "skype": [],
+      "custom": [],
+      "whatsapp": [],
+      "isGlobalSection": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

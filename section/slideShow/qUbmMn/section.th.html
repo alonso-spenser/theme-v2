@@ -1,0 +1,58 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|slick ${ section.templateId }-container|" th:with="hasDot = ${ #lists.size(section.settings.imageList) > 1 }">
+        <div th:class="|slick-arrow slick-next ${hasDot  ? 'dots' : ''}|" th:data-carousel-next="${ section.id }" th:if="${hasDot}"></div>
+        <div th:class="|slick-arrow slick-prev ${hasDot  ? 'dots' : ''}|" th:data-carousel-prev="${ section.id }" th:if="${hasDot}"></div>
+        <div class="slick-slider"
+             th:data-carousel="${ section.id }"
+             th:data-dots="${hasDot  ? 1 : 0}"
+             th:data-arrow="${hasDot  ? 1 : 0}"
+             th:data-column="1"
+             th:data-mobile-column="1"
+             th:data-delay="${section.settings.autoPlay}"
+        >
+            <div th:class="|slick-slide slick-slide-${salt.index}|" th:each="o, salt:${ section.settings.imageList }">
+              <div class="qUbmMn-c" th:with="alt = ${ not #strings.isEmpty(o.alt) ? o.alt : not #strings.isEmpty(o.heading) ? o.heading : '' }">
+                <img class="qUbmMn-c-item lazy d-md-block d-none"
+                    th:src="|${ not #strings.isEmpty(o.image) ? o.image : o.mobImage }!1|"
+                    th:data-lazy="|${ not #strings.isEmpty(o.image) ? o.image : o.mobImage }|"
+                    th:alt="${ alt }"
+                    th:if="${ not #strings.isEmpty(o.image) || not #strings.isEmpty(o.mobImage)}"
+                    >
+                <div th:class="|embed-responsive embed-responsive-${section.settings.mobileScale} d-md-none d-block|" th:if="${not #strings.isEmpty(o.mobImage) || not #strings.isEmpty(o.image)}">
+                  <img class="embed-responsive-item" th:src="|${ not #strings.isEmpty(o.mobImage) ? o.mobImage : o.image }!1|" th:data-lazy="|${ not #strings.isEmpty(o.mobImage) ? o.mobImage : o.image }|" th:alt="${ alt }">
+                </div>
+                <div th:class="|qUbmMn-content ${ section.settings.contentAlign } ${ section.settings.mobileAlign } d-md-flex|"
+                    th:if="${not #strings.isEmpty(o.heading) || not #strings.isEmpty(o.content) ||
+                        (not #strings.isEmpty(o.buttonLabel) && not #strings.isEmpty(o.buttonLink)) || (not #strings.isEmpty(o.secondButtonLink) && not #strings.isEmpty(o.secondButtonLabel))
+                        }">
+                    <div class="container">
+                        <div class="slick-slide-area">
+                            <th:block th:if="${not #strings.isEmpty(o.heading)}" th:with="textLines = ${#strings.listSplit(o.heading,'\n')}">
+                              <th:block th:each="textLine,saltLine:${textLines}">
+                                <h3 class="text-headline" th:if="${ not #strings.isEmpty(textLine) }">[[${ textLine }]]</h3>
+                              </th:block>
+                            </th:block>
+                            <th:block th:if="${not #strings.isEmpty(o.content)}" th:with="textLines = ${#strings.listSplit(o.content,'\n')}">
+                              <th:block th:each="textLine,saltLine:${textLines}">
+                                <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                              </th:block>
+                            </th:block>
+                            <p class="text-link" th:if="${ (not #strings.isEmpty(o.buttonLabel) && not #strings.isEmpty(o.buttonLink)) || (not #strings.isEmpty(o.secondButtonLink) && not #strings.isEmpty(o.secondButtonLabel)) }">
+                                <a th:class="|${#strings.isEmpty(o.buttonStyle) || o.buttonStyle == 'btn-text' ? '' : 'btn '}${#strings.isEmpty(o.buttonStyle) || o.buttonStyle == 'btn-text' ? '' : o.buttonStyle}|" th:href="${ o.buttonLink }" th:if="${ not #strings.isEmpty(o.buttonLink) && o.buttonStyle != 'invisible' && not #strings.isEmpty(o.buttonLabel) }">
+                                    [[${ o.buttonLabel }]] <i class="ic-right"></i>
+                                </a>
+                                <a th:class="|${#strings.isEmpty(o.secondButtonStyle) || o.secondButtonStyle == 'btn-text' ? '' : 'btn '}${#strings.isEmpty(o.secondButtonStyle) || o.secondButtonStyle == 'btn-text' ? '' : o.secondButtonStyle}|" th:href="${ o.secondButtonLink }" th:if="${ not #strings.isEmpty(o.secondButtonLink) && not #strings.isEmpty(o.secondButtonLabel) }">
+                                    [[${ o.secondButtonLabel }]] <i class="ic-right"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

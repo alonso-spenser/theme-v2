@@ -1,0 +1,74 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div class="row g-0">
+            <div class="col-md-6">
+                <div th:class="|${ section.templateId }-list|" th:if="${not #strings.isEmpty(section.settings.p1Heading) || not #strings.isEmpty(section.settings.p1Content)}">
+                    <div class="d-flex justify-content-between text-gutter">
+                        <h3 class="text-heading" th:if="${not #strings.isEmpty(section.settings.p1Heading)}">
+                            [[${ section.settings.p1Heading }]]
+                        </h3>
+                        <div class="embed-responsive embed-responsive-1by1" th:if="${not #strings.isEmpty(section.settings.p1Icon)}">
+                            <img class="embed-responsive-item lazy" th:data-original="${ section.settings.p1Icon}" th:src="|${ section.settings.p1Icon}!1|" th:alt="${ section.settings.p1Heading}">
+                        </div>
+                    </div>
+                    <div class="text-body text-gutter" th:if="${not #strings.isEmpty(section.settings.p1Content)}" th:utext="${section.settings.p1Content}"></div>
+                    <p class="text-gutter" th:if="${not #strings.isEmpty(section.settings.p1Link) || not #strings.isEmpty(section.settings.p1Button)}">
+                        <a class="text-body" th:href="${section.settings.p1Link}">
+                            [[${ section.settings.p1Button }]] <i class="ic-right text-primary"></i>
+                        </a>
+                    </p>
+                </div>
+                <img class="embed-responsive lazy" th:data-original="${ section.settings.p1Image}" th:src="|${ section.settings.p1Image}!1|" th:alt="${ section.settings.p1Alt}" th:if="${not #strings.isEmpty(section.settings.p1Image)}">
+                <div th:class="|${ section.templateId }-list|" th:if="${not #strings.isEmpty(section.settings.p2Heading) || not #strings.isEmpty(section.settings.p2Content)}">
+                    <div class="d-flex justify-content-between text-gutter">
+                        <h3 class="text-heading" th:if="${not #strings.isEmpty(section.settings.p2Heading)}">
+                            [[${ section.settings.p2Heading }]]
+                        </h3>
+                        <div class="embed-responsive embed-responsive-1by1" th:if="${not #strings.isEmpty(section.settings.p2Icon)}">
+                            <img class="embed-responsive-item lazy" th:data-original="${ section.settings.p2Icon}" th:src="|${ section.settings.p2Icon}!1|" th:alt="${ section.settings.p2Heading}">
+                        </div>
+                    </div>
+                    <div class="media text-gutter align-items-center" th:if="${not #strings.isEmpty(section.settings.p2Label) || not #strings.isEmpty(section.settings.p2Content)}">
+                        <label th:if="${not #strings.isEmpty(section.settings.p2Label)}">
+                            [[${ section.settings.p2Label }]]
+                        </label>
+                        <p class="text-body media-body" th:if="${not #strings.isEmpty(section.settings.p2Content)}">
+                            [[${ section.settings.p2Content }]]
+                        </p>
+                    </div>
+                    <p class="text-gutter" th:if="${not #strings.isEmpty(section.settings.p2Link) || not #strings.isEmpty(section.settings.p2Button)}">
+                        <a class="text-body" th:href="${section.settings.p2Link}">
+                            [[${ section.settings.p2Button }]] <i class="ic-right text-primary"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div th:class="|${ section.templateId }-list right|">
+                    <label th:if="${not #strings.isEmpty(section.settings.p3Label)}">
+                        [[${section.settings.p3Label}]]
+                    </label>
+                    <h3 class="text-heading text-gutter" th:if="${not #strings.isEmpty(section.settings.p3Heading)}">
+                        [[${section.settings.p3Heading}]]
+                    </h3>
+                    <h5 class="text-subheading text-gutter" th:if="${not #strings.isEmpty(section.settings.p3Subheading)}">
+                        [[${section.settings.p3Subheading}]]
+                    </h5>
+                    <ul th:class="|text-body text-list text-gutter ${section.settings.p3Symbol}|" th:if="${not #strings.isEmpty(section.settings.p3Content)}" th:with="textLines = ${#strings.listSplit(section.settings.p3Content,'\n')}">
+                        <th:block th:each="textLine,saltLine:${textLines}">
+                            <li th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                        </th:block>
+                    </ul>
+                    <p class="text-gutter" th:if="${(not #strings.isEmpty(section.settings.p3Link) || not #strings.isEmpty(section.settings.p3Button)) && section.settings.p3ButtonStyle != 'invisible'}">
+                        <a th:class="|btn ${section.settings.p3ButtonStyle}|" th:href="${section.settings.p3Link}">
+                            [[${ section.settings.p3Button }]] <i class="ic-right"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

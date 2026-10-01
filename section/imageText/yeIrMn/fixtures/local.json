@@ -1,0 +1,91 @@
+{
+  "section": {
+    "id": "1441346092855431170",
+    "componentKind": "section",
+    "type": "imageText",
+    "templateId": "yeIrMn",
+    "runtimeVersion": 2,
+    "settings": {
+      "layout": "left",
+      "symbol": "list-demical",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store,\n Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Title with button",
+      "autoPlay": "5000",
+      "marginTop": false,
+      "textAlign": "left",
+      "textColor": "#ff00ff",
+      "textWidth": 60,
+      "buttonLink": "",
+      "guidGutter": true,
+      "imageScale": "16by9",
+      "paddingTop": true,
+      "percentage": "6",
+      "subheading": "this is a new beginning",
+      "wideScreen": false,
+      "buttonLabel": "Button label",
+      "buttonStyle": "btn-outline-danger",
+      "dividerImage": "api://localhost:9200/cdn/1428988280280154113/1438069388821114881.webp",
+      "dividerStyle": "image",
+      "dividerWidth": 20,
+      "marginBottom": false,
+      "sectionAlias": "图文",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "#ffff00",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "carouselNavStyle": "dark",
+      "secondButtonLink": "",
+      "contentBackground": "#abe05d",
+      "secondButtonLabel": "Button",
+      "secondButtonStyle": "invisible",
+      "backgroundPosition": "",
+      "carouselArrowStyle": "dark",
+      "imageList": [
+        {
+          "image": "/preview-assets/images/s1.jpg",
+          "alt": "alt 1"
+        },
+        {
+          "image": "/preview-assets/images/s2.jpg",
+          "alt": "alt 1"
+        },
+        {
+          "image": "/preview-assets/images/s3.jpg",
+          "alt": "alt 1"
+        },
+        {
+          "image": "/preview-assets/images/s4.jpg",
+          "alt": "alt 1"
+        }
+      ],
+      "carouselEffect": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

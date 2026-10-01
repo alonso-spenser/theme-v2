@@ -1,0 +1,57 @@
+{
+  "section": {
+    "id": "1561547478128394241",
+    "componentKind": "section",
+    "type": "slideShow",
+    "templateId": "MRBrYr",
+    "runtimeVersion": 2,
+    "settings": {
+      "symbol": "list-demical",
+      "bodyColor": "",
+      "marginTop": false,
+      "imageScale": "16by9",
+      "paddingTop": true,
+      "wideScreen": false,
+      "contentWidth": "7",
+      "headingColor": "",
+      "marginBottom": false,
+      "sectionAlias": "轮播图",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "subheadingColor": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "itemList": [],
+      "arrowStyle": "",
+      "autoPlay": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

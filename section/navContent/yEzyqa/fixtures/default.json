@@ -1,0 +1,51 @@
+{
+  "section": {
+    "id": "1531798824241192962",
+    "componentKind": "section",
+    "type": "navContent",
+    "templateId": "yEzyqa",
+    "runtimeVersion": 2,
+    "settings": {
+      "marginTop": true,
+      "paddingTop": false,
+      "wideScreen": false,
+      "marginBottom": true,
+      "sectionAlias": "导航内容",
+      "paddingBottom": false,
+      "sectionMargin": false,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "itemList": [],
+      "textColor": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

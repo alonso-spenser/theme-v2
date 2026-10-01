@@ -1,0 +1,17 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div class="row row-gutter">
+            <div th:class="|${section.settings.column == 'nowrap' ? 'col-md' : 'col-md-'}${ section.settings.column == 'nowrap' ? '' : section.settings.column } col-6|" th:each="o,stat:${section.settings.pieList}">
+                <div th:class="|${ section.templateId }-pie per-${o.percentage}|">
+                    <div th:class="|${ section.templateId }-pie-half right|"></div>
+                    <div th:class="|${ section.templateId }-pie-half left|"></div>
+                    <div class="text-heading" th:if="${not #strings.isEmpty(o.serialNumber)}">[[${o.serialNumber}]]</div>
+                </div>
+                <p class="text-body text-center break-word" th:if="${not #strings.isEmpty(o.describe)}" th:utext="${o.describe}"></p>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

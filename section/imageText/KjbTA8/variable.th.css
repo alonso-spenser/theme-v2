@@ -1,0 +1,14 @@
+.section-[[${section.id}]] {
+  [# th:if="${not #strings.isEmpty(section.settings.backgroundColor)}"]
+  --KjbTA8-background: [[${section.settings.backgroundColor}]];
+  [/]
+  [# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+  --colorHeading: [[${section.settings.textColor}]];
+  [/]
+  [# th:if="${not #strings.isEmpty(section.settings.bodyColor)}"]
+  --colorBody: [[${section.settings.bodyColor}]];
+  [/]
+  [# th:if="${not #strings.isEmpty(section.settings.accentColor)}"]
+  --colorButton: [[${section.settings.accentColor}]];
+  [/]
+}

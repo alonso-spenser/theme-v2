@@ -1,0 +1,23 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-Mf2ame{
+    background: #f2f2f2   ;
+    
+}
+
+
+
+.section-demo-Mf2ame .section-title [class^=text-] {
+    color:#0000ff;
+}
+
+
+
+.section-demo-Mf2ame .card.active, .section-demo-Mf2ame .card:hover{
+background-color: #ffff00;
+}
+
+
+
+.section-demo-Mf2ame .card.active [class*="text-"], .section-demo-Mf2ame .card:hover [class*="text-"]{
+  color: #ff0000;
+}

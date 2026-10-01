@@ -1,0 +1,11 @@
+@media (min-width: 768px) {
+	.iUjuae .sidebar-right > .col-md-9 {
+		padding-right: 3rem;
+	}
+
+	.iUjuae .sidebar-left > .col-md-9 {
+		padding-left: 3rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

@@ -1,0 +1,13 @@
+// Static DEMO instance styles; production uses variable.th.css.
+@media (min-width: 768px) {
+    .section-demo-umiyqu img, .section-demo-umiyqu .card{
+        border-radius:30px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .section-demo-umiyqu .col-md-6:last-child{
+        padding-top:60px;
+    }
+}

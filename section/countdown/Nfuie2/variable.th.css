@@ -1,0 +1,32 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.cardColor)}"]
+.section-[[${ section.id }]] [class^=text-] {
+    color:[[${section.settings.cardColor}]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.digitColor)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-unit,
+.section-[[${ section.id }]] .[[${ section.templateId }]]-digit{
+    color:[[${section.settings.digitColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.cardBackground)}"]
+.section-[[${ section.id }]] .position-relative {
+    background-color:[[${section.settings.cardBackground}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.lineColor)}"]
+.section-[[${ section.id }]] li:not(:last-child) {
+    border-color:[[${section.settings.lineColor}]];
+}
+[/]

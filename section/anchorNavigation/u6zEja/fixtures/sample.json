@@ -1,0 +1,263 @@
+{
+  "section": {
+    "id": "1511548923771105281",
+    "componentKind": "section",
+    "type": "anchorNavigation",
+    "templateId": "u6zEja",
+    "runtimeVersion": 2,
+    "settings": {
+      "logo": "https://css.11af.com/social/pinterest.svg",
+      "logoUrl": "/#首页",
+      "barTitle": "NASA月球火箭相关故障短",
+      "fullView": true,
+      "logoType": "logo",
+      "barContent": "4月6日消息，当地时间周二，美国宇航局（NASA）证实，由于“阿尔忒弥斯”（Artemis）重返月球计划首次任务的运载火箭故障短时间内无法修复，因此将为等待就绪的SpaceX商业载人发射任务Ax-1让路。",
+      "barVisible": true,
+      "menuLayout": "logoCenter",
+      "closeButton": false,
+      "menuVisible": true,
+      "barTextColor": "#ff0000",
+      "emailVisible": true,
+      "fullViewLogo": "https://css.11af.com/social/pinterest.svg",
+      "navTextColor": "#096e12",
+      "phoneVisible": true,
+      "sectionAlias": "网站页头",
+      "barBackground": "#f6cdcd",
+      "fullViewColor": "#b0b006",
+      "navBackground": "#a8eeae",
+      "mainButtonLink": "",
+      "mainButtonLabel": "Button",
+      "mainButtonStyle": "btn-primary",
+      "secondaryVisible": true,
+      "secondaryTextColor": "#0c8798",
+      "secondaryBackground": "#8adec8",
+      "secondaryButtonLink": "",
+      "secondaryButtonLabel": "Button",
+      "secondaryButtonStyle": "invisible",
+      "siteName": "Site name",
+      "auxiliaryList": [
+        {
+          "icon": "https://css.11af.com/social/pinterest.svg",
+          "label": "辅助栏链接",
+          "linkIcon": "ic-classes",
+          "linkURL": "",
+          "target": "_self"
+        },
+        {
+          "icon": "",
+          "label": "Shop",
+          "linkIcon": "ic-shopping-bag",
+          "linkURL": "",
+          "target": "_self"
+        },
+        {
+          "icon": "",
+          "label": "辅助栏链接",
+          "linkIcon": "ic-classes",
+          "linkURL": "",
+          "target": "_self"
+        },
+        {
+          "icon": "",
+          "label": "Shop",
+          "linkIcon": "ic-shopping-bag",
+          "linkURL": "",
+          "target": "_self"
+        }
+      ],
+      "langList": [
+        {
+          "siteLang": "Français",
+          "siteDomain": "/fr"
+        },
+        {
+          "siteLang": "العربية",
+          "siteDomain": "/ar"
+        },
+        {
+          "siteLang": "Slovenčina",
+          "siteDomain": "/sk"
+        }
+      ],
+      "menuList": [
+        {
+          "id": "1311240125719744514",
+          "title": "Home"
+        },
+        {
+          "id": "1311240242661134337",
+          "title": "CONTACT"
+        },
+        {
+          "id": "1311475045113790465",
+          "title": "Anchor pin"
+        },
+        {
+          "id": "1311240125719744514",
+          "title": "Home"
+        },
+        {
+          "id": "1311240242661134337",
+          "title": "CONTACT"
+        },
+        {
+          "id": "1311475045113790465",
+          "title": "Anchor pin"
+        }
+      ],
+      "bigLogo": "",
+      "logoLink": "",
+      "logoAlt": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "$",
+    "phone": "0755-88888888",
+    "email": "devin@fomille.com",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "five.123.com",
+    "siteName": "B2B开发测试（勿删）",
+    "addOnHeader": "-附加标题",
+    "address": "Baidu Campus, No. 10 Shangdi 10th Street, Haidian District, Beijing, China1",
+    "areaCode": "",
+    "articleQuantity": 0,
+    "cityName": "崇文区",
+    "company": "fomille",
+    "contact": "devin shieh",
+    "countryName": "中国",
+    "createTime": 1577264254667,
+    "currencyCode": "$",
+    "currencyName": "美元",
+    "defaultRegion": 0,
+    "downPass": "1235",
+    "expiryTime": 1700064000000,
+    "facebookPixel": "",
+    "favicon": "",
+    "formQuantity": 0,
+    "freePhone": "+86-4008000000",
+    "goodsQuantity": 0,
+    "honestScore": 0,
+    "keepLang": 1,
+    "latitude": 39.911019,
+    "lengthUnit": "mm",
+    "logisticsScore": 0,
+    "logo": "",
+    "longitude": 116.396315,
+    "maxLang": 1,
+    "mobile": "13800138000",
+    "praiseRate": 0,
+    "provinceName": "北京",
+    "region": "en",
+    "rootLink": "https://five.123.com/",
+    "scriptBottom": "",
+    "scriptHead": "",
+    "scriptService": "",
+    "serviceScore": 0,
+    "siteId": "1209760082859032577",
+    "siteType": 3,
+    "state": 0,
+    "synopsis": "",
+    "systemDomain": "five.123.com",
+    "timeZone": "Asia/Rangoon",
+    "unitSystem": "metric",
+    "videoLimit": 0,
+    "weightUnit": "g",
+    "social": {
+      "socialPinterest": "https://www.facebook.com/fomille",
+      "socialGooglePlus": "https://www.facebook.com/fomille",
+      "socialFancy": "https://www.facebook.com/fomille",
+      "socialVimeo": "https://www.facebook.com/fomille",
+      "socialYoutube": "https://www.facebook.com/fomille",
+      "sectionAlias": "社交媒体",
+      "sloganBorder": "",
+      "socialFacebook": "https://www.facebook.com/fomille",
+      "socialWeibo": "https://www.facebook.com/fomille",
+      "socialShareImage": "",
+      "sloganBackground": "",
+      "socialTumblr": "https://www.facebook.com/fomille",
+      "socialInstagram": "https://www.facebook.com/fomille",
+      "sloganColor": "",
+      "logo": "",
+      "socialTwitter": "https://www.facebook.com/fomille",
+      "socialSnapchat": "https://www.facebook.com/fomille",
+      "slogan": "",
+      "socialLinkedin": "https://www.facebook.com/fomille",
+      "socialImage": [
+        {
+          "areaContent": "logo",
+          "socialQRCode": "/cdn/1209760082859032577/1463865522223030300.webp",
+          "socialQRCodeAlt": "",
+          "areaHeading": "Heading",
+          "areaRatio": "2",
+          "socialQRCodeLink": "/page/about-us-replace#About us"
+        },
+        {
+          "areaContent": "logo",
+          "socialQRCode": "/cdn/1209760082859032577/1463865522223030288.webp",
+          "socialQRCodeAlt": "",
+          "areaHeading": "Heading",
+          "areaRatio": "2",
+          "socialQRCodeLink": "/page/about-us-replace#About us"
+        },
+        {
+          "areaContent": "logo",
+          "socialQRCode": "/cdn/1209760082859032577/1463865522223030276.webp",
+          "socialQRCodeAlt": "",
+          "areaHeading": "Heading",
+          "areaRatio": "2",
+          "socialQRCodeLink": "/page/about-us-replace#About us"
+        }
+      ]
+    }
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": "Home",
+    "seoUrl": "/",
+    "seoDescription": "",
+    "id": "1463865511414325249",
+    "title": "首页",
+    "seoTitle": "(Nothingness)卫浴1",
+    "seoKeywords": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "cache": {},
+    "canonical": "https://five.123.com/",
+    "collectionId": "",
+    "defaultRegion": 0,
+    "domain": "five.123.com",
+    "ids": [],
+    "itemLink": "/",
+    "mainDomain": "five.123.com",
+    "pageIndex": 1,
+    "pageSize": 12,
+    "pageType": "homePage",
+    "params": {},
+    "region": "en",
+    "siteId": "1209760082859032577",
+    "sortBy": "",
+    "url": "",
+    "designMode": true
+  },
+  "lang": {
+    "whatsapp": "Whatsapp",
+    "skype": "Skype",
+    "address": "Address",
+    "phone": "Phone",
+    "global": {
+      "keywords": "KEYWORDS",
+      "product": "PRODUCTS",
+      "lang": "英语",
+      "article": "NEWS",
+      "home": "HOME"
+    },
+    "lang": "英语",
+    "fax": "Fax",
+    "email": "Email"
+  }
+}

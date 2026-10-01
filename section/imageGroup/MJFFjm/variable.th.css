@@ -1,0 +1,19 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor)}"]
+.section-[[${ section.id }]]{
+    background-color: [[${section.settings.backgroundColor}]];
+}
+[/]
+
+
+[# th:each="o,stat: ${section.settings.imageList}"]
+    [# th:if="${not #strings.isEmpty(o.background)}"]
+        .section-[[${ section.id }]] .[[${section.templateId}]]-item-[[${stat.index}]] .section-title {
+            background-color: [[${ o.background }]];
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(o.textColor)}"]
+        .section-[[${ section.id }]] .[[${section.templateId}]]-item-[[${stat.index}]] [class*="text-"] {
+            color: [[${ o.textColor }]];
+        }
+    [/]
+[/]

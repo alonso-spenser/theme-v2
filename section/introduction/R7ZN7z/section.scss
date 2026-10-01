@@ -1,0 +1,90 @@
+.R7ZN7z-mission {
+	background-color: var(--colorTheme);
+}
+
+@media (max-width: 768px) {
+	.R7ZN7z-mission + .container-fluid {
+		padding-bottom: 1.5rem;
+	}
+}
+
+.R7ZN7z .text-content-heading {
+	font-weight: bold;
+}
+
+.R7ZN7z .embed-responsive:hover .embed-responsive-item {
+	transform: scale(1.05);
+}
+
+.R7ZN7z-second {
+	display: flex;
+	align-items: stretch;
+	transition: all 0.25s;
+}
+
+.R7ZN7z-second:hover {
+	box-shadow: 0 1px calc(var(--cardBoxShadow) * 1px) 0 var(--cardShadowColor);
+}
+
+.R7ZN7z-second:not(:last-child) .R7ZN7z-second-card {
+	border-right: 1px solid #c9d6cb;
+}
+
+.R7ZN7z-second-card {
+	width: 100%;
+	border-bottom: 1px solid #c9d6cb;
+	padding: 44px 100px;
+}
+
+@media (max-width: 768px) {
+	.R7ZN7z-second-card {
+		padding: 1rem 2rem;
+	}
+}
+
+.R7ZN7z-second img {
+	height: 3rem;
+}
+
+@media (max-width: 768px) {
+	.R7ZN7z-second img {
+		transform: scale(0.7);
+	}
+}
+
+.R7ZN7z-second img + [class*="text-"] {
+	margin-top: 1rem;
+}
+
+.R7ZN7z-item {
+	align-items: end;
+	display: flex;
+}
+
+.R7ZN7z-item:first-child {
+	padding-right: 2rem;
+}
+
+@media (max-width: 768px) {
+	.R7ZN7z-item:first-child {
+		padding-right: 0.375rem;
+	}
+}
+
+.R7ZN7z-item:last-child {
+	padding-left: 2rem;
+}
+
+@media (max-width: 768px) {
+	.R7ZN7z-item:last-child {
+		padding-left: 0.375rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.R7ZN7z-item + .R7ZN7z-item {
+		margin-top: 1rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

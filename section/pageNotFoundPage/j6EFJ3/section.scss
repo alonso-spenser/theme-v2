@@ -1,0 +1,19 @@
+.j6EFJ3-container {
+	text-align: center;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+
+@media (max-width: 768px) {
+	.j6EFJ3-container {
+		padding-top: 3.75rem;
+		padding-bottom: 3.75rem;
+	}
+}
+
+.j6EFJ3-404 {
+	color: var(--colorTheme);
+	font-size: 5rem;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

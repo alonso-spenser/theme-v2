@@ -1,0 +1,57 @@
+{
+  "section": {
+    "id": "1688389945444253698",
+    "componentKind": "section",
+    "type": "imageGroup",
+    "templateId": "UzYBfy",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "3",
+      "dgBack": "",
+      "dgColor": "",
+      "padding": 0,
+      "marginTop": false,
+      "mobColumn": "6",
+      "textColor": "",
+      "closeStyle": "light",
+      "imageScale": "1by1",
+      "paddingTop": true,
+      "wideScreen": false,
+      "marginBottom": false,
+      "sectionAlias": "团队介绍",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "itemList": []
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

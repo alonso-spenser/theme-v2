@@ -1,0 +1,56 @@
+{
+  "section": {
+    "id": "1561727591415545857",
+    "componentKind": "section",
+    "type": "testimonial",
+    "templateId": "niArqy",
+    "runtimeVersion": 2,
+    "settings": {
+      "heading": "Testimonials",
+      "bodyColor": "",
+      "cardWidth": 0,
+      "mainColor": "",
+      "marginTop": false,
+      "paddingTop": true,
+      "wideScreen": false,
+      "headingColor": "",
+      "marginBottom": false,
+      "sectionAlias": "好评",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "itemList": [],
+      "name": "",
+      "position": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

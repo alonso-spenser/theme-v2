@@ -1,0 +1,76 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .section-title [class^=text-] {
+    color:[[${section.settings.textColor}]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.textColor) || section.settings.textWidth > 0}"]
+    [# th:if="${ section.settings.textWidth > 0 }"]
+        .section-[[${ section.id }]] .section-title-divider {
+            width: [[${section.settings.textWidth}]]%;
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+        .section-[[${ section.id }]] .section-title-divider:after {
+            border-color: [[${section.settings.textColor}]];
+        }
+    [/]
+[/]
+[# th:if="${section.settings.textWidth != null && section.settings.textWidth > 0}"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]] .section-title [class^=text-] {
+        width: [[${section.settings.textWidth}]]%;
+    }
+}
+[/]
+
+[# th:if="${section.settings.dividerWidth != null && section.settings.dividerWidth > 0}"]
+.section-[[${ section.id }]] .section-title .has-line:after, .section-[[${ section.id }]] .section-title img {
+    width: [[${section.settings.dividerWidth}]]%;
+}
+[/]
+[# th:if="${section.settings.borderRadius != null && section.settings.borderRadius > 0}"]
+.section-[[${ section.id }]] .embed-responsive img {
+    border-radius: [[${section.settings.borderRadius}]]%;
+}
+[/]
+[# th:if="${ section.settings.layout == 'slide' }"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]] .carousel-multiple .carousel-slide-item {
+        width: calc([[${ section.settings.column / 12 * 100 }]]% - 24px);
+    }
+}
+@media (max-width: 768px) {
+    .section-[[${ section.id }]] .carousel-multiple .carousel-slide-item {
+        width: calc([[${ section.settings.mobColumn / 12 * 100 }]]% - 12px);
+    }
+}
+[/]
+[# th:if="${section.settings.logoImgWidth != null && section.settings.logoImgWidth > 0}"]
+.section-[[${ section.id }]] .embed-responsive{
+    width: [[${section.settings.logoImgWidth}]]%;
+}
+[/]
+
+[# th:if="${section.settings.logoTextWidth != null && section.settings.logoTextWidth > 0}"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]] .[[${ section.templateId }]]-describe {
+        width: [[${section.settings.logoTextWidth}]]%;
+    }
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.logoColor)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-describe * {
+    color: [[${section.settings.logoColor}]];
+}
+[/]
+

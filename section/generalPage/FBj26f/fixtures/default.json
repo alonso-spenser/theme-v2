@@ -1,0 +1,152 @@
+{
+  "section": {
+    "id": "1567046972668399618",
+    "componentKind": "page-section",
+    "type": "generalPage",
+    "templateId": "FBj26f",
+    "runtimeVersion": 2,
+    "settings": {
+      "alt": "",
+      "image": "",
+      "p3Alt": "",
+      "content": "A single solar panel costs £350-£500, but can vary depending on the size and type of system. One of the most common domestic sizes is a 4kW solar panel system, which costs around £6,000 and will cover around 29 square metres of your roof.",
+      "heading": "HYBRID ENERGY",
+      "p3Image": "",
+      "p3Scale": "16by9",
+      "p6Scale": "16by9",
+      "p4Column": "3",
+      "p6Column": "4",
+      "cardColor": "",
+      "faqActive": "",
+      "formStyle": "default",
+      "marginTop": false,
+      "p3Content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+      "p3Heading": "This is a heading",
+      "textColor": "",
+      "p31Content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+      "p31Heading": "This is a heading",
+      "paddingTop": true,
+      "slideWidth": 3,
+      "wideScreen": false,
+      "p4MobColumn": "6",
+      "p6MobColumn": "6",
+      "slideLayout": "left",
+      "catalogColor": "",
+      "headingColor": "",
+      "marginBottom": false,
+      "sectionAlias": "SERVICE PAGE",
+      "catalogBorder": "",
+      "faqActiveBack": "",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "cardBackground": "",
+      "catalogHeading": "Catalog heading",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "subheadingColor": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "p2List": [],
+      "p4List": [],
+      "p5List": [],
+      "p6List": [],
+      "p7List": [],
+      "p8List": [],
+      "p9List": [],
+      "p10List": [],
+      "catalogList": [],
+      "placeholder": "",
+      "enableTitle": "",
+      "formHeadingAlign": "",
+      "subheading": "",
+      "p6Alt": ""
+    },
+    "bindings": {
+      "formData": {
+        "sourceType": "inquiryForm",
+        "ids": []
+      }
+    },
+    "data": {
+      "formData": {
+        "title": "Contact us",
+        "remark": "This is the describe for inquiry form",
+        "fieldList": [
+          {
+            "sort": "1",
+            "required": false,
+            "fieldName": "lastName",
+            "fieldType": "text",
+            "fieldLabel": "Last name",
+            "placeholder": "Please enter last name",
+            "defaultValue": ""
+          },
+          {
+            "sort": "2",
+            "required": false,
+            "fieldName": "firstName",
+            "fieldType": "text",
+            "fieldLabel": "First name",
+            "placeholder": "Please enter first name",
+            "defaultValue": ""
+          },
+          {
+            "id": "1158289022079750146",
+            "sort": "3",
+            "required": true,
+            "fieldName": "email",
+            "fieldType": "email",
+            "fieldLabel": "Email",
+            "placeholder": "Please enter email",
+            "defaultValue": ""
+          },
+          {
+            "sort": "4",
+            "formId": "1157492648300646402",
+            "required": true,
+            "fieldName": "phone",
+            "fieldType": "tel",
+            "fieldLabel": "Phone",
+            "placeholder": "Please enter phone number",
+            "defaultValue": ""
+          },
+          {
+            "sort": "5",
+            "formId": "1157492648300646402",
+            "required": true,
+            "fieldName": "message",
+            "fieldType": "textarea",
+            "fieldLabel": "Message",
+            "placeholder": "Please tell us the message",
+            "defaultValue": ""
+          }
+        ],
+        "buttonLabel": "Submit"
+      }
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

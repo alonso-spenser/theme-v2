@@ -1,0 +1,58 @@
+{
+  "section": {
+    "id": "1705135587073339393",
+    "componentKind": "section",
+    "type": "countdown",
+    "templateId": "Nfuie2",
+    "runtimeVersion": 2,
+    "settings": {
+      "alt": "",
+      "image": "",
+      "cardColor": "",
+      "lineColor": "",
+      "marginTop": false,
+      "buttonLink": "",
+      "digitColor": "",
+      "paddingTop": true,
+      "wideScreen": false,
+      "buttonLabel": "LEARN MORE",
+      "buttonStyle": "btn-outline-light",
+      "marginBottom": false,
+      "sectionAlias": "倒计时",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "cardBackground": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "eventList": []
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

@@ -1,0 +1,131 @@
+.qUJFJj-line-text {
+	font-size: 9.375rem;
+	line-height: 1;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #fff;
+	-webkit-text-fill-color: transparent;
+	opacity: 0.1;
+	margin-bottom: 0;
+	position: absolute;
+	left: 0;
+	top: calc(var(--marginHeight) * -2px);
+	font-weight: 700;
+	text-transform: capitalize;
+	z-index: 0;
+	letter-spacing: -4px;
+}
+
+@media (max-width: 768px) {
+	.qUJFJj-line-text {
+		font-size: 6rem;
+		top: -3rem;
+	}
+}
+
+.qUJFJj .text-center .qUJFJj-line-text {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.qUJFJj .text-right .qUJFJj-line-text {
+	left: auto;
+	right: 0;
+}
+
+.qUJFJj .section-title {
+	position: relative;
+}
+
+.qUJFJj .section-title .text-heading {
+	font-size: 3.75rem;
+	line-height: 1.3;
+	text-transform: capitalize;
+	position: relative;
+	z-index: 3;
+}
+
+.qUJFJj .section-title .text-heading b {
+	font-weight: normal;
+	color: var(--colorTheme);
+}
+
+.qUJFJj .section-title .text-heading + .text-body {
+	margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+	.qUJFJj .section-title .text-heading {
+		font-size: 2rem;
+	}
+
+	.qUJFJj .section-title .text-heading + .text-body {
+		margin-top: 1.5rem;
+	}
+}
+
+.qUJFJj .slick-track {
+	align-items: stretch;
+	display: flex;
+}
+
+.qUJFJj .slick-track .slick-slide {
+	padding-top: calc(var(--cardBoxShadow) * 1px);
+	padding-bottom: calc(var(--cardBoxShadow) * 1px);
+}
+
+.qUJFJj .card {
+	background: transparent;
+	box-shadow: none;
+}
+
+.qUJFJj .card .embed-responsive {
+	background-color: #fff;
+}
+
+.qUJFJj .card:hover {
+	box-shadow: none;
+}
+
+.qUJFJj .card .card-body {
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-top: 0;
+	border-bottom-left-radius: calc(var(--cardBorderRadius) * 1px);
+	border-bottom-right-radius: calc(var(--cardBorderRadius) * 1px);
+}
+
+.qUJFJj .card [class*=text-] {
+	color: #fff;
+}
+
+.qUJFJj .card:hover [class*=text-] {
+	color: var(--colorTheme);
+}
+
+.qUJFJj-since {
+	position: relative;
+	text-indent: 4.375rem;
+	display: inline-block;
+	color: var(--colorTheme);
+}
+
+.qUJFJj-since:before {
+	position: absolute;
+	content: "";
+	display: inline;
+	border-top: 1px solid var(--colorTheme);
+	width: 3.75rem;
+	left: 0;
+	top: 50%;
+}
+
+@media (max-width: 768px) {
+	.qUJFJj-since {
+		text-indent: 2.625rem;
+	}
+
+	.qUJFJj-since:before {
+		width: 2.25rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

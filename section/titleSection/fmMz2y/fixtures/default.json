@@ -1,0 +1,59 @@
+{
+  "section": {
+    "id": "1704480194458431490",
+    "componentKind": "section",
+    "type": "titleSection",
+    "templateId": "fmMz2y",
+    "runtimeVersion": 2,
+    "settings": {
+      "content": "Customer First is about removing friction. People Led is our employee experience. And Innovation Driven is the value we create for shareowners.",
+      "heading": "",
+      "lineColor": "",
+      "marginTop": false,
+      "textAlign": "center",
+      "textColor": "",
+      "buttonLink": "",
+      "paddingTop": true,
+      "subheading": "OUR STRATEGY",
+      "wideScreen": false,
+      "buttonLabel": "Button",
+      "buttonStyle": "invisible",
+      "headingColor": "",
+      "marginBottom": false,
+      "sectionAlias": "标题",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "subheadingColor": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

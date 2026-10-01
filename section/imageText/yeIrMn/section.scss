@@ -1,0 +1,31 @@
+.yeIrMn-fit {
+	overflow: hidden;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.yeIrMn-fit .yeIrMn-content {
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+
+.yeIrMn-content {
+	display: flex;
+	align-items: center;
+}
+
+@media (max-width: 768px) {
+	.yeIrMn .col-md-6:not(.yeIrMn-content) {
+		padding: 0;
+	}
+
+	.yeIrMn .yeIrMn-content {
+		padding: 0.75rem;
+	}
+
+	.yeIrMn .order-2 {
+		order: 0;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

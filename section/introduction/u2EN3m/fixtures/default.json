@@ -1,0 +1,63 @@
+{
+  "section": {
+    "id": "1566842765139005441",
+    "componentKind": "section",
+    "type": "introduction",
+    "templateId": "u2EN3m",
+    "runtimeVersion": 2,
+    "settings": {
+      "alt": "",
+      "image": "/theme/img/8b.jpg",
+      "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+      "heading": "About US",
+      "bodyColor": "",
+      "marginTop": false,
+      "buttonLink": "",
+      "imageScale": "16by9",
+      "paddingTop": true,
+      "wideScreen": false,
+      "buttonLabel": "LEARN MORE",
+      "buttonStyle": "invisible",
+      "headingColor": "",
+      "marginBottom": false,
+      "sectionAlias": "关于我们",
+      "subBodyColor": "",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "subBorderColor": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "subHeadingColor": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "itemList": [],
+      "subheading": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

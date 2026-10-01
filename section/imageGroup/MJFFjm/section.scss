@@ -1,0 +1,118 @@
+.MJFFjm .section-title {
+	background-color: #fff;
+}
+
+@media (min-width: 992px) {
+	.MJFFjm .section-title {
+		width: 40%;
+		padding: 4.5rem;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 2;
+		position: absolute;
+	}
+
+	.MJFFjm .section-title [class*="text-"] + .text-btn {
+		margin-top: 2rem;
+	}
+
+	.MJFFjm-item {
+		position: relative;
+	}
+
+	.MJFFjm-item .embed-responsive {
+		width: auto;
+	}
+
+	.MJFFjm-item:nth-child(even) .section-title {
+		right: 0.75rem;
+	}
+
+	.MJFFjm-item:nth-child(even) .embed-responsive {
+		margin-right: 18%;
+	}
+
+	.MJFFjm-item:nth-child(odd) .section-title {
+		left: 0.75rem;
+	}
+
+	.MJFFjm-item:nth-child(odd) .embed-responsive {
+		margin-left: 18%;
+	}
+
+	.MJFFjm-item.container-fluid:nth-child(even) .section-title {
+		right: 0;
+	}
+
+	.MJFFjm-item.container-fluid:nth-child(odd) .section-title {
+		left: 0;
+	}
+
+	.MJFFjm-item:hover .embed-responsive img {
+		transform: scale(1.1);
+	}
+
+	.MJFFjm-item:hover .btn {
+		color: var(--colorButtonHoverLabel) !important;
+		border: 1px solid var(--colorButtonHover) !important;
+		background: transparent !important;
+	}
+
+	.MJFFjm-item:hover .btn:after {
+		width: 100%;
+	}
+
+	.MJFFjm-item:hover .text-heading {
+		color: var(--colorLinkHover);
+	}
+
+	.MJFFjm.left .MJFFjm-item:nth-child(even) .section-title {
+		left: 0.75rem;
+		right: auto;
+	}
+
+	.MJFFjm.left .MJFFjm-item:nth-child(even) .embed-responsive {
+		margin-left: 18%;
+		margin-right: 0;
+	}
+
+	.MJFFjm.left .MJFFjm-item:nth-child(odd) .section-title {
+		left: auto;
+		right: 0.75rem;
+	}
+
+	.MJFFjm.left .MJFFjm-item:nth-child(odd) .embed-responsive {
+		margin-left: 0;
+		margin-right: 18%;
+	}
+
+	.MJFFjm.left .container-fluid:nth-child(even) .section-title {
+		left: 0;
+	}
+
+	.MJFFjm.left .container-fluid:nth-child(odd) .section-title {
+		right: 0;
+	}
+}
+
+@media (max-width: 1140px) {
+	.MJFFjm .section-title {
+		padding: 1.5rem;
+	}
+
+	.MJFFjm-item {
+		position: relative;
+	}
+
+	.MJFFjm-item .embed-responsive {
+		margin-left: auto !important;
+		margin-right: auto !important;
+		width: 100%;
+	}
+
+	.MJFFjm-item .section-title + .embed-responsive {
+		margin-top: 1rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

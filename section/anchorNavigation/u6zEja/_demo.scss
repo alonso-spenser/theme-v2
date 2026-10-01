@@ -1,0 +1,57 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-u6zEja .u6zEja-bar{
+    background-color: #f6cdcd;
+}
+
+
+.section-demo-u6zEja .u6zEja-bar [class*="text-"]{
+    color: #ff0000;
+}
+
+
+
+.section-demo-u6zEja .secondary-bar{
+    background-color: #8adec8;
+}
+
+
+
+.section-demo-u6zEja .secondary-bar .container .section-drop .dropdown-toggle,
+.section-demo-u6zEja .secondary-bar .container .secondary-bar-contact a:not(.btn),
+.section-demo-u6zEja .secondary-bar .container .nav-link {
+    color: #0c8798;
+}
+
+
+
+
+@media (min-width: 768px) {
+    
+        .section-demo-u6zEja.full-view.fixed-top nav,
+        .section-demo-u6zEja nav.navbar{
+            background-color: #a8eeae;
+        }
+    
+    
+        .section-demo-u6zEja .navbar .nav-link,
+        .section-demo-u6zEja .navbar .navbar-brand,
+        .section-demo-u6zEja .navbar .dropdown-item
+        .section-demo-u6zEja .navbar .navbar-brand{
+            color: #096e12;
+        }
+    
+}
+
+
+
+@media (min-width: 768px) {
+    .section-demo-u6zEja.full-view:not(.fixed-top) .navbar .nav-link,
+    .section-demo-u6zEja.full-view:not(.fixed-top) .navbar .navbar-brand{
+        color: #b0b006;
+    }
+    .section-demo-u6zEja.full-view:not(.fixed-top) .secondary-bar .container .section-drop .dropdown-toggle,
+    .section-demo-u6zEja.full-view:not(.fixed-top) .secondary-bar .container .secondary-bar-contact a,
+    .section-demo-u6zEja.full-view:not(.fixed-top) .secondary-bar .container .nav-link {
+        color: #b0b006;
+    }
+}

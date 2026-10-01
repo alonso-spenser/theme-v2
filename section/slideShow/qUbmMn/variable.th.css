@@ -1,0 +1,14 @@
+[# th:each="o, salt:${ section.settings.imageList }"]
+    [# th:if="${not #strings.isEmpty(o.textColor)}"]
+        .section-[[${ section.id }]] .slick-slide-[[${ salt.index }]] [class*="text-"], .section-[[${ section.id }]] .slick-slide-[[${ salt.index }]] [class*="text-"] a:not(.btn)  {
+            color: [[${o.textColor}]];
+        }
+    [/]
+[/]
+[# th:if="${section.settings.subtractHeight != null && section.settings.subtractHeight > 0}"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]], .section-[[${ section.id }]]  .qUbmMn-c {
+        height: calc(100vh - [[${section.settings.subtractHeight}]]px);
+    }
+}
+[/]

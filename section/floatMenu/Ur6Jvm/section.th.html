@@ -1,0 +1,42 @@
+<section th:class="|section Ur6Jvm ${section.settings.iconSize} section-${section.id}${params.designMode && section.settings.isGlobalSection ? ' is-global-section' : ''}|" th:data-section="${section.templateId}">
+
+    <div th:each="o,stat:${section.settings.custom}" th:class="|Ur6Jvm-item Ur6Jvm-ico Ur6Jvm-${stat.index}|">
+        <a th:href="${o.link}">
+            <div class="embed-responsive embed-responsive-1by1" th:if="${not #strings.isEmpty(o.icon)}">
+                <img class="embed-responsive-item" th:src="${o.icon}" alt="">
+            </div>
+        </a>
+    </div>
+
+    <div th:if="${section.settings.skypeVisible && not #lists.isEmpty(section.settings.skype)}" class="Ur6Jvm-item skype">
+        <th:block th:if="${#lists.size(section.settings.skype) == 1}">
+            <a th:each="o:${section.settings.skype}" th:href="|skype:${o.skypeID}?chat|" target="_blank">
+                <label></label>
+            </a>
+        </th:block>
+        <div class="section-drop drop-left drop-left-bottom" th:if="${#lists.size(section.settings.skype) > 1}">
+            <label class="dropdown-toggle no-caret"></label>
+            <div class="dropdown-menu">
+                <a th:each="o:${section.settings.skype}" class="dropdown-item" th:href="|skype:${o.skypeID}?chat|" th:text="${o.skypeName}" target="_blank"></a>
+            </div>
+        </div>
+    </div>
+
+    <div th:if="${section.settings.whatsappVisible && not #lists.isEmpty(section.settings.whatsapp)}" class="Ur6Jvm-item whatsapp">
+        <th:block th:if="${#lists.size(section.settings.whatsapp) == 1}">
+            <a th:each="o:${section.settings.whatsapp}" th:href="|https://wa.me/${o.whatsappID}|" target="_blank">
+                <label></label>
+            </a>
+        </th:block>
+        <div class="section-drop drop-left drop-left-bottom" th:if="${#lists.size(section.settings.whatsapp) > 1}">
+            <label class="dropdown-toggle no-caret"></label>
+            <div class="dropdown-menu">
+                <a th:each="o:${section.settings.whatsapp}" class="dropdown-item" th:href="|https://wa.me/${o.whatsappID}|" th:text="${o.whatsappName}" target="_blank"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="Ur6Jvm-item back-to-top"></div>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

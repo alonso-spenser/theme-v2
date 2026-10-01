@@ -1,0 +1,16 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} ${ section.templateId }-container ${section.settings.layout}|">
+        <div th:class="|${ section.templateId }-content|">
+            <h6 class="text-price" th:if="${not #strings.isEmpty(section.settings.label)}">[[${ section.settings.label }]]</h6>
+            <h3 class="text-heading text-gutter" th:if="${not #strings.isEmpty(section.settings.heading)}" th:utext="${#strings.replace(section.settings.heading,'\n','<br>')}"></h3>
+            <p class="text-gutter" th:if="${not #strings.isEmpty(section.settings.buttonLabel) && not #strings.isEmpty(section.settings.buttonLink)}">
+                <a th:class="|btn ${section.settings.buttonStyle}|" th:href="${section.settings.buttonLink}">
+                    [[${ section.settings.buttonLabel }]] <i class="ic-right"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

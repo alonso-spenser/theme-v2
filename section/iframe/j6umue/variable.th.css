@@ -1,0 +1,10 @@
+[# th:if="${section.settings.ratio > 0}"]
+  @media (min-width: 768px) {
+    .section-[[${ section.id }]] .embed-responsive:before { padding-top: [[${section.settings.ratio}]]%;}
+  }
+[/]
+[# th:if="${section.settings.mobileRatio > 0}"]
+  @media (max-width: 768px) {
+    .section-[[${ section.id }]] .embed-responsive:before { padding-top: [[${section.settings.mobileRatio}]]%;}
+  }
+[/]

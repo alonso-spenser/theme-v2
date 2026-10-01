@@ -1,0 +1,133 @@
+[# th:if="${not #strings.isEmpty(section.settings.h1Background)}"]
+    .section-[[${ section.id }]] .bread-crumb {
+        background-color: [[${section.settings.h1Background}]];
+    }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.h1Color)}"]
+    .section-[[${ section.id }]] .bread-crumb * {
+        color: [[${section.settings.h1Color}]];
+    }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+  .section-[[${ section.id }]] .section-container {
+          background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+      [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+          background-size: [[${section.settings.backgroundSize}]];
+      [/]
+  }
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .section-title [class^=text-] {
+    color:[[${section.settings.textColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor) || section.settings.textWidth > 0}"]
+    .section-[[${ section.id }]] .section-title-divider {
+        [# th:if="${ section.settings.textWidth > 0 }"]
+            width: [[${section.settings.textWidth}]]%;
+        [/]
+    }
+    [# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+        .section-[[${ section.id }]] .section-title-divider:after {
+            border-color: [[${section.settings.textColor}]];
+        }
+    [/]
+[/]
+[# th:if="${section.settings.textWidth != null && section.settings.textWidth > 0}"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]] .section-title [class^=text-] {
+        width: [[${section.settings.textWidth}]]%;
+    }
+}
+[/]
+
+[# th:if="${section.settings.dividerWidth != null && section.settings.dividerWidth > 0}"]
+.section-[[${ section.id }]] .section-title .has-line:after, .section-[[${ section.id }]] .section-title img {
+    width: [[${section.settings.dividerWidth}]]%;
+}
+[/]
+
+
+[# th:if="${not #strings.isEmpty(section.settings.relatedBackground)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-related{
+    background-color: [[${ section.settings.relatedBackground }]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.paramBackground)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-param {
+    background-color: [[${ section.settings.paramBackground }]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.contentBackground)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-content {
+    background-color: [[${ section.settings.contentBackground }]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.borderColor)}"]
+.section-[[${ section.id }]] table th,
+.section-[[${ section.id }]] table td,
+.section-[[${ section.id }]] table thead th,
+.section-[[${ section.id }]] table tbody + tbody {
+    border: 1px solid [[${ section.settings.borderColor }]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.imageBorder)}"]
+.section-[[${ section.id }]] .cover-border {
+    border-color: [[${ section.settings.imageBorder }]];
+}
+[/]
+
+[# th:if="${section.settings.lineHeight > 0}"]
+.section-[[${ section.id }]] .section-rich-text, .section-[[${ section.id }]] .section-rich-text * {
+   line-height: [[${ section.settings.lineHeight }]]px;
+}
+[/]
+
+
+[# th:if="${not #strings.isEmpty(section.settings.paragraphHeading) || not #strings.isEmpty(section.settings.paragraphHeadingLabel)}"]
+.section-[[${ section.id }]] .section-paragraph-heading{
+    [# th:if="${not #strings.isEmpty(section.settings.paragraphHeading)}"]
+        background-color: [[${ section.settings.paragraphHeading }]];
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.paragraphHeadingLabel)}"]
+        color: [[${ section.settings.paragraphHeadingLabel }]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.paragraphCorner)}"]
+.section-[[${ section.id }]] .section-paragraph-heading:after{
+    border-bottom-color: [[${ section.settings.paragraphCorner }]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.paramColor)}"]
+.section-[[${ section.id }]] .YVrMNb-param-item *:not(.tips,.btn) {
+    color: [[${ section.settings.paramColor }]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.contentColor)}"]
+.section-[[${ section.id }]] .tab-pane * ,.section-[[${ section.id }]] .nav-tabs .nav-item {
+    color: [[${ section.settings.contentColor }]];
+}
+[/]
+[# th:if="${section.settings.enquiryTipSize != null && section.settings.enquiryTipSize > 0}"]
+.section-[[${ section.id }]] .tips {
+    font-size: [[${section.settings.enquiryTipSize}]]px;
+}
+[/]

@@ -1,0 +1,83 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor)}"]
+    .section-[[${ section.id }]] .has-divider .text-heading:after{
+        background-color: [[${section.settings.backgroundColor}]];
+    }
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+    .section-[[${ section.id }]] .MV3iA3-container [class*="text-"],
+    .section-[[${ section.id }]] .MV3iA3-container [class*="ic-"],
+    .section-[[${ section.id }]] .MV3iA3-office [class*="col-"],
+    .section-[[${ section.id }]] .MV3iA3-container a:not(:hover),
+    .section-[[${ section.id }]] .has-divider .text-subheading:after,
+    .section-[[${ section.id }]] .has-divider .text-subheading{
+        color: [[${section.settings.textColor}]];
+        border-color: [[${section.settings.textColor}]];
+    }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.headingColor)}"]
+    .section-[[${ section.id }]] .MV3iA3-column .text-subheading{
+        color: [[${section.settings.headingColor}]];
+    }
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.copyrightBackground) || not #strings.isEmpty(section.settings.copyrightBorder)}"]
+    .section-[[${ section.id }]] .MV3iA3-copyright{
+        [# th:if="${not #strings.isEmpty(section.settings.copyrightBackground)}"]
+            background-color: [[${section.settings.copyrightBackground}]];
+        [/]
+        [# th:if="${not #strings.isEmpty(section.settings.copyrightBorder)}"]
+            border-color: [[${section.settings.copyrightBorder}]];
+        [/]
+    }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.copyrightColor)}"]
+    .section-[[${ section.id }]] .MV3iA3-copyright *{
+        color: [[${section.settings.copyrightColor}]];
+    }
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.sloganBackground) || not #strings.isEmpty(section.settings.sloganBorder)}"]
+    .section-[[${ section.id }]] .MV3iA3-slogan{
+        [# th:if="${not #strings.isEmpty(section.settings.sloganBackground)}"]
+            background-color: [[${section.settings.sloganBackground}]];
+        [/]
+        [# th:if="${not #strings.isEmpty(section.settings.sloganBorder)}"]
+            border-color: [[${section.settings.sloganBorder}]];
+        [/]
+    }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.sloganColor)}"]
+    .section-[[${ section.id }]] .MV3iA3-slogan h3{
+        color: [[${section.settings.sloganColor}]];
+    }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.tabarBackground)}"]
+    .section-[[${ section.id }]] .MV3iA3-tabBar{
+        background-color: [[${section.settings.tabarBackground}]];
+    }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.tabarColor)}"]
+    .section-[[${ section.id }]] .MV3iA3-tabBar div{
+        color: [[${section.settings.tabarColor}]];
+    }
+[/]
+
+[# th:if="${section.settings.tabBar != null && not #lists.isEmpty(section.settings.tabBar)}"]
+    @media (max-width: 768px) {
+        body {
+            padding-bottom: 56px
+        }
+        [data-section='Ur6Jvm'] {
+            bottom: 4.125rem!important
+        }
+    }
+[/]

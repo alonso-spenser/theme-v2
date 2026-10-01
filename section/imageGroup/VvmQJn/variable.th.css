@@ -1,0 +1,28 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.dgColor)}"]
+.section-[[${ section.id }]] .VvmQJn-dialog [class*=text-] {
+    color: [[${section.settings.dgColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.dgBack)}"]
+.section-[[${ section.id }]] .VvmQJn-dialog {
+    background-color: [[${section.settings.dgBack}]];
+}
+[/]
+
+[# th:if="${section.settings.padding != null && section.settings.padding > 0}"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]] .VvmQJn-dialog {
+        top:[[${section.settings.padding}]]px;
+    }
+}
+[/]

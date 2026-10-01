@@ -1,0 +1,80 @@
+{
+  "protocolVersion": 2,
+  "componentKind": "section",
+  "type": "anchorPin",
+  "templateId": "I3qAj2",
+  "runtimeVersion": 2,
+  "definitionVersion": 1,
+  "schemaVersion": 1,
+  "name": {
+    "en": "Anchor pin",
+    "zh-CN": "锚钉"
+  },
+  "policy": {
+    "removable": true,
+    "duplicable": false,
+    "maxInstances": 0
+  },
+  "placement": {
+    "fixed": false,
+    "pages": []
+  },
+  "render": {
+    "template": "section.th.html",
+    "style": "section.scss",
+    "variableStyle": "variable.th.css",
+    "script": "section.js"
+  },
+  "editor": {
+    "groups": [
+      {
+        "id": "group1",
+        "name": {
+          "en": "Settings",
+          "zh-CN": "设置"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "",
+              "zh-CN": "锚钉是用来给导航菜单标记移动到页面的某个位置的，它本身没有任何样式和占用任何位置"
+            },
+            "name": {
+              "en": "Menu name",
+              "zh-CN": "菜单名称"
+            },
+            "type": "text",
+            "field": "title",
+            "default": "Menu name",
+            "options": []
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "additionalSettings",
+        "name": {
+          "en": "Additional settings",
+          "zh-CN": "补充设置"
+        },
+        "elements": [
+          {
+            "field": "sectionAlias",
+            "name": {
+              "en": "sectionAlias"
+            },
+            "type": "hidden",
+            "default": "锚钉"
+          }
+        ]
+      }
+    ]
+  },
+  "data": {
+    "source": "none",
+    "contract": "theme.anchorPin.v2"
+  }
+}

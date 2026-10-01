@@ -1,0 +1,37 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|slick ${ section.templateId }-container|" th:with="hasDot = ${ #lists.size(section.settings.imageList) > 1 }">
+        <div th:class="|slick-arrow slick-next ${hasDot  ? 'dots' : ''}|" th:data-carousel-next="${ section.id }" th:if="${hasDot}"></div>
+        <div th:class="|slick-arrow slick-prev ${hasDot  ? 'dots' : ''}|" th:data-carousel-prev="${ section.id }" th:if="${hasDot}"></div>
+        <div class="slick-slider"
+             th:data-carousel="${ section.id }"
+             th:data-dots="${hasDot  ? 1 : 0}"
+             th:data-arrow="${hasDot  ? 1 : 0}"
+             data-effect="fade"
+             th:data-column="1"
+             th:data-mobile-column="1"
+             th:data-delay="${section.settings.autoPlay}"
+        >
+            <div th:class="|slick-slide slick-slide-${salt.index}|" th:each="o, salt:${ section.settings.imageList }">
+                <div th:class="|embed-responsive embed-responsive-${section.settings.imageSize}|" th:if="${not #strings.isEmpty(o.mobImage) || not #strings.isEmpty(o.image)}">
+                    <img class="lazy embed-responsive-item d-md-none d-block"
+                        th:src="|${ not #strings.isEmpty(o.mobImage) ? o.mobImage : o.image }!1|"
+                        th:data-lazy="|${ not #strings.isEmpty(o.mobImage) ? o.mobImage : o.image }|"
+                        th:alt="${ alt }"
+                        th:if="${ not #strings.isEmpty(o.image) || not #strings.isEmpty(o.mobImage)}"
+                    >
+                    <img class="lazy embed-responsive-item d-md-block d-none" th:src="|${ not #strings.isEmpty(o.image) ? o.image : o.mobImage }!1|" th:data-lazy="|${ not #strings.isEmpty(o.image) ? o.image : o.mobImage }|" th:alt="${ alt }">
+                    <div class="container-fluid">
+                        <h3 class="text-headline" th:if="${ not #strings.isEmpty(o.heading) }">[[${ o.heading }]]</h3>
+                        <a class="text-link" th:href="${ o.buttonLink }" th:if="${ not #strings.isEmpty(o.buttonLink) && not #strings.isEmpty(o.buttonLabel) }">
+                            [[${ o.buttonLabel }]] <i class="ic-right"></i>
+                        </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

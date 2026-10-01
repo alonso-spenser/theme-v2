@@ -1,0 +1,38 @@
+[# th:each="o, salt:${ section.settings.imageList }"]
+    [# th:if="${not #strings.isEmpty(o.backgroundColor) || not #strings.isEmpty(o.backgroundImage)}"]
+    .[[${ section.templateId }]]-[[${ section.settings.articleId }]]-[[${ salt.index }]] .[[${ section.templateId }]]-row{
+        background: [[${o.backgroundColor}]] [# th:if="${not #strings.isEmpty(o.backgroundImage)}"] url("[[${o.backgroundImage}]]")[/] [[${o.backgroundRepeat}]] [[${o.backgroundPosition}]];
+        [# th:if="${not #strings.isEmpty(o.backgroundSize)}"]
+        background-size: [[${o.backgroundSize}]];
+        [/]
+    }
+    [/]
+
+    [# th:if="${not #strings.isEmpty(o.headingColor)}"]
+        .[[${ section.templateId }]]-[[${ section.settings.articleId }]]-[[${ salt.index }]] .text-heading {
+            color: [[${o.headingColor}]];
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(o.subheadingColor)}"]
+        .[[${ section.templateId }]]-[[${ section.settings.articleId }]]-[[${ salt.index }]] .text-subheading {
+            color: [[${o.subheadingColor}]];
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(o.textColor)}"]
+        .[[${ section.templateId }]]-[[${ section.settings.articleId }]]-[[${ salt.index }]] .text-body,
+        .[[${ section.templateId }]]-[[${ section.settings.articleId }]]-[[${ salt.index }]] .text-list {
+            color: [[${o.textColor}]];
+        }
+    [/]
+    [# th:if="${section.settings.imagePercentage < 12 && not #strings.isEmpty(o.maskColor)}"]
+    .[[${ section.templateId }]]-[[${ section.settings.articleId }]]-[[${ salt.index }]] .[[${ section.templateId }]]-area {
+        background-color: [[${o.maskColor}]];
+    }
+    [/]
+
+    [# th:if="${section.settings.imagePercentage == 12 && not #strings.isEmpty(o.maskColor)}"]
+    .[[${ section.templateId }]]-[[${ section.settings.articleId }]]-[[${ salt.index }]] .[[${ section.templateId }]]-content:before {
+        background-color: [[${ o.maskColor }]];
+    }
+    [/]
+[/]

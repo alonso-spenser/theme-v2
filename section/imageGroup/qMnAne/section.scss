@@ -1,0 +1,102 @@
+.qMnAne .text-heading {
+	line-height: 1.1;
+}
+
+.qMnAne .text-body {
+	line-height: 1.2;
+}
+
+.qMnAne-grid {
+	display: grid;
+}
+
+.qMnAne-grid-item {
+	position: relative;
+	border-radius: 0.3125rem;
+	overflow: hidden;
+	padding: 1.5625rem;
+}
+
+@media (max-width: 768px) {
+	.qMnAne-grid-item {
+		padding: 1rem;
+	}
+}
+
+.qMnAne-grid-item img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	object-fit: cover;
+	object-position: center;
+	transition: all 0.25s;
+}
+
+.qMnAne-grid-item:hover img {
+	transform: scale(1.05);
+}
+
+.qMnAne-grid-item .qMnAne-grid-content {
+	display: flex;
+	position: relative;
+	z-index: 1;
+	height: 100%;
+}
+
+@media (max-width: 768px) {
+	.qMnAne-grid-item .qMnAne-grid-content .text-heading {
+		font-size: 1rem;
+	}
+
+	.qMnAne-grid-item .qMnAne-grid-content .text-t-body {
+		font-size: 0.75rem;
+	}
+}
+
+.qMnAne-grid-item.right-top .qMnAne-grid-content {
+	justify-content: flex-end;
+	text-align: right;
+}
+
+.qMnAne-grid-item.center-top .qMnAne-grid-content {
+	justify-content: center;
+	text-align: center;
+}
+
+.qMnAne-grid-item.left-center .qMnAne-grid-content {
+	align-items: center;
+}
+
+.qMnAne-grid-item.center .qMnAne-grid-content {
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.qMnAne-grid-item.right-center .qMnAne-grid-content {
+	text-align: right;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.qMnAne-grid-item.left-bottom .qMnAne-grid-content {
+	align-items: flex-end;
+}
+
+.qMnAne-grid-item.center-bottom .qMnAne-grid-content {
+	text-align: center;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.qMnAne-grid-item.right-bottom .qMnAne-grid-content {
+	text-align: right;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

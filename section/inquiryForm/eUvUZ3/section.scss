@@ -1,0 +1,34 @@
+.eUvUZ3 .inquiry-form-office dt + dd {
+	margin-top: 0.75rem;
+}
+
+.eUvUZ3 .inquiry-form-office dd {
+	line-height: 1.5;
+}
+
+.eUvUZ3 .inquiry-form-office dd + dd {
+	margin-top: 0.5rem;
+}
+
+.eUvUZ3 .enquiry-dialog-footer {
+	padding-top: 0.75rem;
+}
+
+.eUvUZ3 dl + dl {
+	margin-top: 1rem;
+}
+
+.eUvUZ3 dl:not(:last-child) {
+	margin-bottom: 1.25rem;
+	padding-bottom: 1.25rem;
+	border-bottom: 1px var(--borderStyle) var(--colorBorder);
+}
+
+@media (max-width: 768px) {
+	.eUvUZ3 .enquiry-form .form-group {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

@@ -1,0 +1,67 @@
+{
+  "section": {
+    "id": "1642736725426647042",
+    "componentKind": "section",
+    "type": "imageText",
+    "templateId": "EFRVbm",
+    "runtimeVersion": 2,
+    "settings": {
+      "alt": "",
+      "name": "Tolayer Swift",
+      "image": "",
+      "avatar": "",
+      "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+      "heading": "Company<b>Overview </b>",
+      "lineText": "About",
+      "position": "Head Of Idea",
+      "lineColor": "",
+      "marginTop": false,
+      "signImage": "",
+      "sinceText": "",
+      "imageAlign": "left",
+      "imageScale": "1by1",
+      "paddingTop": true,
+      "sinceColor": "",
+      "wideScreen": false,
+      "contentColor": "",
+      "headingColor": "",
+      "marginBottom": false,
+      "sectionAlias": "公司概况",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "signBackground": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "contentBackground": "",
+      "headingLabelColor": "",
+      "backgroundPosition": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

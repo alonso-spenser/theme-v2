@@ -1,0 +1,39 @@
+.ZVNrIj .text-content-heading {
+	font-weight: bold;
+}
+
+@media (min-width: 768px) {
+	.ZVNrIj-content:not(.order-2) {
+		padding-right: 4rem;
+	}
+
+	.ZVNrIj-content.order-2 {
+		padding-left: 4rem;
+	}
+}
+
+.ZVNrIj .media img {
+	width: 5rem;
+}
+
+@media (max-width: 768px) {
+	.ZVNrIj .media img {
+		max-width: 3rem;
+	}
+}
+
+.ZVNrIj .media img + .media-body {
+	margin-left: 0.5rem;
+}
+
+.ZVNrIj .media:not(:last-child) {
+	margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+	.ZVNrIj .media:not(:last-child) {
+		margin-bottom: 1.5rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

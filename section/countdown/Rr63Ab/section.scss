@@ -1,0 +1,54 @@
+.Rr63Ab .row .col-12 {
+	position: relative;
+	display: flex;
+	padding-left: 3.75rem;
+	padding-right: 3.75rem;
+}
+
+.Rr63Ab .row.divider .col-12:not(:last-child):after {
+	content: '';
+	border-right: 1px solid #eee;
+	position: absolute;
+	right: 0;
+	height: 50%;
+	top: 25%;
+}
+
+.Rr63Ab-digit {
+	transition: all 0.25s;
+	font-size: 2.5rem;
+}
+
+.Rr63Ab-text {
+	margin-top: 0.5rem;
+}
+
+.Rr63Ab sub {
+	font-family: var(--typeBody);
+	font-size: var(--fontSizeBody);
+	margin-left: 0.25rem;
+}
+
+@media (max-width: 768px) {
+	.Rr63Ab .row .col-12 {
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+		justify-content: flex-start !important;
+	}
+
+	.Rr63Ab .row .col-12:not(:last-child) {
+		margin-bottom: 0.75rem;
+		border-bottom: 1px solid #eee;
+		padding-bottom: 0.75rem;
+	}
+
+	.Rr63Ab .row .col-12:after {
+		display: none;
+	}
+
+	.Rr63Ab-digit {
+		font-size: 1.5rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

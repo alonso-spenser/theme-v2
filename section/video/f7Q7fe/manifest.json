@@ -1,0 +1,274 @@
+{
+  "protocolVersion": 2,
+  "componentKind": "section",
+  "type": "video",
+  "templateId": "f7Q7fe",
+  "runtimeVersion": 2,
+  "definitionVersion": 1,
+  "schemaVersion": 1,
+  "name": {
+    "en": "视频 Banner",
+    "zh-CN": "视频 Banner"
+  },
+  "policy": {
+    "removable": true,
+    "duplicable": true,
+    "maxInstances": 0
+  },
+  "placement": {
+    "fixed": false,
+    "pages": []
+  },
+  "render": {
+    "template": "section.th.html",
+    "style": "section.scss",
+    "variableStyle": "variable.th.css",
+    "script": "section.js"
+  },
+  "editor": {
+    "groups": [
+      {
+        "id": "group1",
+        "name": {
+          "en": "Video",
+          "zh-CN": "视频"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "Enter YouTube's or Tencent's video Sharing Link",
+              "zh-CN": "请输入Youtube视频的分享链接<br> 放大时播放"
+            },
+            "name": {
+              "en": "Video",
+              "zh-CN": "视频"
+            },
+            "type": "text",
+            "field": "videoURL",
+            "default": "",
+            "options": [],
+            "translate": 1
+          },
+          {
+            "info": {
+              "en": "Placeholder video",
+              "zh-CN": "占位播放"
+            },
+            "name": {
+              "en": "Background Video",
+              "zh-CN": "背景视频"
+            },
+            "type": "textarea",
+            "field": "backVideo",
+            "default": "",
+            "options": [],
+            "translate": 1
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Placeholder Image",
+              "zh-CN": "占位图"
+            },
+            "type": "imagePicker",
+            "field": "image",
+            "default": "",
+            "options": [],
+            "altFiled": "",
+            "translate": 1
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "group2",
+        "name": {
+          "en": "Content",
+          "zh-CN": "内容"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Image",
+              "zh-CN": "图片"
+            },
+            "type": "imagePicker",
+            "field": "logo",
+            "default": "",
+            "options": [],
+            "altFiled": "alt",
+            "translate": 1
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Heading",
+              "zh-CN": "标题"
+            },
+            "type": "text",
+            "field": "heading",
+            "default": "A HEADING FOR VIDEO",
+            "options": [],
+            "translate": 0
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Play button",
+              "zh-CN": "播放按钮"
+            },
+            "type": "text",
+            "field": "buttonLabel",
+            "default": "Watch video",
+            "options": [],
+            "translate": 0
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Text Color",
+              "zh-CN": "文本颜色"
+            },
+            "type": "colorPicker",
+            "field": "textColor",
+            "default": "",
+            "options": [],
+            "translate": 1
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "type": "divider",
+            "default": "",
+            "options": []
+          },
+          {
+            "max": 150,
+            "min": 0,
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Margin top",
+              "zh-CN": "上边距"
+            },
+            "step": 5,
+            "type": "slider",
+            "field": "marginTop",
+            "default": 0,
+            "options": [],
+            "translate": 1
+          },
+          {
+            "max": 100,
+            "min": 0,
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Opacity",
+              "zh-CN": "视频透明度"
+            },
+            "step": 5,
+            "type": "slider",
+            "field": "opacity",
+            "default": 0,
+            "options": [],
+            "translate": 1
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Background",
+              "zh-CN": "背景色"
+            },
+            "type": "colorPicker",
+            "field": "backColor",
+            "default": "",
+            "options": [],
+            "translate": 1
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "additionalSettings",
+        "name": {
+          "en": "Additional settings",
+          "zh-CN": "补充设置"
+        },
+        "elements": [
+          {
+            "field": "sectionAlias",
+            "name": {
+              "en": "sectionAlias"
+            },
+            "type": "hidden",
+            "default": "视频 Banner"
+          },
+          {
+            "field": "marginBottom",
+            "name": {
+              "en": "marginBottom"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "paddingTop",
+            "name": {
+              "en": "paddingTop"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "paddingBottom",
+            "name": {
+              "en": "paddingBottom"
+            },
+            "type": "hidden",
+            "default": ""
+          }
+        ]
+      }
+    ]
+  },
+  "data": {
+    "source": "none",
+    "contract": "theme.video.v2"
+  }
+}

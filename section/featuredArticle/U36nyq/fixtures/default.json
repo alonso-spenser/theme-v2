@@ -1,0 +1,102 @@
+{
+  "section": {
+    "id": "1704491429262405634",
+    "componentKind": "section",
+    "type": "featuredArticle",
+    "templateId": "U36nyq",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "4",
+      "cardColor": "",
+      "marginTop": false,
+      "mobColumn": "12",
+      "signImage": "",
+      "buttonLink": "",
+      "cardShadow": true,
+      "imageScale": "1by1",
+      "paddingTop": true,
+      "wideScreen": false,
+      "buttonLabel": "Button",
+      "buttonStyle": "invisible",
+      "timeVisible": false,
+      "imageVisible": true,
+      "marginBottom": false,
+      "sectionAlias": "推荐文章",
+      "cardLineColor": "",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "cardBackground": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "subtitleVisible": true,
+      "backgroundRepeat": "",
+      "backgroundPosition": ""
+    },
+    "bindings": {
+      "collectionList": {
+        "sourceType": "articleCollection",
+        "ids": []
+      }
+    },
+    "data": {
+      "collectionList": [
+        {
+          "title": "1 Tesla is now the most valuable US automaker ever",
+          "seoUrl": "",
+          "summary": "The budget is the most basic thing in financial planning. It is therefore especially important to be careful when compiling the budget. To start you have to draw up your own budget for the next month and only after it you may make a yearly budget",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg",
+          "createTime": 1562222541298,
+          "articleList": []
+        },
+        {
+          "title": "2 Tesla is now the most valuable US automaker ever",
+          "seoUrl": "",
+          "summary": "The budget is the most basic thing in financial planning. It is therefore especially important to be careful when compiling the budget. To start you have to draw up your own budget for the next month and only after it you may make a yearly budget",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg",
+          "createTime": 1562222541298,
+          "articleList": []
+        },
+        {
+          "title": "3 Tesla is now the most valuable US automaker ever",
+          "seoUrl": "",
+          "summary": "The budget is the most basic thing in financial planning. It is therefore especially important to be careful when compiling the budget. To start you have to draw up your own budget for the next month and only after it you may make a yearly budget",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg",
+          "createTime": 1562222541298,
+          "articleList": []
+        },
+        {
+          "title": "4 Tesla is now the most valuable US automaker ever",
+          "seoUrl": "",
+          "summary": "The budget is the most basic thing in financial planning. It is therefore especially important to be careful when compiling the budget. To start you have to draw up your own budget for the next month and only after it you may make a yearly budget",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg",
+          "createTime": 1562222541298,
+          "articleList": []
+        }
+      ]
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

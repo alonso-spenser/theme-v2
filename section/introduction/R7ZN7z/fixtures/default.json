@@ -1,0 +1,68 @@
+{
+  "section": {
+    "id": "1561909739787386881",
+    "componentKind": "section",
+    "type": "introduction",
+    "templateId": "R7ZN7z",
+    "runtimeVersion": 2,
+    "settings": {
+      "alt": "",
+      "image": "",
+      "column": "4",
+      "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+      "heading": "This is a heading",
+      "bodyColor": "",
+      "marginTop": false,
+      "imageScale": "4by3",
+      "paddingTop": true,
+      "secondSize": 49,
+      "contentWidth": "6",
+      "headingColor": "",
+      "marginBottom": false,
+      "sectionAlias": "Mission",
+      "paddingBottom": false,
+      "secondBodyColor": "",
+      "secondLineColor": "",
+      "contentBackground": "",
+      "secondHeadingColor": "",
+      "firstList": [],
+      "secondList": [],
+      "wideScreen": "",
+      "firstAlt": "",
+      "firstHeading": "",
+      "secondAlt": "",
+      "secondHeading": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "backgroundSize": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

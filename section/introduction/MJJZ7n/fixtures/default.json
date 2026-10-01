@@ -1,0 +1,72 @@
+{
+  "section": {
+    "id": "1692628643347648514",
+    "componentKind": "section",
+    "type": "introduction",
+    "templateId": "MJJZ7n",
+    "runtimeVersion": 2,
+    "settings": {
+      "p1Alt": "",
+      "p1Icon": "",
+      "p1Link": "",
+      "p2Icon": "",
+      "p2Link": "",
+      "p3Link": "",
+      "p1Image": "",
+      "p2Label": "",
+      "p3Label": "ABOUT US",
+      "p1Button": "LEARN MORE",
+      "p2Button": "LEARN MORE",
+      "p3Button": "LEARN MORE",
+      "p3Symbol": "list-demical",
+      "marginTop": false,
+      "p1Content": "Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas.",
+      "p1Heading": "SAVE THE PLANET AND YOUR WALLET",
+      "p2Content": "Ut ultricies imperdiet sodales. Aliquam fringilla aliquam ex sit amet.",
+      "p2Heading": "GRAVIDA VITAE DAPIBUS RISUS ANTE",
+      "p3Content": "Cras massa nibh, tincidunt ut eros a, vulputate consequat odio. Vestibulum vehicula tempor nulla, sed hendrerit urna interdum in. Donec et nibh maximus, congue est eu, mattis nunc. Praesent ut quam quis quam venenatis fringilla. Morbi vestibulum id tellus commodo mattis. Aliquam erat volutpat. Aenean accumsan id mi nec semper quis quam venenatis .",
+      "p3Heading": "WHAT IS SOLAR POWER?",
+      "paddingTop": true,
+      "wideScreen": false,
+      "p1ImageLink": "",
+      "marginBottom": false,
+      "p3Subheading": "Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Aliquam erat volutpat. Aenean accumsan id mi nec semper quis quam venenatis et nibh maximus.",
+      "sectionAlias": "简介",
+      "p3ButtonStyle": "btn-primary",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "negativeMargin": 100,
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "textWidth": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "section": {
+    "id": "1441308900103786497",
+    "componentKind": "section",
+    "type": "countdown",
+    "templateId": "Rr63Ab",
+    "runtimeVersion": 2,
+    "settings": {
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "divider": true,
+      "heading": "Title with button",
+      "marginTop": false,
+      "textAlign": "center",
+      "textColor": "#212529",
+      "textWidth": 100,
+      "buttonLink": "",
+      "digitColor": "#ef9e06",
+      "paddingTop": true,
+      "subheading": "this is a new beginning",
+      "wideScreen": false,
+      "buttonLabel": "Button label",
+      "buttonStyle": "invisible",
+      "contentAlign": "justify-content-center",
+      "contentColor": "#136cc7",
+      "dividerColor": "#ff0000",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "marginBottom": false,
+      "sectionAlias": "倒计时",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "#f2f2f2",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "sectionMargin": false,
+      "itemList": [
+        {
+          "digit": "10",
+          "unit": "Year",
+          "describe": "Brief introduction of events"
+        },
+        {
+          "digit": "1904",
+          "unit": "年",
+          "describe": "公司创立于 年"
+        },
+        {
+          "digit": "153",
+          "unit": "#",
+          "describe": "个港口"
+        },
+        {
+          "digit": "400",
+          "unit": "个",
+          "describe": "服务覆盖个国家的"
+        }
+      ],
+      "background": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

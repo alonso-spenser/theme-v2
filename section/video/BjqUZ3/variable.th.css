@@ -1,0 +1,10 @@
+[# th:if="${section.settings.videoWidth > 0 && section.settings.videoHeight > 0}"]
+.section-[[${ section.id }]] .embed-responsive-video:before {
+     padding-top: [[${ (section.settings.videoHeight * 1.0 / section.settings.videoWidth * 1.0) * 100.0}]]%;
+ }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.maskColor)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-mask:after {
+    background-color: [[${ section.settings.maskColor }]]
+}
+[/]

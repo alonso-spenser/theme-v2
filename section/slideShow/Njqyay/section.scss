@@ -1,0 +1,76 @@
+.Njqyay .embed-responsive-full {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: flex-end;
+}
+
+.Njqyay .embed-responsive-full:after {
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+	.Njqyay .embed-responsive {
+		height: 100vh;
+		width: 100vw;
+		display: flex;
+		align-items: flex-end;
+	}
+
+	.Njqyay .embed-responsive:after {
+		content: "";
+		height: 100vh;
+		width: 100vw;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		background: rgba(0, 0, 0, 0.2);
+	}
+}
+
+.Njqyay [class*=text-]:not(:hover) {
+	color: #fff;
+}
+
+.Njqyay .slick-dots {
+	position: absolute;
+	z-index: 10;
+	bottom: 4rem;
+	left: auto;
+	right: 3rem;
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Njqyay .container-fluid {
+	position: relative;
+	z-index: 2;
+}
+
+@media (min-width: 768px) {
+	.Njqyay .container-fluid {
+		margin-bottom: 4rem;
+	}
+
+	.Njqyay .container-fluid .text-headline {
+		max-width: 40rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.Njqyay .container-fluid {
+		margin-bottom: 2rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

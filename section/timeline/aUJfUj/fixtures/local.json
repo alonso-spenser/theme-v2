@@ -1,0 +1,100 @@
+{
+  "section": {
+    "id": "1505873256958238721",
+    "componentKind": "section",
+    "type": "timeline",
+    "templateId": "aUJfUj",
+    "runtimeVersion": 2,
+    "settings": {
+      "symbol": "list-demical",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Timeline",
+      "cardColor": "#ffff00",
+      "marginTop": false,
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "buttonLink": "",
+      "paddingTop": true,
+      "subheading": "this is a new beginning",
+      "buttonLabel": "Button label",
+      "buttonStyle": "invisible",
+      "contentAlign": "text-center",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "marginBottom": false,
+      "sectionAlias": "时间轴",
+      "sectionFluid": false,
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "cardBackground": "",
+      "backgroundColor": "#ffff00",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "eventList": [
+        {
+          "month": "10",
+          "year": "2019",
+          "eventTitle": "Event heading",
+          "eventContent": "Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your website.",
+          "link": "",
+          "image": "/preview-assets/images/image-with-text.jpg"
+        },
+        {
+          "month": "10",
+          "year": "2019",
+          "eventTitle": "Event heading",
+          "eventContent": "Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your website.",
+          "link": "",
+          "image": "/preview-assets/images/image-with-text.jpg"
+        },
+        {
+          "month": "10",
+          "year": "2019",
+          "eventTitle": "Event heading",
+          "eventContent": "Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your website.",
+          "link": "",
+          "image": "/preview-assets/images/image-with-text.jpg"
+        },
+        {
+          "month": "10",
+          "year": "2019",
+          "eventTitle": "Event heading",
+          "eventContent": "Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your website.",
+          "link": "",
+          "image": "/preview-assets/images/image-with-text.jpg"
+        }
+      ],
+      "wideScreen": "",
+      "timeSpan": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

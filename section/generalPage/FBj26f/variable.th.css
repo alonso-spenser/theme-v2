@@ -1,0 +1,58 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.faqActiveBack) || not #strings.isEmpty(section.settings.faqActive)}"]
+.section-[[${ section.id }]] .FBj26f-faq.active .text-content-heading{
+    [# th:if="${not #strings.isEmpty(section.settings.faqActiveBack)}"]
+        background-color: [[${section.settings.faqActiveBack }]];
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.faqActive)}"]
+        color: [[${section.settings.faqActive }]];
+    [/]
+}
+.section-[[${ section.id }]] .FBj26f-faq.active p{
+  border-color: [[${section.settings.faqActiveBack }]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.catalogBorder) || not #strings.isEmpty(section.settings.catalogColor)}"]
+.section-[[${ section.id }]]  .FBj26f-catalog a {
+    [# th:if="${not #strings.isEmpty(section.settings.catalogBorder)}"]
+        border-color: [[${section.settings.catalogBorder }]];
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.catalogColor)}"]
+        color: [[${section.settings.catalogColor }]];
+    [/]
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.cardBackground)}"]
+.section-[[${ section.id }]]  .card-p4, .section-[[${ section.id }]] .media-p8 {
+    background-color: [[${section.settings.cardBackground }]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.cardColor)}"]
+.section-[[${ section.id }]]  .card-p4 [class^=text-] , .section-[[${ section.id }]] .media-p8 [class^=text-] {
+    color: [[${section.settings.cardColor }]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.headingColor)}"]
+.section-[[${ section.id }]]  .text-heading{
+    color: [[${section.settings.headingColor }]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.subheadingColor)}"]
+.section-[[${ section.id }]]  .text-content-heading{
+    color: [[${section.settings.subheadingColor }]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]]  .text-body{
+    color: [[${section.settings.textColor }]];
+}
+[/]

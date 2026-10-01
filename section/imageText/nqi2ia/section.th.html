@@ -1,0 +1,28 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div class="card">
+            <div class="row g-0">
+                <div th:class="|col-md-6${section.settings.layout == 'right'? ' order-md-3 order-1' : ''}|">
+                    <img th:src="|${section.settings.image}!1|" th:data-original="${section.settings.image}" class="lazy d-md-block d-none" th:alt="${section.settings.heading}" th:if="${not #strings.isEmpty(section.settings.image)}">
+                    <img th:src="|${not #strings.isEmpty(section.settings.mobImage) ? section.settings.mobImage : section.settings.image}!1|" th:data-original="${not #strings.isEmpty(section.settings.mobImage) ? section.settings.mobImage : section.settings.image}" class="lazy d-md-none d-block" th:alt="${section.settings.heading}" th:if="${not #strings.isEmpty(section.settings.mobImage) || not #strings.isEmpty(section.settings.image)}">
+                </div>
+                <div class="col-md-6 order-2">
+                    <div class="card-body">
+                        <h5 th:class="|text-small ${section.settings.layout}|" th:if="${not #strings.isEmpty(section.settings.subheading)}">[[${ section.settings.subheading }]]</h5>
+                        <h3 class="text-heading" th:if="${not #strings.isEmpty(section.settings.heading)}">[[${ section.settings.heading }]]</h3>
+                        <div class="text-body" th:if="${not #strings.isEmpty(section.settings.content)}" th:utext="${#strings.replace(section.settings.content,'\n','<br>')}"></div>
+                        <p class="text-button" th:if="${section.settings.buttonStyle != 'invisible' && not #strings.isEmpty(section.settings.buttonLabel)}">
+                            <button th:class="|btn ${ section.settings.buttonStyle }|" th:if="${#strings.isEmpty(section.settings.buttonLink) && section.settings.buttonStyle != 'invisible'}">[[${ section.settings.buttonLabel }]]</button>
+                            <a th:href="${ section.settings.buttonLink }" th:class="|btn ${ section.settings.buttonStyle }|"  th:if="${not #strings.isEmpty(section.settings.buttonLink) && section.settings.buttonStyle != 'invisible'}">
+                                [[${ section.settings.buttonLabel }]] <i class="ic-right"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

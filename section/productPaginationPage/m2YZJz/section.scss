@@ -1,0 +1,96 @@
+.m2YZJz .card {
+	overflow: hidden;
+}
+
+.m2YZJz .card.no-shadow {
+	box-shadow: none;
+}
+
+.m2YZJz .text-content-heading {
+	text-overflow: ellipsis;
+	line-clamp: 2;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	line-height: 1.2;
+}
+
+.m2YZJz .text-body {
+	text-overflow: ellipsis;
+	line-clamp: 2;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+}
+
+@media (min-width: 768px) {
+	.m2YZJz .card-body {
+		padding: 3rem 4rem;
+	}
+
+	.m2YZJz .card-body .embed-responsive {
+		margin-top: 1rem;
+	}
+
+	.m2YZJz .card {
+		border-radius: 1.25rem;
+	}
+
+	.m2YZJz .first-line .col-md-5 {
+		display: flex;
+	}
+
+	.m2YZJz .first-line .card-body {
+		padding: 3rem 4rem;
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	.m2YZJz .first-line .card-body .embed-responsive {
+		margin-top: 1rem;
+	}
+
+	.m2YZJz .first-line .card {
+		border-radius: 1.25rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.m2YZJz img {
+		border-radius: 0;
+	}
+
+	.m2YZJz .card-body {
+		padding: 1.2rem 1.5rem;
+	}
+
+	.m2YZJz .card {
+		border-radius: 0.375rem;
+	}
+
+	.m2YZJz [class*=text-] {
+		text-align: center;
+	}
+
+	.m2YZJz .first-line.bottom .card-body {
+		padding-bottom: 0;
+	}
+
+	.m2YZJz .first-line.bottom .embed-responsive {
+		width: calc(100% - 3rem);
+		margin: 0 1.5rem 1.2rem 1.5rem;
+	}
+
+	.m2YZJz .first-line.top .card-body {
+		order: 2;
+	}
+}
+
+.m2YZJz .ic-1-right:after {
+	content: "\e624";
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

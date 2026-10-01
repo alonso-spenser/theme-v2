@@ -1,0 +1,121 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''} ${section.templateId} section-${section.id} |" th:data-section="${section.templateId}">
+    <img class="lazy embed-responsive" th:if="${section.data.collection != null && section.settings.bannerVisible && not #strings.isEmpty(section.data.collection.banner)}" th:src="|${section.data.collection.banner}!1|" th:data-original="|${section.data.collection.banner}!full|" th:alt="${section.data.collection.title}">
+    <div th:class="|bread-crumb ${section.settings.h1Layout}|" th:if="${section.settings.h1Layout != 'invisible' || section.settings.enableCrumb}">
+        <div th:class="|container${section.settings.h1Wide ? '-fluid' : ''}${section.settings.enableCrumb ? '' : ' solo'}|">
+            <h1 class="text-heading" th:if="${section.settings.h1Layout != 'invisible' && section.settings.h1Layout != 'bottom'}">
+                [[${ page.seoH1 }]]
+            </h1>
+            <ol class="breadcrumb" th:if="${section.settings.enableCrumb}">
+                <li class="breadcrumb-item">
+                    <a th:href="${site.urlPrefix}">
+                    [[${ lang.global.home }]]
+                    </a>
+                </li>
+                <li class="breadcrumb-item" th:if="${ lang != null && not #strings.isEmpty(lang.heading) }">
+                    <a th:href="|${site.urlPrefix}products|">
+                        [[${ lang.heading }]]
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    [[${ page.seoH1 }]]
+                </li>
+            </ol>
+            <h1 class="text-heading" th:if="${section.settings.h1Layout != 'invisible' && section.settings.h1Layout == 'bottom'}">
+                [[${ page.seoH1 }]]
+            </h1>
+        </div>
+    </div>
+    <div th:class="|section-container${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''}|">
+        <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} section-neighbor|" th:if="${section.data.collection != null && section.settings.summaryDescription == 'top' && not #strings.isEmpty(section.data.collection.description) && section.data.page.current == 1}">
+            <div class="text-summary" th:with="textLines = ${#strings.listSplit(section.data.collection.description,'\n')}">
+                <th:block th:each="textLine,saltLine:${textLines}">
+                    <p class="break-word" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                </th:block>
+            </div>
+        </div>
+        <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} ${section.templateId}-container section-neighbor|">
+            <div th:class="|row row-gutter sidebar-${section.settings.sidebar}|">
+                 <div th:class="|col-md-3 sidebar${not #strings.isEmpty(section.settings.sidebar) && section.settings.sidebar == 'right' ? ' order-2' : ''}|" th:if="${not #strings.isEmpty(section.settings.sidebar) && section.settings.sidebar != 'invisible'}">
+                    <h3 class="text-heading" th:text="${section.settings.sidebarHeading}" th:if="${not #strings.isEmpty(section.settings.sidebarHeading)}"></h3>
+                    <ul class="sidebar-catalog">
+                         <li th:each="o,salt:${section.settings.navigationList}" th:class="${not #lists.isEmpty(o.subList) ? 'has-child' : ''}">
+                            <a th:class="|${not #lists.isEmpty(o.subList) ? 'has-child-link' : ''}${o.current ? ' active' : ''}|" th:href="${o.link}">[[${o.title}]]</a>
+                            <div class="open-placeholder" th:if="${not #lists.isEmpty(o.subList)}"></div>
+                            <ul th:if="${not #lists.isEmpty(o.subList)}" th:class="${o.active ? 'show' : ''}">
+                                 <li th:each="second,secondSalt:${o.subList}" th:class="${not #lists.isEmpty(second.subList) ? 'has-child' : ''}">
+                                    <a th:class="|${not #lists.isEmpty(second.subList) ? 'has-child-link' : ''}${second.current ? ' active' : ''}|" th:href="${second.link}">[[${second.title}]]</a>
+                                    <div class="open-placeholder" th:if="${not #lists.isEmpty(second.subList)}"></div>
+                                    <ul th:if="${not #lists.isEmpty(second.subList)}" th:class="${second.active ? 'show' : ''}">
+                                         <li th:each="third,thirdSalt:${second.subList}" th:class="${not #lists.isEmpty(third.subList) ? 'has-child' : ''}">
+                                            <a th:class="|${not #lists.isEmpty(third.subList) ? 'has-child-link' : ''}${third.current ? ' active' : ''}|" th:href="${third.link}">[[${third.title}]]</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div th:class="|col-md-${not #strings.isEmpty(section.settings.sidebar) && section.settings.sidebar != 'invisible' ? 9 : 12}|">
+                    <div th:class="|row row-gutter ${section.templateId}-tile section-neighbor|" th:if="${section.settings.layout == 'tile'}">
+                        <div th:each="o,salt:${section.data.page.records}" th:class="|col-md-${section.settings.column} col-${section.settings.mobColumn}|">
+                            <a th:href="|${ params.itemLink }${o.seoUrl}|">
+                                <div class="card section-card">
+                                    <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
+                                        <img class="embed-responsive-item card-img-top lazy" th:src="|${not #strings.isEmpty(o.coverImage) ? o.coverImage : '/theme/img/8.jpg'}!1|" th:data-original="|${not #strings.isEmpty(o.coverImage) ? o.coverImage : '/theme/img/8.jpg'}!${section.settings.wideScreen ? 'f' : ''}${section.settings.column}|" th:alt="${o.title}">
+                                    </div>
+                                    <div th:class="|card-body ${section.settings.textAlign}|">
+                                        <h3 class="text-content-heading" th:text="${o.title}"></h3>
+                                        <p class="break-word text-secondary" th:if="${section.settings.subtitleVisible}" th:text="${#strings.length(o.subtitle) >= 100 ? #strings.substring(o.subtitle, 0, 100) : o.subtitle}"></p>
+                                        <p th:if="${section.settings.priceVisible}" class="text-price" th:text="|${ site.currencySymbol }${o.minPrice}${ o.maxPrice > o.minPrice && o.minPrice > 0 ? ' ~ ' : ''}${ o.maxPrice > o.minPrice && o.minPrice > 0 ?  o.maxPrice : ''}|"></p>
+                                        <p class="text-secondary" th:if="${section.settings.timeVisible}" th:text="${#dates.format(new java.util.Date(o.createTime),'yyyy-MM-dd')}"></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row row-gutter" th:if="${section.settings.layout != 'tile'}">
+                        <div th:each="o,salt:${section.data.page.records}" th:class="|${ section.templateId }-list col-md-12 col-${section.settings.mobColumn}|">
+                            <a th:href="|${ params.itemLink }${o.seoUrl}|">
+                                <div class="row">
+                                    <div class="col-md-3" th:if="${section.settings.imageVisible}">
+                                        <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
+                                            <img class="embed-responsive-item lazy" th:src="|${not #strings.isEmpty(o.coverImage) ? o.coverImage : 'https://site-file.fomillesite.com/0/001/img/800.jpg'}!1|" th:data-original="|${not #strings.isEmpty(o.coverImage) ? o.coverImage : 'https://site-file.fomillesite.com/0/001/img/800.jpg'}!${section.settings.wideScreen ? 'f' : ''}3|" th:alt="${o.title}">
+                                        </div>
+                                    </div>
+                                    <div th:class="|col-md-${section.settings.imageVisible == null || section.settings.imageVisible ? 9 : 12} ${section.settings.textAlign}|">
+                                        <h3 th:if="${not #strings.isEmpty(o.title)}" class="text-content-heading" th:text="${o.title}"></h3>
+                                        <p class="text-body break-word" th:if="${section.settings.subtitleVisible}" th:utext="${o.subtitle}"></p>
+                                        <p th:if="${section.settings.priceVisible}" class="text-price" th:text="|${ site.currencySymbol }${o.minPrice}${ o.maxPrice > o.minPrice && o.minPrice > 0 ? ' ~ ' : ''}${ o.maxPrice > o.minPrice && o.minPrice > 0 ?  o.maxPrice : ''}|"></p>
+                                        <p class="text-secondary" th:if="${section.settings.timeVisible}" th:text="${#dates.format(new java.util.Date(o.createTime),'yyyy-MM-dd')}"></p>
+                                        <p class="text-button d-md-block d-none" th:if="${not #strings.isEmpty(section.settings.buttonStyle) && section.settings.buttonStyle != 'invisible'}">
+                                          <button th:class="|btn btn-more ${section.settings.buttonStyle}|">
+                                              [[${#strings.isEmpty(section.settings.buttonLabel) ? 'Read More > ' : section.settings.buttonLabel}]]
+                                          </button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="section-neighbor" th:if="${section.data.collection != null && section.settings.summaryDescription == 'bottom' && not #strings.isEmpty(section.data.collection.description) && section.data.page.current == 1}">
+                        <div class="section-margin-top section-collection-describe" th:with="textLines = ${#strings.listSplit(section.data.collection.description,'\n')}">
+                            <h3 class="text-content-heading">[[${ section.data.collection.title }]]</h3>
+                            <th:block th:each="textLine,saltLine:${textLines}">
+                                <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                            </th:block>
+                        </div>
+                        <div class="section-collection-more">
+                            <label th:text="${#strings.isEmpty(section.settings.summaryShow) ? 'Show More' : section.settings.summaryShow}"></label>
+                            <label th:text="${#strings.isEmpty(section.settings.summaryClose) ? 'Hide' : section.settings.summaryClose}"></label>
+                        </div>
+                    </div>
+                    <div class="section-neighbor d-flex justify-content-center" th:if="${section.data.page.total > section.data.page.size}">
+                        [(${ section.settings.pagination })]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

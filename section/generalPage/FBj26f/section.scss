@@ -1,0 +1,142 @@
+.FBj26f-section + .FBj26f-section {
+	margin-top: 1rem;
+}
+
+.FBj26f [class*=text-] + .FBj26f-section {
+	margin-top: 0.5rem;
+}
+
+.FBj26f-cover {
+	width: 100%;
+}
+
+.FBj26f .border-radius {
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+.FBj26f .text-content-heading {
+	font-weight: bold;
+}
+
+.FBj26f .card-p4 {
+	box-shadow: none;
+	background-color: #f8f8f8;
+	border: 2px solid #f8f8f8;
+	border-radius: 0.625rem;
+}
+
+.FBj26f .card-p4 .card-body {
+	padding: 2.625rem 0.625rem;
+}
+
+.FBj26f .card-p4 img {
+	border-radius: 50%;
+	width: 5.625rem;
+}
+
+.FBj26f .card-p4 img + [class*=text-] {
+	margin-top: 1rem;
+}
+
+.FBj26f .card-p4.active {
+	border-color: var(--colorTheme);
+}
+
+.FBj26f .media-p8 {
+	background-color: #f8f8f8;
+	border: 2px solid #f8f8f8;
+	border-radius: 0.625rem;
+	padding: 1rem;
+}
+
+.FBj26f .media-p8.active {
+	border-color: var(--colorTheme);
+}
+
+.FBj26f .media-p8 img {
+	width: 2.5rem;
+	margin-right: 0.75rem;
+}
+
+.FBj26f-faq .text-content-heading {
+	position: relative;
+	background-color: var(--colorTheme);
+	color: #fff;
+	padding: 0.5rem 0.75rem;
+	cursor: pointer;
+}
+
+.FBj26f-faq .text-content-heading:after {
+	position: absolute;
+	right: 0.75rem;
+	top: 50%;
+	transform: translateY(-50%);
+	font-family: "iconfont" !important;
+	content: "\e624";
+}
+
+.FBj26f-faq p {
+	padding: 0.5rem 0.75rem;
+	display: none;
+	border: 1px solid #000;
+}
+
+.FBj26f-faq.active .text-content-heading {
+	background-color: #000;
+}
+
+.FBj26f-faq.active .text-content-heading:after {
+	top: 25%;
+	transform: rotate(90deg);
+}
+
+.FBj26f-faq.active p {
+	margin-top: 0;
+	display: block;
+}
+
+.FBj26f-faq + .FBj26f-faq {
+	margin-top: 0.3125rem;
+}
+
+.FBj26f-catalog li + li {
+	margin-top: 0.7rem;
+}
+
+.FBj26f-catalog li.active a {
+	background-color: var(--colorTheme);
+	color: #fff;
+}
+
+.FBj26f-catalog a {
+	display: block;
+	padding: 9px 23px;
+	position: relative;
+	border: 1px solid #ced4da;
+	border-radius: 5px;
+	color: var(--colorBody);
+}
+
+.FBj26f-catalog a:after {
+	position: absolute;
+	right: 0.75rem;
+	top: 50%;
+	transform: translateY(-50%);
+	font-family: "iconfont" !important;
+	content: "\e624";
+}
+
+.FBj26f-catalog a:hover {
+	background-color: var(--colorTheme);
+	color: #fff;
+}
+
+@media (max-width: 768px) {
+	.FBj26f-side {
+		order: 2;
+		margin-top: 1rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

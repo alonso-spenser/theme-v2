@@ -1,0 +1,43 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} ${#strings.isEmpty(section.settings.lineText) ? '' : ' has-line section-padding-top'} section-neighbor|">
+        <div th:class="|section-title ${section.settings.textAlign}|">
+            <h3 th:class="|${section.templateId}-line-text|" th:if="${not #strings.isEmpty(section.settings.lineText)}">
+                [[${section.settings.lineText}]]
+            </h3>
+            <p th:class="|${section.templateId}-since|" th:if="${not #strings.isEmpty(section.settings.subheading)}">
+                [[${section.settings.subheading}]]
+            </p>
+            <h3 class="text-heading" th:if="${not #strings.isEmpty(section.settings.heading)}" th:utext="${section.settings.heading}"></h3>
+        </div>
+    </div>
+    <div class="slick section-neighbor">
+        <div class="slick-arrow slick-next dots" th:data-carousel-next="${ section.id }"></div>
+        <div class="slick-arrow slick-prev dots" th:data-carousel-prev="${ section.id }"></div>
+        <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+            <div class="slick-slider slick-slider-transect has-gutter"
+                th:data-carousel="${ section.id }"
+                data-effect="slide"
+                data-arrow="0"
+                th:data-column="${ #numbers.formatInteger(12 / section.settings.column, 1,'POINT') }"
+                th:data-mobile-column="${ #numbers.formatInteger(12 / section.settings.mobColumn, 1,'POINT') }"
+                data-delay="10000">
+                <div th:class="|slick-slide slick-slide-${salt.index}|" th:each="o, salt:${ section.settings.itemList }">
+                    <div th:class="|${ section.templateId }-card ${section.settings.contentAlign}|" th:with="alt = ${ not #strings.isEmpty(o.alt) ? o.alt : o.name }">
+                        <div th:class="|embed-responsive embed-responsive-1by1 ${section.settings.imgLayout}|" th:if="${not #strings.isEmpty(o.image)}">
+                            <img class="embed-responsive-item lazy" th:src="|${ o.image }!1|" th:data-lazy="${ o.image }" th:alt="${alt}">
+                        </div>
+                        <h5 class="text-subheading" th:if="${not #strings.isEmpty(o.name)}">[[${ o.name }]]</h5>
+                        <p class="text-body" th:if="${not #strings.isEmpty(o.position)}">[[${ o.position }]]</p>
+                        <p class="text-body text-content" th:utext="${o.content}" th:if="${not #strings.isEmpty(o.content)}"></p>
+                        <p class="text-star">
+                            <th:block th:each="n: ${#numbers.sequence(0, o.star - 1)}" th:if="${o.star > 0}">★</th:block>
+                            <th:block th:each="n: ${#numbers.sequence(o.star, 4)}" th:if="${o.star < 5}">☆</th:block>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

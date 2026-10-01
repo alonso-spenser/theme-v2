@@ -1,0 +1,18 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+  .section-[[${section.id}]] {
+        background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+      [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+          background-size: [[${section.settings.backgroundSize}]];
+      [/]
+  }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.collectionBackground) || not #strings.isEmpty(section.settings.collectionColor)}"]
+  .section-[[${section.id}]] .[[${section.templateId}]]-item{
+      [# th:if="${not #strings.isEmpty(section.settings.collectionBackground)}"]
+          background-color: [[${section.settings.collectionBackground}]];
+      [/]
+      [# th:if="${not #strings.isEmpty(section.settings.collectionColor)}"]
+          color: [[${section.settings.collectionColor}]];
+      [/]
+  }
+[/]

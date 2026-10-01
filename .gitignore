@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+__pycache__/
+.idea/
+
+# Generated styles and source maps. Keep handwritten CSS and templates.
+/css/**/*.css
+/section/**/section.css
+**/*.min.css
+**/*.map
+
+# Framework bundles; js/src and component section.js are source files.
+/js/base.js
+/js/base.min.js
+**/*.min.js
+
+# Locally generated verification report.
+/section/static-demo-verification.json

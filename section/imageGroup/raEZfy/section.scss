@@ -1,0 +1,68 @@
+.raEZfy-content {
+	position: absolute;
+	left: 2.5rem;
+	right: 2.5rem;
+	bottom: -100%;
+	background-color: var(--colorTheme);
+	padding: 1rem;
+	color: #fff;
+	transition: all 0.25s;
+	text-align: center;
+	z-index: 3;
+}
+
+@media (max-width: 768px) {
+	.raEZfy-content {
+		left: 1rem;
+		right: 1rem;
+	}
+}
+
+.raEZfy .slick-current .raEZfy-content {
+	opacity: 1;
+	bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+	.raEZfy .slick-current .raEZfy-content {
+		bottom: 1.5rem;
+	}
+}
+
+.raEZfy .embed-responsive .embed-responsive-item {
+	z-index: 1;
+}
+
+.raEZfy .embed-responsive:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 90%);
+	transition: all 0.25s;
+	opacity: 0;
+	z-index: 2;
+}
+
+.raEZfy .embed-responsive:hover .raEZfy-content {
+	opacity: 1;
+	bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+	.raEZfy .embed-responsive:hover .raEZfy-content {
+		bottom: 1.5rem;
+	}
+}
+
+.raEZfy .embed-responsive:hover .embed-responsive-item {
+	transform: scale(1.05);
+}
+
+.raEZfy .embed-responsive:hover:after {
+	opacity: 1;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

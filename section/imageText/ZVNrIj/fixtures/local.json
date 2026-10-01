@@ -1,0 +1,102 @@
+{
+  "section": {
+    "id": "1483997447519793153",
+    "componentKind": "section",
+    "type": "imageText",
+    "templateId": "ZVNrIj",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "12",
+      "layout": "left",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Title with button",
+      "autoPlay": "5000",
+      "iconWidth": 80,
+      "marginTop": false,
+      "mobColumn": "12",
+      "textAlign": "left",
+      "textColor": "",
+      "guidGutter": true,
+      "imageScale": "5by4",
+      "paddingTop": true,
+      "percentage": "6",
+      "wideScreen": false,
+      "contentAlign": "text-center",
+      "contentColor": "#5e0967",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 20,
+      "imageDivider": 50,
+      "marginBottom": false,
+      "sectionAlias": "图文",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "carouselNavStyle": "dark",
+      "contentTitleColor": "#ffff00",
+      "backgroundPosition": "",
+      "carouselArrowStyle": "dark",
+      "imageList": [
+        {
+          "image": "/preview-assets/images/8b.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/preview-assets/images/8r.jpg",
+          "alt": ""
+        },
+        {
+          "image": "/preview-assets/images/8g.jpg",
+          "alt": ""
+        }
+      ],
+      "contentList": [
+        {
+          "icon": "/preview-assets/images/image-with-text.jpg",
+          "title": "Saving Your Time",
+          "description": "By our advanced equipment and efficient production processes\nthe delivery time is 40% faster than other factories."
+        },
+        {
+          "icon": "/preview-assets/images/image-with-text.jpg",
+          "title": "Saving Your Cost",
+          "description": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services."
+        },
+        {
+          "icon": "/preview-assets/images/image-with-text.jpg",
+          "title": "Advantage",
+          "description": "You will save 60-80% of the cost because of our excellent production capacity and cost control.\n However, we only insist on making high-quality products."
+        }
+      ],
+      "carouselEffect": "",
+      "textWidth": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

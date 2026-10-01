@@ -1,0 +1,19 @@
+{
+  "name": "oga-theme-v2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm run css:build && npm run js:build && npm run sections:build && npm run index:build",
+    "css:build": "node css/build.mjs",
+    "css:watch": "node css/build.mjs --watch",
+    "js:build": "node js/build.mjs",
+    "js:watch": "node js/build.mjs --watch",
+    "sections:build": "node tools/check-static-demos.mjs",
+    "index:build": "node tools/build-section-index.mjs section",
+    "component:build": "node tools/build.mjs",
+    "test": "node --test tools/component-script.test.mjs tests/generate-salt.test.mjs && node --check js/base.js && node --check js/base.min.js && node tools/check-static-demos.mjs",
+    "serve": "node tools/serve.mjs"
+  },
+  "engines": {"node": ">=20"},
+  "devDependencies": {"esbuild": "^0.28.1", "sass": "^1.97.1"}
+}

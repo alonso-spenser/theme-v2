@@ -1,0 +1,90 @@
+.a2uYja .slick-slide {
+	position: relative;
+	padding-bottom: 3.75rem;
+}
+
+.a2uYja .slick-slide:hover .a2uYja-content {
+	opacity: 1;
+	bottom: 0;
+}
+
+.a2uYja .slick-slide:hover .a2uYja-content:after {
+	opacity: 1;
+}
+
+.a2uYja .slick-slide:hover .embed-responsive:after {
+	opacity: 1;
+}
+
+.a2uYja .slick-slide:hover .embed-responsive-item {
+	transform: scale(1.05);
+}
+
+.a2uYja .slick-slide:hover:after {
+	opacity: 1;
+}
+
+.a2uYja .text-content-heading {
+	text-overflow: ellipsis;
+	line-clamp: 2;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+}
+
+.a2uYja [class*="text-"] {
+	color: #fff;
+}
+
+.a2uYja .embed-responsive {
+	border-radius: 0.3125rem;
+}
+
+.a2uYja .embed-responsive:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 90%);
+	transition: all 0.25s;
+	opacity: 0;
+	z-index: 2;
+}
+
+.a2uYja-content {
+	position: absolute;
+	left: 10%;
+	right: 10%;
+	border-radius: 5px;
+	padding: 1.25rem 5.3125rem 1.25rem 1.25rem;
+	opacity: 0;
+	bottom: -3.75rem;
+	overflow: hidden;
+	z-index: 3;
+	background-color: var(--colorTheme);
+	transition: all 0.25s;
+}
+
+.a2uYja-content:after {
+	transition: all 0.25s;
+	font-family: "iconfont" !important;
+	content: "\e624";
+	position: absolute;
+	right: 1.25rem;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 0.75rem 1rem;
+	background-color: rgba(255, 255, 255, 0.3);
+	color: #fff;
+	opacity: .5;
+}
+
+.a2uYja .slick-current .a2uYja-content {
+	opacity: 1;
+	bottom: 0;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

@@ -1,0 +1,31 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div class="row row-gutter">
+            <div class="col-md-6">
+                <th:block th:each="o, salt:${ section.settings.itemList }">
+                    <h3 class="text-content-heading" th:if="${not #strings.isEmpty(o.heading)}">
+                        [[${o.heading}]]
+                    </h3>
+                    <p class="text-body" th:if="${not #strings.isEmpty(o.content)}" th:utext="${#strings.replace(o.content,'\n','<br>')}"></p>
+                </th:block>
+            </div>
+            <div class="col-md-6">
+                <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${section.settings.firstBig && not #lists.isEmpty(section.settings.imageList)}">
+                    <img class="embed-responsive-item lazy" th:src="|${ section.settings.imageList[0].image}!1|" th:data-original="${ section.settings.imageList[0].image }" th:alt="${ section.settings.imageList[0].alt }">
+                </div>
+                <div th:class="|row ${section.settings.gutter ? 'row-small-gutter' : 'no-gutters'}|">
+                    <th:block th:each="o, salt:${ section.settings.imageList }">
+                        <div th:class="|col-md-${section.settings.column} col-${section.settings.mobColumn}|" th:if="${(section.settings.firstBig && salt.index > 0) || !section.settings.firstBig}">
+                            <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|"  th:if="${not #strings.isEmpty(o.image)}">
+                                <img class="embed-responsive-item lazy" th:src="|${ o.image}!1|" th:data-original="${ o.image }" th:alt="${ o.alt }">
+                            </div>
+                        </div>
+                    </th:block>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

@@ -1,0 +1,94 @@
+{
+  "section": {
+    "id": "1706339922455719938",
+    "componentKind": "page-section",
+    "type": "productCollectionPage",
+    "templateId": "rQFBbe",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "3",
+      "h1Wide": false,
+      "layout": "tile",
+      "h1Color": "",
+      "h1Layout": "left",
+      "marginTop": false,
+      "mobColumn": "6",
+      "textAlign": "text-center",
+      "textColor": "",
+      "imageScale": "1by1",
+      "paddingTop": true,
+      "wideScreen": false,
+      "enableCrumb": true,
+      "h1Background": "",
+      "marginBottom": false,
+      "sectionAlias": "产品集合页 ",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "cardBackground": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": ""
+    },
+    "bindings": {
+      "collectionList": {
+        "sourceType": "productCollection",
+        "ids": []
+      }
+    },
+    "data": {
+      "collectionList": [
+        {
+          "title": "1 Example Collection Title",
+          "seoUrl": "",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review.",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+        },
+        {
+          "title": "2 Example Collection Title",
+          "seoUrl": "",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review.",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+        },
+        {
+          "title": "3 Example Collection Title",
+          "seoUrl": "",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review.",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+        },
+        {
+          "title": "4 Example Collection Title",
+          "seoUrl": "",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review.",
+          "coverImage": "https://theme.fomillesite.com/img/placeholder.jpg"
+        }
+      ]
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "lang": "英语",
+    "heading": "PRODUCTS",
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

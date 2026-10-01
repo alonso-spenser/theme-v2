@@ -1,0 +1,26 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid no-gutters' : ''} embed-responsive embed-responsive-video|" th:if="${ not #strings.isEmpty(section.settings.video) }">
+        <video
+            th:autoplay="${ section.settings.autoPlay == 'auto'  }"
+            th:controls="${ section.settings.control  }"
+            th:loop="${ section.settings.loop  }"
+            th:muted="${ section.settings.muted  }"
+            th:preload="${ section.settings.preload }"
+            th:poster="${section.settings.poster}"
+            th:class="${section.settings.autoPlay == 'auto' ? 'active' : ''}"
+        >
+            <source th:src="${section.settings.video}">
+        </video>
+        <div th:class="|embed-responsive-item ${ section.templateId }-mask|" data-play="action" th:if="${ section.settings.autoPlay == 'manual' }">
+            <img th:if="${ not #strings.isEmpty(section.settings.poster) }" class="embed-responsive-item lazy" th:src="|${ section.settings.poster}!1|" th:data-original="|${ section.settings.poster}!full|">
+            <div class="play-button">
+                <span class="filled-circle"></span>
+                <span class="stroke-circle"></span>
+                <span class="triangle custom-icon-triangle"></span>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

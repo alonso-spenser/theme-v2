@@ -1,0 +1,47 @@
+.U36nyq .card {
+	border-radius: 0.5rem;
+}
+
+.U36nyq .card-body {
+	padding: 2rem 2.5rem;
+}
+
+@media (max-width: 768px) {
+	.U36nyq .card-body {
+		padding: 2rem;
+	}
+}
+
+.U36nyq .text-body {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+}
+
+.U36nyq-main {
+	position: relative;
+	z-index: 0;
+	padding-bottom: 7.5rem;
+}
+
+.U36nyq-main.has-button {
+	padding-bottom: 5rem;
+}
+
+.U36nyq-main:after {
+	content: "";
+	position: absolute;
+	background-image: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%221440%22%20height%3D%22560%22%20viewBox%3D%220%200%201440%20560%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M0%200H1440V452.164C1440%20452.164%201116.5%20532.789%20734.5%20552.609C414%20569.238%200%20552.609%200%20552.609L0%200Z%22%20fill%3D%22url(%23paint0_linear)%22%2F%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22paint0_linear%22%20x1%3D%22921%22%20y1%3D%22867.5%22%20x2%3D%22791.177%22%20y2%3D%22329.012%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%0A%3Cstop%20stop-color%3D%22%23DFDBD7%22%2F%3E%0A%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23F2F1EF%22%20stop-opacity%3D%220%22%2F%3E%0A%3C%2FlinearGradient%3E%0A%3C%2Fdefs%3E%0A%3C%2Fsvg%3E");
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	height: 100%;
+	background-color: transparent;
+	z-index: -1;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

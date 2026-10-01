@@ -1,0 +1,46 @@
+{
+  "section": {
+    "id": "1442033656398581761",
+    "componentKind": "section",
+    "type": "iframe",
+    "templateId": "j6umue",
+    "runtimeVersion": 2,
+    "settings": {
+      "url": "https://tech.163.com",
+      "ratio": 55,
+      "marginTop": false,
+      "wideScreen": true,
+      "mobileRatio": 0,
+      "marginBottom": false,
+      "sectionAlias": "嵌入网页",
+      "paddingTop": "",
+      "paddingBottom": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <h3 class="text-heading" th:if="${ not #strings.isEmpty(section.settings.heading) }">
+            [[${ section.settings.heading }]]
+        </h3>
+        <div class="text-list" th:if="${not #strings.isEmpty(section.settings.subheading)}" th:with="textLines = ${#strings.listSplit(section.settings.subheading,'\n')}">
+            <th:block th:each="textLine,saltLine:${textLines}">
+                <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+            </th:block>
+        </div>
+        <div class="collapse text-list" th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+            <th:block th:each="textLine,saltLine:${textLines}">
+                <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+            </th:block>
+        </div>
+        <div class="MbmYVr-more show text-more">
+            <label class="text-label">
+                [[${lang.more}]]
+            </label>
+            <label class="text-label">
+                [[${lang.hide}]]
+            </label>
+        </div>
+    </div>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

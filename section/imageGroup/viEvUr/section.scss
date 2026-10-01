@@ -1,0 +1,149 @@
+.viEvUr-grid li {
+	float: left;
+	margin: 0 1px 1px 0;
+	width: calc(33.3333333333% - 1px);
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f5f5f5;
+	transition: all 0.25s;
+	cursor: pointer;
+}
+
+.viEvUr-grid li:nth-child(-n+3) {
+	height: calc(50% - 1px);
+}
+
+.viEvUr-grid li h3 {
+	font-family: var(--typeContentHeading);
+	font-size: calc(var(--fontSizeContentHeading) * 1px);
+}
+
+.viEvUr-grid li img {
+	width: 3.75rem;
+	margin-bottom: 0.5rem;
+}
+
+.viEvUr-grid li img.active {
+	display: none;
+}
+
+.viEvUr-grid li.active h3 {
+	color: var(--colorTheme);
+}
+
+.viEvUr-grid li.active img:not(.active) {
+	display: none;
+}
+
+.viEvUr-grid li.active img.active {
+	display: inline-block;
+}
+
+.viEvUr-grid.four li {
+	width: calc(50% - 1px);
+}
+
+.viEvUr-grid.nine li {
+	width: calc(33.3333333333% - 1px);
+	height: 33.3333333333%;
+}
+
+.viEvUr-grid.nine li:nth-child(-n+6) {
+	height: calc(33.3333333333% - 1px);
+}
+
+@media (max-width: 768px) {
+	.viEvUr-grid {
+		margin-bottom: 1px;
+	}
+
+	.viEvUr-grid li {
+		padding: 1rem 0;
+		height: 50%;
+	}
+}
+
+.viEvUr-grid-content {
+	overflow: hidden;
+}
+
+.viEvUr-grid-content:not(.active) {
+	display: none;
+}
+
+.viEvUr-grid-content h3 {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	bottom: 0;
+	line-height: 3;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.viEvUr-grid-content-mask {
+	z-index: 3;
+	padding: 3rem;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	bottom: -110%;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	transition: all 0.25s;
+}
+
+.viEvUr-grid-content-mask h2 {
+	font-size: 1.5rem;
+}
+
+.viEvUr-grid-content-mask .text-btn {
+	margin-top: 1rem;
+}
+
+.viEvUr-grid-content-mask .text-body {
+	color: #fff;
+}
+
+@media (max-width: 768px) {
+	.viEvUr-grid-content-mask {
+		padding: 1.5rem;
+	}
+
+	.viEvUr-grid-content-mask h2 {
+		font-size: 1rem;
+	}
+}
+
+.viEvUr-grid-content:hover .viEvUr-grid-content-mask {
+	bottom: 0;
+}
+
+@media (max-width: 768px) {
+	.viEvUr-grid {
+		order: 2;
+		overflow-x: auto;
+		text-wrap: normal;
+		display: flex;
+		white-space: nowrap;
+		margin-top: 1px;
+	}
+
+	.viEvUr-grid li {
+		float: none;
+		margin: 0 1px 0 0;
+		height: auto !important;
+		width: auto !important;
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+	}
+
+	.viEvUr-grid li h3 {
+		font-size: 0.875rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

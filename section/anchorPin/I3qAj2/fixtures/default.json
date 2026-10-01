@@ -1,0 +1,39 @@
+{
+  "section": {
+    "id": "1511554227116187649",
+    "componentKind": "section",
+    "type": "anchorPin",
+    "templateId": "I3qAj2",
+    "runtimeVersion": 2,
+    "settings": {
+      "title": "Menu name",
+      "sectionAlias": "锚钉"
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

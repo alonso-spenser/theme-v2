@@ -1,0 +1,221 @@
+<section th:class="|section ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div class="Mjmyyi-fluid Mjmyyi-margin">
+        <div class="Mjmyyi-fluid-content">
+            <div class="Mjmyyi-panel active" data-panel="login">
+                <a href="/" class="text-logo">
+                    <img class="Mjmyyi-logo" th:alt="${site.company}" th:src="${section.settings.logo}" th:if="${not #strings.isEmpty(section.settings.logo)}">
+                </a>
+                <h1 class="text-heading text-neighbor">
+                    [[${lang.loginTitle}]]
+                </h1>
+                <form class="form" data-form="login" novalidate>
+                    <div class="form-group form-material">
+                        <label class="form-material-label active">
+                            [[${lang.loginAccount}]]
+                        </label>
+                        <input class="form-control" placeholder="" th:data-invalid="${lang.loginAccountMsg}" name="account" type="email" required >
+                    </div>
+                    <div class="form-group form-material">
+                        <label class="form-material-label active">
+                            [[${lang.loginPassword}]]
+                        </label>
+                        <input class="form-control" placeholder="" th:data-invalid="${lang.loginPasswordMsg}" name="password" type="password" required >
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-block btn-danger text-capitalize">
+                            [[${lang.loginButton}]]
+                        </button>
+                    </div>
+                </form>
+                <div class="d-flex justify-content-between m-t-75">
+                    <div class="btn-link" data-action="register">
+                        [[${lang.createAnAccount}]]
+                    </div>
+                    <div class="text-secondary cursor-pointer" data-action="forget">
+                        [[${lang.forgotten}]]
+                    </div>
+                </div>
+                <p class="text-link m-t-75" th:if="${hasGoogleAuth == 0}">
+                    [[${lang.orLogInWith}]]
+                    <img class="login-with-google" src="https://css.6fox.com/social/google-17710f7a.svg" th:alt="${lang.useGoogleLogin}">
+                </p>
+                <p class="text-secondary text-tips">
+                    [[${lang.tips}]]
+                </p>
+            </div>
+            <div class="Mjmyyi-panel" data-panel="register">
+                <a href="/" class="text-logo">
+                    <img class="Mjmyyi-logo" th:alt="${site.company}" th:src="${section.settings.logo}" th:if="${not #strings.isEmpty(section.settings.logo)}">
+                </a>
+                <h1 class="text-heading text-neighbor">
+                    [[${lang.registerTitle}]]
+                </h1>
+                <form class="form" data-form="register" novalidate>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group form-material">
+                                <label class="form-material-label active">
+                                    [[${lang.firstName}]]
+                                </label>
+                                <input class="form-control" placeholder="" name="firstName" type="text" required >
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group form-material">
+                                <label class="form-material-label active">
+                                    [[${lang.lastName}]]
+                                </label>
+                                <input class="form-control" placeholder="" name="lastName" type="text" required >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-material">
+                        <label class="form-material-label active">
+                            [[${lang.loginAccount}]]
+                        </label>
+                        <input class="form-control" placeholder="" name="account" type="email" required >
+                    </div>
+                    <div class="form-group form-material">
+                        <label class="form-material-label active">
+                            [[${lang.loginPassword}]]
+                        </label>
+                        <input class="form-control" placeholder="" name="password" type="password" required >
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="legalTerms" required >
+                            <label class="form-check-label" for="legalPromotion">
+                                [[${lang.iAgree}]] &nbsp;
+                                <a data-v-7387d66f="" href="/legal/privacy-policy" target="_blank">
+                                    [[${lang.privacyPolicy}]]
+                                </a> &nbsp;and&nbsp;
+                                <a data-v-7387d66f="" href="/legal/terms-of-service" target="_blank">
+                                    [[${lang.termsOfService}]]
+                                </a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="legalPromotion" required>
+                            <label class="form-check-label" for="legalPromotion">
+                                [[${lang.receiveLatest}]]
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-block btn-danger text-capitalize">
+                            [[${lang.submit}]]
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-block btn-outline-secondary text-capitalize" data-action="login">
+                            [[${lang.backToLogIn}]]
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="Mjmyyi-panel" data-panel="forget">
+                <a href="/" class="text-logo">
+                    <img class="Mjmyyi-logo" th:alt="${site.company}" th:src="${section.settings.logo}" th:if="${not #strings.isEmpty(section.settings.logo)}">
+                </a>
+                <h1 class="text-heading text-neighbor">
+                    [[${lang.forgetTitle}]]
+                </h1>
+                <form class="form" data-form="forget" novalidate>
+                    <div class="collapse show" id="forgetOne">
+                        <div class="form-group form-material">
+                            <label class="form-material-label active">
+                                [[${lang.loginAccount}]]
+                            </label>
+                            <input class="form-control" placeholder="" th:data-invalid="${lang.loginAccountMsg}" name="account" type="email" required >
+                        </div>
+                        <div class="form-group form-material input-group">
+                            <input type="text" name="code" class="form-control" placeholder="" required>
+                            <label class="form-material-label active">
+                                [[${lang.code}]]
+                            </label>
+                            <div class="d-flex">
+                                <button class="btn" type="button" th:data-label="${lang.getACode}" id="getForgetCode">
+                                    [[${lang.getACode}]]
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="forgetNext" class="btn btn-block btn-primary text-capitalize">
+                                [[${lang.next}]]
+                            </button>
+                        </div>
+                    </div>
+                    <div class="collapse" id="forgetTwo">
+                        <div class="form-group form-material">
+                            <label class="form-material-label active">
+                                [[${lang.loginPassword}]]
+                            </label>
+                            <input class="form-control" placeholder="" th:data-invalid="${lang.loginPasswordMsg}" name="password" type="text" required >
+                            <div class="invalid-feedback" id="passwordInvalid"></div>
+                        </div>
+                        <div class="form-group form-material">
+                            <label class="form-material-label active">
+                                [[${lang.confirmPassword}]]
+                            </label>
+                            <input class="form-control" placeholder="" th:data-invalid="${lang.loginPasswordMsg}" name="confirmPassword" type="password" required >
+                            <div class="invalid-feedback" id="confirmPasswordInvalid"></div>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="submitChangePassword" class="btn btn-block btn-danger text-capitalize">
+                                [[${lang.submit}]]
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="d-flex justify-content-between m-t-75">
+                    <div class="btn-link" data-action="login">
+                        [[${lang.backToLogIn}]]
+                    </div>
+                </div>
+                <p class="text-link m-t-75" th:if="${hasGoogleAuth == 0}">
+                    [[${lang.orLogInWith}]]
+                    <img class="login-with-google" src="https://css.6fox.com/social/google-17710f7a.svg" th:alt="${lang.useGoogleLogin}">
+                </p>
+                <p class="text-secondary text-tips">
+                    [[${lang.tips}]]
+                </p>
+            </div>
+            <div class="slick" th:if="${not #lists.isEmpty(section.settings.imageList)}" th:with="hasDot = ${ #lists.size(section.settings.imageList) > 1 }">
+                <div class="slick-slider arrow-invisible"
+                     th:data-carousel="${section.id}"
+                     data-effect="fade"
+                     th:data-dots="${hasDot ? 1 : 0}"
+                     th:data-arrow="${hasDot ? 1 : 0}"
+                     data-column="1"
+                     data-mobile-column="1"
+                     data-delay="5000"
+                >
+                    <div th:class="|slick-slide slick-slide-${salt.index}|" th:each="o, salt:${ section.settings.imageList }">
+                        <a th:href="${ o.link }" th:if="${not #strings.isEmpty(o.link) && not #strings.isEmpty(o.image)}">
+                            <img class="lazy" th:src="|${ o.image }!1|" th:data-lazy="${ o.image }" th:alt="${ o.alt }">
+                        </a>
+                        <img class="lazy" th:src="|${ o.image }!1|" th:data-lazy="${ o.image }" th:alt="${ o.alt }"  th:if="${ #strings.isEmpty(o.link) && not #strings.isEmpty(o.image)}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Mjmyyi-margin Mjmyyi-copyright">
+        <p class="text-secondary">
+            Copyright © 2023 [[${site.company}]]. All Rights Reserved.
+        </p>
+        <p>
+            <a class="text-body" href="/legal/privacy-policy" target="_blank">
+                [[${lang.privacyPolicy}]]
+            </a>
+            <a class="text-body" href="/legal/terms-of-service" target="_blank">
+                [[${lang.termsOfService}]]
+            </a>
+        </p>
+    </div>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

@@ -1,0 +1,22 @@
+.jyAvIr .card-body {
+	text-align: center;
+	padding: 2rem;
+}
+
+.jyAvIr .text-content-heading {
+	font-weight: bold;
+}
+
+.jyAvIr [class*="text-"] + .text-link {
+	margin-top: 1.25rem;
+}
+
+.jyAvIr img {
+	height: 4.5rem;
+}
+
+.jyAvIr img + [class*="text-"] {
+	margin-top: 1.75rem;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

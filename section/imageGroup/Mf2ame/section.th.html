@@ -1,0 +1,45 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+	    <div class="row row-gutter">
+		    <div th:class="|col-md-${section.settings.firstColumn == null ? 6 : section.settings.firstColumn} col-12 ${ section.templateId }-heading|" th:if="${not #strings.isEmpty(section.settings.subheading) || not #strings.isEmpty(section.settings.heading) || not #strings.isEmpty(section.settings.buttonLink) || not #strings.isEmpty(section.settings.buttonLabel)}">
+			    <label class="text-label" th:if="${not #strings.isEmpty(section.settings.subheading)}">[[${ section.settings.subheading }]]</label>
+			    <h3 class="text-heading" th:if="${not #strings.isEmpty(section.settings.heading)}">[[${ section.settings.heading }]]</h3>
+			    <div class="text-body" th:if="${not #strings.isEmpty(section.settings.content)}" th:utext="${section.settings.content}"></div>
+			    <a class="text-link" th:href="${section.settings.buttonLink}" th:if="${not #strings.isEmpty(section.settings.buttonLink) && not #strings.isEmpty(section.settings.buttonLabel)}">[[${section.settings.buttonLabel}]] <small class="ic-right"></small> </a>
+		    </div>
+		    <div th:class="|col-md-${section.settings.column} col-${section.settings.mobColumn}|" th:each="o, salt:${section.settings.itemList}">
+			    <div th:class="|card ${o.active ? 'active' : ''}|" th:if="${section.settings.cardStyle != 'none'}">
+				    <div class="card-body">
+				        <div th:class="${#strings.isEmpty(section.settings.subIconAlign) ? 'text-center' : section.settings.subIconAlign}">
+                            <div class="embed-responsive embed-responsive-1by1">
+                                <img class="embed-responsive-item" th:src="${ not #strings.isEmpty(o.icon) ? o.icon : o.iconHover }" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading }">
+                                <img class="embed-responsive-item" th:src="${ not #strings.isEmpty(o.iconHover) ? o.iconHover : o.icon }" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading }">
+                            </div>
+					    </div>
+					    <h5 th:class="|text-content-heading ${#strings.isEmpty(section.settings.subHeadingAlign) ? 'text-center' : section.settings.subHeadingAlign}|" th:if="${not #strings.isEmpty(o.subHeading)}">[[${o.subHeading}]]</h5>
+					    <p th:class="|text-body ${#strings.isEmpty(section.settings.subContactAlign) ? 'text-center' : section.settings.subContactAlign}|" th:if="${not #strings.isEmpty(o.subContent)}">[[${o.subContent}]]</p>
+					    <p th:class="|text-link ${#strings.isEmpty(section.settings.subButtonAlign) ? 'text-center' : section.settings.subButtonAlign}|">
+                            <a th:href="${o.link}" th:if="${not #strings.isEmpty(o.link) && not #strings.isEmpty(section.settings.more)}">[[${section.settings.more}]] <i class="ic-right"></i> </a>
+					    </p>
+				    </div>
+			    </div>
+			    <div th:class="|${o.active ? 'active' : ''}|" th:if="${section.settings.cardStyle == 'none'}">
+                    <div th:class="${#strings.isEmpty(section.settings.subIconAlign) ? 'text-center' : section.settings.subIconAlign}">
+                        <div class="embed-responsive embed-responsive-1by1">
+                            <img class="embed-responsive-item" th:src="${ not #strings.isEmpty(o.icon) ? o.icon : o.iconHover }" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading }">
+                            <img class="embed-responsive-item" th:src="${ not #strings.isEmpty(o.iconHover) ? o.iconHover : o.icon }" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading }">
+                        </div>
+                    </div>
+                    <h5 th:class="|text-content-heading ${#strings.isEmpty(section.settings.subHeadingAlign) ? 'text-center' : section.settings.subHeadingAlign}|" th:if="${not #strings.isEmpty(o.subHeading)}">[[${o.subHeading}]]</h5>
+                    <p th:class="|text-body ${#strings.isEmpty(section.settings.subContactAlign) ? 'text-center' : section.settings.subContactAlign}|" th:if="${not #strings.isEmpty(o.subContent)}">[[${o.subContent}]]</p>
+                    <p th:class="|text-link ${#strings.isEmpty(section.settings.subButtonAlign) ? 'text-center' : section.settings.subButtonAlign}|">
+                        <a th:href="${o.link}" th:if="${not #strings.isEmpty(o.link) && not #strings.isEmpty(section.settings.more)}">[[${section.settings.more}]] <i class="ic-right"></i> </a>
+                    </p>
+			    </div>
+		    </div>
+	    </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

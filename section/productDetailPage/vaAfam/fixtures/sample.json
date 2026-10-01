@@ -1,0 +1,1188 @@
+{
+  "section": {
+    "id": "1648724173184958465",
+    "componentKind": "page-section",
+    "type": "productDetailPage",
+    "templateId": "vaAfam",
+    "runtimeVersion": 2,
+    "settings": {
+      "banner": "invisible",
+      "h1Wide": false,
+      "h1Color": "",
+      "specKey": "#838311",
+      "descLine": true,
+      "buyButton": "btn-outline-danger",
+      "descColor": "#ffffff",
+      "h1Visible": true,
+      "marginTop": false,
+      "skuColumn": "2",
+      "specTitle": "#ffff00",
+      "specValue": "#565606",
+      "imageScale": "1by1",
+      "lineHeight": 0,
+      "paddingTop": true,
+      "paramColor": "",
+      "skuElement": "2b",
+      "specColumn": "4",
+      "borderColor": "",
+      "descTabWide": true,
+      "enableCrumb": true,
+      "enquiryLink": "",
+      "imageBorder": "",
+      "imageLayout": "left",
+      "marketPrice": false,
+      "specHeading": "#cbcb39",
+      "descTabAlign": "center",
+      "descTabColor": "#ffff00",
+      "enquiryLabel": "Contact US",
+      "enquiryStyle": "btn-primary",
+      "imagePercent": 5,
+      "marginBottom": false,
+      "paramVisible": "visible",
+      "priceElement": false,
+      "relatedAlign": "text-center",
+      "relatedImage": true,
+      "relatedPrice": true,
+      "relatedScale": "1by1",
+      "relatedStyle": "tile",
+      "sectionAlias": "产品详情页",
+      "skuMobColumn": "3",
+      "gradientAngle": 0,
+      "h1ColorSticky": "",
+      "paddingBottom": true,
+      "relatedColumn": "4",
+      "socialElement": "visible",
+      "specMobColumn": "6",
+      "summarySymbol": "list-demical",
+      "backgroundSize": "",
+      "descBackground": "#000000",
+      "goodsNameColor": "#ff0000",
+      "relatedContent": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "relatedHeading": "Related products",
+      "summaryVisible": "visible",
+      "attachmentLabel": "User Manual",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "neighborElement": true,
+      "relatedQuantity": 4,
+      "relatedSubtitle": true,
+      "subtitleVisible": true,
+      "backgroundRepeat": "",
+      "carouselAutoPlay": "5000",
+      "carouselNavStyle": "dark",
+      "gradientEndColor": "#ffff00",
+      "relatedMobColumn": "12",
+      "descTabBackground": "#ff0000",
+      "relatedSubheading": "Subheading",
+      "backgroundPosition": "",
+      "carouselArrowStyle": "dark",
+      "goodsSubtitleColor": "#dc635e",
+      "gradientStartColor": "#ff0000",
+      "h1BackgroundSticky": "",
+      "relatedContentColor": "green",
+      "relatedHeadingAlign": "center",
+      "relatedHeadingColor": "blue",
+      "relatedSubheadingColor": "red",
+      "enquiryTips": "For product pricing, customization, or other inquiries:",
+      "enquiryTipStyle": "danger",
+      "enquiryTipSize": 20,
+      "descTabShadow": true,
+      "linkColor": "",
+      "linkActiveColor": "",
+      "lineColor": "",
+      "paramPaddingTop": true,
+      "paramPaddingBottom": true,
+      "relatedWide": false,
+      "relateMobColumn": "12",
+      "layoutGroup": [
+        {
+          "moduleName": "Overview",
+          "moduleType": "info",
+          "moduleBackground": "rgb(255,241,241)",
+          "moduleMarginTop": false,
+          "moduleMarginBottom": false,
+          "modulePaddingTop": true,
+          "modulePaddingBottom": true,
+          "moduleWide": false
+        },
+        {
+          "moduleName": "Specification",
+          "moduleType": "spec",
+          "moduleBackground": "#a60f0f",
+          "moduleMarginTop": false,
+          "moduleMarginBottom": false,
+          "modulePaddingTop": true,
+          "modulePaddingBottom": true,
+          "moduleWide": false
+        },
+        {
+          "moduleName": "Description ",
+          "moduleType": "description",
+          "moduleBackground": "#e8b0b0",
+          "moduleMarginTop": false,
+          "moduleMarginBottom": false,
+          "modulePaddingTop": false,
+          "modulePaddingBottom": true,
+          "moduleWide": true
+        },
+        {
+          "moduleName": "Related products",
+          "moduleType": "related",
+          "moduleBackground": "#e8bdf6",
+          "moduleMarginTop": false,
+          "moduleMarginBottom": false,
+          "modulePaddingTop": true,
+          "modulePaddingBottom": true,
+          "moduleWide": true
+        }
+      ],
+      "specLayout": "",
+      "relatedTime": "",
+      "wideScreen": "",
+      "contentColor": ""
+    },
+    "bindings": {},
+    "data": {
+      "page": {
+        "seoH1": "H1 UHF Token Anti Metal Tag For Patrol System",
+        "summaryList": [
+          "The new standard of battery-powered generators",
+          "Charge from 0%-80% within 1 hour",
+          "6x AC Outlets (Total 1800W) & 1260Wh capacity",
+          "Fast charge via solar and car",
+          "Power 13 devices simultaneously"
+        ],
+        "source": "",
+        "visibilityTime": 1634643382402,
+        "linkList": [
+          {
+            "id": "1451099912116252673",
+            "linkType": "",
+            "region": "",
+            "sortIndex": 1,
+            "spuId": "1450424983121268737",
+            "title": "BUY ON AMAZON",
+            "url": "https://www.z.cn"
+          },
+          {
+            "id": "1451099912137224193",
+            "linkType": "",
+            "region": "",
+            "sortIndex": 2,
+            "spuId": "1450424983121268737",
+            "title": "BUY ON EABY",
+            "url": "https://www.ebay.com"
+          },
+          {
+            "id": "1451099912149807106",
+            "linkType": "",
+            "region": "",
+            "sortIndex": 3,
+            "spuId": "1450424983121268737",
+            "title": "BUY ON Shopee",
+            "url": "https://www.shoppe.com"
+          }
+        ],
+        "infoType": 2,
+        "coverImage": "https://css.11af.com/img/placeholder.jpg",
+        "id": "1450425587839242241",
+        "state": 0,
+        "countUnit": "",
+        "author": "1448162503883902977",
+        "seoDescription": "China UHF Token Anti Metal Tag For Patrol System with High-Quality, Leading UHF Token Anti Metal Tag For Patrol System Manufacturers & Suppliers, find UHF Token Anti Metal Tag For Patrol System Factory & Exporters.",
+        "specList": [
+          {
+            "leaf": 1,
+            "key": "BATTERY INFO",
+            "value": "",
+            "param": 1,
+            "header": 1,
+            "digit": 1
+          },
+          {
+            "leaf": 0,
+            "key": "Capacity",
+            "value": "70Ah/ 43.2V DC(3024Wh)",
+            "param": 1,
+            "header": 1,
+            "digit": 1
+          },
+          {
+            "leaf": 0,
+            "key": "Cell Chemistry",
+            "value": "Lithium-ion Battery",
+            "param": 1,
+            "header": 1,
+            "digit": 1
+          },
+          {
+            "leaf": 1,
+            "key": "PORTS",
+            "value": "",
+            "param": 1,
+            "header": 1,
+            "digit": 1
+          },
+          {
+            "leaf": 0,
+            "key": "4x AC Output",
+            "value": "120V~ 60Hz 20A Max",
+            "param": 1,
+            "header": 1,
+            "digit": 1
+          },
+          {
+            "leaf": 0,
+            "key": "2x USB-C Output",
+            "value": "100W Max, 5V⎓3A, 9V⎓3A, 12V⎓3A, 15V⎓3A, 20V⎓5A",
+            "param": 1,
+            "header": 1,
+            "digit": 1
+          },
+          {
+            "leaf": 0,
+            "key": "AC Input",
+            "value": "120V, 60Hz, 15A Max",
+            "param": 1,
+            "header": 1,
+            "digit": 1
+          },
+          {
+            "leaf": 1,
+            "key": "GENERAL",
+            "value": "",
+            "param": 1,
+            "header": 1,
+            "digit": 1
+          },
+          {
+            "leaf": 0,
+            "key": "Weight",
+            "value": "63.93 lbs/ About 29 kg",
+            "param": 1,
+            "header": 1,
+            "digit": 1
+          },
+          {
+            "leaf": 0,
+            "key": "Warranty",
+            "value": "(3+2) Years",
+            "param": 1,
+            "header": 1,
+            "digit": 1
+          },
+          {
+            "leaf": 0,
+            "key": "Dimensions (LxWxD)",
+            "value": "18.6 x 14.1 x 14.7 in/ 47.3 x 35.94 x 37.36 cm",
+            "param": 1,
+            "header": 1,
+            "digit": 1
+          },
+          {
+            "leaf": 0,
+            "key": "Operating Usage Temperature",
+            "value": "-20~40 °C (-4~104 ℉)",
+            "param": 1,
+            "header": 1,
+            "digit": 1
+          }
+        ],
+        "specGroup": [
+          {
+            "heading": {
+              "leaf": 1,
+              "key": "BATTERY INFO",
+              "value": "",
+              "param": 1,
+              "header": 1,
+              "digit": 1
+            },
+            "subList": [
+              {
+                "leaf": 0,
+                "key": "Capacity",
+                "value": "70Ah/ 43.2V DC(3024Wh)",
+                "param": 1,
+                "header": 1,
+                "digit": 1
+              },
+              {
+                "leaf": 0,
+                "key": "Cell Chemistry",
+                "value": "Lithium-ion Battery",
+                "param": 1,
+                "header": 1,
+                "digit": 1
+              }
+            ]
+          },
+          {
+            "heading": {
+              "leaf": 1,
+              "key": "PORTS",
+              "value": "",
+              "param": 1,
+              "header": 1,
+              "digit": 1
+            },
+            "subList": [
+              {
+                "leaf": 0,
+                "key": "4x AC Output",
+                "value": "120V~ 60Hz 20A Max",
+                "param": 1,
+                "header": 1,
+                "digit": 1
+              },
+              {
+                "leaf": 0,
+                "key": "2x USB-C Output",
+                "value": "100W Max, 5V⎓3A, 9V⎓3A, 12V⎓3A, 15V⎓3A, 20V⎓5A",
+                "param": 1,
+                "header": 1,
+                "digit": 1
+              },
+              {
+                "leaf": 0,
+                "key": "AC Input",
+                "value": "120V, 60Hz, 15A Max",
+                "param": 1,
+                "header": 1,
+                "digit": 1
+              }
+            ]
+          },
+          {
+            "heading": {
+              "leaf": 1,
+              "key": "GENERAL",
+              "value": "",
+              "param": 1,
+              "header": 1,
+              "digit": 1
+            },
+            "subList": [
+              {
+                "leaf": 0,
+                "key": "Weight",
+                "value": "63.93 lbs/ About 29 kg",
+                "param": 1,
+                "header": 1,
+                "digit": 1
+              },
+              {
+                "leaf": 0,
+                "key": "Warranty",
+                "value": "(3+2) Years",
+                "param": 1,
+                "header": 1,
+                "digit": 1
+              },
+              {
+                "leaf": 0,
+                "key": "Dimensions (LxWxD)",
+                "value": "18.6 x 14.1 x 14.7 in/ 47.3 x 35.94 x 37.36 cm",
+                "param": 1,
+                "header": 1,
+                "digit": 1
+              },
+              {
+                "leaf": 0,
+                "key": "Operating Usage Temperature",
+                "value": "-20~40 °C (-4~104 ℉)",
+                "param": 1,
+                "header": 1,
+                "digit": 1
+              }
+            ]
+          }
+        ],
+        "coverVideo": "https://file.11af.com/1648638610780069889/video/1668878861179944961.mp4?autoplay=1&loop=1",
+        "relevance": {
+          "next": {
+            "id": "1450272625347219457",
+            "createTime": 1634606913275,
+            "coverImage": "https://ntp.fomille.site/bsg-i.nbxc.com/product/85/ba/16/2ae2ab0cde0a56738c1d124bcd.jpg",
+            "coverVideo": "",
+            "seoUrl": "rfid-employee-card-smart-access-control",
+            "subtitle": "Durable police id card 1 Card Size 85 5x 54 x 0 84mm or customized 2 Thickness 0 76 0 84mm or on demand 3 Usage 10 years 4 Material PVC PS ABS 5 id card chip TK4100 EM4200 EM 4100 EM4102 6 Function Only read 7 Read distance Around 2 10cm 8 Storage...",
+            "title": "RFID employee card smart access control",
+            "minPrice": 0,
+            "maxPrice": 0,
+            "sales": 0,
+            "skuCount": 0
+          },
+          "previous": {
+            "id": "1450272625347219457",
+            "createTime": 1634606913275,
+            "coverImage": "https://ntp.fomille.site/bsg-i.nbxc.com/product/85/ba/16/2ae2ab0cde0a56738c1d124bcd.jpg",
+            "coverVideo": "",
+            "seoUrl": "rfid-employee-card-smart-access-control",
+            "subtitle": "Durable police id card 1 Card Size 85 5x 54 x 0 84mm or customized 2 Thickness 0 76 0 84mm or on demand 3 Usage 10 years 4 Material PVC PS ABS 5 id card chip TK4100 EM4200 EM 4100 EM4102 6 Function Only read 7 Read distance Around 2 10cm 8 Storage...",
+            "title": "RFID employee card smart access control",
+            "minPrice": 0,
+            "maxPrice": 0,
+            "sales": 0,
+            "skuCount": 0
+          },
+          "neighborList": [
+            {
+              "id": "1450272625347219457",
+              "createTime": 1634606913275,
+              "coverImage": "https://ntp.fomille.site/bsg-i.nbxc.com/product/85/ba/16/2ae2ab0cde0a56738c1d124bcd.jpg",
+              "coverVideo": "",
+              "seoUrl": "rfid-employee-card-smart-access-control",
+              "subtitle": "Durable police id card 1 Card Size 85 5x 54 x 0 84mm or customized 2 Thickness 0 76 0 84mm or on demand 3 Usage 10 years 4 Material PVC PS ABS 5 id card chip TK4100 EM4200 EM 4100 EM4102 6 Function Only read 7 Read distance Around 2 10cm 8 Storage...",
+              "title": "RFID employee card smart access control",
+              "minPrice": 0,
+              "maxPrice": 0,
+              "sales": 0,
+              "skuCount": 0
+            },
+            {
+              "id": "1450272653675548673",
+              "createTime": 1634606920034,
+              "coverImage": "https://ntp.fomille.site/bsg-i.nbxc.com/product/f2/1f/9b/fe813020bf66a352e91a781d06.jpg",
+              "coverVideo": "",
+              "seoUrl": "contactless-em4200-125khz-t5557-proximity-rfid-card",
+              "subtitle": "Product Description Custom printing 125KHz LF RFID T5577 blank card with 3M467 adhesive PET PVC smart White Card Smart Cards include contactless IC card Contact IC card and hybrid chip cards for various fields such as Transportation Management Time...",
+              "title": "Contactless em4200 125khz t5557 proximity rfid card",
+              "minPrice": 0,
+              "maxPrice": 0,
+              "sales": 0,
+              "skuCount": 0
+            },
+            {
+              "id": "1450272703449354242",
+              "createTime": 1634606931911,
+              "coverImage": "https://ntp.fomille.site/bsg-i.nbxc.com/product/ac/c5/58/f5b31f31162a98a0a73347a846.jpg",
+              "coverVideo": "",
+              "seoUrl": "rfid-card-iso-14443b-125khz-t5577",
+              "subtitle": "Product Description Custom printing 125KHz LF RFID T5577 blank card with 3M467 adhesive PET PVC smart White Card Smart Cards include contactless IC card Contact IC card and hybrid chip cards for various fields such as Transportation Management Time...",
+              "title": "RFID card iso 14443b 125KHZ t5577",
+              "minPrice": 0,
+              "maxPrice": 0,
+              "sales": 0,
+              "skuCount": 0
+            },
+            {
+              "id": "1450272745975402498",
+              "createTime": 1634606942049,
+              "coverImage": "https://ntp.fomille.site/bsg-i.nbxc.com/product/ed/c7/a5/b1f402b415dc4453535cf0bf6d.png",
+              "coverVideo": "",
+              "seoUrl": "custom-printing-125khz-rfid-tk4100-smart-blank-card",
+              "subtitle": "Product Description Custom printing 125KHz LF RFID TK4100 blank card with 3M467 adhesive PET PVC smart White Card Smart Cards include contactless IC card Contact IC card and hybrid chip cards for various fields such as Transportation Management Time...",
+              "title": "Custom printing 125KHz RFID TK4100 smart blank card",
+              "minPrice": 0,
+              "maxPrice": 0,
+              "sales": 0,
+              "skuCount": 0
+            },
+            {
+              "id": "1450272792620257282",
+              "createTime": 1634606952146,
+              "coverImage": "https://ntp.fomille.site/bsg-i.nbxc.com/product/25/dc/ba/c4ac76d37f91fbddad3867e897.jpg",
+              "coverVideo": "",
+              "seoUrl": "school-student-payment-card-id-access-control",
+              "subtitle": "Smart Cards include contactless IC card Contact IC card and hybrid chip cards for various fields such as Transportation Management Time and Attendance Management Identification Library Management Supply Chain and Logistics Management Hotel...",
+              "title": "School Student Payment Card ID Access control",
+              "minPrice": 0,
+              "maxPrice": 0,
+              "sales": 0,
+              "skuCount": 0
+            },
+            {
+              "id": "1450272819170201602",
+              "createTime": 1634606959492,
+              "coverImage": "https://ntp.fomille.site/bsg-i.nbxc.com/product/82/4b/d3/82e57442d50f3c76b9ab753e02.jpg",
+              "coverVideo": "",
+              "seoUrl": "nfc-proximity-ic-chip-card-access-control",
+              "subtitle": "Smart Cards include contactless IC card Contact IC card and hybrid chip cards for various fields such as Transportation Management Time and Attendance Management Identification Library Management Supply Chain and Logistics Management Hotel...",
+              "title": "NFC proximity IC chip card access control",
+              "minPrice": 0,
+              "maxPrice": 0,
+              "sales": 0,
+              "skuCount": 0
+            }
+          ]
+        },
+        "goodsType": 1,
+        "taxRate": 0,
+        "videoList": [
+          {
+            "id": "1474266770419875841",
+            "fileType": 5,
+            "coverImage": "",
+            "refType": 5,
+            "title": "",
+            "needPass": 1,
+            "url": "https://www.youtube.com/embed/w39_DAZHFVA",
+            "description": "",
+            "suffix": ""
+          }
+        ],
+        "blockList": [
+          {
+            "id": "1451099911155757058",
+            "blockCover": "",
+            "blockDescription": "<p>Round Display<br />Nowadays,round display&rsquo;s request is becoming larger and larger,they are mainly used on high-end wearable devices.</p>\n<p>KINGTECH providing different size of round display,it contains round lcd display and round amoled display.Round lcd display we have 3.34inch round lcd display and 3.4inch round lcd display,Round amoled display we have 1.2inch round amoled,and 1.39inch round amoled.</p>\n<p>If you have any request on round display,welcome to contact KINGTECH!</p>",
+            "blockName": "Technology"
+          },
+          {
+            "id": "1451099911155757059",
+            "blockCover": "",
+            "blockDescription": "New Tab content 2",
+            "blockName": "Global"
+          }
+        ],
+        "maxPrice": 1500,
+        "minPrice": 1000,
+        "subtitle": "NFC Near Field Communication is an evolution of RFID technology",
+        "sticky": 1,
+        "region": "en",
+        "imageList": [
+          {
+            "url": "https://file.11af.com/1536186864713801729/1640595915615354882.webp",
+            "title": "6",
+            "suffix": "jpg"
+          },
+          {
+            "url": "https://file.11af.com/1536186864713801729/1640595912834531330.webp",
+            "title": "6",
+            "suffix": "jpg"
+          },
+          {
+            "url": "https://file.11af.com/1536186864713801729/1640595914256400385.webp",
+            "title": "6",
+            "suffix": "jpg"
+          },
+          {
+            "url": "https://file.11af.com/1536186864713801729/1640595919092432898.webp",
+            "title": "6",
+            "suffix": "jpg"
+          },
+          {
+            "url": "https://file.11af.com/1536186864713801729/1640595921294442497.webp",
+            "title": "6",
+            "suffix": "jpg"
+          },
+          {
+            "url": "https://file.11af.com/1536186864713801729/1640595925241282562.webp",
+            "title": "6",
+            "suffix": "jpg"
+          }
+        ],
+        "weightUnit": 1,
+        "skuList": [
+          {
+            "id": "1458679992585756674",
+            "barcode": "",
+            "costPrice": 0,
+            "height": 0,
+            "hsCode": "",
+            "length": 0,
+            "lockStock": 0,
+            "marketPrice": 8000,
+            "salePrice": 1500,
+            "shelfLife": 24,
+            "skuId": "145580405953317273800",
+            "skuImage": "/cdn/1448260389799866370/1455350288617201669.webp",
+            "skuName": "BLUE,L",
+            "soldStock": 0,
+            "spuId": "1455804059533172738",
+            "storageSkuId": "",
+            "surplusStock": 999,
+            "vipPrice": 1500,
+            "weight": 0,
+            "width": 0,
+            "variantValue": [
+              "BLUE",
+              "L"
+            ],
+            "variantList": [
+              {
+                "id": "1458679995928616961",
+                "skuId": "1458679992585756674",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992631894019",
+                "valueSort": 0,
+                "variantId": "1458679992631894018",
+                "variantName": "Color",
+                "variantSort": 0,
+                "variantValue": "BLUE"
+              },
+              {
+                "id": "1458679995957977089",
+                "skuId": "1458679992585756674",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992636088323",
+                "valueSort": 0,
+                "variantId": "1458679992636088322",
+                "variantName": "Size",
+                "variantSort": 0,
+                "variantValue": "L"
+              }
+            ]
+          },
+          {
+            "id": "1458679992648671234",
+            "barcode": "",
+            "costPrice": 0,
+            "height": 0,
+            "hsCode": "",
+            "length": 0,
+            "lockStock": 0,
+            "marketPrice": 500,
+            "salePrice": 1000,
+            "shelfLife": 24,
+            "skuId": "145580405953317273805",
+            "skuImage": "/cdn/1448260389799866370/1455350288617201670.webp",
+            "skuName": "RED,S",
+            "soldStock": 0,
+            "spuId": "1455804059533172738",
+            "storageSkuId": "",
+            "surplusStock": 998,
+            "vipPrice": 1000,
+            "weight": 0,
+            "width": 0,
+            "variantValue": [
+              "RED",
+              "S"
+            ],
+            "variantList": [
+              {
+                "id": "1458679996176080898",
+                "skuId": "1458679992648671234",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992644476931",
+                "valueSort": 0,
+                "variantId": "1458679992631894018",
+                "variantName": "Color",
+                "variantSort": 0,
+                "variantValue": "RED"
+              },
+              {
+                "id": "1458679996188663809",
+                "skuId": "1458679992648671234",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992644476929",
+                "valueSort": 0,
+                "variantId": "1458679992636088322",
+                "variantName": "Size",
+                "variantSort": 0,
+                "variantValue": "S"
+              }
+            ]
+          },
+          {
+            "id": "1458679992644476932",
+            "barcode": "",
+            "costPrice": 0,
+            "height": 0,
+            "hsCode": "",
+            "length": 0,
+            "lockStock": 0,
+            "marketPrice": 500,
+            "salePrice": 1000,
+            "shelfLife": 24,
+            "skuId": "145580405953317273804",
+            "skuImage": "/cdn/1448260389799866370/1455350288617201670.webp",
+            "skuName": "RED,M",
+            "soldStock": 0,
+            "spuId": "1455804059533172738",
+            "storageSkuId": "",
+            "surplusStock": 996,
+            "vipPrice": 1000,
+            "weight": 0,
+            "width": 0,
+            "variantValue": [
+              "RED",
+              "M"
+            ],
+            "variantList": [
+              {
+                "id": "1458679996121554945",
+                "skuId": "1458679992644476932",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992644476931",
+                "valueSort": 0,
+                "variantId": "1458679992631894018",
+                "variantName": "Color",
+                "variantSort": 0,
+                "variantValue": "RED"
+              },
+              {
+                "id": "1458679996150915074",
+                "skuId": "1458679992644476932",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992640282625",
+                "valueSort": 0,
+                "variantId": "1458679992636088322",
+                "variantName": "Size",
+                "variantSort": 0,
+                "variantValue": "M"
+              }
+            ]
+          },
+          {
+            "id": "1458679992644476930",
+            "barcode": "",
+            "costPrice": 0,
+            "height": 0,
+            "hsCode": "",
+            "length": 0,
+            "lockStock": 0,
+            "marketPrice": 500,
+            "salePrice": 1000,
+            "shelfLife": 24,
+            "skuId": "145580405953317273803",
+            "skuImage": "/cdn/1448260389799866370/1455350288617201670.webp",
+            "skuName": "RED,L",
+            "soldStock": 0,
+            "spuId": "1455804059533172738",
+            "storageSkuId": "",
+            "surplusStock": 995,
+            "vipPrice": 1000,
+            "weight": 0,
+            "width": 0,
+            "variantValue": [
+              "RED",
+              "L"
+            ],
+            "variantList": [
+              {
+                "id": "1458679996075417602",
+                "skuId": "1458679992644476930",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992644476931",
+                "valueSort": 0,
+                "variantId": "1458679992631894018",
+                "variantName": "Color",
+                "variantSort": 0,
+                "variantValue": "RED"
+              },
+              {
+                "id": "1458679996096389122",
+                "skuId": "1458679992644476930",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992636088323",
+                "valueSort": 0,
+                "variantId": "1458679992636088322",
+                "variantName": "Size",
+                "variantSort": 0,
+                "variantValue": "L"
+              }
+            ]
+          },
+          {
+            "id": "1458679992640282626",
+            "barcode": "",
+            "costPrice": 0,
+            "height": 0,
+            "hsCode": "",
+            "length": 0,
+            "lockStock": 0,
+            "marketPrice": 8000,
+            "salePrice": 1500,
+            "shelfLife": 24,
+            "skuId": "145580405953317273802",
+            "skuImage": "/cdn/1448260389799866370/1455350288617201669.webp",
+            "skuName": "BLUE,S",
+            "soldStock": 0,
+            "spuId": "1455804059533172738",
+            "storageSkuId": "",
+            "surplusStock": 994,
+            "vipPrice": 1500,
+            "weight": 0,
+            "width": 0,
+            "variantValue": [
+              "BLUE",
+              "S"
+            ],
+            "variantList": [
+              {
+                "id": "1458679996033474561",
+                "skuId": "1458679992640282626",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992631894019",
+                "valueSort": 0,
+                "variantId": "1458679992631894018",
+                "variantName": "Color",
+                "variantSort": 0,
+                "variantValue": "BLUE"
+              },
+              {
+                "id": "1458679996058640386",
+                "skuId": "1458679992640282626",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992644476929",
+                "valueSort": 0,
+                "variantId": "1458679992636088322",
+                "variantName": "Size",
+                "variantSort": 0,
+                "variantValue": "S"
+              }
+            ]
+          },
+          {
+            "id": "1458679992636088324",
+            "barcode": "",
+            "costPrice": 0,
+            "height": 0,
+            "hsCode": "",
+            "length": 0,
+            "lockStock": 0,
+            "marketPrice": 8000,
+            "salePrice": 1500,
+            "shelfLife": 24,
+            "skuId": "145580405953317273801",
+            "skuImage": "/cdn/1448260389799866370/1455350288617201669.webp",
+            "skuName": "BLUE,M",
+            "soldStock": 0,
+            "spuId": "1455804059533172738",
+            "storageSkuId": "",
+            "surplusStock": 883,
+            "vipPrice": 1500,
+            "weight": 0,
+            "width": 0,
+            "variantValue": [
+              "BLUE",
+              "M"
+            ],
+            "variantList": [
+              {
+                "id": "1458679995983142914",
+                "skuId": "1458679992636088324",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992631894019",
+                "valueSort": 0,
+                "variantId": "1458679992631894018",
+                "variantName": "Color",
+                "variantSort": 0,
+                "variantValue": "BLUE"
+              },
+              {
+                "id": "1458679996012503041",
+                "skuId": "1458679992636088324",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992640282625",
+                "valueSort": 0,
+                "variantId": "1458679992636088322",
+                "variantName": "Size",
+                "variantSort": 0,
+                "variantValue": "M"
+              }
+            ]
+          }
+        ],
+        "variantList": [
+          {
+            "id": "1458679992631894018",
+            "sortIndex": 1,
+            "variantName": "Color",
+            "valueList": [
+              {
+                "id": "1458679992631894019",
+                "sortIndex": 1,
+                "variantValue": "BLUE"
+              },
+              {
+                "id": "1458679992644476931",
+                "sortIndex": 7,
+                "variantValue": "RED"
+              }
+            ]
+          },
+          {
+            "id": "1458679992636088322",
+            "sortIndex": 2,
+            "variantName": "Size",
+            "valueList": [
+              {
+                "id": "1458679992636088323",
+                "sortIndex": 2,
+                "variantValue": "L"
+              },
+              {
+                "id": "1458679992640282625",
+                "sortIndex": 4,
+                "variantValue": "M"
+              },
+              {
+                "id": "1458679992644476929",
+                "sortIndex": 6,
+                "variantValue": "S"
+              }
+            ]
+          }
+        ],
+        "sortIndex": 211,
+        "description": "<div class=\"product__description rte quick-add-hidden\">\n                  <div style=\"text-align: start;\"><img style=\"float: none;\" src=\"https://cdn.shopifycdn.net/s/files/1/0753/6273/0286/files/d0_c9cb3984-0714-4715-be21-3313fc2d4f5a.png?v=1682500694\"></div>\n<p>With the coming of autumn,the weather is no longer so hot,many people go camping or have a picnic as a family. At this time,a power station that can support some household appliances outdoors is especially inportant. The EN700Q is very suitable for outdoor activities,let's see what functions it has. &nbsp; &nbsp;</p>\n<h3>The characteristics of EN700Q</h3>\n<p>EN700Q is made of lithium iron phosphate cells,comparing with other batteries,better quality,safe use,and more environmentally friendly. It has 614Wh battery capacity,which supports AC 700W output and AC 500W input,you can recharge it in 1.4 hours. &nbsp;</p>\n<div style=\"text-align: start;\"><img style=\"float: none;\" alt=\"\" src=\"https://cdn.shopifycdn.net/s/files/1/0753/6273/0286/files/d1_534fc5a8-8d24-406d-bd94-80d78fdacc85.png?v=1682498494\"></div>\n<h3>Power for appliances under 700W</h3>\n<div style=\"text-align: start;\"><img style=\"float: none;\" alt=\"\" src=\"https://cdn.shopifycdn.net/s/files/1/0753/6273/0286/files/d2_4320ba3b-c7c2-41ed-905e-8600c5cff35f.png?v=1682499106\"></div>\n<div style=\"text-align: start;\">\n<img src=\"https://cdn.shopifycdn.net/s/files/1/0753/6273/0286/files/d3_96856ff7-0bb4-41e0-ae16-659fffb3c091.png?v=1682499124\" style=\"float: none;\"><img data-mce-fragment=\"1\" src=\"https://cdn.shopifycdn.net/s/files/1/0753/6273/0286/files/d4_d945ca50-c00b-41fd-95e1-0307f65bce30.png?v=1682499146\" style=\"float: none;\" data-mce-src=\"https://cdn.shopifycdn.net/s/files/1/0753/6273/0286/files/d4_d945ca50-c00b-41fd-95e1-0307f65bce30_480x480.png?v=1682499146\"><img data-mce-fragment=\"1\" src=\"https://cdn.shopifycdn.net/s/files/1/0753/6273/0286/files/d5_bf669915-25e9-4752-9857-7668ca18b543.png?v=1682499166\" style=\"float: none;\" data-mce-src=\"https://cdn.shopifycdn.net/s/files/1/0753/6273/0286/files/d5_bf669915-25e9-4752-9857-7668ca18b543_480x480.png?v=1682499166\"><img data-mce-fragment=\"1\" src=\"https://cdn.shopifycdn.net/s/files/1/0753/6273/0286/files/d6_e720013b-08da-41c2-99ba-833288ae916b.png?v=1682499187\" style=\"float: none;\" data-mce-src=\"https://cdn.shopifycdn.net/s/files/1/0753/6273/0286/files/d6_e720013b-08da-41c2-99ba-833288ae916b_480x480.png?v=1682499187\">\n</div>\n                </div>Looking for ideal RFID Patrol Token Tag Manufacturer &amp; supplier ? We have a wide selection at goods prices to help you get creative. All the RFID Patrol Tag are quality guaranteed. We are China Origin Factory of Ebay RFID Tag. If you have any question, please feel free to contact us.",
+        "searchKeyword": "",
+        "seoKeywords": "China UHF Token Anti Metal Tag For Patrol System",
+        "seoTitle": "UHF Token Anti Metal Tag For Patrol System",
+        "title": "[Title] UHF Token Anti Metal Tag For Patrol System",
+        "seoUrl": "uhf-token-anti-metal-tag-for-patrol-system",
+        "attachmentList": [
+          {
+            "id": "1458333663615410177",
+            "fileType": 3,
+            "coverImage": "",
+            "refType": 2,
+            "title": "IOT user manual",
+            "needPass": 1,
+            "url": "/cdn/1209760082859032577/1458333237487570945.pdf",
+            "description": "",
+            "suffix": "pdf"
+          },
+          {
+            "id": "1458333663640576002",
+            "fileType": 4,
+            "coverImage": "",
+            "refType": 2,
+            "title": "Topaz Mask AI Crack",
+            "needPass": 0,
+            "url": "/cdn/1209760082859032577/1458333245235154946.zip",
+            "description": "",
+            "suffix": "zip"
+          },
+          {
+            "id": "1458333663653158914",
+            "fileType": 1,
+            "coverImage": "",
+            "refType": 2,
+            "title": "IOT-N010 and IOT-THS010 configuration protocol.pdf",
+            "needPass": 1,
+            "url": "/cdn/1209760082859032577/1458333245235154945.webp",
+            "description": "",
+            "suffix": "jpeg"
+          }
+        ],
+        "collectionList": [
+          {
+            "collectionType": 1,
+            "seoUrl": "rfid-tokens",
+            "seoDescription": "",
+            "coverImage": "",
+            "banner": "",
+            "id": "1450425424911503362",
+            "coverVideo": "",
+            "seoKeywords": "",
+            "seoTitle": "RFID Tokens",
+            "title": "RFID Tokens"
+          }
+        ],
+        "shipFreeDescription": "",
+        "summary": "Incoterm: FOB,EXW\nMin. Order: 1 Piece/Pieces\nPort: ,,\nContact Now\nShare:",
+        "hasAnnex": 1,
+        "comments": 0,
+        "initial": "U",
+        "priceType": 2,
+        "specification": "[{\"key\":\"Supply Ability & Additional Information\",\"leaf\":1,\"value\":\"\"},{\"key\":\"Port\",\"leaf\":0,\"value\":\",,\"},{\"key\":\"Incoterm\",\"leaf\":0,\"value\":\"FOB,EXW\"}]",
+        "updateTime": 1634643382402,
+        "hits": 0,
+        "includeTax": 0,
+        "tagList": [
+          {
+            "id": "1451099440705843201",
+            "tagName": "hot products",
+            "tagUrl": "hot-products"
+          }
+        ],
+        "ladderList": [
+          {
+            "id": "1458681848435253249",
+            "level": 1,
+            "minCount": 1,
+            "price": 10,
+            "spuId": "1455804059533172738"
+          },
+          {
+            "id": "1458681848456224770",
+            "level": 2,
+            "minCount": 2,
+            "price": 20,
+            "spuId": "1455804059533172738"
+          },
+          {
+            "id": "1458681848464613377",
+            "level": 3,
+            "minCount": 3,
+            "price": 30,
+            "spuId": "1455804059533172738"
+          },
+          {
+            "id": "1458681848485584897",
+            "level": 4,
+            "minCount": 4,
+            "price": 40,
+            "spuId": "1455804059533172738"
+          },
+          {
+            "id": "1458681848502362113",
+            "level": 5,
+            "minCount": 5,
+            "price": 50,
+            "spuId": "1455804059533172738"
+          }
+        ],
+        "createTime": 1634643382387,
+        "totalStock": 0,
+        "spuId": "1450425587839242241"
+      }
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "$",
+    "phone": "0755-88888888",
+    "email": "devin@fomille.com",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "five.123.com",
+    "siteName": "B2B开发测试（勿删）",
+    "addOnHeader": "-附加标题",
+    "address": "Baidu Campus, No. 10 Shangdi 10th Street, Haidian District, Beijing, China1",
+    "areaCode": "",
+    "articleQuantity": 0,
+    "cityName": "崇文区",
+    "company": "fomille",
+    "contact": "devin shieh",
+    "countryName": "中国",
+    "createTime": 1577264254667,
+    "currencyCode": "$",
+    "currencyName": "美元",
+    "defaultRegion": 0,
+    "downPass": "1235",
+    "expiryTime": 1700064000000,
+    "facebookPixel": "",
+    "favicon": "",
+    "formQuantity": 0,
+    "freePhone": "+86-4008000000",
+    "goodsQuantity": 0,
+    "honestScore": 0,
+    "keepLang": 1,
+    "latitude": 39.911019,
+    "lengthUnit": "mm",
+    "logisticsScore": 0,
+    "logo": "",
+    "longitude": 116.396315,
+    "maxLang": 1,
+    "mobile": "13800138000",
+    "praiseRate": 0,
+    "provinceName": "北京",
+    "region": "en",
+    "rootLink": "https://five.123.com/",
+    "scriptBottom": "",
+    "scriptHead": "",
+    "scriptService": "",
+    "serviceScore": 0,
+    "siteId": "1209760082859032577",
+    "siteType": 3,
+    "state": 0,
+    "synopsis": "",
+    "systemDomain": "five.123.com",
+    "timeZone": "Asia/Rangoon",
+    "unitSystem": "metric",
+    "videoLimit": 0,
+    "weightUnit": "g",
+    "social": {
+      "socialPinterest": "https://www.facebook.com/fomille",
+      "socialGooglePlus": "https://www.facebook.com/fomille",
+      "socialFancy": "https://www.facebook.com/fomille",
+      "socialVimeo": "https://www.facebook.com/fomille",
+      "socialYoutube": "https://www.facebook.com/fomille",
+      "sectionAlias": "社交媒体",
+      "sloganBorder": "",
+      "socialFacebook": "https://www.facebook.com/fomille",
+      "socialWeibo": "https://www.facebook.com/fomille",
+      "socialShareImage": "",
+      "sloganBackground": "",
+      "socialTumblr": "https://www.facebook.com/fomille",
+      "socialInstagram": "https://www.facebook.com/fomille",
+      "sloganColor": "",
+      "logo": "",
+      "socialTwitter": "https://www.facebook.com/fomille",
+      "socialSnapchat": "https://www.facebook.com/fomille",
+      "slogan": "",
+      "socialLinkedin": "https://www.facebook.com/fomille",
+      "socialImage": [
+        {
+          "areaContent": "logo",
+          "socialQRCode": "/cdn/1209760082859032577/1463865522223030300.webp",
+          "socialQRCodeAlt": "",
+          "areaHeading": "Heading",
+          "areaRatio": "2",
+          "socialQRCodeLink": "/page/about-us-replace#About us"
+        },
+        {
+          "areaContent": "logo",
+          "socialQRCode": "/cdn/1209760082859032577/1463865522223030288.webp",
+          "socialQRCodeAlt": "",
+          "areaHeading": "Heading",
+          "areaRatio": "2",
+          "socialQRCodeLink": "/page/about-us-replace#About us"
+        },
+        {
+          "areaContent": "logo",
+          "socialQRCode": "/cdn/1209760082859032577/1463865522223030276.webp",
+          "socialQRCodeAlt": "",
+          "areaHeading": "Heading",
+          "areaRatio": "2",
+          "socialQRCodeLink": "/page/about-us-replace#About us"
+        }
+      ]
+    }
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": "Home",
+    "seoUrl": "/",
+    "seoDescription": "",
+    "id": "1463865511414325249",
+    "title": "首页",
+    "seoTitle": "(Nothingness)卫浴1",
+    "seoKeywords": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "cache": {},
+    "canonical": "https://five.123.com/",
+    "collectionId": "",
+    "defaultRegion": 0,
+    "domain": "five.123.com",
+    "ids": [],
+    "itemLink": "/",
+    "mainDomain": "five.123.com",
+    "pageIndex": 1,
+    "pageSize": 12,
+    "pageType": "homePage",
+    "params": {},
+    "region": "en",
+    "siteId": "1209760082859032577",
+    "sortBy": "",
+    "url": "",
+    "designMode": true
+  },
+  "lang": {
+    "buyFrom": "Buy from",
+    "shareTo": "Share to",
+    "attachment": "Attachment",
+    "download": "Download",
+    "description": "Overview",
+    "specification": "Specification",
+    "contactUs": "Contact US",
+    "related": "Related products",
+    "global": {
+      "keywords": "KEYWORDS",
+      "product": "PRODUCTS",
+      "lang": "英语",
+      "article": "NEWS",
+      "home": "HOME"
+    },
+    "lang": "英语",
+    "fax": "Fax",
+    "email": "Email"
+  }
+}

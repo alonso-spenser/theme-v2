@@ -1,0 +1,50 @@
+.qYz22e-down .ic-affix {
+	user-select: none;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	color: var(--colorBody);
+}
+
+.qYz22e-down .ic-affix:hover {
+	color: var(--colorTheme);
+}
+
+.qYz22e-down .ic-affix:hover label {
+	color: var(--colorTheme);
+}
+
+.qYz22e-down .ic-affix label {
+	padding: 0.375rem 0;
+	white-space: nowrap;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	font-size: var(--fontSizeBody);
+	color: var(--colorBody);
+}
+
+.qYz22e-down .input-group {
+	margin-top: 10px;
+	max-width: 375px;
+}
+
+.qYz22e-down .input-group:not(.active) {
+	display: none;
+}
+
+.qYz22e-item {
+	margin-bottom: 1.5rem;
+	padding-bottom: 1.5rem;
+	border-bottom: calc(var(--borderWidth) * 1px) var(--borderStyle) var(--colorBorder);
+}
+
+@media (min-width: 768px) {
+	.qYz22e .input-group {
+		width: 300px;
+	}
+
+	.qYz22e .input-group:not(.active) .form-control {
+		display: none;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

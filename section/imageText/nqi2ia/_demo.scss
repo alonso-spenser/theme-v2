@@ -1,0 +1,44 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-nqi2ia{
+    background: #F2F2F2   ;
+    
+}
+
+
+
+.section-demo-nqi2ia .card  {
+    background-color:#ff0000;
+}
+
+
+
+    .section-demo-nqi2ia [class*=text-]   {
+        color:#ffff00;
+    }
+    .section-demo-nqi2ia .text-small:before  {
+        background-color: #ffff00;
+    }
+
+
+
+    @media (min-width: 768px) {
+        .section-demo-nqi2ia .card-body {
+            padding: 112.5px 100px;
+        }
+        .section-demo-nqi2ia .text-small:before {
+            width: 190px;
+            left: -200px;
+        }
+        .section-demo-nqi2ia .text-small.right:before {
+            left: auto;
+            right: -195px;
+        }
+    }
+
+
+
+    @media (min-width: 768px) {
+        .section-demo-nqi2ia .card {
+            margin-top:  -150px;
+        }
+    }

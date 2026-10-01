@@ -1,0 +1,61 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .section-title [class^=text-] {
+    color:[[${section.settings.textColor}]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.textColor) || section.settings.textWidth > 0}"]
+    [# th:if="${ section.settings.textWidth > 0 }"]
+    .section-[[${ section.id }]] .section-title-divider {
+        width: [[${section.settings.textWidth}]]%;
+    }
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+        .section-[[${ section.id }]] .section-title-divider:after {
+            border-color: [[${section.settings.textColor}]];
+        }
+    [/]
+[/]
+
+[# th:if="${section.settings.dividerWidth != null && section.settings.dividerWidth > 0}"]
+.section-[[${ section.id }]] .section-title .has-line:after, .section-[[${ section.id }]] .section-title img {
+    width: [[${section.settings.dividerWidth}]]%;
+}
+[/]
+
+[# th:if="${section.settings.iconWidth != null && section.settings.iconWidth > 0}"]
+    .section-[[${ section.id }]] .media img {
+        width: [[${section.settings.iconWidth}]]px;
+    }
+[/]
+
+[# th:if="${section.settings.imageDivider != null && section.settings.imageDivider > 0}"]
+    @media (min-width: 768px) {
+        .section-[[${ section.id }]] .ZVNrIj-content:not(.order-2) {
+            padding-right: [[${section.settings.imageDivider}]]px;
+        }
+        .section-[[${ section.id }]] .ZVNrIj-content.order-2 {
+            padding-left: [[${section.settings.imageDivider}]]px;
+        }
+    }
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.contentTitleColor)}"]
+    .section-[[${ section.id }]] .media h3{
+        color: [[${section.settings.contentTitleColor}]];
+    }
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.contentColor)}"]
+    .section-[[${ section.id }]] .media p{
+        color: [[${section.settings.contentColor}]];
+    }
+[/]

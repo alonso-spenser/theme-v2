@@ -1,0 +1,41 @@
+{
+  "section": {
+    "id": "demo-helpful-01",
+    "type": "linkList",
+    "templateId": "XVg6Yi",
+    "runtimeVersion": 2,
+    "settings": {
+      "heading": "Helpful links",
+      "backgroundColor": "#dce1e1",
+      "newWindow": true,
+      "links": [
+        {
+          "title": "Alumni Service Center",
+          "description": "Alumni with questions about SLB benefits or other HR related matters",
+          "label": "Explore",
+          "url": "https://alumni.slb.com"
+        },
+        {
+          "title": "MyAskHR",
+          "description": "Alumni residing in a country under US embargo",
+          "label": "Explore",
+          "url": "https://myaskhr.slb.com/external/portal.pl"
+        },
+        {
+          "title": "FAQ",
+          "description": "Frequently asked questions about the Alumni Service Center",
+          "label": "Explore",
+          "url": "https://www.slb.com/about/who-we-are/our-alumni/alumni-service-center-faq"
+        }
+      ]
+    },
+    "data": {}
+  },
+  "params": {
+    "designMode": true
+  },
+  "site": {
+    "urlPrefix": "/"
+  },
+  "lang": {}
+}

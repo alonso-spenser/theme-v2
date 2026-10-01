@@ -1,0 +1,16 @@
+.vUruam-tile .card-body {
+	border-bottom-left-radius: calc(var(--cardBorderRadius) * 1px);
+	border-bottom-right-radius: calc(var(--cardBorderRadius) * 1px);
+}
+
+.vUruam-list {
+	margin-bottom: 1.25rem;
+	padding-bottom: 1.25rem;
+	border-bottom: 1px var(--dividerStyle) var(--colorBorder);
+}
+
+.vUruam-list:hover [class*="text-"] {
+	color: var(--colorTheme);
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

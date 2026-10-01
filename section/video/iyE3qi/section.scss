@@ -1,0 +1,38 @@
+.iyE3qi-mask {
+	z-index: 2;
+}
+
+.iyE3qi-mask img {
+	z-index: 1;
+}
+
+.iyE3qi-mask:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 2;
+}
+
+.iyE3qi iframe {
+	z-index: 1;
+}
+
+.iyE3qi iframe:not(.active) {
+	opacity: 0;
+}
+
+.iyE3qi .section-card {
+	overflow: hidden;
+}
+
+@media (max-width: 768px) {
+	.iyE3qi .order-2 {
+		order: 0;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

@@ -1,0 +1,122 @@
+.u2EN3m-card {
+	position: relative;
+	background-color: #1F242C;
+	margin-left: 40%;
+	right: 0;
+	display: flex;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	border-top-left-radius: 0.625rem;
+	border-bottom-left-radius: 0.625rem;
+}
+
+@media (max-width: 768px) {
+	.u2EN3m-card {
+		display: block;
+		margin: 0;
+		width: 100%;
+		padding: 0;
+		border-bottom-right-radius: 0.625rem;
+		border-top-left-radius: 0;
+	}
+}
+
+.u2EN3m-card:hover .embed-responsive-item {
+	transform: scale(1.05);
+}
+
+.u2EN3m .embed-responsive {
+	width: 80%;
+	margin-left: -67%;
+	border-top-right-radius: 0.625rem;
+	border-bottom-right-radius: 0.625rem;
+}
+
+@media (max-width: 768px) {
+	.u2EN3m .embed-responsive {
+		width: 100%;
+		margin-left: 0;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+}
+
+.u2EN3m .section-title {
+	padding: 0 4rem;
+	flex: 1;
+}
+
+@media (max-width: 768px) {
+	.u2EN3m .section-title {
+		padding: 1rem 1.5rem;
+	}
+}
+
+.u2EN3m .media {
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	border-radius: 0.5625rem;
+	padding: 1rem;
+	transition: all 0.25s;
+}
+
+.u2EN3m .media:hover {
+	transform: translateY(-0.5rem);
+}
+
+@media (max-width: 768px) {
+	.u2EN3m .media {
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-radius: 0.3125rem;
+		padding: .75rem;
+	}
+}
+
+.u2EN3m .media-icon img {
+	width: 5rem;
+}
+
+@media (max-width: 768px) {
+	.u2EN3m .media-icon img {
+		width: 4rem;
+	}
+}
+
+.u2EN3m .media-icon + .media-body {
+	padding-left: 2rem;
+}
+
+@media (max-width: 768px) {
+	.u2EN3m .media-icon + .media-body {
+		padding-left: 1rem;
+	}
+}
+
+.u2EN3m .media:not(:last-child) {
+	margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+	.u2EN3m .media:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+}
+
+.u2EN3m [class*="text-"] {
+	color: #fff;
+}
+
+.u2EN3m [class*="text-"] + .text-btn {
+	margin-top: 1.5rem;
+}
+
+.u2EN3m [class*="text-"] + .media {
+	margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+	.u2EN3m [class*="text-"] + .media {
+		margin-top: 1rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

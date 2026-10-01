@@ -1,0 +1,64 @@
+{
+  "section": {
+    "id": "1437754292831989761",
+    "componentKind": "section",
+    "type": "titleSection",
+    "templateId": "Un2eie",
+    "runtimeVersion": 2,
+    "settings": {
+      "symbol": "list-demical",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.\n12月28日消息，美国东部时间12月26日，美国国家航空航天局（NASA）旗下的詹姆斯·韦伯太空望远镜成功部署天线，此时距离其顺利升空约一天时间。\n\n上周六韦伯太空望远镜搭乘阿丽亚娜5号火箭从法属圭亚那的库鲁顺利发射升空。这次韦伯太空望远镜展开的是万向节天线组件，其中也包括高数据速率蝶形天线，用于将望远镜对早期宇宙的观测传送回地球。",
+      "heading": "Title with button",
+      "marginTop": false,
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "buttonLink": "",
+      "paddingTop": true,
+      "subheading": "this is a new beginning",
+      "wideScreen": false,
+      "buttonLabel": "Button label",
+      "buttonStyle": "btn-outline-primary",
+      "contentAlign": "text-left",
+      "dividerImage": "https://site-file.fomillesite.com/1176340378120835073/1212699087456096257.png",
+      "dividerStyle": "image",
+      "dividerWidth": 30,
+      "headingColor": "",
+      "marginBottom": false,
+      "sectionAlias": "标题 & 按钮",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "#f2f2f2",
+      "backgroundImage": "",
+      "subheadingColor": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

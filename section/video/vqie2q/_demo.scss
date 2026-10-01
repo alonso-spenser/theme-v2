@@ -1,0 +1,33 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-vqie2q{
+    background: #f2f2f2   ;
+    
+}
+
+
+
+
+    
+        .section-demo-vqie2q .section-title-divider {
+            width: 100%;
+        }
+    
+    
+
+
+@media (min-width: 768px) {
+    .section-demo-vqie2q .section-title [class^=text-] {
+        width: 100%;
+    }
+}
+
+
+
+.section-demo-vqie2q .section-title .has-line:after, .section-demo-vqie2q .section-title img {
+    width: 5%;
+}
+
+
+.section-demo-vqie2q .embed-responsive-video:before {
+     padding-top: 56.25%;
+ }

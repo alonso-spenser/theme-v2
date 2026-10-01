@@ -1,0 +1,63 @@
+/**
+ * V2 页面全局设计变量 — 提取自 fox.theme_schema。
+ * 优先使用 global_*_data，缺失时回退 Schema 默认值；不依赖 Java/Thymeleaf。
+ * 数字型尺寸保持无单位：font-size: calc(var(--fontSizeBody) * 1px)。
+ * 字体、颜色、borderRadius 等字符串保留原 CSS 值。
+ * 前端即时预览：document.documentElement.style.setProperty('--colorTheme', '#0055ff')。
+ * 本文件只定义变量，不注入全局选择器，不覆盖组件已有的局部设置。
+ */
+:root {
+
+  /* 全局颜色 */
+  --colorTheme: #0014DC; /* 主题色：截图取色 */
+  --colorHeading: #303133; /* 标题 */
+  --colorSubheading: #302E2F; /* 副标题 */
+  --colorBody: #606266; /* 正文 */
+  --colorSecondary: #909399; /* 次要文字 */
+  --colorPrice: #E6A23C; /* 价格标签 */
+  --colorLink: var(--colorTheme); /* 链接 */
+  --colorLinkHover: #0011BB; /* 链接悬停：加深蓝色 */
+  --colorBorder: #DCDFE6; /* 线条和边框 */
+  --colorButton: var(--colorTheme); /* 按钮 */
+  --colorButtonLabel: #FFFFFF; /* 按钮文字 */
+  --colorButtonHover: #0011BB; /* 按钮悬停：加深蓝色 */
+  --colorButtonHoverLabel: #FFFFFF; /* 按钮悬停文字 */
+  --colorRoundButton: #000000; /* 圆形切换铵钮 */
+  --colorRoundButtonLabel: #FFFFFF; /* 圆形切换铵钮文本 */
+  --colorEnquiryButton: var(--colorTheme); /* 弹出询盘按钮 */
+  --colorEnquiryButtonLabel: #FFFFFF; /* 弹出询盘按钮文本 */
+
+  /* 字体与桌面 / 手机字号 */
+  --typeHeadline: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif; /* 字体 */
+  --fontSizeHeadline: 30; /* 字体大小，数值 / px */
+  --fontSizeHeadlineMob: 20; /* 字体大小，数值 / px */
+  --typeHeading: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif; /* 字体 */
+  --fontSizeHeading: 30; /* 字体大小，数值 / px */
+  --fontSizeHeadingMob: 18; /* 字体大小，数值 / px */
+  --weightHeading: normal; /* 加粗 */
+  --typeSubheading: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* 字体 */
+  --fontSizeSubheading: 18; /* 字体大小，数值 / px */
+  --fontSizeSubheadingMob: 16; /* 字体大小，数值 / px */
+  --typeBody: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif; /* 字体 */
+  --fontSizeBody: 16; /* 字体大小，数值 / px */
+  --fontSizeBodyMob: 14; /* 字体大小，数值 / px */
+  --typeMenu: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif; /* 字体 */
+  --fontSizeMenu: 16; /* 字体大小，数值 / px */
+  --fontSizeMenuMob: 16; /* 字体大小，数值 / px */
+  --typeContentHeading: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif; /* 字体 */
+  --fontSizeContentHeading: 16; /* 字体大小，数值 / px */
+  --fontSizeContentHeadingMob: 16; /* 字体大小，数值 / px */
+
+  /* 通用外观 */
+  --borderRadius: 0.25rem; /* 按钮样式 */
+  --buttonPadding: 16; /* 按钮内边距，数值 / px */
+  --borderWidth: 1; /* 线宽，数值 / px */
+  --borderStyle: solid; /* 样式 */
+  --paddingHeight: 40; /* 内边距，数值 / px */
+  --marginHeight: 40; /* 外边距，数值 / px */
+  --cardBorderRadius: 4; /* 卡片圆角，数值 / px */
+  --cardBoxShadow: 2; /* 阴影，数值 / px */
+  --cardShadowColor: rgba(0, 0, 0, 0.1); /* 阴影颜色 */
+  --cardShadowHoverColor: rgba(0, 0, 0, 0.2); /* 阴影悬浮颜色 */
+  --objectFit: cover; /* 剪切方式 */
+}

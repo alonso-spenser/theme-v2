@@ -1,0 +1,357 @@
+{
+  "protocolVersion": 2,
+  "componentKind": "section",
+  "type": "slideShow",
+  "templateId": "Njqyay",
+  "runtimeVersion": 2,
+  "definitionVersion": 1,
+  "schemaVersion": 1,
+  "name": {
+    "en": "轮播图",
+    "zh-CN": "轮播图"
+  },
+  "policy": {
+    "removable": true,
+    "duplicable": true,
+    "maxInstances": 0
+  },
+  "placement": {
+    "fixed": false,
+    "pages": []
+  },
+  "render": {
+    "template": "section.th.html",
+    "style": "section.scss",
+    "variableStyle": "variable.th.css",
+    "script": "section.js"
+  },
+  "editor": {
+    "groups": [
+      {
+        "id": "group1",
+        "name": {
+          "en": "Image",
+          "zh-CN": "图片"
+        },
+        "elements": [
+          {
+            "type": "repeater",
+            "field": "imageList",
+            "name": {
+              "en": "Image",
+              "zh-CN": "图片"
+            },
+            "maxItems": 5,
+            "elements": [
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Text",
+                  "zh-CN": "文本"
+                },
+                "type": "colorPicker",
+                "field": "textColor",
+                "default": "",
+                "options": [],
+                "translate": 1
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Heading",
+                  "zh-CN": "标题"
+                },
+                "type": "text",
+                "field": "heading",
+                "default": "Power kits for home",
+                "options": [],
+                "translate": 0
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Button label",
+                  "zh-CN": "按钮文字"
+                },
+                "type": "text",
+                "field": "buttonLabel",
+                "default": "LEARN MORE",
+                "options": [],
+                "translate": 0
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Button link",
+                  "zh-CN": "按钮链接"
+                },
+                "type": "linkPicker",
+                "field": "buttonLink",
+                "default": "",
+                "options": [],
+                "translate": 1
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "type": "divider",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Image",
+                  "zh-CN": "图片"
+                },
+                "type": "imagePicker",
+                "field": "image",
+                "default": "",
+                "options": [],
+                "altFiled": "alt",
+                "translate": 1
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "ALT",
+                  "zh-CN": "ALT"
+                },
+                "type": "hidden",
+                "field": "alt",
+                "default": "",
+                "options": [],
+                "translate": 0
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Mobile image",
+                  "zh-CN": "移动图片"
+                },
+                "type": "imagePicker",
+                "field": "mobImage",
+                "default": "",
+                "options": [],
+                "altFiled": "alt",
+                "translate": 1
+              }
+            ],
+            "default": [
+              {
+                "textColor": "",
+                "heading": "Power kits for home\n基金即服务",
+                "content": "Simple. Smart. Compact.",
+                "buttonLabel": "LEARN MORE",
+                "buttonLink": "https://www.163.com",
+                "alt": "",
+                "image": "/preview-assets/images/slide.jpg",
+                "mobImage": "/preview-assets/images/8b.jpg"
+              },
+              {
+                "textColor": "",
+                "heading": "Power kits for home",
+                "content": "Simple. Smart. Compact.",
+                "buttonLabel": "LEARN MORE",
+                "buttonLink": "https://www.263.com",
+                "alt": "",
+                "image": "/preview-assets/images/s3.jpg",
+                "mobImage": "/preview-assets/images/8g.jpg"
+              }
+            ]
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "group2",
+        "name": {
+          "en": "Background",
+          "zh-CN": "背景"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Desktop size scale",
+              "zh-CN": "桌面端尺寸比例"
+            },
+            "type": "select",
+            "field": "imageSize",
+            "default": "full",
+            "options": [
+              {
+                "value": "29by5",
+                "name": {
+                  "en": "Small: 1920 x 320 (29 : 5)",
+                  "zh-CN": "小：1920 x 320 (29 : 5)"
+                }
+              },
+              {
+                "value": "17by5",
+                "name": {
+                  "en": "Medium: 1920 x 560 (17 : 5)",
+                  "zh-CN": "中：1920 x 560 (17 : 5)"
+                }
+              },
+              {
+                "value": "13by5",
+                "name": {
+                  "en": "Large: 1920 x 720 (13 : 5)",
+                  "zh-CN": "大：1920 x 720 (13 : 5)"
+                }
+              },
+              {
+                "value": "full",
+                "name": {
+                  "en": "Full screen",
+                  "zh-CN": "全屏"
+                }
+              }
+            ],
+            "translate": 1
+          },
+          {
+            "max": 200,
+            "min": 0,
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Negative margin (top)",
+              "zh-CN": "负边距(上）"
+            },
+            "step": 5,
+            "type": "slider",
+            "field": "negativeMargin",
+            "default": 0,
+            "options": [],
+            "translate": 1
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Mask",
+              "zh-CN": "蒙板"
+            },
+            "type": "colorPicker",
+            "field": "maskColor",
+            "default": "",
+            "options": [],
+            "translate": 1
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "additionalSettings",
+        "name": {
+          "en": "Additional settings",
+          "zh-CN": "补充设置"
+        },
+        "elements": [
+          {
+            "field": "sectionAlias",
+            "name": {
+              "en": "sectionAlias"
+            },
+            "type": "hidden",
+            "default": "轮播图"
+          },
+          {
+            "field": "marginTop",
+            "name": {
+              "en": "marginTop"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "marginBottom",
+            "name": {
+              "en": "marginBottom"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "paddingTop",
+            "name": {
+              "en": "paddingTop"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "paddingBottom",
+            "name": {
+              "en": "paddingBottom"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "autoPlay",
+            "name": {
+              "en": "autoPlay"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "textColor",
+            "name": {
+              "en": "textColor"
+            },
+            "type": "hidden",
+            "default": ""
+          }
+        ]
+      }
+    ]
+  },
+  "data": {
+    "source": "none",
+    "contract": "theme.slideShow.v2"
+  }
+}

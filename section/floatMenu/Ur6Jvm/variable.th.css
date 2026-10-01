@@ -1,0 +1,31 @@
+[# th:each="o,stat: ${section.settings.custom}"]
+    [# th:if="${not #strings.isEmpty(o.background)}"]
+        .section-[[${ section.id }]] .[[${section.templateId}]]-item.[[${section.templateId}]]-[[${stat.index}]]  {
+            background: [[${ o.background }]];
+        }
+    [/]
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.skypeButton)}"]
+    .float-menu .float-menu-item.skype {
+        background-color: [[${ section.settings.skypeButton }]];
+    }
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.skypeButtonLabel)}"]
+    .float-menu .float-menu-item.skype label:before {
+        color: [[${ section.settings.skypeButtonLabel }]];
+    }
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.whatsappButton)}"]
+    .float-menu .float-menu-item.whatsapp {
+        background-color: [[${ section.settings.whatsappButton }]];
+    }
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.whatsappButtonLabel)}"]
+    .float-menu .float-menu-item.whatsapp label:before {
+        color: [[${ section.settings.whatsappButtonLabel }]];
+    }
+[/]

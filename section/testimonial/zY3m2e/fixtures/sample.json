@@ -1,0 +1,96 @@
+{
+  "section": {
+    "id": "1442051218289168385",
+    "componentKind": "section",
+    "type": "testimonial",
+    "templateId": "zY3m2e",
+    "runtimeVersion": 2,
+    "settings": {
+      "style": "top",
+      "column": "6",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Our teams",
+      "cardColor": "",
+      "marginTop": false,
+      "mobColumn": "12",
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "background": "",
+      "buttonLink": "",
+      "paddingTop": true,
+      "subheading": "this is a new beginning",
+      "wideScreen": false,
+      "buttonLabel": "LEARN MORE >",
+      "buttonStyle": "btn-outline-primary",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "marginBottom": false,
+      "sectionAlias": "人像卡",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "#f2f2f2",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "itemList": [
+        {
+          "image": "https://site-file.fomillesite.com/0/002/avatar.jpg",
+          "title": "Daisy Rodgers",
+          "subtitle": "Developer",
+          "describe": "We love the approachable format, and the fact that they chose to feature customers that users can really relate to.",
+          "link": ""
+        },
+        {
+          "image": "https://site-file.fomillesite.com/0/002/avatar.jpg",
+          "title": "Daisy Rodgers",
+          "subtitle": "Developer",
+          "describe": "We love the approachable format, and the fact that they chose to feature customers that users can really relate to.",
+          "link": ""
+        },
+        {
+          "image": "https://site-file.fomillesite.com/0/002/avatar.jpg",
+          "title": "Daisy Rodgers",
+          "subtitle": "Developer",
+          "describe": "We love the approachable format, and the fact that they chose to feature customers that users can really relate to.",
+          "link": ""
+        },
+        {
+          "image": "https://site-file.fomillesite.com/0/002/avatar.jpg",
+          "title": "Daisy Rodgers",
+          "subtitle": "Developer",
+          "describe": "We love the approachable format, and the fact that they chose to feature customers that users can really relate to.",
+          "link": ""
+        }
+      ],
+      "symbol": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

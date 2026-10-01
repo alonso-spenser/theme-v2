@@ -1,0 +1,75 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .section-title [class^=text-] {
+    color:[[${section.settings.textColor}]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.textColor) || section.settings.textWidth > 0}"]
+    .section-[[${ section.id }]] .section-title-divider {
+        [# th:if="${ section.settings.textWidth > 0 }"]
+            width: [[${section.settings.textWidth}]]%;
+        [/]
+    }
+    .section-[[${ section.id }]] .section-title-divider:after {
+        [# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+            border-color: [[${section.settings.textColor}]];
+        }
+        [/]
+    }
+[/]
+[# th:if="${section.settings.textWidth != null && section.settings.textWidth > 0}"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]] .section-title [class^=text-] {
+        width: [[${section.settings.textWidth}]]%;
+    }
+}
+[/]
+
+[# th:if="${section.settings.elementSpace != null && section.settings.elementSpace > 0}"]
+@media (max-width: 768px) {
+    .[[${ section.templateId }]]-panel {
+        padding-left: [[${section.settings.elementSpace}]]px!important;
+        padding-right: [[${section.settings.elementSpace}]]px!important;
+    }
+}
+[/]
+
+[# th:if="${section.settings.dividerWidth != null && section.settings.dividerWidth > 0}"]
+.section-[[${ section.id }]] .section-title .has-line:after, .section-[[${ section.id }]] .section-title img {
+    width: [[${section.settings.dividerWidth}]]%;
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.graphicColor)}"]
+    .section-[[${ section.id }]] .[[${ section.templateId }]]-hexagon .[[${ section.templateId }]]-heading {
+        color: [[${ section.settings.graphicColor }]];
+    }
+    .section-[[${ section.id }]] .[[${ section.templateId }]]-hexagon-border.active {
+        background-color: [[${ section.settings.graphicColor }]];
+    }
+    .section-[[${ section.id }]]  .[[${ section.templateId }]]-hexagon-border.active:before {
+        border-bottom-color: [[${ section.settings.graphicColor }]];
+    }
+    .section-[[${ section.id }]] .[[${ section.templateId }]]-hexagon-border.active:after {
+        border-top-color: [[${ section.settings.graphicColor }]];
+    }
+    @media (min-width: 960px) {
+        .section-[[${ section.id }]] .[[${ section.templateId }]]-hexagon.active:hover .[[${ section.templateId }]]-hexagon-border {
+            background-color: [[${ section.settings.graphicColor }]];
+        }
+        .section-[[${ section.id }]] .[[${ section.templateId }]]-hexagon.active:hover .[[${ section.templateId }]]-hexagon-border:before {
+            border-bottom-color: [[${ section.settings.graphicColor }]];
+        }
+        .section-[[${ section.id }]] .[[${ section.templateId }]]-hexagon.active:hover .[[${ section.templateId }]]-hexagon-border:after {
+            border-top-color: [[${ section.settings.graphicColor }]];
+        }
+    }
+[/]

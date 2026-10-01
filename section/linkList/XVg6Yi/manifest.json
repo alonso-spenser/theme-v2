@@ -1,0 +1,150 @@
+{
+  "protocolVersion": 2,
+  "componentKind": "section",
+  "type": "linkList",
+  "templateId": "XVg6Yi",
+  "runtimeVersion": 2,
+  "definitionVersion": 1,
+  "schemaVersion": 1,
+  "name": {
+    "zh-CN": "实用链接",
+    "en": "Helpful links"
+  },
+  "policy": {
+    "removable": true,
+    "duplicable": true,
+    "maxInstances": 0
+  },
+  "placement": {
+    "pages": [
+      "home",
+      "custom-page"
+    ],
+    "fixed": false,
+    "slots": [
+      "content"
+    ]
+  },
+  "data": {
+    "source": "none",
+    "contract": "theme.linkList.v2"
+  },
+  "editor": {
+    "groups": [
+      {
+        "id": "content",
+        "name": {
+          "zh-CN": "内容",
+          "en": "Content"
+        },
+        "elements": [
+          {
+            "type": "text",
+            "field": "heading",
+            "name": {
+              "zh-CN": "标题",
+              "en": "Heading"
+            },
+            "default": "Helpful links",
+            "translatable": true
+          },
+          {
+            "type": "colorPicker",
+            "field": "backgroundColor",
+            "name": {
+              "zh-CN": "背景色",
+              "en": "Background"
+            },
+            "default": "#dce1e1"
+          },
+          {
+            "type": "switch",
+            "field": "newWindow",
+            "name": {
+              "zh-CN": "新窗口打开",
+              "en": "Open in new window"
+            },
+            "default": true
+          },
+          {
+            "type": "repeater",
+            "field": "links",
+            "name": {
+              "zh-CN": "链接列表",
+              "en": "Links"
+            },
+            "default": [
+              {
+                "title": "Alumni Service Center",
+                "description": "Alumni with questions about SLB benefits or other HR related matters",
+                "label": "Explore",
+                "url": "https://alumni.slb.com"
+              },
+              {
+                "title": "MyAskHR",
+                "description": "Alumni residing in a country under US embargo",
+                "label": "Explore",
+                "url": "https://myaskhr.slb.com/external/portal.pl"
+              },
+              {
+                "title": "FAQ",
+                "description": "Frequently asked questions about the Alumni Service Center",
+                "label": "Explore",
+                "url": "https://www.slb.com/about/who-we-are/our-alumni/alumni-service-center-faq"
+              }
+            ],
+            "elements": [
+              {
+                "type": "text",
+                "field": "title",
+                "name": {
+                  "zh-CN": "标题",
+                  "en": "Title"
+                },
+                "default": ""
+              },
+              {
+                "type": "textarea",
+                "field": "description",
+                "name": {
+                  "zh-CN": "说明",
+                  "en": "Description"
+                },
+                "default": ""
+              },
+              {
+                "type": "text",
+                "field": "label",
+                "name": {
+                  "zh-CN": "链接文字",
+                  "en": "Link label"
+                },
+                "default": "Explore"
+              },
+              {
+                "type": "text",
+                "field": "url",
+                "name": {
+                  "zh-CN": "链接地址",
+                  "en": "URL"
+                },
+                "default": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "i18n": {
+    "rootFields": [
+      "heading"
+    ]
+  },
+  "render": {
+    "template": "section.th.html",
+    "style": "section.scss",
+    "variableStyle": "variable.th.css",
+    "script": "section.js"
+  }
+}

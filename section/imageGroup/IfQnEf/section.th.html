@@ -1,0 +1,81 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} ${#strings.isEmpty(section.settings.lineText) ? '' : ' has-line section-padding-top'} section-neighbor|">
+        <div th:class="|section-title ${section.settings.textAlign}|">
+            <h3 th:class="|${section.templateId}-line-text|" th:if="${not #strings.isEmpty(section.settings.lineText)}">
+                [[${section.settings.lineText}]]
+            </h3>
+            <p th:class="|${section.templateId}-since|" th:if="${not #strings.isEmpty(section.settings.subheading)}">
+                [[${section.settings.subheading}]]
+            </p>
+            <h3 class="text-heading" th:if="${not #strings.isEmpty(section.settings.heading)}" th:utext="${section.settings.heading}"></h3>
+        </div>
+    </div>
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} section-neighbor|" th:if="${section.settings.layout == 'list'}">
+        <div class="row row-gutter">
+            <div th:class="|col-md-${section.settings.column} col-${section.settings.mobColumn}|" th:each="o, salt:${ section.settings.collectionList }">
+                <div class="card section-card" th:if="${#strings.isEmpty(o.itemUrl)}">
+                    <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${not #strings.isEmpty(o.itemImage) && section.settings.imageVisible}">
+                        <img class="embed-responsive-item card-img-top lazy" th:src="|${o.itemImage}!1|" th:data-original="|${o.itemImage}|" th:alt="${o.itemHeading}">
+                    </div>
+                    <div class="card-body">
+                        <h3 th:if="${not #strings.isEmpty(o.itemHeading)}" class="text-content-heading" th:text="${o.itemHeading}"></h3>
+                        <p th:if="${section.settings.subtitleVisible && not #strings.isEmpty(o.itemSubheading)}" class="text-body" th:text="${#strings.length(o.itemSubheading) >= 150 ? #strings.substring(o.itemSubheading, 0, 150) : o.itemSubheading}"></p>
+                    </div>
+                </div>
+                <a th:href="|${o.itemUrl}|" th:if="${not #strings.isEmpty(o.itemUrl)}">
+                    <div class="card section-card">
+                        <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${not #strings.isEmpty(o.itemImage) && section.settings.imageVisible}">
+                            <img class="embed-responsive-item card-img-top lazy" th:src="|${o.itemImage}!1|" th:data-original="|${o.itemImage}|" th:alt="${o.itemHeading}">
+                        </div>
+                        <div class="card-body">
+                            <h3 th:if="${not #strings.isEmpty(o.itemHeading)}" class="text-content-heading" th:text="${o.itemHeading}"></h3>
+                            <p th:if="${section.settings.subtitleVisible && not #strings.isEmpty(o.itemSubheading)}" class="text-body" th:text="${#strings.length(o.itemSubheading) >= 150 ? #strings.substring(o.itemSubheading, 0, 150) : o.itemSubheading}"></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="slick section-neighbor" th:if="${section.settings.layout == 'slide'}">
+        <div
+            class="slick-arrow slick-next dots"
+            th:data-carousel-next="${ section.id }"></div>
+        <div
+            class="slick-arrow slick-prev dots"
+            th:data-carousel-prev="${ section.id }"></div>
+        <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+            <div class="slick-slider slick-slider-transect has-gutter"
+                 th:data-carousel="${ section.id }"
+                 data-delay="0"
+                 data-effect="slide"
+                 th:data-column="${ #numbers.formatInteger(12 / section.settings.column, 1,'POINT') }"
+                 th:data-mobile-column="${ #numbers.formatInteger(12 / section.settings.mobColumn, 1,'POINT') }"
+            >
+                <div class="slick-slide" th:each="o, salt:${ section.settings.collectionList }">
+                    <div class="card section-card" th:if="${#strings.isEmpty(o.itemUrl)}">
+                        <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${not #strings.isEmpty(o.itemImage) && section.settings.imageVisible}">
+                            <img class="embed-responsive-item card-img-top" th:src="|${o.itemImage}!1|" th:data-lazy="|${o.itemImage}|" th:alt="${o.itemHeading}">
+                        </div>
+                        <div class="card-body">
+                            <h3 th:if="${not #strings.isEmpty(o.itemHeading)}" class="text-content-heading" th:text="${o.itemHeading}"></h3>
+                            <p th:if="${section.settings.subtitleVisible && not #strings.isEmpty(o.itemSubheading)}" class="text-body" th:text="${#strings.length(o.itemSubheading) >= 150 ? #strings.substring(o.itemSubheading, 0, 150) : o.itemSubheading}"></p>
+                        </div>
+                    </div>
+                    <a th:href="|${o.itemUrl}|" th:if="${not #strings.isEmpty(o.itemUrl)}">
+                        <div class="card section-card">
+                            <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${not #strings.isEmpty(o.itemImage) && section.settings.imageVisible}">
+                                <img class="embed-responsive-item card-img-top" th:src="|${o.itemImage}!1|" th:data-lazy="|${o.itemImage}|" th:alt="${o.itemHeading}">
+                            </div>
+                            <div class="card-body">
+                                <h3 th:if="${not #strings.isEmpty(o.itemHeading)}" class="text-content-heading" th:text="${o.itemHeading}"></h3>
+                                <p th:if="${section.settings.subtitleVisible && not #strings.isEmpty(o.itemSubheading)}" class="text-body" th:text="${#strings.length(o.itemSubheading) >= 150 ? #strings.substring(o.itemSubheading, 0, 150) : o.itemSubheading}"></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

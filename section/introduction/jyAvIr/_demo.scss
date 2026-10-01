@@ -1,0 +1,53 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-jyAvIr{
+    background: #f7f7f7   ;
+    
+}
+
+
+
+
+    
+    .section-demo-jyAvIr .section-title-divider {
+        width: 100%;
+    }
+    
+    
+
+
+@media (min-width: 768px) {
+    .section-demo-jyAvIr .section-title [class^=text-] {
+        width: 100%;
+    }
+}
+
+
+
+.section-demo-jyAvIr .section-title .has-line:after, .section-demo-jyAvIr .section-title img {
+    width: 5%;
+}
+
+
+.section-demo-jyAvIr .card .text-content-heading{
+color: #ff0000;
+}
+
+
+.section-demo-jyAvIr .card{
+    background-color: #eaeab0;
+}
+
+
+.section-demo-jyAvIr .card .text-body{
+    color: #00ff00;
+}
+
+
+.section-demo-jyAvIr .card {
+    border-radius: 15px;
+}
+
+
+.section-demo-jyAvIr .card img {
+    height: 150px;
+}

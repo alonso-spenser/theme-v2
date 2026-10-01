@@ -1,0 +1,65 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} ${#strings.isEmpty(section.settings.lineText) ? '' : ' has-line section-padding-top'} section-neighbor|">
+        <div th:class="|section-title ${section.settings.textAlign}|">
+            <h3 th:class="|${section.templateId}-line-text|" th:if="${not #strings.isEmpty(section.settings.lineText)}">
+                [[${section.settings.lineText}]]
+            </h3>
+            <p th:class="|${section.templateId}-since|" th:if="${not #strings.isEmpty(section.settings.subheading)}">
+                [[${section.settings.subheading}]]
+            </p>
+            <h3 class="text-heading" th:if="${not #strings.isEmpty(section.settings.heading)}" th:utext="${section.settings.heading}"></h3>
+        </div>
+    </div>
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} section-neighbor|" th:if="${section.settings.layout == 'list'}">
+        <div class="row row-gutter">
+            <div th:class="|col-md-${section.settings.column} col-${section.settings.mobColumn}|" th:each="o, salt:${ section.data.collectionList }">
+                <a th:href="|${ site.urlPrefix }item/${o.seoUrl}|">
+                    <div class="card section-card">
+                        <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${not #strings.isEmpty(o.coverImage) && section.settings.imageVisible}">
+                            <img class="embed-responsive-item card-img-top lazy" th:src="|${o.coverImage}!1|" th:data-original="|${o.coverImage}|" th:alt="${o.title}">
+                        </div>
+                        <div class="card-body">
+                            <h3 th:if="${not #strings.isEmpty(o.title)}" class="text-content-heading" th:text="${o.title}"></h3>
+                            <p th:if="${section.settings.subtitleVisible && not #strings.isEmpty(o.subtitle)}" class="text-body" th:text="${#strings.length(o.subtitle) >= 150 ? #strings.substring(o.subtitle, 0, 150) : o.subtitle}"></p>
+                            <p th:if="${section.settings.timeVisible}" class="text-body" th:text="${#dates.format(new java.util.Date(o.createTime),'yyyy-MM-dd')}"></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="slick section-neighbor" th:if="${section.settings.layout == 'slide'}">
+        <div
+            class="slick-arrow slick-next dots"
+            th:data-carousel-next="${ section.id }"></div>
+        <div
+            class="slick-arrow slick-prev dots"
+            th:data-carousel-prev="${ section.id }"></div>
+        <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+            <div class="slick-slider slick-slider-transect has-gutter"
+                 th:data-carousel="${ section.id }"
+                 data-delay="0"
+                 data-effect="slide"
+                 th:data-column="${ #numbers.formatInteger(12 / section.settings.column, 1,'POINT') }"
+                 th:data-mobile-column="${ #numbers.formatInteger(12 / section.settings.mobColumn, 1,'POINT') }"
+            >
+                <div class="slick-slide" th:each="o, salt:${ section.data.collectionList }">
+                    <a th:href="|${ site.urlPrefix }item/${o.seoUrl}|">
+                        <div class="card section-card">
+                            <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${not #strings.isEmpty(o.coverImage) && section.settings.imageVisible}">
+                                <img class="embed-responsive-item card-img-top" th:src="|${o.coverImage}!1|" th:data-lazy="|${o.coverImage}|" th:alt="${o.title}">
+                            </div>
+                            <div class="card-body">
+                                <h3 th:if="${not #strings.isEmpty(o.title)}" class="text-content-heading" th:text="${o.title}"></h3>
+                                <p th:if="${section.settings.subtitleVisible && not #strings.isEmpty(o.subtitle)}" class="text-body" th:text="${#strings.length(o.subtitle) >= 150 ? #strings.substring(o.subtitle, 0, 150) : o.subtitle}"></p>
+                                <p th:if="${section.settings.timeVisible}" class="text-body" th:text="${#dates.format(new java.util.Date(o.createTime),'yyyy-MM-dd')}"></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

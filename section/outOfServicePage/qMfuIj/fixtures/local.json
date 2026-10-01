@@ -1,0 +1,47 @@
+{
+  "section": {
+    "id": "1410131328846417921",
+    "componentKind": "page-section",
+    "type": "outOfServicePage",
+    "templateId": "qMfuIj",
+    "runtimeVersion": 2,
+    "settings": {
+      "content": "We'll be here soon with our new awesome site, subscribe to be notified.",
+      "heading": "Coming Soon...",
+      "textColor": "#ff0000",
+      "subheading": "We're getting ready to launch",
+      "sectionAlias": "网站维护",
+      "backgroundSize": "",
+      "backgroundColor": "#ffff00",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.vqie2q-fit {
+	overflow: hidden;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.vqie2q-fit .vqie2q-content {
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+
+.vqie2q-content {
+	display: flex;
+	align-items: center;
+}
+
+.vqie2q-mask {
+	z-index: 2;
+}
+
+.vqie2q-mask img {
+	z-index: 1;
+}
+
+.vqie2q-mask:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 2;
+}
+
+.vqie2q video {
+	z-index: 1;
+}
+
+.vqie2q video:not(.active) {
+	opacity: 0;
+}
+
+@media (max-width: 768px) {
+	.vqie2q .col-md-6:not(.vqie2q-content) {
+		padding: 0;
+	}
+
+	.vqie2q .vqie2q-content {
+		padding: 0.75rem;
+	}
+
+	.vqie2q .order-2 {
+		order: 0;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

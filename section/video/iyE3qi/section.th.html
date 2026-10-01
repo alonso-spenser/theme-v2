@@ -1,0 +1,83 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div th:class="|text-${section.settings.textAlign} section-title section-neighbor|" th:if="${not #strings.isEmpty(section.settings.heading)
+            || not #strings.isEmpty(section.settings.subheading)
+            || not #strings.isEmpty(section.settings.content)
+            || section.settings.dividerWidth > 0
+            }"
+           >
+            <h3 class="text-heading" th:if="${ not #strings.isEmpty(section.settings.heading) }">
+                [[${ section.settings.heading }]]
+            </h3>
+
+            <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
+                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+            </div>
+
+            <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
+                [[${ section.settings.subheading }]]
+            </h5>
+            <ul th:class="|text-body break-word ${section.settings.symbol}|" th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                <th:block th:each="textLine,saltLine:${textLines}">
+                    <li th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                </th:block>
+            </ul>
+        </div>
+
+        <div class="row row-gutter section-neighbor" th:if="${ #strings.isEmpty(section.settings.elementLayout) || section.settings.elementLayout == 'tile' }">
+            <div th:class="|col-md-${ section.settings.column } col-${ section.settings.mobColumn }|" th:each="o,stat:${section.settings.videoList}">
+                <div class="card section-card">
+                    <div class="embed-responsive embed-responsive-video card-img-top">
+                        <iframe class="embed-responsive-item" allowfullscreen th:data-video="|${o.video}?autoplay=1&loop=1|" th:if="${ not #strings.isEmpty(o.video) }"></iframe>
+                        <div th:class="|embed-responsive-item ${ section.templateId }-mask|" th:data-play="${ section.templateId }">
+                            <img th:if="${ not #strings.isEmpty(o.poster) }" class="embed-responsive-item lazy" th:src="|${ o.poster}!1|" th:data-original="|${ o.poster }!${ section.settings.column }|">
+                            <div class="play-button small">
+                                <span class="filled-circle"></span>
+                                <span class="stroke-circle"></span>
+                                <span class="triangle custom-icon-triangle"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div th:class="|card-body ${section.settings.cardAlign}|" th:if="${ not #strings.isEmpty(o.videoTitle) || not #strings.isEmpty(o.videoDescribe) }">
+                        <h5 class="text-content-heading" th:if="${ not #strings.isEmpty(o.videoTitle) }">[[${ o.videoTitle }]]</h5>
+                        <p class="text-body" th:if="${ not #strings.isEmpty(o.videoDescribe) }">[[${ o.videoDescribe }]]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <th:block th:if="${ section.settings.elementLayout == 'vertical' }">
+            <div th:class="|row ${section.settings.verticalAlignment} section-neighbor ${ section.templateId }-vertical no-gutters|" th:each="o,stat:${section.settings.videoList}">
+                <div th:class="|col-md-6 ${ section.templateId }-content ${  section.settings.firstLayout == 'left' ? (stat.index % 2 == 0 ? 'order-2' : '') : (stat.index % 2 == 0 ? '' : 'order-2')}|">
+                    <div th:class="|section-padding-all ${ section.settings.cardAlign }|">
+                        <h5 class="text-content-heading" th:if="${ not #strings.isEmpty(o.videoTitle) }">[[${ o.videoTitle }]]</h5>
+                        <p class="text-body" th:if="${ not #strings.isEmpty(o.videoDescribe) }">[[${ o.videoDescribe }]]</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="embed-responsive embed-responsive-video">
+                        <iframe class="embed-responsive-item" allowfullscreen th:data-video="|${o.video}?autoplay=1&loop=1|" th:if="${ not #strings.isEmpty(o.video) }"></iframe>
+                        <div th:class="|embed-responsive-item ${ section.templateId }-mask|" th:data-play="${ section.templateId }">
+                            <img th:if="${ not #strings.isEmpty(o.poster) }" class="embed-responsive-item lazy" th:src="|${ o.poster}!1|" th:data-original="|${ o.poster }!${ section.settings.column }|">
+                            <div class="play-button small">
+                                <span class="filled-circle"></span>
+                                <span class="stroke-circle"></span>
+                                <span class="triangle custom-icon-triangle"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </th:block>
+
+        <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} section-neighbor|" th:if="${section.settings.buttonStyle != 'invisible' && not #strings.isEmpty(section.settings.buttonLabel)}">
+            <div th:class="|text-${section.settings.textAlign}|">
+                <button th:class="|btn ${ section.settings.buttonStyle }|" th:if="${#strings.isEmpty(section.settings.buttonLink) && section.settings.buttonStyle != 'invisible' && not #strings.isEmpty(section.settings.buttonLabel)}">[[${section.settings.buttonLabel}]]</button>
+                <a th:href="${section.settings.buttonLink}" th:class="|btn ${section.settings.buttonStyle}|" th:if="${not #strings.isEmpty(section.settings.buttonLink) && section.settings.buttonStyle != 'invisible' && not #strings.isEmpty(section.settings.buttonLabel)}">[[${section.settings.buttonLabel}]]</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

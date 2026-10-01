@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "theme.articleDetailPage.v2",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "collectionList": {
+      "type": [
+        "array"
+      ]
+    },
+    "page": {
+      "type": [
+        "object"
+      ]
+    }
+  }
+}

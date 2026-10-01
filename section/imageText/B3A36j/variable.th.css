@@ -1,0 +1,59 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.leftColor)}"]
+    .section-[[${ section.id }]] .row .left {
+         background-color: [[${ section.settings.leftColor }]];
+     }
+    @media (min-width: 768px) {
+        .section-[[${ section.id }]] .row:before {
+            background-color: [[${ section.settings.leftColor }]];
+        }
+    }
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.topBackground)}"]
+.section-[[${ section.id }]] .row .right:before{
+     background-color: [[${ section.settings.topBackground }]];
+ }
+@media (min-width: 768px) {
+    .section-[[${ section.id }]] .row:after {
+         background-color: [[${ section.settings.topBackground }]];
+     }
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.bottomBackground)}"]
+.section-[[${ section.id }]] .row .right:after{
+     background-color: [[${ section.settings.bottomBackground }]];
+ }
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.subColor)}"]
+.section-[[${ section.id }]] .text-label{
+    color: [[${ section.settings.subColor }]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.headingColor) || not #strings.isEmpty(section.settings.dividerColor)}"]
+.section-[[${ section.id }]] .text-heading{
+    [# th:if="${not #strings.isEmpty(section.settings.headingColor)}"]
+        color: [[${ section.settings.headingColor }]];
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.dividerColor)}"]
+        border-color: [[${ section.settings.dividerColor }]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.contentColor)}"]
+.section-[[${ section.id }]] .text-body{
+     color: [[${ section.settings.contentColor }]];
+}
+[/]

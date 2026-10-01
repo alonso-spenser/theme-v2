@@ -1,0 +1,26 @@
+.UFF3Iz .media {
+	padding: 1.75rem;
+	background-color: #fff;
+	flex-direction: row;
+}
+
+.UFF3Iz .embed-responsive {
+	width: 3.125rem;
+	margin-right: 1rem;
+}
+
+.UFF3Iz .text-button {
+	margin-top: 0.75rem;
+}
+
+@media (max-width: 768px) {
+	.UFF3Iz .media {
+		padding: 0.75rem;
+	}
+
+	.UFF3Iz .btn {
+		width: auto;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

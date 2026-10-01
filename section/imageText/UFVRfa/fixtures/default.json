@@ -1,0 +1,48 @@
+{
+  "section": {
+    "id": "1693452884401934338",
+    "componentKind": "section",
+    "type": "imageText",
+    "templateId": "UFVRfa",
+    "runtimeVersion": 2,
+    "settings": {
+      "background": "",
+      "imageScale": "5by4",
+      "wideScreen": false,
+      "firstLayout": "left",
+      "sectionAlias": "图文组",
+      "serialNumber": true,
+      "imagePercentage": "6",
+      "imageList": [],
+      "marginTop": "",
+      "marginBottom": "",
+      "contentBackground": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

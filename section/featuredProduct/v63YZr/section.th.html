@@ -1,0 +1,56 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+		<div class="row row-gutter">
+			<th:block th:each="o,salt:${section.data.collectionList}">
+                <div th:class="|col-md-${ section.settings.firstLine && salt.index == 0 ? 12 :section.settings.column} col-${section.settings.mobColumn}|">
+                     <a th:href="|${ site.urlPrefix }item/${o.seoUrl}|">
+                    <div th:class="|card related-card first-line ${section.settings.imageLayout}${ section.settings.cardShadow ? '' : ' no-shadow'}|" th:if="${section.settings.firstLine && salt.index == 0}">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="card-body">
+                                    <div class="card-body-content">
+                                        <h3 class="text-content-heading">
+                                            [[${o.title}]]
+                                        </h3>
+                                        <p class="text-body" th:if="section.settings.subtitleVisible == true">
+                                            [[${o.subtitle}]]
+                                        </p>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div th:class="|embed-responsive embed-responsive-${section.settings.firstScale}|">
+                                    <img class="embed-responsive-item lazy" th:src="|${o.coverImage}!1|" th:data-original="${o.coverImage}" th:alt="${o.title}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div th:class="|card ${ section.settings.cardShadow ? '' : ' no-shadow'}|" th:if="${!(section.settings.firstLine && salt.index == 0)}">
+                        <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${section.settings.imageLayout == 'top'}">
+                            <img class="embed-responsive-item lazy card-img-top" th:src="|${o.coverImage}!1|" th:data-original="${o.coverImage}" th:alt="${o.title}">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="text-content-heading">
+                                [[${o.title}]]
+                            </h3>
+                            <p class="text-body" th:if="section.settings.subtitleVisible == true">
+                                [[${o.subtitle}]]
+                            </p>
+                          
+                            <a th:href="|${ site.urlPrefix }item/${o.seoUrl}|" th:if="${section.settings.imageLayout == 'bottom'}">
+                                <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
+                                    <img class="embed-responsive-item lazy" th:src="|${o.coverImage}!1|" th:data-original="${o.coverImage}" th:alt="${o.title}">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+			</th:block>
+		</div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

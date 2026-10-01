@@ -1,0 +1,294 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+	    <div class="row">
+		    <div th:class="|col-md-${section.settings.slideWidth} ${ section.templateId }-side ${section.settings.slideLayout == 'right' ? 'order-md-2' : ''}|">
+			    <h5 class="text-content-heading" th:if="${not #strings.isEmpty(section.settings.catalogHeading)}">
+				    [[${section.settings.catalogHeading}]]
+			    </h5>
+			    <ul th:class="|${ section.templateId }-catalog FBj26f-section|">
+				    <li th:each="o,salt:${section.settings.catalogList}" th:class="${o.catalogActive == 'yes' ? 'active' : ''}">
+					    <a th:href="${o.catalogLink}">
+						    [[${o.catalogLabel}]]
+					    </a>
+				    </li>
+			    </ul>
+
+                <div class="FBj26f-section" style="padding: 4rem 2rem; background-color: #ff0000; color: #fff;" th:if="${ params.designMode && (section.data.formData != null && #strings.isEmpty(section.data.formData.id)) }">
+                    <h3>请选择询盘表单</h3>
+                    <h3>Please select a inquiry form</h3>
+                </div>
+			    <div class="text-content-heading FBj26f-section" th:if="${ section.data.formData != null && not #strings.isEmpty(section.data.formData.id) }">
+			        [[${section.data.formData.title}]]
+			    </div>
+			    <div class="FBj26f-section" th:if="${ section.data.formData != null && not #strings.isEmpty(section.data.formData.id) }">
+                    <form th:class="|enquiry-form ${section.settings.formStyle}|" th:data-inquiry-form="${section.data.formData.id}" novalidate="" th:if="${section.data.formData != null && not #strings.isEmpty(section.data.formData.id)}">
+                        <div
+                        th:each="o,saltField:${section.data.formData.fieldList}"
+                        th:class="|${o.fieldType == 'heading' ? 'inquiry-form-heading' : 'form-group'}|"
+                        th:with="holderLabel=${ not #strings.isEmpty(o.placeholder) ? o.placeholder: o.fieldLabel},placeholder=${section.settings.placeholder == false ? '' : #strings.isEmpty(o.placeholder)? o.fieldLabel : o.placeholder}"
+                        >
+                            <p class="form-label mb-1" th:if="${section.settings.enableTitle && !(o.fieldType == 'checkbox' || o.fieldType == 'radio' || o.fieldType == 'heading')}">
+                                [[${o.fieldLabel}]]
+                            </p>
+                            <h3 th:class="|text-content-heading ${#strings.isEmpty(section.settings.formHeadingAlign) ? 'text-left' : section.settings.formHeadingAlign}|" th:if="${o.fieldType == 'heading'}">
+                                [[${o.fieldLabel}]]
+                            </h3>
+                            <th:block th:if="${o.fieldType == 'textarea'}">
+                                <textarea rows="4" class="form-control" th:placeholder="${placeholder}" type="text"
+                                th:name="${o.fieldLabel}"
+                                th:data-field="${o.fieldName}"
+                                th:required="${o.required == 0 ? 'required' : 'false'}"></textarea>
+                            </th:block>
+
+
+                            <th:block th:if="${o.fieldType == 'file'}">
+                                <div class="file-upload">
+                                    <div class="file-upload-placeholder">
+                                        <th:block th:text="${holderLabel}"></th:block>
+                                        <input type="file" class="form-control" accept=".zip,.rar,.7z">
+                                    </div>
+
+                                    <div class="file-upload-selected">
+                                        <label class="close"></label>
+                                        <p></p>
+                                    </div>
+                                    <small>
+                                        zip  / rar / 7z
+                                    </small>
+                                </div>
+                            </th:block>
+
+                            <th:block th:if="${o.fieldType == 'select'}">
+                                <select th:name="${o.fieldLabel}" th:data-field="${o.fieldName}" th:type="${o.fieldType}" class="form-control">
+                                  <th:block th:each="option,salt:${o.optionList}">
+                                    <option th:selected="${option.checked ? 'selected' : 'false'}">[[${option.value}]]</option>
+                                  </th:block>
+                                </select>
+                            </th:block>
+                            <th:block th:if="${o.fieldType == 'countryRegion'}">
+                                <select th:name="${o.fieldLabel}" th:data-field="${o.fieldName}" th:type="${o.fieldType}" class="form-control">
+                                    <option>[[${o.placeholder}]]</option>
+                                </select>
+                            </th:block>
+                            <th:block th:if="${o.fieldType == 'radio' || o.fieldType == 'checkbox'}">
+                                <div class="inquiry-form-group">
+                                    <p class="form-label mb-1">[[${o.fieldLabel}]]</p>
+                                    <th:block th:each="option,salt:${o.optionList}">
+                                    <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                            <input class="form-check-input" th:checked="${option.checked ? 'checked' : 'false'}" th:type="${o.fieldType}"
+                                                   th:name="|form-check-${saltField.index}|" th:value="${option.value}">
+                                            [[${option.value}]]
+                                            </label>
+                                    </div>
+                                    </th:block>
+                                </div>
+                            </th:block>
+
+                            <th:block th:if="${o.fieldType != 'file' &&
+                              o.fieldType != 'textarea' &&
+                              o.fieldType != 'select' &&
+                              o.fieldType != 'radio' &&
+                              o.fieldType != 'checkbox' &&
+                              o.fieldType != 'heading' &&
+                              o.fieldType != 'countryRegion'
+                            }">
+                                <input th:placeholder="${placeholder}"
+                                       th:name="${o.fieldLabel}"
+                                       th:data-field="${o.fieldName}"
+                                       th:type="${o.fieldType}"
+                                       th:required="${o.required == 0 ? 'required' : 'false'}" class="form-control">
+                            </th:block>
+                        </div>
+
+                        <div class="enquiry-dialog-footer">
+                            <button type="submit" class="btn btn-primary" th:text="${section.data.formData.buttonLabel}"></button>
+                        </div>
+                    </form>
+			    </div>
+		    </div>
+		    <div th:class="|col-md-${#numbers.formatInteger(12 - section.settings.slideWidth, 1,'POINT')}|">
+			    <img th:src="|${section.settings.image}!1|"
+			        th:data-original="${section.settings.image}"
+			        th:alt="${not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading}"
+			        class="FBj26f-cover lazy FBj26f-section border-radius"
+			        th:if="${not #strings.isEmpty(section.settings.image)}">
+			    <h3 class="text-heading FBj26f-section" th:if="${not #strings.isEmpty(section.settings.heading)}">
+			        [[${ section.settings.heading }]]
+			    </h3>
+			    <div class="FBj26f-section" th:if="${not #strings.isEmpty(section.settings.subheading) || not #strings.isEmpty(section.settings.content)}">
+				    <h5 class="text-subheading" th:if="${not #strings.isEmpty(section.settings.subheading)}">[[${ section.settings.subheading }]]</h5>
+                    <th:block th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                        <th:block th:each="textLine,saltLine:${textLines}">
+                            <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                        </th:block>
+                    </th:block>
+			    </div>
+
+			    <div class="FBj26f-section" th:if="${not #lists.isEmpty(section.settings.p2List)}">
+                    <th:block th:each="o,salt:${section.settings.p2List}">
+                        <h5 class="text-content-heading" th:if="${not #strings.isEmpty(o.p2Heading)}">
+                            [[${o.p2Heading}]]
+                        </h5>
+                        <p class="text-body" th:if="${not #strings.isEmpty(o.p2Heading)}">
+                            [[${o.p2Content}]]
+                        </p>
+                    </th:block>
+			    </div>
+
+			    <div class="FBj26f-section" th:if="${not #strings.isEmpty(section.settings.p3Image) ||
+			                not #strings.isEmpty(section.settings.p3Heading) ||
+			                not #strings.isEmpty(section.settings.p3Content) ||
+			                not #strings.isEmpty(section.settings.p31Heading) ||
+			                not #strings.isEmpty(section.settings.p31Content)
+			                }">
+				    <div class="row">
+					    <div class="col-md-6">
+						    <div th:class="|embed-responsive embed-responsive-${section.settings.p3Scale} border-radius|">
+							    <img th:src="|${section.settings.p3Image}!1|"
+							        th:data-original="${section.settings.p3Image}"
+							        th:alt="${not #strings.isEmpty(section.settings.p3Alt) ? section.settings.p3Alt : section.settings.p3Heading}"
+							        class="embed-responsive-item lazy"
+							        th:if="${not #strings.isEmpty(section.settings.p3Image)}">
+						    </div>
+					    </div>
+					    <div class="col-md-6">
+						    <h5 class="text-content-heading" th:if="${not #strings.isEmpty(section.settings.p3Heading)}">
+						        [[${ section.settings.p3Heading }]]
+						    </h5>
+                            <th:block th:if="${not #strings.isEmpty(section.settings.p3Content)}" th:with="textLines = ${#strings.listSplit(section.settings.p3Content,'\n')}">
+                                <th:block th:each="textLine,saltLine:${textLines}">
+                                    <p th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                                </th:block>
+                            </th:block>
+						    <h5 class="text-content-heading" th:if="${not #strings.isEmpty(section.settings.p31Heading)}">
+						        [[${ section.settings.p31Heading }]]
+						    </h5>
+						    <p class="text-body" th:if="${not #strings.isEmpty(section.settings.p31Content)}">
+						        [[${ section.settings.p31Content }]]
+						    </p>
+					    </div>
+				    </div>
+			    </div>
+
+			    <div class="FBj26f-section" th:if="${not #lists.isEmpty(section.settings.p4List)}">
+				    <div class="row row-gutter">
+					    <div th:class="|col-md-${section.settings.p4Column == null ? '3' : section.settings.p4Column} col-${section.settings.p4MobColumn == null ? '12' : section.settings.p4MobColumn}|" th:each="o,salt:${section.settings.p4List}">
+						    <div th:class="|card card-p4 ${o.p4Active ? 'active' :''}|">
+							    <div class="card-body text-center">
+                                    <img th:src="|${o.p4Icon}!1|"
+                                        th:data-original="${o.p4Icon}"
+                                        th:if="${not #strings.isEmpty(o.p4Icon)}"
+                                        th:alt="${not #strings.isEmpty(o.p4Alt) ? o.p4Alt : o.p4Heading}">
+								    <h5 class="text-content-heading" th:if="${not #strings.isEmpty(o.p4Heading)}">
+									    [[${o.p4Heading}]]
+								    </h5>
+								    <p class="text-body" th:if="${not #strings.isEmpty(o.p4Content)}">
+								        [[${o.p4Content}]]
+								    </p>
+							    </div>
+						    </div>
+					    </div>
+				    </div>
+			    </div>
+
+			    <div class="FBj26f-section" th:if="${not #lists.isEmpty(section.settings.p5List)}">
+                    <th:block th:each="o,salt:${section.settings.p5List}">
+                        <h5 class="text-content-heading" th:if="${not #strings.isEmpty(o.p5Heading)}">
+                            [[${o.p5Heading}]]
+                        </h5>
+                        <p class="text-body" th:if="${not #strings.isEmpty(o.p5Content)}">
+                            [[${o.p5Content}]]
+                        </p>
+                    </th:block>
+			    </div>
+
+			    <div class="FBj26f-section" th:if="${not #lists.isEmpty(section.settings.p6List)}">
+				    <div class="row row-gutter">
+					    <div th:class="|col-md-${section.settings.p6Column == null ? '6' : section.settings.p6Column} col-${section.settings.p6MobColumn == null ? '6' : section.settings.p6MobColumn}|" th:each="o,salt:${section.settings.p6List}">
+					        <a th:href="${o.p6Link}" class="text-p6" th:if="${not #strings.isEmpty(o.p6Link)}">
+                                <div th:class="|embed-responsive border-radius embed-responsive-${section.settings.p6Scale}|">
+                                    <img th:src="|${o.p6Image}!1|"
+                                        th:data-original="${o.p6Image}"
+                                        th:alt="${section.settings.p6Alt}"
+                                        th:if="${o.p6Image}"
+                                        class="embed-responsive-item lazy" >
+                                </div>
+						    </a>
+						    <div th:class="|embed-responsive text-p6 border-radius embed-responsive-${section.settings.p6Scale}|" th:if="${#strings.isEmpty(o.p6Link)}">
+                                <img th:src="|${o.p6Image}!1|"
+                                    th:data-original="${o.p6Image}"
+                                    th:alt="${section.settings.p6Alt}"
+                                    th:if="${o.p6Image}"
+                                    class="embed-responsive-item lazy" >
+						    </div>
+                            <p class="text-body" th:if="${not #strings.isEmpty(o.p6Heading)}">
+                                [[${o.p6Heading}]]
+                            </p>
+					    </div>
+				    </div>
+			    </div>
+
+			    <div class="FBj26f-section" th:if="${not #lists.isEmpty(section.settings.p7List)}">
+                    <th:block th:each="o,salt:${section.settings.p7List}">
+                        <h5 class="text-content-heading" th:if="${not #strings.isEmpty(o.p7Heading)}">
+                            [[${o.p7Heading}]]
+                        </h5>
+                        <p class="text-body" th:if="${not #strings.isEmpty(o.p7Content)}">
+                            [[${o.p7Content}]]
+                        </p>
+                    </th:block>
+			    </div>
+
+                <div class="FBj26f-section" th:if="${not #lists.isEmpty(section.settings.p8List)}">
+                    <div class="row row-gutter ">
+                        <div class="col-md-6" th:each="o,salt:${section.settings.p8List}">
+                            <div th:class="|media media-p8 ${o.p8Active ? 'active' :''}|">
+                                <div class="media-icon" th:if="${not #strings.isEmpty(o.p8Icon)}">
+						            <img th:src="|${o.p8Icon}!1|"
+						                th:data-original="${o.p8Icon}"
+						                class="lazy"
+						                th:if="${not #strings.isEmpty(o.p8Icon)}"
+						                th:alt="${not #strings.isEmpty(o.p8Alt) ? o.p8Alt : o.p8Heading}">
+                                </div>
+                                <div class="media-body" th:if="${not #strings.isEmpty(o.p8Heading) || not #strings.isEmpty(o.p8Content)}">
+                                    <h5 class="text-content-heading" th:if="${not #strings.isEmpty(o.p8Heading)}">
+                                        [[${o.p8Heading}]]
+                                    </h5>
+                                    <p class="text-body" th:if="${not #strings.isEmpty(o.p8Content)}">
+                                        [[${o.p8Content}]]
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+			    <div class="FBj26f-section" th:if="${not #lists.isEmpty(section.settings.p9List)}">
+                    <th:block th:each="o,salt:${section.settings.p9List}">
+                        <h5 class="text-content-heading" th:if="${not #strings.isEmpty(o.p9Heading)}">
+                            [[${o.p9Heading}]]
+                        </h5>
+                        <p class="text-body" th:if="${not #strings.isEmpty(o.p9Content)}">
+                            [[${o.p9Content}]]
+                        </p>
+                    </th:block>
+			    </div>
+
+			    <div class="FBj26f-section" th:if="${not #lists.isEmpty(section.settings.p10List)}">
+				    <div th:class="|${ section.templateId }-faq  ${salt.index == 0 ? 'active' : ''}|" th:each="o,salt:${section.settings.p10List}">
+                       <h5 class="text-content-heading" th:if="${not #strings.isEmpty(o.p10Heading)}">
+                            [[${o.p10Heading}]]
+                        </h5>
+                        <p class="text-body" th:if="${not #strings.isEmpty(o.p10Content)}">
+                            [[${o.p10Content}]]
+                        </p>
+				    </div>
+			    </div>
+		    </div>
+	    </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

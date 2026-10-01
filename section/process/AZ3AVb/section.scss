@@ -1,0 +1,67 @@
+.AZ3AVb .AZ3AVb-item {
+	position: relative;
+	padding-right: 2rem;
+	padding-left: 2rem;
+}
+
+.AZ3AVb .AZ3AVb-item .embed-responsive {
+	overflow: visible;
+}
+
+.AZ3AVb .AZ3AVb-item .AZ3AVb-text {
+	text-align: center;
+	margin-top: 10px;
+	word-wrap: break-word;
+	word-break: break-word;
+}
+
+.AZ3AVb .AZ3AVb-item .AZ3AVb-tran {
+	position: absolute;
+	right: -3rem;
+	top: 0;
+	width: 2rem;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+
+.AZ3AVb .AZ3AVb-item .AZ3AVb-tran img {
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	.AZ3AVb .AZ3AVb-item .AZ3AVb-tran {
+		display: none;
+	}
+
+	.AZ3AVb .AZ3AVb-item .embed-responsive {
+		width: 50%;
+		margin: auto;
+	}
+
+	.AZ3AVb .AZ3AVb-item:not(:last-child) {
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 1.5rem;
+		position: relative;
+		margin-bottom: 2.8125rem !important;
+	}
+
+	.AZ3AVb .AZ3AVb-item:not(:last-child):before {
+		position: absolute;
+		bottom: -20px;
+		left: calc(50% - 20px);
+		content: '';
+		font-size: 0;
+		line-height: 0;
+		border-width: 20px;
+		border-color: #ccc;
+		border-bottom-width: 0;
+		border-style: dashed;
+		border-top-style: solid;
+		border-left-color: transparent;
+		border-right-color: transparent;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

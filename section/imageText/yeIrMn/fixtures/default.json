@@ -1,0 +1,74 @@
+{
+  "section": {
+    "id": "1441346092855431170",
+    "componentKind": "section",
+    "type": "imageText",
+    "templateId": "yeIrMn",
+    "runtimeVersion": 2,
+    "settings": {
+      "layout": "left",
+      "symbol": "normal",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Title with button",
+      "autoPlay": "5000",
+      "marginTop": false,
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "buttonLink": "",
+      "guidGutter": true,
+      "imageScale": "5by4",
+      "paddingTop": true,
+      "percentage": "6",
+      "subheading": "this is a new beginning",
+      "wideScreen": false,
+      "buttonLabel": "Button label",
+      "buttonStyle": "invisible",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 15,
+      "marginBottom": false,
+      "sectionAlias": "图文[标准]",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "carouselNavStyle": "dark",
+      "secondButtonLink": "",
+      "contentBackground": "",
+      "secondButtonLabel": "Button",
+      "secondButtonStyle": "invisible",
+      "backgroundPosition": "",
+      "carouselArrowStyle": "dark",
+      "imageList": [],
+      "carouselEffect": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

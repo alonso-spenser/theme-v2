@@ -1,0 +1,96 @@
+.Iv2aYb .card-header {
+	position: relative;
+	background-color: #1F242C;
+	padding: 3.375rem 1.25rem 2.75rem 2.8125rem;
+}
+
+@media (max-width: 768px) {
+	.Iv2aYb .card-header {
+		padding: 2.7rem 1rem 2.2rem 2.25rem;
+	}
+}
+
+.Iv2aYb .card-header.active {
+	background-color: var(--colorTheme);
+}
+
+.Iv2aYb .card-header.active .price {
+	color: #fff;
+}
+
+.Iv2aYb .card-header .price {
+	font-size: 3rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	line-height: 1em;
+	color: var(--colorTheme);
+	font-family: var(--typeHeading);
+}
+
+@media (max-width: 768px) {
+	.Iv2aYb .card-header .price {
+		font-size: 2.4rem;
+	}
+}
+
+.Iv2aYb .card-header .unit {
+	font-size: 1.5rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	line-height: 1em;
+	color: #fff;
+}
+
+@media (max-width: 768px) {
+	.Iv2aYb .card-header .unit {
+		font-size: 1.2rem;
+	}
+}
+
+.Iv2aYb .number-order {
+	font-weight: 400;
+	text-transform: uppercase;
+	color: transparent;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: rgba(255, 255, 255, 0.24);
+	white-space: nowrap;
+	position: absolute;
+	right: 1.625rem;
+	font-size: 3.75rem;
+	line-height: 3.75rem;
+	top: 50%;
+	transform: translateY(-50%);
+	font-family: Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@media (max-width: 768px) {
+	.Iv2aYb .number-order {
+		right: 1.3rem;
+		font-size: 3rem;
+		line-height: 3rem;
+	}
+}
+
+.Iv2aYb .card-body {
+	padding: 2.25rem 3.5rem;
+}
+
+@media (max-width: 768px) {
+	.Iv2aYb .card-body {
+		padding: 1.8rem 2.8rem;
+	}
+}
+
+.Iv2aYb .card-body li {
+	padding-bottom: 0.25rem;
+	padding-top: 0.25rem;
+}
+
+@media (min-width: 768px) {
+	.Iv2aYb .text-neighbor .btn {
+		width: 90%;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

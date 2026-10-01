@@ -1,0 +1,120 @@
+{
+  "section": {
+    "id": "1441648089248714753",
+    "componentKind": "section",
+    "type": "imageGroup",
+    "templateId": "fErUva",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "3",
+      "gutter": true,
+      "layout": "slide",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Title with button",
+      "marginTop": false,
+      "mobColumn": "6",
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "buttonLink": "",
+      "imageScale": "1by1",
+      "paddingTop": true,
+      "subheading": "this is a new beginning",
+      "wideScreen": true,
+      "buttonLabel": "Button",
+      "buttonStyle": "invisible",
+      "contentAlign": "text-center",
+      "contentColor": "blue",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "marginBottom": false,
+      "overlayColor": "rgba(0,138,24,0.6)",
+      "overlayStyle": "slide",
+      "sectionAlias": "图片墙",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "#f2f2f2",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "secondButtonLink": "",
+      "secondButtonLabel": "Button",
+      "secondButtonStyle": "invisible",
+      "backgroundPosition": "",
+      "imageList": [
+        {
+          "image": "/preview-assets/images/8.jpg",
+          "alt": "",
+          "link": "/page/rice-solutions#Rice Solutions",
+          "describe": "The color sorter helps farmers to realize the intelligent processing of rice production, improve the quality of grain, and realize double income.",
+          "title": "Cooperation case of rice processing"
+        },
+        {
+          "image": "/preview-assets/images/8.jpg",
+          "alt": "",
+          "link": "/page/coffee-beans-solutions#Coffee Beans Solutions",
+          "describe": "Broken, defective, burnt, light-colored coffee beans and impurities can be sorted to improve the quality of coffee beans.",
+          "title": "Cooperation case of coffee bean processing"
+        },
+        {
+          "image": "/preview-assets/images/8.jpg",
+          "alt": "",
+          "link": "/page/nut-solutions#Nut Solutions ",
+          "describe": "After purchasing the machine, the factory from a single walnut processing development to processing walnuts, almonds, pistachios and other dozens of nuts.",
+          "title": "Cooperation case of nut processing"
+        },
+        {
+          "image": "/preview-assets/images/8.jpg",
+          "alt": "",
+          "link": "/page/rice-solutions#Rice Solutions",
+          "describe": "The color sorter helps farmers to realize the intelligent processing of rice production, improve the quality of grain, and realize double income.",
+          "title": "Cooperation case of rice processing"
+        },
+        {
+          "image": "/preview-assets/images/8.jpg",
+          "alt": "",
+          "link": "/page/coffee-beans-solutions#Coffee Beans Solutions",
+          "describe": "Broken, defective, burnt, light-colored coffee beans and impurities can be sorted to improve the quality of coffee beans.",
+          "title": "Cooperation case of coffee bean processing"
+        },
+        {
+          "image": "/preview-assets/images/8.jpg",
+          "alt": "",
+          "link": "/page/nut-solutions#Nut Solutions ",
+          "describe": "After purchasing the machine, the factory from a single walnut processing development to processing walnuts, almonds, pistachios and other dozens of nuts.",
+          "title": "Cooperation case of nut processing"
+        }
+      ],
+      "symbol": "",
+      "carouselArrowStyle": "",
+      "carouselNavStyle": "",
+      "carouselAutoPlay": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

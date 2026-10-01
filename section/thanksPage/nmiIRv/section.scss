@@ -1,0 +1,19 @@
+.nmiIRv-container {
+	text-align: center;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+
+@media (max-width: 768px) {
+	.nmiIRv-container {
+		padding-top: 3.75rem;
+		padding-bottom: 3.75rem;
+	}
+}
+
+.nmiIRv-container i {
+	color: #28a745;
+	font-size: 5rem;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

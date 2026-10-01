@@ -1,0 +1,81 @@
+{
+  "section": {
+    "id": "1410131329974685698",
+    "componentKind": "page-section",
+    "type": "passportPage",
+    "templateId": "Mjmyyi",
+    "runtimeVersion": 2,
+    "settings": {
+      "logo": "",
+      "marginTop": false,
+      "paddingTop": true,
+      "wideScreen": false,
+      "marginBottom": false,
+      "sectionAlias": "通行证",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "imageList": []
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "code": "Code",
+    "lang": "英语",
+    "next": "Next",
+    "tips": "By logging in with a third party, it means you have read and agreed with our Privacy Policy , and Terms of Service. We will use information provided by the third party you chose to register or log in with.",
+    "iAgree": "I agree",
+    "submit": "Submit",
+    "getACode": "GET A CODE",
+    "lastName": "Last Name",
+    "firstName": "First Name",
+    "forgotten": "Forgotten your password?",
+    "loginTitle": "Log in",
+    "backToLogIn": "Back to log in",
+    "changeTitle": "Change your password",
+    "forgetTitle": "Change your password",
+    "loginButton": "LOG IN",
+    "loginFailed": "Login failed",
+    "orLogInWith": "Or log in with",
+    "loginAccount": "Email address",
+    "loginPassword": "Password",
+    "privacyPolicy": "Privacy Policy",
+    "receiveLatest": "I agree to receive latest news, promotion and product information.",
+    "registerTitle": "Register",
+    "wrongPassword": "Wrong password",
+    "codeHasExpired": "Code has expired",
+    "termsOfService": "Terms of Service",
+    "useGoogleLogin": "use google login",
+    "accountNotExist": "Account doesn't exist",
+    "confirmPassword": "Confirm new password *",
+    "createAnAccount": "Create an account",
+    "loginAccountMsg": "Please Enter Email",
+    "loginPasswordMsg": "Please Enter Password",
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

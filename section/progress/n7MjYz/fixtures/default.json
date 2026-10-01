@@ -1,0 +1,50 @@
+{
+  "section": {
+    "id": "1442027193986945026",
+    "componentKind": "section",
+    "type": "progress",
+    "templateId": "n7MjYz",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "3",
+      "loopSize": 49,
+      "marginTop": false,
+      "background": "",
+      "paddingTop": true,
+      "wideScreen": false,
+      "activeColor": "",
+      "borderWidth": 0,
+      "marginBottom": false,
+      "sectionAlias": "环状派",
+      "paddingBottom": true,
+      "backgroundColor": "",
+      "pieList": []
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

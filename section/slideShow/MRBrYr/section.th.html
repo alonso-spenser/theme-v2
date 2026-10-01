@@ -1,0 +1,43 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|slick ${ section.templateId }-container|" th:with="hasDot = ${ #lists.size(section.settings.itemList) > 1 }">
+        <div th:class="|slick-arrow slick-next ${section.settings.arrowStyle} ${hasDot  ? 'dots' : ''}|" th:data-carousel-next="${ section.id }" th:if="${ section.settings.arrowStyle != 'invisible' && hasDot}"></div>
+        <div th:class="|slick-arrow slick-prev ${section.settings.arrowStyle} ${hasDot  ? 'dots' : ''}|" th:data-carousel-prev="${ section.id }" th:if="${ section.settings.arrowStyle != 'invisible' && hasDot}"></div>
+        <div class="|slick-slider slick-slider-transect has-gutter"
+             th:data-carousel="${ section.id }"
+             th:data-dots="${hasDot ? 1 : 0}"
+             th:data-arrow="${hasDot ? 1 : 0}"
+             th:data-column="1"
+             th:data-mobile-column="1"
+             th:data-delay="${section.settings.autoPlay}"
+        >
+            <div th:class="|slick-slide slick-slide-${salt.index}|" th:each="o, salt:${ section.settings.itemList }">
+                <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+                    <div class="row" th:with="alt = ${ not #strings.isEmpty(o.alt) ? o.alt : not #strings.isEmpty(o.heading) ? o.heading : '' }">
+                        <div th:class="|col-md-${ #numbers.formatInteger(12 - section.settings.contentWidth, 1,'POINT') }${ o.imageLayout == 'right' ? ' order-md-2' : '' }|">
+                            <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale} d-md-block d-none|">
+                                <img class="embed-responsive-item lazy" th:src="|${ o.image }!1|" th:data-lazy="${ o.image }" th:alt="${alt}" th:if="${ not #strings.isEmpty(o.image) }">
+                            </div>
+                            <img class="lazy d-md-none d-block" th:src="|${ not #strings.isEmpty(o.mobImage) ? o.mobImage : o.image}!1|" data-lazy="${not #strings.isEmpty(o.mobImage) ? o.mobImage : o.image}" th:alt="${alt}">
+                        </div>
+                        <div th:class="|col-md-${section.settings.contentWidth} col-text-${ o.imageLayout }|">
+                            <h3 class="text-heading" th:if="${ not #strings.isEmpty(o.heading) }">[[ ${ o.heading } ]]</h3>
+                            <h3 class="text-subheading" th:if="${ not #strings.isEmpty(o.subheading) }">[[ ${ o.subheading } ]]</h3>
+                            <ul th:class="|text-body ${section.settings.symbol}|" th:if="${not #strings.isEmpty(o.content)}" th:with="textLines = ${#strings.listSplit(o.content,'\n')}">
+                                <th:block th:each="textLine,saltLine:${textLines}">
+                                    <li th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                                </th:block>
+                            </ul>
+                            <p class="text-link" th:if="${ o.buttonStyle != 'invisible' && not #strings.isEmpty(o.buttonLabel) }">
+                                <a th:class="|btn ${o.buttonStyle}|" th:href="${ o.buttonLink }">
+                                    [[${ o.buttonLabel }]] <i class="ic-right"></i>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

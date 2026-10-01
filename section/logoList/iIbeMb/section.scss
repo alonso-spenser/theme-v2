@@ -1,0 +1,15 @@
+.iIbeMb img {
+	width: 3.125rem;
+	max-width: 100%;
+}
+
+.iIbeMb img + .text-content-heading {
+	margin-top: 0.75rem;
+}
+
+.iIbeMb-list {
+	height: 100%;
+	padding: 1.75rem;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

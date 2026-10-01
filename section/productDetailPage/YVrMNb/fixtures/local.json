@@ -1,0 +1,1232 @@
+{
+  "section": {
+    "id": "1410131325600026625",
+    "componentKind": "page-section",
+    "type": "productDetailPage",
+    "templateId": "YVrMNb",
+    "runtimeVersion": 2,
+    "settings": {
+      "h1Wide": false,
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "h1Color": "",
+      "heading": "Title with button",
+      "h1Layout": "right",
+      "buyButton": "btn-outline-danger",
+      "downStyle": "parameter",
+      "marginTop": false,
+      "paramWide": false,
+      "skuColumn": "2",
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 20,
+      "imageScale": "1by1",
+      "lineHeight": 33,
+      "paddingTop": true,
+      "paramColor": "",
+      "skuElement": "2b",
+      "specLayout": "content",
+      "subheading": "this is a new beginning",
+      "wideScreen": false,
+      "borderColor": "",
+      "contentWide": false,
+      "enableCrumb": true,
+      "enquiryLink": "/form/1448260401103507458#Contact US",
+      "enquiryTips": "For product pricing, customization, or other inquiries:",
+      "imageBorder": "",
+      "imageLayout": "left",
+      "lineVisible": false,
+      "marketPrice": false,
+      "promptColor": "#ff0000",
+      "contentColor": "",
+      "contentStyle": "tab",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 0,
+      "enquiryLabel": "Contact US",
+      "enquiryStyle": "btn-primary",
+      "h1Background": "",
+      "imagePercent": 5,
+      "marginBottom": false,
+      "paramVisible": "visible",
+      "priceElement": false,
+      "relatedAlign": "text-center",
+      "relatedImage": true,
+      "relatedPrice": true,
+      "relatedScale": "1by1",
+      "relatedStyle": "slide",
+      "sectionAlias": "产品详情页",
+      "skuMobColumn": "3",
+      "paddingBottom": true,
+      "promptContent": "Tirzepatide represents a new generation of metabolic therapy. \nBy targeting both GIP and GLP-1 pathways, it delivers powerful blood glucose control, significant weight reduction, and broad metabolic benefits.",
+      "relatedColumn": "3",
+      "socialElement": "visible",
+      "summarySymbol": "list-demical",
+      "backgroundSize": "",
+      "contentVisible": "parameter",
+      "enquiryTipSize": 20,
+      "relatedElement": "sidebar",
+      "summaryVisible": "invisible",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "enquiryTipStyle": "danger",
+      "neighborElement": "visible",
+      "paragraphCorner": "",
+      "paramBackground": "",
+      "paramPaddingTop": true,
+      "relatedQuantity": 6,
+      "relatedSubtitle": true,
+      "backgroundRepeat": "",
+      "carouselAutoPlay": "5000",
+      "carouselNavStyle": "dark",
+      "paragraphHeading": "",
+      "relatedMobColumn": "6",
+      "contentBackground": "",
+      "contentPaddingTop": true,
+      "relatedBackground": "",
+      "backgroundPosition": "",
+      "carouselArrowStyle": "dark",
+      "extendedAttributes": false,
+      "paramPaddingBottom": true,
+      "contentPaddingBottom": true,
+      "paragraphHeadingLabel": "",
+      "sectionMargin": false,
+      "relatedTime": true,
+      "imageFit": "cover",
+      "mobColumn": "6",
+      "sectionCSS": ".YVrMNb-next a {\n\tline-height: 2;\n\tcolor: [[${globalDesignMode ? 'var(--colorBody)' : colorBody}]];\n\toverflow: hidden;\n}\n\n.YVrMNb-next a:hover {\n\tcolor: [[${globalDesignMode ? 'var(--colorLinkHover)' : colorLinkHover}]];\n}\n\n.YVrMNb-next:not(.previous) {\n\ttext-align: right;\n}\n\n.YVrMNb-next:not(.previous) a:before {\n\tfloat: right;\n}\n\n.YVrMNb .has-sidebar {\n\tpadding-right: 2.1875rem;\n}\n\n.YVrMNb-detail-time {\n\tmargin-bottom: 1.25rem;\n}\n\n.YVrMNb-detail-time i {\n\tvertical-align: middle;\n}\n\n.YVrMNb-detail-share {\n\tmargin-bottom: 1.25rem;\n\tdisplay: flex;\n}\n\n.YVrMNb-detail-summary {\n\ttext-overflow: ellipsis;\n\tline-clamp: 3;\n\tdisplay: -webkit-box;\n\t-webkit-line-clamp: 3;\n\toverflow: hidden;\n\t-webkit-box-orient: vertical;\n}\n\n.YVrMNb-detail-post h5 {\n\tfont-size: [[${globalDesignMode ? 'var(--fontSizeBody)' : fontSizeBody}]];\n\tfont-family: [[${globalDesignMode ? 'var(--typeBody)' : typeBody}]];\n\tcolor: [[${globalDesignMode ? 'var(--colorBody)' : colorBody}]];\n\toverflow: hidden;\n\ttext-overflow: ellipsis;\n\tdisplay: -webkit-box;\n\tline-clamp: 3;\n\t-webkit-line-clamp: 3;\n\t-webkit-box-orient: vertical;\n}\n\n.YVrMNb-detail-post .embed-responsive {\n\tmargin-right: 0.625rem;\n\twidth: 5rem;\n}\n\n.YVrMNb-detail-post .embed-responsive img {\n\tborder-radius: [[${globalDesignMode ? 'var(--cardBorderRadius)' : cardBorderRadius}]];\n}\n\n.YVrMNb-detail-post:not(:last-child) {\n\tborder-bottom: [[${globalDesignMode ? 'calc(var(--borderWidth) * 1px)' : borderWidth + 'px'}]] [[${globalDesignMode ? 'var(--borderStyle)' : borderStyle}]] [[${globalDesignMode ? 'var(--colorBorder)' : colorBorder}]];\n\tmargin-bottom: 0.9375rem;\n\tpadding-bottom: 0.9375rem;\n}\n\n.YVrMNb-detail-post:hover h5 {\n\tcolor: [[${globalDesignMode ? 'var(--colorTheme)' : colorTheme}]];\n}\n\n.YVrMNb .section-rich-text,\n.YVrMNb .section-rich-text * {\n\tline-height: 1.6;\n}\n\n.YVrMNb .section-rich-text + .YVrMNb-next {\n\tmargin-top: 1.5rem;\n}\n\n.YVrMNb .slick-slider-thumbnail {\n\tmargin-top: 1rem;\n}\n\n.YVrMNb .section-slide-round .slick-slider {\n\tmargin-left: -15px;\n\tmargin-right: -15px;\n}\n\n.YVrMNb .section-slide-round .slick-slider .slick-track {\n\talign-items: stretch;\n\tdisplay: flex;\n}\n\n.YVrMNb .section-slide-round .slick-slider .slick-slide {\n\tmargin-right: 15px;\n\tmargin-left: 15px;\n\tpadding-bottom: 15px;\n}\n\n@media (max-width: 768px) {\n\t.YVrMNb .section-slide-round .slick-slider {\n\t\tmargin-left: -7.5px;\n\t\tmargin-right: -7.5px;\n\t}\n\n\t.YVrMNb .section-slide-round .slick-slider .slick-slide {\n\t\tmargin-right: 7.5px;\n\t\tmargin-left: 7.5px;\n\t}\n}\n\n.YVrMNb-list .embed-responsive {\n\twidth: 9.375rem;\n\tmargin-right: 0.9375rem;\n}\n\n@media (max-width: 768px) {\n\t.YVrMNb-detail-share {\n\t\tdisplay: block;\n\t}\n\n\t.YVrMNb-detail-share .btn {\n\t\tmargin-top: 0.75rem;\n\t}\n\n\t.YVrMNb .col-md-8 {\n\t\tpadding-left: 15px !important;\n\t\tpadding-right: 15px !important;\n\t}\n}",
+      "isGlobalSection": false,
+      "column": ""
+    },
+    "bindings": {},
+    "data": {
+      "page": {
+        "seoH1": "UHF Token Anti Metal Tag For Patrol System",
+        "summaryList": [
+          "Incoterm: FOB,EXW",
+          "Min. Order: 1 Piece/Pieces",
+          "Port: ,,",
+          "Contact Now",
+          "Share:"
+        ],
+        "source": "",
+        "visibilityTime": 1634643382402,
+        "linkList": [
+          {
+            "id": "1451099912116252673",
+            "linkType": "",
+            "region": "",
+            "sortIndex": 1,
+            "spuId": "1450424983121268737",
+            "title": "BUY ON AMAZON",
+            "url": "https://www.z.cn"
+          },
+          {
+            "id": "1451099912137224193",
+            "linkType": "",
+            "region": "",
+            "sortIndex": 2,
+            "spuId": "1450424983121268737",
+            "title": "BUY ON EABY",
+            "url": "https://www.ebay.com"
+          },
+          {
+            "id": "1451099912149807106",
+            "linkType": "",
+            "region": "",
+            "sortIndex": 3,
+            "spuId": "1450424983121268737",
+            "title": "BUY ON Shopee",
+            "url": "https://www.shoppe.com"
+          }
+        ],
+        "infoType": 2,
+        "coverImage": "/preview-assets/images/placeholder.jpg",
+        "id": "1450425587839242241",
+        "state": 0,
+        "countUnit": "",
+        "author": "1448162503883902977",
+        "seoDescription": "China UHF Token Anti Metal Tag For Patrol System with High-Quality, Leading UHF Token Anti Metal Tag For Patrol System Manufacturers & Suppliers, find UHF Token Anti Metal Tag For Patrol System Factory & Exporters.",
+        "specList": [
+          {
+            "leaf": 1,
+            "key": "Product Attributes",
+            "value": ""
+          },
+          {
+            "leaf": 0,
+            "key": "Brand",
+            "value": "Xinye"
+          },
+          {
+            "leaf": 0,
+            "key": "communication method",
+            "value": "RFID"
+          },
+          {
+            "leaf": 0,
+            "key": "Support customization",
+            "value": "Customized logo"
+          },
+          {
+            "leaf": 0,
+            "key": "place of origin",
+            "value": "China"
+          },
+          {
+            "leaf": 1,
+            "key": "Supply Ability & Additional Information",
+            "value": ""
+          },
+          {
+            "leaf": 0,
+            "key": "Packaging",
+            "value": "200 pcs/white box, 10 boxes/carton, or customized as your request."
+          },
+          {
+            "leaf": 0,
+            "key": "Productivity",
+            "value": "8.000.000 pcs per month"
+          },
+          {
+            "leaf": 0,
+            "key": "Transportation",
+            "value": "Ocean,Land,Air"
+          },
+          {
+            "leaf": 0,
+            "key": "Place of Origin",
+            "value": "Guangdong Province, China"
+          },
+          {
+            "leaf": 0,
+            "key": "Supply Ability",
+            "value": "8.000.000 pcs per month"
+          },
+          {
+            "leaf": 0,
+            "key": "Certificate",
+            "value": "ISO9001, ISO14001"
+          },
+          {
+            "leaf": 0,
+            "key": "HS Code",
+            "value": "8523521000"
+          },
+          {
+            "leaf": 0,
+            "key": "Port",
+            "value": ",,"
+          },
+          {
+            "leaf": 0,
+            "key": "Payment Type",
+            "value": "T/T,Paypal,Western Union"
+          },
+          {
+            "leaf": 0,
+            "key": "Incoterm",
+            "value": "FOB,EXW"
+          },
+          {
+            "leaf": 0,
+            "key": "Delivery Time",
+            "value": "7 Days"
+          }
+        ],
+        "coverVideo": "https://www.youtube.com/embed/AX869YpWs08",
+        "relevance": {
+          "next": {
+            "id": "1450272625347219457",
+            "createTime": 1634606913275,
+            "coverImage": "/preview-assets/images/8.jpg",
+            "coverVideo": "",
+            "seoUrl": "rfid-employee-card-smart-access-control",
+            "subtitle": "Durable police id card 1 Card Size 85 5x 54 x 0 84mm or customized 2 Thickness 0 76 0 84mm or on demand 3 Usage 10 years 4 Material PVC PS ABS 5 id card chip TK4100 EM4200 EM 4100 EM4102 6 Function Only read 7 Read distance Around 2 10cm 8 Storage...",
+            "title": "RFID employee card smart access control",
+            "minPrice": 0,
+            "maxPrice": 0,
+            "sales": 0,
+            "skuCount": 0
+          },
+          "previous": {
+            "id": "1450272625347219457",
+            "createTime": 1634606913275,
+            "coverImage": "/preview-assets/images/8.jpg",
+            "coverVideo": "",
+            "seoUrl": "rfid-employee-card-smart-access-control",
+            "subtitle": "Durable police id card 1 Card Size 85 5x 54 x 0 84mm or customized 2 Thickness 0 76 0 84mm or on demand 3 Usage 10 years 4 Material PVC PS ABS 5 id card chip TK4100 EM4200 EM 4100 EM4102 6 Function Only read 7 Read distance Around 2 10cm 8 Storage...",
+            "title": "RFID employee card smart access control",
+            "minPrice": 0,
+            "maxPrice": 0,
+            "sales": 0,
+            "skuCount": 0
+          },
+          "neighborList": [
+            {
+              "id": "1450272625347219457",
+              "createTime": 1634606913275,
+              "coverImage": "/preview-assets/images/8.jpg",
+              "coverVideo": "",
+              "seoUrl": "rfid-employee-card-smart-access-control",
+              "subtitle": "Durable police id card 1 Card Size 85 5x 54 x 0 84mm or customized 2 Thickness 0 76 0 84mm or on demand 3 Usage 10 years 4 Material PVC PS ABS 5 id card chip TK4100 EM4200 EM 4100 EM4102 6 Function Only read 7 Read distance Around 2 10cm 8 Storage...",
+              "title": "RFID employee card smart access control",
+              "minPrice": 0,
+              "maxPrice": 0,
+              "sales": 0,
+              "skuCount": 0
+            },
+            {
+              "id": "1450272653675548673",
+              "createTime": 1634606920034,
+              "coverImage": "/preview-assets/images/8.jpg",
+              "coverVideo": "",
+              "seoUrl": "contactless-em4200-125khz-t5557-proximity-rfid-card",
+              "subtitle": "Product Description Custom printing 125KHz LF RFID T5577 blank card with 3M467 adhesive PET PVC smart White Card Smart Cards include contactless IC card Contact IC card and hybrid chip cards for various fields such as Transportation Management Time...",
+              "title": "Contactless em4200 125khz t5557 proximity rfid card",
+              "minPrice": 0,
+              "maxPrice": 0,
+              "sales": 0,
+              "skuCount": 0
+            },
+            {
+              "id": "1450272703449354242",
+              "createTime": 1634606931911,
+              "coverImage": "/preview-assets/images/8.jpg",
+              "coverVideo": "",
+              "seoUrl": "rfid-card-iso-14443b-125khz-t5577",
+              "subtitle": "Product Description Custom printing 125KHz LF RFID T5577 blank card with 3M467 adhesive PET PVC smart White Card Smart Cards include contactless IC card Contact IC card and hybrid chip cards for various fields such as Transportation Management Time...",
+              "title": "RFID card iso 14443b 125KHZ t5577",
+              "minPrice": 0,
+              "maxPrice": 0,
+              "sales": 0,
+              "skuCount": 0
+            },
+            {
+              "id": "1450272745975402498",
+              "createTime": 1634606942049,
+              "coverImage": "/preview-assets/images/8.jpg",
+              "coverVideo": "",
+              "seoUrl": "custom-printing-125khz-rfid-tk4100-smart-blank-card",
+              "subtitle": "Product Description Custom printing 125KHz LF RFID TK4100 blank card with 3M467 adhesive PET PVC smart White Card Smart Cards include contactless IC card Contact IC card and hybrid chip cards for various fields such as Transportation Management Time...",
+              "title": "Custom printing 125KHz RFID TK4100 smart blank card",
+              "minPrice": 0,
+              "maxPrice": 0,
+              "sales": 0,
+              "skuCount": 0
+            },
+            {
+              "id": "1450272792620257282",
+              "createTime": 1634606952146,
+              "coverImage": "/preview-assets/images/8.jpg",
+              "coverVideo": "",
+              "seoUrl": "school-student-payment-card-id-access-control",
+              "subtitle": "Smart Cards include contactless IC card Contact IC card and hybrid chip cards for various fields such as Transportation Management Time and Attendance Management Identification Library Management Supply Chain and Logistics Management Hotel...",
+              "title": "School Student Payment Card ID Access control",
+              "minPrice": 0,
+              "maxPrice": 0,
+              "sales": 0,
+              "skuCount": 0
+            },
+            {
+              "id": "1450272819170201602",
+              "createTime": 1634606959492,
+              "coverImage": "/preview-assets/images/8.jpg",
+              "coverVideo": "",
+              "seoUrl": "nfc-proximity-ic-chip-card-access-control",
+              "subtitle": "Smart Cards include contactless IC card Contact IC card and hybrid chip cards for various fields such as Transportation Management Time and Attendance Management Identification Library Management Supply Chain and Logistics Management Hotel...",
+              "title": "NFC proximity IC chip card access control",
+              "minPrice": 0,
+              "maxPrice": 0,
+              "sales": 0,
+              "skuCount": 0
+            }
+          ]
+        },
+        "goodsType": 1,
+        "taxRate": 0,
+        "videoList": [
+          {
+            "id": "1474266770419875841",
+            "fileType": 5,
+            "coverImage": "",
+            "refType": 5,
+            "title": "",
+            "needPass": 1,
+            "url": "https://www.youtube.com/embed/w39_DAZHFVA",
+            "description": "",
+            "suffix": ""
+          }
+        ],
+        "blockList": [
+          {
+            "id": "1451099911155757058",
+            "blockCover": "",
+            "blockDescription": "<p>Round Display<br />Nowadays,round display&rsquo;s request is becoming larger and larger,they are mainly used on high-end wearable devices.</p>\n<p>KINGTECH providing different size of round display,it contains round lcd display and round amoled display.Round lcd display we have 3.34inch round lcd display and 3.4inch round lcd display,Round amoled display we have 1.2inch round amoled,and 1.39inch round amoled.</p>\n<p>If you have any request on round display,welcome to contact KINGTECH!</p>",
+            "blockName": "Technology"
+          },
+          {
+            "id": "1451099911155757059",
+            "blockCover": "",
+            "blockDescription": "New Tab content 2",
+            "blockName": "Global"
+          }
+        ],
+        "maxPrice": 1500,
+        "minPrice": 1000,
+        "subtitle": "NFC Near Field Communication is an evolution of RFID technology NFC enables secure wireless connectivity between two devices with related exchange of data NFC technology applied to a smartphone or a tablet allows 1 the exchange of information...",
+        "sticky": 1,
+        "region": "en",
+        "imageList": [
+          {
+            "id": "1451079136633827329",
+            "fileType": 1,
+            "coverImage": "",
+            "refType": 1,
+            "title": "6",
+            "needPass": 1,
+            "url": "/preview-assets/images/8.jpg",
+            "description": "",
+            "suffix": "jpg"
+          },
+          {
+            "id": "1451079136646410242",
+            "fileType": 1,
+            "coverImage": "",
+            "refType": 1,
+            "title": "1",
+            "needPass": 1,
+            "url": "/preview-assets/images/8.jpg",
+            "description": "",
+            "suffix": "jpg"
+          },
+          {
+            "id": "1451079136667381762",
+            "fileType": 1,
+            "coverImage": "",
+            "refType": 1,
+            "title": "5",
+            "needPass": 1,
+            "url": "/preview-assets/images/8.jpg",
+            "description": "",
+            "suffix": "jpg"
+          },
+          {
+            "id": "1451079136692547586",
+            "fileType": 1,
+            "coverImage": "",
+            "refType": 1,
+            "title": "4",
+            "needPass": 1,
+            "url": "/preview-assets/images/8.jpg",
+            "description": "",
+            "suffix": "jpg"
+          },
+          {
+            "id": "1451079136705130498",
+            "fileType": 1,
+            "coverImage": "",
+            "refType": 1,
+            "title": "2",
+            "needPass": 1,
+            "url": "/preview-assets/images/8.jpg",
+            "description": "",
+            "suffix": "jpg"
+          },
+          {
+            "id": "1451079136721907714",
+            "fileType": 1,
+            "coverImage": "",
+            "refType": 1,
+            "title": "3",
+            "needPass": 1,
+            "url": "/preview-assets/images/8.jpg",
+            "description": "",
+            "suffix": "jpg"
+          }
+        ],
+        "weightUnit": 1,
+        "skuList": [
+          {
+            "id": "1458679992585756674",
+            "barcode": "",
+            "costPrice": 0,
+            "height": 0,
+            "hsCode": "",
+            "length": 0,
+            "lockStock": 0,
+            "marketPrice": 8000,
+            "salePrice": 1500,
+            "shelfLife": 24,
+            "skuId": "145580405953317273800",
+            "skuImage": "/preview-assets/images/8.jpg",
+            "skuName": "BLUE,L",
+            "soldStock": 0,
+            "spuId": "1455804059533172738",
+            "storageSkuId": "",
+            "surplusStock": 999,
+            "vipPrice": 1500,
+            "weight": 0,
+            "width": 0,
+            "variantValue": [
+              "BLUE",
+              "L"
+            ],
+            "variantList": [
+              {
+                "id": "1458679995928616961",
+                "skuId": "1458679992585756674",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992631894019",
+                "valueSort": 0,
+                "variantId": "1458679992631894018",
+                "variantName": "Color",
+                "variantSort": 0,
+                "variantValue": "BLUE"
+              },
+              {
+                "id": "1458679995957977089",
+                "skuId": "1458679992585756674",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992636088323",
+                "valueSort": 0,
+                "variantId": "1458679992636088322",
+                "variantName": "Size",
+                "variantSort": 0,
+                "variantValue": "L"
+              }
+            ]
+          },
+          {
+            "id": "1458679992648671234",
+            "barcode": "",
+            "costPrice": 0,
+            "height": 0,
+            "hsCode": "",
+            "length": 0,
+            "lockStock": 0,
+            "marketPrice": 500,
+            "salePrice": 1000,
+            "shelfLife": 24,
+            "skuId": "145580405953317273805",
+            "skuImage": "/preview-assets/images/8.jpg",
+            "skuName": "RED,S",
+            "soldStock": 0,
+            "spuId": "1455804059533172738",
+            "storageSkuId": "",
+            "surplusStock": 998,
+            "vipPrice": 1000,
+            "weight": 0,
+            "width": 0,
+            "variantValue": [
+              "RED",
+              "S"
+            ],
+            "variantList": [
+              {
+                "id": "1458679996176080898",
+                "skuId": "1458679992648671234",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992644476931",
+                "valueSort": 0,
+                "variantId": "1458679992631894018",
+                "variantName": "Color",
+                "variantSort": 0,
+                "variantValue": "RED"
+              },
+              {
+                "id": "1458679996188663809",
+                "skuId": "1458679992648671234",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992644476929",
+                "valueSort": 0,
+                "variantId": "1458679992636088322",
+                "variantName": "Size",
+                "variantSort": 0,
+                "variantValue": "S"
+              }
+            ]
+          },
+          {
+            "id": "1458679992644476932",
+            "barcode": "",
+            "costPrice": 0,
+            "height": 0,
+            "hsCode": "",
+            "length": 0,
+            "lockStock": 0,
+            "marketPrice": 500,
+            "salePrice": 1000,
+            "shelfLife": 24,
+            "skuId": "145580405953317273804",
+            "skuImage": "/preview-assets/images/8.jpg",
+            "skuName": "RED,M",
+            "soldStock": 0,
+            "spuId": "1455804059533172738",
+            "storageSkuId": "",
+            "surplusStock": 996,
+            "vipPrice": 1000,
+            "weight": 0,
+            "width": 0,
+            "variantValue": [
+              "RED",
+              "M"
+            ],
+            "variantList": [
+              {
+                "id": "1458679996121554945",
+                "skuId": "1458679992644476932",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992644476931",
+                "valueSort": 0,
+                "variantId": "1458679992631894018",
+                "variantName": "Color",
+                "variantSort": 0,
+                "variantValue": "RED"
+              },
+              {
+                "id": "1458679996150915074",
+                "skuId": "1458679992644476932",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992640282625",
+                "valueSort": 0,
+                "variantId": "1458679992636088322",
+                "variantName": "Size",
+                "variantSort": 0,
+                "variantValue": "M"
+              }
+            ]
+          },
+          {
+            "id": "1458679992644476930",
+            "barcode": "",
+            "costPrice": 0,
+            "height": 0,
+            "hsCode": "",
+            "length": 0,
+            "lockStock": 0,
+            "marketPrice": 500,
+            "salePrice": 1000,
+            "shelfLife": 24,
+            "skuId": "145580405953317273803",
+            "skuImage": "/preview-assets/images/8.jpg",
+            "skuName": "RED,L",
+            "soldStock": 0,
+            "spuId": "1455804059533172738",
+            "storageSkuId": "",
+            "surplusStock": 995,
+            "vipPrice": 1000,
+            "weight": 0,
+            "width": 0,
+            "variantValue": [
+              "RED",
+              "L"
+            ],
+            "variantList": [
+              {
+                "id": "1458679996075417602",
+                "skuId": "1458679992644476930",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992644476931",
+                "valueSort": 0,
+                "variantId": "1458679992631894018",
+                "variantName": "Color",
+                "variantSort": 0,
+                "variantValue": "RED"
+              },
+              {
+                "id": "1458679996096389122",
+                "skuId": "1458679992644476930",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992636088323",
+                "valueSort": 0,
+                "variantId": "1458679992636088322",
+                "variantName": "Size",
+                "variantSort": 0,
+                "variantValue": "L"
+              }
+            ]
+          },
+          {
+            "id": "1458679992640282626",
+            "barcode": "",
+            "costPrice": 0,
+            "height": 0,
+            "hsCode": "",
+            "length": 0,
+            "lockStock": 0,
+            "marketPrice": 8000,
+            "salePrice": 1500,
+            "shelfLife": 24,
+            "skuId": "145580405953317273802",
+            "skuImage": "/preview-assets/images/8.jpg",
+            "skuName": "BLUE,S",
+            "soldStock": 0,
+            "spuId": "1455804059533172738",
+            "storageSkuId": "",
+            "surplusStock": 994,
+            "vipPrice": 1500,
+            "weight": 0,
+            "width": 0,
+            "variantValue": [
+              "BLUE",
+              "S"
+            ],
+            "variantList": [
+              {
+                "id": "1458679996033474561",
+                "skuId": "1458679992640282626",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992631894019",
+                "valueSort": 0,
+                "variantId": "1458679992631894018",
+                "variantName": "Color",
+                "variantSort": 0,
+                "variantValue": "BLUE"
+              },
+              {
+                "id": "1458679996058640386",
+                "skuId": "1458679992640282626",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992644476929",
+                "valueSort": 0,
+                "variantId": "1458679992636088322",
+                "variantName": "Size",
+                "variantSort": 0,
+                "variantValue": "S"
+              }
+            ]
+          },
+          {
+            "id": "1458679992636088324",
+            "barcode": "",
+            "costPrice": 0,
+            "height": 0,
+            "hsCode": "",
+            "length": 0,
+            "lockStock": 0,
+            "marketPrice": 8000,
+            "salePrice": 1500,
+            "shelfLife": 24,
+            "skuId": "145580405953317273801",
+            "skuImage": "/preview-assets/images/8.jpg",
+            "skuName": "BLUE,M",
+            "soldStock": 0,
+            "spuId": "1455804059533172738",
+            "storageSkuId": "",
+            "surplusStock": 883,
+            "vipPrice": 1500,
+            "weight": 0,
+            "width": 0,
+            "variantValue": [
+              "BLUE",
+              "M"
+            ],
+            "variantList": [
+              {
+                "id": "1458679995983142914",
+                "skuId": "1458679992636088324",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992631894019",
+                "valueSort": 0,
+                "variantId": "1458679992631894018",
+                "variantName": "Color",
+                "variantSort": 0,
+                "variantValue": "BLUE"
+              },
+              {
+                "id": "1458679996012503041",
+                "skuId": "1458679992636088324",
+                "spuId": "1455804059533172738",
+                "valueId": "1458679992640282625",
+                "valueSort": 0,
+                "variantId": "1458679992636088322",
+                "variantName": "Size",
+                "variantSort": 0,
+                "variantValue": "M"
+              }
+            ]
+          }
+        ],
+        "variantList": [
+          {
+            "id": "1458679992631894018",
+            "sortIndex": 1,
+            "variantName": "Color",
+            "valueList": [
+              {
+                "id": "1458679992631894019",
+                "sortIndex": 1,
+                "variantValue": "BLUE"
+              },
+              {
+                "id": "1458679992644476931",
+                "sortIndex": 7,
+                "variantValue": "RED"
+              }
+            ]
+          },
+          {
+            "id": "1458679992636088322",
+            "sortIndex": 2,
+            "variantName": "Size",
+            "valueList": [
+              {
+                "id": "1458679992636088323",
+                "sortIndex": 2,
+                "variantValue": "L"
+              },
+              {
+                "id": "1458679992640282625",
+                "sortIndex": 4,
+                "variantValue": "M"
+              },
+              {
+                "id": "1458679992644476929",
+                "sortIndex": 6,
+                "variantValue": "S"
+              }
+            ]
+          }
+        ],
+        "sortIndex": 211,
+        "qrcode": "",
+        "description": "Looking for ideal RFID Patrol Token Tag Manufacturer &amp; supplier ? We have a wide selection at goods prices to help you get creative. All the RFID Patrol Tag are quality guaranteed. We are China Origin Factory of Ebay RFID Tag. If you have any question, please feel free to contact us.",
+        "searchKeyword": "",
+        "seoKeywords": "China UHF Token Anti Metal Tag For Patrol System",
+        "seoTitle": "UHF Token Anti Metal Tag For Patrol System",
+        "title": "UHF Token Anti Metal Tag For Patrol System",
+        "seoUrl": "uhf-token-anti-metal-tag-for-patrol-system",
+        "attachmentList": [
+          {
+            "id": "1458333663615410177",
+            "fileType": 3,
+            "coverImage": "",
+            "refType": 2,
+            "title": "IOT user manual",
+            "needPass": 1,
+            "url": "/cdn/1209760082859032577/1458333237487570945.pdf",
+            "description": "",
+            "suffix": "pdf"
+          },
+          {
+            "id": "1458333663640576002",
+            "fileType": 4,
+            "coverImage": "",
+            "refType": 2,
+            "title": "Topaz Mask AI Crack",
+            "needPass": 0,
+            "url": "/cdn/1209760082859032577/1458333245235154946.zip",
+            "description": "",
+            "suffix": "zip"
+          },
+          {
+            "id": "1458333663653158914",
+            "fileType": 1,
+            "coverImage": "",
+            "refType": 2,
+            "title": "IOT-N010 and IOT-THS010 configuration protocol.pdf",
+            "needPass": 1,
+            "url": "/preview-assets/images/8.jpg",
+            "description": "",
+            "suffix": "jpeg"
+          }
+        ],
+        "collectionList": [
+          {
+            "collectionType": 1,
+            "seoUrl": "rfid-tokens",
+            "seoDescription": "",
+            "coverImage": "",
+            "banner": "",
+            "id": "1450425424911503362",
+            "coverVideo": "",
+            "seoKeywords": "",
+            "seoTitle": "RFID Tokens",
+            "title": "RFID Tokens"
+          }
+        ],
+        "shipFreeDescription": "",
+        "summary": "Incoterm: FOB,EXW\nMin. Order: 1 Piece/Pieces\nPort: ,,\nContact Now\nShare:",
+        "hasAnnex": 1,
+        "comments": 0,
+        "initial": "U",
+        "priceType": 2,
+        "specification": "[{\"key\":\"Supply Ability & Additional Information\",\"leaf\":1,\"value\":\"\"},{\"key\":\"Port\",\"leaf\":0,\"value\":\",,\"},{\"key\":\"Incoterm\",\"leaf\":0,\"value\":\"FOB,EXW\"}]",
+        "updateTime": 1634643382402,
+        "hits": 0,
+        "includeTax": 0,
+        "tagList": [
+          {
+            "id": "1451099440705843201",
+            "tagName": "hot products",
+            "tagUrl": "hot-products"
+          }
+        ],
+        "ladderList": [
+          {
+            "id": "1458681848435253249",
+            "level": 1,
+            "minCount": 1,
+            "price": 10,
+            "spuId": "1455804059533172738"
+          },
+          {
+            "id": "1458681848456224770",
+            "level": 2,
+            "minCount": 2,
+            "price": 20,
+            "spuId": "1455804059533172738"
+          },
+          {
+            "id": "1458681848464613377",
+            "level": 3,
+            "minCount": 3,
+            "price": 30,
+            "spuId": "1455804059533172738"
+          },
+          {
+            "id": "1458681848485584897",
+            "level": 4,
+            "minCount": 4,
+            "price": 40,
+            "spuId": "1455804059533172738"
+          },
+          {
+            "id": "1458681848502362113",
+            "level": 5,
+            "minCount": 5,
+            "price": 50,
+            "spuId": "1455804059533172738"
+          }
+        ],
+        "createTime": 1634643382387,
+        "totalStock": 0,
+        "spuId": "1450425587839242241"
+      }
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "$",
+    "phone": "+86-755-88888888",
+    "email": "nocile@fomille.com",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "first.site.com",
+    "siteName": "first",
+    "address": "",
+    "areaCode": "",
+    "articleQuantity": 0,
+    "cityName": "深圳",
+    "company": "Nocile inc",
+    "contact": "妮 可",
+    "countryName": "中国",
+    "createTime": 1634127158962,
+    "currencyCode": "USD",
+    "currencyName": "美元",
+    "defaultRegion": 0,
+    "downPass": "",
+    "expiryTime": 1666800000000,
+    "facebookPixel": "",
+    "favicon": "",
+    "formQuantity": 0,
+    "freePhone": "",
+    "goodsQuantity": 0,
+    "honestScore": 0,
+    "keepLang": 1,
+    "latitude": 22.5245061,
+    "lengthUnit": "mm",
+    "logisticsScore": 0,
+    "logo": "",
+    "longitude": 113.93831239999997,
+    "maxLang": 1,
+    "mobile": "",
+    "praiseRate": 0,
+    "provinceName": "广东",
+    "region": "en",
+    "rootLink": "https://first.site.com/",
+    "scriptBottom": "",
+    "scriptHead": "",
+    "scriptService": "",
+    "serviceScore": 0,
+    "siteId": "1448260389799866370",
+    "siteType": 3,
+    "state": 0,
+    "synopsis": "",
+    "systemDomain": "first.site.com",
+    "timeZone": "Asia/Shanghai",
+    "unitSystem": "metric",
+    "videoLimit": 0,
+    "weightUnit": "g",
+    "social": {
+      "socialPinterest": "",
+      "socialGooglePlus": "",
+      "socialFancy": "",
+      "socialVimeo": "",
+      "socialYoutube": "",
+      "sectionAlias": "社交媒体",
+      "socialFacebook": "",
+      "socialWeibo": "",
+      "socialShareImage": "",
+      "socialTumblr": "",
+      "socialInstagram": "",
+      "socialTwitter": "",
+      "socialSnapchat": "",
+      "socialLinkedin": "",
+      "socialImage": [
+        {
+          "socialQRCode": "",
+          "socialQRCodeAlt": "",
+          "socialQRCodeLink": ""
+        }
+      ]
+    }
+  },
+  "page": {
+    "pageType": "productDetailPage",
+    "seoH1": "UHF Token Anti Metal Tag For Patrol System",
+    "seoUrl": "/item/uhf-token-anti-metal-tag-for-patrol-system",
+    "seoContent": "Incoterm: FOB,EXW\nMin. Order: 1 Piece/Pieces\nPort: ,,\nContact Now\nShare:",
+    "seoDescription": "China UHF Token Anti Metal Tag For Patrol System with High-Quality, Leading UHF Token Anti Metal Tag For Patrol System Manufacturers & Suppliers, find UHF Token Anti Metal Tag For Patrol System Factory & Exporters.",
+    "id": "1448260392358391809",
+    "avatar": "/preview-assets/images/placeholder.jpg",
+    "title": "UHF Token Anti Metal Tag For Patrol System",
+    "seoTitle": "UHF Token Anti Metal Tag For Patrol System",
+    "seoKeywords": "China UHF Token Anti Metal Tag For Patrol System"
+  },
+  "params": {
+    "originalURL": "/item/uhf-token-anti-metal-tag-for-patrol-system",
+    "cache": {
+      "data": {
+        "seoH1": "UHF Token Anti Metal Tag For Patrol System",
+        "summaryList": [
+          "Incoterm: FOB,EXW",
+          "Min. Order: 1 Piece/Pieces",
+          "Port: ,,",
+          "Contact Now",
+          "Share:"
+        ],
+        "source": "",
+        "visibilityTime": 1634643382402,
+        "linkList": [],
+        "infoType": 2,
+        "coverImage": "/preview-assets/images/placeholder.jpg",
+        "id": "1450425587839242241",
+        "state": 0,
+        "countUnit": "",
+        "author": "1448162503883902977",
+        "seoDescription": "China UHF Token Anti Metal Tag For Patrol System with High-Quality, Leading UHF Token Anti Metal Tag For Patrol System Manufacturers & Suppliers, find UHF Token Anti Metal Tag For Patrol System Factory & Exporters.",
+        "specList": [
+          {
+            "leaf": 1,
+            "value": "",
+            "key": "Supply Ability & Additional Information"
+          },
+          {
+            "leaf": 0,
+            "value": ",,",
+            "key": "Port"
+          },
+          {
+            "leaf": 0,
+            "value": "FOB,EXW",
+            "key": "Incoterm"
+          }
+        ],
+        "coverVideo": "",
+        "relevance": {
+          "next": {
+            "id": "1450272625347219457",
+            "createTime": 1634606913275,
+            "coverImage": "/preview-assets/images/8.jpg",
+            "coverVideo": "",
+            "seoUrl": "rfid-employee-card-smart-access-control",
+            "subtitle": "Durable police id card 1 Card Size 85 5x 54 x 0 84mm or customized 2 Thickness 0 76 0 84mm or on demand 3 Usage 10 years 4 Material PVC PS ABS 5 id card chip TK4100 EM4200 EM 4100 EM4102 6 Function Only read 7 Read distance Around 2 10cm 8 Storage...",
+            "title": "RFID employee card smart access control",
+            "minPrice": 0,
+            "maxPrice": 0,
+            "sales": 0,
+            "skuCount": 0
+          },
+          "previous": {
+            "id": "1450272625347219457",
+            "createTime": 1634606913275,
+            "coverImage": "/preview-assets/images/8.jpg",
+            "coverVideo": "",
+            "seoUrl": "rfid-employee-card-smart-access-control",
+            "subtitle": "Durable police id card 1 Card Size 85 5x 54 x 0 84mm or customized 2 Thickness 0 76 0 84mm or on demand 3 Usage 10 years 4 Material PVC PS ABS 5 id card chip TK4100 EM4200 EM 4100 EM4102 6 Function Only read 7 Read distance Around 2 10cm 8 Storage...",
+            "title": "RFID employee card smart access control",
+            "minPrice": 0,
+            "maxPrice": 0,
+            "sales": 0,
+            "skuCount": 0
+          },
+          "neighborList": [
+            {
+              "id": "1450272625347219457",
+              "createTime": 1634606913275,
+              "coverImage": "/preview-assets/images/8.jpg",
+              "coverVideo": "",
+              "seoUrl": "rfid-employee-card-smart-access-control",
+              "subtitle": "Durable police id card 1 Card Size 85 5x 54 x 0 84mm or customized 2 Thickness 0 76 0 84mm or on demand 3 Usage 10 years 4 Material PVC PS ABS 5 id card chip TK4100 EM4200 EM 4100 EM4102 6 Function Only read 7 Read distance Around 2 10cm 8 Storage...",
+              "title": "RFID employee card smart access control",
+              "minPrice": 0,
+              "maxPrice": 0,
+              "sales": 0,
+              "skuCount": 0
+            },
+            {
+              "id": "1450272653675548673",
+              "createTime": 1634606920034,
+              "coverImage": "/preview-assets/images/8.jpg",
+              "coverVideo": "",
+              "seoUrl": "contactless-em4200-125khz-t5557-proximity-rfid-card",
+              "subtitle": "Product Description Custom printing 125KHz LF RFID T5577 blank card with 3M467 adhesive PET PVC smart White Card Smart Cards include contactless IC card Contact IC card and hybrid chip cards for various fields such as Transportation Management Time...",
+              "title": "Contactless em4200 125khz t5557 proximity rfid card",
+              "minPrice": 0,
+              "maxPrice": 0,
+              "sales": 0,
+              "skuCount": 0
+            },
+            {
+              "id": "1450272703449354242",
+              "createTime": 1634606931911,
+              "coverImage": "/preview-assets/images/8.jpg",
+              "coverVideo": "",
+              "seoUrl": "rfid-card-iso-14443b-125khz-t5577",
+              "subtitle": "Product Description Custom printing 125KHz LF RFID T5577 blank card with 3M467 adhesive PET PVC smart White Card Smart Cards include contactless IC card Contact IC card and hybrid chip cards for various fields such as Transportation Management Time...",
+              "title": "RFID card iso 14443b 125KHZ t5577",
+              "minPrice": 0,
+              "maxPrice": 0,
+              "sales": 0,
+              "skuCount": 0
+            },
+            {
+              "id": "1450272745975402498",
+              "createTime": 1634606942049,
+              "coverImage": "/preview-assets/images/8.jpg",
+              "coverVideo": "",
+              "seoUrl": "custom-printing-125khz-rfid-tk4100-smart-blank-card",
+              "subtitle": "Product Description Custom printing 125KHz LF RFID TK4100 blank card with 3M467 adhesive PET PVC smart White Card Smart Cards include contactless IC card Contact IC card and hybrid chip cards for various fields such as Transportation Management Time...",
+              "title": "Custom printing 125KHz RFID TK4100 smart blank card",
+              "minPrice": 0,
+              "maxPrice": 0,
+              "sales": 0,
+              "skuCount": 0
+            },
+            {
+              "id": "1450272792620257282",
+              "createTime": 1634606952146,
+              "coverImage": "/preview-assets/images/8.jpg",
+              "coverVideo": "",
+              "seoUrl": "school-student-payment-card-id-access-control",
+              "subtitle": "Smart Cards include contactless IC card Contact IC card and hybrid chip cards for various fields such as Transportation Management Time and Attendance Management Identification Library Management Supply Chain and Logistics Management Hotel...",
+              "title": "School Student Payment Card ID Access control",
+              "minPrice": 0,
+              "maxPrice": 0,
+              "sales": 0,
+              "skuCount": 0
+            },
+            {
+              "id": "1450272819170201602",
+              "createTime": 1634606959492,
+              "coverImage": "/preview-assets/images/8.jpg",
+              "coverVideo": "",
+              "seoUrl": "nfc-proximity-ic-chip-card-access-control",
+              "subtitle": "Smart Cards include contactless IC card Contact IC card and hybrid chip cards for various fields such as Transportation Management Time and Attendance Management Identification Library Management Supply Chain and Logistics Management Hotel...",
+              "title": "NFC proximity IC chip card access control",
+              "minPrice": 0,
+              "maxPrice": 0,
+              "sales": 0,
+              "skuCount": 0
+            }
+          ]
+        },
+        "goodsType": 1,
+        "taxRate": 0,
+        "blockList": [],
+        "minPrice": 0,
+        "subtitle": "NFC Near Field Communication is an evolution of RFID technology NFC enables secure wireless connectivity between two devices with related exchange of data NFC technology applied to a smartphone or a tablet allows 1 the exchange of information...",
+        "sticky": 1,
+        "maxPrice": 0,
+        "region": "en",
+        "imageList": [],
+        "weightUnit": 1,
+        "skuList": [],
+        "sortIndex": 211,
+        "qrcode": "",
+        "variantList": [],
+        "description": "<div id=\"detail_decorate_root\"> \n <div> \n  <div id=\"ali-anchor-AliMagic-2wsaz9\"> \n   <br> \n  </div> \n </div> \n <div> \n  <div> \n   <div> \n    <div> \n     <div> \n      <div> \n       <br> \n      </div> \n     </div> \n    </div> \n   </div> \n   <div> \n    <div> \n     <p> <span>NFC (Near Field Communication)</span><span> is an evolution of RFID technology; NFC enables secure wireless connectivity between two devices, with related exchange of data.</span><br> <span> NFC technology, applied to a smartphone or a tablet, allows:</span> </p> \n     <p> <span>1,the exchange of information between two devices using peer-to-peer; it's safe and quick;</span><br> <span> 2,to make quick and protected payments with mobile phones;</span><br> <span> 3,to read or write information in NFC Tags.</span> </p> \n    </div> \n   </div> \n  </div> \n </div> \n <div> \n  <div> \n   <div> \n    <div> \n     <div> \n      <div> \n       <br> \n      </div> \n     </div> \n    </div> \n   </div> \n   <div> \n    <div> \n     <p> <span>RFID Token is ultrasonic embedding with ABS house, water-proof and harsh resistant, designed as a tag for The warehouse</span><br> <span> managerment, and property tracking, it can be install on the pallet, the cartons, the machine etc.</span> </p> \n     <p> <span>For outdoor application, you may consider epoxy filling to protect water. For metal condition, you may consider anti-metal layer</span><br> <span> additional to avoid the short reading distance</span> </p> \n    </div> \n   </div> \n  </div> \n </div> \n <div> \n  <div> \n   <div> \n    <div> \n     <div> \n      <br> \n     </div> \n    </div> \n   </div> \n  </div> \n </div> \n <div> \n  <div> \n   <table> \n    <tbody> \n     <tr> \n      <td> \n       <div> \n        <span>Protocol</span> \n       </div> </td> \n      <td> \n       <div> \n        <span>ISO14443A/ISO15693</span> \n       </div> </td> \n     </tr> \n     <tr> \n      <td> \n       <div> \n        <span>Chip</span> \n       </div> </td> \n      <td> \n       <div> \n        <span>NTAG213,NTAG215,NTAG216,FM1108,MF S50,ICODE series,or customized</span> \n       </div> </td> \n     </tr> \n     <tr> \n      <td> \n       <div> \n        <span>Size</span> \n       </div> </td> \n      <td> \n       <div> \n        <span>30*30mm(as picture),dia 25,30,25*25mm or customized</span> \n       </div> </td> \n     </tr> \n     <tr> \n      <td> \n       <div> \n        <span>Material</span> \n       </div> </td> \n      <td> \n       <div> \n        <span>Coated paper, PVC, PET ,CPC or customized</span> \n       </div> </td> \n     </tr> \n     <tr> \n      <td> \n       <div> \n        <span>Write Endurance</span> \n       </div> </td> \n      <td> \n       <div> \n        <span>≥100000 cycles</span> \n       </div> </td> \n     </tr> \n     <tr> \n      <td> \n       <div> \n        <span>Read Range</span> \n       </div> </td> \n      <td> \n       <div> \n        <span>HF:0-5cm(depends on the reader and antenna)</span> \n       </div> </td> \n     </tr> \n     <tr> \n      <td> \n       <div> \n        <span>Application</span> \n       </div> </td> \n      <td> \n       <div> \n        <span>Data Transfer,Access control,Payment management,Customized,etc.</span> \n       </div> </td> \n     </tr> \n     <tr> \n      <td> \n       <div> \n        <span>Carft</span> \n       </div> </td> \n      <td> \n       <div> \n        <span>Single color or Multi-color Printing,Barcode or QR Code printing,Data encoding,etc.</span> \n       </div> </td> \n     </tr> \n     <tr> \n      <td> \n       <div> \n        <span>Type</span> \n       </div> </td> \n      <td> \n       <div> \n        <span>Piece/roll</span> \n       </div> </td> \n     </tr> \n     <tr> \n      <td> \n       <div> \n        <span>Weight</span> \n       </div> </td> \n      <td> \n       <div> \n        <span>0.2kg/box, 2kg/ctn</span> \n       </div> </td> \n     </tr> \n    </tbody> \n   </table> \n  </div> \n </div> \n <div> \n  <div id=\"ali-anchor-AliMagic-nin4ru\"> \n   <br> \n  </div> \n </div> \n</div>Looking for ideal RFID Patrol Token Tag Manufacturer &amp; supplier ? We have a wide selection at goods prices to help you get creative. All the RFID Patrol Tag are quality guaranteed. We are China Origin Factory of Ebay RFID Tag. If you have any question, please feel free to contact us.",
+        "searchKeyword": "",
+        "seoKeywords": "China UHF Token Anti Metal Tag For Patrol System",
+        "seoTitle": "UHF Token Anti Metal Tag For Patrol System",
+        "title": "UHF Token Anti Metal Tag For Patrol System",
+        "seoUrl": "uhf-token-anti-metal-tag-for-patrol-system",
+        "attachmentList": [],
+        "collectionList": [
+          {
+            "collectionType": 1,
+            "seoUrl": "rfid-tokens",
+            "seoDescription": "",
+            "coverImage": "",
+            "banner": "",
+            "id": "1450425424911503362",
+            "coverVideo": "",
+            "seoKeywords": "",
+            "seoTitle": "RFID Tokens",
+            "title": "RFID Tokens"
+          }
+        ],
+        "shipFreeDescription": "",
+        "summary": "Incoterm: FOB,EXW\nMin. Order: 1 Piece/Pieces\nPort: ,,\nContact Now\nShare:",
+        "hasAnnex": 1,
+        "comments": 0,
+        "initial": "U",
+        "priceType": 0,
+        "specification": "[{\"key\":\"Supply Ability & Additional Information\",\"leaf\":1,\"value\":\"\"},{\"key\":\"Port\",\"leaf\":0,\"value\":\",,\"},{\"key\":\"Incoterm\",\"leaf\":0,\"value\":\"FOB,EXW\"}]",
+        "updateTime": 1634643382402,
+        "hits": 0,
+        "includeTax": 0,
+        "tagList": [],
+        "ladderList": [],
+        "createTime": 1634643382387,
+        "totalStock": 0,
+        "spuId": "1450425587839242241"
+      }
+    },
+    "canonical": "https://first.site.com/item/uhf-token-anti-metal-tag-for-patrol-system",
+    "collectionId": "",
+    "defaultRegion": 0,
+    "domain": "1448260389799866370-1448260390676475906.design.com",
+    "ids": [],
+    "itemLink": "/item",
+    "mainDomain": "first.site.com",
+    "pageIndex": 1,
+    "pageSize": 12,
+    "pageType": "productDetailPage",
+    "params": {},
+    "region": "en",
+    "siteId": "1448260389799866370",
+    "sortBy": "",
+    "url": "uhf-token-anti-metal-tag-for-patrol-system",
+    "designMode": true
+  },
+  "lang": {
+    "contactUs": "Contact US",
+    "download": "Download",
+    "buyFrom": "Buy from",
+    "attachment": "Attachment",
+    "description": "Description",
+    "specification": "Specification",
+    "related": "Related products",
+    "global": {
+      "keywords": "KEYWORDS",
+      "product": "PRODUCTS",
+      "lang": "英语",
+      "article": "NEWS",
+      "home": "HOME"
+    },
+    "shareTo": "Share to",
+    "lang": "英语"
+  }
+}

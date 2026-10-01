@@ -1,0 +1,28 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div class="row row-gutter" th:if="${not #lists.isEmpty(section.settings.itemList)}">
+            <div th:class="|col-md-${section.settings.column} col-${ section.settings.mobColumn } ${ section.templateId }-item|" th:each="o,stat:${section.settings.itemList}">
+                <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}">
+                    <img class="embed-responsive-item lazy" th:src="|${o.avatar}!1|" th:data-original="${o.avatar}" th:alt="${o.name}" th:if="${not #strings.isEmpty(o.avatar)}">
+                    <div th:class="|${ section.templateId }-item-content|" th:if="${not #strings.isEmpty(o.name) || not #strings.isEmpty(o.position)}">
+                        <h3 class="text-heading" th:if="${not #strings.isEmpty(o.name)}">[[${o.name}]]</h3>
+                        <p class="text-body" th:if="${not #strings.isEmpty(o.position)}">[[${o.position}]]</p>
+                    </div>
+                </div>
+                <div class="UzYBfy-dialog" th:if="${not #strings.isEmpty(o.name) || not #strings.isEmpty(o.position) || not #strings.isEmpty(o.content)}">
+                    <div th:class="|UzYBfy-dialog-close ${section.settings.closeStyle}|"></div>
+                    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+                        <div class="UzYBfy-dialog-content" th:if="${not #strings.isEmpty(o.position) || not #strings.isEmpty(o.name) || not #strings.isEmpty(o.content)}">
+                            <p class="text-body" th:if="${not #strings.isEmpty(o.position)}">[[${o.position}]]</p>
+                            <h3 class="text-heading" th:if="${not #strings.isEmpty(o.name)}">[[${o.name}]]</h3>
+                            <div class="text-list section-rich-text" th:if="${not #strings.isEmpty(o.content)}" th:utext="${o.content}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

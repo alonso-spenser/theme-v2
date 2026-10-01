@@ -1,0 +1,56 @@
+.N7neM3 p {
+	color: var(--colorSecondary);
+	font-size: calc(var(--fontSizeBody) * 1px);
+}
+
+.N7neM3 p + p {
+	margin-top: 0.3125rem;
+}
+
+.N7neM3-list .embed-responsive {
+	width: 9.375rem;
+	margin-right: 0.9375rem;
+}
+
+.N7neM3 .slick-track {
+	align-items: stretch;
+	display: flex;
+}
+
+.N7neM3 .slick-track .slick-slide {
+	padding-top: calc(var(--cardBoxShadow) * 1px);
+	padding-bottom: calc(var(--cardBoxShadow) * 1px);
+}
+
+.N7neM3 .nav-pills .nav-link {
+	transition: all 0.25s;
+}
+
+.N7neM3 .nav-pills .nav-link:hover {
+	background-color: var(--colorButtonHover);
+	color: var(--colorButtonHoverLabel);
+}
+
+.N7neM3-group {
+	position: relative;
+}
+
+.N7neM3-group-item {
+	position: relative;
+	width: 100%;
+	left: 0;
+	top: 0;
+	opacity: 1;
+}
+
+.N7neM3-group-item:not(.active) {
+	position: absolute;
+	opacity: 0;
+	z-index: 0;
+}
+
+.N7neM3-group-item.active {
+	z-index: 1;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

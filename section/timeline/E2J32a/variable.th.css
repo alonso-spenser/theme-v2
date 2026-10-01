@@ -1,0 +1,29 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.timeColor)}"]
+.section-[[${ section.id }]] .text-secondary {
+    color:[[${section.settings.timeColor}]]!important;
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.titleColor)}"]
+.section-[[${ section.id }]] .text-heading {
+    color:[[${section.settings.titleColor}]]!important;
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .text-body {
+    color:[[${section.settings.textColor}]]!important;
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.lineColor)}"]
+.section-[[${ section.id }]] .row:before,.section-[[${ section.id }]] .row .col-md-6:nth-of-type(odd):before {
+    background-color:[[${section.settings.lineColor}]];
+}
+[/]

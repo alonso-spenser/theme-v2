@@ -1,0 +1,22 @@
+{
+  "section": {
+    "id": "demo-helpful-01",
+    "type": "linkList",
+    "templateId": "XVg6Yi",
+    "runtimeVersion": 2,
+    "settings": {
+      "heading": "Helpful links",
+      "backgroundColor": "#dce1e1",
+      "newWindow": true,
+      "links": []
+    },
+    "data": {}
+  },
+  "params": {
+    "designMode": true
+  },
+  "site": {
+    "urlPrefix": "/"
+  },
+  "lang": {}
+}

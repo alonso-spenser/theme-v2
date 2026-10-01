@@ -1,0 +1,64 @@
+{
+  "section": {
+    "id": "1531810916545454081",
+    "componentKind": "section",
+    "type": "iframe",
+    "templateId": "NRbUNr",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "6",
+      "symbol": "list-demical",
+      "content": "Manage your 3D assets. Distribute 3D & AR experiences. Collaborate with others. Showcase your work. Buy & sell 3D models.",
+      "heading": "Platform for 3D & AR on the web",
+      "linkAlign": "text-center",
+      "linkColor": "",
+      "marginTop": false,
+      "mobColumn": "12",
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "paddingTop": true,
+      "subheading": "",
+      "wideScreen": true,
+      "contentAlign": "text-center",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "marginBottom": false,
+      "sectionAlias": "嵌入网页组",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "itemList": []
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

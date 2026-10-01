@@ -1,0 +1,53 @@
+{
+  "section": {
+    "id": "1755569813397184513",
+    "componentKind": "section",
+    "type": "introduction",
+    "templateId": "Q2vimy",
+    "runtimeVersion": 2,
+    "settings": {
+      "alt": "",
+      "image": "",
+      "heading": "Choose a <b>cleaner and innovative future</b> with the latest generation power generator",
+      "rightAlt": "",
+      "marginTop": false,
+      "textColor": "",
+      "buttonLink": "",
+      "paddingTop": true,
+      "rightImage": "",
+      "wideScreen": true,
+      "buttonLabel": "Button",
+      "buttonStyle": "invisible",
+      "marginBottom": false,
+      "sectionAlias": "介绍",
+      "paddingBottom": true,
+      "backgroundColor": "rgba(245, 245, 245, 1)"
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

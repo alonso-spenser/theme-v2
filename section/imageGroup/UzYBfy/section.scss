@@ -1,0 +1,111 @@
+.UzYBfy-item {
+	position: relative;
+}
+
+.UzYBfy-item-content {
+	z-index: 3;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	padding: 2rem;
+	transition: all 0.25s;
+}
+
+@media (max-width: 768px) {
+	.UzYBfy-item-content {
+		display: none;
+	}
+}
+
+.UzYBfy-item-content [class*=text-] {
+	color: #fff;
+}
+
+.UzYBfy-item:hover .UzYBfy-item-content {
+	opacity: 1;
+}
+
+.UzYBfy .embed-responsive {
+	transition: all 0.25s;
+	cursor: pointer;
+}
+
+.UzYBfy .embed-responsive:hover .embed-responsive-item {
+	opacity: 0.9;
+	transform: scale(1.1);
+}
+
+.UzYBfy-dialog {
+	position: fixed !important;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1031;
+	height: 100vh;
+	overflow-y: auto;
+	padding-top: 3rem;
+	transition: all 0.25s;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.UzYBfy-dialog:not(.show) {
+	display: none;
+}
+
+.UzYBfy-dialog [class*=text-] {
+	color: #fff;
+}
+
+.UzYBfy-dialog-content {
+	width: 50%;
+}
+
+@media (max-width: 768px) {
+	.UzYBfy-dialog-content {
+		width: 80%;
+	}
+}
+
+@media (max-width: 768px) {
+	.UzYBfy-dialog .container {
+		padding-right: 1.5rem;
+		padding-left: 1.5rem;
+	}
+}
+
+.UzYBfy-dialog .text-list {
+	font-size: 1rem;
+}
+
+.UzYBfy-dialog-close {
+	position: absolute;
+	cursor: pointer;
+	height: 1.625rem;
+	width: 1.625rem;
+	transform: none;
+	background-image: url(https://css.6fox.com/img/close1.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.UzYBfy-dialog-close.dark {
+	background-image: url(https://css.6fox.com/img/close.svg);
+}
+
+@media (max-width: 768px) {
+	.UzYBfy-dialog-close {
+		top: 3rem;
+		right: 2rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.UzYBfy-dialog-close {
+		top: 3rem;
+		right: 4rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

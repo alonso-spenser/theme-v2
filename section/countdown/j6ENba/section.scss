@@ -1,0 +1,39 @@
+.j6ENba {
+	background-color: #2a2a37;
+}
+
+.j6ENba-digit {
+	transition: all 0.25s;
+	font-family: var(--typeHeading);
+	font-size: calc(var(--fontSizeHeading) * 1px);
+	color: var(--colorTheme);
+	font-weight: 900;
+}
+
+.j6ENba-unit {
+	color: var(--colorTheme);
+}
+
+.j6ENba [class*="text-"] {
+	color: #fff;
+}
+
+.j6ENba [class*="text-"] + .text-btn {
+	margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+	.j6ENba [class*="text-"] {
+		color: #fff;
+	}
+
+	.j6ENba [class*="text-"] + .text-btn {
+		margin-top: 1.5rem;
+	}
+
+	.j6ENba img {
+		margin-top: 1.5rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

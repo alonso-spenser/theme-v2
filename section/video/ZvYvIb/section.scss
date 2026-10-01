@@ -1,0 +1,68 @@
+.ZvYvIb-fit {
+	overflow: hidden;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.ZvYvIb-fit .ZvYvIb-content {
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+
+.ZvYvIb-content {
+	display: flex;
+	align-items: center;
+}
+
+@media (min-width: 768px) {
+	.ZvYvIb-content:not(.order-2) {
+		padding-right: 4rem;
+	}
+
+	.ZvYvIb-content.order-2 {
+		padding-left: 4rem;
+	}
+}
+
+.ZvYvIb-mask {
+	z-index: 2;
+}
+
+.ZvYvIb-mask img {
+	z-index: 1;
+}
+
+.ZvYvIb-mask:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 2;
+}
+
+.ZvYvIb iframe {
+	z-index: 1;
+}
+
+.ZvYvIb iframe:not(.active) {
+	opacity: 0;
+}
+
+@media (max-width: 768px) {
+	.ZvYvIb .col-md-6:not(.ZvYvIb-content) {
+		padding: 0;
+	}
+
+	.ZvYvIb .ZvYvIb-content {
+		padding: 0.75rem;
+	}
+
+	.ZvYvIb .order-2 {
+		order: 0;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

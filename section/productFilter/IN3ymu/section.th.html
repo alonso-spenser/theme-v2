@@ -1,0 +1,20 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id } |" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|" th:data-filter-section="${ section.id }">
+        <div class="row row-small-gutter section-neighbor" th:if="${#lists.size(section.data.collectionList) > 0}">
+            <div th:class="|col-md-${section.settings.column} col-6|" th:each="o,salt:${section.data.collectionList}">
+                <div th:class="|${ section.templateId }-item text-body text-truncate${salt.index == 0 ? ' active' : ''}|" th:data-filter="${o.id}">
+                    [[${o.title}]]
+                </div>
+            </div>
+        </div>
+        <div th:class="|${ section.templateId }-filter section-neighbor|">
+            [[${ lang.filter }]]
+        </div>
+        <div th:class="|${ section.templateId }-params section-neighbor d-md-block d-none|" th:data-filter-params="${ section.id }"></div>
+        <div th:class="|${ section.templateId }-goods section-neighbor|" th:data-filter-goods="${ section.id }"></div>
+    </div>
+    
+    
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

@@ -1,0 +1,240 @@
+{
+  "protocolVersion": 2,
+  "componentKind": "section",
+  "type": "video",
+  "templateId": "nYjQze",
+  "runtimeVersion": 2,
+  "definitionVersion": 1,
+  "schemaVersion": 1,
+  "name": {
+    "en": "Youtube video",
+    "zh-CN": "Youtube video"
+  },
+  "policy": {
+    "removable": true,
+    "duplicable": true,
+    "maxInstances": 0
+  },
+  "placement": {
+    "fixed": false,
+    "pages": []
+  },
+  "render": {
+    "template": "section.th.html",
+    "style": "section.scss",
+    "variableStyle": "variable.th.css",
+    "script": "section.js"
+  },
+  "editor": {
+    "groups": [
+      {
+        "id": "group1",
+        "name": {
+          "en": "Video",
+          "zh-CN": "视频"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "Youtube video url",
+              "zh-CN": "Youbube 视频地址"
+            },
+            "name": {
+              "en": "Video",
+              "zh-CN": "视频"
+            },
+            "type": "text",
+            "field": "video",
+            "default": "",
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Placeholder",
+              "zh-CN": "占位图"
+            },
+            "type": "imagePicker",
+            "field": "poster",
+            "default": "",
+            "options": [],
+            "altFiled": "alt"
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "group2",
+        "name": {
+          "en": "Settings",
+          "zh-CN": "设置"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Full screen",
+              "zh-CN": "全屏"
+            },
+            "type": "switch",
+            "field": "wideScreen",
+            "default": false,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Mask color",
+              "zh-CN": "蒙板颜色"
+            },
+            "type": "colorPicker",
+            "field": "maskColor",
+            "default": "",
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Width",
+              "zh-CN": "宽"
+            },
+            "type": "slider",
+            "field": "videoWidth",
+            "default": 1280,
+            "options": [],
+            "min": 1,
+            "step": 1
+          },
+          {
+            "info": {
+              "en": "Video scale is: height / width * 100",
+              "zh-CN": "视频最终比例为：高 / 宽 * 100"
+            },
+            "name": {
+              "en": "Height",
+              "zh-CN": "高"
+            },
+            "type": "slider",
+            "field": "videoHeight",
+            "default": 720,
+            "options": [],
+            "min": 1,
+            "step": 1
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "additionalSettings",
+        "name": {
+          "en": "Additional settings",
+          "zh-CN": "补充设置"
+        },
+        "elements": [
+          {
+            "field": "sectionAlias",
+            "name": {
+              "en": "sectionAlias"
+            },
+            "type": "hidden",
+            "default": "Youtube video"
+          },
+          {
+            "field": "autoPlay",
+            "name": {
+              "en": "autoPlay"
+            },
+            "type": "hidden",
+            "default": "manual"
+          },
+          {
+            "field": "loop",
+            "name": {
+              "en": "loop"
+            },
+            "type": "switch",
+            "default": false
+          },
+          {
+            "field": "control",
+            "name": {
+              "en": "control"
+            },
+            "type": "switch",
+            "default": false
+          },
+          {
+            "field": "muted",
+            "name": {
+              "en": "muted"
+            },
+            "type": "switch",
+            "default": false
+          },
+          {
+            "field": "preload",
+            "name": {
+              "en": "preload"
+            },
+            "type": "hidden",
+            "default": "auto"
+          },
+          {
+            "field": "marginTop",
+            "name": {
+              "en": "marginTop"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "marginBottom",
+            "name": {
+              "en": "marginBottom"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "paddingTop",
+            "name": {
+              "en": "paddingTop"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "paddingBottom",
+            "name": {
+              "en": "paddingBottom"
+            },
+            "type": "hidden",
+            "default": ""
+          }
+        ]
+      }
+    ]
+  },
+  "data": {
+    "source": "none",
+    "contract": "theme.video.v2"
+  }
+}

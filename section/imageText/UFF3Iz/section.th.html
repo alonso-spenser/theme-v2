@@ -1,0 +1,53 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div th:class="|text-${section.settings.textAlign} section-title section-neighbor|" th:if="${not #strings.isEmpty(section.settings.heading)
+            || not #strings.isEmpty(section.settings.subheading)
+            || not #strings.isEmpty(section.settings.content)
+            || section.settings.dividerWidth > 0
+            }"
+           >
+            <h3 class="text-heading" th:if="${ not #strings.isEmpty(section.settings.heading) }">
+                [[${ section.settings.heading }]]
+            </h3>
+
+            <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
+                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+            </div>
+
+            <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
+                [[${ section.settings.subheading }]]
+            </h5>
+            <ul th:class="|text-body break-word ${not #strings.isEmpty(section.settings.symbol) ? section.settings.symbol : ''}|" th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                <th:block th:each="textLine,saltLine:${textLines}">
+                    <li th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                </th:block>
+            </ul>
+        </div>
+        <div class="row section-neighbor row-gutter">
+            <div th:class="|col-md-${ section.settings.column } col-${ section.settings.mobColumn }|" th:each="o, salt:${ section.settings.infoList }">
+                <div class="media card section-card">
+                    <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${ not #strings.isEmpty(o.image) }">
+                        <img class="embed-responsive-item lazy" th:src="|${ o.image}!1|" th:data-original="|${o.image}!2|" th:alt="${ o.title }">
+                    </div>
+                    <div class="media-body" th:if="${not #strings.isEmpty(o.title) || not #strings.isEmpty(o.describe) || (o.buttonStyle != 'invisible' && o.buttonLabel) }">
+                        <h5 class="text-content-heading" th:if="${not #strings.isEmpty(o.title)}">
+                            [[${o.title}]]
+                        </h5>
+                        <th:block th:if="${not #strings.isEmpty(o.describe)}" th:with="textLines = ${#strings.listSplit(o.describe,'\n')}">
+                            <th:block th:each="textLine,saltLine:${textLines}">
+                                <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                            </th:block>
+                        </th:block>
+                        <p class="text-button" th:if="${(o.buttonStyle != 'invisible' && not #strings.isEmpty(o.buttonLabel)) || (o.secondButtonStyle != 'invisible' && not #strings.isEmpty(o.secondButtonLabel))}">
+                            <button th:class="|btn btn-sm ${ o.buttonStyle }|" th:if="${#strings.isEmpty(o.buttonLink) && o.buttonStyle != 'invisible' && not #strings.isEmpty(o.buttonLabel)}">[[${o.buttonLabel}]]</button>
+                            <a th:href="${o.buttonLink}" th:class="|btn btn-sm ${o.buttonStyle}|" th:if="${not #strings.isEmpty(o.buttonLink) && o.buttonStyle != 'invisible' && not #strings.isEmpty(o.buttonLabel)}">[[${o.buttonLabel}]]</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

@@ -1,0 +1,128 @@
+{
+  "section": {
+    "id": "1505852023784972290",
+    "componentKind": "section",
+    "type": "featuredProductCollection",
+    "templateId": "UJbMFr",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "3",
+      "layout": "slide",
+      "symbol": "list-demical",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Title with button",
+      "cardColor": "#ffff00",
+      "marginTop": false,
+      "mobColumn": "6",
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "buttonLink": "",
+      "imageScale": "1by1",
+      "paddingTop": true,
+      "subheading": "this is a new beginning",
+      "wideScreen": false,
+      "buttonLabel": "Button label",
+      "buttonStyle": "invisible",
+      "centerAlign": "text-center",
+      "contentAlign": "text-right",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "marginBottom": false,
+      "sectionAlias": "商品集合",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "cardBackground": "#ff0000",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "carouselArrowStyle": "",
+      "carouselNavStyle": "",
+      "carouselAutoPlay": ""
+    },
+    "bindings": {
+      "collectionList": {
+        "sourceType": "productCollection",
+        "ids": []
+      }
+    },
+    "data": {
+      "collectionList": [
+        {
+          "coverImage": "/preview-assets/images/placeholder.jpg",
+          "seoUrl": "",
+          "title": "1 Example Collection Title",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review."
+        },
+        {
+          "coverImage": "/preview-assets/images/placeholder.jpg",
+          "seoUrl": "",
+          "title": "2 Example Collection Title",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review."
+        },
+        {
+          "coverImage": "/preview-assets/images/placeholder.jpg",
+          "seoUrl": "",
+          "title": "3 Example Collection Title",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review."
+        },
+        {
+          "coverImage": "/preview-assets/images/placeholder.jpg",
+          "seoUrl": "",
+          "title": "4 Example Collection Title",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review."
+        },
+        {
+          "coverImage": "/preview-assets/images/placeholder.jpg",
+          "seoUrl": "",
+          "title": "5 Example Collection Title",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review."
+        },
+        {
+          "coverImage": "/preview-assets/images/placeholder.jpg",
+          "seoUrl": "",
+          "title": "6 Example Collection Title",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review."
+        },
+        {
+          "coverImage": "/preview-assets/images/placeholder.jpg",
+          "seoUrl": "",
+          "title": "7 Example Collection Title",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review."
+        },
+        {
+          "coverImage": "/preview-assets/images/placeholder.jpg",
+          "seoUrl": "",
+          "title": "8 Example Collection Title",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability,\nstyle, or even provide a review."
+        }
+      ]
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

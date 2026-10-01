@@ -1,0 +1,57 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-Rr63Ab{
+    background: #f2f2f2   ;
+    
+}
+
+
+
+.section-demo-Rr63Ab .section-title [class^=text-] {
+    color:#212529;
+}
+
+
+    .section-demo-Rr63Ab .section-title-divider {
+        
+            width: 100%;
+        
+    }
+    .section-demo-Rr63Ab .section-title-divider:after {
+        
+            border-color: #212529;
+        
+    }
+
+
+@media (min-width: 768px) {
+    .section-demo-Rr63Ab .section-title [class^=text-] {
+        width: 100%;
+    }
+}
+
+
+
+.section-demo-Rr63Ab .section-title .has-line:after, .section-demo-Rr63Ab .section-title img {
+    width: 5%;
+}
+
+
+
+
+
+
+.section-demo-Rr63Ab .Rr63Ab-digit{
+    color: #ef9e06;
+}
+
+
+
+.section-demo-Rr63Ab .Rr63Ab-text{
+    color: #136cc7;
+}
+
+
+
+.section-demo-Rr63Ab .row.divider .col-12:not(:last-child):after {
+    border-color: #ff0000;
+}

@@ -1,0 +1,21 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-vUruam .section-container {
+          background: #525205   ;
+      
+  }
+
+
+    .section-demo-vUruam .section-collection-describe.close:before {
+        background: linear-gradient(180deg,rgba(252,251,252,0),#525205);
+    }
+
+
+    .section-demo-vUruam .card {
+        background-color: rgba(8,115,115,0.3);
+    }
+
+
+
+    .section-demo-vUruam .card-body, .section-demo-vUruam .text-content-heading {
+        color: #ffff00;
+    }

@@ -1,0 +1,48 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.headingColor) || not #strings.isEmpty(section.settings.subheadingColor) || not #strings.isEmpty(section.settings.bodyColor)}"]
+@media (min-width: 768px) {
+    [# th:if="${not #strings.isEmpty(section.settings.headingColor)}"]
+    .section-[[${ section.id }]] .text-heading {
+        color:[[${section.settings.headingColor}]];
+    }
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.subheadingColor)}"]
+    .section-[[${ section.id }]] .text-subheading {
+        color:[[${section.settings.subheadingColor}]];
+    }
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.bodyColor)}"]
+    .section-[[${ section.id }]] .text-body, .section-[[${ section.id }]] .text-body * {
+        color:[[${section.settings.bodyColor}]];
+    }
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.headingMobColor) || not #strings.isEmpty(section.settings.subheadingMobColor) || not #strings.isEmpty(section.settings.bodyMobColor)}"]
+@media (max-width: 768px) {
+    [# th:if="${not #strings.isEmpty(section.settings.headingMobColor)}"]
+    .section-[[${ section.id }]] .text-heading {
+        color:[[${section.settings.headingMobColor}]];
+    }
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.subheadingMobColor)}"]
+    .section-[[${ section.id }]] .text-subheading {
+        color:[[${section.settings.subheadingMobColor}]];
+    }
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.bodyMobColor)}"]
+    .section-[[${ section.id }]] .text-body, .section-[[${ section.id }]] .text-link, .section-[[${ section.id }]] .text-body * {
+        color:[[${section.settings.bodyMobColor}]];
+    }
+    [/]
+}
+[/]

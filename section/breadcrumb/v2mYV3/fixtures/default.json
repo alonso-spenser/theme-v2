@@ -1,0 +1,53 @@
+{
+  "section": {
+    "id": "1442394274465026050",
+    "componentKind": "section",
+    "type": "breadcrumb",
+    "templateId": "v2mYV3",
+    "runtimeVersion": 2,
+    "settings": {
+      "heading": "H1 heading",
+      "h1Layout": "",
+      "marginTop": false,
+      "textColor": "",
+      "paddingTop": true,
+      "wideScreen": false,
+      "marginBottom": false,
+      "sectionAlias": "面包屑",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "linkList": [],
+      "enableCrumb": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

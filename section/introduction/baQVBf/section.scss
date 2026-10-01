@@ -1,0 +1,64 @@
+.baQVBf {
+	background-color: #def4f6;
+}
+
+.baQVBf-icon {
+	max-height: 3rem;
+}
+
+.baQVBf-icon + [class*="text-"] {
+	margin-top: 1rem;
+}
+
+.baQVBf .border-radius {
+	border-radius: 10px;
+}
+
+.baQVBf-card {
+	background-color: #bce1e9;
+	margin-left: 7.8rem;
+	display: flex;
+	width: calc(100% - 15.6rem);
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+
+.baQVBf-card:hover .embed-responsive-item {
+	transform: scale(1.05);
+}
+
+.baQVBf .embed-responsive {
+	width: 25rem;
+	margin-left: -7.8rem;
+}
+
+.baQVBf .section-title {
+	padding: 3rem 4rem;
+	flex: 1;
+}
+
+.baQVBf [class*="text-"].text-link {
+	margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+	.baQVBf .baQVBf-card {
+		display: block;
+		margin: 0;
+		width: 100%;
+		padding: 0;
+	}
+
+	.baQVBf .embed-responsive {
+		width: 100%;
+		margin-left: 0;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.baQVBf .section-title {
+		padding: 1.5rem 2rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

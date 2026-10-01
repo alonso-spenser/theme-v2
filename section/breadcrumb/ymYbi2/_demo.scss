@@ -1,0 +1,29 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-ymYbi2 .bread-crumb {
+    background: #f2f2f2   ;
+    
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    .section-demo-ymYbi2 .text-heading {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+
+
+@media (min-width: 768px) {
+    .section-demo-ymYbi2 + .section {
+        position: relative;
+        margin-top: -100px;
+    }
+}

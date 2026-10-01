@@ -1,0 +1,39 @@
+.ABFZNr .section-dialog-container.transparent {
+	background: none;
+	box-shadow: none;
+}
+
+.ABFZNr .section-title-divider + .text-heading {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.ABFZNr .section-title-divider + .text-list {
+	margin-top: 1.5rem;
+}
+
+.ABFZNr .text-button {
+	text-align: center;
+}
+
+.ABFZNr .text-button.vertical {
+	margin-top: 1.5rem;
+}
+
+.ABFZNr .text-button.vertical .btn {
+	width: 70%;
+	max-width: 380px;
+}
+
+.ABFZNr .text-button.vertical p + p {
+	margin: 1.5rem 0 0 0;
+}
+
+@media (max-width: 768px) {
+	.ABFZNr .text-button.vertical .btn {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

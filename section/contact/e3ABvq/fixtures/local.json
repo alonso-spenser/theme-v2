@@ -1,0 +1,67 @@
+{
+  "section": {
+    "id": "1725087037941522434",
+    "componentKind": "section",
+    "type": "contact",
+    "templateId": "e3ABvq",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "4",
+      "iconSize": 0,
+      "bodyColor": "",
+      "iconColor": "",
+      "marginTop": false,
+      "mobColumn": "12",
+      "imageWidth": 0,
+      "paddingTop": true,
+      "wideScreen": false,
+      "headingColor": "",
+      "marginBottom": false,
+      "sectionAlias": "Contact US",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "itemList": [],
+      "textAlign": "",
+      "heading": "",
+      "subheading": "",
+      "content": "",
+      "dividerWidth": "",
+      "dividerStyle": "",
+      "dividerImage": "",
+      "contentAlign": "",
+      "symbol": "",
+      "textColor": "",
+      "textWidth": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

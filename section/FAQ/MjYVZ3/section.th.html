@@ -1,0 +1,51 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+        <div th:class="|text-${section.settings.textAlign} section-title section-neighbor|" th:if="${not #strings.isEmpty(section.settings.heading)
+            || not #strings.isEmpty(section.settings.subheading)
+            || not #strings.isEmpty(section.settings.content)
+            || section.settings.dividerWidth > 0
+            }"
+           >
+            <h3 class="text-heading" th:if="${ not #strings.isEmpty(section.settings.heading) }">
+                [[${ section.settings.heading }]]
+            </h3>
+
+            <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
+                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+            </div>
+
+            <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
+                [[${ section.settings.subheading }]]
+            </h5>
+            <ul th:class="|text-body break-word ${section.settings.symbol}|" th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                <th:block th:each="textLine,saltLine:${textLines}">
+                    <li th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+                </th:block>
+            </ul>
+        </div>
+        <div th:class="|${ section.templateId }-container section-neighbor|">
+            <div class="row">
+                <div th:class="|col-md-${ section.settings.contentWidth }|" th:if="${not #strings.isEmpty(section.settings.image)}">
+                    <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
+                        <img class="embed-responsive-item lazy" th:src="|${section.settings.image}!1|" th:data-original="|${section.settings.image}!${section.settings.fluid ? 'f' : ''}${section.settings.contentWidth}|" th:alt="${section.settings.alt}">
+                    </div>
+                </div>
+                <div th:class="|col-md-${not #strings.isEmpty(section.settings.image) ? #numbers.formatInteger((12 - section.settings.contentWidth), 1,'POINT') : 12}|" th:data-faq="${ section.id }">
+                    <th:block th:each="o,salt:${section.settings.faqList}">
+                        <div th:class="|${ section.templateId }-item ${salt.index == 0 ? 'active' : ''}|">
+                            <h3 class="text-content-heading">[[${o.question}]]</h3>
+                            <div class="text-body break-word" th:if="${not #strings.isEmpty(o.answer)}" th:with="textLines = ${#strings.listSplit(o.answer,'\n')}">
+                                <th:block th:each="textLine,saltLine:${textLines}">
+                                    <p th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                                </th:block>
+                            </div>
+                        </div>
+                    </th:block>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

@@ -1,0 +1,61 @@
+{
+  "section": {
+    "id": "1502530187274395650",
+    "componentKind": "section",
+    "type": "imageText",
+    "templateId": "UjAnQb",
+    "runtimeVersion": 2,
+    "settings": {
+      "alt": "",
+      "image": "",
+      "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+      "heading": "This is a heading",
+      "videoURL": "",
+      "marginTop": false,
+      "textColor": "",
+      "imageScale": "1by1",
+      "paddingTop": true,
+      "subheading": "This is a subheading",
+      "wideScreen": false,
+      "contentAlign": "right",
+      "contentWidth": "6",
+      "marginBottom": false,
+      "sectionAlias": "图文视频",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "hide": "Hide",
+    "lang": "英语",
+    "more": "Show more",
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-aUJfUj{
+    background: #ffff00   ;
+    
+}
+
+
+
+
+    
+    .section-demo-aUJfUj .section-title-divider {
+        width: 100%;
+    }
+    
+    
+
+
+@media (min-width: 768px) {
+    .section-demo-aUJfUj .section-title [class^=text-] {
+        width: 100%;
+    }
+}
+
+
+
+.section-demo-aUJfUj .section-title .has-line:after, .section-demo-aUJfUj .section-title img {
+    width: 5%;
+}
+
+
+
+
+.section-demo-aUJfUj .aUJfUj-content .aUJfUj-clock,
+.section-demo-aUJfUj .card-body [class^=text-] {
+    color: #ffff00;
+}

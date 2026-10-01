@@ -1,0 +1,37 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:each="o,stat: ${section.settings.itemList}"]
+    [# th:if="${not #strings.isEmpty(o.cardBackground)}"]
+        .section-[[${ section.id }]] .[[${section.templateId}]]-[[${stat.index}]]{
+            background-color: [[${ o.cardBackground }]];
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(o.headingColor)}"]
+         .section-[[${ section.id }]] .[[${section.templateId}]]-[[${stat.index}]] .text-content-heading {
+             color: [[${ o.headingColor }]];
+         }
+    [/]
+
+    [# th:if="${not #strings.isEmpty(o.bodyColor)}"]
+         .section-[[${ section.id }]] .[[${section.templateId}]]-[[${stat.index}]] .text-body {
+             color: [[${ o.bodyColor }]];
+         }
+    [/]
+[/]
+[# th:if="${section.settings.borderRadius > 0}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-card {
+    border-radius:[[${section.settings.borderRadius}]]px;
+}
+[/]
+[# th:if="${section.settings.imageHeight > 0}"]
+.section-[[${ section.id }]] img {
+    height:[[${section.settings.imageHeight}]]px;
+}
+[/]

@@ -1,0 +1,77 @@
+{
+  "section": {
+    "id": "1442705721376075778",
+    "componentKind": "section",
+    "type": "imageGroup",
+    "templateId": "NbeQni",
+    "runtimeVersion": 2,
+    "settings": {
+      "layout": "left",
+      "boxShadow": 30,
+      "marginTop": false,
+      "textColor": "#ffff00",
+      "imageScale": "16by9",
+      "paddingTop": true,
+      "wideScreen": false,
+      "layoutStyle": "overlay",
+      "borderRadius": 9,
+      "marginBottom": false,
+      "sectionAlias": "图片展示",
+      "paddingBottom": true,
+      "backgroundColor": "",
+      "imageList": [
+        {
+          "image": "/preview-assets/images/8r.jpg",
+          "alt": "",
+          "heading": "Heading",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "link": ""
+        },
+        {
+          "image": "/preview-assets/images/8g.jpg",
+          "alt": "",
+          "heading": "Heading",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "link": ""
+        },
+        {
+          "image": "/preview-assets/images/8b.jpg",
+          "alt": "",
+          "heading": "Heading",
+          "content": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+          "link": ""
+        }
+      ],
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "backgroundSize": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

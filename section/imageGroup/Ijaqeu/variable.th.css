@@ -1,0 +1,31 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+[# th:each="o,stat: ${section.settings.columnList}"]
+    [# th:if="${o.topDistance > 0}"]
+        .section-[[${ section.id }]] [class*="col-"]:nth-child([[${stat.index + 1}]])  {
+            padding-top: [[${ o.topDistance }]]px;
+        }
+    [/]
+[/]
+[# th:if="${(section.settings.borderRadius != null && section.settings.borderRadius > 0 || section.settings.borderRadius != 10) || 
+    (section.settings.cardOffset != null && section.settings.cardOffset > 0 || section.settings.cardOffset != 80)
+    }"]
+@media (min-width: 768px) {
+    [# th:if="${section.settings.cardOffset != null && section.settings.cardOffset > 0 || section.settings.cardOffset != 80}"]
+        .section-[[${ section.id }]] .card{
+            margin-left:[[${section.settings.cardOffset}]]px;
+        }
+    [/]
+    [# th:if="${section.settings.borderRadius != null && section.settings.borderRadius > 0 || section.settings.borderRadius != 10}"]
+        .section-[[${ section.id }]] .Ijaqeu-item{
+            border-radius:[[${section.settings.borderRadius}]]px;
+        }
+    [/]
+}
+[/]

@@ -1,0 +1,30 @@
+.MbmYVr-more {
+	font-size: 1rem;
+	cursor: pointer;
+	padding-top: 0.375rem;
+	padding-bottom: 0.375rem;
+}
+
+.MbmYVr-more:before {
+	font-family: "iconfont" !important;
+	content: "\e60f";
+	margin-right: 0.1875rem;
+}
+
+.MbmYVr-more:not(.show) {
+	display: none;
+}
+
+.MbmYVr-more label {
+	cursor: pointer;
+}
+
+.MbmYVr-more label:last-child {
+	display: none;
+}
+
+.MbmYVr-more.active:before {
+	content: "\e618";
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

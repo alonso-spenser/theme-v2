@@ -1,0 +1,59 @@
+{
+  "section": {
+    "id": "1410131326891872257",
+    "componentKind": "page-section",
+    "type": "pageNotFoundPage",
+    "templateId": "j6EFJ3",
+    "runtimeVersion": 2,
+    "settings": {
+      "h1Wide": false,
+      "content": "We're sorry, but the page you were looking for doesn't exist.",
+      "h1Color": "#9b9b05",
+      "heading": "Page not Found",
+      "h1Layout": "left",
+      "marginTop": false,
+      "textColor": "#0000ff",
+      "buttonLink": "/",
+      "paddingTop": false,
+      "wideScreen": false,
+      "buttonLabel": "Back to home",
+      "buttonStyle": "btn-outline-primary",
+      "enableCrumb": true,
+      "h1Background": "#f6f69c",
+      "marginBottom": false,
+      "sectionAlias": "404页",
+      "paddingBottom": false,
+      "backgroundSize": "",
+      "backgroundColor": "#ffff00",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+[# th:if="${not #strings.isEmpty(section.settings.h1Background)}"]
+    .section-[[${ section.id }]] .bread-crumb {
+        background-color: [[${section.settings.h1Background}]];
+    }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.h1Color)}"]
+    .section-[[${ section.id }]] .bread-crumb * {
+        color: [[${section.settings.h1Color}]];
+    }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+  .section-[[${ section.id }]] .section-container {
+          background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+      [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+          background-size: [[${section.settings.backgroundSize}]];
+      [/]
+  }
+[/]
+[# th:if="${section.settings.tagList != null}"]
+    [# th:each="o, salt:${ section.settings.tagList }"]
+        [# th:if="${o.textSize > 0 || not #strings.isEmpty(o.textColor)}"]
+            .section-[[${ section.id }]] .[[${ section.templateId }]]-[[${salt.index}]] {
+                [# th:if="${o.textSize > 0}"]
+                    font-size: [[${o.textSize}]]px;
+                [/]
+                [# th:if="${not #strings.isEmpty(o.textColor)}"]
+                    color: [[${o.textColor}]];
+                [/]
+            }
+        [/]
+    [/]
+[/]

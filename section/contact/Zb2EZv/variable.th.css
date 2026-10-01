@@ -1,0 +1,48 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-contact {
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+
+[# th:if="${section.settings.mapHeight > 0}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-map{
+    height: [[${ section.settings.mapHeight}]]px;
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.labelColor)}"]
+.section-[[${ section.id }]] .media label{
+    color: [[${ section.settings.labelColor }]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.iconColor)}"]
+.section-[[${ section.id }]] .media .media-icon i{
+    color: [[${ section.settings.iconColor }]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.titleColor)}"]
+.section-[[${ section.id }]] .media h3{
+    color: [[${ section.settings.titleColor }]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.fieldColor)}"]
+.section-[[${ section.id }]] .text-content-heading{
+    color: [[${ section.settings.fieldColor }]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .media .text-body,
+.section-[[${ section.id }]] .media p{
+    color: [[${ section.settings.textColor }]];
+}
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.cardBackground)}"]
+.section-[[${ section.id }]] .Zb2EZv-form{
+    background-color: [[${ section.settings.cardBackground }]];
+}
+[/]

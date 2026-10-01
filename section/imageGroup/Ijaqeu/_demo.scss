@@ -1,0 +1,24 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-Ijaqeu [class*="col-"]:nth-child(2)  {
+            padding-top: 30px;
+        }
+    
+    
+        .section-demo-Ijaqeu [class*="col-"]:nth-child(3)  {
+            padding-top: 20px;
+        }
+    
+
+
+@media (min-width: 768px) {
+    
+        .section-demo-Ijaqeu .card{
+            margin-left:20px;
+        }
+    
+    
+        .section-demo-Ijaqeu .Ijaqeu-item{
+            border-radius:10px;
+        }
+    
+}

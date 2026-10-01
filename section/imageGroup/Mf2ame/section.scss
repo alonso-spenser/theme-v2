@@ -1,0 +1,64 @@
+.Mf2ame-heading [class*="text-"] + [class*="text-"] {
+	margin-top: 1rem;
+}
+
+.Mf2ame .text-link {
+	display: block;
+	color: var(--colorBody);
+}
+
+.Mf2ame .text-label {
+	display: inline-block;
+	border-radius: 5px;
+	background-color: var(--colorTheme);
+	color: #fff;
+	font-size: 12px;
+	padding: 0.2rem 0.5rem;
+}
+
+.Mf2ame .embed-responsive {
+	display: inline-block;
+	width: 3.75rem;
+}
+
+.Mf2ame .embed-responsive .embed-responsive-item:first-child {
+	opacity: 1;
+	z-index: 2;
+}
+
+.Mf2ame .embed-responsive .embed-responsive-item:last-child {
+	opacity: 0;
+	z-index: 1;
+}
+
+.Mf2ame .card-body {
+	padding: 2.5625rem 1.5625rem;
+}
+
+.Mf2ame .card-body [class*="text-"] + [class*="text-"] {
+	margin-top: 0.75rem;
+}
+
+.Mf2ame .card.active, .Mf2ame .card:hover {
+	background-color: var(--colorTheme);
+}
+
+.Mf2ame .card.active .embed-responsive-item:first-child, .Mf2ame .card:hover .embed-responsive-item:first-child {
+	z-index: 1;
+	opacity: 0;
+}
+
+.Mf2ame .card.active .embed-responsive-item:last-child, .Mf2ame .card:hover .embed-responsive-item:last-child {
+	z-index: 2;
+	opacity: 1;
+}
+
+.Mf2ame .card.active [class*="text-"], .Mf2ame .card:hover [class*="text-"] {
+	color: #fff;
+}
+
+.Mf2ame .card.active .text-link, .Mf2ame .card:hover .text-link {
+	text-decoration: underline;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

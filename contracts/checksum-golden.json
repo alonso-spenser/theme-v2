@@ -1,0 +1,18 @@
+{
+  "algorithm": "oga-named-sha256-v1",
+  "parts": [
+    {
+      "name": "definition.json",
+      "content": "{\"a\":\"拉各斯\",\"z\":1}"
+    },
+    {
+      "name": "empty.txt",
+      "content": ""
+    },
+    {
+      "name": "emoji.txt",
+      "content": "🛒"
+    }
+  ],
+  "checksum": "sha256:93a9a4cd75c534a590d47370df078199daadf2786cf0e02f4f11618696580139"
+}

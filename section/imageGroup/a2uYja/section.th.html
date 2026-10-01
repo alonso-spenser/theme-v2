@@ -1,0 +1,46 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+	<div th:class="|slick ${ section.templateId }-container container${section.settings.wideScreen ? '-fluid' : ''}|">
+		<div
+            class="slick-slider has-gutter dots-invisible arrow-invisible"
+            th:data-carousel="${ section.id }"
+            data-effect="slide"
+            data-dots="0"
+            data-arrow="0"
+            data-center-mode="1"
+            th:data-column="${section.settings.column}"
+            th:data-mobile-column="${section.settings.mobColumn}"
+            data-delay="5000"
+		>
+			<div class="slick-slide" th:each="o,salt:${section.settings.imageList}">
+				<div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
+                    <img
+                        class="embed-responsive-item"
+                        th:src="|${ o.image}!1|"
+                        th:data-lazy="${ o.image }"
+                        th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.content }">
+				</div>
+                <div th:class="|${ section.templateId }-content|" th:if="${(not #strings.isEmpty(o.subheading) || not #strings.isEmpty(o.heading)) && not #strings.isEmpty(o.link)}">
+                    <p class="text-body" th:if="${not #strings.isEmpty(o.subheading)}">
+                        [[${o.subheading}]]
+                    </p>
+                    <h5 class="text-content-heading" th:if="${not #strings.isEmpty(o.heading)}">
+                        [[${o.heading}]]
+                    </h5>
+                </div>
+				<a th:href="${o.link}" th:if="${not #strings.isEmpty(o.link)}">
+                    <div th:class="|${ section.templateId }-content|" th:if="${not #strings.isEmpty(o.subheading) || not #strings.isEmpty(o.heading)}">
+                        <p class="text-body" th:if="${not #strings.isEmpty(o.subheading)}">
+                            [[${o.subheading}]]
+                        </p>
+                        <h5 class="text-content-heading" th:if="${not #strings.isEmpty(o.heading)}">
+                            [[${o.heading}]]
+                        </h5>
+                    </div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

@@ -1,0 +1,37 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+.section-[[${ section.id }]]{
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+    background-size: [[${section.settings.backgroundSize}]];
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.overlayColor)}"]
+    .section-[[${ section.id }]] .[[${ section.templateId }]]-content:before {
+         background-color: [[${section.settings.overlayColor}]];
+    }
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.mobColor)}"]
+@media (max-width: 768px) {
+  .[[${ section.templateId }]] .alone .[[${ section.templateId }]]-content [class*="text-"] {
+    color: [[${section.settings.mobColor}]];
+  }
+}
+[/]
+
+[# th:each="o, salt:${ section.settings.imageList }"]
+    [# th:if="${not #strings.isEmpty(o.textColor)}"]
+        .section-[[${ section.id }]] .slick-slide-[[${ salt.index }]] [class*="text-"] {
+            color: [[${o.textColor}]];
+        }
+    [/]
+
+    [# th:if="${o.contentWidth > 0 || o.contentOffset > 0}"]
+        .section-[[${ section.id }]] .slick-slide-[[${ salt.index }]] .slick-slide-area {
+            width: [[${o.contentWidth}]]%;
+            margin-left: [[${o.contentOffset}]]%;
+        }
+    [/]
+[/]

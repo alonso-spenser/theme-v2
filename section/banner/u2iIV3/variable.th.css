@@ -1,0 +1,8 @@
+.section-[[${section.id}]] {
+    --banner-text: [[${section.settings.textColor}]];
+    --banner-mobile-text: [[${section.settings.mobColor}]];
+    --banner-overlay: [[${section.settings.overlayColor}]];
+    --banner-opacity: calc([[${section.settings.overlayOpacity}]] / 100);
+    --banner-width: [[${section.settings.contentWidth}]]%;
+    --banner-offset: [[${section.settings.contentOffset}]]%;
+}

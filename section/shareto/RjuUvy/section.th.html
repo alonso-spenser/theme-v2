@@ -1,0 +1,27 @@
+<section th:class="|${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+       
+        
+        <div class="fo-share-group" th:if="${ site.region != 'zh-CN' }">
+            <button type="button" class="btn btn-outline-secondary" data-share="facebook">Facebook</button>
+            <button type="button" class="btn btn-outline-secondary" data-share="twitter">X</button>
+            
+            <button type="button" class="btn btn-outline-secondary" data-share="linkedin">LinkedIn</button>
+            
+            
+            <button type="button" class="btn btn-outline-secondary" data-share="native">分享 / Share</button>
+        </div>
+        <div class="fo-share-group" th:if="${ site.region == 'zh-CN' }">
+            
+            
+            
+            
+            
+            <button type="button" class="btn btn-outline-secondary" data-share="email">Email</button>
+            <button type="button" class="btn btn-outline-secondary" data-share="native">分享 / Share</button>
+        </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

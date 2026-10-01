@@ -1,0 +1,71 @@
+{
+  "section": {
+    "id": "1511548923771105281",
+    "componentKind": "section",
+    "type": "anchorNavigation",
+    "templateId": "u6zEja",
+    "runtimeVersion": 2,
+    "settings": {
+      "logo": "https://site-file.fomillesite.com/0/fo/logo.png",
+      "logoUrl": "/#首页",
+      "barTitle": "",
+      "fullView": false,
+      "logoType": "logo",
+      "barContent": "",
+      "barVisible": true,
+      "menuLayout": "end",
+      "closeButton": false,
+      "menuVisible": true,
+      "barTextColor": "",
+      "emailVisible": false,
+      "fullViewLogo": "",
+      "navTextColor": "",
+      "phoneVisible": false,
+      "sectionAlias": "网站页头",
+      "barBackground": "",
+      "fullViewColor": "",
+      "navBackground": "",
+      "mainButtonLink": "",
+      "mainButtonLabel": "Button",
+      "mainButtonStyle": "btn-primary",
+      "secondaryVisible": true,
+      "secondaryTextColor": "",
+      "secondaryBackground": "",
+      "secondaryButtonLink": "",
+      "secondaryButtonLabel": "Button",
+      "secondaryButtonStyle": "invisible",
+      "langList": [],
+      "menuList": [],
+      "auxiliaryList": [],
+      "bigLogo": "",
+      "logoLink": "",
+      "logoAlt": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

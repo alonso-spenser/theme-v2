@@ -1,0 +1,193 @@
+{
+  "protocolVersion": 2,
+  "componentKind": "section",
+  "type": "imageText",
+  "templateId": "KjbTA8",
+  "runtimeVersion": 2,
+  "definitionVersion": 1,
+  "schemaVersion": 1,
+  "name": {
+    "zh-CN": "全幅图文 · 校友故事",
+    "en": "Full-bleed image & text · Alumni"
+  },
+  "description": {
+    "zh-CN": "参考 SLB 校友页面的双栏图文，手机端上下排列。",
+    "en": "A responsive split image and editorial text section inspired by the SLB alumni page."
+  },
+  "policy": {
+    "removable": true,
+    "duplicable": true,
+    "maxInstances": 0
+  },
+  "placement": {
+    "pages": [
+      "home",
+      "custom-page"
+    ],
+    "fixed": false,
+    "slots": [
+      "content"
+    ]
+  },
+  "data": {
+    "source": "none",
+    "contract": "theme.imageText.v2"
+  },
+  "editor": {
+    "groups": [
+      {
+        "id": "content",
+        "name": {
+          "zh-CN": "内容与外观",
+          "en": "Content and appearance"
+        },
+        "elements": [
+          {
+            "type": "imagePicker",
+            "field": "image",
+            "name": {
+              "zh-CN": "图片",
+              "en": "Image"
+            },
+            "default": "/preview-assets/images/slb-alumni-campus.jpg"
+          },
+          {
+            "type": "text",
+            "field": "imageAlt",
+            "name": {
+              "zh-CN": "图片说明",
+              "en": "Image description"
+            },
+            "default": "Norway SLB location",
+            "translatable": true
+          },
+          {
+            "type": "text",
+            "field": "heading",
+            "name": {
+              "zh-CN": "标题",
+              "en": "Heading"
+            },
+            "default": "SLB employees, current and past, made us who we are today.",
+            "translatable": true
+          },
+          {
+            "type": "textarea",
+            "field": "paragraphOne",
+            "name": {
+              "zh-CN": "正文第一段",
+              "en": "First paragraph"
+            },
+            "default": "They are an inextricable part of our history and culture of innovation. Since 1926, our employees have invented, designed, engineered, applied, and maintained technologies that help the world meet evolving energy challenges.",
+            "translatable": true
+          },
+          {
+            "type": "textarea",
+            "field": "paragraphTwo",
+            "name": {
+              "zh-CN": "正文第二段",
+              "en": "Second paragraph"
+            },
+            "default": "That is why our dedication and gratitude to you, our alumni, never ends. Here you can stay connected to what’s new at SLB, renew relationships with friends and colleagues, and explore career and networking opportunities.",
+            "translatable": true
+          },
+          {
+            "type": "text",
+            "field": "buttonLabel",
+            "name": {
+              "zh-CN": "按钮文字",
+              "en": "Button label"
+            },
+            "default": "Explore the Alumni Service Center",
+            "translatable": true
+          },
+          {
+            "type": "text",
+            "field": "buttonUrl",
+            "name": {
+              "zh-CN": "按钮链接",
+              "en": "Button URL"
+            },
+            "default": "https://alumni.slb.com"
+          },
+          {
+            "type": "switch",
+            "field": "newWindow",
+            "name": {
+              "zh-CN": "新窗口打开",
+              "en": "Open in new window"
+            },
+            "default": true
+          },
+          {
+            "type": "colorPicker",
+            "field": "backgroundColor",
+            "name": {
+              "zh-CN": "背景色",
+              "en": "Background"
+            },
+            "default": "",
+            "info": {
+              "zh-CN": "留空继承全局设计，仅填写时覆盖当前实例。",
+              "en": "Leave empty to inherit the global design; overrides apply only to this instance."
+            }
+          },
+          {
+            "type": "colorPicker",
+            "field": "textColor",
+            "name": {
+              "zh-CN": "标题颜色",
+              "en": "Heading color"
+            },
+            "default": "",
+            "info": {
+              "zh-CN": "留空继承全局设计，仅填写时覆盖当前实例。",
+              "en": "Leave empty to inherit the global design; overrides apply only to this instance."
+            }
+          },
+          {
+            "type": "colorPicker",
+            "field": "bodyColor",
+            "name": {
+              "zh-CN": "正文颜色",
+              "en": "Body color"
+            },
+            "default": "",
+            "info": {
+              "zh-CN": "留空继承全局设计，仅填写时覆盖当前实例。",
+              "en": "Leave empty to inherit the global design; overrides apply only to this instance."
+            }
+          },
+          {
+            "type": "colorPicker",
+            "field": "accentColor",
+            "name": {
+              "zh-CN": "按钮颜色",
+              "en": "Accent color"
+            },
+            "default": "",
+            "info": {
+              "zh-CN": "留空继承全局设计，仅填写时覆盖当前实例。",
+              "en": "Leave empty to inherit the global design; overrides apply only to this instance."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "i18n": {
+    "rootFields": [
+      "heading",
+      "paragraphOne",
+      "paragraphTwo",
+      "imageAlt",
+      "buttonLabel"
+    ]
+  },
+  "render": {
+    "template": "section.th.html",
+    "style": "section.scss",
+    "variableStyle": "variable.th.css",
+    "script": "section.js"
+  }
+}

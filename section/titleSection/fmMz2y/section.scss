@@ -1,0 +1,52 @@
+.fmMz2y .text-small {
+	font-size: 0.625rem;
+	letter-spacing: 1.6px;
+	text-transform: uppercase;
+	color: var(--colorSecondary);
+}
+
+.fmMz2y .text-heading {
+	position: relative;
+	padding-bottom: 2rem;
+}
+
+.fmMz2y .text-heading:before {
+	content: "";
+	position: absolute;
+	left: calc(50% - 40px);
+	width: 5rem;
+	height: 3px;
+	border-radius: 5px;
+	display: block;
+	bottom: 0;
+	background-color: var(--colorTheme);
+}
+
+.fmMz2y .text-left .text-heading:before {
+	left: 0;
+}
+
+.fmMz2y .text-left .text-small {
+	position: relative;
+	padding-left: 2.5rem;
+}
+
+.fmMz2y .text-left .text-small:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	width: 2rem;
+	height: 3px;
+	border-radius: 5px;
+	display: block;
+	background-color: var(--colorTheme);
+}
+
+.fmMz2y .text-right .text-heading:before {
+	left: auto;
+	right: 0;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

@@ -1,0 +1,36 @@
+.mYZRnq-tile .card-body {
+	border-bottom-left-radius: calc(var(--cardBorderRadius) * 1px);
+	border-bottom-right-radius: calc(var(--cardBorderRadius) * 1px);
+}
+
+@media (min-width: 768px) {
+	.mYZRnq .sidebar-right > .col-md-9 {
+		padding-right: 3rem;
+	}
+
+	.mYZRnq .sidebar-left > .col-md-9 {
+		padding-left: 3rem;
+	}
+}
+
+.mYZRnq-list {
+	margin-bottom: 1.25rem;
+	padding-bottom: 1.25rem;
+	border-bottom: calc(var(--borderWidth) * 1px) var(--borderStyle) var(--colorBorder);
+}
+
+@media (max-width: 768px) {
+	.mYZRnq-list {
+		border-bottom: 0;
+	}
+
+	.mYZRnq-list .row .col-md-3 {
+		margin-bottom: 0.75rem;
+	}
+}
+
+.mYZRnq-list:hover [class*="text-"] {
+	color: var(--colorTheme);
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

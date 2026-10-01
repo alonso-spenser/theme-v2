@@ -1,0 +1,53 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+	<div th:class="|${section.templateId}-mission ${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} |">
+		<div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
+			<div class="row">
+				<div th:class="|col-md-${section.settings.contentWidth} col-12 ${ section.templateId }-item|">
+					<div th:class="|${ section.templateId }-card|">
+                        <h3 class="text-heading" th:if="${ not #strings.isEmpty(section.settings.heading) }">[[ ${ section.settings.heading } ]]</h3>
+                        <p class="text-body" th:if="${ not #strings.isEmpty(section.settings.content) }" th:utext="${section.settings.content}">[[ ${ section.settings.content } ]]</p>
+						<div th:class="|embed-responsive text-neighbor embed-responsive-${section.settings.imageScale}|" th:if="${ not #strings.isEmpty(section.settings.image) }">
+							<img class="embed-responsive-item lazy" th:src="|${ section.settings.image}!1|" th:data-original="${ section.settings.image }" th:alt="${ not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading}">
+						</div>
+					</div>
+				</div>
+				<div th:class="|col-md-${#numbers.formatInteger(12 - section.settings.contentWidth, 1,'POINT')} col-12 ${ section.templateId }-item|">
+					<div th:class="|${ section.templateId }-card|">
+						<div class="text-neighbor" th:each="o,salt:${section.settings.firstList}">
+							<h3 class="text-content-heading" th:if="${ not #strings.isEmpty(o.firstHeading) }">[[ ${ o.firstHeading } ]]</h3>
+							<p class="text-body" th:if="${ not #strings.isEmpty(o.firstContent) }" th:utext="${o.firstContent}"></p>
+							<p class="text-link" th:if="${ not #strings.isEmpty(o.buttonLink) && not #strings.isEmpty(o.buttonLabel) && o.buttonStyle != 'invisible'}">
+								<a th:class="|btn ${o.buttonStyle}|" th:href="${o.buttonLink}">
+									[[ ${ o.buttonLabel } ]]
+								</a>
+							</p>
+                            <div th:class="|embed-responsive text-neighbor embed-responsive-${o.firstScale}|" th:if="${ not #strings.isEmpty(o.firstImage) }">
+                                <img class="embed-responsive-item lazy" th:src="|${ o.firstImage}!1|" th:data-original="${ o.firstImage }" th:alt="${ not #strings.isEmpty(section.settings.firstAlt) ? section.settings.firstAlt : section.settings.firstHeading}">
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid g-0" th:if="${not #lists.isEmpty(section.settings.secondList)}">
+		<div class="row g-0">
+			<div th:class="|col-md-${section.settings.column} col-12 ${ section.templateId }-second|" th:each="o,salt:${section.settings.secondList}">
+			    <a th:href="${o.buttonLink}" th:if="${not #strings.isEmpty(o.buttonLink)}">
+                    <div th:class="|${ section.templateId }-second-card|">
+                        <img class="lazy" th:src="|${ o.secondIcon}!1|" th:data-original="${ o.secondIcon }" th:alt="${not #strings.isEmpty(section.settings.secondAlt) ? section.settings.secondAlt : section.settings.secondHeading}">
+                        <h3 class="text-content-heading" th:if="${ not #strings.isEmpty(o.secondHeading) }">[[ ${ o.secondHeading } ]]</h3>
+                        <p class="text-body" th:if="${ not #strings.isEmpty(o.secondContent) }" th:utext="${o.secondContent}"></p>
+                    </div>
+			    </a>
+				<div th:class="|${ section.templateId }-second-card|" th:if="${#strings.isEmpty(o.buttonLink)}">
+					<img class="lazy" th:src="|${ o.secondIcon}!1|" th:data-original="${ o.secondIcon }" th:alt="${not #strings.isEmpty(section.settings.secondAlt) ? section.settings.secondAlt : section.settings.secondHeading}">
+					<h3 class="text-content-heading" th:if="${ not #strings.isEmpty(o.secondHeading) }">[[ ${ o.secondHeading } ]]</h3>
+					<p class="text-body" th:if="${ not #strings.isEmpty(o.secondContent) }" th:utext="${o.secondContent}"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

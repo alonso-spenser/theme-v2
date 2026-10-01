@@ -1,0 +1,41 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-NJ3YJ3:not(.transparent) {
+    
+        background: #ffff00;
+    
+    
+        border-bottom: 1px solid #c43f05;
+    
+}
+
+
+
+.section-demo-NJ3YJ3.transparent {
+    background: #b1b1ef;
+}
+
+
+
+.section-demo-NJ3YJ3 .navbar-toggler .navbar-toggler-icon, .section-demo-NJ3YJ3 .navbar-toggler:after, .section-demo-NJ3YJ3 .navbar-toggler:before {
+    background-color: #ff0000;
+}
+
+
+
+.section-demo-NJ3YJ3.transparent .navbar-toggler .navbar-toggler-icon, .section-demo-NJ3YJ3.transparent .navbar-toggler:after, .section-demo-NJ3YJ3.transparent .navbar-toggler:before {
+    background-color: #3ed59b;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+    .section-demo-NJ3YJ3 .navbar-vertical .vertical-link {
+        width: 70%;
+    }
+    .section-demo-NJ3YJ3 .navbar-vertical-content {
+        width: 30%;
+        left: 70%;
+    }
+}

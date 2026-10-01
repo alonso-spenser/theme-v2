@@ -1,0 +1,109 @@
+{
+  "section": {
+    "id": "1642895678643105794",
+    "componentKind": "section",
+    "type": "featuredProduct",
+    "templateId": "qUJFJj",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "3",
+      "layout": "list",
+      "heading": "Hot <b>Product</b>",
+      "lineText": "Product",
+      "subColor": "",
+      "cardColor": "",
+      "lineColor": "",
+      "marginTop": false,
+      "mobColumn": "6",
+      "signImage": "",
+      "textAlign": "text-left",
+      "imageScale": "1by1",
+      "paddingTop": true,
+      "subheading": "Featured product",
+      "wideScreen": false,
+      "timeVisible": false,
+      "headingColor": "",
+      "imageVisible": true,
+      "marginBottom": false,
+      "sectionAlias": "推荐产品",
+      "cardLineColor": "",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "cardBackground": "",
+      "backgroundColor": "rgba(44, 65, 89, 1)",
+      "backgroundImage": "",
+      "subtitleVisible": true,
+      "backgroundRepeat": "",
+      "headingLabelColor": "",
+      "backgroundPosition": "",
+      "contentBackground": "",
+      "contentColor": ""
+    },
+    "bindings": {
+      "collectionList": {
+        "sourceType": "productCollection",
+        "ids": []
+      }
+    },
+    "data": {
+      "collectionList": [
+        {
+          "name": "Apple iPhone XS Max (A2104) 256GB",
+          "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+          "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+          "minPrice": 199,
+          "coverImage": "/preview-assets/images/placeholder.jpg",
+          "goodsList": []
+        },
+        {
+          "name": "Apple iPhone XS Max (A2104) 256GB",
+          "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+          "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+          "minPrice": 199,
+          "coverImage": "/preview-assets/images/placeholder.jpg",
+          "goodsList": []
+        },
+        {
+          "name": "Apple iPhone XS Max (A2104) 256GB",
+          "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+          "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+          "minPrice": 199,
+          "coverImage": "/preview-assets/images/placeholder.jpg",
+          "goodsList": []
+        },
+        {
+          "name": "Apple iPhone XS Max (A2104) 256GB",
+          "seoUrl": "apple-iphone-xs-max-a2104-256gb",
+          "summary": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+          "minPrice": 199,
+          "coverImage": "/preview-assets/images/placeholder.jpg",
+          "goodsList": []
+        }
+      ]
+    }
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

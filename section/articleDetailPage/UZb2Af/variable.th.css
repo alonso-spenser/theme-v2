@@ -1,0 +1,72 @@
+[# th:if="${not #strings.isEmpty(section.settings.h1Background)}"]
+    .section-[[${ section.id }]] .bread-crumb {
+        background-color: [[${section.settings.h1Background}]];
+    }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.h1Color)}"]
+    .section-[[${ section.id }]] .bread-crumb * {
+        color: [[${section.settings.h1Color}]];
+    }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+  .section-[[${ section.id }]] .[[${ section.templateId }]]-container {
+          background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+      [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+          background-size: [[${section.settings.backgroundSize}]];
+      [/]
+  }
+[/]
+[# th:if="${section.settings.lineHeight != null && section.settings.lineHeight > 0}"]
+    .section-[[${ section.id }]] .section-rich-text, .section-[[${ section.id }]] .section-rich-text * {
+      line-height: [[${section.settings.lineHeight}]]px;
+    }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.relatedBackground)}"]
+    .section-[[${ section.id }]] .[[${ section.templateId }]]-related {
+        background-color: [[${section.settings.relatedBackground}]];
+    }
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .section-title [class^=text-] {
+    color:[[${section.settings.textColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor) || section.settings.textWidth > 0}"]
+    .section-[[${ section.id }]] .section-title-divider {
+        [# th:if="${ section.settings.textWidth > 0 }"]
+            width: [[${section.settings.textWidth}]]%;
+        [/]
+    }
+    [# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+        .section-[[${ section.id }]] .section-title-divider:after {
+            border-color: [[${section.settings.textColor}]];
+        }
+    [/]
+[/]
+[# th:if="${section.settings.textWidth != null && section.settings.textWidth > 0}"]
+@media (min-width: 768px) {
+    .section-[[${ section.id }]] .section-title [class^=text-] {
+        width: [[${section.settings.textWidth}]]%;
+    }
+}
+[/]
+
+[# th:if="${section.settings.dividerWidth != null && section.settings.dividerWidth > 0}"]
+.section-[[${ section.id }]] .section-title .has-line:after, .section-[[${ section.id }]] .section-title img {
+    width: [[${section.settings.dividerWidth}]]%;
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.cardColor)}"]
+.section-[[${ section.id }]] .UZb2Af-related .card-body [class^=text-]{
+    color: [[${section.settings.cardColor}]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.cardBackground)}"]
+.section-[[${ section.id }]] .UZb2Af-related .section-card {
+    background-color:[[${section.settings.cardBackground}]];
+}
+[/]

@@ -1,0 +1,25 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+    <div th:class="|container${section.settings.wideScreen ? '-fluid no-gutters' : ''} ${ section.templateId }-content|">
+        <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${not #strings.isEmpty(section.settings.image)}">
+            <img class="embed-responsive-item lazy" th:src="|${ section.settings.image}!1|" th:data-original="${ section.settings.image }|" th:alt="${ not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading}">
+        </div>
+          <div th:class="|section-title ${section.settings.cardLayout}|">
+            <small class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">[[${ section.settings.subheading }]]</small>
+            <h3 class="text-heading" th:if="${not #strings.isEmpty(section.settings.heading)}">[[${ section.settings.heading }]]</h3>
+            <th:block th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+                <th:block th:each="textLine,saltLine:${textLines}">
+                    <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></p>
+                </th:block>
+            </th:block>
+              <div class="row row-gutter text-neighbor" th:if="${ not #lists.isEmpty(section.settings.itemList) }">
+                  <div class="col-md-6" th:each="o, salt:${ section.settings.itemList }">
+                      <h3 class="text-heading" th:if="${ not #strings.isEmpty(o.title) }">[[${ o.title }]]</h3>
+                      <p class="text-body" th:if="${ not #strings.isEmpty(o.content) }" th:utext="${o.content}"></p>
+                  </div>
+              </div>
+          </div>
+    </div>
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

@@ -1,0 +1,57 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-r22Irq .section-title-divider {
+        
+            width: 100%;
+        
+    }
+    .section-demo-r22Irq .section-title-divider:after {
+        
+    }
+
+
+@media (min-width: 768px) {
+    .section-demo-r22Irq .section-title [class^=text-] {
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .r22Irq-panel {
+        padding-left: 30px!important;
+        padding-right: 30px!important;
+    }
+}
+
+
+
+.section-demo-r22Irq .section-title .has-line:after, .section-demo-r22Irq .section-title img {
+    width: 5%;
+}
+
+
+
+    .section-demo-r22Irq .r22Irq-hexagon .r22Irq-heading {
+        color: #ff0000;
+    }
+    .section-demo-r22Irq .r22Irq-hexagon-border.active {
+        background-color: #ff0000;
+    }
+    .section-demo-r22Irq  .r22Irq-hexagon-border.active:before {
+        border-bottom-color: #ff0000;
+    }
+    .section-demo-r22Irq .r22Irq-hexagon-border.active:after {
+        border-top-color: #ff0000;
+    }
+    @media (min-width: 960px) {
+        .section-demo-r22Irq .r22Irq-hexagon.active:hover .r22Irq-hexagon-border {
+            background-color: #ff0000;
+        }
+        .section-demo-r22Irq .r22Irq-hexagon.active:hover .r22Irq-hexagon-border:before {
+            border-bottom-color: #ff0000;
+        }
+        .section-demo-r22Irq .r22Irq-hexagon.active:hover .r22Irq-hexagon-border:after {
+            border-top-color: #ff0000;
+        }
+    }

@@ -1,0 +1,121 @@
+{
+  "section": {
+    "id": "1442079997908717570",
+    "componentKind": "section",
+    "type": "logoList",
+    "templateId": "miyUFr",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "2",
+      "layout": "slide",
+      "symbol": "list-demical",
+      "content": "We provide all your needed for starting your own online business, and even easier. \nEstablish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Title with button",
+      "logoColor": "#ffff00",
+      "marginTop": false,
+      "mobColumn": "4",
+      "textAlign": "center",
+      "textColor": "#ff00ff",
+      "textWidth": 100,
+      "buttonLink": "",
+      "imageScale": "1by1",
+      "paddingTop": true,
+      "subheading": "this is a new beginning",
+      "wideScreen": false,
+      "buttonLabel": "Button label",
+      "buttonStyle": "invisible",
+      "borderRadius": 0,
+      "contentAlign": "text-left",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "logoImgWidth": 100,
+      "marginBottom": false,
+      "sectionAlias": "Logo墙",
+      "logoTextAlign": "center",
+      "logoTextWidth": 70,
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "#650202",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "carouselAutoPlay": "0",
+      "carouselNavStyle": "dark",
+      "backgroundPosition": "",
+      "carouselArrowStyle": "dark",
+      "logoList": [
+        {
+          "image": "https://site-file.fomillesite.com/1209760082859032577/1326026333562372097.jpg",
+          "title": "1 Logo name",
+          "describe": "Logo describe",
+          "url": ""
+        },
+        {
+          "image": "https://site-file.fomillesite.com/1209760082859032577/1326026333562372097.jpg",
+          "title": "2 Logo name",
+          "describe": "Logo describe",
+          "url": "https://www.163.com"
+        },
+        {
+          "image": "https://site-file.fomillesite.com/1209760082859032577/1326026333562372097.jpg",
+          "title": "3 Logo name",
+          "describe": "Logo describe"
+        },
+        {
+          "image": "https://site-file.fomillesite.com/1209760082859032577/1326026333562372097.jpg",
+          "title": "4 Logo name",
+          "describe": "Logo describe"
+        },
+        {
+          "image": "https://site-file.fomillesite.com/1209760082859032577/1326026333562372097.jpg",
+          "title": "5 Logo name",
+          "describe": "Logo describe"
+        },
+        {
+          "image": "https://site-file.fomillesite.com/1209760082859032577/1326026333562372097.jpg",
+          "title": "6 Logo name",
+          "describe": "Logo describe"
+        },
+        {
+          "image": "https://site-file.fomillesite.com/1209760082859032577/1326026333570093058.jpg",
+          "title": "7 Logo name",
+          "describe": "Logo describe"
+        },
+        {
+          "image": "https://site-file.fomillesite.com/1209760082859032577/1326026333562372097.jpg",
+          "title": "8 Logo name",
+          "describe": "Logo describe"
+        }
+      ],
+      "secondButtonStyle": "",
+      "secondButtonLabel": "",
+      "secondButtonLink": ""
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

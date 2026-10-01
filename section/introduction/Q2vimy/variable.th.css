@@ -1,0 +1,14 @@
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor)}"]
+.section-[[${ section.id }]] [class*=container] {
+    background-color: [[${section.settings.backgroundColor}]];
+}
+.section-[[${ section.id }]] svg {
+    fill: [[${section.settings.backgroundColor}]]!important;
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .text-heading {
+    color: [[${section.settings.textColor}]];
+}
+[/]

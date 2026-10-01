@@ -1,0 +1,21 @@
+// Static DEMO instance styles; production uses variable.th.css.
+@media (min-width: 768px) {
+    
+    .section-demo-nEVNni .text-heading {
+        color:#00ff00;
+    }
+    
+    
+    .section-demo-nEVNni .text-subheading {
+        color:#ff0000;
+    }
+    .section-demo-nEVNni .text-subheading:before {
+        border-color:#ff0000;
+    }
+    
+    
+    .section-demo-nEVNni .text-body {
+        color:#0000ff;
+    }
+    
+}

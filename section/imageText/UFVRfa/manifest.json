@@ -1,0 +1,1271 @@
+{
+  "protocolVersion": 2,
+  "componentKind": "section",
+  "type": "imageText",
+  "templateId": "UFVRfa",
+  "runtimeVersion": 2,
+  "definitionVersion": 1,
+  "schemaVersion": 1,
+  "name": {
+    "en": "Image Group",
+    "zh-CN": "图文组"
+  },
+  "policy": {
+    "removable": true,
+    "duplicable": true,
+    "maxInstances": 0
+  },
+  "placement": {
+    "fixed": false,
+    "pages": []
+  },
+  "render": {
+    "template": "section.th.html",
+    "style": "section.scss",
+    "variableStyle": "variable.th.css",
+    "script": "section.js"
+  },
+  "editor": {
+    "groups": [
+      {
+        "id": "group1",
+        "name": {
+          "en": "Content",
+          "zh-CN": "内容"
+        },
+        "elements": [
+          {
+            "type": "repeater",
+            "field": "imageList",
+            "name": {
+              "en": "Content",
+              "zh-CN": "内容"
+            },
+            "maxItems": 99,
+            "elements": [
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Image",
+                  "zh-CN": "图片"
+                },
+                "type": "imagePicker",
+                "field": "url",
+                "default": "https://theme.fomillesite.com/img/image-with-text.jpg",
+                "options": [],
+                "altFiled": "alt"
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "ALT",
+                  "zh-CN": "ALT"
+                },
+                "type": "hidden",
+                "field": "alt",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "ICON",
+                  "zh-CN": "图标"
+                },
+                "type": "imagePicker",
+                "field": "icon",
+                "default": "",
+                "options": [],
+                "altFiled": ""
+              },
+              {
+                "info": {
+                  "en": "Title",
+                  "zh-CN": "标题"
+                },
+                "name": {
+                  "en": "Title",
+                  "zh-CN": "标题"
+                },
+                "type": "divider",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Align",
+                  "zh-CN": "对齐"
+                },
+                "type": "select",
+                "field": "textAlign",
+                "default": "text-center",
+                "options": [
+                  {
+                    "value": "text-left",
+                    "name": {
+                      "en": "Left",
+                      "zh-CN": "左"
+                    }
+                  },
+                  {
+                    "value": "text-center",
+                    "name": {
+                      "en": "Center",
+                      "zh-CN": "中"
+                    }
+                  },
+                  {
+                    "value": "text-right",
+                    "name": {
+                      "en": "Right",
+                      "zh-CN": "右"
+                    }
+                  }
+                ]
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Color",
+                  "zh-CN": "颜色"
+                },
+                "type": "colorPicker",
+                "field": "textColor",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Heading",
+                  "zh-CN": "标题"
+                },
+                "type": "text",
+                "field": "heading",
+                "default": "This is a heading",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "Divider",
+                  "zh-CN": "分隔线"
+                },
+                "name": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "type": "divider",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Subheading",
+                  "zh-CN": "副标题"
+                },
+                "type": "text",
+                "field": "subheading",
+                "default": "This is a subheading",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "Text",
+                  "zh-CN": "正文"
+                },
+                "name": {
+                  "en": "Content",
+                  "zh-CN": "内容"
+                },
+                "type": "divider",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Color",
+                  "zh-CN": "颜色"
+                },
+                "type": "colorPicker",
+                "field": "contentColor",
+                "default": "",
+                "options": [],
+                "translate": 1
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Align",
+                  "zh-CN": "对齐"
+                },
+                "type": "select",
+                "field": "contentAlign",
+                "default": "text-left",
+                "options": [
+                  {
+                    "value": "text-left",
+                    "name": {
+                      "en": "Left",
+                      "zh-CN": "左"
+                    }
+                  },
+                  {
+                    "value": "text-center",
+                    "name": {
+                      "en": "Center",
+                      "zh-CN": "中"
+                    }
+                  },
+                  {
+                    "value": "text-right",
+                    "name": {
+                      "en": "Right",
+                      "zh-CN": "右"
+                    }
+                  }
+                ]
+              },
+              {
+                "info": {
+                  "en": "Use enter to wrap",
+                  "zh-CN": "回车键换行"
+                },
+                "name": {
+                  "en": "Text",
+                  "zh-CN": "正文"
+                },
+                "type": "textarea",
+                "field": "description",
+                "default": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Paragraph symbol",
+                  "zh-CN": "段落符号"
+                },
+                "type": "select",
+                "field": "symbol",
+                "default": "list-demical",
+                "options": [
+                  {
+                    "value": "list-demical",
+                    "name": {
+                      "en": "Digit",
+                      "zh-CN": "数字"
+                    }
+                  },
+                  {
+                    "value": "list-circle",
+                    "name": {
+                      "en": "Circle",
+                      "zh-CN": "空心圆"
+                    }
+                  },
+                  {
+                    "value": "list-disc",
+                    "name": {
+                      "en": "Disc",
+                      "zh-CN": "实心圆"
+                    }
+                  },
+                  {
+                    "value": "list-square",
+                    "name": {
+                      "en": "Square",
+                      "zh-CN": "实心方块"
+                    }
+                  },
+                  {
+                    "value": "list-lower-roman",
+                    "name": {
+                      "en": "Lower-roman",
+                      "zh-CN": "小写罗马数字"
+                    }
+                  },
+                  {
+                    "value": "list-upper-roman",
+                    "name": {
+                      "en": "Upper-roman",
+                      "zh-CN": "大写罗马数字"
+                    }
+                  },
+                  {
+                    "value": "list-lower-alpha",
+                    "name": {
+                      "en": "Lower-alpha",
+                      "zh-CN": "小写英文字母"
+                    }
+                  },
+                  {
+                    "value": "list-upper-alpha",
+                    "name": {
+                      "en": "Upper-alpha",
+                      "zh-CN": "大写英文字母"
+                    }
+                  },
+                  {
+                    "value": "normal",
+                    "name": {
+                      "en": "Normal",
+                      "zh-CN": "无"
+                    }
+                  }
+                ],
+                "translate": 0
+              },
+              {
+                "info": {
+                  "en": "Button",
+                  "zh-CN": "按钮"
+                },
+                "name": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "type": "divider",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Button label",
+                  "zh-CN": "按钮文字"
+                },
+                "type": "text",
+                "field": "buttonLabel",
+                "default": "Button",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Button link",
+                  "zh-CN": "按钮链接"
+                },
+                "type": "linkPicker",
+                "field": "buttonLink",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "button style",
+                  "zh-CN": "按钮样式"
+                },
+                "type": "select",
+                "field": "buttonStyle",
+                "default": "invisible",
+                "options": [
+                  {
+                    "value": "btn-primary",
+                    "name": {
+                      "en": "Primary",
+                      "zh-CN": "主按钮填充"
+                    }
+                  },
+                  {
+                    "value": "btn-outline-primary",
+                    "name": {
+                      "en": "Outline Primary",
+                      "zh-CN": "主按钮描边"
+                    }
+                  },
+                  {
+                    "value": "btn-dark",
+                    "name": {
+                      "en": "Dark",
+                      "zh-CN": "深色填充"
+                    }
+                  },
+                  {
+                    "value": "btn-outline-dark",
+                    "name": {
+                      "en": "Outline Dark",
+                      "zh-CN": "深色描边"
+                    }
+                  },
+                  {
+                    "value": "btn-light",
+                    "name": {
+                      "en": "Light",
+                      "zh-CN": "浅色填充"
+                    }
+                  },
+                  {
+                    "value": "btn-outline-light",
+                    "name": {
+                      "en": "Outline Light",
+                      "zh-CN": "浅色描边"
+                    }
+                  },
+                  {
+                    "value": "btn-secondary",
+                    "name": {
+                      "en": "Secondary",
+                      "zh-CN": "灰色填充"
+                    }
+                  },
+                  {
+                    "value": "btn-outline-secondary",
+                    "name": {
+                      "en": "Outline Secondary",
+                      "zh-CN": "灰色描边"
+                    }
+                  },
+                  {
+                    "value": "btn-success",
+                    "name": {
+                      "en": "Success",
+                      "zh-CN": "绿色填充"
+                    }
+                  },
+                  {
+                    "value": "btn-outline-success",
+                    "name": {
+                      "en": "Outline Success",
+                      "zh-CN": "绿色描边"
+                    }
+                  },
+                  {
+                    "value": "btn-danger",
+                    "name": {
+                      "en": "Danger",
+                      "zh-CN": "红色填充"
+                    }
+                  },
+                  {
+                    "value": "btn-outline-danger",
+                    "name": {
+                      "en": "Outline Danger",
+                      "zh-CN": "红色描边"
+                    }
+                  },
+                  {
+                    "value": "btn-warning",
+                    "name": {
+                      "en": "Warning",
+                      "zh-CN": "警告色填充"
+                    }
+                  },
+                  {
+                    "value": "btn-outline-warning",
+                    "name": {
+                      "en": "Outline Warning",
+                      "zh-CN": "警告色描边"
+                    }
+                  },
+                  {
+                    "value": "btn-info",
+                    "name": {
+                      "en": "Warning",
+                      "zh-CN": "青色填充"
+                    }
+                  },
+                  {
+                    "value": "btn-outline-info",
+                    "name": {
+                      "en": "Outline Warning",
+                      "zh-CN": "青色描边"
+                    }
+                  },
+                  {
+                    "value": "invisible",
+                    "name": {
+                      "en": "Invisible",
+                      "zh-CN": "不显示"
+                    }
+                  }
+                ]
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "type": "divider",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "Effective when the picture width is 100%",
+                  "zh-CN": "图片宽度为100%时生效"
+                },
+                "name": {
+                  "en": "Content position",
+                  "zh-CN": "文本位置"
+                },
+                "type": "select",
+                "field": "contentPosition",
+                "default": "left-center",
+                "options": [
+                  {
+                    "value": "left-top",
+                    "name": {
+                      "en": "Left top",
+                      "zh-CN": "左上"
+                    }
+                  },
+                  {
+                    "value": "left-center",
+                    "name": {
+                      "en": "Left center",
+                      "zh-CN": "左中"
+                    }
+                  },
+                  {
+                    "value": "left-bottom",
+                    "name": {
+                      "en": "Left bottom",
+                      "zh-CN": "左下"
+                    }
+                  },
+                  {
+                    "value": "center-top",
+                    "name": {
+                      "en": "Center top",
+                      "zh-CN": "正上"
+                    }
+                  },
+                  {
+                    "value": "center",
+                    "name": {
+                      "en": "Center",
+                      "zh-CN": "正中"
+                    }
+                  },
+                  {
+                    "value": "center-bottom",
+                    "name": {
+                      "en": "Center bottom",
+                      "zh-CN": "正下"
+                    }
+                  },
+                  {
+                    "value": "right-top",
+                    "name": {
+                      "en": "Right top",
+                      "zh-CN": "右上"
+                    }
+                  },
+                  {
+                    "value": "right-center",
+                    "name": {
+                      "en": "Right center",
+                      "zh-CN": "右中"
+                    }
+                  },
+                  {
+                    "value": "right-bottom",
+                    "name": {
+                      "en": "Right bottom",
+                      "zh-CN": "右下"
+                    }
+                  }
+                ]
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Mask color",
+                  "zh-CN": "蒙板层颜色"
+                },
+                "type": "colorPicker",
+                "field": "maskColor",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Margin top",
+                  "zh-CN": "外边距（上）"
+                },
+                "type": "switch",
+                "field": "marginTop",
+                "default": false,
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Margin bottom",
+                  "zh-CN": "外边距（下）"
+                },
+                "type": "switch",
+                "field": "marginBottom",
+                "default": false,
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Padding top",
+                  "zh-CN": "内边距（上）"
+                },
+                "type": "switch",
+                "field": "paddingTop",
+                "default": false,
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Padding bottom",
+                  "zh-CN": "内边距（下）"
+                },
+                "type": "switch",
+                "field": "paddingBottom",
+                "default": false,
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Background color",
+                  "zh-CN": "背景色"
+                },
+                "type": "colorPicker",
+                "field": "backgroundColor",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Background image",
+                  "zh-CN": "背景图"
+                },
+                "type": "imagePicker",
+                "field": "backgroundImage",
+                "default": "",
+                "options": []
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Background Position",
+                  "zh-CN": "背景图位置"
+                },
+                "type": "select",
+                "field": "backgroundPosition",
+                "default": "",
+                "options": [
+                  {
+                    "value": "top left",
+                    "name": {
+                      "en": "top left",
+                      "zh-CN": "左上"
+                    }
+                  },
+                  {
+                    "value": "top center",
+                    "name": {
+                      "en": "top center",
+                      "zh-CN": "中上"
+                    }
+                  },
+                  {
+                    "value": "top right",
+                    "name": {
+                      "en": "top right",
+                      "zh-CN": "右上"
+                    }
+                  },
+                  {
+                    "value": "center left",
+                    "name": {
+                      "en": "center left",
+                      "zh-CN": "左中"
+                    }
+                  },
+                  {
+                    "value": "center center",
+                    "name": {
+                      "en": "center center",
+                      "zh-CN": "正中"
+                    }
+                  },
+                  {
+                    "value": "center right",
+                    "name": {
+                      "en": "center right",
+                      "zh-CN": "右中"
+                    }
+                  },
+                  {
+                    "value": "bottom left",
+                    "name": {
+                      "en": "bottom left",
+                      "zh-CN": "左下"
+                    }
+                  },
+                  {
+                    "value": "bottom center",
+                    "name": {
+                      "en": "bottom center",
+                      "zh-CN": "正下"
+                    }
+                  },
+                  {
+                    "value": "bottom right",
+                    "name": {
+                      "en": "bottom right",
+                      "zh-CN": "右下"
+                    }
+                  }
+                ]
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Background Repeat",
+                  "zh-CN": "背景填充"
+                },
+                "type": "select",
+                "field": "backgroundRepeat",
+                "default": "",
+                "options": [
+                  {
+                    "value": "repeat",
+                    "name": {
+                      "en": "Repeat",
+                      "zh-CN": "重复"
+                    }
+                  },
+                  {
+                    "value": "repeat-x",
+                    "name": {
+                      "en": "Repeat X",
+                      "zh-CN": "水平填充"
+                    }
+                  },
+                  {
+                    "value": "repeat-y",
+                    "name": {
+                      "en": "Repeat Y",
+                      "zh-CN": "垂直填充"
+                    }
+                  },
+                  {
+                    "value": "no-repeat",
+                    "name": {
+                      "en": "No repeat",
+                      "zh-CN": "填充一次"
+                    }
+                  }
+                ]
+              },
+              {
+                "info": {
+                  "en": "",
+                  "zh-CN": ""
+                },
+                "name": {
+                  "en": "Background Size",
+                  "zh-CN": "背景图大小"
+                },
+                "type": "select",
+                "field": "backgroundSize",
+                "default": "",
+                "options": [
+                  {
+                    "value": "cover",
+                    "name": {
+                      "en": "Cover",
+                      "zh-CN": "短边填满"
+                    }
+                  },
+                  {
+                    "value": "contain",
+                    "name": {
+                      "en": "Contain",
+                      "zh-CN": "长边填满"
+                    }
+                  },
+                  {
+                    "value": "auto",
+                    "name": {
+                      "en": "Default",
+                      "zh-CN": "默认"
+                    }
+                  }
+                ]
+              }
+            ],
+            "default": [
+              {
+                "url": "/preview-assets/images/image-with-text.jpg",
+                "alt": "",
+                "imageLayout": "left",
+                "heading": "1111  <label>subheading</label>",
+                "subheading": "This is a subheading",
+                "description": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+                "buttonLabel": "Button",
+                "buttonLink": "",
+                "buttonStyle": "btn-outline-danger",
+                "contentPosition": "left-center",
+                "textColor": "#e010ef",
+                "maskColor": "rgba(161,8,8,0.8)",
+                "contentColor": "#0d51b7",
+                "contentAlign": "text-left",
+                "symbol": "list-demical",
+                "textAlign": "text-left",
+                "marginTop": true,
+                "marginBottom": true,
+                "paddingTop": true,
+                "paddingBottom": true,
+                "backgroundColor": "#ffff00",
+                "backgroundImage": "/preview-assets/images/banner.jpg",
+                "backgroundPosition": "center center",
+                "backgroundRepeat": "",
+                "backgroundSize": "cover",
+                "dividerWidth": 20,
+                "dividerStyle": "image",
+                "icon": "/preview-assets/images/image-with-text.jpg"
+              },
+              {
+                "url": "/preview-assets/images/image-with-text.jpg",
+                "alt": "",
+                "imageLayout": "left",
+                "heading": "22222",
+                "subheading": "This is a subheading",
+                "description": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+                "buttonLabel": "Button",
+                "buttonLink": "",
+                "buttonStyle": "invisible",
+                "contentPosition": "right-bottom",
+                "textColor": "#1035ef",
+                "maskColor": "rgba(18,137,148,0.8)",
+                "textAlign": "text-center",
+                "marginTop": false,
+                "marginBottom": false,
+                "paddingTop": false,
+                "paddingBottom": false,
+                "backgroundColor": "orange",
+                "backgroundImage": "",
+                "backgroundPosition": "",
+                "backgroundRepeat": "",
+                "backgroundSize": "",
+                "": ""
+              },
+              {
+                "url": "/preview-assets/images/image-with-text.jpg",
+                "alt": "",
+                "imageLayout": "left",
+                "heading": "33333",
+                "subheading": "This is a subheading",
+                "description": "Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+                "buttonLabel": "Button",
+                "buttonLink": "",
+                "buttonStyle": "invisible",
+                "contentPosition": "left-center",
+                "textColor": "#10efbb",
+                "maskColor": "rgba(62,94,8,0.8)",
+                "textAlign": "text-center",
+                "marginTop": false,
+                "marginBottom": false,
+                "paddingTop": false,
+                "paddingBottom": false,
+                "backgroundColor": "yellow",
+                "backgroundImage": "",
+                "backgroundPosition": "",
+                "backgroundRepeat": "",
+                "backgroundSize": "",
+                "": ""
+              }
+            ]
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "group2",
+        "name": {
+          "en": "Settings",
+          "zh-CN": "设置"
+        },
+        "elements": [
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Wide screen",
+              "zh-CN": "宽屏模式"
+            },
+            "type": "switch",
+            "field": "wideScreen",
+            "default": false,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Serial Number",
+              "zh-CN": "序号"
+            },
+            "type": "switch",
+            "field": "serialNumber",
+            "default": true,
+            "options": []
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "First position",
+              "zh-CN": "首图位置"
+            },
+            "type": "select",
+            "field": "firstLayout",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "name": {
+                  "en": "Left",
+                  "zh-CN": "左"
+                }
+              },
+              {
+                "value": "right",
+                "name": {
+                  "en": "Right",
+                  "zh-CN": "右"
+                }
+              }
+            ]
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Picture scale",
+              "zh-CN": "图片比例"
+            },
+            "type": "select",
+            "field": "imageScale",
+            "default": "5by4",
+            "options": [
+              {
+                "value": "1by1",
+                "name": {
+                  "en": "1:1",
+                  "zh-CN": "1:1"
+                }
+              },
+              {
+                "value": "21by9",
+                "name": {
+                  "en": "21:9",
+                  "zh-CN": "21:9"
+                }
+              },
+              {
+                "value": "16by9",
+                "name": {
+                  "en": "16:9",
+                  "zh-CN": "16:9"
+                }
+              },
+              {
+                "value": "5by4",
+                "name": {
+                  "en": "5:4",
+                  "zh-CN": "5:4"
+                }
+              },
+              {
+                "value": "4by3",
+                "name": {
+                  "en": "4:3",
+                  "zh-CN": "4:3"
+                }
+              },
+              {
+                "value": "9by21",
+                "name": {
+                  "en": "9:21",
+                  "zh-CN": "9:21"
+                }
+              },
+              {
+                "value": "9by16",
+                "name": {
+                  "en": "9:16",
+                  "zh-CN": "9:16"
+                }
+              },
+              {
+                "value": "4by5",
+                "name": {
+                  "en": "4:5",
+                  "zh-CN": "4:5"
+                }
+              },
+              {
+                "value": "3by4",
+                "name": {
+                  "en": "3:4",
+                  "zh-CN": "3:4"
+                }
+              },
+              {
+                "value": "normal",
+                "name": {
+                  "en": "Normal",
+                  "zh-CN": "原始比例"
+                }
+              }
+            ]
+          },
+          {
+            "info": {
+              "en": "When the picture width is 100%, the text will be covered on the layer",
+              "zh-CN": "图片宽度为100%的时候，文字将覆盖在图层上面"
+            },
+            "name": {
+              "en": "Picture percentage",
+              "zh-CN": "图片占比"
+            },
+            "type": "select",
+            "field": "imagePercentage",
+            "default": "6",
+            "options": [
+              {
+                "value": "1",
+                "name": {
+                  "en": "8%",
+                  "zh-CN": "8%"
+                }
+              },
+              {
+                "value": "2",
+                "name": {
+                  "en": "16%",
+                  "zh-CN": "16%"
+                }
+              },
+              {
+                "value": "3",
+                "name": {
+                  "en": "25%",
+                  "zh-CN": "25%"
+                }
+              },
+              {
+                "value": "4",
+                "name": {
+                  "en": "33%",
+                  "zh-CN": "33%"
+                }
+              },
+              {
+                "value": "5",
+                "name": {
+                  "en": "40%",
+                  "zh-CN": "40%"
+                }
+              },
+              {
+                "value": "6",
+                "name": {
+                  "en": "50%",
+                  "zh-CN": "50%"
+                }
+              },
+              {
+                "value": "7",
+                "name": {
+                  "en": "60%",
+                  "zh-CN": "60%"
+                }
+              },
+              {
+                "value": "8",
+                "name": {
+                  "en": "67%",
+                  "zh-CN": "67%"
+                }
+              },
+              {
+                "value": "9",
+                "name": {
+                  "en": "75%",
+                  "zh-CN": "75%"
+                }
+              },
+              {
+                "value": "10",
+                "name": {
+                  "en": "83%",
+                  "zh-CN": "83%"
+                }
+              },
+              {
+                "value": "12",
+                "name": {
+                  "en": "100%",
+                  "zh-CN": "100%"
+                }
+              }
+            ]
+          },
+          {
+            "info": {
+              "en": "",
+              "zh-CN": ""
+            },
+            "name": {
+              "en": "Card background",
+              "zh-CN": "卡片背景"
+            },
+            "type": "colorPicker",
+            "field": "background",
+            "default": "",
+            "options": [],
+            "translate": 1
+          }
+        ],
+        "info": {
+          "en": "",
+          "zh-CN": ""
+        }
+      },
+      {
+        "id": "additionalSettings",
+        "name": {
+          "en": "Additional settings",
+          "zh-CN": "补充设置"
+        },
+        "elements": [
+          {
+            "field": "sectionAlias",
+            "name": {
+              "en": "sectionAlias"
+            },
+            "type": "hidden",
+            "default": "图文组"
+          },
+          {
+            "field": "marginTop",
+            "name": {
+              "en": "marginTop"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "marginBottom",
+            "name": {
+              "en": "marginBottom"
+            },
+            "type": "hidden",
+            "default": ""
+          },
+          {
+            "field": "contentBackground",
+            "name": {
+              "en": "contentBackground"
+            },
+            "type": "hidden",
+            "default": ""
+          }
+        ]
+      }
+    ]
+  },
+  "data": {
+    "source": "none",
+    "contract": "theme.imageText.v2"
+  }
+}

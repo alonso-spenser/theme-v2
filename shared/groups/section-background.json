@@ -1,0 +1,81 @@
+{
+  "id": "sectionBackground",
+  "name": {
+    "en": "Background",
+    "zh-CN": "背景"
+  },
+  "elements": [
+    {
+      "type": "colorPicker",
+      "field": "backgroundColor",
+      "default": "",
+      "name": {
+        "en": "Background color",
+        "zh-CN": "背景色"
+      },
+      "cssVariable": "--section-background-color"
+    },
+    {
+      "type": "imagePicker",
+      "field": "backgroundImage",
+      "default": "",
+      "name": {
+        "en": "Background image",
+        "zh-CN": "背景图"
+      }
+    },
+    {
+      "type": "select",
+      "field": "backgroundPosition",
+      "default": "center center",
+      "name": {
+        "en": "Background position",
+        "zh-CN": "背景位置"
+      },
+      "cssVariable": "--section-background-position",
+      "options": [
+        { "value": "top left", "name": { "en": "Top left", "zh-CN": "左上" } },
+        { "value": "top center", "name": { "en": "Top center", "zh-CN": "中上" } },
+        { "value": "top right", "name": { "en": "Top right", "zh-CN": "右上" } },
+        { "value": "center left", "name": { "en": "Center left", "zh-CN": "左中" } },
+        { "value": "center center", "name": { "en": "Center", "zh-CN": "居中" } },
+        { "value": "center right", "name": { "en": "Center right", "zh-CN": "右中" } },
+        { "value": "bottom left", "name": { "en": "Bottom left", "zh-CN": "左下" } },
+        { "value": "bottom center", "name": { "en": "Bottom center", "zh-CN": "中下" } },
+        { "value": "bottom right", "name": { "en": "Bottom right", "zh-CN": "右下" } }
+      ]
+    },
+    {
+      "type": "select",
+      "field": "backgroundSize",
+      "default": "cover",
+      "name": {
+        "en": "Background size",
+        "zh-CN": "背景尺寸"
+      },
+      "cssVariable": "--section-background-size",
+      "options": [
+        { "value": "cover", "name": { "en": "Cover", "zh-CN": "覆盖" } },
+        { "value": "contain", "name": { "en": "Contain", "zh-CN": "包含" } },
+        { "value": "auto", "name": { "en": "Auto", "zh-CN": "自动" } }
+      ]
+    },
+    {
+      "type": "select",
+      "field": "backgroundRepeat",
+      "default": "no-repeat",
+      "name": {
+        "en": "Background repeat",
+        "zh-CN": "背景重复"
+      },
+      "cssVariable": "--section-background-repeat",
+      "options": [
+        { "value": "no-repeat", "name": { "en": "No repeat", "zh-CN": "不重复" } },
+        { "value": "repeat", "name": { "en": "Repeat", "zh-CN": "重复" } },
+        { "value": "repeat-x", "name": { "en": "Repeat horizontally", "zh-CN": "水平重复" } },
+        { "value": "repeat-y", "name": { "en": "Repeat vertically", "zh-CN": "垂直重复" } }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,36 @@
+[# th:if="${not #strings.isEmpty(section.settings.h1Background)}"]
+    .section-[[${ section.id }]] .bread-crumb {
+        background-color: [[${section.settings.h1Background}]];
+    }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.h1Color)}"]
+    .section-[[${ section.id }]] .bread-crumb * {
+        color: [[${section.settings.h1Color}]];
+    }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
+  .section-[[${ section.id }]] .section-container {
+          background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+      [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
+          background-size: [[${section.settings.backgroundSize}]];
+      [/]
+  }
+[/]
+[# th:if="${not #strings.isEmpty(section.settings.backgroundColor)}"]
+    .section-[[${ section.id }]] .section-collection-describe.close:before {
+        background: linear-gradient(180deg,rgba(252,251,252,0),[[${section.settings.backgroundColor}]]);
+    }
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.textColor)}"]
+.section-[[${ section.id }]] .card-body [class^=text-] {
+    color:[[${section.settings.textColor}]];
+}
+[/]
+
+
+[# th:if="${not #strings.isEmpty(section.settings.cardBackground)}"]
+.section-[[${ section.id }]] .card {
+    background-color:[[${section.settings.cardBackground}]];
+}
+[/]

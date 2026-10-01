@@ -1,0 +1,24 @@
+<section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
+	<div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} section-loading-light ${ section.templateId }-container|">
+	    <div class="filter-params">
+            <select class="form-control form-control-sm" th:data-collection="${ section.id }">
+                <th:block th:each="o,salt:${section.data.collectionList}">
+                    <option th:value="${o.id}" th:if="${params.collectionId == o.seoUrl}" selected>[[${o.title}]]</option>
+                    <option th:value="${o.id}" th:if="${params.collectionId != o.seoUrl}">[[${o.title}]]</option>
+                </select>
+            </th:block>
+            <div th:class="|d-md-inline ${ section.templateId }-condition|">
+
+            </div>
+            <label class="filter-button ic-menu d-md-none d-inline-block">
+            </label>
+        </div>
+		<div th:class="|${ section.templateId }-goods section-neighbor|" th:data-layout="${section.settings.layout}" th:data-filter-goods="${ section.id }"></div>
+	</div>
+
+
+
+
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

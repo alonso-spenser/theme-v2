@@ -1,0 +1,117 @@
+.EBfyye-since {
+	position: relative;
+	text-indent: 4.375rem;
+	display: inline-block;
+	color: var(--colorTheme);
+}
+
+.EBfyye-since:before {
+	position: absolute;
+	content: "";
+	display: inline;
+	border-top: 1px solid var(--colorTheme);
+	width: 3.75rem;
+	left: 0;
+	top: 50%;
+}
+
+@media (max-width: 768px) {
+	.EBfyye-since {
+		text-indent: 2.625rem;
+	}
+
+	.EBfyye-since:before {
+		width: 2.25rem;
+	}
+}
+
+.EBfyye-line-text {
+	font-size: 9.375rem;
+	line-height: 1;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #000;
+	-webkit-text-fill-color: transparent;
+	opacity: 0.1;
+	margin-bottom: 0;
+	position: absolute;
+	left: 0;
+	top: calc(var(--marginHeight) * -2px);
+	font-weight: 700;
+	text-transform: capitalize;
+	z-index: 0;
+	letter-spacing: -4px;
+	font-family: var(--typeHeading);
+}
+
+@media (max-width: 768px) {
+	.EBfyye-line-text {
+		font-size: 6rem;
+		top: -3rem;
+	}
+}
+
+.EBfyye .text-center .EBfyye-line-text {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.EBfyye .text-right .EBfyye-line-text {
+	left: auto;
+	right: 0;
+}
+
+.EBfyye .section-title {
+	position: relative;
+}
+
+.EBfyye .section-title .text-heading {
+	font-size: 3.75rem;
+	line-height: 1.3;
+	text-transform: capitalize;
+	position: relative;
+	z-index: 3;
+}
+
+.EBfyye .section-title .text-heading b {
+	font-weight: normal;
+	color: var(--colorTheme);
+}
+
+@media (max-width: 768px) {
+	.EBfyye .section-title .text-heading {
+		font-size: 2rem;
+	}
+}
+
+.EBfyye .slick-slide {
+	padding-top: 2rem;
+}
+
+.EBfyye-card {
+	padding: 2.25rem 2.25rem 2.25rem 2.25rem;
+	background-color: #fff;
+	position: relative;
+}
+
+.EBfyye-card .embed-responsive {
+	width: 6rem;
+	border-radius: 50%;
+	margin-bottom: 1rem;
+}
+
+.EBfyye-card .embed-responsive:not(.inside) {
+	margin-top: -4.25rem;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+.EBfyye-card.text-center .embed-responsive.inside {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.EBfyye-card.text-right .embed-responsive.inside {
+	margin-left: auto;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

@@ -1,0 +1,183 @@
+.N3mQnq .form-control {
+	width: auto;
+	display: inline-block;
+}
+
+.N3mQnq .form-control + .form-control {
+	margin-left: .25rem;
+}
+
+.N3mQnq-container {
+	min-height: 12rem;
+}
+
+.N3mQnq .filter-button {
+	height: calc(1.8125rem + 0.125rem);
+	padding: 0.25rem 0.5rem;
+	font-size: 0.875rem;
+	line-height: 1.5;
+	color: #495057;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 0.0625rem solid #ced4da;
+	border-radius: var(--borderRadius);
+	margin-left: .75rem;
+	cursor: pointer;
+}
+
+.N3mQnq-condition {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+	.N3mQnq-condition {
+		padding: 3rem 1rem;
+		position: fixed;
+		width: 80%;
+		height: 100vh;
+		z-index: 1050;
+		background-color: rgba(0, 0, 0, 0.8);
+		top: 0;
+		right: -0.75rem;
+	}
+
+	.N3mQnq-condition .form-control {
+		min-width: 8.125rem;
+		display: block;
+		margin-bottom: .75rem;
+	}
+
+	.N3mQnq-condition .form-control + .form-control {
+		margin: 0 0 .75rem 0;
+	}
+
+	.N3mQnq-condition .form-control:last-of-type {
+		margin-bottom: 2rem;
+	}
+
+	.N3mQnq-condition:not(.active) {
+		display: none;
+	}
+}
+
+.N3mQnq-condition-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50px;
+	color: #fff;
+	text-align: center;
+	font-size: 1.5rem;
+	line-height: 50px;
+	cursor: pointer;
+}
+
+.N3mQnq-goods {
+	margin-top: 1rem;
+}
+
+.N3mQnq-goods .table .table-img {
+	width: 2rem;
+}
+
+.N3mQnq-goods .table td {
+	background-color: #fff;
+}
+
+.N3mQnq-goods .table img {
+	width: 2rem;
+}
+
+.N3mQnq .bread-crumb-params label {
+	font-size: 0.75rem;
+}
+
+.N3mQnq .bread-crumb-params label:not(:last-child):after {
+	content: ' / ';
+}
+
+.N3mQnq .sort-label {
+	display: inline-block;
+	background-color: #f4f4f5;
+	border-color: #e9e9eb;
+	color: #909399;
+	height: 1.5rem;
+	padding: 0 10px;
+	line-height: 1.375rem;
+	font-size: 12px;
+	box-sizing: border-box;
+	white-space: nowrap;
+	border-radius: var(--borderRadius);
+}
+
+@media (min-width: 768px) {
+	.N3mQnq .sort-label:first-of-type {
+		margin-left: 2rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.N3mQnq .sort-label {
+		clear: both;
+		margin: 0 0 0.75rem 0;
+	}
+}
+
+.N3mQnq td, .N3mQnq th {
+	font-size: 14px;
+	font-weight: normal;
+	vertical-align: middle;
+}
+
+.N3mQnq-slide {
+	margin-bottom: 1px;
+}
+
+.N3mQnq-slide h3 {
+	color: #fff;
+	background-color: #343a40;
+	border-color: #454d55;
+	padding: 0.375rem 0.75rem;
+	overflow: hidden;
+	margin: 0;
+	font-size: 14px;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.N3mQnq-slide h3:before {
+	float: right;
+}
+
+.N3mQnq-slide th {
+	width: 110px;
+}
+
+.N3mQnq-slide-content {
+	padding: 0.5rem 0.75rem;
+	background-color: #f7f7f7;
+	border: 1px solid #454d55;
+	display: none;
+}
+
+.N3mQnq-slide-content img {
+	width: 100%;
+}
+
+.N3mQnq-slide:first-child .filter-slide-content {
+	display: block;
+}
+
+.N3mQnq .table a {
+	color: var(--colorBody);
+}
+
+.N3mQnq .btn {
+	display: inline-block;
+	width: auto;
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

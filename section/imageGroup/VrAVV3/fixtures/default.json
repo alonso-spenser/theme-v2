@@ -1,0 +1,53 @@
+{
+  "section": {
+    "id": "1561787321571868673",
+    "componentKind": "section",
+    "type": "imageGroup",
+    "templateId": "VrAVV3",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "4",
+      "marginTop": false,
+      "mobColumn": "12",
+      "paddingTop": true,
+      "wideScreen": false,
+      "imageHeight": 50,
+      "borderRadius": 0,
+      "marginBottom": false,
+      "sectionAlias": "联系信息",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "itemList": []
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

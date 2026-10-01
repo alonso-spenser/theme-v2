@@ -1,0 +1,122 @@
+.IJj2ai-item:not(:last-child) {
+	margin-bottom: 30px;
+}
+
+.IJj2ai-item .text-heading {
+	position: relative;
+	min-height: 1.25rem;
+}
+
+.IJj2ai-item .text-heading:before {
+	content: '';
+	border: 1px solid #909399;
+	width: 0.9375rem;
+	height: 0.9375rem;
+	position: absolute;
+	right: -2.9375rem;
+	top: calc(50% - 9px);
+	background: #fff;
+	border-radius: 0.9375rem;
+}
+
+.IJj2ai-item .text-heading:after {
+	content: '';
+	background-color: #909399;
+	width: 0.4375rem;
+	height: 0.4375rem;
+	position: absolute;
+	right: -2.6875rem;
+	top: calc(50% - 5px);
+	border-radius: 50%;
+}
+
+.IJj2ai-container {
+	position: relative;
+	transition: all 0.25s;
+}
+
+.IJj2ai-container img {
+	max-width: 100%;
+}
+
+.IJj2ai-container [class*="text-"] + .IJj2ai-img {
+	margin-top: 1rem;
+}
+
+.IJj2ai-container .row {
+	position: relative;
+}
+
+.IJj2ai-container .row:before {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	display: block;
+	margin-left: -1px;
+	width: 1px;
+	height: 100%;
+	border-radius: 2px;
+	background-color: #909399;
+	content: "";
+}
+
+.IJj2ai-container .row .IJj2ai-half {
+	padding-right: 2.5rem;
+	text-align: right;
+}
+
+.IJj2ai-container .row .IJj2ai-half:last-child {
+	text-align: left;
+	padding-left: 2.5rem;
+}
+
+.IJj2ai-container .row .IJj2ai-half:last-child .IJj2ai-item .text-heading:before {
+	left: -3rem;
+	right: auto;
+}
+
+.IJj2ai-container .row .IJj2ai-half:last-child .IJj2ai-item .text-heading:after {
+	right: auto;
+	left: -2.75rem;
+}
+
+@media (min-width: 768px) {
+	.IJj2ai .row .IJj2ai-half:last-child {
+		padding-top: 100px;
+	}
+}
+
+@media (max-width: 768px) {
+	.IJj2ai-container .row:before {
+		left: 0.625rem;
+		right: auto;
+	}
+
+	.IJj2ai-container .row .IJj2ai-half {
+		padding-right: 0.75rem;
+		padding-left: 1.5rem;
+		text-align: left;
+	}
+
+	.IJj2ai-container .row .IJj2ai-half .IJj2ai-item .text-heading:before {
+		left: -1.375rem;
+		right: auto;
+	}
+
+	.IJj2ai-container .row .IJj2ai-half .IJj2ai-item .text-heading:after {
+		right: auto;
+		left: -1.125rem;
+	}
+
+	.IJj2ai-container .row .IJj2ai-half .IJj2ai-item:not(:last-child) {
+		margin-bottom: 0.75rem;
+	}
+
+	.IJj2ai-container .row .IJj2ai-half:last-child {
+		text-align: left;
+		padding-right: 0.75rem;
+		padding-left: 1.5rem;
+	}
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

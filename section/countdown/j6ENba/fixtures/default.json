@@ -1,0 +1,60 @@
+{
+  "section": {
+    "id": "1513849390392668161",
+    "componentKind": "section",
+    "type": "countdown",
+    "templateId": "j6ENba",
+    "runtimeVersion": 2,
+    "settings": {
+      "alt": "",
+      "image": "/theme/img/8b.jpg",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Digital Technology Co., Ltd",
+      "marginTop": false,
+      "textColor": "",
+      "buttonLink": "",
+      "digitColor": "",
+      "paddingTop": true,
+      "subheading": "ABOUT US",
+      "wideScreen": false,
+      "buttonLabel": "LEARN MORE",
+      "buttonStyle": "btn-outline-light",
+      "contentWidth": "8",
+      "marginBottom": false,
+      "sectionAlias": "倒计时",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "eventList": []
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

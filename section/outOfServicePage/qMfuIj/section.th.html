@@ -1,0 +1,17 @@
+<section th:class="|section qMfuIj section-${section.id}|" th:data-section="${section.templateId}">
+    <div class="container text-center" th:if="${not #strings.isEmpty(section.settings.heading)}">
+        <h1 class="text-heading">
+            [[${section.settings.heading}]]
+        </h1>
+        <h3 class="text-subheading" th:if="${not #strings.isEmpty(section.settings.subheading)}">
+            [[${section.settings.subheading}]]
+        </h3>
+        <th:block th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">
+            <th:block th:each="textLine,saltLine:${textLines}">
+                <p class="text-body" th:if="${not #strings.isEmpty(textLine)}" th:utext="${textLine}"></li>
+            </th:block>
+        </th:block>
+    </div>
+    
+    <style th:if="${params.designMode && not #strings.isEmpty(variableCSS)}" th:inline="text" th:utext="${variableCSS}"></style>
+</section>

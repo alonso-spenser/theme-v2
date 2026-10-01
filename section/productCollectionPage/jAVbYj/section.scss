@@ -1,0 +1,40 @@
+.jAVbYj-tile .card-body {
+	border-bottom-left-radius: calc(var(--cardBorderRadius) * 1px);
+	border-bottom-right-radius: calc(var(--cardBorderRadius) * 1px);
+}
+
+.jAVbYj-container.no-gutters {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.jAVbYj-list {
+	background-color: #000;
+}
+
+.jAVbYj-list .embed-responsive-item {
+	opacity: .6;
+	transition: all 0.25s;
+}
+
+.jAVbYj-list-content {
+	bottom: 1.25rem;
+	position: absolute;
+	left: 1rem;
+	right: 1rem;
+}
+
+.jAVbYj-list-content .text-content-heading {
+	color: #fff;
+}
+
+.jAVbYj-list-content h3 + .btn {
+	margin-top: 0.5rem;
+}
+
+.jAVbYj-list:hover .embed-responsive-item {
+	opacity: .8;
+	transform: scale(1.05);
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

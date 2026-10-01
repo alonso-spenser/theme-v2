@@ -1,0 +1,36 @@
+// Static DEMO instance styles; production uses variable.th.css.
+.section-demo-mUVjim{
+    background: #fcfcfc   ;
+    
+}
+
+
+
+.section-demo-mUVjim .section-title [class^=text-] {
+    color:#ff0000;
+}
+
+
+    
+    .section-demo-mUVjim .section-title-divider {
+        width: 100%;
+    }
+    
+    
+        .section-demo-mUVjim .section-title-divider:after {
+            border-color: #ff0000;
+        }
+    
+
+
+@media (min-width: 768px) {
+    .section-demo-mUVjim .section-title [class^=text-] {
+        width: 100%;
+    }
+}
+
+
+
+.section-demo-mUVjim .section-title .has-line:after, .section-demo-mUVjim .section-title img {
+    width: 5%;
+}

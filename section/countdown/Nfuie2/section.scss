@@ -1,0 +1,54 @@
+.Nfuie2 .embed-responsive:not(.no-shadow) {
+	border-radius: calc(var(--cardBorderRadius) * 1px);
+	box-shadow: 0 1px calc(var(--cardBoxShadow) * 1px) 0 var(--cardShadowColor);
+}
+
+.Nfuie2 .embed-responsive:not(.no-shadow):hover {
+	box-shadow: 0 1px calc(var(--cardBoxShadow) * 1px) 0 var(--cardShadowHoverColor);
+}
+
+.Nfuie2 .position-relative {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	min-height: 8rem;
+	width: 17.5rem;
+	background-color: #fff;
+	border-radius: 0.5rem;
+	right: 3rem;
+	padding: 1.5rem;
+}
+
+@media (max-width: 768px) {
+	.Nfuie2 .position-relative {
+		width: calc(100% - 4rem);
+		right: 2rem;
+	}
+}
+
+.Nfuie2 li {
+	border-right: 0;
+	padding: 24px 0;
+	text-align: center;
+}
+
+.Nfuie2 li:not(:last-child) {
+	border-bottom: 4px solid #f2f2f2;
+}
+
+.Nfuie2-digit {
+	transition: all 0.25s;
+	font-family: var(--typeHeading);
+	font-size: calc(var(--fontSizeHeading) * 1px);
+	color: var(--colorTheme);
+	font-weight: 900;
+}
+
+.Nfuie2-unit {
+	color: var(--colorTheme);
+}
+
+.Nfuie2 .btn {
+	width: 100%;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

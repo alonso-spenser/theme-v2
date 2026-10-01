@@ -1,0 +1,83 @@
+{
+  "section": {
+    "id": "1480534162762534914",
+    "componentKind": "section",
+    "type": "imageGroup",
+    "templateId": "JRVVvi",
+    "runtimeVersion": 2,
+    "settings": {
+      "column": "3",
+      "symbol": "list-demical",
+      "content": "We provide all your needed for starting your own online business, and even easier. Establish an online store, Oceans of Products Supply, Integrate Logistics Solution & Comprehensive After-sale Services.",
+      "heading": "Title with button",
+      "marginTop": false,
+      "mobColumn": "6",
+      "textAlign": "center",
+      "textColor": "",
+      "textWidth": 100,
+      "buttonLink": "",
+      "imageScale": "1by1",
+      "paddingTop": true,
+      "subheading": "this is a new beginning",
+      "titleColor": "",
+      "wideScreen": false,
+      "buttonLabel": "Button label",
+      "buttonStyle": "invisible",
+      "imageBorder": "",
+      "contentAlign": "text-center",
+      "dividerImage": "",
+      "dividerStyle": "line",
+      "dividerWidth": 5,
+      "marginBottom": false,
+      "sectionAlias": "相册",
+      "paddingBottom": true,
+      "backgroundSize": "",
+      "sidebarHeading": "Categories",
+      "backgroundColor": "",
+      "backgroundImage": "",
+      "backgroundRepeat": "",
+      "backgroundPosition": "",
+      "imageList": [
+        {
+          "image": "https://file.infoservision.com/1247781316025233409/1527926369204473942.webp",
+          "alt": "",
+          "title": "Heading",
+          "url": ""
+        }
+      ],
+      "sidebarList": [
+        {
+          "sideActive": false,
+          "sideTitle": "",
+          "sideLink": ""
+        }
+      ]
+    },
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "currencySymbol": "₦",
+    "phone": "",
+    "email": "",
+    "langList": [],
+    "langName": "English",
+    "mainDomain": "example.test",
+    "siteName": "OGA Preview",
+    "social": {}
+  },
+  "page": {
+    "pageType": "homePage",
+    "seoH1": ""
+  },
+  "params": {
+    "originalURL": "/",
+    "designMode": true
+  },
+  "lang": {
+    "global": {
+      "keywords": "Search"
+    }
+  }
+}

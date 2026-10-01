@@ -1,0 +1,21 @@
+.YRfeui .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.YRfeui .container h3 + form {
+	margin-left: 2rem;
+}
+
+.YRfeui .container h3 + div {
+	margin-left: 2rem;
+}
+
+.YRfeui .container form {
+	max-width: 50%;
+	min-width: 300px;
+	flex: 1;
+}
+// Demo-only instance selector; does not affect real page IDs.
+@import "demo";

@@ -1,0 +1,72 @@
+[# th:if="${not #strings.isEmpty(section.settings.barBackground)}"]
+    .section-[[${ section.id }]] .jqmAby-notice {
+        background-color: [[${section.settings.barBackground}]];
+    }
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.auxiliaryBackground)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-bar {
+  background-color: [[${ section.settings.auxiliaryBackground }]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.auxiliaryColor)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-bar .dropdown-toggle,
+.section-[[${ section.id }]] .[[${ section.templateId }]]-bar .section-drop:before,
+.section-[[${ section.id }]] .[[${ section.templateId }]]-bar i:before,
+.section-[[${ section.id }]] .[[${ section.templateId }]]-bar .[[${ section.templateId }]]-icon:before,
+.section-[[${ section.id }]] .[[${ section.templateId }]]-bar a:not(.dropdown-item) {
+  color: [[${ section.settings.auxiliaryColor }]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.barBackground)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-notice {
+  background-color: [[${ section.settings.barBackground }]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.barTextColor)}"]
+.section-[[${ section.id }]] .[[${ section.templateId }]]-notice .[[${ section.templateId }]]-notice-close,
+.section-[[${ section.id }]] .[[${ section.templateId }]]-notice [class*="text-"] {
+  color: [[${ section.settings.barTextColor }]];
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.menuBackground)}"]
+    .section-[[${ section.id }]] .navbar {
+      background-color: [[${ section.settings.menuBackground }]];
+    }
+[/]
+
+
+[# th:if="${not #strings.isEmpty(section.settings.menuColor) || not #strings.isEmpty(section.settings.menuActiveColor)}"]
+@media (min-width: 768px) {
+    [# th:if="${not #strings.isEmpty(section.settings.menuColor)}"]
+        .section-[[${ section.id }]] .navbar .navbar-nav li > .nav-link:not(.active) {
+            color: [[${section.settings.menuColor}]];
+        }
+    [/]
+    [# th:if="${not #strings.isEmpty(section.settings.menuActiveColor)}"]
+        .section-[[${ section.id }]] .navbar .navbar-nav li > .nav-link.active {
+            color: [[${section.settings.menuActiveColor}]];
+        }
+    [/]
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.secondColor)}"]
+@media (min-width: 768px) {
+  .section-[[${ section.id }]] nav .navbar-second-menu .nav-link {
+    color: [[${ section.settings.secondColor }]];
+  }
+}
+[/]
+
+[# th:if="${not #strings.isEmpty(section.settings.secondBackground)}"]
+@media (min-width: 768px) {
+  .section-[[${ section.id }]] nav .navbar-second-menu {
+    background-color: [[${ section.settings.secondBackground }]];
+  }
+}
+[/]
