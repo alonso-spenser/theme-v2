@@ -31,4 +31,4 @@ npm run serve
 
 salt 生成：`node tools/generate-salt.mjs`。显式配置 `THEME_DB_USER`、`THEME_DB_PASSWORD`，可选 `THEME_DB_HOST`、`THEME_DB_PORT`、`THEME_MYSQL_BIN`；只读检查 mall.theme_section，连接失败不会生成未验证 salt。不要把凭证写进仓库。
 
-Java 参数预览仍由独立的 theme-service 提供，需要后续适配新工作区路径；本次未修改旧服务、Nginx 或数据库。这里的 `serve` 只提供静态 DEMO，不执行 Java 模板。
+Java 参数预览由独立的 theme-service 提供，已适配新工作区。Nginx 安装与访问说明见 [本地预览站](docs/PREVIEW.md)。这里的 `serve` 只提供静态 DEMO，不执行 Java 模板。

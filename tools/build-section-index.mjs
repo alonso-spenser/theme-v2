@@ -18,7 +18,7 @@ export async function buildIndex(directory) {
     const checks = report.results.filter(r => r.key === component.key && r.renderStatus === 200 && r.styleStatus === 200);
     const fixture = ['local', 'sample', 'default'].find(name => checks.some(r => r.fixture === name))
       || (component.fixtures.includes('local') ? 'local' : component.fixtures.includes('sample') ? 'sample' : 'default');
-    component.preview = `./${component.key}/index.html`;
+    component.preview = '/preview?' + new URLSearchParams({component: component.key, fixture});
     const rawZh = manifest.name?.['zh-CN'] || component.name || component.type;
     const zh = chineseNames[rawZh] || rawZh;
     const english = manifest.name?.en;
@@ -26,8 +26,9 @@ export async function buildIndex(directory) {
     component.names = { 'zh-CN': zh, en };
     const status = 'V2 静态 DEMO · 视觉与业务交互待逐项验收';
     const hasDemo = (await readFile(join(root, component.key, 'index.html'), 'utf8').catch(() => '')).includes('theme:standalone-demo');
-    const demoLink = hasDemo ? `<a target="_blank" rel="noopener" href="./${escape(component.key)}/index.html">静态 HTML DEMO</a> · ` : '';
-    const item = `<dd><a target="_blank" rel="noopener" href="${escape(component.preview)}"><span>${escape(zh)}</span><span class="english">${escape(en)}</span><code>${escape(component.salt)}</code></a><small>${status}</small></dd>`;
+    const demoLink = hasDemo ? `<a target="_blank" rel="noopener" href="/section/${escape(component.key)}/index.html">静态 HTML DEMO</a> · ` : '';
+    const parameterPreview = '/preview?' + new URLSearchParams({component: component.key, fixture});
+    const item = `<dd><a target="_blank" rel="noopener" href="${escape(component.preview)}"><span>${escape(zh)}</span><span class="english">${escape(en)}</span><code>${escape(component.salt)}</code></a><small>${status}</small>${demoLink}<a target="_blank" rel="noopener" href="${escape(parameterPreview)}">参数预览</a></dd>`;
     if (!groups.has(component.type)) groups.set(component.type, []);
     groups.get(component.type).push(item);
     const indexPath = join(root, component.key, 'index.html');
@@ -49,18 +50,21 @@ export async function buildIndex(directory) {
     *{box-sizing:border-box}body{margin:0;background:#f7f8fa;color:#223047;font:15px/1.6 system-ui,-apple-system,sans-serif}
     main{max-width:1440px;margin:36px auto;padding:0 24px}h1{font-size:28px;margin:0 0 8px}p{color:#637087}
     .section-container{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;align-items:start}
+    .section-container.is-masonry{grid-auto-rows:1px;row-gap:0;grid-auto-flow:row dense}
     dl{margin:0;padding:18px;background:white;border:1px solid #e1e6ee;border-radius:8px}dt{font-weight:700;margin-bottom:10px;overflow-wrap:anywhere}
     dd{margin:0;padding:12px 0;border-top:1px solid #edf0f4}a{color:#205db0;text-decoration:none}a:hover{text-decoration:underline}a:focus-visible{outline:2px solid #205db0}
     a span{display:block}.english{font-size:13px;color:#576981}code{font-size:12px;color:#65748a}small{display:block;color:#778292;font-size:12px}
     @media(max-width:1050px){.section-container{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:760px){.section-container{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.section-container{grid-template-columns:1fr}}
   </style>
+  <script defer src="/js/catalog.js"></script>
 </head>
 <body><main><h1>V2 组件开发目录</h1><p>${catalog.components.length} 个组件 · 中文名称 / English name / salt · 点击在新页面进入预览</p>
 <div class="section-container">
 ${[...groups].map(([type, items]) => `<dl>\n<dt>${escape(type)}</dt>\n${items.join('\n')}\n</dl>`).join('\n')}
 </div></main></body></html>\n`;
   await writeFile(join(root, 'catalog.json'), JSON.stringify(catalog, null, 2) + '\n');
-  await writeFile(join(root, 'index.html'), html);
+  await writeFile(join(root, '..', 'index.html'), html);
+  await writeFile(join(root, 'index.html'), '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=/"><title>组件目录</title><a href="/">组件目录已移至首页</a>\n');
   console.log(`Index: ${catalog.components.length} components in ${groups.size} groups`);
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) await buildIndex(process.argv[2] || 'section');

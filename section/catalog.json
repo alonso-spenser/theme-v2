@@ -13,7 +13,7 @@
         "local",
         "empty"
       ],
-      "preview": "./linkList/XVg6Yi/index.html",
+      "preview": "/preview?component=linkList%2FXVg6Yi&fixture=local",
       "names": {
         "zh-CN": "实用链接",
         "en": "Helpful links"
@@ -30,7 +30,7 @@
         "default",
         "local"
       ],
-      "preview": "./imageText/KjbTA8/index.html",
+      "preview": "/preview?component=imageText%2FKjbTA8&fixture=local",
       "names": {
         "zh-CN": "全幅图文 · 校友故事",
         "en": "Full-bleed image & text · Alumni"
@@ -49,7 +49,7 @@
         "sample",
         "local"
       ],
-      "preview": "./advantage/yyyuAr/index.html",
+      "preview": "/preview?component=advantage%2FyyyuAr&fixture=local",
       "names": {
         "zh-CN": "优势",
         "en": "Advantage"
@@ -68,7 +68,7 @@
         "sample",
         "local"
       ],
-      "preview": "./anchorNavigation/u6zEja/index.html",
+      "preview": "/preview?component=anchorNavigation%2Fu6zEja&fixture=local",
       "names": {
         "zh-CN": "网站页头",
         "en": "Header"
@@ -87,7 +87,7 @@
         "sample",
         "local"
       ],
-      "preview": "./anchorPin/I3qAj2/index.html",
+      "preview": "/preview?component=anchorPin%2FI3qAj2&fixture=local",
       "names": {
         "zh-CN": "锚钉",
         "en": "Anchor pin"
@@ -106,7 +106,7 @@
         "sample",
         "local"
       ],
-      "preview": "./articleCollectionPage/uMRnmy/index.html",
+      "preview": "/preview?component=articleCollectionPage%2FuMRnmy&fixture=local",
       "names": {
         "zh-CN": "文章集合页 ",
         "en": "Article Collection"
@@ -125,7 +125,7 @@
         "sample",
         "local"
       ],
-      "preview": "./articleDetailPage/UZb2Af/index.html",
+      "preview": "/preview?component=articleDetailPage%2FUZb2Af&fixture=local",
       "names": {
         "zh-CN": "文章详情页",
         "en": "Article detail page"
@@ -144,7 +144,7 @@
         "sample",
         "local"
       ],
-      "preview": "./articlePaginationPage/mYZRnq/index.html",
+      "preview": "/preview?component=articlePaginationPage%2FmYZRnq&fixture=local",
       "names": {
         "zh-CN": "文章分页",
         "en": "Article page"
@@ -163,7 +163,7 @@
         "sample",
         "local"
       ],
-      "preview": "./banner/u2iIV3/index.html",
+      "preview": "/preview?component=banner%2Fu2iIV3&fixture=local",
       "names": {
         "zh-CN": "横幅",
         "en": "Banner"
@@ -182,7 +182,7 @@
         "sample",
         "local"
       ],
-      "preview": "./breadcrumb/v2mYV3/index.html",
+      "preview": "/preview?component=breadcrumb%2Fv2mYV3&fixture=local",
       "names": {
         "zh-CN": "面包屑",
         "en": "Breadcrumb"
@@ -201,7 +201,7 @@
         "sample",
         "local"
       ],
-      "preview": "./breadcrumb/ymYbi2/index.html",
+      "preview": "/preview?component=breadcrumb%2FymYbi2&fixture=local",
       "names": {
         "zh-CN": "面包屑",
         "en": "Breadcrumb"
@@ -220,7 +220,7 @@
         "sample",
         "local"
       ],
-      "preview": "./buttonList/b2YR7v/index.html",
+      "preview": "/preview?component=buttonList%2Fb2YR7v&fixture=local",
       "names": {
         "zh-CN": "标签导航组",
         "en": "Button List"
@@ -239,7 +239,7 @@
         "sample",
         "local"
       ],
-      "preview": "./buttonList/MJ36bm/index.html",
+      "preview": "/preview?component=buttonList%2FMJ36bm&fixture=local",
       "names": {
         "zh-CN": "链接导航组",
         "en": "Link bar"
@@ -258,7 +258,7 @@
         "sample",
         "local"
       ],
-      "preview": "./buttonList/YZvAZv/index.html",
+      "preview": "/preview?component=buttonList%2FYZvAZv&fixture=local",
       "names": {
         "zh-CN": "按钮组",
         "en": "Button list"
@@ -276,7 +276,7 @@
         "default",
         "local"
       ],
-      "preview": "./contact/e3ABvq/index.html",
+      "preview": "/preview?component=contact%2Fe3ABvq&fixture=local",
       "names": {
         "zh-CN": "联系我们",
         "en": "Contact US"
@@ -295,7 +295,7 @@
         "sample",
         "local"
       ],
-      "preview": "./contact/Zb2EZv/index.html",
+      "preview": "/preview?component=contact%2FZb2EZv&fixture=local",
       "names": {
         "zh-CN": "联系我们",
         "en": "Contact"
@@ -314,7 +314,7 @@
         "sample",
         "local"
       ],
-      "preview": "./countdown/j6ENba/index.html",
+      "preview": "/preview?component=countdown%2Fj6ENba&fixture=local",
       "names": {
         "zh-CN": "倒计时",
         "en": "Countdown"
@@ -333,7 +333,7 @@
         "sample",
         "local"
       ],
-      "preview": "./countdown/Nfuie2/index.html",
+      "preview": "/preview?component=countdown%2FNfuie2&fixture=local",
       "names": {
         "zh-CN": "倒计时",
         "en": "Countdown"
@@ -352,7 +352,7 @@
         "sample",
         "local"
       ],
-      "preview": "./countdown/Rr63Ab/index.html",
+      "preview": "/preview?component=countdown%2FRr63Ab&fixture=local",
       "names": {
         "zh-CN": "倒计时",
         "en": "Countdown"
@@ -371,7 +371,7 @@
         "sample",
         "local"
       ],
-      "preview": "./countdown/uuy6Zz/index.html",
+      "preview": "/preview?component=countdown%2Fuuy6Zz&fixture=local",
       "names": {
         "zh-CN": "倒计时",
         "en": "Countdown"
@@ -390,7 +390,7 @@
         "sample",
         "local"
       ],
-      "preview": "./countdown/vyM7ry/index.html",
+      "preview": "/preview?component=countdown%2FvyM7ry&fixture=local",
       "names": {
         "zh-CN": "倒计时",
         "en": "Countdown"
@@ -409,7 +409,7 @@
         "sample",
         "local"
       ],
-      "preview": "./customPage/aENvYz/index.html",
+      "preview": "/preview?component=customPage%2FaENvYz&fixture=local",
       "names": {
         "zh-CN": "自定义页",
         "en": "Custom page"
@@ -428,7 +428,7 @@
         "sample",
         "local"
       ],
-      "preview": "./designSection/FvyQV3/index.html",
+      "preview": "/preview?component=designSection%2FFvyQV3&fixture=local",
       "names": {
         "zh-CN": "设计详情",
         "en": "Design section"
@@ -447,7 +447,7 @@
         "sample",
         "local"
       ],
-      "preview": "./downloadPaginationPage/qYz22e/index.html",
+      "preview": "/preview?component=downloadPaginationPage%2FqYz22e&fixture=local",
       "names": {
         "zh-CN": "下载页",
         "en": "Download page"
@@ -466,7 +466,7 @@
         "sample",
         "local"
       ],
-      "preview": "./FAQ/MjYVZ3/index.html",
+      "preview": "/preview?component=FAQ%2FMjYVZ3&fixture=local",
       "names": {
         "zh-CN": "常见问题",
         "en": "FAQ"
@@ -485,7 +485,7 @@
         "sample",
         "local"
       ],
-      "preview": "./featuredArticle/ABJn2q/index.html",
+      "preview": "/preview?component=featuredArticle%2FABJn2q&fixture=local",
       "names": {
         "zh-CN": "推荐文章",
         "en": "Featured article"
@@ -504,7 +504,7 @@
         "sample",
         "local"
       ],
-      "preview": "./featuredArticle/bei2yu/index.html",
+      "preview": "/preview?component=featuredArticle%2Fbei2yu&fixture=local",
       "names": {
         "zh-CN": "推荐文章组",
         "en": "Featured aticle group"
@@ -523,7 +523,7 @@
         "sample",
         "local"
       ],
-      "preview": "./featuredArticle/MRFJ3u/index.html",
+      "preview": "/preview?component=featuredArticle%2FMRFJ3u&fixture=local",
       "names": {
         "zh-CN": "推荐文章",
         "en": "Featured article"
@@ -541,7 +541,7 @@
         "default",
         "local"
       ],
-      "preview": "./featuredArticle/N7neM3/index.html",
+      "preview": "/preview?component=featuredArticle%2FN7neM3&fixture=local",
       "names": {
         "zh-CN": "推荐文章组",
         "en": "Featured aticle group"
@@ -560,7 +560,7 @@
         "sample",
         "local"
       ],
-      "preview": "./featuredArticle/U36nyq/index.html",
+      "preview": "/preview?component=featuredArticle%2FU36nyq&fixture=local",
       "names": {
         "zh-CN": "推荐文章",
         "en": "Featured article"
@@ -579,7 +579,7 @@
         "sample",
         "local"
       ],
-      "preview": "./featuredArticleCollection/BVjIvy/index.html",
+      "preview": "/preview?component=featuredArticleCollection%2FBVjIvy&fixture=local",
       "names": {
         "zh-CN": "文章集合",
         "en": "Article collection"
@@ -598,7 +598,7 @@
         "sample",
         "local"
       ],
-      "preview": "./featuredContent/f667Zz/index.html",
+      "preview": "/preview?component=featuredContent%2Ff667Zz&fixture=local",
       "names": {
         "zh-CN": "推荐内容",
         "en": "Featured Content"
@@ -617,7 +617,7 @@
         "sample",
         "local"
       ],
-      "preview": "./featuredContent/i2Mnmy/index.html",
+      "preview": "/preview?component=featuredContent%2Fi2Mnmy&fixture=local",
       "names": {
         "zh-CN": "推荐内容",
         "en": "Featured Content"
@@ -636,7 +636,7 @@
         "sample",
         "local"
       ],
-      "preview": "./featuredContent/mUVjim/index.html",
+      "preview": "/preview?component=featuredContent%2FmUVjim&fixture=local",
       "names": {
         "zh-CN": "推荐内容",
         "en": "Featured Content"
@@ -655,7 +655,7 @@
         "sample",
         "local"
       ],
-      "preview": "./featuredContent/y6zAvq/index.html",
+      "preview": "/preview?component=featuredContent%2Fy6zAvq&fixture=local",
       "names": {
         "zh-CN": "推荐内容",
         "en": "Featured Content"
@@ -674,7 +674,7 @@
         "sample",
         "local"
       ],
-      "preview": "./featuredProduct/aQZRjy/index.html",
+      "preview": "/preview?component=featuredProduct%2FaQZRjy&fixture=local",
       "names": {
         "zh-CN": "推荐产品",
         "en": "Featured product"
@@ -692,7 +692,7 @@
         "default",
         "local"
       ],
-      "preview": "./featuredProduct/qUJFJj/index.html",
+      "preview": "/preview?component=featuredProduct%2FqUJFJj&fixture=local",
       "names": {
         "zh-CN": "推荐产品",
         "en": "Featured product"
@@ -711,7 +711,7 @@
         "sample",
         "local"
       ],
-      "preview": "./featuredProduct/Rv2I7j/index.html",
+      "preview": "/preview?component=featuredProduct%2FRv2I7j&fixture=local",
       "names": {
         "zh-CN": "推荐产品组",
         "en": "Featured product group"
@@ -730,7 +730,7 @@
         "sample",
         "local"
       ],
-      "preview": "./featuredProduct/v63YZr/index.html",
+      "preview": "/preview?component=featuredProduct%2Fv63YZr&fixture=local",
       "names": {
         "zh-CN": "产品列表",
         "en": "Featured Product"
@@ -749,7 +749,7 @@
         "sample",
         "local"
       ],
-      "preview": "./featuredProduct/Yfaeue/index.html",
+      "preview": "/preview?component=featuredProduct%2FYfaeue&fixture=local",
       "names": {
         "zh-CN": "推荐产品",
         "en": "Featured Product"
@@ -768,7 +768,7 @@
         "sample",
         "local"
       ],
-      "preview": "./featuredProductCollection/UJbMFr/index.html",
+      "preview": "/preview?component=featuredProductCollection%2FUJbMFr&fixture=local",
       "names": {
         "zh-CN": "商品集合",
         "en": "Product collection"
@@ -786,7 +786,7 @@
         "default",
         "local"
       ],
-      "preview": "./floatMenu/Ur6Jvm/index.html",
+      "preview": "/preview?component=floatMenu%2FUr6Jvm&fixture=local",
       "names": {
         "zh-CN": "悬浮菜单",
         "en": "Float menu"
@@ -805,7 +805,7 @@
         "sample",
         "local"
       ],
-      "preview": "./footer/MV3iA3/index.html",
+      "preview": "/preview?component=footer%2FMV3iA3&fixture=local",
       "names": {
         "zh-CN": "网站页脚",
         "en": "Footer"
@@ -824,7 +824,7 @@
         "sample",
         "local"
       ],
-      "preview": "./generalPage/FBj26f/index.html",
+      "preview": "/preview?component=generalPage%2FFBj26f&fixture=local",
       "names": {
         "zh-CN": "服务页面",
         "en": "SERVICE PAGE"
@@ -843,7 +843,7 @@
         "sample",
         "local"
       ],
-      "preview": "./header/jqmAby/index.html",
+      "preview": "/preview?component=header%2FjqmAby&fixture=local",
       "names": {
         "zh-CN": "网站页头",
         "en": "Header"
@@ -862,7 +862,7 @@
         "sample",
         "local"
       ],
-      "preview": "./header/M7FVZr/index.html",
+      "preview": "/preview?component=header%2FM7FVZr&fixture=local",
       "names": {
         "zh-CN": "网站页头",
         "en": "Header"
@@ -881,7 +881,7 @@
         "sample",
         "local"
       ],
-      "preview": "./header/NJ3YJ3/index.html",
+      "preview": "/preview?component=header%2FNJ3YJ3&fixture=local",
       "names": {
         "zh-CN": "网站页头",
         "en": "Header"
@@ -900,7 +900,7 @@
         "sample",
         "local"
       ],
-      "preview": "./header/qYnEVv/index.html",
+      "preview": "/preview?component=header%2FqYnEVv&fixture=local",
       "names": {
         "zh-CN": "网站页头(全屏)",
         "en": "Header"
@@ -919,7 +919,7 @@
         "sample",
         "local"
       ],
-      "preview": "./homePage/ABFZNr/index.html",
+      "preview": "/preview?component=homePage%2FABFZNr&fixture=local",
       "names": {
         "zh-CN": "首页",
         "en": "Home Page"
@@ -938,7 +938,7 @@
         "sample",
         "local"
       ],
-      "preview": "./iframe/j6umue/index.html",
+      "preview": "/preview?component=iframe%2Fj6umue&fixture=local",
       "names": {
         "zh-CN": "嵌入网页",
         "en": "Iframe"
@@ -957,7 +957,7 @@
         "sample",
         "local"
       ],
-      "preview": "./iframe/NRbUNr/index.html",
+      "preview": "/preview?component=iframe%2FNRbUNr&fixture=local",
       "names": {
         "zh-CN": "嵌入网页组",
         "en": "Iframe"
@@ -976,7 +976,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/a2uYja/index.html",
+      "preview": "/preview?component=imageGroup%2Fa2uYja&fixture=local",
       "names": {
         "zh-CN": "图片组",
         "en": "CASES"
@@ -995,7 +995,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/aMjeEn/index.html",
+      "preview": "/preview?component=imageGroup%2FaMjeEn&fixture=local",
       "names": {
         "zh-CN": "内容介绍",
         "en": "Image Group"
@@ -1014,7 +1014,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/BrIrMj/index.html",
+      "preview": "/preview?component=imageGroup%2FBrIrMj&fixture=local",
       "names": {
         "zh-CN": "图片组",
         "en": "Image Group"
@@ -1033,7 +1033,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/eyuuye/index.html",
+      "preview": "/preview?component=imageGroup%2Feyuuye&fixture=local",
       "names": {
         "zh-CN": "图文组",
         "en": "Image Group"
@@ -1052,7 +1052,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/FbmIzu/index.html",
+      "preview": "/preview?component=imageGroup%2FFbmIzu&fixture=local",
       "names": {
         "zh-CN": "服务展示",
         "en": "SERVICES"
@@ -1071,7 +1071,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/fErUva/index.html",
+      "preview": "/preview?component=imageGroup%2FfErUva&fixture=local",
       "names": {
         "zh-CN": "图片墙",
         "en": "Image wall"
@@ -1090,7 +1090,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/ieuuQz/index.html",
+      "preview": "/preview?component=imageGroup%2FieuuQz&fixture=local",
       "names": {
         "zh-CN": "图文组",
         "en": "Image Group"
@@ -1109,7 +1109,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/IfQnEf/index.html",
+      "preview": "/preview?component=imageGroup%2FIfQnEf&fixture=local",
       "names": {
         "zh-CN": "图文组",
         "en": "Image Group"
@@ -1128,7 +1128,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/Ijaqeu/index.html",
+      "preview": "/preview?component=imageGroup%2FIjaqeu&fixture=local",
       "names": {
         "zh-CN": "图文",
         "en": "Image Group"
@@ -1147,7 +1147,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/Inuqaa/index.html",
+      "preview": "/preview?component=imageGroup%2FInuqaa&fixture=local",
       "names": {
         "zh-CN": "解决方案",
         "en": "SOLUTIONS"
@@ -1166,7 +1166,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/JJ7NBz/index.html",
+      "preview": "/preview?component=imageGroup%2FJJ7NBz&fixture=local",
       "names": {
         "zh-CN": "图文组",
         "en": "Image group"
@@ -1185,7 +1185,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/JRVVvi/index.html",
+      "preview": "/preview?component=imageGroup%2FJRVVvi&fixture=local",
       "names": {
         "zh-CN": "相册",
         "en": "Album"
@@ -1204,7 +1204,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/Mf2ame/index.html",
+      "preview": "/preview?component=imageGroup%2FMf2ame&fixture=local",
       "names": {
         "zh-CN": "服务展示",
         "en": "SERVICES"
@@ -1223,7 +1223,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/mieeAn/index.html",
+      "preview": "/preview?component=imageGroup%2FmieeAn&fixture=local",
       "names": {
         "zh-CN": "图片展示",
         "en": "Image Group"
@@ -1242,7 +1242,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/MJFFjm/index.html",
+      "preview": "/preview?component=imageGroup%2FMJFFjm&fixture=local",
       "names": {
         "zh-CN": "图文组",
         "en": "Image group"
@@ -1261,7 +1261,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/MJnMrq/index.html",
+      "preview": "/preview?component=imageGroup%2FMJnMrq&fixture=local",
       "names": {
         "zh-CN": "瀑布流",
         "en": "Image Group"
@@ -1280,7 +1280,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/n6Fvii/index.html",
+      "preview": "/preview?component=imageGroup%2Fn6Fvii&fixture=local",
       "names": {
         "zh-CN": "团队介绍",
         "en": "Our Team"
@@ -1299,7 +1299,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/NbeQni/index.html",
+      "preview": "/preview?component=imageGroup%2FNbeQni&fixture=local",
       "names": {
         "zh-CN": "图片展示",
         "en": "Picture show"
@@ -1318,7 +1318,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/nEVNni/index.html",
+      "preview": "/preview?component=imageGroup%2FnEVNni&fixture=local",
       "names": {
         "zh-CN": "图片组",
         "en": "Image Group"
@@ -1337,7 +1337,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/qMnAne/index.html",
+      "preview": "/preview?component=imageGroup%2FqMnAne&fixture=local",
       "names": {
         "zh-CN": "图片组",
         "en": "Image Group"
@@ -1356,7 +1356,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/raEZfy/index.html",
+      "preview": "/preview?component=imageGroup%2FraEZfy&fixture=local",
       "names": {
         "zh-CN": "图片组",
         "en": "Image Group"
@@ -1375,7 +1375,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/uABjim/index.html",
+      "preview": "/preview?component=imageGroup%2FuABjim&fixture=local",
       "names": {
         "zh-CN": "图文",
         "en": "Image Group"
@@ -1394,7 +1394,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/umiyqu/index.html",
+      "preview": "/preview?component=imageGroup%2Fumiyqu&fixture=local",
       "names": {
         "zh-CN": "图文组",
         "en": "Image Group"
@@ -1413,7 +1413,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/UzYBfy/index.html",
+      "preview": "/preview?component=imageGroup%2FUzYBfy&fixture=local",
       "names": {
         "zh-CN": "团队介绍",
         "en": "Image Group"
@@ -1432,7 +1432,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/viEvUr/index.html",
+      "preview": "/preview?component=imageGroup%2FviEvUr&fixture=local",
       "names": {
         "zh-CN": "图片组",
         "en": "Image Group"
@@ -1451,7 +1451,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/VrAVV3/index.html",
+      "preview": "/preview?component=imageGroup%2FVrAVV3&fixture=local",
       "names": {
         "zh-CN": "联系信息",
         "en": "Image Group"
@@ -1470,7 +1470,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/VvmQJn/index.html",
+      "preview": "/preview?component=imageGroup%2FVvmQJn&fixture=local",
       "names": {
         "zh-CN": "案例介绍",
         "en": "Case"
@@ -1489,7 +1489,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageGroup/YrMbii/index.html",
+      "preview": "/preview?component=imageGroup%2FYrMbii&fixture=local",
       "names": {
         "zh-CN": "图片选项卡",
         "en": "Image Group"
@@ -1508,7 +1508,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageText/aquq6z/index.html",
+      "preview": "/preview?component=imageText%2Faquq6z&fixture=local",
       "names": {
         "zh-CN": "图文",
         "en": "Image Text"
@@ -1527,7 +1527,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageText/B3A36j/index.html",
+      "preview": "/preview?component=imageText%2FB3A36j&fixture=local",
       "names": {
         "zh-CN": "图文",
         "en": "Image text"
@@ -1546,7 +1546,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageText/e6zuQr/index.html",
+      "preview": "/preview?component=imageText%2Fe6zuQr&fixture=local",
       "names": {
         "zh-CN": "图文链接组",
         "en": "Image with links"
@@ -1565,7 +1565,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageText/EFRVbm/index.html",
+      "preview": "/preview?component=imageText%2FEFRVbm&fixture=local",
       "names": {
         "zh-CN": "公司概况",
         "en": "Company Overview"
@@ -1584,7 +1584,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageText/I227Fn/index.html",
+      "preview": "/preview?component=imageText%2FI227Fn&fixture=local",
       "names": {
         "zh-CN": "图文",
         "en": "Image Text"
@@ -1603,7 +1603,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageText/nqi2ia/index.html",
+      "preview": "/preview?component=imageText%2Fnqi2ia&fixture=local",
       "names": {
         "zh-CN": "图文",
         "en": "Image text"
@@ -1622,7 +1622,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageText/R7jIra/index.html",
+      "preview": "/preview?component=imageText%2FR7jIra&fixture=local",
       "names": {
         "zh-CN": "图文设计组",
         "en": "Image Text Group"
@@ -1641,7 +1641,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageText/UFF3Iz/index.html",
+      "preview": "/preview?component=imageText%2FUFF3Iz&fixture=local",
       "names": {
         "zh-CN": "图文信息组",
         "en": "Information group"
@@ -1660,7 +1660,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageText/UFVRfa/index.html",
+      "preview": "/preview?component=imageText%2FUFVRfa&fixture=local",
       "names": {
         "zh-CN": "图文组",
         "en": "Image Group"
@@ -1679,7 +1679,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageText/UjAnQb/index.html",
+      "preview": "/preview?component=imageText%2FUjAnQb&fixture=local",
       "names": {
         "zh-CN": "图文视频",
         "en": "Image Text"
@@ -1698,7 +1698,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageText/vmIFzm/index.html",
+      "preview": "/preview?component=imageText%2FvmIFzm&fixture=local",
       "names": {
         "zh-CN": "图文链接组",
         "en": "Image with links"
@@ -1717,7 +1717,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageText/yeIrMn/index.html",
+      "preview": "/preview?component=imageText%2FyeIrMn&fixture=local",
       "names": {
         "zh-CN": "图文[标准]",
         "en": "Image with text"
@@ -1736,7 +1736,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageText/yeueiy/index.html",
+      "preview": "/preview?component=imageText%2Fyeueiy&fixture=local",
       "names": {
         "zh-CN": "图文",
         "en": "Image text"
@@ -1755,7 +1755,7 @@
         "sample",
         "local"
       ],
-      "preview": "./imageText/ZVNrIj/index.html",
+      "preview": "/preview?component=imageText%2FZVNrIj&fixture=local",
       "names": {
         "zh-CN": "图文",
         "en": "Image with text"
@@ -1774,7 +1774,7 @@
         "sample",
         "local"
       ],
-      "preview": "./inquiryForm/beIJNz/index.html",
+      "preview": "/preview?component=inquiryForm%2FbeIJNz&fixture=local",
       "names": {
         "zh-CN": "询盘表单",
         "en": "Inquiry form"
@@ -1793,7 +1793,7 @@
         "sample",
         "local"
       ],
-      "preview": "./inquiryForm/eUvUZ3/index.html",
+      "preview": "/preview?component=inquiryForm%2FeUvUZ3&fixture=local",
       "names": {
         "zh-CN": "询盘表单（基础版）",
         "en": "Inquiry form (basic)"
@@ -1812,7 +1812,7 @@
         "sample",
         "local"
       ],
-      "preview": "./introduction/baQVBf/index.html",
+      "preview": "/preview?component=introduction%2FbaQVBf&fixture=local",
       "names": {
         "zh-CN": "关于我们",
         "en": "Introduction"
@@ -1831,7 +1831,7 @@
         "sample",
         "local"
       ],
-      "preview": "./introduction/bMVBvq/index.html",
+      "preview": "/preview?component=introduction%2FbMVBvq&fixture=local",
       "names": {
         "zh-CN": "我们的服务",
         "en": "Our Services"
@@ -1850,7 +1850,7 @@
         "sample",
         "local"
       ],
-      "preview": "./introduction/fMRb22/index.html",
+      "preview": "/preview?component=introduction%2FfMRb22&fixture=local",
       "names": {
         "zh-CN": "信息介绍",
         "en": "Introduction"
@@ -1869,7 +1869,7 @@
         "sample",
         "local"
       ],
-      "preview": "./introduction/INRvQj/index.html",
+      "preview": "/preview?component=introduction%2FINRvQj&fixture=local",
       "names": {
         "zh-CN": "联系我们",
         "en": "Contact US"
@@ -1888,7 +1888,7 @@
         "sample",
         "local"
       ],
-      "preview": "./introduction/iUjuae/index.html",
+      "preview": "/preview?component=introduction%2FiUjuae&fixture=local",
       "names": {
         "zh-CN": "介绍",
         "en": "Introduction"
@@ -1907,7 +1907,7 @@
         "sample",
         "local"
       ],
-      "preview": "./introduction/Iv2aYb/index.html",
+      "preview": "/preview?component=introduction%2FIv2aYb&fixture=local",
       "names": {
         "zh-CN": "选择方案",
         "en": "CHOOSE A PLAN"
@@ -1926,7 +1926,7 @@
         "sample",
         "local"
       ],
-      "preview": "./introduction/jyAvIr/index.html",
+      "preview": "/preview?component=introduction%2FjyAvIr&fixture=local",
       "names": {
         "zh-CN": "我们的服务",
         "en": "Our Services"
@@ -1945,7 +1945,7 @@
         "sample",
         "local"
       ],
-      "preview": "./introduction/MJJZ7n/index.html",
+      "preview": "/preview?component=introduction%2FMJJZ7n&fixture=local",
       "names": {
         "zh-CN": "简介",
         "en": "Introduction"
@@ -1964,7 +1964,7 @@
         "sample",
         "local"
       ],
-      "preview": "./introduction/Q2vimy/index.html",
+      "preview": "/preview?component=introduction%2FQ2vimy&fixture=local",
       "names": {
         "zh-CN": "介绍",
         "en": "Introduction"
@@ -1983,7 +1983,7 @@
         "sample",
         "local"
       ],
-      "preview": "./introduction/R7ZN7z/index.html",
+      "preview": "/preview?component=introduction%2FR7ZN7z&fixture=local",
       "names": {
         "zh-CN": "使命",
         "en": "Mission"
@@ -2002,7 +2002,7 @@
         "sample",
         "local"
       ],
-      "preview": "./introduction/u2EN3m/index.html",
+      "preview": "/preview?component=introduction%2Fu2EN3m&fixture=local",
       "names": {
         "zh-CN": "关于我们",
         "en": "Introduction"
@@ -2021,7 +2021,7 @@
         "sample",
         "local"
       ],
-      "preview": "./legalPage/jIZB32/index.html",
+      "preview": "/preview?component=legalPage%2FjIZB32&fixture=local",
       "names": {
         "zh-CN": "法律条款页",
         "en": "Legal Page"
@@ -2040,7 +2040,7 @@
         "sample",
         "local"
       ],
-      "preview": "./logoList/iIbeMb/index.html",
+      "preview": "/preview?component=logoList%2FiIbeMb&fixture=local",
       "names": {
         "zh-CN": "Logo墙",
         "en": "Logo墙"
@@ -2059,7 +2059,7 @@
         "sample",
         "local"
       ],
-      "preview": "./logoList/miyUFr/index.html",
+      "preview": "/preview?component=logoList%2FmiyUFr&fixture=local",
       "names": {
         "zh-CN": "Logo墙",
         "en": "Logo墙"
@@ -2078,7 +2078,7 @@
         "sample",
         "local"
       ],
-      "preview": "./navContent/yEzyqa/index.html",
+      "preview": "/preview?component=navContent%2FyEzyqa&fixture=local",
       "names": {
         "zh-CN": "导航内容",
         "en": "Navigation content"
@@ -2097,7 +2097,7 @@
         "sample",
         "local"
       ],
-      "preview": "./outOfServicePage/qMfuIj/index.html",
+      "preview": "/preview?component=outOfServicePage%2FqMfuIj&fixture=local",
       "names": {
         "zh-CN": "网站维护",
         "en": "Website maintenance"
@@ -2116,7 +2116,7 @@
         "sample",
         "local"
       ],
-      "preview": "./pageNotFoundPage/j6EFJ3/index.html",
+      "preview": "/preview?component=pageNotFoundPage%2Fj6EFJ3&fixture=local",
       "names": {
         "zh-CN": "404页",
         "en": "404 Page"
@@ -2135,7 +2135,7 @@
         "sample",
         "local"
       ],
-      "preview": "./paragraph/aYZFBn/index.html",
+      "preview": "/preview?component=paragraph%2FaYZFBn&fixture=local",
       "names": {
         "zh-CN": "段落文本",
         "en": "Paragraph"
@@ -2154,7 +2154,7 @@
         "sample",
         "local"
       ],
-      "preview": "./paragraph/BVZVFf/index.html",
+      "preview": "/preview?component=paragraph%2FBVZVFf&fixture=local",
       "names": {
         "zh-CN": "段落文本",
         "en": "Paragraph"
@@ -2173,7 +2173,7 @@
         "sample",
         "local"
       ],
-      "preview": "./passportPage/Mjmyyi/index.html",
+      "preview": "/preview?component=passportPage%2FMjmyyi&fixture=local",
       "names": {
         "zh-CN": "通行证",
         "en": "Passport Page"
@@ -2192,7 +2192,7 @@
         "sample",
         "local"
       ],
-      "preview": "./process/AZ3AVb/index.html",
+      "preview": "/preview?component=process%2FAZ3AVb&fixture=local",
       "names": {
         "zh-CN": "流程",
         "en": "Process"
@@ -2211,7 +2211,7 @@
         "sample",
         "local"
       ],
-      "preview": "./productCollectionPage/jAVbYj/index.html",
+      "preview": "/preview?component=productCollectionPage%2FjAVbYj&fixture=local",
       "names": {
         "zh-CN": "产品集合页 ",
         "en": "Product Collection"
@@ -2229,7 +2229,7 @@
         "default",
         "local"
       ],
-      "preview": "./productCollectionPage/rQFBbe/index.html",
+      "preview": "/preview?component=productCollectionPage%2FrQFBbe&fixture=local",
       "names": {
         "zh-CN": "产品集合页 ",
         "en": "Product Collection"
@@ -2248,7 +2248,7 @@
         "sample",
         "local"
       ],
-      "preview": "./productDetailPage/vaAfam/index.html",
+      "preview": "/preview?component=productDetailPage%2FvaAfam&fixture=local",
       "names": {
         "zh-CN": "产品详情页",
         "en": "Product detail page"
@@ -2267,7 +2267,7 @@
         "sample",
         "local"
       ],
-      "preview": "./productDetailPage/Y3nea2/index.html",
+      "preview": "/preview?component=productDetailPage%2FY3nea2&fixture=local",
       "names": {
         "zh-CN": "产品详情页",
         "en": "Product detail page"
@@ -2286,7 +2286,7 @@
         "sample",
         "local"
       ],
-      "preview": "./productDetailPage/YVrMNb/index.html",
+      "preview": "/preview?component=productDetailPage%2FYVrMNb&fixture=local",
       "names": {
         "zh-CN": "产品详情页",
         "en": "Product detail page"
@@ -2305,7 +2305,7 @@
         "sample",
         "local"
       ],
-      "preview": "./productFilter/IN3ymu/index.html",
+      "preview": "/preview?component=productFilter%2FIN3ymu&fixture=local",
       "names": {
         "zh-CN": "产品筛选器",
         "en": "Product filter"
@@ -2324,7 +2324,7 @@
         "sample",
         "local"
       ],
-      "preview": "./productFilter/N3mQnq/index.html",
+      "preview": "/preview?component=productFilter%2FN3mQnq&fixture=local",
       "names": {
         "zh-CN": "产品筛选",
         "en": "Product Filter"
@@ -2343,7 +2343,7 @@
         "sample",
         "local"
       ],
-      "preview": "./productPaginationPage/j72Yv2/index.html",
+      "preview": "/preview?component=productPaginationPage%2Fj72Yv2&fixture=local",
       "names": {
         "zh-CN": "产品分页",
         "en": "Product Page"
@@ -2362,7 +2362,7 @@
         "sample",
         "local"
       ],
-      "preview": "./productPaginationPage/m2YZJz/index.html",
+      "preview": "/preview?component=productPaginationPage%2Fm2YZJz&fixture=local",
       "names": {
         "zh-CN": "产品分页",
         "en": "Product Page"
@@ -2381,7 +2381,7 @@
         "sample",
         "local"
       ],
-      "preview": "./productPaginationPage/qmee6n/index.html",
+      "preview": "/preview?component=productPaginationPage%2Fqmee6n&fixture=local",
       "names": {
         "zh-CN": "产品分页",
         "en": "Product page"
@@ -2400,7 +2400,7 @@
         "sample",
         "local"
       ],
-      "preview": "./progress/n7MjYz/index.html",
+      "preview": "/preview?component=progress%2Fn7MjYz&fixture=local",
       "names": {
         "zh-CN": "环状派",
         "en": "Progress"
@@ -2419,7 +2419,7 @@
         "sample",
         "local"
       ],
-      "preview": "./richText/RrIn2q/index.html",
+      "preview": "/preview?component=richText%2FRrIn2q&fixture=local",
       "names": {
         "zh-CN": "富文本",
         "en": "Rich text"
@@ -2438,7 +2438,7 @@
         "sample",
         "local"
       ],
-      "preview": "./searchPage/RJv6J3/index.html",
+      "preview": "/preview?component=searchPage%2FRJv6J3&fixture=local",
       "names": {
         "zh-CN": "搜索",
         "en": "Search"
@@ -2457,7 +2457,7 @@
         "sample",
         "local"
       ],
-      "preview": "./shareto/RjuUvy/index.html",
+      "preview": "/preview?component=shareto%2FRjuUvy&fixture=local",
       "names": {
         "zh-CN": "分享",
         "en": "Share to"
@@ -2476,7 +2476,7 @@
         "sample",
         "local"
       ],
-      "preview": "./slideShow/MRBrYr/index.html",
+      "preview": "/preview?component=slideShow%2FMRBrYr&fixture=local",
       "names": {
         "zh-CN": "轮播图",
         "en": "Slide Show"
@@ -2495,7 +2495,7 @@
         "sample",
         "local"
       ],
-      "preview": "./slideShow/Njqyay/index.html",
+      "preview": "/preview?component=slideShow%2FNjqyay&fixture=local",
       "names": {
         "zh-CN": "轮播图",
         "en": "Slide Show"
@@ -2514,7 +2514,7 @@
         "sample",
         "local"
       ],
-      "preview": "./slideShow/qUbmMn/index.html",
+      "preview": "/preview?component=slideShow%2FqUbmMn&fixture=local",
       "names": {
         "zh-CN": "轮播图",
         "en": "Slide Show"
@@ -2533,7 +2533,7 @@
         "sample",
         "local"
       ],
-      "preview": "./slideShow/vQrQB3/index.html",
+      "preview": "/preview?component=slideShow%2FvQrQB3&fixture=local",
       "names": {
         "zh-CN": "轮播图",
         "en": "Slide Show"
@@ -2552,7 +2552,7 @@
         "sample",
         "local"
       ],
-      "preview": "./slogan/NVFVb2/index.html",
+      "preview": "/preview?component=slogan%2FNVFVb2&fixture=local",
       "names": {
         "zh-CN": "标语",
         "en": "Slogan"
@@ -2571,7 +2571,7 @@
         "sample",
         "local"
       ],
-      "preview": "./sunflower/r22Irq/index.html",
+      "preview": "/preview?component=sunflower%2Fr22Irq&fixture=local",
       "names": {
         "zh-CN": "太阳花",
         "en": "Sun flower"
@@ -2590,7 +2590,7 @@
         "sample",
         "local"
       ],
-      "preview": "./svg/JjQr2a/index.html",
+      "preview": "/preview?component=svg%2FJjQr2a&fixture=local",
       "names": {
         "zh-CN": "SVG 占位图",
         "en": "SVG placeholder"
@@ -2609,7 +2609,7 @@
         "sample",
         "local"
       ],
-      "preview": "./tagPage/uUzaMn/index.html",
+      "preview": "/preview?component=tagPage%2FuUzaMn&fixture=local",
       "names": {
         "zh-CN": "TAG页",
         "en": "TAG页"
@@ -2628,7 +2628,7 @@
         "sample",
         "local"
       ],
-      "preview": "./tagPaginationPage/vUruam/index.html",
+      "preview": "/preview?component=tagPaginationPage%2FvUruam&fixture=local",
       "names": {
         "zh-CN": "TAG信息页",
         "en": "TAG page"
@@ -2647,7 +2647,7 @@
         "sample",
         "local"
       ],
-      "preview": "./testimonial/EBfyye/index.html",
+      "preview": "/preview?component=testimonial%2FEBfyye&fixture=local",
       "names": {
         "zh-CN": "好评",
         "en": "Testimonial"
@@ -2666,7 +2666,7 @@
         "sample",
         "local"
       ],
-      "preview": "./testimonial/niArqy/index.html",
+      "preview": "/preview?component=testimonial%2FniArqy&fixture=local",
       "names": {
         "zh-CN": "好评",
         "en": "Testimonial"
@@ -2685,7 +2685,7 @@
         "sample",
         "local"
       ],
-      "preview": "./testimonial/zY3m2e/index.html",
+      "preview": "/preview?component=testimonial%2FzY3m2e&fixture=local",
       "names": {
         "zh-CN": "人像卡",
         "en": "Testimonials"
@@ -2704,7 +2704,7 @@
         "sample",
         "local"
       ],
-      "preview": "./thanksPage/nmiIRv/index.html",
+      "preview": "/preview?component=thanksPage%2FnmiIRv&fixture=local",
       "names": {
         "zh-CN": "感谢页",
         "en": "Thanks page"
@@ -2723,7 +2723,7 @@
         "sample",
         "local"
       ],
-      "preview": "./timeline/aUJfUj/index.html",
+      "preview": "/preview?component=timeline%2FaUJfUj&fixture=local",
       "names": {
         "zh-CN": "时间轴",
         "en": "Timeline"
@@ -2742,7 +2742,7 @@
         "sample",
         "local"
       ],
-      "preview": "./timeline/E2J32a/index.html",
+      "preview": "/preview?component=timeline%2FE2J32a&fixture=local",
       "names": {
         "zh-CN": "时间轴",
         "en": "Timeline"
@@ -2761,7 +2761,7 @@
         "sample",
         "local"
       ],
-      "preview": "./timeline/IJj2ai/index.html",
+      "preview": "/preview?component=timeline%2FIJj2ai&fixture=local",
       "names": {
         "zh-CN": "历史",
         "en": "History"
@@ -2780,7 +2780,7 @@
         "sample",
         "local"
       ],
-      "preview": "./titleSection/fmMz2y/index.html",
+      "preview": "/preview?component=titleSection%2FfmMz2y&fixture=local",
       "names": {
         "zh-CN": "标题",
         "en": "Title"
@@ -2799,7 +2799,7 @@
         "sample",
         "local"
       ],
-      "preview": "./titleSection/MbmYVr/index.html",
+      "preview": "/preview?component=titleSection%2FMbmYVr&fixture=local",
       "names": {
         "zh-CN": "文本组件（自动折叠）",
         "en": "Title Section"
@@ -2818,7 +2818,7 @@
         "sample",
         "local"
       ],
-      "preview": "./titleSection/ueAfe2/index.html",
+      "preview": "/preview?component=titleSection%2FueAfe2&fixture=local",
       "names": {
         "zh-CN": "标题",
         "en": "Title Section"
@@ -2837,7 +2837,7 @@
         "sample",
         "local"
       ],
-      "preview": "./titleSection/Un2eie/index.html",
+      "preview": "/preview?component=titleSection%2FUn2eie&fixture=local",
       "names": {
         "zh-CN": "标题 & 按钮",
         "en": "Title & button"
@@ -2856,7 +2856,7 @@
         "sample",
         "local"
       ],
-      "preview": "./titleSection/YRfeui/index.html",
+      "preview": "/preview?component=titleSection%2FYRfeui&fixture=local",
       "names": {
         "zh-CN": "订阅表单",
         "en": "Subscription form"
@@ -2875,7 +2875,7 @@
         "sample",
         "local"
       ],
-      "preview": "./titleSection/YRzQBz/index.html",
+      "preview": "/preview?component=titleSection%2FYRzQBz&fixture=local",
       "names": {
         "zh-CN": "标题",
         "en": "Title"
@@ -2894,7 +2894,7 @@
         "sample",
         "local"
       ],
-      "preview": "./video/BjqUZ3/index.html",
+      "preview": "/preview?component=video%2FBjqUZ3&fixture=local",
       "names": {
         "zh-CN": "视频",
         "en": "Video"
@@ -2913,7 +2913,7 @@
         "sample",
         "local"
       ],
-      "preview": "./video/f7Q7fe/index.html",
+      "preview": "/preview?component=video%2Ff7Q7fe&fixture=local",
       "names": {
         "zh-CN": "视频 Banner",
         "en": "视频 Banner"
@@ -2932,7 +2932,7 @@
         "sample",
         "local"
       ],
-      "preview": "./video/iyE3qi/index.html",
+      "preview": "/preview?component=video%2FiyE3qi&fixture=local",
       "names": {
         "zh-CN": "Youtube 视频组",
         "en": "Youtube video group"
@@ -2951,7 +2951,7 @@
         "sample",
         "local"
       ],
-      "preview": "./video/IzAjq2/index.html",
+      "preview": "/preview?component=video%2FIzAjq2&fixture=local",
       "names": {
         "zh-CN": "视频组",
         "en": "Video group"
@@ -2970,7 +2970,7 @@
         "sample",
         "local"
       ],
-      "preview": "./video/nYjQze/index.html",
+      "preview": "/preview?component=video%2FnYjQze&fixture=local",
       "names": {
         "zh-CN": "YouTube 视频",
         "en": "Youtube video"
@@ -2989,7 +2989,7 @@
         "sample",
         "local"
       ],
-      "preview": "./video/vqie2q/index.html",
+      "preview": "/preview?component=video%2Fvqie2q&fixture=local",
       "names": {
         "zh-CN": "视频 & 文本",
         "en": "Video & text"
@@ -3008,7 +3008,7 @@
         "sample",
         "local"
       ],
-      "preview": "./video/ZvYvIb/index.html",
+      "preview": "/preview?component=video%2FZvYvIb&fixture=local",
       "names": {
         "zh-CN": "Youtube 视频",
         "en": "Youtube video"
