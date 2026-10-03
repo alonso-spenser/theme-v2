@@ -34,7 +34,7 @@
                 </p>
             </div>
             <div th:class="|col-md-${#numbers.formatInteger(12 - section.settings.contentWidth, 1,'POINT')}|">
-                <img class="btn-block lazy" th:src="|${section.settings.image}!1|" th:data-original="${section.settings.image}" th:alt="${ not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading }" th:if="${ not #strings.isEmpty(section.settings.image) }">
+                <img class="btn-block lazy" th:src="${imageUrls.thumbnail(section.settings.image)}" th:data-original="${imageUrls.original(section.settings.image)}" th:alt="${ not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading }" th:if="${ not #strings.isEmpty(section.settings.image) }">
             </div>
         </div>
     </div>

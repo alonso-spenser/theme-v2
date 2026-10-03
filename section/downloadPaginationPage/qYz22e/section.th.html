@@ -24,7 +24,7 @@
             <div th:class="|row ${ section.templateId }-item|" th:each="o,stat:${section.data.page.records}">
                 <div class="col-md-3" th:if="${ section.settings.imageVisible }">
                     <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${ not #strings.isEmpty(o.coverImage) }">
-                        <img class="embed-responsive-item lazy" th:src="|${o.coverImage}!1|" th:data-original="|${o.coverImage}!3|" th:alt="${o.title}">
+                        <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.coverImage)}" th:data-original="${imageUrls.original(o.coverImage)}" th:alt="${o.title}">
                     </div>
                 </div>
                 <div th:class="|col-md-${section.settings.imageVisible ? 9 : 12}|">

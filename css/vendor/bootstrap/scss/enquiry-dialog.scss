@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+/**
+ * ----------------------------------------------------------------------------
+ * enquiry dialog
+ * ----------------------------------------------------------------------------
+ */
+.enquiry-dialog {
+  //padding: 20px;
+  //
+  //h3 {
+  //  text-align: center;
+  //  margin-bottom: 20px;
+  //  font-size: 18px;
+  //  color: #212529;
+  //}
+
+  .form-group {
+    margin-bottom: 0;
+
+    .form-control {
+      border-radius: 0;
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+
+      &:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+
+    button[type='submit'] {
+      margin-top: 25px;
+    }
+  }
+
+  .inquiry-form-group {
+    padding: 0.375rem 0.75rem;
+    border-bottom: 1px solid #ced4da;
+
+    h5 {
+      font-size: 14px;
+    }
+  }
+
+  .file-upload {
+    position: relative;
+    height: 70px;
+    border-bottom: 1px solid #ced4da;
+
+    .file-upload-placeholder {
+      position: relative;
+      height: 70px;
+      overflow: hidden;
+      color: #495057;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: all 0.25ms;
+
+      &:before {
+        display: block;
+        font-size: 30px;
+        font-family: "iconfont" !important;
+        content: "\e632";
+        margin-right: 6px;
+      }
+
+      input[type='file'] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        z-index: 5;
+        cursor: pointer;
+      }
+    }
+    &:hover {
+      opacity: .8
+    }
+
+    .file-upload-selected {
+      border-radius: 0.25rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      transition: all 0.5s;
+      color: #96989b;
+
+      label {
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        top: calc(50% - 13px);
+        padding: 0;
+        width: 26px;
+        height: 26px;
+        text-align: center;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:before {
+          color: #ced4da;
+          line-height: 26px;
+          font-size: 14px;
+          font-family: "iconfont" !important;
+          content: "\e60a";
+        }
+      }
+
+      p {
+        &:before {
+          font-family: "iconfont" !important;
+          content: "\e60b";
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      }
+
+      &.active {
+        opacity: 1;
+        z-index: 10;
+      }
+
+      &:hover {
+
+      }
+    }
+
+    small {
+      position: absolute;
+      right: 6px;
+      bottom: 6px;
+      color: #ccc;
+    }
+  }
+
+  //.enquiry-dialog-footer {
+  //  margin-top: 1rem;
+  //  text-align: right;
+  //
+  //  .btn {
+  //    border-radius: 4px;
+  //  }
+  //}
+
+  // 关闭按钮（右上）
+  //.enquiry-dialog-close {
+  //  position: absolute;
+  //  right: -25px;
+  //  top: -20px;
+  //  width: 50px;
+  //  line-height: 50px;
+  //  text-align: center;
+  //  font-size: 1.5rem;
+  //  color: #808080;
+  //  cursor: pointer;
+  //}
+}

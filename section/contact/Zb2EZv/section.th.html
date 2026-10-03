@@ -5,7 +5,7 @@
                 <div class="col-md-4">
                     <div class="media" th:if="${not #strings.isEmpty(section.settings.addressContent)}">
                         <div class="media-icon" th:if="${not #strings.isEmpty(section.settings.addressIcon) || not #strings.isEmpty(section.settings.image)}">
-                            <img th:src="${ section.settings.image}" th:alt="${ lang.address}" th:if="${not #strings.isEmpty(section.settings.image)}">
+                            <img th:src="${imageUrls.original(section.settings.image)}" th:alt="${ lang.address}" th:if="${not #strings.isEmpty(section.settings.image)}">
                             <i th:class="${ section.settings.addressIcon}" th:if="${not #strings.isEmpty(section.settings.addressIcon) && #strings.isEmpty(section.settings.image)}"></i>
                         </div>
                         <div class="media-body">
@@ -15,7 +15,7 @@
                     </div>
                     <div class="media" th:if="${not #strings.isEmpty(section.settings.phone) || not #strings.isEmpty(section.settings.whatsapp) || not #strings.isEmpty(section.settings.fax)}">
                         <div class="media-icon" th:if="${not #strings.isEmpty(section.settings.phoneIcon) || not #strings.isEmpty(section.settings.phoneImage)}">
-                            <img th:src="${ section.settings.phoneImage}" th:alt="${ lang.address}" th:if="${not #strings.isEmpty(section.settings.phoneImage)}">
+                            <img th:src="${imageUrls.original(section.settings.phoneImage)}" th:alt="${ lang.address}" th:if="${not #strings.isEmpty(section.settings.phoneImage)}">
                             <i th:class="${ section.settings.phoneIcon}" th:if="${not #strings.isEmpty(section.settings.phoneIcon) && #strings.isEmpty(section.settings.phoneImage)}"></i>
                         </div>
                         <div class="media-body">
@@ -40,7 +40,7 @@
                     </div>
                     <div class="media" th:if="${not #strings.isEmpty(section.settings.email) || not #strings.isEmpty(section.settings.skype)}">
                         <div class="media-icon" th:if="${not #strings.isEmpty(section.settings.emailIcon) || not #strings.isEmpty(section.settings.emailImage)}">
-                            <img th:src="${ section.settings.emailImage}" th:alt="${ lang.address}" th:if="${not #strings.isEmpty(section.settings.emailImage)}">
+                            <img th:src="${imageUrls.original(section.settings.emailImage)}" th:alt="${ lang.address}" th:if="${not #strings.isEmpty(section.settings.emailImage)}">
                             <i th:class="${ section.settings.emailIcon}" th:if="${not #strings.isEmpty(section.settings.emailIcon) && #strings.isEmpty(section.settings.emailImage)}"></i>
                         </div>
                         <div class="media-body">
@@ -160,7 +160,7 @@
         </div>
     </div>
     <div class="embed-responsive embed-responsive-normal" th:if="${ not #strings.isEmpty(section.settings.imageMap) }">
-        <img class="lazy embed-responsive-item" th:src="|${section.settings.imageMap}!1|" th:data-original="${section.settings.imageMap}" alt="">
+        <img class="lazy embed-responsive-item" th:src="${imageUrls.thumbnail(section.settings.imageMap)}" th:data-original="${imageUrls.original(section.settings.imageMap)}" alt="">
     </div>
     <div class="section-loading-light" th:if="${ not #strings.isEmpty(section.settings.google) }">
         <iframe th:class="|${ section.templateId }-map|" th:data-src="${section.settings.google}" allowfullscreen="" loading="lazy"></iframe>

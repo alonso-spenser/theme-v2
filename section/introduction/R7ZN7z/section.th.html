@@ -7,7 +7,7 @@
                         <h3 class="text-heading" th:if="${ not #strings.isEmpty(section.settings.heading) }">[[ ${ section.settings.heading } ]]</h3>
                         <p class="text-body" th:if="${ not #strings.isEmpty(section.settings.content) }" th:utext="${section.settings.content}">[[ ${ section.settings.content } ]]</p>
 						<div th:class="|embed-responsive text-neighbor embed-responsive-${section.settings.imageScale}|" th:if="${ not #strings.isEmpty(section.settings.image) }">
-							<img class="embed-responsive-item lazy" th:src="|${ section.settings.image}!1|" th:data-original="${ section.settings.image }" th:alt="${ not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading}">
+							<img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(section.settings.image)}" th:data-original="${imageUrls.original(section.settings.image)}" th:alt="${ not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading}">
 						</div>
 					</div>
 				</div>
@@ -22,7 +22,7 @@
 								</a>
 							</p>
                             <div th:class="|embed-responsive text-neighbor embed-responsive-${o.firstScale}|" th:if="${ not #strings.isEmpty(o.firstImage) }">
-                                <img class="embed-responsive-item lazy" th:src="|${ o.firstImage}!1|" th:data-original="${ o.firstImage }" th:alt="${ not #strings.isEmpty(section.settings.firstAlt) ? section.settings.firstAlt : section.settings.firstHeading}">
+                                <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.firstImage)}" th:data-original="${imageUrls.original(o.firstImage)}" th:alt="${ not #strings.isEmpty(section.settings.firstAlt) ? section.settings.firstAlt : section.settings.firstHeading}">
                             </div>
 						</div>
 					</div>
@@ -35,13 +35,13 @@
 			<div th:class="|col-md-${section.settings.column} col-12 ${ section.templateId }-second|" th:each="o,salt:${section.settings.secondList}">
 			    <a th:href="${o.buttonLink}" th:if="${not #strings.isEmpty(o.buttonLink)}">
                     <div th:class="|${ section.templateId }-second-card|">
-                        <img class="lazy" th:src="|${ o.secondIcon}!1|" th:data-original="${ o.secondIcon }" th:alt="${not #strings.isEmpty(section.settings.secondAlt) ? section.settings.secondAlt : section.settings.secondHeading}">
+                        <img class="lazy" th:src="${imageUrls.thumbnail(o.secondIcon)}" th:data-original="${imageUrls.original(o.secondIcon)}" th:alt="${not #strings.isEmpty(section.settings.secondAlt) ? section.settings.secondAlt : section.settings.secondHeading}">
                         <h3 class="text-content-heading" th:if="${ not #strings.isEmpty(o.secondHeading) }">[[ ${ o.secondHeading } ]]</h3>
                         <p class="text-body" th:if="${ not #strings.isEmpty(o.secondContent) }" th:utext="${o.secondContent}"></p>
                     </div>
 			    </a>
 				<div th:class="|${ section.templateId }-second-card|" th:if="${#strings.isEmpty(o.buttonLink)}">
-					<img class="lazy" th:src="|${ o.secondIcon}!1|" th:data-original="${ o.secondIcon }" th:alt="${not #strings.isEmpty(section.settings.secondAlt) ? section.settings.secondAlt : section.settings.secondHeading}">
+					<img class="lazy" th:src="${imageUrls.thumbnail(o.secondIcon)}" th:data-original="${imageUrls.original(o.secondIcon)}" th:alt="${not #strings.isEmpty(section.settings.secondAlt) ? section.settings.secondAlt : section.settings.secondHeading}">
 					<h3 class="text-content-heading" th:if="${ not #strings.isEmpty(o.secondHeading) }">[[ ${ o.secondHeading } ]]</h3>
 					<p class="text-body" th:if="${ not #strings.isEmpty(o.secondContent) }" th:utext="${o.secondContent}"></p>
 				</div>

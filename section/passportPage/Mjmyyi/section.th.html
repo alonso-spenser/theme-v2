@@ -3,7 +3,7 @@
         <div class="Mjmyyi-fluid-content">
             <div class="Mjmyyi-panel active" data-panel="login">
                 <a href="/" class="text-logo">
-                    <img class="Mjmyyi-logo" th:alt="${site.company}" th:src="${section.settings.logo}" th:if="${not #strings.isEmpty(section.settings.logo)}">
+                    <img class="Mjmyyi-logo" th:alt="${site.company}" th:src="${imageUrls.original(section.settings.logo)}" th:if="${not #strings.isEmpty(section.settings.logo)}">
                 </a>
                 <h1 class="text-heading text-neighbor">
                     [[${lang.loginTitle}]]
@@ -45,7 +45,7 @@
             </div>
             <div class="Mjmyyi-panel" data-panel="register">
                 <a href="/" class="text-logo">
-                    <img class="Mjmyyi-logo" th:alt="${site.company}" th:src="${section.settings.logo}" th:if="${not #strings.isEmpty(section.settings.logo)}">
+                    <img class="Mjmyyi-logo" th:alt="${site.company}" th:src="${imageUrls.original(section.settings.logo)}" th:if="${not #strings.isEmpty(section.settings.logo)}">
                 </a>
                 <h1 class="text-heading text-neighbor">
                     [[${lang.registerTitle}]]
@@ -117,7 +117,7 @@
             </div>
             <div class="Mjmyyi-panel" data-panel="forget">
                 <a href="/" class="text-logo">
-                    <img class="Mjmyyi-logo" th:alt="${site.company}" th:src="${section.settings.logo}" th:if="${not #strings.isEmpty(section.settings.logo)}">
+                    <img class="Mjmyyi-logo" th:alt="${site.company}" th:src="${imageUrls.original(section.settings.logo)}" th:if="${not #strings.isEmpty(section.settings.logo)}">
                 </a>
                 <h1 class="text-heading text-neighbor">
                     [[${lang.forgetTitle}]]
@@ -194,9 +194,9 @@
                 >
                     <div th:class="|slick-slide slick-slide-${salt.index}|" th:each="o, salt:${ section.settings.imageList }">
                         <a th:href="${ o.link }" th:if="${not #strings.isEmpty(o.link) && not #strings.isEmpty(o.image)}">
-                            <img class="lazy" th:src="|${ o.image }!1|" th:data-lazy="${ o.image }" th:alt="${ o.alt }">
+                            <img class="lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-lazy="${imageUrls.original(o.image)}" th:alt="${ o.alt }">
                         </a>
-                        <img class="lazy" th:src="|${ o.image }!1|" th:data-lazy="${ o.image }" th:alt="${ o.alt }"  th:if="${ #strings.isEmpty(o.link) && not #strings.isEmpty(o.image)}">
+                        <img class="lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-lazy="${imageUrls.original(o.image)}" th:alt="${ o.alt }"  th:if="${ #strings.isEmpty(o.link) && not #strings.isEmpty(o.image)}">
                     </div>
                 </div>
             </div>

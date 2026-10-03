@@ -2,7 +2,7 @@
 	<div class="embed-responsive">
 		<div class="embed-responsive-item d-flex" th:data-play="|${section.settings.videoURL}?autoplay=1&loop=1|" th:if="${ not #strings.isEmpty(section.settings.videoURL) }">
 			<div th:class="|${ section.templateId }-content text-center|">
-				<img class="lazy" th:src="|${ section.settings.logo}!1|" th:data-original="${ section.settings.logo}" th:if="${ not #strings.isEmpty(section.settings.logo) }" th:alt="${section.settings.heading}">
+				<img class="lazy" th:src="${imageUrls.thumbnail(section.settings.logo)}" th:data-original="${imageUrls.original(section.settings.logo)}" th:if="${ not #strings.isEmpty(section.settings.logo) }" th:alt="${section.settings.heading}">
 				<h3 th:if="${ not #strings.isEmpty(section.settings.heading) }">
 					[[${ section.settings.heading }]]
 				</h3>

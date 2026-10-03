@@ -11,7 +11,7 @@
             </h3>
 
             <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
-                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                <img th:src="${imageUrls.original(section.settings.dividerImage)}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
             </div>
 
             <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
@@ -25,8 +25,8 @@
         </div>
         <div class="row row-gutter section-neighbor" th:if="${ #lists.isEmpty(section.settings.sidebarList) || #lists.size(section.settings.sidebarList) > 0}">
             <div th:class="|col-md-${section.settings.column} col-${section.settings.mobColumn}|" th:each="o, salt:${ section.settings.imageList }">
-                <a th:class="|embed-responsive embed-responsive-${section.settings.imageScale} spotlight|" th:href="${o.image}" th:if="${ not #strings.isEmpty(o.image) }">
-                    <img class="embed-responsive-item lazy" th:src="|${ o.image }!1|" th:data-original="|${o.image}!${ section.settings.column }|" th:alt="${ o.alt }">
+                <a th:class="|embed-responsive embed-responsive-${section.settings.imageScale} spotlight|" th:href="${imageUrls.original(o.image)}" th:if="${ not #strings.isEmpty(o.image) }">
+                    <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${ o.alt }">
                 </a>
                 <h5 class="text-body text-center" th:if="${ #strings.isEmpty(o.url) }">[[${ o.title }]]</h5>
                 <a th:href="${o.url}" th:if="${ not #strings.isEmpty(o.url) && not #strings.isEmpty(o.title) }">
@@ -46,8 +46,8 @@
             <div class="col-md-9">
                 <div class="row">
                     <div th:class="|col-md-${section.settings.column} col-${section.settings.mobColumn}|" th:each="o, salt:${ section.settings.imageList }">
-                        <a th:class="|embed-responsive embed-responsive-${section.settings.imageScale} spotlight|" th:href="${o.image}" th:if="${ not #strings.isEmpty(o.image) }">
-                            <img class="embed-responsive-item lazy" th:src="|${ o.image }!1|" th:data-original="|${o.image}!${ section.settings.column }|" th:alt="${ o.alt }">
+                        <a th:class="|embed-responsive embed-responsive-${section.settings.imageScale} spotlight|" th:href="${imageUrls.original(o.image)}" th:if="${ not #strings.isEmpty(o.image) }">
+                            <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${ o.alt }">
                         </a>
                         <h5 class="text-body text-center" th:if="${ #strings.isEmpty(o.url) }">[[${ o.title }]]</h5>
                         <a th:href="${o.url}" th:if="${ not #strings.isEmpty(o.url) && not #strings.isEmpty(o.title) }">

@@ -11,7 +11,7 @@
             </h3>
 
             <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
-                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                <img th:src="${imageUrls.original(section.settings.dividerImage)}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
             </div>
 
             <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
@@ -27,7 +27,7 @@
             <th:block th:each="item,stat:${ section.settings.itemList }">
                 <div th:class="|col-md-${ #numbers.formatInteger(12 / #lists.size(section.settings.itemList), 0)}|">
                     <div th:class="|${section.templateId}-item ${stat.index == 1 ? 'active' : '' }|">
-                        <img th:src="${item.icon}" th:if="${ not #strings.isEmpty(item.icon) }" th:alt="${ not #strings.isEmpty(item.alt ) ? item.alt : item.itemTitle }">
+                        <img th:src="${imageUrls.original(item.icon)}" th:if="${ not #strings.isEmpty(item.icon) }" th:alt="${ not #strings.isEmpty(item.alt ) ? item.alt : item.itemTitle }">
                         <h3 class="text-content-heading" th:if="${ not #strings.isEmpty(item.itemTitle ) }">
                             [[${ item.itemTitle }]]
                         </h3>

@@ -48,8 +48,8 @@
                             <a th:href="${o.link}|" th:if="${not #strings.isEmpty(o.link)}">
                                 <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
                                     <img class="embed-responsive-item lazy"
-                                            th:src="|${o.image}!1|"
-                                            th:data-lazy="${o.image}" th:alt="${o.title}"
+                                            th:src="${imageUrls.thumbnail(o.image)}"
+                                            th:data-lazy="${imageUrls.original(o.image)}" th:alt="${o.title}"
                                             th:if="${not #strings.isEmpty(o.image)}"
                                         >
                                 </div>
@@ -60,8 +60,8 @@
                             <th:block th:if="${#strings.isEmpty(o.link)}">
                                 <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
                                     <img class="embed-responsive-item lazy"
-                                            th:src="|${o.image}!1|"
-                                            th:data-lazy="${o.image}" th:alt="${o.title}"
+                                            th:src="${imageUrls.thumbnail(o.image)}"
+                                            th:data-lazy="${imageUrls.original(o.image)}" th:alt="${o.title}"
                                             th:if="${not #strings.isEmpty(o.image)}"
                                         >
                                 </div>

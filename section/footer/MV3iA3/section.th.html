@@ -112,7 +112,7 @@
                 </th:block>
 
                 <th:block th:if="${o.areaContent == 'logo' && not #strings.isEmpty(section.settings.logo)}">
-                    <img class="MV3iA3-logo" th:src="|${section.settings.logo}${#strings.endsWith(section.settings.logo, '.svg') ? '' : '!2'}|" th:alt="${section.settings.alt}">
+                    <img class="MV3iA3-logo" th:src="${imageUrls.original(section.settings.logo)}" th:alt="${section.settings.alt}">
                 </th:block>
 
                 <th:block th:if="${o.areaContent == 'info'}">
@@ -375,9 +375,9 @@
                     </div>
                     <div class="MV3iA3-code text-list" data-social="code" th:if="${site.social.socialImage != null && not #lists.isEmpty(site.social.socialImage)}">
                         <th:block th:each="o,salt:${site.social.socialImage}">
-                            <img class="social-it" th:src="${o.socialQRCode}" th:alt="${o.socialQRCodeAlt}" th:if="${#strings.isEmpty(o.socialQRCodeLink) && not #strings.isEmpty(o.socialQRCode)}">
+                            <img class="social-it" th:src="${imageUrls.original(o.socialQRCode)}" th:alt="${o.socialQRCodeAlt}" th:if="${#strings.isEmpty(o.socialQRCodeLink) && not #strings.isEmpty(o.socialQRCode)}">
                             <a class="social-it" th:href="${o.socialQRCodeLink}" target="_blank" th:if="${not #strings.isEmpty(o.socialQRCodeLink) && not #strings.isEmpty(o.socialQRCode)}">
-                                <img th:src="${o.socialQRCode}" th:alt="${o.socialQRCodeAlt}" >
+                                <img th:src="${imageUrls.original(o.socialQRCode)}" th:alt="${o.socialQRCodeAlt}" >
                             </a>
                         </th:block>
                     </div>
@@ -453,9 +453,9 @@
             </li>
             <li class="MV3iA3-code" data-social="code" th:if="${section.settings.socialMedia == 'bottom' && site.social.socialImage != null && not #lists.isEmpty(site.social.socialImage)}">
                 <th:block th:each="o,salt:${site.social.socialImage}">
-                    <img class="social-it" th:src="${o.socialQRCode}" th:alt="${o.socialQRCodeAlt}" th:if="${#strings.isEmpty(o.socialQRCodeLink) && not #strings.isEmpty(o.socialQRCode)}">
+                    <img class="social-it" th:src="${imageUrls.original(o.socialQRCode)}" th:alt="${o.socialQRCodeAlt}" th:if="${#strings.isEmpty(o.socialQRCodeLink) && not #strings.isEmpty(o.socialQRCode)}">
                     <a class="social-it" th:href="${o.socialQRCodeLink}" target="_blank" th:if="${not #strings.isEmpty(o.socialQRCodeLink) && not #strings.isEmpty(o.socialQRCode)}">
-                        <img th:src="${o.socialQRCode}" th:alt="${o.socialQRCodeAlt}" >
+                        <img th:src="${imageUrls.original(o.socialQRCode)}" th:alt="${o.socialQRCodeAlt}" >
                     </a>
                 </th:block>
             </li>
@@ -492,35 +492,35 @@
             <a th:href="|tel:${o.tabBarContent}|" th:if="${o.tabBarType == 'phone' && not #strings.isEmpty(o.tabBarContent)}">
                 <div>
                     <i th:class="${o.tabBarIcon}" th:if="${not #strings.isEmpty(o.tabBarIcon)}"></i>
-                    <img th:src="${o.tabBarImage}" th:if="${not #strings.isEmpty(o.tabBarImage) && #strings.isEmpty(o.tabBarIcon)}" th:alt="${o.tabBarLabel}">
+                    <img th:src="${imageUrls.original(o.tabBarImage)}" th:if="${not #strings.isEmpty(o.tabBarImage) && #strings.isEmpty(o.tabBarIcon)}" th:alt="${o.tabBarLabel}">
                     [[${o.tabBarLabel}]]
                 </div>
             </a>
             <a th:href="|mailto:${o.tabBarContent}|" th:if="${o.tabBarType == 'email' && not #strings.isEmpty(o.tabBarContent)}">
                 <div>
                     <i th:class="${o.tabBarIcon}" th:if="${not #strings.isEmpty(o.tabBarIcon)}"></i>
-                    <img th:src="${o.tabBarImage}" th:if="${not #strings.isEmpty(o.tabBarImage) && #strings.isEmpty(o.tabBarIcon)}" th:alt="${o.tabBarLabel}">
+                    <img th:src="${imageUrls.original(o.tabBarImage)}" th:if="${not #strings.isEmpty(o.tabBarImage) && #strings.isEmpty(o.tabBarIcon)}" th:alt="${o.tabBarLabel}">
                     [[${o.tabBarLabel}]]
                 </div>
             </a>
             <a th:href="|skype:${o.tabBarContent}?chat|" th:if="${o.tabBarType == 'skype' && not #strings.isEmpty(o.tabBarContent)}">
                 <div>
                     <i th:class="${o.tabBarIcon}" th:if="${not #strings.isEmpty(o.tabBarIcon)}"></i>
-                    <img th:src="${o.tabBarImage}" th:if="${not #strings.isEmpty(o.tabBarImage) && #strings.isEmpty(o.tabBarIcon)}" th:alt="${o.tabBarLabel}">
+                    <img th:src="${imageUrls.original(o.tabBarImage)}" th:if="${not #strings.isEmpty(o.tabBarImage) && #strings.isEmpty(o.tabBarIcon)}" th:alt="${o.tabBarLabel}">
                     [[${o.tabBarLabel}]]
                 </div>
             </a>
             <a th:href="|https://api.whatsapp.com/send?phone=${o.tabBarContent}|" th:if="${o.tabBarType == 'whatapp' && not #strings.isEmpty(o.tabBarContent)}">
                 <div>
                     <i th:class="${o.tabBarIcon}" th:if="${not #strings.isEmpty(o.tabBarIcon)}"></i>
-                    <img th:src="${o.tabBarImage}" th:if="${not #strings.isEmpty(o.tabBarImage) && #strings.isEmpty(o.tabBarIcon)}" th:alt="${o.tabBarLabel}">
+                    <img th:src="${imageUrls.original(o.tabBarImage)}" th:if="${not #strings.isEmpty(o.tabBarImage) && #strings.isEmpty(o.tabBarIcon)}" th:alt="${o.tabBarLabel}">
                     [[${o.tabBarLabel}]]
                 </div>
             </a>
             <a th:href="${o.tabBarLink}" th:if="${o.tabBarType == 'normal' && not #strings.isEmpty(o.tabBarLink)}">
                 <div>
                     <i th:class="${o.tabBarIcon}" th:if="${not #strings.isEmpty(o.tabBarIcon)}"></i>
-                    <img th:src="${o.tabBarImage}" th:if="${not #strings.isEmpty(o.tabBarImage) && #strings.isEmpty(o.tabBarIcon)}" th:alt="${o.tabBarLabel}">
+                    <img th:src="${imageUrls.original(o.tabBarImage)}" th:if="${not #strings.isEmpty(o.tabBarImage) && #strings.isEmpty(o.tabBarIcon)}" th:alt="${o.tabBarLabel}">
                     [[${o.tabBarLabel}]]
                 </div>
             </a>

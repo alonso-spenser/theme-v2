@@ -10,7 +10,7 @@
                     </th:block>
                     <h3 th:class="|text-heading ${o.textAlign}|" th:if="${o.layout == 'normal' && o.posterSize == 0 && not #strings.isEmpty(o.heading)}">[[${o.heading}]]</h3>
                     <div th:class="|embed-responsive text-img embed-responsive-${o.imageScale}|" th:if="${o.posterSize == 0}">
-                        <img class="embed-responsive-item lazy" th:src="|${ o.image}!1|" th:data-original="${ o.image }" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading }" th:if="${not #strings.isEmpty(o.image)}">
+                        <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading }" th:if="${not #strings.isEmpty(o.image)}">
 
                         <div th:class="|${ section.templateId }-overlay|" th:if="${o.layout == 'overlay'}">
                             <div th:class="|${ section.templateId }-overlay-content|" th:if="${not #strings.isEmpty(o.heading) || not #strings.isEmpty(o.content)}">
@@ -29,7 +29,7 @@
                     </th:block>
                     <h3 th:class="|text-heading ${o.textAlign}|" th:if="${o.layout == 'normal' && o.posterSize == 0 && not #strings.isEmpty(o.heading)}">[[${o.heading}]]</h3>
                     <div th:class="|embed-responsive text-img embed-responsive-${o.imageScale}|" th:if="${o.posterSize == 0}">
-                        <img class="embed-responsive-item lazy" th:src="|${ o.image}!1|" th:data-original="${ o.image }" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading }" th:if="${not #strings.isEmpty(o.image)}">
+                        <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading }" th:if="${not #strings.isEmpty(o.image)}">
 
                         <div th:class="|${ section.templateId }-overlay|" th:if="${o.layout == 'overlay'}">
                             <div th:class="|${ section.templateId }-overlay-content|" th:if="${not #strings.isEmpty(o.heading) || not #strings.isEmpty(o.content)}">

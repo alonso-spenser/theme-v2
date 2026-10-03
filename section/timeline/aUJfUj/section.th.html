@@ -11,7 +11,7 @@
             </h3>
 
             <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
-                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                <img th:src="${imageUrls.original(section.settings.dividerImage)}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
             </div>
 
             <h5 th:class="|text-subheading text-${section.settings.textAlign}|" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
@@ -34,7 +34,7 @@
                             [[${o.year}]]
                         </div>
                         <div class="card-body">
-                            <img th:if="${not #strings.isEmpty(o.image)}" class="lazy" th:src="|${o.image}!1|" th:data-original="|${o.image}!${section.settings.sectionFluid ? 'f' : ''}6|" th:alt="${o.alt}">
+                            <img th:if="${not #strings.isEmpty(o.image)}" class="lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${o.alt}">
                             <p class="text-body text-secondary mb-1" th:if="${section.settings.timeSpan == 'content'}">
                                 [[${o.year}]][[${o.month}]]
                             </p>
@@ -51,7 +51,7 @@
                             [[${o.year}]]
                         </div>
                         <div class="card-body">
-                            <img th:if="${not #strings.isEmpty(o.image)}" class="lazy" th:src="|${o.image}!1|" th:data-original="|${o.image}!${section.settings.sectionFluid ? 'f' : ''}6|" th:alt="${o.alt}">
+                            <img th:if="${not #strings.isEmpty(o.image)}" class="lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${o.alt}">
                             <p class="text-body text-secondary mb-1" th:if="${section.settings.timeSpan == 'content'}">
                                 [[${o.year}]][[${o.month}]]
                             </p>
@@ -72,7 +72,7 @@
                             [[${o.year}]]
                         </div>
                         <div class="card-body">
-                            <img th:if="${not #strings.isEmpty(o.image)}" class="lazy" th:src="|${o.image}!1|" th:data-original="|${o.image}!${section.settings.sectionFluid ? 'f' : ''}6|" th:alt="${o.alt}">
+                            <img th:if="${not #strings.isEmpty(o.image)}" class="lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${o.alt}">
                             <p class="text-body text-secondary mb-1" th:if="${section.settings.timeSpan == 'content'}">
                                 [[${o.year}]][[${o.month}]]
                             </p>
@@ -89,7 +89,7 @@
                             [[${o.year}]]
                         </div>
                         <div class="card-body">
-                            <img th:if="${not #strings.isEmpty(o.image)}" class="lazy" th:src="|${o.image}!1|" th:data-original="|${o.image}!${section.settings.sectionFluid ? 'f' : ''}6|" th:alt="${o.alt}">
+                            <img th:if="${not #strings.isEmpty(o.image)}" class="lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${o.alt}">
                             <p class="text-body text-secondary mb-1" th:if="${section.settings.timeSpan == 'content'}">
                                 [[${o.year}]][[${o.month}]]
                             </p>

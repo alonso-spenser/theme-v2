@@ -6,7 +6,7 @@
                     <a th:href="|${ site.urlPrefix }item/${o.seoUrl}|">
                         <div th:class="|card section-card ${section.settings.cardShadow ? '' : 'no-shadow'}|">
                             <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
-                                <img class="embed-responsive-item card-img-top lazy" th:src="|${o.coverImage}!1|" th:data-original="|${o.coverImage}|" th:alt="${o.title}"  th:if="${not #strings.isEmpty(o.coverImage)}">
+                                <img class="embed-responsive-item card-img-top lazy" th:src="${imageUrls.thumbnail(o.coverImage)}" th:data-original="${imageUrls.original(o.coverImage)}" th:alt="${o.title}"  th:if="${not #strings.isEmpty(o.coverImage)}">
                             </div>
                             <div class="card-body">
                                 <h3 th:if="${not #strings.isEmpty(o.title)}" class="text-content-heading" th:text="${o.title}"></h3>

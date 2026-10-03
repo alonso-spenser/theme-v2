@@ -49,7 +49,7 @@
               <th:block th:each="o,stat:${ section.settings.auxiliaryList }">
                   <a th:href="${ #strings.isEmpty(o.url2) ? 'javascript:void(0)' : o.url2 }" th:target="${ o.target2 }">
                     <i th:class="${ o.ic2 }" th:if="${ not #strings.isEmpty(o.ic2) }"></i>
-                    <img th:src="${ o.icon2 }" th:if="${ not #strings.isEmpty(o.icon2) }">
+                    <img th:src="${imageUrls.original(o.icon2)}" th:if="${ not #strings.isEmpty(o.icon2) }">
                     [[${ o.label2 }]]
                   </a>
               <th:block>
@@ -83,8 +83,8 @@
     <nav th:class="|navbar navbar-expand-md ${section.settings.logoSize}|">
         <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} navbar-menu|">
             <a class="navbar-brand" href="/">
-                <img th:src="${section.settings.logo}|" th:alt="${ #strings.isEmpty(section.settings.alt) ? site.siteName : section.settings.alt}">
-                <img th:src="${section.settings.slogan}|" th:if="${not #strings.isEmpty(section.settings.slogan)}" th:alt="${ #strings.isEmpty(section.settings.sloganAlt) ? site.siteName : section.settings.sloganAlt}">
+                <img th:src="${imageUrls.original(section.settings.logo)}" th:alt="${ #strings.isEmpty(section.settings.alt) ? site.siteName : section.settings.alt}">
+                <img th:src="${imageUrls.original(section.settings.slogan)}" th:if="${not #strings.isEmpty(section.settings.slogan)}" th:alt="${ #strings.isEmpty(section.settings.sloganAlt) ? site.siteName : section.settings.sloganAlt}">
             </a>
             <div class="cart-action d-md-none d-inline" th:if="${site.siteType == 4}">
                 <a href="/cart">
@@ -117,7 +117,7 @@
                                     <div th:class="|col-md-${ control.column == 0 ? 'auto' : control.column } navbar-fluid-col|" th:each="second:${o.subList}">
                                         <div th:class="|embed-responsive embed-responsive-${control.avatarScale}" th:if="${control != null && control.avatarScale != 'invisible' && not #strings.isEmpty(second.avatar)}">
                                             <a th:href="|${ second.link }|">
-                                                <img class="embed-responsive-item lazy" th:src="|${ second.avatar }!1|" th:data-original="${ second.avatar }" th:alt="${ second.title }">
+                                                <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(second.avatar)}" th:data-original="${imageUrls.original(second.avatar)}" th:alt="${ second.title }">
                                             </a>
                                         </div>
                                         <a th:class="|dropdown-item bold${ not #lists.isEmpty(second.subList) ? ' dropdown-toggle' : '' }|" th:href="|${ second.link }|">[[${ second.title }]]</a>
@@ -160,7 +160,7 @@
                                                 <div th:class="|col-md-${ control.column == 0 ? 'auto' : control.column } ${not #strings.isEmpty(third.avatar) ? 'has-avatar' : ''}|" th:each="third, thirdSalt:${second.subList}">
                                                     <a th:href="${ third.link }" th:if="${not #strings.isEmpty(third.avatar) && control.avatarScale != 'invisible'}">
                                                         <div th:class="|embed-responsive embed-responsive-${control.avatarScale}|">
-                                                            <img class="embed-responsive-item lazy" th:src="|${ third.avatar }!1|" th:data-original="${third.avatar}">
+                                                            <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(third.avatar)}" th:data-original="${imageUrls.original(third.avatar)}">
                                                         </div>
                                                     </a>
                                                     <a th:class="|dropdown-item bold${ not #lists.isEmpty(third.subList) ? ' dropdown-toggle' : '' }|" th:href="${ third.link }">[[${ third.title }]]</a>

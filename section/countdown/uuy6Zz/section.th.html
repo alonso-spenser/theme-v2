@@ -2,7 +2,7 @@
     <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} media-list|">
         <div class="media-item" th:each="o,stat:${ section.settings.timeList }">
             <div class="media section-padding-top section-padding-bottom">
-                <img th:src="${o.image}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.describe}" th:if="${not #strings.isEmpty(o.image)}">
+                <img th:src="${imageUrls.original(o.image)}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.describe}" th:if="${not #strings.isEmpty(o.image)}">
                 <div class="media-body">
                     <label th:class="|${ section.templateId }-digit|" th:data-count-digit="${o.digit}">
                         [[${o.digit}]]

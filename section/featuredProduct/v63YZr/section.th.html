@@ -21,14 +21,14 @@
                             </div>
                             <div class="col-md-7">
                                 <div th:class="|embed-responsive embed-responsive-${section.settings.firstScale}|">
-                                    <img class="embed-responsive-item lazy" th:src="|${o.coverImage}!1|" th:data-original="${o.coverImage}" th:alt="${o.title}">
+                                    <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.coverImage)}" th:data-original="${imageUrls.original(o.coverImage)}" th:alt="${o.title}">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div th:class="|card ${ section.settings.cardShadow ? '' : ' no-shadow'}|" th:if="${!(section.settings.firstLine && salt.index == 0)}">
                         <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${section.settings.imageLayout == 'top'}">
-                            <img class="embed-responsive-item lazy card-img-top" th:src="|${o.coverImage}!1|" th:data-original="${o.coverImage}" th:alt="${o.title}">
+                            <img class="embed-responsive-item lazy card-img-top" th:src="${imageUrls.thumbnail(o.coverImage)}" th:data-original="${imageUrls.original(o.coverImage)}" th:alt="${o.title}">
                         </div>
                         <div class="card-body text-center">
                             <h3 class="text-content-heading">
@@ -40,7 +40,7 @@
                           
                             <a th:href="|${ site.urlPrefix }item/${o.seoUrl}|" th:if="${section.settings.imageLayout == 'bottom'}">
                                 <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
-                                    <img class="embed-responsive-item lazy" th:src="|${o.coverImage}!1|" th:data-original="${o.coverImage}" th:alt="${o.title}">
+                                    <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.coverImage)}" th:data-original="${imageUrls.original(o.coverImage)}" th:alt="${o.title}">
                                 </div>
                             </a>
                         </div>

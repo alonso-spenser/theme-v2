@@ -1,0 +1,63 @@
+/**
+ * ----------------------------------------------------------------------------
+ * message
+ * ----------------------------------------------------------------------------
+ */
+[class*="section-message-"],
+[class^=section-message-] {
+  width: 100%;
+  left: 0;
+  position: fixed;
+  z-index: 3999;
+  top: 20  * $pixel;
+  text-align: center;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+  }
+  p {
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    backface-visibility: hidden;
+    max-width: 90% !important;
+    max-height: calc(100% - #{120  * $pixel});
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    // Bootstrap 5.3 semantic tokens: Border → border-subtle,
+    // Background → bg-subtle, Color → text-emphasis (also editable at runtime).
+    border: 1  * $pixel solid var(--#{$prefix}info-border-subtle);
+    background-color: var(--#{$prefix}info-bg-subtle);
+    color: var(--#{$prefix}info-text-emphasis);
+    padding: 15  * $pixel;
+    border-radius: 4  * $pixel;
+    margin: 0;
+    //box-shadow: 0 0 6  * $pixel rgba(0, 0, 0, .1);
+  }
+}
+.section-message-success {
+  p {
+    border: 1  * $pixel solid var(--#{$prefix}success-border-subtle);
+    background-color: var(--#{$prefix}success-bg-subtle);
+    color: var(--#{$prefix}success-text-emphasis);
+  }
+}
+.section-message-warning {
+  p {
+    border: 1  * $pixel solid var(--#{$prefix}warning-border-subtle);
+    background-color: var(--#{$prefix}warning-bg-subtle);
+    color: var(--#{$prefix}warning-text-emphasis);
+  }
+}
+.section-message-danger {
+  p {
+    border: 1  * $pixel solid var(--#{$prefix}danger-border-subtle);
+    background-color: var(--#{$prefix}danger-bg-subtle);
+    color: var(--#{$prefix}danger-text-emphasis);
+  }
+}

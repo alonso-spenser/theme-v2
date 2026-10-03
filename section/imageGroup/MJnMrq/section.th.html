@@ -3,7 +3,7 @@
         <div th:class="|row${ section.settings.gutterStyle == 'small' ? ' row-small-gutter' : ''}|" th:with="colSize = ${#lists.size(section.settings.columnList)}">
 	        <div th:class="|col-${ col.contentWidth }|" th:each="col, colSalt:${ section.settings.columnList }">
 		        <th:block th:each="o, salt:${ section.settings.imageList }">
-		            <img class="lazy animated" data-animate="slideInUp" th:src="|${o.image}!1|" th:alt="${o.alt}" th:data-original="${o.image}" th:if="${salt.index % colSize == colSalt.index}">
+		            <img class="lazy animated" data-animate="slideInUp" th:src="${imageUrls.thumbnail(o.image)}" th:alt="${o.alt}" th:data-original="${imageUrls.original(o.image)}" th:if="${salt.index % colSize == colSalt.index}">
 		        </th:block>
 	        </div>
         </div>

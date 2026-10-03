@@ -11,7 +11,7 @@
             </h3>
 
             <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
-                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                <img th:src="${imageUrls.original(section.settings.dividerImage)}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
             </div>
 
             <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
@@ -28,7 +28,7 @@
                 <a th:href="|${site.urlPrefix}collection/${o.seoUrl}|">
                     <div class="card section-card">
                         <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
-                            <img class="embed-responsive-item card-img-top lazy" th:src="|${o.coverImage}!1|" th:data-original="|${o.coverImage}!${section.settings.wideScreen ? 'f' : ''}${section.settings.column}|" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.coverImage)}">
+                            <img class="embed-responsive-item card-img-top lazy" th:src="${imageUrls.thumbnail(o.coverImage)}" th:data-original="${imageUrls.original(o.coverImage)}" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.coverImage)}">
                         </div>
                         <div th:class="|card-body ${section.settings.contentAlign}|">
                             <h3 class="text-content-heading" th:text="${o.title}"></h3>

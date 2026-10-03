@@ -3,7 +3,12 @@
 	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
 	position: relative;
 	z-index: 20;
+
+	.navbar {
+		background-color: #fff;
+	}
 }
+
 
 .jqmAby-icon a {
 	font-size: 16px;
@@ -632,5 +637,6 @@
 .jqmAby-notice:not(.fixed-bottom) {
 	position: relative;
 }
+
 // Demo-only instance selector; does not affect real page IDs.
 @import "demo";

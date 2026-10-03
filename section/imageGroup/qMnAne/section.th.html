@@ -5,7 +5,7 @@
                <div th:class="|${ section.templateId }-grid-item ${ section.templateId }-grid-${salt.index + 1} ${o.contentAlign}|">
                     <th:block th:if="${not #strings.isEmpty(o.link)}">
                         <a th:href="${o.link}">
-                            <img th:src="|${ o.image}!1|" th:data-original="${o.image}" class="lazy" th:if="${not #strings.isEmpty(o.image)}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.heading }">
+                            <img th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" class="lazy" th:if="${not #strings.isEmpty(o.image)}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.heading }">
                         </a>
                         <a th:href="${o.link}">
                             <div th:class="|${ section.templateId }-grid-content|">
@@ -17,7 +17,7 @@
                         </a>
                     </th:block>
                     <th:block th:if="${#strings.isEmpty(o.link)}">
-                        <img th:src="|${ o.image}!1|" th:data-original="${o.image}" class="lazy" th:if="${not #strings.isEmpty(o.image)}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.heading }">
+                        <img th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" class="lazy" th:if="${not #strings.isEmpty(o.image)}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.heading }">
                         <div th:class="|${ section.templateId }-grid-content|">
                             <div th:class="|${ section.templateId }-grid-text|">
                                 <h3 class="text-heading" th:if="${not #strings.isEmpty(o.heading)}">[[${ o.heading }]]</h3>

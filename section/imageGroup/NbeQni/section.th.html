@@ -2,8 +2,8 @@
     <th:block th:fragment="getContent(heading, content, image, imageClass)" th:if="${not #strings.isEmpty(heading) || not #strings.isEmpty(content) || not #strings.isEmpty(image)}">
         <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
             <img class="embed-responsive-item lazy"
-                 th:src="|${image}!1|"
-                 th:data-original="|${image}!${section.settings.wideScreen ? 'f' : ''}8|"
+                 th:src="${imageUrls.thumbnail(image)}"
+                 th:data-original="${imageUrls.original(image)}"
                  th:alt="${heading}"
             >
             <div th:class="|NbeQni-content${section.settings.layoutStyle == 'overlay' ? ' active' : ''}|" th:if="${not #strings.isEmpty(heading) || not #strings.isEmpty(content)}">

@@ -32,8 +32,8 @@
                         <a th:href="${ section.settings.imageList[0].url }" th:if="${not #strings.isEmpty(section.settings.imageList[0].url)}">
                             <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
                                 <img class="embed-responsive-item lazy"
-                                        th:src="|${section.settings.imageList[0].image}!1|"
-                                        th:data-original="${section.settings.imageList[0].image}"
+                                        th:src="${imageUrls.thumbnail(section.settings.imageList[0].image)}"
+                                        th:data-original="${imageUrls.original(section.settings.imageList[0].image)}"
                                         th:alt="${section.settings.imageList[0].title}"
                                         th:if="${not #strings.isEmpty(section.settings.imageList[0].image)}"
                                     >
@@ -45,8 +45,8 @@
                         <th:block th:if="${ #strings.isEmpty(section.settings.imageList[0].url)}">
                             <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
                                 <img class="embed-responsive-item lazy"
-                                        th:src="|${section.settings.imageList[0].image}!1|"
-                                        th:data-original="${section.settings.imageList[0].image}"
+                                        th:src="${imageUrls.thumbnail(section.settings.imageList[0].image)}"
+                                        th:data-original="${imageUrls.original(section.settings.imageList[0].image)}"
                                         th:alt="${section.settings.imageList[0].title}"
                                         th:if="${not #strings.isEmpty(section.settings.imageList[0].image)}"
                                     >
@@ -77,8 +77,8 @@
                             <a th:href="${ o.url }" th:if="${not #strings.isEmpty(o.url)}">
                                 <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
                                     <img class="embed-responsive-item lazy"
-                                            th:src="|${o.image}!1|"
-                                            th:data-lazy="${o.image}" th:alt="${o.title}"
+                                            th:src="${imageUrls.thumbnail(o.image)}"
+                                            th:data-lazy="${imageUrls.original(o.image)}" th:alt="${o.title}"
                                             th:if="${not #strings.isEmpty(o.image)}"
                                         >
                                 </div>
@@ -89,8 +89,8 @@
                             <th:block th:if="${ #strings.isEmpty(o.url)}">
                                 <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
                                     <img class="embed-responsive-item lazy"
-                                            th:src="|${o.image}!1|"
-                                            th:data-lazy="${o.image}" th:alt="${o.title}"
+                                            th:src="${imageUrls.thumbnail(o.image)}"
+                                            th:data-lazy="${imageUrls.original(o.image)}" th:alt="${o.title}"
                                             th:if="${not #strings.isEmpty(o.image)}"
                                         >
                                 </div>

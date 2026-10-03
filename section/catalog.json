@@ -3013,6 +3013,22 @@
         "zh-CN": "Youtube 视频",
         "en": "Youtube video"
       }
+    },
+    {
+      "key": "advantage/a9e395",
+      "type": "advantage",
+      "salt": "a9e395",
+      "name": "优势",
+      "names": {
+        "zh-CN": "优势",
+        "en": "Advantage"
+      },
+      "runtimeVersion": 2,
+      "status": "native-v2",
+      "fixtures": [
+        "default"
+      ],
+      "preview": "/preview?component=advantage%2Fa9e395&fixture=default"
     }
   ]
 }

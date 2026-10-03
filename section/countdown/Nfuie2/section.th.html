@@ -1,7 +1,7 @@
 <section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
     <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
         <div class="embed-responsive d-flex justify-content-end">
-            <img class="embed-responsive-item lazy" th:src="|${section.settings.image}!1|" th:data-original="${ section.settings.image}" th:if="${not #strings.isEmpty(section.settings.image)}">
+            <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(section.settings.image)}" th:data-original="${imageUrls.original(section.settings.image)}" th:if="${not #strings.isEmpty(section.settings.image)}">
             <ul class="position-relative">
                 <li th:each="o,stat:${ section.settings.eventList }">
                     <label th:class="|${ section.templateId }-digit|" th:data-count-digit="${o.digit}">

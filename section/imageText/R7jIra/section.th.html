@@ -4,13 +4,13 @@
             <div th:class="|${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''} ${ section.templateId } ${ section.templateId }-${ salt.index }|">
                 <div th:class="|container${section.settings.wideScreen ? '-fluid no-gutters' : ''}|">
                     <div th:class="|embed-responsive embed-responsive-${o.imageScale == null ? 'normal' : o.imageScale} ${o.paddingTop ? ' section-padding-top': ''}${o.paddingBottom ? ' section-padding-bottom': ''}|">
-                        <img class="embed-responsive-item lazy" th:src="|${ o.url }!1|" th:data-original="${ o.url }" th:alt="${ o.alt }" th:if="${ not #strings.isEmpty(o.url) }">
+                        <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.url)}" th:data-original="${imageUrls.original(o.url)}" th:alt="${ o.alt }" th:if="${ not #strings.isEmpty(o.url) }">
                         <div th:class="|${ section.templateId }-content ${ o.contentPosition }|">
                             <div class="container">
                                 <div th:class="|${ section.templateId }-area section-title  ${ o.textAlign }|">
                                     <h3 class="text-headline" th:if="${ not #strings.isEmpty(o.heading) }">[[${ o.heading }]]</h3>
                                     <div th:class="|section-title-divider ${#strings.isEmpty(o.textAlign) ? '' : o.textAlign.replace('text-', '')}${o.dividerStyle == 'image' && not #strings.isEmpty(o.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ o.dividerWidth > 0 }">
-                                        <img th:src="${o.dividerImage}" alt="" th:if="${ o.dividerStyle == 'image' && not #strings.isEmpty(o.dividerImage) }">
+                                        <img th:src="${imageUrls.original(o.dividerImage)}" alt="" th:if="${ o.dividerStyle == 'image' && not #strings.isEmpty(o.dividerImage) }">
                                     </div>
                                     <h5 class="text-subheading" th:if="${ not #strings.isEmpty(o.subheading) }">[[${ o.subheading }]]</h5>
                                     <ul th:class="|text-list ${o.contentAlign == 'text-left' ? (not #strings.isEmpty(o.symbol) ? o.symbol : '') : ''} ${not #strings.isEmpty(o.contentAlign) ? o.contentAlign : ''}|" th:if="${not #strings.isEmpty(o.description)}" th:with="textLines = ${#strings.listSplit(o.description,'\n')}">
@@ -40,14 +40,14 @@
                     <div th:class="|row g-0 ${ section.templateId }-row ${o.paddingTop ? ' section-padding-top': ''}${o.paddingBottom ? ' section-padding-bottom': ''}|">
                         <div th:class="|col-md-${ o.imagePercentage == null ? 6 : o.imagePercentage } ${ section.settings.firstLayout == 'right' ? (salt.index % 2 == 0 ? 'order-2' : '') : (salt.index % 2 == 0 ? '' : 'order-2')}|">
                             <div th:class="|embed-responsive embed-responsive-${o.imageScale == null ? 'normal' : o.imageScale}|">
-                                <img class="embed-responsive-item lazy" th:src="|${ o.url }!1|" th:data-original="${ o.url }" th:alt="${ o.alt }" th:if="${ not #strings.isEmpty(o.url) }">
+                                <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.url)}" th:data-original="${imageUrls.original(o.url)}" th:alt="${ o.alt }" th:if="${ not #strings.isEmpty(o.url) }">
                             </div>
                         </div>
                         <div th:class="|col-md-${ #numbers.formatInteger(12 - (o.imagePercentage == null ? 6 : o.imagePercentage), 1,'POINT') } ${ section.templateId }-area|">
                             <div th:class="|section-padding-top section-padding-bottom${o.paddingLeft == null || o.paddingLeft == true ? ' section-padding-left' : ''}${o.paddingRight == null || o.paddingRight == true ? ' section-padding-right' : ''} section-title ${ o.textAlign }|">
                                 <h3 class="text-heading" th:utext="${#strings.replace(o.heading,'\n','<br>')}"></h3>
                                 <div th:class="|section-title-divider ${#strings.isEmpty(o.textAlign) ? '' : o.textAlign.replace('text-', '')}${o.dividerStyle == 'image' && not #strings.isEmpty(o.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ o.dividerWidth > 0 }">
-                                    <img th:src="${o.dividerImage}" alt="" th:if="${ o.dividerStyle == 'image' && not #strings.isEmpty(o.dividerImage) }">
+                                    <img th:src="${imageUrls.original(o.dividerImage)}" alt="" th:if="${ o.dividerStyle == 'image' && not #strings.isEmpty(o.dividerImage) }">
                                 </div>
                                 <h5 class="text-subheading" th:if="${ not #strings.isEmpty(o.subheading) }">[[${ o.subheading }]]</h5>
                                 <p th:if="${o.contentAlign != 'text-left' || o.symbol == 'normal'}" class="text-body" th:utext="${#strings.replace(o.description,'\n','<br>')}"></p>

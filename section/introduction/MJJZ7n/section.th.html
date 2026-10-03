@@ -8,7 +8,7 @@
                             [[${ section.settings.p1Heading }]]
                         </h3>
                         <div class="embed-responsive embed-responsive-1by1" th:if="${not #strings.isEmpty(section.settings.p1Icon)}">
-                            <img class="embed-responsive-item lazy" th:data-original="${ section.settings.p1Icon}" th:src="|${ section.settings.p1Icon}!1|" th:alt="${ section.settings.p1Heading}">
+                            <img class="embed-responsive-item lazy" th:data-original="${imageUrls.original(section.settings.p1Icon)}" th:src="${imageUrls.thumbnail(section.settings.p1Icon)}" th:alt="${ section.settings.p1Heading}">
                         </div>
                     </div>
                     <div class="text-body text-gutter" th:if="${not #strings.isEmpty(section.settings.p1Content)}" th:utext="${section.settings.p1Content}"></div>
@@ -18,14 +18,14 @@
                         </a>
                     </p>
                 </div>
-                <img class="embed-responsive lazy" th:data-original="${ section.settings.p1Image}" th:src="|${ section.settings.p1Image}!1|" th:alt="${ section.settings.p1Alt}" th:if="${not #strings.isEmpty(section.settings.p1Image)}">
+                <img class="embed-responsive lazy" th:data-original="${imageUrls.original(section.settings.p1Image)}" th:src="${imageUrls.thumbnail(section.settings.p1Image)}" th:alt="${ section.settings.p1Alt}" th:if="${not #strings.isEmpty(section.settings.p1Image)}">
                 <div th:class="|${ section.templateId }-list|" th:if="${not #strings.isEmpty(section.settings.p2Heading) || not #strings.isEmpty(section.settings.p2Content)}">
                     <div class="d-flex justify-content-between text-gutter">
                         <h3 class="text-heading" th:if="${not #strings.isEmpty(section.settings.p2Heading)}">
                             [[${ section.settings.p2Heading }]]
                         </h3>
                         <div class="embed-responsive embed-responsive-1by1" th:if="${not #strings.isEmpty(section.settings.p2Icon)}">
-                            <img class="embed-responsive-item lazy" th:data-original="${ section.settings.p2Icon}" th:src="|${ section.settings.p2Icon}!1|" th:alt="${ section.settings.p2Heading}">
+                            <img class="embed-responsive-item lazy" th:data-original="${imageUrls.original(section.settings.p2Icon)}" th:src="${imageUrls.thumbnail(section.settings.p2Icon)}" th:alt="${ section.settings.p2Heading}">
                         </div>
                     </div>
                     <div class="media text-gutter align-items-center" th:if="${not #strings.isEmpty(section.settings.p2Label) || not #strings.isEmpty(section.settings.p2Content)}">

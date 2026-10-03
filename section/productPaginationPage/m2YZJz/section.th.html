@@ -1,5 +1,5 @@
 <section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''} ${section.templateId} section-${section.id} |" th:data-section="${section.templateId}">
-    <img class="lazy embed-responsive" th:if="${section.data.collection != null && section.settings.bannerVisible && not #strings.isEmpty(section.data.collection.banner)}" th:src="|${section.data.collection.banner}!1|" th:data-original="|${section.data.collection.banner}!full|" th:alt="${section.data.collection.title}">
+    <img class="lazy embed-responsive" th:if="${section.data.collection != null && section.settings.bannerVisible && not #strings.isEmpty(section.data.collection.banner)}" th:src="${imageUrls.thumbnail(section.data.collection.banner)}" th:data-original="${imageUrls.original(section.data.collection.banner)}" th:alt="${section.data.collection.title}">
     <div th:class="|bread-crumb ${section.settings.h1Layout}|" th:if="${section.settings.h1Layout != 'invisible' || section.settings.enableCrumb}">
         <div th:class="|container${section.settings.h1Wide ? '-fluid' : ''}${section.settings.enableCrumb ? '' : ' solo'}|">
             <h1 class="text-heading" th:if="${section.settings.h1Layout != 'invisible' && section.settings.h1Layout != 'bottom'}">
@@ -54,14 +54,14 @@
                                     </div>
                                     <div class="col-md-7">
                                         <div th:class="|embed-responsive embed-responsive-${section.settings.firstScale}|">
-                                            <img class="embed-responsive-item lazy" th:src="|${o.coverImage}!1|" th:data-original="${o.coverImage}" th:alt="${o.title}">
+                                            <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.coverImage)}" th:data-original="${imageUrls.original(o.coverImage)}" th:alt="${o.title}">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div th:class="|card ${ section.settings.cardShadow ? '' : ' no-shadow'}|" th:if="${!(section.settings.firstLine && salt.index == 0)}">
                                 <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${section.settings.imageLayout == 'top'}">
-                                    <img class="embed-responsive-item lazy card-img-top" th:src="|${o.coverImage}!1|" th:data-original="${o.coverImage}" th:alt="${o.title}">
+                                    <img class="embed-responsive-item lazy card-img-top" th:src="${imageUrls.thumbnail(o.coverImage)}" th:data-original="${imageUrls.original(o.coverImage)}" th:alt="${o.title}">
                                 </div>
                                 <div class="card-body text-center">
                                     <h3 class="text-content-heading">
@@ -71,7 +71,7 @@
                                         [[${o.subtitle}]]
                                     </p>
                                     <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${section.settings.imageLayout == 'bottom'}">
-                                        <img class="embed-responsive-item lazy" th:src="|${o.coverImage}!1|" th:data-original="${o.coverImage}" th:alt="${o.title}">
+                                        <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.coverImage)}" th:data-original="${imageUrls.original(o.coverImage)}" th:alt="${o.title}">
                                     </div>
                                 </div>
                             </div>

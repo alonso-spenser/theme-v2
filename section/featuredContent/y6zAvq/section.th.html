@@ -24,14 +24,14 @@
                             </div>
                             <div class="col-md-7">
                                 <div th:class="|embed-responsive embed-responsive-${section.settings.firstScale}|">
-                                    <img class="embed-responsive-item lazy" th:src="|${o.image}!1|" th:data-original="${o.image}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.title}">
+                                    <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.title}">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div th:class="|card ${ section.settings.cardShadow ? '' : ' no-shadow'}|" th:if="${!(section.settings.firstLine && salt.index == 0)}">
                         <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${section.settings.imageLayout == 'top'}">
-                            <img class="embed-responsive-item lazy card-img-top" th:src="|${o.image}!1|" th:data-original="${o.image}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.title}">
+                            <img class="embed-responsive-item lazy card-img-top" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.title}">
                         </div>
                         <div th:class="|card-body text-center ${section.settings.imageLayout}|">
                             <th:block th:if="${section.settings.imageLayout == 'top'}">
@@ -69,7 +69,7 @@
                                 </div>
                                 <a th:href="|${ o.link }|">
                                     <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
-                                        <img class="embed-responsive-item lazy" th:src="|${o.image}!1|" th:data-original="${o.image}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.title}">
+                                        <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.title}">
                                     </div>
                                 </a>
                             </th:block>

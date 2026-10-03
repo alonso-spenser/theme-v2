@@ -11,7 +11,7 @@
             </h3>
 
             <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
-                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                <img th:src="${imageUrls.original(section.settings.dividerImage)}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
             </div>
 
             <h5 th:class="|text-subheading text-${section.settings.textAlign}|" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
@@ -27,20 +27,20 @@
         <ul th:class="|${ section.templateId }-nav d-flex section-neighbor|" th:if="${ section.settings.tabPlace == 'top' }">
             <th:block th:each="o,salt:${section.settings.imageList}">
                 <li th:class="|nav-item ${ salt.index == 0 ? 'active' : ''}|" th:data-linkage-navigation="${ section.id }">
-                    <img class="lazy" th:src="|${o.tabIcon}!1|" th:data-original="${o.tabIcon}" th:alt="${ #strings.isEmpty(o.tabAlt) ? o.tabITitle : o.tabAlt}" th:if="${not #strings.isEmpty(o.tabIcon)}">
-                    <img class="lazy" th:src="|${#strings.isEmpty(o.tabIconHover) ? o.tabIcon : o.tabIconHover}!1|" th:data-original="${#strings.isEmpty(o.tabIconHover) ? o.tabIcon : o.tabIconHover}" th:alt="${ #strings.isEmpty(o.tabAlt) ? o.tabITitle : o.tabAlt}" th:if="${not #strings.isEmpty(o.tabIcon)}">
+                    <img class="lazy" th:src="${imageUrls.thumbnail(o.tabIcon)}" th:data-original="${imageUrls.original(o.tabIcon)}" th:alt="${ #strings.isEmpty(o.tabAlt) ? o.tabITitle : o.tabAlt}" th:if="${not #strings.isEmpty(o.tabIcon)}">
+                    <img class="lazy" th:src="${imageUrls.thumbnail(#strings.isEmpty(o.tabIconHover) ? o.tabIcon : o.tabIconHover)}" th:data-original="${imageUrls.original(#strings.isEmpty(o.tabIconHover) ? o.tabIcon : o.tabIconHover)}" th:alt="${ #strings.isEmpty(o.tabAlt) ? o.tabITitle : o.tabAlt}" th:if="${not #strings.isEmpty(o.tabIcon)}">
                     <h3>[[${o.tabITitle}]]</h3>
                 </li>
             </th:block>
         </ul>
         <th:block th:each="o,salt:${section.settings.imageList}">
             <div th:class="|${ #strings.isEmpty(section.settings.tabPlace) || section.settings.tabPlace == 'bottom' ? 'section-neighbor' : ''} embed-responsive embed-responsive-${section.settings.imageScale} collapse${ salt.index == 0 ? ' show' : ''}|" th:data-linkage-content="${ section.id }" th:if="${#strings.isEmpty(o.tabLink)}">
-                <img class="embed-responsive-item" th:src="${o.tabImage}" th:alt="${ #strings.isEmpty(o.tabAlt) ? o.tabITitle : o.tabAlt}"  th:if="${not #strings.isEmpty(o.tabImage)}">
+                <img class="embed-responsive-item" th:src="${imageUrls.original(o.tabImage)}" th:alt="${ #strings.isEmpty(o.tabAlt) ? o.tabITitle : o.tabAlt}"  th:if="${not #strings.isEmpty(o.tabImage)}">
             </div>
             <div th:if="${not #strings.isEmpty(o.tabLink)}" th:class="|section-neighbor${ #strings.isEmpty(section.settings.tabPlace) || section.settings.tabPlace == 'bottom' ? ' section-neighbor' : ''} collapse${ salt.index == 0 ? ' show' : ''}|" th:data-linkage-content="${ section.id }" >
                  <a th:href="${o.tabLink}">
                     <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
-                        <img class="embed-responsive-item" th:src="${o.tabImage}" th:alt="${ #strings.isEmpty(o.tabAlt) ? o.tabITitle : o.tabAlt}"  th:if="${not #strings.isEmpty(o.tabImage)}">
+                        <img class="embed-responsive-item" th:src="${imageUrls.original(o.tabImage)}" th:alt="${ #strings.isEmpty(o.tabAlt) ? o.tabITitle : o.tabAlt}"  th:if="${not #strings.isEmpty(o.tabImage)}">
                     </div>
                  </a>
             </div>
@@ -48,8 +48,8 @@
         <ul th:class="|${ section.templateId }-nav d-flex|" th:if="${ #strings.isEmpty(section.settings.tabPlace) || section.settings.tabPlace == 'bottom' }">
             <th:block th:each="o,salt:${section.settings.imageList}">
                 <li th:class="|nav-item ${ salt.index == 0 ? 'active' : ''}|" th:data-linkage-navigation="${ section.id }">
-                    <img class="lazy" th:src="|${o.tabIcon}!1|" th:data-original="${o.tabIcon}" th:alt="${ #strings.isEmpty(o.tabAlt) ? o.tabITitle : o.tabAlt}" th:if="${not #strings.isEmpty(o.tabIcon)}">
-                    <img class="lazy" th:src="|${#strings.isEmpty(o.tabIconHover) ? o.tabIcon : o.tabIconHover}!1|" th:data-original="${#strings.isEmpty(o.tabIconHover) ? o.tabIcon : o.tabIconHover}" th:alt="${ #strings.isEmpty(o.tabAlt) ? o.tabITitle : o.tabAlt}" th:if="${not #strings.isEmpty(o.tabIcon)}">
+                    <img class="lazy" th:src="${imageUrls.thumbnail(o.tabIcon)}" th:data-original="${imageUrls.original(o.tabIcon)}" th:alt="${ #strings.isEmpty(o.tabAlt) ? o.tabITitle : o.tabAlt}" th:if="${not #strings.isEmpty(o.tabIcon)}">
+                    <img class="lazy" th:src="${imageUrls.thumbnail(#strings.isEmpty(o.tabIconHover) ? o.tabIcon : o.tabIconHover)}" th:data-original="${imageUrls.original(#strings.isEmpty(o.tabIconHover) ? o.tabIcon : o.tabIconHover)}" th:alt="${ #strings.isEmpty(o.tabAlt) ? o.tabITitle : o.tabAlt}" th:if="${not #strings.isEmpty(o.tabIcon)}">
                     <h3>[[${o.tabITitle}]]</h3>
                 </li>
             </th:block>

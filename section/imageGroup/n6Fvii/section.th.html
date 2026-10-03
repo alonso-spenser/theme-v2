@@ -15,7 +15,7 @@
         <div class="row row-gutter">
             <div th:class="|col-md-${section.settings.column} col-${section.settings.mobColumn}|" th:each="o, salt:${ section.settings.collectionList }">
                 <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
-                    <img class="embed-responsive-item lazy" th:src="|${o.itemImage}!1|" th:data-original="|${o.itemImage}|" th:alt="${not #strings.isEmpty(o.itemAlt) ? o.itemAlt : o.itemHeading}" th:if="${not #strings.isEmpty(o.itemImage)}">
+                    <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.itemImage)}" th:data-original="${imageUrls.original(o.itemImage)}" th:alt="${not #strings.isEmpty(o.itemAlt) ? o.itemAlt : o.itemHeading}" th:if="${not #strings.isEmpty(o.itemImage)}">
                     <div class="embed-responsive-card"
                         th:if="${not #strings.isEmpty(o.facebookLink) ||
                             not #strings.isEmpty(o.itemSubheading) ||
@@ -80,7 +80,7 @@
             >
                 <div class="slick-slide" th:each="o, salt:${ section.settings.collectionList }">
                     <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
-                        <img class="embed-responsive-item" th:src="|${o.itemImage}!1|" th:data-lazy="|${o.itemImage}|" th:alt="${not #strings.isEmpty(o.itemAlt) ? o.itemAlt : o.itemHeading}" th:if="${not #strings.isEmpty(o.itemImage)}">
+                        <img class="embed-responsive-item" th:src="${imageUrls.thumbnail(o.itemImage)}" th:data-lazy="${imageUrls.original(o.itemImage)}" th:alt="${not #strings.isEmpty(o.itemAlt) ? o.itemAlt : o.itemHeading}" th:if="${not #strings.isEmpty(o.itemImage)}">
                         <div class="embed-responsive-card"
                             th:if="${not #strings.isEmpty(o.facebookLink) ||
                                 not #strings.isEmpty(o.itemSubheading) ||

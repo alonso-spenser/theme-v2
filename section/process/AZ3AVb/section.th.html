@@ -3,10 +3,10 @@
         <div class="row row-gutter" th:if="${#lists.size(section.settings.graphList) > 0}">
             <div th:class="|col-md-${section.settings.column} AZ3AVb-item|" th:each="o,salt:${section.settings.graphList}">
                 <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${not #strings.isEmpty(o.mainGraph)}">
-                    <img class="embed-responsive-item lazy" th:src="|${ o.mainGraph }!1|" th:data-original="|${o.mainGraph}!${ section.settings.column }|" th:alt="${ o.mainHeading }">
+                    <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.mainGraph)}" th:data-original="${imageUrls.original(o.mainGraph)}" th:alt="${ o.mainHeading }">
                     <div class="AZ3AVb-tran">
                     <th:block th:if="${not #strings.isEmpty(o.tranGraph)}">
-                      <img class="lazy" th:src="|${ o.tranGraph }!1|" th:data-original="|${o.tranGraph}!2|" th:alt="${ o.mainHeading }">
+                      <img class="lazy" th:src="${imageUrls.thumbnail(o.tranGraph)}" th:data-original="${imageUrls.original(o.tranGraph)}" th:alt="${ o.mainHeading }">
                     </th:block>
                     </div>
                 </div>

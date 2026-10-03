@@ -207,3 +207,11 @@ document.addEventListener('fo:inquiry-error', event => {
 通过 `[data-popup-enquiry]` 打开的询盘表单由 Dialog 的 `onConfirm` 统一处理：表单校验或提交失败时返回 `false` 并保留弹窗，提交成功时返回 `true` 并关闭弹窗。表单内按 Enter 也会进入同一确认流程。
 
 这份代码是结构预览，不建议现在替换线上 `js/dist/base.js`。
+
+## 图片大小图协议
+
+上传参数 `thumbnail=true` 时，数据库保存 100×100 内等比小图地址 `name.webp`，正式图为 `name.og.webp`（2000×2000 内等比缩放）。非配对上传仍然保存正式图地址。
+
+组件使用 `src` 放小图、`data-original` 或 `data-lazy` 放正式图。公共 `images.js` 使用 IntersectionObserver 在距离视口 300px 时预加载，成功后替换，失败保留占位图；组件销毁时断开观察器。无需添加 width/height。
+
+Thymeleaf 渲染上下文需提供 `imageUrls`（mall 服务的 ImageUrls）：`thumbnail(url)` 返回小图，`original(url)` 返回正式图；背景、视频封面和放大链接直接使用正式图。不依赖本地主题仓库运行。修改后执行 `npm run js:build`，部署生成的 base.min.js 后生效。

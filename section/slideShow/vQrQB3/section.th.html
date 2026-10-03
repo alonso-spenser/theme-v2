@@ -20,15 +20,15 @@
                       <div th:class="|vQrQB3-c vQrQB3-c-${section.settings.imageSize} ${section.settings.mobContent == 'desktop' ? '' : 'mob-' + section.settings.mobScale} ${ section.settings.mobContent == 'alone' ? 'alone' : '' }|"
                             th:with="alt = ${ not #strings.isEmpty(o.alt) ? o.alt : not #strings.isEmpty(o.heading) ? o.heading : '' }"
                         >
-                        <img class="vQrQB3-c-item lazy d-md-block d-none" th:src="|${ o.image }!1|" th:data-lazy="${ o.image }" th:alt="${ alt }" th:if="${ not #strings.isEmpty(o.image) }">
+                        <img class="vQrQB3-c-item lazy d-md-block d-none" th:src="${imageUrls.thumbnail(o.image)}" th:data-lazy="${imageUrls.original(o.image)}" th:alt="${ alt }" th:if="${ not #strings.isEmpty(o.image) }">
                         <img class="vQrQB3-c-item lazy d-md-none d-block"
-                            th:src="|${ not #strings.isEmpty(o.mobImage) ? o.mobImage : o.image }!1|"
-                            th:data-lazy="|${ not #strings.isEmpty(o.mobImage) ? o.mobImage : o.image }|"
+                            th:src="${imageUrls.thumbnail(not #strings.isEmpty(o.mobImage) ? o.mobImage : o.image)}"
+                            th:data-lazy="${imageUrls.original(not #strings.isEmpty(o.mobImage) ? o.mobImage : o.image)}"
                             th:alt="${ alt }"
                             th:if="${ (not #strings.isEmpty(o.mobImage) || not #strings.isEmpty(o.image)) && section.settings.mobContent != 'alone' }"
                             >
                         <div th:class="|embed-responsive embed-responsive-${section.settings.mobScale} d-md-none d-block|" th:if="${ (not #strings.isEmpty(o.mobImage) || not #strings.isEmpty(o.image)) && section.settings.mobContent == 'alone' }">
-                          <img class="embed-responsive-item" th:src="|${ not #strings.isEmpty(o.mobImage) ? o.mobImage : o.image }!1|" th:data-lazy="|${ not #strings.isEmpty(o.mobImage) ? o.mobImage : o.image }|" th:alt="${ alt }">
+                          <img class="embed-responsive-item" th:src="${imageUrls.thumbnail(not #strings.isEmpty(o.mobImage) ? o.mobImage : o.image)}" th:data-lazy="${imageUrls.original(not #strings.isEmpty(o.mobImage) ? o.mobImage : o.image)}" th:alt="${ alt }">
                         </div>
                         <div th:class="|vQrQB3-content ${ o.contentAlign } d-md-flex ${ section.settings.mobContent == 'image' ? 'd-none' : '' }|"
                             th:if="${not #strings.isEmpty(o.heading) || not #strings.isEmpty(o.subheading) || not #strings.isEmpty(o.content) ||

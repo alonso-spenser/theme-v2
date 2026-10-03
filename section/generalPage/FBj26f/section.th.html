@@ -108,8 +108,8 @@
 			    </div>
 		    </div>
 		    <div th:class="|col-md-${#numbers.formatInteger(12 - section.settings.slideWidth, 1,'POINT')}|">
-			    <img th:src="|${section.settings.image}!1|"
-			        th:data-original="${section.settings.image}"
+			    <img th:src="${imageUrls.thumbnail(section.settings.image)}"
+			        th:data-original="${imageUrls.original(section.settings.image)}"
 			        th:alt="${not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading}"
 			        class="FBj26f-cover lazy FBj26f-section border-radius"
 			        th:if="${not #strings.isEmpty(section.settings.image)}">
@@ -145,8 +145,8 @@
 				    <div class="row">
 					    <div class="col-md-6">
 						    <div th:class="|embed-responsive embed-responsive-${section.settings.p3Scale} border-radius|">
-							    <img th:src="|${section.settings.p3Image}!1|"
-							        th:data-original="${section.settings.p3Image}"
+							    <img th:src="${imageUrls.thumbnail(section.settings.p3Image)}"
+							        th:data-original="${imageUrls.original(section.settings.p3Image)}"
 							        th:alt="${not #strings.isEmpty(section.settings.p3Alt) ? section.settings.p3Alt : section.settings.p3Heading}"
 							        class="embed-responsive-item lazy"
 							        th:if="${not #strings.isEmpty(section.settings.p3Image)}">
@@ -176,8 +176,8 @@
 					    <div th:class="|col-md-${section.settings.p4Column == null ? '3' : section.settings.p4Column} col-${section.settings.p4MobColumn == null ? '12' : section.settings.p4MobColumn}|" th:each="o,salt:${section.settings.p4List}">
 						    <div th:class="|card card-p4 ${o.p4Active ? 'active' :''}|">
 							    <div class="card-body text-center">
-                                    <img th:src="|${o.p4Icon}!1|"
-                                        th:data-original="${o.p4Icon}"
+                                    <img th:src="${imageUrls.thumbnail(o.p4Icon)}"
+                                        th:data-original="${imageUrls.original(o.p4Icon)}"
                                         th:if="${not #strings.isEmpty(o.p4Icon)}"
                                         th:alt="${not #strings.isEmpty(o.p4Alt) ? o.p4Alt : o.p4Heading}">
 								    <h5 class="text-content-heading" th:if="${not #strings.isEmpty(o.p4Heading)}">
@@ -208,16 +208,16 @@
 					    <div th:class="|col-md-${section.settings.p6Column == null ? '6' : section.settings.p6Column} col-${section.settings.p6MobColumn == null ? '6' : section.settings.p6MobColumn}|" th:each="o,salt:${section.settings.p6List}">
 					        <a th:href="${o.p6Link}" class="text-p6" th:if="${not #strings.isEmpty(o.p6Link)}">
                                 <div th:class="|embed-responsive border-radius embed-responsive-${section.settings.p6Scale}|">
-                                    <img th:src="|${o.p6Image}!1|"
-                                        th:data-original="${o.p6Image}"
+                                    <img th:src="${imageUrls.thumbnail(o.p6Image)}"
+                                        th:data-original="${imageUrls.original(o.p6Image)}"
                                         th:alt="${section.settings.p6Alt}"
                                         th:if="${o.p6Image}"
                                         class="embed-responsive-item lazy" >
                                 </div>
 						    </a>
 						    <div th:class="|embed-responsive text-p6 border-radius embed-responsive-${section.settings.p6Scale}|" th:if="${#strings.isEmpty(o.p6Link)}">
-                                <img th:src="|${o.p6Image}!1|"
-                                    th:data-original="${o.p6Image}"
+                                <img th:src="${imageUrls.thumbnail(o.p6Image)}"
+                                    th:data-original="${imageUrls.original(o.p6Image)}"
                                     th:alt="${section.settings.p6Alt}"
                                     th:if="${o.p6Image}"
                                     class="embed-responsive-item lazy" >
@@ -245,8 +245,8 @@
                         <div class="col-md-6" th:each="o,salt:${section.settings.p8List}">
                             <div th:class="|media media-p8 ${o.p8Active ? 'active' :''}|">
                                 <div class="media-icon" th:if="${not #strings.isEmpty(o.p8Icon)}">
-						            <img th:src="|${o.p8Icon}!1|"
-						                th:data-original="${o.p8Icon}"
+						            <img th:src="${imageUrls.thumbnail(o.p8Icon)}"
+						                th:data-original="${imageUrls.original(o.p8Icon)}"
 						                class="lazy"
 						                th:if="${not #strings.isEmpty(o.p8Icon)}"
 						                th:alt="${not #strings.isEmpty(o.p8Alt) ? o.p8Alt : o.p8Heading}">

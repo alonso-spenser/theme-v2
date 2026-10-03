@@ -1,3 +1,4 @@
+import {originalImageUrl} from './images.js';
 import {fo, global} from './core.js';
 import {show} from './behaviors.js';
 
@@ -31,7 +32,7 @@ function productCard(section, product, article = false) {
     card.href = safeUrl(`${section.runtime.config.prefix}${article ? 'article' : 'item'}/${encodeURIComponent(product.seoUrl || product.id || '')}`);
     if (product.coverImage) {
         const image = node('img', undefined, 'card-img-top');
-        image.src = safeUrl(product.coverImage);
+        image.src = safeUrl(originalImageUrl(product.coverImage));
         image.alt = product.title || '';
         image.loading = 'lazy';
         card.append(image);

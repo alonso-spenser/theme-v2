@@ -6,7 +6,8 @@ test('generates six-character identifiers with an alphabetic first character', a
   const existing = new Set(['YVrMNb', 'qYz22e', 'j6EFJ3']);
   for (let i = 0; i < 10000; i++) {
     const salt = await generateSalt({ existing, isTaken: async () => false });
-    assert.match(salt, /^[A-Za-z][A-Za-z0-9]{5}$/);
+    assert.match(salt, /^[a-z][a-z0-9]{5}$/);
+    assert.match(salt, /[0-9]/);
     assert.equal(existing.has(salt), false);
     existing.add(salt);
   }

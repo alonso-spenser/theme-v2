@@ -1,16 +1,7 @@
 # 本地组件预览图片
 
-`images/` 中的图片复制自用户提供的 `/Users/joe/Desktop/img/`，保留原文件，未复制视频。
-为产品、图文、轮播、Logo、头像等场景提供本地预览素材。
+图片使用配对文件：`name.ext` 为 100×100 内等比缩略图，`name.og.ext` 为 2000×2000 内等比正式图。
+静态 HTML 中懒加载图片使用小图 src 和正式图 data-original/data-lazy，直接展示和背景使用 .og 图片。
+SVG 保持原样。素材来自原项目的 preview-assets/images。
 
-通过 `/preview-assets/images/<文件名>` 访问，由 theme-service 服务。
-兼容旧模板附加的 `!1`、`!f3` 等图片缩放后缀，本地直接返回原图。
-
-替换仅写入各组件的 `fixtures/local.json`，原 `default.json`、`sample.json` 和 `source.json` 保持不变。
-本地图优先按原文件名匹配，否则按字段与组件用途选择；空图片字段仍保持为空。
-`replacements.json` 记录替换数量。
-
-```sh
-node tools/local-preview-images.mjs
-node tools/verify-restored-sections.mjs
-```
+数据库默认图片独立打包在 mall 服务的 `/theme-images/`，不依赖本地预览服务器。

@@ -11,7 +11,7 @@
             </h3>
 
             <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
-                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                <img th:src="${imageUrls.original(section.settings.dividerImage)}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
             </div>
 
             <h5 th:class="|text-subheading text-${section.settings.textAlign}|" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
@@ -28,7 +28,7 @@
             <div th:class="|col-md-${section.settings.column} col-${section.settings.mobColumn}|" th:each="o, salt:${ section.settings.imageList }" >
                 <div th:class="|card section-card ${section.settings.hasShadow == 'none' ? 'no-shadow' : ''}|">
                     <div class="card-body">
-                        <img class="lazy text-neighbor" th:src="|${ o.image}!1|" th:data-original="${o.image}" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading}">
+                        <img class="lazy text-neighbor" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading}">
                         <h3 class="text-content-heading" th:if="${ not #strings.isEmpty(o.itemHeading) }">[[ ${ o.itemHeading } ]]</h3>
                         <p class="text-body" th:if="${ not #strings.isEmpty(o.itemContent) }" th:utext="${o.itemContent}">[[ ${ o.itemContent } ]]</p>
                         <p class="text-link" th:if="${not #strings.isEmpty(o.buttonLink) && not #strings.isEmpty(o.buttonLabel) && o.buttonStyle != 'invisible'}">

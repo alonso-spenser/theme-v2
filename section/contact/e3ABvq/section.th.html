@@ -11,7 +11,7 @@
             </h3>
 
             <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
-                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                <img th:src="${imageUrls.original(section.settings.dividerImage)}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
             </div>
 
             <h5 th:class="|text-subheading text-${section.settings.textAlign}|" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
@@ -28,7 +28,7 @@
             <div class="media" th:if="${not #strings.isEmpty(icon) || not #strings.isEmpty(image) || not #strings.isEmpty(title) || not #strings.isEmpty(desc)}">
                 <div class="media-icon" th:if="${not #strings.isEmpty(icon) || not #strings.isEmpty(image)}">
                     <i th:class="|text-icon ${icon}|" th:if="${not #strings.isEmpty(icon)}"></i>
-                    <img class="lazy" th:src="|${ image}!1|" th:data-original="${ image }" th:alt="${ not #strings.isEmpty(alt) ? alt : title }"  th:if="${not #strings.isEmpty(image)}">
+                    <img class="lazy" th:src="${imageUrls.thumbnail(image)}" th:data-original="${imageUrls.original(image)}" th:alt="${ not #strings.isEmpty(alt) ? alt : title }"  th:if="${not #strings.isEmpty(image)}">
                 </div>
                 <div class="media-body" th:if="${not #strings.isEmpty(title) || not #strings.isEmpty(desc)}">
                     <h3 class="text-content-heading" th:if="${not #strings.isEmpty(title)}">[[${title}]]</h3>

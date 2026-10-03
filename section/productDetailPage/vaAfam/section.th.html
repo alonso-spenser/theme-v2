@@ -55,7 +55,7 @@
 			</div>
 		</div>
 		<div th:class="|${ section.templateId }-avatar|" th:if="${not #strings.isEmpty(section.data.page.qrcode) && section.settings.banner == 'visible'}">
-			<img class="lazy" th:src="|${section.data.page.qrcode}!1|" th:data-original="${section.data.page.qrcode}" th:alt="${section.data.page.title}" th:if="${not #strings.isEmpty(section.data.page.qrcode)}">
+			<img class="lazy" th:src="${section.data.page.qrcode}" th:data-original="${section.data.page.qrcode}" th:alt="${section.data.page.title}" th:if="${not #strings.isEmpty(section.data.page.qrcode)}">
 			<div th:class="|${ section.templateId }-avatar-title|" th:if="${section.settings.h1Visible || section.settings.subtitleVisible}">
 				<div class="container">
                     <h1 class="text-heading" th:if="${section.settings.h1Visible}">
@@ -90,14 +90,14 @@
                                 <div class="slick-slide slick-slider-video" th:if="${ not #strings.isEmpty(section.data.page.coverVideo) }">
                                     <div data-player th:class="|embed-responsive ${ section.settings.imageScale == 'miracle' ? 'embed-responsive-1by1 miracle' : 'embed-responsive-' + section.settings.imageScale }|">
                                         <div class="embed-responsive-player embed-responsive-item"></div>
-                                        <img th:if="${#lists.size( section.data.page.imageList) > 0}" class="embed-responsive-item" th:src="|${section.data.page.imageList[0].url}!1|" th:data-lazy="${section.data.page.imageList[0].url}" th:alt="${section.data.page.imageList[0].title}">
+                                        <img th:if="${#lists.size( section.data.page.imageList) > 0}" class="embed-responsive-item" th:src="${imageUrls.thumbnail(section.data.page.imageList[0].url)}" th:data-lazy="${imageUrls.original(section.data.page.imageList[0].url)}" th:alt="${section.data.page.imageList[0].title}">
                                         <video class="embed-responsive-item embed-responsive-video video-iframe" th:data-video="${section.data.page.coverVideo}" controls="controls" th:if="${not #strings.contains(section.data.page.coverVideo,'youtube.com')}"></video>
                                         <iframe class="embed-responsive-item embed-responsive-video" th:data-video="|${section.data.page.coverVideo}?autoplay=1&loop=1|" allowfullscreen th:if="${#strings.contains(section.data.page.coverVideo,'youtube.com')}"></iframe>
                                     </div>
                                 </div>
                                 <div class="slick-slide" th:each="o,salt:${ section.data.page.imageList}">
                                     <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale == 'miracle' ? '1by1' : section.settings.imageScale}|" th:data-src="${o.url}">
-                                        <img th:class="|embed-responsive-item${section.settings.imageScale == 'miracle' ? ' miracle' : ''}|" data-image="1" th:src="|${o.url}!1|" th:data-lazy="${o.url}" th:alt="${o.title}">
+                                        <img th:class="|embed-responsive-item${section.settings.imageScale == 'miracle' ? ' miracle' : ''}|" data-image="1" th:src="${imageUrls.thumbnail(o.url)}" th:data-lazy="${imageUrls.original(o.url)}" th:alt="${o.title}">
                                     </div>
                                 </div>
                             </div>
@@ -123,7 +123,7 @@
                                 </div>
                                 <div class="slick-slide" th:each="o,salt:${ section.data.page.imageList}">
                                     <div class="embed-responsive embed-responsive-1by1">
-                                        <img class="embed-responsive-item" data-image="1" th:src="|${o.url}!1|" th:data-lazy="${o.url}" th:alt="${o.title}">
+                                        <img class="embed-responsive-item" data-image="1" th:src="${imageUrls.thumbnail(o.url)}" th:data-lazy="${imageUrls.original(o.url)}" th:alt="${o.title}">
                                     </div>
                                 </div>
                             </div>
@@ -188,7 +188,7 @@
                             <div th:class="|row row-small-gutter ${ section.templateId }-mosaic|" th:if="${ section.settings.skuElement == '2b' }">
                                 <div th:class="|col-md-${ section.settings.skuColumn } col-${ section.settings.skuMobColumn }|" data-stock="item" th:each="sku, salt:${section.data.page.skuList}">
                                     <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${ not #strings.isEmpty(sku.skuImage) }">
-                                        <img class="embed-responsive-item lazy" th:src="|${sku.skuImage}!1|" th:data-id="${ section.id }" th:data-original="|${sku.skuImage}!3|" th:alt="${section.data.page.title}">
+                                        <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(sku.skuImage)}" th:data-id="${ section.id }" th:data-original="${imageUrls.original(sku.skuImage)}" th:alt="${section.data.page.title}">
                                     </div>
                                     <p class="text-img">
                                         <th:block th:each="variant, variantSalt: ${ sku.variantList }">
@@ -263,7 +263,7 @@
                     <div th:class="|col-md-${section.settings.relatedColumn} col-${section.settings.relateMobColumn}" th:each="o,salt:${ section.data.page.relevance.neighborList}">
                         <a  class="card section-card" th:href="|${ params.itemLink }${o.seoUrl}|">
                             <div th:class="|embed-responsive embed-responsive-${section.settings.relatedScale}|">
-                                <img class="embed-responsive-item lazy card-img-top" th:src="|${o.coverImage}!1|" th:data-original="|${o.coverImage}!3|" th:alt="${o.title}">
+                                <img class="embed-responsive-item lazy card-img-top" th:src="${imageUrls.thumbnail(o.coverImage)}" th:data-original="${imageUrls.original(o.coverImage)}" th:alt="${o.title}">
                             </div>
                             <div th:class="|card-body ${section.settings.relatedAlign}|">
                                  <h3 th:if="${not #strings.isEmpty(o.title)}" class="text-content-heading" th:text="${o.title}"></h3>
@@ -297,7 +297,7 @@
                             <a th:href="|${ params.itemLink }${o.seoUrl}|">
                                 <div class="card section-card">
                                     <div th:class="|embed-responsive embed-responsive-${section.settings.relatedScale}|" th:if="${not #strings.isEmpty(o.coverImage) && section.settings.relatedImage}">
-                                        <img class="embed-responsive-item card-img-top" th:src="|${o.coverImage}!1|" th:data-lazy="|${o.coverImage}!${section.settings.wideScreen ? 'f' : ''}${ section.settings.relatedColumn }|" th:alt="${o.title}">
+                                        <img class="embed-responsive-item card-img-top" th:src="${imageUrls.thumbnail(o.coverImage)}" th:data-lazy="${imageUrls.original(o.coverImage)}" th:alt="${o.title}">
                                     </div>
                                     <div th:class="|card-body ${section.settings.relatedAlign}|">
                                         <h3 th:if="${not #strings.isEmpty(o.title)}" class="text-content-heading" th:text="${o.title}"></h3>

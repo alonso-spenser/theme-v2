@@ -2,7 +2,7 @@
     <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
        <div class="row">
            <div th:class="|col-md-6 ${section.settings.imageAlign}|">
-                <img th:src="|${ section.settings.image }!1|" class="lazy" th:alt="${section.settings.alt}" th:data-original="${ section.settings.image}" >
+                <img th:src="${imageUrls.thumbnail(section.settings.image)}" class="lazy" th:alt="${section.settings.alt}" th:data-original="${imageUrls.original(section.settings.image)}" >
            </div>
            <div class="col-md-6">
                <div class="section-rich-text" th:utext="${section.settings.content}"></div>

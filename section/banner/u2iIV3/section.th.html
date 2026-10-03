@@ -4,7 +4,7 @@
         <div class="u2iIV3-banner">
             <picture th:if="${not #strings.isEmpty(section.settings.image)}">
                 <source media="(max-width: 767px)" th:srcset="${section.settings.mobImage}" th:if="${not #strings.isEmpty(section.settings.mobImage)}">
-                <img th:src="${section.settings.image}" th:alt="${section.settings.alt}" decoding="async">
+                <img th:src="${imageUrls.original(section.settings.image)}" th:alt="${section.settings.alt}" decoding="async">
             </picture>
             <div th:class="|u2iIV3-content ${section.settings.contentAlign}|">
                 <div class="u2iIV3-area">

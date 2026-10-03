@@ -14,12 +14,12 @@
             <div th:class="|slick-slide slick-slide-${salt.index}|" th:each="o, salt:${ section.settings.imageList }">
                 <div th:class="|embed-responsive embed-responsive-${section.settings.imageSize}|" th:if="${not #strings.isEmpty(o.mobImage) || not #strings.isEmpty(o.image)}">
                     <img class="lazy embed-responsive-item d-md-none d-block"
-                        th:src="|${ not #strings.isEmpty(o.mobImage) ? o.mobImage : o.image }!1|"
-                        th:data-lazy="|${ not #strings.isEmpty(o.mobImage) ? o.mobImage : o.image }|"
+                        th:src="${imageUrls.thumbnail(not #strings.isEmpty(o.mobImage) ? o.mobImage : o.image)}"
+                        th:data-lazy="${imageUrls.original(not #strings.isEmpty(o.mobImage) ? o.mobImage : o.image)}"
                         th:alt="${ alt }"
                         th:if="${ not #strings.isEmpty(o.image) || not #strings.isEmpty(o.mobImage)}"
                     >
-                    <img class="lazy embed-responsive-item d-md-block d-none" th:src="|${ not #strings.isEmpty(o.image) ? o.image : o.mobImage }!1|" th:data-lazy="|${ not #strings.isEmpty(o.image) ? o.image : o.mobImage }|" th:alt="${ alt }">
+                    <img class="lazy embed-responsive-item d-md-block d-none" th:src="${imageUrls.thumbnail(not #strings.isEmpty(o.image) ? o.image : o.mobImage)}" th:data-lazy="${imageUrls.original(not #strings.isEmpty(o.image) ? o.image : o.mobImage)}" th:alt="${ alt }">
                     <div class="container-fluid">
                         <h3 class="text-headline" th:if="${ not #strings.isEmpty(o.heading) }">[[${ o.heading }]]</h3>
                         <a class="text-link" th:href="${ o.buttonLink }" th:if="${ not #strings.isEmpty(o.buttonLink) && not #strings.isEmpty(o.buttonLabel) }">

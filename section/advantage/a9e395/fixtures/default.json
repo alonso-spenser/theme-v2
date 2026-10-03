@@ -1,0 +1,25 @@
+{
+  "section": {
+    "id": "demo-a9e395",
+    "componentKind": "section",
+    "type": "advantage",
+    "templateId": "a9e395",
+    "runtimeVersion": 2,
+    "settings": {},
+    "bindings": {},
+    "data": {}
+  },
+  "site": {
+    "urlPrefix": "/",
+    "siteName": "Preview"
+  },
+  "page": {
+    "pageType": "homePage"
+  },
+  "params": {
+    "designMode": true
+  },
+  "lang": {
+    "global": {}
+  }
+}

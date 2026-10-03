@@ -9,7 +9,7 @@
                 <div class="text-body" th:if="${not #strings.isEmpty(o.content) || not #strings.isEmpty(o.image)}">
                     <th:block th:utext="${o.content}"></th:block>
                     <p th:if="${not #strings.isEmpty(o.image)}">
-                      <img class="lazy" th:src="|${o.image}!1|" th:data-original="|${o.image}!${section.settings.wideScreen ? 'f' : ''}6|" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.heading}">
+                      <img class="lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.heading}">
                     </p>
                 </div>
             </div>

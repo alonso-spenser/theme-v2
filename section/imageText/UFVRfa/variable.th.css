@@ -7,7 +7,7 @@
 [# th:each="o, salt:${ section.settings.imageList }"]
     [# th:if="${not #strings.isEmpty(o.backgroundColor) || not #strings.isEmpty(o.backgroundImage)}"]
     .section-[[${ section.id }]] .[[${ section.templateId }]]-[[${ salt.index }]] .[[${ section.templateId }]]-row{
-        background: [[${o.backgroundColor}]] [# th:if="${not #strings.isEmpty(o.backgroundImage)}"] url("[[${o.backgroundImage}]]")[/] [[${o.backgroundRepeat}]] [[${o.backgroundPosition}]];
+        background: [[${o.backgroundColor}]] [# th:if="${not #strings.isEmpty(o.backgroundImage)}"] url("[[${imageUrls.original(o.backgroundImage)}]]")[/] [[${o.backgroundRepeat}]] [[${o.backgroundPosition}]];
         [# th:if="${not #strings.isEmpty(o.backgroundSize)}"]
         background-size: [[${o.backgroundSize}]];
         [/]

@@ -6,6 +6,7 @@
 @import "common";
 @import "title";
 
+
 // Extra page tokens have fallbacks; database defaults remain the source of truth.
 :root { --page-gutter: 1.5rem; --page-breadcrumb-background: #f8f8f8; }
 body { font-family: var(--typeBody); font-size: calc(var(--fontSizeBody) * 1px); color: var(--colorBody); }

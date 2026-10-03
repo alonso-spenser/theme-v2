@@ -1,7 +1,7 @@
 <section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
     <div th:class="|container${section.settings.wideScreen ? '-fluid no-gutters' : ''} ${ section.templateId }-content|">
         <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${not #strings.isEmpty(section.settings.image)}">
-            <img class="embed-responsive-item lazy" th:src="|${ section.settings.image}!1|" th:data-original="${ section.settings.image }|" th:alt="${ not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading}">
+            <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(section.settings.image)}" th:data-original="${imageUrls.original(section.settings.image)}" th:alt="${ not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading}">
         </div>
           <div th:class="|section-title ${section.settings.cardLayout}|">
             <small class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">[[${ section.settings.subheading }]]</small>

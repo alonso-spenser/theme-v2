@@ -26,12 +26,12 @@
             </div>
             <div th:class="|col-md-${ #numbers.formatInteger(12 - section.settings.contentWidth, 1,'POINT') }|">
                 <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${ not #strings.isEmpty(section.settings.image) && #strings.isEmpty(section.settings.videoURL) }">
-                    <img class="embed-responsive-item lazy" th:src="|${ section.settings.image}!1|" th:data-original="${ section.settings.image}" th:alt="${ not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading }">
+                    <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(section.settings.image)}" th:data-original="${imageUrls.original(section.settings.image)}" th:alt="${ not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading }">
                 </div>
                 <div class="embed-responsive embed-responsive-video card-img-top" th:if="${ not #strings.isEmpty(section.settings.videoURL) }">
                     <iframe class="embed-responsive-item" th:data-video="|${section.settings.videoURL}?autoplay=1&loop=1|" allowfullscreen></iframe>
                     <div th:class="|embed-responsive-item ${ section.templateId }-mask|" th:data-play="${ section.id }">
-                        <img class="embed-responsive-item lazy" th:src="|${ section.settings.image}!1|" th:data-original="${ section.settings.image}" th:if="${ not #strings.isEmpty(section.settings.image) }"  th:alt="${ not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading }">
+                        <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(section.settings.image)}" th:data-original="${imageUrls.original(section.settings.image)}" th:if="${ not #strings.isEmpty(section.settings.image) }"  th:alt="${ not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading }">
                         <div class="play-button small">
                             <span class="filled-circle"></span>
                             <span class="stroke-circle"></span>

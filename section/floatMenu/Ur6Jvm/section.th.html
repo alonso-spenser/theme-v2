@@ -3,7 +3,7 @@
     <div th:each="o,stat:${section.settings.custom}" th:class="|Ur6Jvm-item Ur6Jvm-ico Ur6Jvm-${stat.index}|">
         <a th:href="${o.link}">
             <div class="embed-responsive embed-responsive-1by1" th:if="${not #strings.isEmpty(o.icon)}">
-                <img class="embed-responsive-item" th:src="${o.icon}" alt="">
+                <img class="embed-responsive-item" th:src="${imageUrls.original(o.icon)}" alt="">
             </div>
         </a>
     </div>

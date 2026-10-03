@@ -11,7 +11,7 @@
             </h3>
 
             <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
-                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                <img th:src="${imageUrls.original(section.settings.dividerImage)}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
             </div>
 
             <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
@@ -30,7 +30,7 @@
                     <div class="card section-card" th:if="${not #strings.isEmpty(o.link)}">
                         <a th:href="${o.link}">
                             <div class="media">
-                                <img th:src="|${o.image}!1|" class="lazy" th:data-original="|${o.image}|" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.image)}">
+                                <img th:src="${imageUrls.thumbnail(o.image)}" class="lazy" th:data-original="${imageUrls.original(o.image)}" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.image)}">
                                 <div class="media-body">
                                     <h3 class="text-content-heading" th:if="${not #strings.isEmpty(o.title)}">
                                         [[${o.title}]]
@@ -47,7 +47,7 @@
                     </div>
                     <div class="card section-card" th:if="${#strings.isEmpty(o.link)}">
                         <div class="media">
-                            <img th:src="|${o.image}!1|" class="lazy" th:data-original="|${o.image}|" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.image)}">
+                            <img th:src="${imageUrls.thumbnail(o.image)}" class="lazy" th:data-original="${imageUrls.original(o.image)}" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.image)}">
                             <div class="media-body">
                                 <h3 class="text-content-heading" th:if="${not #strings.isEmpty(o.title)}">
                                     [[${o.title}]]
@@ -65,7 +65,7 @@
                 <th:block th:if="${section.settings.style == 'top'}">
                     <div class="card section-card" th:if="${not #strings.isEmpty(o.link)}">
                         <a th:href="${o.link}">
-                            <img th:src="|${o.image}!1|" class="lazy" th:data-original="|${o.image}|" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.image)}">
+                            <img th:src="${imageUrls.thumbnail(o.image)}" class="lazy" th:data-original="${imageUrls.original(o.image)}" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.image)}">
                             <div class="card-body">
                                 <h3 class="text-content-heading" th:if="${not #strings.isEmpty(o.title)}">
                                     [[${o.title}]]
@@ -80,7 +80,7 @@
                         </a>
                     </div>
                     <div class="card section-card" th:if="${#strings.isEmpty(o.link)}">
-                        <img th:src="|${o.image}!1|" class="lazy" th:data-original="|${o.image}|" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.image)}">
+                        <img th:src="${imageUrls.thumbnail(o.image)}" class="lazy" th:data-original="${imageUrls.original(o.image)}" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.image)}">
                         <div class="card-body">
                             <h3 class="text-content-heading" th:if="${not #strings.isEmpty(o.title)}">
                                 [[${o.title}]]
@@ -99,7 +99,7 @@
                         <div class="row g-0">
                             <div class="col-5">
                                 <a th:href="${o.link}">
-                                    <img th:src="|${o.image}!1|" class="lazy" th:data-original="|${o.image}|" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.image)}">
+                                    <img th:src="${imageUrls.thumbnail(o.image)}" class="lazy" th:data-original="${imageUrls.original(o.image)}" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.image)}">
                                 </a>
                             </div>
                             <div class="col-7">
@@ -122,7 +122,7 @@
                     <div class="card section-card" th:if="${#strings.isEmpty(o.link)}">
                         <div class="row g-0">
                             <div class="col-5">
-                                <img th:src="|${o.image}!1|" class="lazy" th:data-original="|${o.image}|" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.image)}">
+                                <img th:src="${imageUrls.thumbnail(o.image)}" class="lazy" th:data-original="${imageUrls.original(o.image)}" th:alt="${o.title}" th:if="${not #strings.isEmpty(o.image)}">
                             </div>
                             <div class="col-7">
                                 <div class="card-body">

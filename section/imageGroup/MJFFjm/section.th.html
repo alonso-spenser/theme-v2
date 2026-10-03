@@ -17,10 +17,10 @@
             </p>
         </div>
         <div th:class="|embed-responsive embed-responsive-${o.imageScale}|" th:if="${#strings.isEmpty(o.buttonLink) && not #strings.isEmpty(o.image)}">
-            <img class="embed-responsive-item lazy" th:src="|${ o.image}!1|" th:data-original="${ o.image }|" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading}">
+            <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading}">
         </div>
         <a th:href="${ o.buttonLink }" th:class="|embed-responsive embed-responsive-${o.imageScale}|" th:if="${not #strings.isEmpty(o.buttonLink) && not #strings.isEmpty(o.image)}">
-            <img class="embed-responsive-item lazy" th:src="|${ o.image}!1|" th:data-original="${ o.image }|" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading}">
+            <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading}">
         </a>
     </div>
 

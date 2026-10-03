@@ -29,7 +29,7 @@
                 <th:block th:if="${not #lists.isEmpty(section.settings.auxiliaryList)}">
                     <th:block th:each="o,stat:${ section.settings.auxiliaryList }">
                         <a th:href="${#strings.isEmpty(o.linkURL) ? 'javascript:void(0)' : o.linkURL}">
-                            <img th:src="${o.icon}" th:if="${not #strings.isEmpty(o.icon)}" th:alt="${o.label}">
+                            <img th:src="${imageUrls.original(o.icon)}" th:if="${not #strings.isEmpty(o.icon)}" th:alt="${o.label}">
                             <i th:class="${o.linkIcon}" th:if="${not #strings.isEmpty(o.linkIcon)}"></i>
                             [[${o.label}]]
                         </a>
@@ -71,12 +71,12 @@
     <nav th:if="${section.settings.menuVisible}" th:class="|navbar navbar-expand-md${section.settings.bigLogo ? ' big-logo' : ''}${section.settings.menuLayout == 'logoCenter' && section.settings.logoType != 'invisible' ? ' logo-center' : ''}|">
         <div class="container">
             <a class="navbar-brand" th:href="${section.settings.logoLink}" th:if="${section.settings.logoType != 'invisible'}">
-                <img th:src="${section.settings.logo}"
+                <img th:src="${imageUrls.original(section.settings.logo)}"
                     th:if="${(section.settings.logoType == 'logo' || section.settings.logoType == 'both') && not #strings.isEmpty(section.settings.logo)}"
                     th:alt="${not #strings.isEmpty(section.settings.logoAlt) ? section.settings.logoAlt : site.siteName}"
                     >
                 <img class="navbar-brand-fullView"
-                    th:src="${not #strings.isEmpty(section.settings.fullViewLogo) ? section.settings.fullViewLogo : section.settings.logo}"
+                    th:src="${imageUrls.original(not #strings.isEmpty(section.settings.fullViewLogo) ? section.settings.fullViewLogo : section.settings.logo)}"
                     th:if="${(section.settings.logoType == 'logo' || section.settings.logoType == 'both') && section.settings.fullView && page.pageType == 'homePage' && (not #strings.isEmpty(section.settings.fullViewLogo) || not #strings.isEmpty(section.settings.logo))}"
                     th:alt="${not #strings.isEmpty(section.settings.logoAlt) ? section.settings.logoAlt : site.siteName}"
                     >

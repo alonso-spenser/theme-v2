@@ -1,6 +1,6 @@
 [# th:if="${not #strings.isEmpty(section.settings.backgroundColor) || not #strings.isEmpty(section.settings.backgroundImage)}"]
 .section-[[${ section.id }]]{
-    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${imageUrls.original(section.settings.backgroundImage)}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
     [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
     background-size: [[${section.settings.backgroundSize}]];
     [/]
@@ -16,7 +16,7 @@
 [# th:if="${not #strings.isEmpty(section.settings.mobileImage)}"]
     @media (max-width: 768px) {
         .section-[[${ section.id }]]  {
-            background: url("[[${ section.settings.mobileImage }]]");
+            background: url("[[${imageUrls.original(section.settings.mobileImage)}]]");
             background-size: 100% auto;
         }
     }

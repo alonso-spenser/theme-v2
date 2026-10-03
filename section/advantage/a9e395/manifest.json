@@ -1,0 +1,27 @@
+{
+  "protocolVersion": 2,
+  "componentKind": "section",
+  "type": "advantage",
+  "templateId": "a9e395",
+  "runtimeVersion": 2,
+  "definitionVersion": 1,
+  "schemaVersion": 1,
+  "name": {
+    "zh-CN": "优势",
+    "en": "Advantage"
+  },
+  "policy": {
+    "removable": true,
+    "duplicable": true,
+    "maxInstances": 0
+  },
+  "render": {
+    "template": "section.th.html",
+    "style": "section.scss",
+    "variableStyle": "variable.th.css",
+    "script": "section.js"
+  },
+  "editor": {
+    "groups": []
+  }
+}

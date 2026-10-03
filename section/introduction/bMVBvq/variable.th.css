@@ -3,7 +3,7 @@
     [# th:if="${section.settings.reduceHeight > 0}"]
     height: calc(100vh - [[${section.settings.reduceHeight}]]px);
     [/]
-    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${section.settings.backgroundImage}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
+    background: [[${section.settings.backgroundColor}]] [# th:if="${not #strings.isEmpty(section.settings.backgroundImage)}"] url("[[${imageUrls.original(section.settings.backgroundImage)}]]")[/] [[${section.settings.backgroundRepeat}]] [[${section.settings.backgroundPosition}]];
     [# th:if="${not #strings.isEmpty(section.settings.backgroundSize)}"]
     background-size: [[${section.settings.backgroundSize}]];
     [/]

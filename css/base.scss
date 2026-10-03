@@ -17,7 +17,18 @@ $layout-utilities: ();
   $layout-utilities: map-merge($layout-utilities, ($key: map-get($utilities, $key)));
 }
 $utilities: $layout-utilities;
-
+$section-breakpoints: (
+        xs: 0,
+        md: 768px
+) !default;
+$section-sizes: (
+        xs: 1.5rem,
+        md: 2.5rem
+) !default;
+$pixel: 0.0625rem;
+$grid-columns:                12 !default;
+$grid-gutter-width:           24 * $pixel !default;
+$transition: all 0.25s;
 @import "vendor/bootstrap/scss/root";
 @import "vendor/bootstrap/scss/reboot";
 @import "vendor/bootstrap/scss/type";
@@ -27,6 +38,11 @@ $utilities: $layout-utilities;
 @import "vendor/bootstrap/scss/buttons";
 @import "vendor/bootstrap/scss/utilities/api";
 @import "vendor/bootstrap/scss/text";
+@import "vendor/bootstrap/scss/section";
+@import "vendor/bootstrap/scss/loading";
+@import "vendor/bootstrap/scss/message";
+@import "vendor/bootstrap/scss/enquiry";
+@import "vendor/bootstrap/scss/enquiry-dialog";
 
 // Native component runtime layout (no third-party carousel JavaScript).
 @import "../js/sections";

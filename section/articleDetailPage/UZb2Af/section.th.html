@@ -73,7 +73,7 @@
                             <div th:class="|carousel-container${ section.settings.navStyle != 'invisible' && #lists.size(section.data.page.imageList) > 1 ? ' has-dots' : ''}|">
                                 <div class="carousel-slide carousel-multiple">
                                     <div th:class="|carousel-slide-item embed-responsive embed-responsive-${section.settings.imageScale}|" th:each="o, salt:${ section.data.page.imageList }">
-                                        <img class="embed-responsive-item lazy" th:src="|${ o.url }!1|" th:data-original="|${ o.url }!full|" th:alt="${ o.alt }" th:if="${ not #strings.isEmpty(o.url) }">
+                                        <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.url)}" th:data-original="${imageUrls.original(o.url)}" th:alt="${ o.alt }" th:if="${ not #strings.isEmpty(o.url) }">
                                     </div>
                                 </div>
 
@@ -111,7 +111,7 @@
                         <div th:class="|media ${ section.templateId }-detail-post|" th:each="o,salt:${ section.data.page.relevance.neighborList}">
                             <div class="embed-responsive embed-responsive-1by1" th:if="${ section.settings.relatedImage}">
                                 <a th:href="|${ params.itemLink }${o.seoUrl}|">
-                                    <img class="embed-responsive-item lazy" th:src="|${not #strings.isEmpty(o.coverImage) ? o.coverImage : 'https://site-file.fomillesite.com/0/001/img/800.jpg'}!2|" th:data-original="|${not #strings.isEmpty(o.coverImage) ? o.coverImage : 'https://site-file.fomillesite.com/0/001/img/800.jpg'}!2|" th:alt="${o.title}">
+                                    <img class="embed-responsive-item lazy" th:src="${not #strings.isEmpty(o.coverImage) ? o.coverImage : 'https://site-file.fomillesite.com/0/001/img/800.jpg'}" th:data-original="${not #strings.isEmpty(o.coverImage) ? o.coverImage : 'https://site-file.fomillesite.com/0/001/img/800.jpg'}" th:alt="${o.title}">
                                 </a>
                             </div>
                             <div class="media-body">
@@ -142,7 +142,7 @@
                 </h3>
 
                 <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
-                    <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                    <img th:src="${imageUrls.original(section.settings.dividerImage)}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
                 </div>
 
                 <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
@@ -160,7 +160,7 @@
                     <a th:href="|${ params.itemLink }${o.seoUrl}|" th:if="${ section.settings.relatedStyle == 'tile' }">
                         <div class="card section-card">
                             <div th:class="|embed-responsive embed-responsive-${ section.settings.relatedScale }|" th:if="${ section.settings.relatedImage }">
-                                <img class="embed-responsive-item lazy card-img-top" th:src="|${o.coverImage}!1|"  th:data-original="|${o.coverImage}!${section.settings.relatedColumn}|" th:alt="${o.title}">
+                                <img class="embed-responsive-item lazy card-img-top" th:src="${imageUrls.thumbnail(o.coverImage)}"  th:data-original="${imageUrls.original(o.coverImage)}" th:alt="${o.title}">
                             </div>
                             <div th:class="|card-body ${section.settings.relatedAlign}|">
                                 <h3 th:if="${not #strings.isEmpty(o.title)}" class="text-content-heading" th:text="${o.title}"></h3>
@@ -172,7 +172,7 @@
                     <a th:href="|${ params.itemLink }${o.seoUrl}|" th:if="${ section.settings.relatedStyle == 'list' }">
                         <div th:class="|media ${ section.templateId }-list|">
                             <div th:class="|embed-responsive embed-responsive-${section.settings.relatedScale}|" th:if="${not #strings.isEmpty(o.coverImage) && section.settings.relatedImage}">
-                                <img class="embed-responsive-item card-img-top lazy" th:src="|${o.coverImage}!1|" th:data-original="|${o.coverImage}!${section.settings.wideScreen ? 'f' : ''}${section.settings.relatedColumn}|" th:alt="${o.title}">
+                                <img class="embed-responsive-item card-img-top lazy" th:src="${imageUrls.thumbnail(o.coverImage)}" th:data-original="${imageUrls.original(o.coverImage)}" th:alt="${o.title}">
                             </div>
                             <div th:class="|media-body ${section.settings.relatedAlign}|">
                                 <h3 th:if="${not #strings.isEmpty(o.title)}" class="text-content-heading" th:text="${o.title}"></h3>
@@ -206,7 +206,7 @@
                         <a th:href="|${ params.itemLink }${o.seoUrl}|">
                             <div class="card section-card">
                                 <div th:class="|embed-responsive embed-responsive-${section.settings.relatedScale}|" th:if="${not #strings.isEmpty(o.coverImage) && section.settings.relatedImage}">
-                                    <img class="embed-responsive-item card-img-top" th:src="|${o.coverImage}!1|" th:data-lazy="|${o.coverImage}!${section.settings.wideScreen ? 'f' : ''}${ section.settings.relatedColumn }|" th:alt="${o.title}">
+                                    <img class="embed-responsive-item card-img-top" th:src="${imageUrls.thumbnail(o.coverImage)}" th:data-lazy="${imageUrls.original(o.coverImage)}" th:alt="${o.title}">
                                 </div>
                                 <div th:class="|card-body ${section.settings.relatedAlign}|">
                                     <h3 th:if="${not #strings.isEmpty(o.title)}" class="text-content-heading" th:text="${o.title}"></h3>

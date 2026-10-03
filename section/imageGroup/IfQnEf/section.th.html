@@ -15,7 +15,7 @@
             <div th:class="|col-md-${section.settings.column} col-${section.settings.mobColumn}|" th:each="o, salt:${ section.settings.collectionList }">
                 <div class="card section-card" th:if="${#strings.isEmpty(o.itemUrl)}">
                     <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${not #strings.isEmpty(o.itemImage) && section.settings.imageVisible}">
-                        <img class="embed-responsive-item card-img-top lazy" th:src="|${o.itemImage}!1|" th:data-original="|${o.itemImage}|" th:alt="${o.itemHeading}">
+                        <img class="embed-responsive-item card-img-top lazy" th:src="${imageUrls.thumbnail(o.itemImage)}" th:data-original="${imageUrls.original(o.itemImage)}" th:alt="${o.itemHeading}">
                     </div>
                     <div class="card-body">
                         <h3 th:if="${not #strings.isEmpty(o.itemHeading)}" class="text-content-heading" th:text="${o.itemHeading}"></h3>
@@ -25,7 +25,7 @@
                 <a th:href="|${o.itemUrl}|" th:if="${not #strings.isEmpty(o.itemUrl)}">
                     <div class="card section-card">
                         <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${not #strings.isEmpty(o.itemImage) && section.settings.imageVisible}">
-                            <img class="embed-responsive-item card-img-top lazy" th:src="|${o.itemImage}!1|" th:data-original="|${o.itemImage}|" th:alt="${o.itemHeading}">
+                            <img class="embed-responsive-item card-img-top lazy" th:src="${imageUrls.thumbnail(o.itemImage)}" th:data-original="${imageUrls.original(o.itemImage)}" th:alt="${o.itemHeading}">
                         </div>
                         <div class="card-body">
                             <h3 th:if="${not #strings.isEmpty(o.itemHeading)}" class="text-content-heading" th:text="${o.itemHeading}"></h3>
@@ -54,7 +54,7 @@
                 <div class="slick-slide" th:each="o, salt:${ section.settings.collectionList }">
                     <div class="card section-card" th:if="${#strings.isEmpty(o.itemUrl)}">
                         <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${not #strings.isEmpty(o.itemImage) && section.settings.imageVisible}">
-                            <img class="embed-responsive-item card-img-top" th:src="|${o.itemImage}!1|" th:data-lazy="|${o.itemImage}|" th:alt="${o.itemHeading}">
+                            <img class="embed-responsive-item card-img-top" th:src="${imageUrls.thumbnail(o.itemImage)}" th:data-lazy="${imageUrls.original(o.itemImage)}" th:alt="${o.itemHeading}">
                         </div>
                         <div class="card-body">
                             <h3 th:if="${not #strings.isEmpty(o.itemHeading)}" class="text-content-heading" th:text="${o.itemHeading}"></h3>
@@ -64,7 +64,7 @@
                     <a th:href="|${o.itemUrl}|" th:if="${not #strings.isEmpty(o.itemUrl)}">
                         <div class="card section-card">
                             <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${not #strings.isEmpty(o.itemImage) && section.settings.imageVisible}">
-                                <img class="embed-responsive-item card-img-top" th:src="|${o.itemImage}!1|" th:data-lazy="|${o.itemImage}|" th:alt="${o.itemHeading}">
+                                <img class="embed-responsive-item card-img-top" th:src="${imageUrls.thumbnail(o.itemImage)}" th:data-lazy="${imageUrls.original(o.itemImage)}" th:alt="${o.itemHeading}">
                             </div>
                             <div class="card-body">
                                 <h3 th:if="${not #strings.isEmpty(o.itemHeading)}" class="text-content-heading" th:text="${o.itemHeading}"></h3>

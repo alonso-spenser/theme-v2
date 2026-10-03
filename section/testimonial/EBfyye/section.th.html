@@ -24,7 +24,7 @@
                 <div th:class="|slick-slide slick-slide-${salt.index}|" th:each="o, salt:${ section.settings.itemList }">
                     <div th:class="|${ section.templateId }-card ${section.settings.contentAlign}|" th:with="alt = ${ not #strings.isEmpty(o.alt) ? o.alt : o.name }">
                         <div th:class="|embed-responsive embed-responsive-1by1 ${section.settings.imgLayout}|" th:if="${not #strings.isEmpty(o.image)}">
-                            <img class="embed-responsive-item lazy" th:src="|${ o.image }!1|" th:data-lazy="${ o.image }" th:alt="${alt}">
+                            <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-lazy="${imageUrls.original(o.image)}" th:alt="${alt}">
                         </div>
                         <h5 class="text-subheading" th:if="${not #strings.isEmpty(o.name)}">[[${ o.name }]]</h5>
                         <p class="text-body" th:if="${not #strings.isEmpty(o.position)}">[[${ o.position }]]</p>

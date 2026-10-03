@@ -3,12 +3,12 @@
         <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} navbar-menu|">
             <a class="navbar-brand" href="/">
                 <img
-                    th:src="${not #strings.isEmpty(section.settings.logo) ? section.settings.logo : section.settings.tranLogo}"
+                    th:src="${imageUrls.original(not #strings.isEmpty(section.settings.logo) ? section.settings.logo : section.settings.tranLogo)}"
                     th:if="${not #strings.isEmpty(section.settings.logo) || not #strings.isEmpty(section.settings.tranLogo)}"
                     th:alt="${not #strings.isEmpty(section.settings.alt) ? section.settings.alt : site.siteName}"
                 >
                 <img
-                    th:src="${not #strings.isEmpty(section.settings.tranLogo) ? section.settings.tranLogo : section.settings.logo}"
+                    th:src="${imageUrls.original(not #strings.isEmpty(section.settings.tranLogo) ? section.settings.tranLogo : section.settings.logo)}"
                     th:if="${section.settings.transparent == 'enable' && (not #strings.isEmpty(section.settings.logo) || not #strings.isEmpty(section.settings.tranLogo))}"
                     th:alt="${not #strings.isEmpty(section.settings.tanAlt) ? section.settings.tanAlt : site.siteName}"
                 >

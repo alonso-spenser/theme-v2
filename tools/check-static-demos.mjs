@@ -1,6 +1,6 @@
 import {readFile, writeFile, access} from 'node:fs/promises';
 import {resolve, dirname} from 'node:path';
-import * as sass from 'sass';
+import {buildSectionStyles} from './component-style.mjs';
 
 const catalog=JSON.parse(await readFile('section/catalog.json','utf8'));
 const results=[];
@@ -21,8 +21,7 @@ for(const component of catalog.components){
     try{await access(resolve(dir,match[1]));}catch{errors.push(`Missing asset ${match[1]}`);}
   }
   try {
-    const output=sass.compile(`${dir}/section.scss`,{style:'expanded',charset:false,silenceDeprecations:['import','global-builtin','color-functions','if-function']});
-    await writeFile(`${dir}/section.css`,output.css+'\n');
+    await buildSectionStyles(`${dir}/section.scss`);
   }catch(e){errors.push(e.message);}
   results.push({key:component.key,status:errors.length?'failed':'passed',errors,url:`http://www.theme.com/section/${component.key}/index.html`});
 }

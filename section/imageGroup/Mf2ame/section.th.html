@@ -12,8 +12,8 @@
 				    <div class="card-body">
 				        <div th:class="${#strings.isEmpty(section.settings.subIconAlign) ? 'text-center' : section.settings.subIconAlign}">
                             <div class="embed-responsive embed-responsive-1by1">
-                                <img class="embed-responsive-item" th:src="${ not #strings.isEmpty(o.icon) ? o.icon : o.iconHover }" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading }">
-                                <img class="embed-responsive-item" th:src="${ not #strings.isEmpty(o.iconHover) ? o.iconHover : o.icon }" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading }">
+                                <img class="embed-responsive-item" th:src="${imageUrls.original(not #strings.isEmpty(o.icon) ? o.icon : o.iconHover)}" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading }">
+                                <img class="embed-responsive-item" th:src="${imageUrls.original(not #strings.isEmpty(o.iconHover) ? o.iconHover : o.icon)}" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading }">
                             </div>
 					    </div>
 					    <h5 th:class="|text-content-heading ${#strings.isEmpty(section.settings.subHeadingAlign) ? 'text-center' : section.settings.subHeadingAlign}|" th:if="${not #strings.isEmpty(o.subHeading)}">[[${o.subHeading}]]</h5>
@@ -26,8 +26,8 @@
 			    <div th:class="|${o.active ? 'active' : ''}|" th:if="${section.settings.cardStyle == 'none'}">
                     <div th:class="${#strings.isEmpty(section.settings.subIconAlign) ? 'text-center' : section.settings.subIconAlign}">
                         <div class="embed-responsive embed-responsive-1by1">
-                            <img class="embed-responsive-item" th:src="${ not #strings.isEmpty(o.icon) ? o.icon : o.iconHover }" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading }">
-                            <img class="embed-responsive-item" th:src="${ not #strings.isEmpty(o.iconHover) ? o.iconHover : o.icon }" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading }">
+                            <img class="embed-responsive-item" th:src="${imageUrls.original(not #strings.isEmpty(o.icon) ? o.icon : o.iconHover)}" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading }">
+                            <img class="embed-responsive-item" th:src="${imageUrls.original(not #strings.isEmpty(o.iconHover) ? o.iconHover : o.icon)}" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading }">
                         </div>
                     </div>
                     <h5 th:class="|text-content-heading ${#strings.isEmpty(section.settings.subHeadingAlign) ? 'text-center' : section.settings.subHeadingAlign}|" th:if="${not #strings.isEmpty(o.subHeading)}">[[${o.subHeading}]]</h5>

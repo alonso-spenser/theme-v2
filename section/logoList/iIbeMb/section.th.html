@@ -3,7 +3,7 @@
         <div class="row g-0">
             <div th:class="|col-md-${section.settings.column} col-${section.settings.mobColumn}|" th:each="o, salt:${ section.settings.logoList }">
                 <div th:class="|${ section.templateId }-${salt.index} text-center ${ section.templateId }-list|">
-                    <img class="lazy" th:src="|${ o.image}!1|" th:data-original="${ o.image }" th:alt="${ o.alt }" th:if="${not #strings.isEmpty(o.image)}">
+                    <img class="lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${ o.alt }" th:if="${not #strings.isEmpty(o.image)}">
                     <h3 class="text-content-heading" th:if="${not #strings.isEmpty(o.heading)}">
                         [[${o.heading}]]
                     </h3>

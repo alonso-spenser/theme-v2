@@ -1,5 +1,5 @@
 <section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''} ${ section.templateId } section-${ section.id } |" th:data-section="${section.templateId}">
-    <img class="lazy embed-responsive" th:if="${section.data.collection != null && section.settings.bannerVisible && not #strings.isEmpty(section.data.collection.banner)}" th:src="|${section.data.collection.banner}!1|" th:data-original="|${section.data.collection.banner}!full|" th:alt="${section.data.collection.title}">
+    <img class="lazy embed-responsive" th:if="${section.data.collection != null && section.settings.bannerVisible && not #strings.isEmpty(section.data.collection.banner)}" th:src="${imageUrls.thumbnail(section.data.collection.banner)}" th:data-original="${imageUrls.original(section.data.collection.banner)}" th:alt="${section.data.collection.title}">
     <div th:class="|bread-crumb ${section.settings.h1Layout}|" th:if="${section.settings.h1Layout != 'invisible' || section.settings.enableCrumb}">
         <div th:class="|container${section.settings.h1Wide ? '-fluid' : ''}${section.settings.enableCrumb ? '' : ' solo'}|">
             <h1 class="text-heading" th:if="${section.settings.h1Layout != 'invisible' && section.settings.h1Layout != 'bottom'}">
@@ -73,7 +73,7 @@
                             <a th:href="|${ params.itemLink }${o.seoUrl}|">
                                 <div class="card section-card">
                                     <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
-                                        <img class="embed-responsive-item card-img-top lazy" th:src="|${not #strings.isEmpty(o.coverImage) ? o.coverImage : '/theme/img/8.jpg'}!1|" th:data-original="|${not #strings.isEmpty(o.coverImage) ? o.coverImage : '/theme/img/8.jpg'}!${section.settings.wideScreen ? 'f' : ''}${section.settings.column}|" th:alt="${o.title}">
+                                        <img class="embed-responsive-item card-img-top lazy" th:src="${imageUrls.thumbnail(not #strings.isEmpty(o.coverImage) ? o.coverImage : '/theme/img/8.jpg')}" th:data-original="${imageUrls.original(not #strings.isEmpty(o.coverImage) ? o.coverImage : '/theme/img/8.jpg')}" th:alt="${o.title}">
                                     </div>
                                     <div th:class="|card-body ${section.settings.textAlign}|">
                                         <h3 class="text-content-heading" th:text="${#strings.length(o.title) >= 60 ? #strings.substring(o.title, 0, 60) : o.title}"></h3>
@@ -90,7 +90,7 @@
                                 <div class="row">
                                     <div class="col-md-3 col-lg-3" th:if="${section.settings.imageVisible}">
                                         <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
-                                            <img class="embed-responsive-item lazy" th:src="|${not #strings.isEmpty(o.coverImage) ? o.coverImage : 'https://site-file.fomillesite.com/0/001/img/800.jpg'}!1|" th:data-original="|${not #strings.isEmpty(o.coverImage) ? o.coverImage : 'https://site-file.fomillesite.com/0/001/img/800.jpg'}!${section.settings.wideScreen ? 'f' : ''}3|" th:alt="${o.title}">
+                                            <img class="embed-responsive-item lazy" th:src="${not #strings.isEmpty(o.coverImage) ? o.coverImage : 'https://site-file.fomillesite.com/0/001/img/800.jpg'}" th:data-original="${not #strings.isEmpty(o.coverImage) ? o.coverImage : 'https://site-file.fomillesite.com/0/001/img/800.jpg'}" th:alt="${o.title}">
                                         </div>
                                     </div>
                                     <div th:class="|col-md-${section.settings.imageVisible == null || section.settings.imageVisible ? 9 : 12} col-lg-${section.settings.imageVisible == null || section.settings.imageVisible ? 9 : 12} ${section.settings.textAlign}|">

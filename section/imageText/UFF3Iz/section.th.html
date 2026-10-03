@@ -11,7 +11,7 @@
             </h3>
 
             <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
-                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                <img th:src="${imageUrls.original(section.settings.dividerImage)}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
             </div>
 
             <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
@@ -27,7 +27,7 @@
             <div th:class="|col-md-${ section.settings.column } col-${ section.settings.mobColumn }|" th:each="o, salt:${ section.settings.infoList }">
                 <div class="media card section-card">
                     <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${ not #strings.isEmpty(o.image) }">
-                        <img class="embed-responsive-item lazy" th:src="|${ o.image}!1|" th:data-original="|${o.image}!2|" th:alt="${ o.title }">
+                        <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${ o.title }">
                     </div>
                     <div class="media-body" th:if="${not #strings.isEmpty(o.title) || not #strings.isEmpty(o.describe) || (o.buttonStyle != 'invisible' && o.buttonLabel) }">
                         <h5 class="text-content-heading" th:if="${not #strings.isEmpty(o.title)}">

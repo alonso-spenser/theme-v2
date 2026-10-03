@@ -17,6 +17,7 @@ __pycache__/
 # Framework bundles; js/src and component section.js are source files.
 /js/base.js
 /js/base.min.js
+/js/base.min.*.js
 **/*.min.js
 
 # Locally generated verification report.

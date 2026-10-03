@@ -1,7 +1,7 @@
 <section th:class="|section${section.settings.marginTop ? ' section-margin-top': ''}${section.settings.marginBottom ? ' section-margin-bottom': ''}${section.settings.paddingTop ? ' section-padding-top': ''}${section.settings.paddingBottom ? ' section-padding-bottom': ''} ${ section.templateId } section-${ section.id }|" th:data-section="${section.templateId}">
     <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''} embed-responsive embed-responsive-video|">
         <div th:class="|embed-responsive-item ${ section.templateId }-mask|" data-play="action">
-            <img th:if="${ not #strings.isEmpty(section.settings.poster) }" class="embed-responsive-item lazy" th:src="|${ section.settings.poster}!1|" th:data-original="|${ section.settings.poster}!full|">
+            <img th:if="${ not #strings.isEmpty(section.settings.poster) }" class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(section.settings.poster)}" th:data-original="${imageUrls.original(section.settings.poster)}">
             <div class="play-button">
                 <span class="filled-circle"></span>
                 <span class="stroke-circle"></span>

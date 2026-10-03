@@ -4,7 +4,7 @@
 	        <div th:class="|col-md-${ col.contentWidth } col-12|" th:each="col, colSalt:${ section.settings.columnList }">
 		        <th:block th:each="o, salt:${ section.settings.imageList }">
 		            <th:block th:if="${salt.index % colSize == colSalt.index}">
-		                <img th:class="|lazy animated ${ section.templateId }-item|" data-animate="slideInUp" th:src="|${o.image}!1|" th:alt="${o.alt}" th:data-original="${o.image}" th:if="${ not #strings.isEmpty(o.image) }">
+		                <img th:class="|lazy animated ${ section.templateId }-item|" data-animate="slideInUp" th:src="${imageUrls.thumbnail(o.image)}" th:alt="${o.alt}" th:data-original="${imageUrls.original(o.image)}" th:if="${ not #strings.isEmpty(o.image) }">
                         <div th:class="|card ${ section.templateId }-item section-card related-card animated|" data-animate="slideInUp"
                                 th:if="${ #strings.isEmpty(o.image) && (
                                 not #strings.isEmpty(o.heading) ||

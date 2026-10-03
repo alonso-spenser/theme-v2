@@ -1,5 +1,7 @@
 # Theme V2
 
+组件文件与入库流程见 [Section 文件规范与数据库同步](docs/section.md)。
+
 源码提交与编译产物规则见 [源码与构建规范](docs/SOURCE_AND_BUILD.md)。
 
 独立的 V2 主题组件项目，不依赖旧 theme 仓库。当前迁入 159 个已有实现组件，未迁入 13 个商城占位组件。迁入不代表逐个完成视觉与业务交互验收。
@@ -32,3 +34,6 @@ npm run serve
 salt 生成：`node tools/generate-salt.mjs`。显式配置 `THEME_DB_USER`、`THEME_DB_PASSWORD`，可选 `THEME_DB_HOST`、`THEME_DB_PORT`、`THEME_MYSQL_BIN`；只读检查 mall.theme_section，连接失败不会生成未验证 salt。不要把凭证写进仓库。
 
 Java 参数预览由独立的 theme-service 提供，已适配新工作区。Nginx 安装与访问说明见 [本地预览站](docs/PREVIEW.md)。这里的 `serve` 只提供静态 DEMO，不执行 Java 模板。
+
+创建空组件：`npm run section:create -- imageText '图文组件' 'Image with text'`。
+自动生成六位小写字母数字标识、V2 文件骨架和 CSS，并更新首页导航及编译快捷命令；自动复用本机商城数据库配置，也可显式配置查重环境变量，详见 [Section 规范](docs/section.md#创建空组件)。创建时自动完整写入 `mall.theme_section`，已有组件可通过 `section:sql` 参数直接按字段同步数据库；添加 `--dry-run` 时仅生成 SQL。

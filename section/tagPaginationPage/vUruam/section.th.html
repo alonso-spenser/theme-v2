@@ -31,7 +31,7 @@
                     <a th:href="|item/${o.seoUrl}|">
                         <div class="card section-card">
                             <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
-                                <img class="embed-responsive-item card-img-top lazy" th:src="|${not #strings.isEmpty(o.coverImage) ? o.coverImage : '/theme/img/8.jpg'}!1|" th:data-original="|${not #strings.isEmpty(o.coverImage) ? o.coverImage : '/theme/img/8.jpg'}!${section.settings.wideScreen ? 'f' : ''}${section.settings.column}|" th:alt="${o.title}">
+                                <img class="embed-responsive-item card-img-top lazy" th:src="${imageUrls.thumbnail(not #strings.isEmpty(o.coverImage) ? o.coverImage : '/theme/img/8.jpg')}" th:data-original="${imageUrls.original(not #strings.isEmpty(o.coverImage) ? o.coverImage : '/theme/img/8.jpg')}" th:alt="${o.title}">
                             </div>
                             <div th:class="|card-body ${section.settings.textAlign}|">
                                 <h3 class="text-content-heading" th:text="${#strings.length(o.title) >= 60 ? #strings.substring(o.title, 0, 60) : o.title}"></h3>
@@ -48,7 +48,7 @@
                         <div class="row row-gutter">
                             <div class="col-md-3" th:if="${section.settings.imageVisible}">
                                 <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
-                                    <img class="embed-responsive-item lazy" th:src="|${not #strings.isEmpty(o.coverImage) ? o.coverImage : 'https://site-file.fomillesite.com/0/001/img/800.jpg'}!1|" th:data-original="|${not #strings.isEmpty(o.coverImage) ? o.coverImage : 'https://site-file.fomillesite.com/0/001/img/800.jpg'}!${section.settings.wideScreen ? 'f' : ''}3|" th:alt="${o.title}">
+                                    <img class="embed-responsive-item lazy" th:src="${not #strings.isEmpty(o.coverImage) ? o.coverImage : 'https://site-file.fomillesite.com/0/001/img/800.jpg'}" th:data-original="${not #strings.isEmpty(o.coverImage) ? o.coverImage : 'https://site-file.fomillesite.com/0/001/img/800.jpg'}" th:alt="${o.title}">
                                 </div>
                             </div>
                             <div th:class="|col-md-${section.settings.imageVisible == null || section.settings.imageVisible ? 9 : 12} ${section.settings.textAlign}|">

@@ -16,7 +16,7 @@
 					    <div th:class="|${ section.templateId }-card|" th:with="alt = ${ not #strings.isEmpty(o.alt) ? o.alt : o.name }">
 						    <div class="media" th:if="${not #strings.isEmpty(section.settings.name) || not #strings.isEmpty(section.settings.position)}">
 							    <div class="embed-responsive embed-responsive-1by1" th:if="${not #strings.isEmpty(o.image)}">
-								    <img class="embed-responsive-item lazy" th:src="|${ o.image }!1|" th:data-lazy="${ o.image }" th:alt="${alt}">
+								    <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-lazy="${imageUrls.original(o.image)}" th:alt="${alt}">
 							    </div>
 							    <div class="media-body">
 								    <h5 class="text-subheading" th:if="${not #strings.isEmpty(o.name)}">[[${ o.name }]]</h5>

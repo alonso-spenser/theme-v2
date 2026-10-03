@@ -3,7 +3,7 @@
         <div class="row row-gutter" th:if="${not #lists.isEmpty(section.settings.itemList)}">
             <div th:class="|col-md-${section.settings.column} col-${ section.settings.mobColumn } ${ section.templateId }-item|" th:each="o,stat:${section.settings.itemList}">
                 <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}">
-                    <img class="embed-responsive-item lazy" th:src="|${o.avatar}!1|" th:data-original="${o.avatar}" th:alt="${o.name}" th:if="${not #strings.isEmpty(o.avatar)}">
+                    <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.avatar)}" th:data-original="${imageUrls.original(o.avatar)}" th:alt="${o.name}" th:if="${not #strings.isEmpty(o.avatar)}">
                     <div th:class="|${ section.templateId }-item-content|" th:if="${not #strings.isEmpty(o.name) || not #strings.isEmpty(o.position)}">
                         <h3 class="text-heading" th:if="${not #strings.isEmpty(o.name)}">[[${o.name}]]</h3>
                         <p class="text-body" th:if="${not #strings.isEmpty(o.position)}">[[${o.position}]]</p>

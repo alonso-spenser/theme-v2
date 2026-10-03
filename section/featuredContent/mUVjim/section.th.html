@@ -10,7 +10,7 @@
             </h3>
 
             <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
-                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                <img th:src="${imageUrls.original(section.settings.dividerImage)}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
             </div>
 
             <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
@@ -26,7 +26,7 @@
         <th:block th:fragment="getContent(heading, alt, description, image)" th:if="${not #strings.isEmpty(heading) || not #strings.isEmpty(description) || not #strings.isEmpty(image)}">
             <div class="card section-card">
                 <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${ not #strings.isEmpty(image) }">
-                    <img class="embed-responsive-item lazy card-img-top" th:src="|${image}!1|" th:data-original="|${image}!${section.settings.column}|" th:alt="${not #strings.isEmpty(alt) ? alt : heading}">
+                    <img class="embed-responsive-item lazy card-img-top" th:src="${imageUrls.thumbnail(image)}" th:data-original="${imageUrls.original(image)}" th:alt="${not #strings.isEmpty(alt) ? alt : heading}">
                     <div class="card-mask" th:if="${ section.settings.style == 'popup' }">
                         <div class="card-mask-content">
                             <ul th:class="|text-list text-body ${section.settings.symbol} ${section.settings.contentAlign}|" th:if="${not #strings.isEmpty(description)}" th:with="textLines = ${#strings.listSplit(description,'\n')}">

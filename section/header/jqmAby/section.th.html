@@ -48,7 +48,7 @@
               <th:block th:each="o,stat:${ section.settings.auxiliaryList }">
                   <a th:href="${ #strings.isEmpty(o.url2) ? 'javascript:void(0)' : o.url2 }" th:target="${ o.target2 }">
                     <i th:class="${ o.ic2 }" th:if="${ not #strings.isEmpty(o.ic2) }"></i>
-                    <img th:src="${ o.icon2 }" th:if="${ not #strings.isEmpty(o.icon2) }">
+                    <img th:src="${imageUrls.original(o.icon2)}" th:if="${ not #strings.isEmpty(o.icon2) }">
                     [[${ o.label2 }]]
                   </a>
               <th:block>
@@ -84,8 +84,8 @@
     <nav th:class="|navbar navbar-expand-md ${section.settings.logoSize}">
         <div class="container navbar-menu">
             <a class="navbar-brand" th:href="|${#strings.isEmpty(section.settings.logoUrl) ? '/' : section.settings.logoUrl}|">
-              <img th:src="${section.settings.logo}|" th:alt="${ #strings.isEmpty(section.settings.alt) ? site.siteName : section.settings.alt}">
-              <img th:src="${section.settings.slogan}|" th:if="${not #strings.isEmpty(section.settings.slogan)}" th:alt="${ #strings.isEmpty(section.settings.sloganAlt) ? site.siteName : section.settings.sloganAlt}">
+              <img th:src="${imageUrls.original(section.settings.logo)}" th:alt="${ #strings.isEmpty(section.settings.alt) ? site.siteName : section.settings.alt}">
+              <img th:src="${imageUrls.original(section.settings.slogan)}" th:if="${not #strings.isEmpty(section.settings.slogan)}" th:alt="${ #strings.isEmpty(section.settings.sloganAlt) ? site.siteName : section.settings.sloganAlt}">
             </a>
             <div class="navbar-toggler">
                 <span class="navbar-toggler-icon"></span>
@@ -122,7 +122,7 @@
                     <li class="nav-item" th:each="o,stat:${ section.settings.linkList }">
                       <a class="nav-link" th:href="${ #strings.isEmpty(o.url) ? 'javascript:void(0)' : o.url }" th:target="${ o.target }">
                         <i th:class="${ o.linkIcon }" th:if="${ not #strings.isEmpty(o.linkIcon) }"></i>
-                        <img th:src="${ o.icon }" th:if="${ not #strings.isEmpty(o.icon) }">
+                        <img th:src="${imageUrls.original(o.icon)}" th:if="${ not #strings.isEmpty(o.icon) }">
                         [[${ o.label }]]
                       </a>
                     <li>
@@ -163,7 +163,7 @@
                     <li class="nav-item" th:each="o,stat:${ section.settings.linkList }">
                       <a class="nav-link" th:href="${ #strings.isEmpty(o.url) ? 'javascript:void(0)' : o.url }" th:target="${ o.target }">
                         <i th:class="${ o.linkIcon }" th:if="${ not #strings.isEmpty(o.linkIcon) }"></i>
-                        <img th:src="${ o.icon }" th:if="${ not #strings.isEmpty(o.icon) }">
+                        <img th:src="${imageUrls.original(o.icon)}" th:if="${ not #strings.isEmpty(o.icon) }">
                         [[${ o.label }]]
                       </a>
                     <li>

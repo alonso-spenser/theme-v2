@@ -11,14 +11,14 @@
                     </h3>
 
                     <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
-                        <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                        <img th:src="${imageUrls.original(section.settings.dividerImage)}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
                     </div>
 
                     <p th:class="|text-body ${ section.settings.contentAlign}|" th:if="${ not #strings.isEmpty(section.settings.content) }" th:utext="${#strings.replace(section.settings.content,'\n','<br>')}"></p>
                 </div>
                 <div class="row section-neighbor" th:if="${#lists.size(section.settings.contentList) > 0}">
                     <div th:class="|media col-md-${section.settings.column} col-${section.settings.mobColumn}|" th:each="o, salt:${ section.settings.contentList }">
-                        <img th:src="${o.icon}" th:if="${ not #strings.isEmpty(o.icon)}">
+                        <img th:src="${imageUrls.original(o.icon)}" th:if="${ not #strings.isEmpty(o.icon)}">
                         <div class="media-body">
                             <h3 class="text-content-heading" th:if="${ not #strings.isEmpty(o.title)}">
                                 [[${ o.title }]]
@@ -30,7 +30,7 @@
             </div>
             <div th:class="|col-md-${ section.settings.percentage } ${ section.templateId }-img|">
                 <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}" th:if="${ #lists.size(section.settings.imageList) == 1 }">
-                    <img class="embed-responsive-item lazy" th:src="|${ section.settings.imageList[0].image }!1|" th:data-original="|${section.settings.imageList[0].image}!${section.settings.wideScreen ? 'f' : ''}${section.settings.percentage}|" th:alt="${ section.settings.imageList[0].alt }">
+                    <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(section.settings.imageList[0].image)}" th:data-original="${imageUrls.original(section.settings.imageList[0].image)}" th:alt="${ section.settings.imageList[0].alt }">
                 </div>
                 <div class="slick" th:with="hasDot = ${ #lists.size(section.settings.imageList) > 1 }" th:if="${ #lists.size(section.settings.imageList) > 1 }">
                     <div th:class="|slick-arrow slick-next ${section.settings.carouselArrowStyle} ${hasDot  ? 'dots' : ''}|" th:data-carousel-next="${ section.id }" th:if="${ section.settings.carouselArrowStyle != 'invisible' && hasDot}"></div>
@@ -46,7 +46,7 @@
                         >
                         <div th:class="|slick-slide slick-slide-${salt.index}|" th:each="o, salt:${ section.settings.imageList }">
                             <div th:class="|embed-responsive embed-responsive-${ section.settings.imageScale == 'normal' ? '1by1' : section.settings.imageScale }|">
-                                <img class="embed-responsive-item lazy" th:src="|${ o.image }!1|" th:data-lazy="|${ o.image }|" th:alt="${ o.alt }">
+                                <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-lazy="${imageUrls.original(o.image)}" th:alt="${ o.alt }">
                             </div>
                         </div>
                     </div>

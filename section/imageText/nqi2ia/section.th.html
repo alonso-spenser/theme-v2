@@ -3,8 +3,8 @@
         <div class="card">
             <div class="row g-0">
                 <div th:class="|col-md-6${section.settings.layout == 'right'? ' order-md-3 order-1' : ''}|">
-                    <img th:src="|${section.settings.image}!1|" th:data-original="${section.settings.image}" class="lazy d-md-block d-none" th:alt="${section.settings.heading}" th:if="${not #strings.isEmpty(section.settings.image)}">
-                    <img th:src="|${not #strings.isEmpty(section.settings.mobImage) ? section.settings.mobImage : section.settings.image}!1|" th:data-original="${not #strings.isEmpty(section.settings.mobImage) ? section.settings.mobImage : section.settings.image}" class="lazy d-md-none d-block" th:alt="${section.settings.heading}" th:if="${not #strings.isEmpty(section.settings.mobImage) || not #strings.isEmpty(section.settings.image)}">
+                    <img th:src="${imageUrls.thumbnail(section.settings.image)}" th:data-original="${imageUrls.original(section.settings.image)}" class="lazy d-md-block d-none" th:alt="${section.settings.heading}" th:if="${not #strings.isEmpty(section.settings.image)}">
+                    <img th:src="${imageUrls.thumbnail(not #strings.isEmpty(section.settings.mobImage) ? section.settings.mobImage : section.settings.image)}" th:data-original="${imageUrls.original(not #strings.isEmpty(section.settings.mobImage) ? section.settings.mobImage : section.settings.image)}" class="lazy d-md-none d-block" th:alt="${section.settings.heading}" th:if="${not #strings.isEmpty(section.settings.mobImage) || not #strings.isEmpty(section.settings.image)}">
                 </div>
                 <div class="col-md-6 order-2">
                     <div class="card-body">

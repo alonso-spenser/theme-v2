@@ -11,7 +11,7 @@
             </h3>
 
             <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
-                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                <img th:src="${imageUrls.original(section.settings.dividerImage)}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
             </div>
 
             <h5 th:class="|text-subheading text-${section.settings.textAlign}|" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
@@ -28,8 +28,8 @@
             <ul th:class="|col-md-6 viEvUr-grid ${ imgCount < 5 ? 'four' : imgCount > 6 ? 'nine' : '' }|">
                 <li th:each="o, salt:${ section.settings.imageList }" th:class="${salt.index == 0 ? 'active' : ''}">
                     <div class="text-center">
-                        <img th:src="|${o.image}!1|" class="lazy" data-original="${o.image}" th:alt="${o.name}" th:if="${ not #strings.isEmpty(o.image) }">
-                        <img th:src="|${#strings.isEmpty(o.imageActive) ? o.image : o.imageActive}!1|" class="lazy active" data-original="${#strings.isEmpty(o.imageActive) ? o.image : o.imageActive}" th:alt="${o.name}" th:if="${ not #strings.isEmpty(o.image) || not #strings.isEmpty(o.imageActive) }">
+                        <img th:src="${imageUrls.original(o.image)}" class="lazy" data-original="${o.image}" th:alt="${o.name}" th:if="${ not #strings.isEmpty(o.image) }">
+                        <img th:src="${imageUrls.original(#strings.isEmpty(o.imageActive) ? o.image : o.imageActive)}" class="lazy active" data-original="${#strings.isEmpty(o.imageActive) ? o.image : o.imageActive}" th:alt="${o.name}" th:if="${ not #strings.isEmpty(o.image) || not #strings.isEmpty(o.imageActive) }">
                         <h3 class="text-truncate" th:if="${ not #strings.isEmpty(o.name) }">
                             [[${o.name}]]
                         </h3>
@@ -38,7 +38,7 @@
             </ul>
             <div class="col-md-6">
                 <div th:class="|embed-responsive viEvUr-grid-content embed-responsive-${section.settings.imageScale} ${salt.index == 0 ?' active' : ''}|" th:each="o, salt:${ section.settings.imageList }">
-                    <img th:src="|${o.bigImage}!1|" class="embed-responsive-item lazy" th:data-original="${o.bigImage}" th:alt="${o.subhead}" th:if="${ not #strings.isEmpty(o.bigImage) }">
+                    <img th:src="${imageUrls.thumbnail(o.bigImage)}" class="embed-responsive-item lazy" th:data-original="${imageUrls.original(o.bigImage)}" th:alt="${o.subhead}" th:if="${ not #strings.isEmpty(o.bigImage) }">
                     <div class="viEvUr-grid-content-mask">
                         <h2 th:if="${ not #strings.isEmpty(o.name) }">
                             [[${o.name}]]

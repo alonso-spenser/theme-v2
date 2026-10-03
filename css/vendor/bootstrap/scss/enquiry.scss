@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+/**
+ * ----------------------------------------------------------------------------
+ * enquiry form
+ * ----------------------------------------------------------------------------
+ */
+.enquiry-form {
+  &.light {
+    ::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    :-moz-placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    ::-moz-placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    :-ms-input-placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .text-heading,
+    .break-word,
+    .form-label,
+    label {
+      color: #fff;
+    }
+
+    .form-control {
+      background: none;
+      font-size: 0.8rem !important;
+      border-color: #fff;
+      color: #fff;
+
+      &:focus {
+        background-color: rgba(0, 0, 0, .3);
+      }
+      &.is-invalid {
+        border: 1px solid red;
+        background-color: rgba(255, 0, 0, .1);
+      }
+
+      &.is-valid {
+        border: 1px solid #28a745;
+        background-color: rgba(255, 0, 0, .1);
+      }
+    }
+
+    .file-upload {
+      color: #fff;
+
+      .file-upload-placeholder {
+        color: #fff;
+      }
+
+      .file-upload-selected {
+        color: #fff;
+
+        label {
+          color: #fff;
+
+
+          &:before {
+            color: #ced4da;
+          }
+        }
+
+        p {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .file-upload {
+    position: relative;
+    text-align: center;
+    color: #6c757d;
+    border: 1px solid #ced4da;
+    padding-top: 12 * $pixel;
+    padding-bottom: 12 * $pixel;
+    border-radius: 0.25rem;
+
+    .file-upload-placeholder {
+      color: #6c757d;
+      height: 66 * $pixel;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 10 * $pixel;
+
+      input[type='file'] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        z-index: 5;
+        cursor: pointer;
+      }
+
+      &:before {
+        display: block;
+        font-family: "iconfont" !important;
+        content: "\e632";
+        font-size: 24 * $pixel;
+      }
+
+      &.hide {
+        display: none;
+      }
+    }
+
+    .file-upload-selected {
+      position: relative;
+      height: 66 * $pixel;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: all 0.5s;
+      color: #6c757d;
+
+      label {
+        position: absolute;
+        right: 10 * $pixel;
+        top: 10 * $pixel;
+        width: 24 * $pixel;
+        height: 24 * $pixel;
+        overflow: hidden;
+        cursor: pointer;
+        color: #6c757d;
+
+
+        &:before {
+          line-height: 24 * $pixel;
+          color: #ced4da;
+          font-family: "iconfont" !important;
+          content: "\e60a";
+        }
+      }
+
+      p {
+        padding-right: 50 * $pixel;
+        color: #6c757d;
+
+        &:before {
+          font-family: "iconfont" !important;
+          content: "\e60b";
+          margin-right: 5 * $pixel;
+          vertical-align: middle;
+        }
+      }
+
+      &.active {
+        opacity: 1;
+        z-index: 10;
+      }
+    }
+
+    small {
+      position: absolute;
+      right: 6 * $pixel;
+      bottom: 6 * $pixel;
+    }
+  }
+
+  //.btn {
+  //  padding: 0.375rem 0.75rem !important;
+  //}
+
+  .form-label {
+    margin-bottom: 0.375rem;
+  }
+
+  & + p {
+    margin-top: 1rem;
+  }
+
+  &.normal {
+
+    .file-upload {
+      background-color: #fff;
+    }
+  }
+}

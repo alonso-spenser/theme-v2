@@ -48,8 +48,8 @@
                             <a th:href="|${ site.urlPrefix }item/${o.seoUrl}|">
                                 <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
                                     <img class="embed-responsive-item lazy"
-                                            th:src="|${o.coverImage}!1|"
-                                            th:data-lazy="${o.coverImage}" th:alt="${o.title}"
+                                            th:src="${imageUrls.thumbnail(o.coverImage)}"
+                                            th:data-lazy="${imageUrls.original(o.coverImage)}" th:alt="${o.title}"
                                             th:if="${not #strings.isEmpty(o.coverImage)}"
                                         >
                                 </div>

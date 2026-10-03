@@ -2,7 +2,7 @@
     <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
  	    <div class="row">
  		    <div th:class="|col-md-6 position-relative ${ section.settings.cardAlign == 'right' ? 'order-2' : '' }|">
-                <img class="lazy animated" data-animate="slideInUp" th:src="|${section.settings.image}!1|" th:alt="${section.settings.alt}" th:data-original="${section.settings.image}" th:if="${not #strings.isEmpty(section.settings.image)}">
+                <img class="lazy animated" data-animate="slideInUp" th:src="${imageUrls.thumbnail(section.settings.image)}" th:alt="${section.settings.alt}" th:data-original="${imageUrls.original(section.settings.image)}" th:if="${not #strings.isEmpty(section.settings.image)}">
  			    <div class="card section-card related-card animated" data-animate="slideInUp">
  				    <div class="card-body">
                         <h3 class="text-heading" th:if="${ not #strings.isEmpty(section.settings.heading) }">
@@ -22,7 +22,7 @@
  			    </div>
  		    </div>
  		    <div class="col-md-6">
-                <img class="lazy animated" data-animate="slideInUp" th:src="|${section.settings.image1}!1|" th:alt="${section.settings.alt1}" th:data-original="${section.settings.image1}" th:if="${not #strings.isEmpty(section.settings.image1)}">
+                <img class="lazy animated" data-animate="slideInUp" th:src="${imageUrls.thumbnail(section.settings.image1)}" th:alt="${section.settings.alt1}" th:data-original="${imageUrls.original(section.settings.image1)}" th:if="${not #strings.isEmpty(section.settings.image1)}">
  		    </div>
  	    </div>
     </div>

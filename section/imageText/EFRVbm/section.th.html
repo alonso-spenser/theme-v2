@@ -3,7 +3,7 @@
         <div class="row">
             <div th:class="|col-md-6 col-img${ section.settings.imageAlign == 'right' ? ' order-2' : ''}|">
                 <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${not #strings.isEmpty(section.settings.image)}">
-                    <img class="embed-responsive-item lazy" th:src="|${section.settings.image}!1|" th:data-original="${section.settings.image}" th:alt="${section.settings.alt}">
+                    <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(section.settings.image)}" th:data-original="${imageUrls.original(section.settings.image)}" th:alt="${section.settings.alt}">
                 </div>
             </div>
             <div th:class="|col-md-6 ${#strings.isEmpty(section.settings.lineText) ? '' : ' position-relative'}|">
@@ -22,10 +22,10 @@
                 </div>
                 <div class="media" th:if="${not #strings.isEmpty(section.settings.avatar) || not #strings.isEmpty(section.settings.name)}">
                     <div class="embed-responsive embed-responsive-1by1" th:if="${not #strings.isEmpty(section.settings.avatar)}">
-                        <img class="embed-responsive-item lazy" th:src="|${section.settings.avatar}!1|" th:data-original="${section.settings.avatar}">
+                        <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(section.settings.avatar)}" th:data-original="${imageUrls.original(section.settings.avatar)}">
                     </div>
                     <div class="media-body">
-                        <img class="media-sign lazy" th:src="|${section.settings.signImage}!1|" th:data-original="${section.settings.signImage}" th:if="${not #strings.isEmpty(section.settings.signImage)}">
+                        <img class="media-sign lazy" th:src="${imageUrls.thumbnail(section.settings.signImage)}" th:data-original="${imageUrls.original(section.settings.signImage)}" th:if="${not #strings.isEmpty(section.settings.signImage)}">
                         <h3 class="text-content-heading" th:if="${not #strings.isEmpty(section.settings.name)}">
                             [[${section.settings.name}]]
                         </h3>

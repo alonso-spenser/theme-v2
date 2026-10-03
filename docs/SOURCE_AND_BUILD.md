@@ -43,6 +43,26 @@ npm run index:build
 
 ## 初始化与发布
 
+## 单组件样式编译
+
+```sh
+npm run section:floatMenu:Ur6Jvm
+# 通用命令（新组件无需注册即可使用）
+npm run section:build -- floatMenu/Ur6Jvm
+# 新增或删除组件后同步快捷命令
+npm run section:scripts
+```
+
+读取对应目录的 `section.scss`，在同目录生成包含 demo 的 `section.css` 和排除 demo 的 `section.min.css`，不修改模板或 JS。入库只使用 `section.min.css`；详见 [组件文件与数据库同步](section.md)。首页每个组件标题右侧可点击复制命令；在 theme-v2 项目目录执行。产物不加入 Git。
+
+### CDN 缓存版本标识
+
+`npm run js:build` 与 `npm run css:build` 在产物首行的 `/*! ... */` 注释中写入 `version: 3ba1a6` 形式的 6 位内容标识。压缩版另外输出 `js/base.min.{hash}.js`（以及同名 `.js.map`）、`css/base.min.{hash}.css` 和 `css/page/base.min.{hash}.css`，文件名 hash 与头部 version 一致。保留不带 hash 的普通版及压缩版，供本地预览、现有引用和测试使用；CDN 发布推荐使用带 hash 的文件。watch 重建同样更新标识，历史 hash 文件不自动删除，部署时选择本次构建日志中的文件。
+
+标识取首行注释之后内容的 SHA-256 前 6 位；JS 还排除末尾 sourceMappingURL 行，避免文件名参与自身哈希。它不是 Git commit 或时间戳。相同内容重复构建得到相同标识，普通版、压缩版及不同文件分别计算。查看 AWS/CDN 对应文件的第一行，与本地同名产物对比，即可辅助确认缓存版本。短标识仅用于排查，不作为安全完整性校验。
+
+构建不会自动清除 CDN 缓存或改写页面引用；发布带 hash 的文件后，需将页面资源 URL 更新为新文件名。不要手动修改编译文件的标识。
+
 组件 JS 只定义并注册组件，不调用 `fo.init()`。静态 DEMO 单独加载 `js/demo.js`；正式站点在所有组件注册完成后统一初始化一次。DEMO 初始化不能写入数据库或正式合并脚本。
 
 构建产物由发布流程生成和部署到站点/CDN，而不是作为源码提交。
@@ -55,3 +75,5 @@ git diff --cached --name-only
 ```
 
 确认暂存区没有编译产物、依赖目录或凭证。`.gitignore` 不会自动取消已被 Git 跟踪的文件；若误跟踪了产物，使用精确路径的 `git rm --cached <文件>` 仅取消跟踪，保留本地文件。
+
+`css:build` 批量生成框架及所有组件的 CSS。普通 `.css` 保留演示样式，`.min.css` 在编译前排除 demo；带 hash 的框架压缩文件也使用正式内容。`css:watch` 同时监听组件 SCSS。此命令不写入数据库。

@@ -11,7 +11,7 @@
             </h3>
 
             <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
-                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                <img th:src="${imageUrls.original(section.settings.dividerImage)}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
             </div>
 
             <h5 th:class="|text-subheading text-${section.settings.textAlign}|" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
@@ -27,8 +27,8 @@
 
         <th:block th:fragment="getContent(heading, content, image, slick)" th:if="${not #strings.isEmpty(heading) || not #strings.isEmpty(content) || not #strings.isEmpty(image)}">
             <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
-                <img class="embed-responsive-item lazy" th:src="|${image}!1|" th:data-lazy="${image}" th:alt="${heading}" th:if="${not #strings.isEmpty(image) && slick}">
-                <img class="embed-responsive-item lazy" th:src="|${image}!1|" th:data-original="${image}" th:alt="${heading}" th:if="${not #strings.isEmpty(image) && !slick}">
+                <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(image)}" th:data-lazy="${imageUrls.original(image)}" th:alt="${heading}" th:if="${not #strings.isEmpty(image) && slick}">
+                <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(image)}" th:data-original="${imageUrls.original(image)}" th:alt="${heading}" th:if="${not #strings.isEmpty(image) && !slick}">
             </div>
             <div th:class="|${ section.templateId }-describe|" th:if="${not #strings.isEmpty(heading) || not #strings.isEmpty(content)}">
                 <h5 th:if="${not #strings.isEmpty(heading)}" class="text-content-heading" th:text="${heading}"></h5>

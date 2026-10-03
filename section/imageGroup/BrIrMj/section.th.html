@@ -4,7 +4,7 @@
             <div th:class="|col-md-${ o.contentWidth } col-12|" th:each="o,salt:${section.settings.imageList}">
                 <a th:href="${ o.buttonLink }" th:if="${not #strings.isEmpty(o.buttonLink )}">
                     <div th:class="|embed-responsive embed-responsive-${o.imageScale}">
-                        <img class="embed-responsive-item lazy" th:src="|${ o.image}!1|" th:data-original="${o.image}" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading}" th:if="${not #strings.isEmpty(o.image)}">
+                        <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading}" th:if="${not #strings.isEmpty(o.image)}">
                         <div th:class="|${ section.templateId }-content|">
                             <h5 class="text-subheading" th:if="${ not #strings.isEmpty(o.subheading) }">[[ ${ o.subheading } ]]</h5>
                             <h3 class="text-heading" th:if="${ not #strings.isEmpty(o.heading) }">[[ ${ o.heading } ]]</h3>
@@ -17,7 +17,7 @@
                 </a>
                 <th:block th:if="${#strings.isEmpty(o.buttonLink )}">
                     <div th:class="|embed-responsive embed-responsive-${o.imageScale}">
-                        <img class="embed-responsive-item lazy" th:src="|${ o.image}!1|" th:data-original="${o.image}" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading}" th:if="${not #strings.isEmpty(o.image)}">
+                        <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading}" th:if="${not #strings.isEmpty(o.image)}">
                         <div th:class="|${ section.templateId }-content|">
                             <h5 class="text-subheading" th:if="${ not #strings.isEmpty(o.subheading) }">[[ ${ o.subheading } ]]</h5>
                             <h3 class="text-heading" th:if="${ not #strings.isEmpty(o.heading) }">[[ ${ o.heading } ]]</h3>

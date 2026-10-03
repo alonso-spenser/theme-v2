@@ -31,7 +31,7 @@
                     <a th:href="|${site.urlPrefix}collection/${o.seoUrl}|">
                         <div class="card section-card">
                             <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
-                                <img class="embed-responsive-item card-img-top lazy" th:src="|${not #strings.isEmpty(o.coverImage) ? o.coverImage : '/theme/img/8.jpg'}!1|" th:data-original="|${not #strings.isEmpty(o.coverImage) ? o.coverImage : '/theme/img/8.jpg'}!${section.settings.wideScreen ? 'f' : ''}${section.settings.column}|" th:alt="${o.title}">
+                                <img class="embed-responsive-item card-img-top lazy" th:src="${imageUrls.thumbnail(not #strings.isEmpty(o.coverImage) ? o.coverImage : '/theme/img/8.jpg')}" th:data-original="${imageUrls.original(not #strings.isEmpty(o.coverImage) ? o.coverImage : '/theme/img/8.jpg')}" th:alt="${o.title}">
                             </div>
                             <div th:class="|card-body ${section.settings.textAlign}|">
                                 <h3 class="text-content-heading" th:text="${o.title}"></h3>
@@ -45,7 +45,7 @@
                     <a th:href="|${site.urlPrefix}collection/${o.seoUrl}|">
                         <div th:class="|${section.templateId}-list|">
                             <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
-                                <img class="embed-responsive-item lazy card-img-top" th:src="|${not #strings.isEmpty(o.coverImage) ? o.coverImage : '/theme/img/8.jpg'}!1|" th:data-original="|${not #strings.isEmpty(o.coverImage) ? o.coverImage : '/theme/img/8.jpg'}!${section.settings.wideScreen ? 'f' : ''}${section.settings.column}|" th:alt="${o.title}">
+                                <img class="embed-responsive-item lazy card-img-top" th:src="${imageUrls.thumbnail(not #strings.isEmpty(o.coverImage) ? o.coverImage : '/theme/img/8.jpg')}" th:data-original="${imageUrls.original(not #strings.isEmpty(o.coverImage) ? o.coverImage : '/theme/img/8.jpg')}" th:alt="${o.title}">
                                 <div th:class="|${section.templateId}-list-content|">
                                     <h3 class="text-content-heading">
                                         [[${o.title}]]

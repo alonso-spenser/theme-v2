@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-6 order-2 order-md-1">
                 <div class="text-end">
-                    <img class="text-img lazy" th:src="|${ section.settings.image }!1|" th:data-original="${ section.settings.image }" th:alt="${section.settings.alt}" th:if="${not #strings.isEmpty(section.settings.image)}">
+                    <img class="text-img lazy" th:src="${imageUrls.thumbnail(section.settings.image)}" th:data-original="${imageUrls.original(section.settings.image)}" th:alt="${section.settings.alt}" th:if="${not #strings.isEmpty(section.settings.image)}">
                     <h3 class="text-heading" th:if="${not #strings.isEmpty(section.settings.heading)}" th:utext="${#strings.replace(section.settings.heading,'\n','<br>')}"></h3>
                     <p class="text-button" th:if="${ section.settings.buttonStyle != 'invisible' && not #strings.isEmpty(section.settings.buttonLabel) }">
                         <a th:href="${ #strings.isEmpty(section.settings.buttonLabel) ? 'javascript:void(0)' : section.settings.buttonLink }" th:class="|btn ${section.settings.buttonStyle}|">
@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="col-md-6 order-1 order-md-2">
-                <img class="lazy" th:src="|${ section.settings.rightImage }!1|" th:data-original="${ section.settings.rightImage }" th:alt="${section.settings.rightAlt}" th:if="${not #strings.isEmpty(section.settings.rightImage)}">
+                <img class="lazy" th:src="${imageUrls.thumbnail(section.settings.rightImage)}" th:data-original="${imageUrls.original(section.settings.rightImage)}" th:alt="${section.settings.rightAlt}" th:if="${not #strings.isEmpty(section.settings.rightImage)}">
             </div>
         </div>
     </div>

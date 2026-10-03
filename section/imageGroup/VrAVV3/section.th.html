@@ -3,7 +3,7 @@
 	    <div class="row row-gutter">
 		    <div th:class="|col-md-${ section.settings.column } col-${ section.settings.mobColumn }|" th:each="o,salt:${section.settings.itemList}">
 			    <div th:class="|${section.templateId}-card ${ section.templateId }-${salt.index}|">
-				    <img class="lazy" th:src="|${o.image}!1|" th:data-original="${o.image}" th:data-swap="${not #strings.isEmpty(o.swapImage) ? o.swapImage : o.image}" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading}" th:if="${not #strings.isEmpty(o.image)}">
+				    <img class="lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:data-swap="${imageUrls.original(not #strings.isEmpty(o.swapImage) ? o.swapImage : o.image)}" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.heading}" th:if="${not #strings.isEmpty(o.image)}">
                     <h3 class="text-content-heading" th:if="${ not #strings.isEmpty(o.heading) }">[[ ${ o.heading } ]]</h3>
                     <th:block class="text-list" th:if="${not #strings.isEmpty(o.content)}" th:with="textLines = ${#strings.listSplit(o.content,'\n')}">
                         <th:block th:each="textLine,saltLine:${textLines}">

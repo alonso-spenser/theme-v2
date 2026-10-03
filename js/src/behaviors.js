@@ -1,3 +1,4 @@
+import {observeImages as images} from './images.js';
 import {fo, global} from './core.js';
 
 const show = (element, visible) => {
@@ -7,13 +8,6 @@ const show = (element, visible) => {
 };
 const select = (elements, index, name = 'active') => elements.forEach((item, i) => item.classList.toggle(name, i === index));
 
-function images(section) {
-    section.all('img[data-original], img[data-lazy]').forEach(image => {
-        image.loading = 'lazy';
-        image.decoding = 'async';
-        image.src = image.dataset.original || image.dataset.lazy;
-    });
-}
 
 function carousel(section) {
     section.all('[data-carousel]').forEach(element => {

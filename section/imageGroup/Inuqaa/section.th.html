@@ -12,7 +12,7 @@
 			<div th:class="|col-md-${section.settings.column} col-12 ${ section.templateId }-item|" th:each="o, stat:${section.settings.itemList}">
 				<div class="position-relative">
 					<div class="embed-responsive embed-responsive-1by1">
-						<img class="embed-responsive-item lazy" th:src="|${o.image}!1|" th:data-original="${o.image}" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.subHeading }">
+						<img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${ not #strings.isEmpty(o.alt) ? o.alt : o.subHeading }">
 						<label>[[${ stat.index < 9 ? '0': ''}]][[${stat.index + 1}]]</label>
 					</div>
 					<div th:class="|${ section.templateId }-card|">

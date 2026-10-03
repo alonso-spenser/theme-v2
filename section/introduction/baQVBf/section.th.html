@@ -2,10 +2,10 @@
     <div th:class="|container${section.settings.wideScreen ? '-fluid' : ''}|">
 	    <div th:class="|${ section.templateId }-card border-radius|">
 		    <div th:class="|embed-responsive border-radius embed-responsive-${section.settings.imageScale}|">
-                <img class="embed-responsive-item lazy" th:src="|${ section.settings.image}!1|" th:data-original="${section.settings.image}" th:alt="${ not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading}" th:if="${not #strings.isEmpty(section.settings.image)}">
+                <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(section.settings.image)}" th:data-original="${imageUrls.original(section.settings.image)}" th:alt="${ not #strings.isEmpty(section.settings.alt) ? section.settings.alt : section.settings.heading}" th:if="${not #strings.isEmpty(section.settings.image)}">
 		    </div>
 		    <div class="section-title" th:if="${not #strings.isEmpty(section.settings.heading) || not #strings.isEmpty(section.settings.icon) || not #strings.isEmpty(section.settings.content)}">
-			    <img th:class="|${ section.templateId }-icon lazy|" th:src="|${section.settings.icon}!1|" th:data-original="${section.settings.icon}" th:if="${not #strings.isEmpty(section.settings.icon)}">
+			    <img th:class="|${ section.templateId }-icon lazy|" th:src="${imageUrls.thumbnail(section.settings.icon)}" th:data-original="${imageUrls.original(section.settings.icon)}" th:if="${not #strings.isEmpty(section.settings.icon)}">
                 <h3 class="text-heading" th:if="${ not #strings.isEmpty(section.settings.heading) }">[[ ${ section.settings.heading } ]]</h3>
                 <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">[[ ${ section.settings.subheading } ]]</h5>
                 <th:block th:if="${not #strings.isEmpty(section.settings.content)}" th:with="textLines = ${#strings.listSplit(section.settings.content,'\n')}">

@@ -1,7 +1,7 @@
 <section th:class="|KjbTA8 section-${section.id}|" th:data-section="${section.templateId}">
   <div class="container-full g-0"><div class="row g-0 align-items-stretch">
     <div class="col-12 col-md-6 KjbTA8-media">
-      <img th:if="${not #strings.isEmpty(section.settings.image)}" th:src="${section.settings.image}" th:alt="${section.settings.imageAlt}" width="1140" height="1140">
+      <img th:if="${not #strings.isEmpty(section.settings.image)}" th:src="${imageUrls.original(section.settings.image)}" th:alt="${section.settings.imageAlt}" width="1140" height="1140">
     </div>
     <div class="col-12 col-md-6 KjbTA8-content">
       <h2 class="text-heading" th:if="${not #strings.isEmpty(section.settings.heading)}" th:id="|${section.id}-heading|" th:text="${section.settings.heading}"></h2>

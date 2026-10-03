@@ -5,21 +5,21 @@ import { fileURLToPath } from 'node:url';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 
-const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+const LETTERS = 'abcdefghijklmnopqrstuvwxyz';
 const CHARACTERS = LETTERS + '0123456789';
 const run = promisify(execFile);
 
 async function databaseContainsSalt(salt) {
   try {
-    const { stdout } = await run('python3', [
-      fileURLToPath(new URL('./salt-exists.py', import.meta.url)), salt
+    const { stdout } = await run(process.execPath, [
+      fileURLToPath(new URL('./salt-exists.mjs', import.meta.url)), salt
     ], { timeout: 20000 });
     const result = stdout.trim();
     if (result !== '0' && result !== '1') throw new Error('Invalid database response');
     return result === '1';
   } catch {
     // Fail closed. Never leak configuration, credentials, or subprocess output.
-    throw new Error('Database salt check failed; no salt generated. Check MySQL and THEME_DB_CONFIG.');
+    throw new Error('Database salt check failed; no salt generated. Check MySQL, local service config or THEME_DB_CONFIG.');
   }
 }
 
@@ -33,6 +33,9 @@ export async function generateSalt({ existing = new Set(), isTaken = databaseCon
   for (let attempt = 0; attempt < 1000; attempt++) {
     let salt = LETTERS[randomInt(LETTERS.length)];
     for (let i = 1; i < 6; i++) salt += CHARACTERS[randomInt(CHARACTERS.length)];
+    // Guarantee a lowercase letter/digit mix while retaining a valid CSS identifier.
+    const digitIndex = 1 + randomInt(5);
+    salt = salt.slice(0, digitIndex) + randomInt(10) + salt.slice(digitIndex + 1);
     if (!local.has(salt.toLowerCase()) && !await isTaken(salt)) return salt;
   }
   throw new Error('Unable to generate an unused component salt after 1000 attempts.');

@@ -11,7 +11,7 @@
             </h3>
 
             <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
-                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                <img th:src="${imageUrls.original(section.settings.dividerImage)}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
             </div>
 
             <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
@@ -27,7 +27,7 @@
             <div class="row">
                 <div th:class="|col-md-${ section.settings.contentWidth }|" th:if="${not #strings.isEmpty(section.settings.image)}">
                     <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|">
-                        <img class="embed-responsive-item lazy" th:src="|${section.settings.image}!1|" th:data-original="|${section.settings.image}!${section.settings.fluid ? 'f' : ''}${section.settings.contentWidth}|" th:alt="${section.settings.alt}">
+                        <img class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(section.settings.image)}" th:data-original="${imageUrls.original(section.settings.image)}" th:alt="${section.settings.alt}">
                     </div>
                 </div>
                 <div th:class="|col-md-${not #strings.isEmpty(section.settings.image) ? #numbers.formatInteger((12 - section.settings.contentWidth), 1,'POINT') : 12}|" th:data-faq="${ section.id }">

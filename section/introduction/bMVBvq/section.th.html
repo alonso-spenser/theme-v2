@@ -13,7 +13,7 @@
                             </h3>
                             <p class="text-body" th:if="${not #strings.isEmpty(o.itemContent)}" th:utext="${#strings.replace(o.itemContent,'\n','<br>')}"></p>
                         </div>
-                        <img class="lazy" th:src="|${ o.icon}!1|" th:data-original="${o.icon}" th:alt="${o.itemHeading}" th:if="${not #strings.isEmpty(o.icon)}">
+                        <img class="lazy" th:src="${imageUrls.thumbnail(o.icon)}" th:data-original="${imageUrls.original(o.icon)}" th:alt="${o.itemHeading}" th:if="${not #strings.isEmpty(o.icon)}">
                     </div>
                 </th:block>
             </div>
@@ -21,7 +21,7 @@
             <div class="col-md-4 order-md-3" th:if="${not #lists.isEmpty(section.settings.itemList)}">
                 <th:block th:each="o,stat:${section.settings.itemList}">
                     <div th:class="|media ${ section.templateId }-item item-${stat.index} right|" th:if="${stat.index % 2 == 1}">
-                        <img class="lazy" th:src="|${ o.icon}!1|" th:data-original="${o.icon}" th:alt="${o.itemHeading}" th:if="${not #strings.isEmpty(o.icon)}">
+                        <img class="lazy" th:src="${imageUrls.thumbnail(o.icon)}" th:data-original="${imageUrls.original(o.icon)}" th:alt="${o.itemHeading}" th:if="${not #strings.isEmpty(o.icon)}">
                         <div class="media-body">
                             <h3 class="text-content-heading" th:if="${not #strings.isEmpty(o.itemHeading)}">
                                 [[${o.itemHeading}]]

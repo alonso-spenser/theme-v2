@@ -10,7 +10,7 @@
             </h3>
 
             <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
-                <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                <img th:src="${imageUrls.original(section.settings.dividerImage)}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
             </div>
 
             <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
@@ -27,7 +27,7 @@
             <div th:class="|col-md-${section.settings.column} col-${section.settings.mobColumn}|" th:each="o,salt:${section.settings.contentList}">
                 <div class="card section-card hide">
                     <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${ not #strings.isEmpty(o.image) }">
-                        <img class="embed-responsive-item lazy card-img-top" th:src="|${o.image}!1|" th:data-original="|${o.image}!${section.settings.column}|" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.title}">
+                        <img class="embed-responsive-item lazy card-img-top" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.title}">
                         <div class="card-mask" th:if="${ section.settings.style == 'popup' }">
                             <div class="card-mask-content" th:if="${#strings.isEmpty(o.link)}">
                                 <h3 class="text-content-heading text-center" th:if="${not #strings.isEmpty(o.title)}">[[${o.title}]]</h3>
@@ -51,7 +51,7 @@
                     </div>
                     <div th:class="|card-body ${ not #strings.isEmpty(o.linkLabel) && section.settings.style != 'popup' ? 'has-button' : ''}${ not #strings.isEmpty(o.icon) ? ' has-icon' : '' }|">
                         <div class="f667Zz-icon embed-responsive embed-responsive-1by1" th:if="${not #strings.isEmpty(o.icon)}">
-                            <img class="embed-responsive-item lazy card-img-top" th:src="|${o.icon}!1|" th:data-original="|${o.icon}!${section.settings.column}|" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.title}">
+                            <img class="embed-responsive-item lazy card-img-top" th:src="${imageUrls.thumbnail(o.icon)}" th:data-original="${imageUrls.original(o.icon)}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.title}">
                         </div>
                         <h3 class="text-content-heading text-center" th:if="${not #strings.isEmpty(o.title)}">[[${o.title}]]</h3>
                         <th:block th:if="${ section.settings.style != 'popup' }">
@@ -91,7 +91,7 @@
                 <div class="slick-slide" th:each="o, salt:${ section.settings.contentList }">
                     <div class="card section-card hide">
                         <div th:class="|embed-responsive embed-responsive-${section.settings.imageScale}|" th:if="${ not #strings.isEmpty(o.image) }">
-                            <img class="embed-responsive-item lazy card-img-top" th:src="|${o.image}!1|" th:data-original="|${o.image}!${section.settings.column}|" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.title}">
+                            <img class="embed-responsive-item lazy card-img-top" th:src="${imageUrls.thumbnail(o.image)}" th:data-original="${imageUrls.original(o.image)}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.title}">
                             <div class="card-mask" th:if="${ section.settings.style == 'popup' }">
                                 <div class="card-mask-content" th:if="${#strings.isEmpty(o.link)}">
                                     <h3 class="text-content-heading text-center" th:if="${not #strings.isEmpty(o.title)}">[[${o.title}]]</h3>
@@ -115,7 +115,7 @@
                         </div>
                         <div th:class="|card-body ${ not #strings.isEmpty(o.linkLabel) && section.settings.style != 'popup' ? 'has-button' : ''}${ not #strings.isEmpty(o.icon) ? ' has-icon' : '' }|">
                             <div class="f667Zz-icon embed-responsive embed-responsive-1by1" th:if="${not #strings.isEmpty(o.icon)}">
-                                <img class="embed-responsive-item lazy card-img-top" th:src="|${o.icon}!1|" th:data-original="|${o.icon}!${section.settings.column}|" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.title}">
+                                <img class="embed-responsive-item lazy card-img-top" th:src="${imageUrls.thumbnail(o.icon)}" th:data-original="${imageUrls.original(o.icon)}" th:alt="${not #strings.isEmpty(o.alt) ? o.alt : o.title}">
                             </div>
                             <h3 class="text-content-heading text-center" th:if="${not #strings.isEmpty(o.title)}">[[${o.title}]]</h3>
                             <th:block th:if="${ section.settings.style != 'popup' }">

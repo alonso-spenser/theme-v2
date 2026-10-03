@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto';
 import { productionComponentScript } from './component-script.mjs';
+import { compileProductionScss, buildSectionStyles } from './component-style.mjs';
 import {
   cp,
   mkdir,
@@ -532,11 +533,11 @@ async function main() {
   await validateFixtures(manifest, fields, dataContract);
 
   const temporaryDir = await mkdtemp(join(tmpdir(), 'oga-theme-v2-'));
-  const temporaryCss = join(temporaryDir, 'section.css');
+  const temporaryCss = join(temporaryDir, 'section.min.css');
   const temporaryFrameworkCss = join(temporaryDir, 'framework.css');
 
   try {
-    await compileScss(stylePath, temporaryCss);
+    await writeFile(temporaryCss, await compileProductionScss(stylePath));
     await compileScss(foundationStylePath, temporaryFrameworkCss);
 
     if (errors.length) {
@@ -556,7 +557,7 @@ async function main() {
       ['definition.json', canonicalJson(expandedManifest)],
       ['defaults.json', canonicalJson(defaults)],
       ['section.th.html', template],
-      ['section.css', css],
+      ['section.min.css', css],
       ['variable.th.css', variableStyle],
       ['section.js', script]
     ]);
@@ -613,7 +614,9 @@ async function main() {
     );
     await cp(templatePath, join(outputDir, 'section.java'));
     await writeFile(join(outputDir, 'section.js'), script);
-    await cp(temporaryCss, join(outputDir, 'section.css'));
+    const styles = await buildSectionStyles(stylePath);
+    await writeFile(join(outputDir, 'section.css'), styles.demo + '\n');
+    await cp(temporaryCss, join(outputDir, 'section.min.css'));
     if (variableStylePath) {
       await cp(variableStylePath, join(outputDir, 'variable.java'));
     }

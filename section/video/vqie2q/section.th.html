@@ -9,13 +9,13 @@
                         th:loop="${ section.settings.loop  }"
                         th:muted="${ section.settings.muted  }"
                         th:preload="${ section.settings.preload }"
-                        th:poster="${section.settings.poster}"
+                        th:poster="${imageUrls.original(section.settings.poster)}"
                         th:class="${section.settings.autoPlay == 'auto' ? 'active' : ''}"
                     >
                         <source th:src="${section.settings.video}">
                     </video>
                     <div th:class="|embed-responsive-item ${ section.templateId }-mask|" data-play="action" th:if="${ section.settings.autoPlay == 'manual' }">
-                        <img th:if="${ not #strings.isEmpty(section.settings.poster) }" class="embed-responsive-item lazy" th:src="|${ section.settings.poster}!1|" th:data-original="|${ section.settings.poster}!full|">
+                        <img th:if="${ not #strings.isEmpty(section.settings.poster) }" class="embed-responsive-item lazy" th:src="${imageUrls.thumbnail(section.settings.poster)}" th:data-original="${imageUrls.original(section.settings.poster)}">
                         <div class="play-button">
                             <span class="filled-circle"></span>
                             <span class="stroke-circle"></span>
@@ -35,7 +35,7 @@
                     </h3>
 
                     <div th:class="|section-title-divider ${section.settings.textAlign}${section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) ? ' has-image' : ' has-line'}|" th:if="${ section.settings.dividerWidth > 0 }">
-                        <img th:src="${section.settings.dividerImage}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
+                        <img th:src="${imageUrls.original(section.settings.dividerImage)}" alt="" th:if="${ section.settings.dividerStyle == 'image' && not #strings.isEmpty(section.settings.dividerImage) }">
                     </div>
 
                     <h5 class="text-subheading" th:if="${ not #strings.isEmpty(section.settings.subheading) }">
